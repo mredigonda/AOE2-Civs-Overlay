@@ -5,11 +5,33 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "electron ."
+        "start": "electron .",
+        "start-test": "electron test-windows.js",
+        "dist": "electron-builder",
+        "dist-windows": "electron-builder --win portable --x64",
+        "dist-windows-debug": "electron-builder --win portable --x64 --debug"
+    },
+    "build": {
+        "appId": "com.maxredigonda.aoe2-civs-overlay",
+        "productName": "AOE2 Civs Overlay",
+        "win": {
+            "target": "portable",
+            "icon": "icon.ico"
+        },
+        "files": [
+            "**/*",
+            "!node_modules/**/*",
+            "!dist/**/*",
+            "!.git/**/*"
+        ],
+        "directories": {
+            "output": "dist"
+        }
     },
     "author": "Maximiliano Redigonda",
     "license": "ISC",
     "devDependencies": {
-        "electron": "^37.3.0"
+        "electron": "^37.3.0",
+        "electron-builder": "^26.0.12"
     }
 }

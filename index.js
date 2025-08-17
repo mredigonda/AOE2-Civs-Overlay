@@ -1,4 +1,5 @@
 const { app, BrowserWindow, globalShortcut, ipcMain } = require("electron");
+const path = require("path");
 const {
     DEFAULT_WINDOW_WIDTH,
     DEFAULT_WINDOW_HEIGHT,
@@ -6,6 +7,9 @@ const {
 
 let mainWindow;
 let isWindowVisible = true;
+
+// Add console logging for debugging
+console.log("Electron app starting...");
 
 // IPC handler for updating window size
 ipcMain.handle("update-window-size", async (event, width, height) => {
@@ -17,6 +21,8 @@ ipcMain.handle("update-window-size", async (event, width, height) => {
 });
 
 const createWindow = () => {
+    console.log("Creating main window...");
+
     mainWindow = new BrowserWindow({
         width: DEFAULT_WINDOW_WIDTH,
         height: DEFAULT_WINDOW_HEIGHT,
@@ -26,26 +32,57 @@ const createWindow = () => {
         resizable: true,
         hasShadow: false,
         fullscreenable: false,
-        focusable: false,
+        focusable: true, // Changed from false to true for Windows compatibility
         roundedCorners: false,
+        show: false, // Don't show until ready
+        backgroundColor: "#00000000", // Transparent background
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
         },
     });
 
-    mainWindow.loadFile("civ-selector.html");
+    // Use proper path resolution for Windows
+    const htmlPath = path.join(__dirname, "civ-selector.html");
+    console.log("Loading HTML file from:", htmlPath);
+    mainWindow.loadFile(htmlPath);
 
-    // Open dev tools for development
-    // mainWindow.webContents.openDevTools();
+    // Show window when ready to prevent invisible window issues
+    mainWindow.once("ready-to-show", () => {
+        console.log("Window ready to show");
+        mainWindow.show();
+    });
+
+    // Open dev tools for debugging (uncomment for development)
+    // mainWindow.webContents.openDevTools({ mode: 'detach' });
+
+    // Handle window closed
+    mainWindow.on("closed", () => {
+        console.log("Main window closed");
+        mainWindow = null;
+    });
+
+    // Handle window errors
+    mainWindow.webContents.on(
+        "did-fail-load",
+        (event, errorCode, errorDescription) => {
+            console.error(
+                "Failed to load window:",
+                errorCode,
+                errorDescription
+            );
+        }
+    );
 };
 
 app.whenReady().then(() => {
+    console.log("App is ready, creating window...");
     createWindow();
 
     // Register global shortcut for making window interactive
     globalShortcut.register("CommandOrControl+Shift+P", () => {
         if (mainWindow) {
+            console.log("Making window interactive");
             // Make window interactive
             mainWindow.setFocusable(true);
             mainWindow.setAlwaysOnTop(false);
@@ -53,7 +90,7 @@ app.whenReady().then(() => {
 
             // Revert after 5 seconds
             setTimeout(() => {
-                mainWindow.setFocusable(false);
+                mainWindow.setFocusable(true); // Keep focusable true for Windows
                 mainWindow.setAlwaysOnTop(true);
                 mainWindow.webContents.send("make-non-interactive");
             }, 5000);
@@ -74,6 +111,19 @@ app.whenReady().then(() => {
             }
         }
     });
+});
+
+// Handle window-all-closed event properly for Windows
+app.on("window-all-closed", () => {
+    console.log("All windows closed");
+    // Don't quit the app on Windows when all windows are closed
+    if (process.platform !== "darwin") {
+        // On Windows, keep the app running but hide the window
+        if (mainWindow) {
+            mainWindow.hide();
+            isWindowVisible = false;
+        }
+    }
 });
 
 /* Age of Empires 2 - Start */
