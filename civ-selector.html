@@ -8,6 +8,20 @@
     </head>
     <body>
         <div id="app">
+            <div
+                id="drag-handle"
+                style="
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 30px;
+                    background: rgba(0, 0, 0, 0.1);
+                    cursor: move;
+                    z-index: 9999;
+                "
+            ></div>
             <p>Loading civ-selector...</p>
         </div>
 
@@ -27,6 +41,10 @@
                 if (interactiveTimeout) {
                     clearTimeout(interactiveTimeout);
                 }
+
+                // Show drag handle
+                const dragHandle = document.getElementById("drag-handle");
+                dragHandle.style.display = "block";
 
                 // Show visual feedback
                 const feedback = document.createElement("div");
@@ -52,6 +70,10 @@
                 document.body.style.pointerEvents = "none";
                 document.body.style.userSelect = "none";
 
+                // Hide drag handle
+                const dragHandle = document.getElementById("drag-handle");
+                dragHandle.style.display = "none";
+
                 // Remove visual feedback
                 const feedback = document.getElementById(
                     "interactive-feedback"
@@ -59,6 +81,38 @@
                 if (feedback) {
                     feedback.remove();
                 }
+            });
+
+            // Drag functionality
+            let isDragging = false;
+            let dragStartX = 0;
+            let dragStartY = 0;
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const dragHandle = document.getElementById("drag-handle");
+
+                dragHandle.addEventListener("mousedown", (e) => {
+                    isDragging = true;
+                    dragStartX = e.clientX;
+                    dragStartY = e.clientY;
+                    e.preventDefault();
+                });
+
+                document.addEventListener("mousemove", (e) => {
+                    if (isDragging) {
+                        const deltaX = e.clientX - dragStartX;
+                        const deltaY = e.clientY - dragStartY;
+
+                        ipcRenderer.send("move-window", { deltaX, deltaY });
+
+                        dragStartX = e.clientX;
+                        dragStartY = e.clientY;
+                    }
+                });
+
+                document.addEventListener("mouseup", () => {
+                    isDragging = false;
+                });
             });
         </script>
         <script>

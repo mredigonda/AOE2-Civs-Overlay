@@ -1,4 +1,4 @@
-const { app, BrowserWindow, globalShortcut } = require("electron");
+const { app, BrowserWindow, globalShortcut, ipcMain } = require("electron");
 
 let mainWindow;
 
@@ -99,6 +99,14 @@ const civs = [
 ];
 
 /* Age of Empires 2 - End */
+
+// Handle window movement from renderer
+ipcMain.on("move-window", (event, { deltaX, deltaY }) => {
+    if (mainWindow) {
+        const [x, y] = mainWindow.getPosition();
+        mainWindow.setPosition(x + deltaX, y + deltaY);
+    }
+});
 
 // Cleanup when app is about to quit
 app.on("will-quit", () => {
