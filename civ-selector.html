@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="./civ-selector.css" />
     </head>
     <body>
-        <div id="app"></div>
+        <div id="app">
+            <p>Loading civ-selector...</p>
+        </div>
 
         <script src="./civ-selector.js"></script>
         <script>
@@ -66,6 +68,10 @@
             ];
 
             // Initialize the civilization selector
+            console.log("Initializing civ-selector...");
+            console.log("Mount element:", document.getElementById("app"));
+            console.log("CivSelect available:", window.CivSelect);
+
             window.civSelectInstance = window.CivSelect.init({
                 mount: document.getElementById("app"),
                 civs: civs,
@@ -74,6 +80,8 @@
                     console.log("Selected civilization:", civ);
                 },
             });
+
+            console.log("Civ-selector initialized:", window.civSelectInstance);
         </script>
     </body>
 </html>

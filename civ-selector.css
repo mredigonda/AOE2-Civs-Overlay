@@ -10,6 +10,16 @@ body {
     user-select: none;
 }
 
+/* Ensure the civ-selector is visible and interactive */
+#civ-selector {
+    pointer-events: auto;
+    user-select: auto;
+    position: relative;
+    z-index: 1000;
+    min-height: 40px;
+    display: block;
+}
+
 .civ-select-container {
     position: relative;
     display: inline-block;

@@ -13,7 +13,7 @@ const createWindow = () => {
         focusable: false,
     });
 
-    win.loadFile("index.html");
+    win.loadFile("civ-selector.html");
 };
 
 app.whenReady().then(() => {
