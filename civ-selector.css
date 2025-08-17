@@ -12,7 +12,7 @@ body {
 }
 
 /* Ensure the civ-selector is visible and interactive */
-#civ-selector {
+#app {
     pointer-events: auto;
     user-select: auto;
     position: relative;
