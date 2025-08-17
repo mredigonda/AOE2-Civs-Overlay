@@ -108,7 +108,7 @@
         "uniqueTechnologies": [
             {
                 "name": "Kasbah",
-                "description": "Allied Castles work 25% faster.[note 6]"
+                "description": "Allied Castles work 25% faster."
             },
             {
                 "name": "Maghrebi Camels",
@@ -236,7 +236,7 @@
         "uniqueTechnologies": [
             {
                 "name": "Burgundian Vineyards",
-                "description": "Farmers slowly generate gold in addition to food.[note 9]"
+                "description": "Farmers slowly generate gold in addition to food."
             },
             {
                 "name": "Flemish Revolution",
@@ -338,7 +338,7 @@
         "code": "CHI",
         "name": "Chinese",
         "focus": "Archer and Gunpowder",
-        "teamBonus": "Farms and Pastures contain +10% food.[note 13]",
+        "teamBonus": "Farms and Pastures contain +10% food.",
         "uniqueUnits": [
             {
                 "name": "Chu Ko Nu",
@@ -580,7 +580,7 @@
         "code": "HIN",
         "name": "Hindustanis",
         "focus": "Camel and Gunpowder",
-        "teamBonus": "Camel units and light cavalry units[note 19] have +2 attack against standard buildings.",
+        "teamBonus": "Camel units and light cavalry units have +2 attack against standard buildings.",
         "uniqueUnits": [
             {
                 "name": "Ghulam",
@@ -747,7 +747,7 @@
         "uniqueTechnologies": [
             {
                 "name": "Fortified Bastions",
-                "description": "Fortifications[note 21] regenerate 500 hit points per minute."
+                "description": "Fortifications regenerate 500 hit points per minute."
             },
             {
                 "name": "Thunderclap Bombs",
@@ -1118,7 +1118,7 @@
         "uniqueBuildings": [
             {
                 "name": "Folwark",
-                "description": "Free upgrade to the Mill,[note 28] which collects 10% food from nearby constructed Farms and provides +5 population space."
+                "description": "Free upgrade to the Mill, which collects 10% food from nearby constructed Farms and provides +5 population space."
             }
         ]
     },
@@ -1195,7 +1195,7 @@
         "code": "SAR",
         "name": "Saracens",
         "focus": "Camel and Naval",
-        "teamBonus": "Foot archers have +3[note 30] attack against standard buildings.",
+        "teamBonus": "Foot archers have +3 attack against standard buildings.",
         "uniqueUnits": [
             {
                 "name": "Mameluke",
@@ -1246,7 +1246,7 @@
             },
             {
                 "name": "Bolt Magazine",
-                "description": "Archer-line,[note 31] War Chariots, and Lou Chuans fire additional projectiles.[note 32]"
+                "description": "Archer-line, War Chariots, and Lou Chuans fire additional projectiles."
             }
         ],
         "civilizationBonuses": [

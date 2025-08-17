@@ -1,15 +1,19 @@
 const { app, BrowserWindow, globalShortcut, ipcMain } = require("electron");
+const {
+    DEFAULT_WINDOW_WIDTH,
+    DEFAULT_WINDOW_HEIGHT,
+} = require("./constants.js");
 
 let mainWindow;
 
 const createWindow = () => {
     mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: DEFAULT_WINDOW_WIDTH,
+        height: DEFAULT_WINDOW_HEIGHT,
         frame: false,
         transparent: true,
         alwaysOnTop: true,
-        resizable: false,
+        resizable: true,
         hasShadow: false,
         fullscreenable: false,
         focusable: false,
