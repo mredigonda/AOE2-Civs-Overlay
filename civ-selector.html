@@ -326,6 +326,36 @@
 
                 civInfoDiv.innerHTML = html;
 
+                // Resize window to match civ-info content height after 3 seconds
+                setTimeout(async () => {
+                    try {
+                        // Get current window width
+                        const currentWidth = window.innerWidth;
+
+                        // Measure the height of the civ-info content
+                        const civInfoElement =
+                            document.getElementById("civ-info");
+                        const civInfoHeight = civInfoElement.offsetHeight;
+
+                        // Resize window to match the content height
+                        const result = await window.updateWindowSize(
+                            currentWidth,
+                            civInfoHeight
+                        );
+
+                        if (result.success) {
+                            console.log(
+                                `Window resized to match civ-info content height: ${civInfoHeight}px`
+                            );
+                        }
+                    } catch (error) {
+                        console.error(
+                            "Failed to resize window to match content height:",
+                            error
+                        );
+                    }
+                }, 50);
+
                 // Add event listener for back button
                 const backButton = document.getElementById("back-button");
                 if (backButton) {
