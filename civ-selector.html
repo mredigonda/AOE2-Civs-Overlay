@@ -25,6 +25,17 @@
         <div id="app">
             <p>Loading civ-selector...</p>
         </div>
+        <div
+            id="civ-info"
+            style="
+                display: none;
+                margin-top: 20px;
+                color: white;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.4;
+            "
+        ></div>
 
         <script src="./civ-selector.js"></script>
         <script>
@@ -141,6 +152,22 @@
                 { code: "WU", name: "Wu" },
             ];
 
+            // Load civilization data
+            let civData = [];
+            fetch("./civ-info.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    civData = data;
+                    console.log(
+                        "Loaded civ data:",
+                        data.length,
+                        "civilizations"
+                    );
+                })
+                .catch((error) => {
+                    console.error("Error loading civ data:", error);
+                });
+
             // Initialize the civilization selector
             console.log("Initializing civ-selector...");
             console.log("Mount element:", document.getElementById("app"));
@@ -152,10 +179,100 @@
                 value: null,
                 onChange: function (civ) {
                     console.log("Selected civilization:", civ);
+                    displayCivInfo(civ, civData);
                 },
             });
 
             console.log("Civ-selector initialized:", window.civSelectInstance);
+
+            // Function to display civilization information
+            function displayCivInfo(selectedCiv, allCivData) {
+                const civInfoDiv = document.getElementById("civ-info");
+
+                if (!selectedCiv || !allCivData) {
+                    civInfoDiv.style.display = "none";
+                    return;
+                }
+
+                const civ = allCivData.find((c) => c.code === selectedCiv.code);
+                if (!civ) {
+                    civInfoDiv.style.display = "none";
+                    return;
+                }
+
+                let html = `
+                    <div style="background: rgba(0, 0, 0, 0.8); padding: 20px; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <h2 style="margin: 0 0 15px 0; color: #ffd700; font-size: 24px;">${
+                            civ.name
+                        }</h2>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <strong style="color: #ffd700;">Focus:</strong> ${
+                                civ.focus
+                            }
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <strong style="color: #ffd700;">Team Bonus:</strong> ${
+                                civ.teamBonus
+                            }
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <strong style="color: #ffd700;">Civilization Bonuses:</strong>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                ${civ.civilizationBonuses
+                                    .map((bonus) => `<li>${bonus}</li>`)
+                                    .join("")}
+                            </ul>
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <strong style="color: #ffd700;">Unique Units:</strong>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                ${civ.uniqueUnits
+                                    .map(
+                                        (unit) =>
+                                            `<li><strong>${unit.name}:</strong> ${unit.description}</li>`
+                                    )
+                                    .join("")}
+                            </ul>
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <strong style="color: #ffd700;">Unique Technologies:</strong>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                ${civ.uniqueTechnologies
+                                    .map(
+                                        (tech) =>
+                                            `<li><strong>${tech.name}:</strong> ${tech.description}</li>`
+                                    )
+                                    .join("")}
+                            </ul>
+                        </div>
+                `;
+
+                if (civ.uniqueBuildings) {
+                    html += `
+                        <div style="margin-bottom: 15px;">
+                            <strong style="color: #ffd700;">Unique Buildings:</strong>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                ${civ.uniqueBuildings
+                                    .map(
+                                        (building) =>
+                                            `<li><strong>${building.name}:</strong> ${building.description}</li>`
+                                    )
+                                    .join("")}
+                            </ul>
+                        </div>
+                    `;
+                }
+
+                html += "</div>";
+
+                civInfoDiv.innerHTML = html;
+                civInfoDiv.style.display = "block";
+            }
         </script>
     </body>
 </html>
