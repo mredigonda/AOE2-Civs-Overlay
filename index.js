@@ -6,6 +6,15 @@ const {
 
 let mainWindow;
 
+// IPC handler for updating window size
+ipcMain.handle("update-window-size", async (event, width, height) => {
+    if (mainWindow) {
+        mainWindow.setSize(width, height);
+        return { success: true, width, height };
+    }
+    return { success: false, error: "Main window not found" };
+});
+
 const createWindow = () => {
     mainWindow = new BrowserWindow({
         width: DEFAULT_WINDOW_WIDTH,

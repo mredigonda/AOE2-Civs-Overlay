@@ -101,6 +101,35 @@
             });
 
             // No custom drag functionality needed - using CSS -webkit-app-region: drag
+
+            // Function to update window size from frontend
+            async function updateWindowSize(width, height) {
+                try {
+                    const result = await ipcRenderer.invoke(
+                        "update-window-size",
+                        width,
+                        height
+                    );
+                    if (result.success) {
+                        console.log(
+                            `Window size updated to ${width}x${height}`
+                        );
+                        return result;
+                    } else {
+                        console.error(
+                            "Failed to update window size:",
+                            result.error
+                        );
+                        return result;
+                    }
+                } catch (error) {
+                    console.error("Error updating window size:", error);
+                    return { success: false, error: error.message };
+                }
+            }
+
+            // Make the function globally available
+            window.updateWindowSize = updateWindowSize;
         </script>
         <script>
             // Usage example
