@@ -41,7 +41,7 @@ const createWindow = () => {
         resizable: true,
         hasShadow: false,
         fullscreenable: false,
-        focusable: true, // Changed from false to true for Windows compatibility
+        focusable: true, // Always focusable since we have a small drag icon
         roundedCorners: false,
         show: false, // Don't show until ready
         backgroundColor: "#00000000", // Transparent background
@@ -93,24 +93,6 @@ app.whenReady().then(() => {
     console.log("App is ready, creating window...");
     createWindow();
 
-    // Register global shortcut for making window interactive
-    globalShortcut.register("CommandOrControl+Alt+Y", () => {
-        if (mainWindow) {
-            console.log("Making window interactive");
-            // Make window interactive
-            mainWindow.setFocusable(true);
-            mainWindow.setAlwaysOnTop(false);
-            mainWindow.webContents.send("make-interactive");
-
-            // Revert after 5 seconds
-            setTimeout(() => {
-                mainWindow.setFocusable(true); // Keep focusable true for Windows
-                mainWindow.setAlwaysOnTop(true);
-                mainWindow.webContents.send("make-non-interactive");
-            }, 5000);
-        }
-    });
-
     // Register global shortcut for toggling window visibility
     globalShortcut.register("CommandOrControl+Alt+`", () => {
         if (mainWindow) {
@@ -123,17 +105,6 @@ app.whenReady().then(() => {
                 isWindowVisible = true;
                 console.log("Window shown");
             }
-        }
-    });
-
-    // Register global shortcut for toggling always-on-top
-    globalShortcut.register("CommandOrControl+Alt+T", () => {
-        if (mainWindow) {
-            const isAlwaysOnTop = mainWindow.isAlwaysOnTop();
-            mainWindow.setAlwaysOnTop(!isAlwaysOnTop);
-            console.log(
-                `Always-on-top ${!isAlwaysOnTop ? "enabled" : "disabled"}`
-            );
         }
     });
 

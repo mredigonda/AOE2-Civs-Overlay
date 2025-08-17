@@ -18,9 +18,14 @@ This application implements always-on-top functionality specifically optimized f
 
 ### Keyboard Shortcuts
 
--   `Ctrl+Alt+T`: Toggle always-on-top on/off
--   `Ctrl+Alt+Y`: Make window interactive (temporarily disables always-on-top for 5 seconds)
 -   `Ctrl+Alt+\``: Toggle window visibility
+
+### Drag Icon
+
+-   Small golden drag icon (⋮⋮) in the top-right corner
+-   Always clickable and draggable
+-   Minimal size (16x16px) to reduce misclick probability
+-   Hover effects for better user feedback
 
 ## Technical Implementation
 
@@ -39,6 +44,13 @@ This application implements always-on-top functionality specifically optimized f
 -   Uses `setAlwaysOnTop(true, 'screen-saver')` for maximum compatibility
 -   Periodic checks ensure the setting doesn't get overridden by other applications
 -   Windows-specific handling to work around potential OS limitations
+
+### Drag Icon Implementation
+
+-   Small 16x16px icon positioned in top-right corner
+-   Uses CSS `-webkit-app-region: drag` for native window dragging
+-   Always visible and interactive
+-   Golden color with hover effects for visibility
 
 ## Known Limitations
 

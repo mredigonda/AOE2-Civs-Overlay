@@ -8,20 +8,32 @@
     </head>
     <body>
         <div
-            id="drag-handle"
+            id="drag-icon"
             style="
-                display: none;
                 position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 30px;
-                background: rgba(0, 0, 0, 0.1);
+                top: 5px;
+                right: 5px;
+                width: 16px;
+                height: 16px;
+                background: rgba(255, 215, 0, 0.8);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                border-radius: 2px;
                 cursor: move;
                 z-index: 9999;
                 -webkit-app-region: drag;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 10px;
+                color: rgba(0, 0, 0, 0.8);
+                font-weight: bold;
+                user-select: none;
+                pointer-events: auto;
             "
-        ></div>
+            title="Drag to move window"
+        >
+            ⋮⋮
+        </div>
         <div id="app">
             <p>Loading civ-selector...</p>
         </div>
@@ -44,63 +56,8 @@
 
         <script src="./civ-selector.js"></script>
         <script>
-            // IPC communication for interactive state
+            // IPC communication
             const { ipcRenderer } = require("electron");
-
-            let interactiveTimeout;
-
-            ipcRenderer.on("make-interactive", () => {
-                console.log("Making window interactive");
-                document.body.style.pointerEvents = "auto";
-                document.body.style.userSelect = "auto";
-
-                // Clear any existing timeout
-                if (interactiveTimeout) {
-                    clearTimeout(interactiveTimeout);
-                }
-
-                // Show drag handle
-                const dragHandle = document.getElementById("drag-handle");
-                dragHandle.style.display = "block";
-
-                // Show visual feedback
-                const feedback = document.createElement("div");
-                feedback.id = "interactive-feedback";
-                feedback.textContent = "Window is interactive for 5 seconds...";
-                feedback.style.cssText = `
-                    position: fixed;
-                    top: 10px;
-                    right: 10px;
-                    background: rgba(0, 255, 0, 0.8);
-                    color: white;
-                    padding: 10px;
-                    border-radius: 5px;
-                    z-index: 10000;
-                    font-family: Arial, sans-serif;
-                    font-size: 14px;
-                `;
-                document.body.appendChild(feedback);
-            });
-
-            ipcRenderer.on("make-non-interactive", () => {
-                console.log("Making window non-interactive");
-                document.body.style.pointerEvents = "none";
-                document.body.style.userSelect = "none";
-
-                // Hide drag handle
-                const dragHandle = document.getElementById("drag-handle");
-                dragHandle.style.display = "none";
-
-                // Remove visual feedback
-                const feedback = document.getElementById(
-                    "interactive-feedback"
-                );
-                if (feedback) {
-                    feedback.remove();
-                }
-            });
-
-            // No custom drag functionality needed - using CSS -webkit-app-region: drag
 
             // Function to update window size from frontend
             async function updateWindowSize(width, height) {
