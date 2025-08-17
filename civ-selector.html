@@ -20,6 +20,7 @@
                     background: rgba(0, 0, 0, 0.1);
                     cursor: move;
                     z-index: 9999;
+                    -webkit-app-region: drag;
                 "
             ></div>
             <p>Loading civ-selector...</p>
@@ -83,37 +84,7 @@
                 }
             });
 
-            // Drag functionality
-            let isDragging = false;
-            let dragStartX = 0;
-            let dragStartY = 0;
-
-            document.addEventListener("DOMContentLoaded", () => {
-                const dragHandle = document.getElementById("drag-handle");
-
-                dragHandle.addEventListener("mousedown", (e) => {
-                    isDragging = true;
-                    dragStartX = e.clientX;
-                    dragStartY = e.clientY;
-                    e.preventDefault();
-                });
-
-                document.addEventListener("mousemove", (e) => {
-                    if (isDragging) {
-                        const deltaX = e.clientX - dragStartX;
-                        const deltaY = e.clientY - dragStartY;
-
-                        ipcRenderer.send("move-window", { deltaX, deltaY });
-
-                        dragStartX = e.clientX;
-                        dragStartY = e.clientY;
-                    }
-                });
-
-                document.addEventListener("mouseup", () => {
-                    isDragging = false;
-                });
-            });
+            // No custom drag functionality needed - using CSS -webkit-app-region: drag
         </script>
         <script>
             // Usage example
