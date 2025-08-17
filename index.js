@@ -80,7 +80,7 @@ app.whenReady().then(() => {
     createWindow();
 
     // Register global shortcut for making window interactive
-    globalShortcut.register("CommandOrControl+Shift+P", () => {
+    globalShortcut.register("CommandOrControl+Alt+Y", () => {
         if (mainWindow) {
             console.log("Making window interactive");
             // Make window interactive
@@ -98,7 +98,7 @@ app.whenReady().then(() => {
     });
 
     // Register global shortcut for toggling window visibility
-    globalShortcut.register("CommandOrControl+Shift+O", () => {
+    globalShortcut.register("CommandOrControl+Alt+`", () => {
         if (mainWindow) {
             if (isWindowVisible) {
                 mainWindow.hide();
