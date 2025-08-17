@@ -25,6 +25,9 @@ const createWindow = () => {
     });
 
     mainWindow.loadFile("civ-selector.html");
+
+    // Open dev tools for development
+    // mainWindow.webContents.openDevTools();
 };
 
 app.whenReady().then(() => {

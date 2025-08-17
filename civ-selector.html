@@ -29,7 +29,6 @@
             id="civ-info"
             style="
                 display: none;
-                margin-top: 40px;
                 color: white;
                 font-family: Arial, sans-serif;
                 font-size: 14px;
@@ -38,9 +37,6 @@
                 user-select: auto;
                 position: relative;
                 z-index: 1000;
-                width: calc(100% - 40px);
-                margin-left: 20px;
-                margin-right: 20px;
             "
         ></div>
 
@@ -298,7 +294,7 @@
                 html += "</div>";
 
                 civInfoDiv.innerHTML = html;
-                
+
                 // Add event listener for back button
                 const backButton = document.getElementById("back-button");
                 if (backButton) {
@@ -306,19 +302,19 @@
                         // Show civ selector and hide civ info
                         appDiv.style.display = "block";
                         civInfoDiv.style.display = "none";
-                        
+
                         // Clear the current selection
                         if (window.civSelectInstance) {
                             window.civSelectInstance.value = null;
                             window.civSelectInstance.input.value = "";
                         }
                     });
-                    
+
                     // Add hover effect
                     backButton.addEventListener("mouseenter", () => {
                         backButton.style.color = "#ffffff";
                     });
-                    
+
                     backButton.addEventListener("mouseleave", () => {
                         backButton.style.color = "#ffd700";
                     });
