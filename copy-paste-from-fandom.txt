@@ -1,10 +1,5 @@
 Armenians
-Armenians emblem AoE2
-Armenians Castle
-The Armenian Castle
-
 Focus: Infantry and Naval
-Wonder: Etchmiadzin Cathedral
 Unique units
 Composite Bowman: Foot archer that ignores armor.
 Warrior Priest: Religious infantry that can fight, carry Relics, and heal allied units.
@@ -19,13 +14,9 @@ Long Swordsman and above, and Spearman line[note 2] available one Age earlier.
 Galley-line and Dromons\* fire one additional projectile each, which deal 1 attack and advertised attack respectively.
 Team bonus
 Infantry have +2 Line of Sight.
-Aztecs
-Aztecs emblem AoE2
-Aztecs Castle
-The Aztec Castle
 
+Aztecs
 Focus: Infantry and Monk
-Wonder: Great Pyramid of Tenochtitlan
 Unique unit
 Jaguar Warrior: Anti-infantry infantry
 Unique technologies
@@ -39,13 +30,9 @@ Monks gain 5 HP for every researched Monastery technology.
 Start with +50 gold.
 Team bonus
 Relics generate +33% gold.
-Bengalis
-Bengalis emblem AoE2
-Bengalis Castle
-The Bengali Castle
 
+Bengalis
 Focus: Elephant and Naval
-Wonder: Somapura Mahavihara
 Unique unit
 / Ratha: Mounted archer that can switch between melee and ranged attacks.
 Unique technologies
@@ -59,13 +46,9 @@ Ships regenerate 15 HP per minute.
 Monks +3/+3 armor.
 Team bonus
 Trade units yield 10% food in addition to gold.
-Berbers
-Berbers emblem AoE2
-Berbers Castle
-The Berber Castle
 
+Berbers
 Focus: Cavalry and Naval
-Wonder: Hassan Tower
 Unique unit
 Camel Archer: Mounted archer with attack bonus against mounted archers.
 Genitour: Mounted Skirmisher.
@@ -78,13 +61,9 @@ Stable units are 15%/20% cheaper in the Castle/Imperial Age.
 Ships move 10% faster.
 Team bonus
 Genitours are available at the Archery Range starting in the Castle Age.
-Bohemians
-Bohemians emblem AoE2
-Bohemians Castle
-The Bohemian Castle
 
+Bohemians
 Focus: Gunpowder and Monk
-Wonder: Powder Tower of Prague
 Unique unit
 Hussite Wagon: Tanky siege unit that can protect rear units.
 Houfnice: Upgrade of the Bombard Cannon, provides additional HP, attack, and blast radius.
@@ -99,13 +78,9 @@ Fervor and Sanctity affect Villagers.
 Mining Camp technologies are free.
 Team bonus
 Markets work 80% faster.
-Britons
-Britons emblem AoE2
-Britons Castle
-The Briton Castle
 
+Britons
 Focus: Foot archer
-Wonder: Chichester Cathedral
 Unique unit
 Longbowman: Long-ranged foot archer.
 Unique technologies
@@ -117,13 +92,9 @@ Foot archers (except Skirmishers) have +1/+2 range in the Castle/Imperial Age.
 Shepherds work 25% faster.
 Team bonus
 Archery Ranges work 10% faster.
-Bulgarians
-Bulgarians emblem AoE2
-Bulgarians Castle
-The Bulgarian Castle
 
+Bulgarians
 Focus: Infantry and Cavalry
-Wonder: Preslav Round Church
 Unique units
 Konnik: Cavalry that keeps on fighting as a dismounted infantry when killed.
 Dismounted Konnik: The dismounted infantry unit which appears after the death of the cavalry Konnik.
@@ -138,13 +109,9 @@ Town Centers cost -50% stone (except starting Town Center).
 Blacksmith and Siege Workshop technologies cost -50% food.
 Team bonus
 Blacksmiths work 80% faster.
-Burgundians
-Burgundians emblem AoE2
-Burgundians Castle
-The Burgundian Castle
 
+Burgundians
 Focus: Cavalry
-Wonder: Brussels Town Hall
 Unique unit
 Coustillier: Cavalry unit that can charge its attack over time.
 Flemish Militia: Infantry unit with a bonus vs cavalry; can also be obtained via the Flemish Revolution technology.
@@ -157,13 +124,9 @@ Stable technologies are 50% cheaper. Cavalier upgrade available in the Castle Ag
 Gunpowder units gain +25% attack.[note 11]
 Team bonus
 Relics generate 0.5 food/s in addition to gold.
-Burmese
-Burmese emblem AoE2
-Burmese Castle
-The Burmese Castle
 
+Burmese
 Focus: Monk and Elephant
-Wonder: Shwezigon Pagoda
 Unique unit
 Arambai: Ranged cavalry with powerful but inaccurate attack.
 Unique technologies
@@ -176,13 +139,9 @@ Infantry units have +1/+2/+3 attack in the Feudal/Castle/Imperial Age.
 Monastery technologies are 50% cheaper.
 Team bonus
 Relics are visible on the map from the game start.
-Byzantines
-Byzantines emblem AoE2
-Byzantines Castle
-The Byzantine Castle
 
+Byzantines
 Focus: Defensive
-Wonder: Hagia Sophia
 Unique unit
 Cataphract: Heavy cavalry that excels at combat against infantry and Camel Riders.
 Unique technologies
@@ -196,13 +155,9 @@ Advancing to the Imperial Age is 33% cheaper.
 Town Watch and Town Patrol are free.
 Team bonus
 Monks heal 100% faster.
-Celts
-Celts emblem AoE2
-Celts Castle
-The Celtic Castle
 
+Celts
 Focus: Infantry and Siege
-Wonder: Rock of Cashel
 Unique unit
 Woad Raider: Fast-moving infantry unit.
 Unique technologies
@@ -215,13 +170,9 @@ Siege weapons fire 25% faster.
 Non-Celt[note 12] herdable animals can be converted regardless of units next to them.
 Team bonus
 Siege Workshops work 20% faster.
-Chinese
-Chinese emblem AoE2
-Chinese Castle
-The Chinese Castle
 
+Chinese
 Focus: Archer and Gunpowder
-Wonder: Hall of Prayer for Good Harvests in the Temple of Heaven complex
 Unique unit
 Chu Ko Nu: Foot archer that fires multiple arrows.
 Dragon Ship\*: Unique upgrade to the Fire Ship, replacing the Fast Fire Ship.
@@ -235,13 +186,9 @@ Technologies are 5%/10%/15% cheaper in the Feudal/Castle/Imperial Age, respectiv
 Fire Galley-line and Fire Lancers move 5%/10% faster in the Castle/Imperial Ages, respectively.
 Team bonus
 Farms and Pastures contain +10% food.[note 13]
-Cumans
-Cumans emblem AoE2
-Cumans Castle
-The Cuman Castle
 
+Cumans
 Focus: Cavalry
-Wonder: Sarkel Fortress (ruined)
 Unique units
 Kipchak: Cheap multi-shot mounted archer.
 Unique technologies
@@ -254,13 +201,9 @@ Siege Workshop and Battering Ram available in Feudal Age; Capped Ram upgrade ava
 Mounted units move 5%/10%/15% faster in the Feudal/Castle/Imperial Age.
 Team bonus
 Palisade Walls have +33% hit points.
-Dravidians
-Dravidians emblem AoE2
-Dravidians Castle
-The Dravidian Castle
 
+Dravidians
 Focus: Infantry and Naval
-Wonder: Brihadisvara Temple
 Unique units
 Urumi Swordsman: Infantry that can charge its attack to inflict additional damage with Area of Effect.
 Thirisadai: Powerful warship that fires multiple projectiles.
@@ -275,13 +218,9 @@ Siege units cost -33% wood.
 Skirmishers and Elephant Archers attack 25% faster.
 Team bonus
 Docks provide +5 population space.
-Ethiopians
-Ethiopians emblem AoE2
-Ethiopians Castle
-The Ethiopian Castle
 
+Ethiopians
 Focus: Foot archer
-Wonder: Biete Amanuel
 Unique unit
 Shotel Warrior: Rapidly deployed infantry with high attack but low armor and hit points.
 Unique technologies
@@ -293,13 +232,9 @@ Receive +100 food, +100 gold whenever a new Age is reached.
 The Pikeman upgrade is free.
 Team bonus
 Outposts +3 Line of Sight and stone cost removed.
-Franks
-Franks emblem AoE2
-Franks Castle
-The Frankish Castle
 
+Franks
 Focus: Cavalry
-Wonder: St. Vitus Cathedral
 Unique unit
 Throwing Axeman: Ranged infantry unit.
 Unique technologies
@@ -312,13 +247,9 @@ Mounted units have +20% hit points (starting in the Feudal Age).
 Foragers work 15% faster.
 Team bonus
 Knights have +2 Line of Sight.
-Georgians
-Georgians emblem AoE2
-Georgians Castle
-The Georgian Castle
 
+Georgians
 Focus: Cavalry and Defensive
-Wonder: Svetitskhoveli Cathedral
 Unique unit
 Monaspa: Cavalry unit that becomes stronger when other Monaspas or Knight-line units are nearby.
 Unique technologies
@@ -331,13 +262,9 @@ Units and buildings receive -20% damage (-40% instead of -25%) when fighting fro
 Mounted units regenerate 2/8/14 hit points per minute in the Feudal/Castle/Imperial Age.
 Team bonus
 Repairing buildings costs -25% resources.
-Goths
-Goths emblem AoE2
-Goths Castle
-The Gothic Castle
 
+Goths
 Focus: Infantry
-Wonder: Mausoleum of Theoderic I
 Unique unit
 Huskarl: Archer-resistant infantry unit.
 Unique technologies
@@ -351,13 +278,9 @@ Loom is researched instantly.
 +10 population cap in the Imperial Age.
 Team bonus
 Barracks work 20% faster.
-Gurjaras
-Gurjaras emblem AoE2
-Gurjaras Castle
-The Gurjara Castle
 
+Gurjaras
 Focus: Cavalry and Camel
-Wonder: Somnath Temple
 Unique units
 Chakram Thrower: Light infantry with a ranged melee attack and pass-through damage.
 Shrivamsha Rider: Light cavalry which can dodge projectile attacks.
@@ -373,13 +296,9 @@ Can garrison Mills with herdable animals to produce food.[note 18]
 Mounted units deal +20%/+30%/+40% bonus damage in the Feudal/Castle/Imperial Age.
 Team bonus
 Camel and elephant units are created 25% faster.
-Hindustanis
-Hindustanis emblem AoE2
-Hindustanis Castle
-The Hindustani Castle
 
+Hindustanis
 Focus: Camel and Gunpowder
-Wonder: Maqbara-i Humayun
 Unique units
 Ghulam: Archer-resistant infantry unit that thrusts its spear through multiple targets.
 Imperial Camel Rider: Unique upgrade of the Heavy Camel Rider, provides additional hit points and attack.
@@ -393,13 +312,9 @@ Gunpowder units have +1/+1 armor.
 Can build Caravanserais in the Imperial Age.
 Team bonus
 Camel units and light cavalry units[note 19] have +2 attack against standard buildings.
-Huns
-Huns emblem AoE2
-Huns Castle
-The Hunnic Castle
 
+Huns
 Focus: Cavalry
-Wonder: Arch of Constantine (ruined)
 Unique unit
 Tarkan: Cavalry unit that excels at razing defensive structures.
 Unique technologies
@@ -412,13 +327,9 @@ Mounted archers are 10%/20% cheaper in the Castle/Imperial Age.
 Trebuchets have +35% accuracy against units and small targets.[note 20]
 Team bonus
 Stables work 20% faster.
-Inca
-Incas emblem AoE2
-Inca Castle
-The Inca Castle
 
+Inca
 Focus: Infantry
-Wonder: The Temple of the Sun at Machu Picchu
 Unique units
 Kamayuk: Infantry wielding a long spear that allows attacking at range and attack bonus against cavalry.
 Slinger: Foot archer with a massive attack bonus against infantry.
@@ -432,13 +343,9 @@ Houses support 10 population.
 Buildings cost -15% stone.
 Team bonus
 Start with a free Llama.
-Italians
-Italians emblem AoE2
-Italians Castle
-The Italian Castle
 
+Italians
 Focus: Foot archers and Navy
-Wonder: Genoa Cathedral, Cathedral of St. Lawrence
 Unique units
 Genoese Crossbowman: Foot archer with an attack bonus against cavalry.
 Condottiero: Infantry with an attack bonus against gunpowder units.
@@ -453,13 +360,9 @@ Fishing Ships are 15% cheaper.
 Gunpowder units are 20% cheaper.
 Team bonus
 Condottieri are available at the Barracks.
-Japanese
-Japanese emblem AoE2
-Japanese Castle
-The Japanese Castle
 
+Japanese
 Focus: Infantry
-Wonder: Great Buddha Hall (daibutsuden) at the Tōdai-ji temple complex
 Unique unit
 Samurai: Fast-attacking infantry with an attack bonus against unique units.
 Unique technologies
@@ -472,13 +375,9 @@ Infantry attack 33% faster starting in the Feudal Age.
 Mounted archers +2 attack vs. archers (except Skirmishers).
 Team bonus
 Galleys have +4 Line of Sight.
-Jurchens
-Jurchens emblem AoE2
-Jurchens Castle
-The Jurchen Castle
 
+Jurchens
 Focus: Cavalry and Gunpowder
-Wonder: Yinshan Pagoda Forest
 Unique units
 Iron Pagoda: Heavy cavalry who periodically brushes off a melee attack.
 Grenadier: Ranged gunpowder unit who throws explosives dealing blast damage.
@@ -493,13 +392,9 @@ Siege and fortification technologies[note 23] cost -75% wood and are researched 
 Military units receive -50% friendly fire damage.
 Team bonus
 Gunpowder units +2 Line of Sight.
-Khitans
-Khitans emblem AoE2
-Khitans Castle
-The Khitan Castle
 
+Khitans
 Focus: Infantry and Cavalry
-Wonder: Pagoda of Fogong Temple
 Unique units
 Liao Dao: A heavy infantry which deals bleeding damage
 Mounted Trebuchet: A cavalry siege unit whose attacks leave burning fire on the ground
@@ -519,13 +414,9 @@ Skirmishers, Genitours, and the Spearman and Scout Cavalry lines are trained and
 Heavy Cavalry Archer upgrade available in the Castle Age and costs -50%
 Team bonus
 Infantry units +2 attack vs ranged soldiers
-Khmer
-Khmer emblem AoE2
-Khmer Castle
-The Khmer Castle
 
+Khmer
 Focus: Siege and Elephant
-Wonder: Central shrine of the Angkor Wat temple complex
 Unique unit
 Ballista Elephant: Heavy cavalry siege unit.
 Unique technologies
@@ -538,13 +429,9 @@ Farmers don't carry food but rather add it directly to the stockpile without any
 Villagers (and Kings) can garrison in Houses.
 Team bonus
 Scorpions have +1 range.
-Koreans
-Koreans emblem AoE2
-Koreans Castle
-The Korean Castle
 
+Koreans
 Focus: Defensive and Naval
-Wonder: Hwangnyong Temple
 Unique units
 War Wagon: Heavily armored cavalry archer.
 Turtle Ship: Heavily armored ship that fires cannonballs.
@@ -558,13 +445,9 @@ Archer and infantry units cost -50% wood.
 Warships cost -20% wood.
 Team bonus
 Villagers have +3 Line of Sight.
-Lithuanians
-Lithuanians emblem AoE2
-Lithuanians Castle
-The Lithuanian Castle
 
+Lithuanians
 Focus: Cavalry and Monk
-Wonder: Trakai Island Castle
 Unique units
 Leitis: Cavalry whose attack ignores unit's armor.
 Winged Hussar: Unique upgrade of the Light Cavalry replacing the Hussar (shared with the Poles).
@@ -577,13 +460,9 @@ Spearman line and Skirmishers move 10% faster.
 Each garrisoned Relic gives +1 attack to Knights and Leitis (maximum +4).
 Team bonus
 Monasteries (and Fortified Churches) work 20% faster.
-Magyars
-Magyars emblem AoE2
-Magyars Castle
-The Magyar Castle
 
+Magyars
 Focus: Cavalry
-Wonder: Hunyad Castle
 Unique unit
 Magyar Huszar: Light cavalry with an attack bonus against siege weapons.
 Unique technologies
@@ -595,13 +474,9 @@ Scout Cavalry line is 15% cheaper.
 Villagers kill predators in one strike.[note 24]
 Team bonus
 Mounted archers are trained 25% faster.
-Malay
-Malay emblem AoE2
-Malay Castle
-The Malay Castle
 
+Malay
 Focus: Infantry and Naval
-Wonder: Kalasan Temple
 Unique unit
 Karambit Warrior: Cheap infantry that only takes up half a population space.
 Unique building
@@ -616,13 +491,9 @@ Battle Elephants are 25% cheaper in the Castle Age, 35% cheaper in the Imperial 
 Infantry armor upgrades are free.
 Team bonus
 Docks have +6 Line of Sight.
-Malians
-Malians emblem AoE2
-Malians Castle
-The Malian Castle
 
+Malians
 Focus: Infantry
-Wonder: Great Mosque of Djenné
 Unique unit
 Gbeto: Fast light infantry with a powerful ranged attack.
 Unique technologies
@@ -634,13 +505,9 @@ Barracks units have +1/+2/+3 pierce armor in the Feudal/Castle/Imperial Age.
 Villagers drop off +10% gold.[note 25]
 Team bonus
 Universities work +80% faster.
-Maya
-Mayans emblem AoE2
-Maya Castle
-The Mayan Castle
 
+Maya
 Focus: Foot archer
-Wonder: Temple of the Great Jaguar (Tikal Temple I)
 Unique unit
 Plumed Archer: Quick foot archer with high hit points and pierce armor, but low attack.
 Unique technologies
@@ -653,13 +520,9 @@ Resources last 15% longer.[note 26]
 Foot archers (except Skirmishers) are 10%/20%/30% cheaper in the Feudal/Castle/Imperial Age.
 Team bonus
 Walls and gates (both Palisade and Stone) are 50% cheaper.
-Mongols
-Mongols emblem AoE2
-Mongols Castle
-The Mongol Castle
 
+Mongols
 Focus: Mounted archer
-Wonder: Great Tent of Genghis Khan
 Unique unit
 Mangudai: Mounted archer with an attack bonus against siege weapons.
 Unique technologies
@@ -671,13 +534,9 @@ Scout Cavalry-line and Steppe Lancers +20/30% hit points in the Castle/Imperial 
 Hunters work 40% faster.
 Team bonus
 The Scout Cavalry line has +2 Line of Sight.
-Persians
-Persians emblem AoE2
-Persians Castle
-The Persian Castle
 
+Persians
 Focus: Cavalry
-Wonder: Taq Kasra (Arch of Ctesiphon)
 Unique units
 War Elephant: Slow but extremely powerful cavalry unit.
 Savar: Unique upgrade of the Cavalier, replacing the Paladin.
@@ -691,13 +550,9 @@ Parthian Tactics available in the Castle Age.
 Can build Caravanserais in the Imperial Age.
 Team bonus
 Knight line has +2 attack against archers.
-Poles
-Poles emblem AoE2
-Poles Castle
-The Polish Castle
 
+Poles
 Focus: Cavalry
-Wonder: Wawel Cathedral
 Unique units
 Obuch: Infantry whose attack reduces the target unit's armor.
 Winged Hussar: Unique upgrade of the Light Cavalry replacing the Hussar (shared with the Lithuanians).
@@ -712,13 +567,9 @@ Male Stone miners generate 33% gold in addition to stone.[note 29]
 Bloodlines and Scout Cavalry-line upgrades cost -50% food.
 Team bonus
 The Scout Cavalry line has +1 attack vs. archers.
-Portuguese
-Portuguese emblem AoE2
-Portuguese Castle
-The Portuguese Castle
 
+Portuguese
 Focus: Naval and Gunpowder
-Wonder: Belém Tower
 Unique units
 Organ Gun: Gunpowder siege unit filling a similar purpose as the Scorpion.
 Caravel: Warship that causes pass-through damage, like the Scorpion.
@@ -733,13 +584,9 @@ All ships have +10% hit points.
 Foragers generate wood in addition to food (0.33 wood per food).
 Team bonus
 All technologies (excluding Age ups) are researched 25% faster.
-Romans
-Romans emblem AoE2
-Romans Castle
-The Roman Castle
 
+Romans
 Focus: Infantry
-Wonder: Colosseum
 Unique units
 Legionary: Sturdy infantry unit. Replacement of the Two-Handed Swordsman and Champion upgrades.
 Centurion: Heavy cavalry unit that increases the attack and movement speeds of nearby Militia-line units.
@@ -753,13 +600,9 @@ Infantry receives double the effect from Blacksmith armor upgrades.
 Scorpions cost -50% gold.
 Team bonus
 The Scorpion-line's minimum range is reduced to 1.
-Saracens
-Saracens emblem AoE2
-Saracens Castle
-The Saracen Castle
 
+Saracens
 Focus: Camel and Naval
-Wonder: Great Mosque of Samarra
 Unique unit
 Mameluke: Camel cavalry with ranged melee attack, and an attack bonus against mounted units.
 Unique technologies
@@ -773,13 +616,9 @@ Galleys attack 25% faster.
 Camel units +25% hit points.
 Team bonus
 Foot archers have +3[note 30] attack against standard buildings.
-Shu
-Shu emblem AoE2
-Shu Castle
-The Shu Castle
 
+Shu
 Focus: Archer and Siege
-Wonder: Wuhou Memorial in Chengdu
 Unique units
 White Feather Guard: Infantry whose attack slows enemies
 War Chariot: Cavalry siege unit with two attack modes replacing the Scorpion-line
@@ -793,13 +632,9 @@ Archery unit technologies at the Archery Range and Blacksmith cost -25%
 Siege weapons, War Chariots, and Lou Chuans[note 33] move +10/15% faster in Castle/Imperial Age
 Team bonus
 Foot archer units except Skirmishers +2 Line of Sight
-Sicilians
-Sicilians emblem AoE2
-Sicilians Castle
-The Sicilian Castle
 
+Sicilians
 Focus: Infantry and Cavalry
-Wonder: Monreale Cathedral
 Unique unit
 Serjeant: Heavily-armored infantry unit that can also build Donjons. It is available starting in the Feudal Age, and is upgraded for free upon reaching the Castle Age.
 Unique building
@@ -814,13 +649,9 @@ Land military units (except siege weapons) receive 40% less bonus damage.[note 3
 Farm upgrades provide additional +125% food.[note 37]
 Team bonus
 Transport Ships have +5 Line of Sight and cost -50%.
-Slavs
-Slavs emblem AoE2
-Slavs Castle
-The Slavic Castle
 
+Slavs
 Focus: Infantry and Siege
-Wonder: Kizhi Pogost
 Unique unit
 Boyar: Heavily armored cavalry, resistant to melee attack.
 Unique technologies
@@ -833,13 +664,9 @@ Siege Workshop units are 15% cheaper.
 Monks move 20% faster.
 Team bonus
 Barracks, Archery Ranges, Stables, and Siege Workshops provide +5 population.
-Spanish
-Spanish emblem AoE2
-Spanish Castle
-The Spanish Castle
 
+Spanish
 Focus: Gunpowder and Monk
-Wonder: Torre del Oro
 Unique units
 Conquistador: Mounted gunpowder unit.
 Missionary: Mounted Monk.
@@ -854,13 +681,9 @@ Gunpowder units fire 18% faster.[note 40]
 Receive 20 gold for each technology researched.
 Team bonus
 Trade units generate +25% gold.
-Tatars
-Tatars emblem AoE2
-Tatars Castle
-The Tatar Castle
 
+Tatars
 Focus: Mounted archer
-Wonder: Ulugh Beg Observatory
 Unique units
 Keshik: Cavalry that generates gold with each attack.
 Flaming Camel: Camel that explodes like a Petard, with attack bonuses against mounted units and elephants.
@@ -874,13 +697,9 @@ Parthian Tactics and Thumb Ring are free.
 Two Sheep spawn near newly-constructed Town Centers starting in the Castle Age.
 Team bonus
 Mounted archers have +2 Line of Sight.
-Teutons
-Teutons emblem AoE2
-Teutons Castle
-The Teutonic Castle
 
+Teutons
 Focus: Infantry
-Wonder: Maria Laach Abbey
 Unique unit
 Teutonic Knight: Slow but strong infantry.
 Unique technologies
@@ -895,13 +714,9 @@ Town Centers can garrison +10 units.
 Barracks and Stable units receive +1/+2 melee armor in the Castle/Imperial Age.
 Team bonus
 Units and buildings resist conversion (+3/+1 min/max conversion intervals).
-Turks
-Turks emblem AoE2
-Turks Castle
-The Turkish Castle
 
+Turks
 Focus: Gunpowder
-Wonder: Selimiye Mosque
 Unique unit
 Janissary: More powerful version of the Hand Cannoneer.
 Unique technologies
@@ -916,13 +731,9 @@ Light Cavalry and Hussar upgrades are free.
 Scout Cavalry line gain +1 pierce armor.
 Team bonus
 Gunpowder units are created 25% faster.
-Vietnamese
-Vietnamese emblem AoE2
-Vietnamese Castle
-The Vietnamese Castle
 
+Vietnamese
 Focus: Archer
-Wonder: Bút Tháp
 Unique units
 Rattan Archer: Foot archer with high pierce armor.
 Imperial Skirmisher: Upgrade of the Elite Skirmisher, provides additional hit points and attack.
@@ -936,13 +747,9 @@ Conscription is free.
 Economic technologies (except Coinage and Banking) cost no wood and are researched 100% faster.
 Team bonus
 Imperial Skirmisher upgrade is available at the Archery Range (requires the Imperial Age and Elite Skirmisher).
-Vikings
-Vikings emblem AoE2
-Vikings Castle
-The Viking Castle
 
+Vikings
 Focus: Infantry and Naval
-Wonder: Borgund Stave Church
 Unique units
 Berserk: Infantry that can regenerate.
 Longboat: Quick warship that fires multiple arrows.
@@ -955,13 +762,9 @@ Warships cost -15%/-15%/-20% in the Feudal/Castle/Imperial Age.
 Infantry have +20% hit points starting from the Feudal Age.
 Team bonus
 Docks are 15% cheaper.
-Wei
-Wei emblem AoE2
-Wei Castle
-The Wei Castle
 
+Wei
 Focus: Cavalry
-Wonder: Songyue Pagoda
 Unique units
 Tiger Cavalry: Heavy cavalry which gains hit points and attack as it defeats enemy units
 Xianbei Raider: Mounted archer who shoots multiple arrows periodically
@@ -975,13 +778,9 @@ Hei Guang Cavalry and Xianbei Raider +15%/30% HP in Castle/Imperial Age
 Traction Trebuchets and Lou Chuans cost -25%
 Team bonus
 Cavalry units +2 attack vs siege weapons
-Wu
-Wu emblem AoE2
-Wu Castle
-The Wu Castle
 
+Wu
 Focus: Infantry and Naval
-Wonder: Jing'an Temple
 Unique units
 Fire Archer: Anti-building archer which has different attack modes when attacking units and buildings
 Jian Swordsman: Heavy swordsman which loses its shield when it takes enough damage, gaining attack and speed but losing armor
