@@ -153,7 +153,17 @@
             });
 
             this.input.addEventListener("focus", () => {
+                // Show all civilizations when input is focused
+                const initialResults = this.civs.map((civ) => ({
+                    civ: civ,
+                    score: 1.0,
+                    match: civ.name,
+                }));
+                this.renderResults(initialResults);
                 this.open();
+
+                // Select all text for quick replacement
+                this.input.select();
             });
 
             // Click outside to close
@@ -171,7 +181,14 @@
 
         handleInput(query) {
             if (!query.trim()) {
-                this.renderResults([]);
+                // Show all civilizations when input is empty
+                const initialResults = this.civs.map((civ) => ({
+                    civ: civ,
+                    score: 1.0,
+                    match: civ.name,
+                }));
+                this.renderResults(initialResults);
+                this.open();
                 return;
             }
 
@@ -265,6 +282,14 @@
 
                 this.dropdown.appendChild(item);
             });
+
+            // Scroll to top of dropdown
+            this.dropdown.scrollTop = 0;
+
+            // Highlight the first option
+            this.selectedIndex = 0;
+            const items = this.dropdown.querySelectorAll(".civ-select-item");
+            this.updateSelection(items);
         }
 
         handleKeydown(e) {
