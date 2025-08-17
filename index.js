@@ -1,0 +1,78 @@
+const { app, BrowserWindow } = require("electron");
+
+const createWindow = () => {
+    const win = new BrowserWindow({
+        width: 800,
+        height: 600,
+        frame: false,
+        transparent: true,
+        alwaysOnTop: true,
+        resizable: false,
+        hasShadow: false,
+        fullscreenable: false,
+        focusable: false,
+    });
+
+    win.loadFile("index.html");
+};
+
+app.whenReady().then(() => {
+    createWindow();
+});
+
+/* Age of Empires 2 - Start */
+
+const civs = [
+    { code: "ARM", name: "Armenians" },
+    { code: "AZT", name: "Aztecs" },
+    { code: "BENG", name: "Bengalis" },
+    { code: "BER", name: "Berbers" },
+    { code: "BOH", name: "Bohemians" },
+    { code: "BRI", name: "Britons" },
+    { code: "BUL", name: "Bulgarians" },
+    { code: "BURGU", name: "Burgundians" },
+    { code: "BUR", name: "Burmese" },
+    { code: "BYZ", name: "Byzantines" },
+    { code: "CEL", name: "Celts" },
+    { code: "CHI", name: "Chinese" },
+    { code: "CUM", name: "Cumans" },
+    { code: "DRAV", name: "Dravidians" },
+    { code: "ETH", name: "Ethiopians" },
+    { code: "FRK", name: "Franks" },
+    { code: "GEO", name: "Georgians" },
+    { code: "GOT", name: "Goths" },
+    { code: "GURJ", name: "Gurjaras" },
+    { code: "HIN", name: "Hindustanis" },
+    { code: "HUN", name: "Huns" },
+    { code: "INC", name: "Incas" },
+    { code: "ITA", name: "Italians" },
+    { code: "JAP", name: "Japanese" },
+    { code: "JUR", name: "Jurchens" },
+    { code: "KHI", name: "Khitans" },
+    { code: "KHM", name: "Khmer" },
+    { code: "KOR", name: "Koreans" },
+    { code: "LIT", name: "Lithuanians" },
+    { code: "MAG", name: "Magyars" },
+    { code: "MALY", name: "Malay" },
+    { code: "MAL", name: "Malians" },
+    { code: "MAY", name: "Mayans" },
+    { code: "MON", name: "Mongols" },
+    { code: "PER", name: "Persians" },
+    { code: "POL", name: "Poles" },
+    { code: "POR", name: "Portuguese" },
+    { code: "ROM", name: "Romans" },
+    { code: "SAR", name: "Saracens" },
+    { code: "SHU", name: "Shu" },
+    { code: "SIC", name: "Sicilians" },
+    { code: "SLV", name: "Slavs" },
+    { code: "SPN", name: "Spanish" },
+    { code: "TAT", name: "Tatars" },
+    { code: "TEU", name: "Teutons" },
+    { code: "TUR", name: "Turks" },
+    { code: "VIE", name: "Vietnamese" },
+    { code: "VIK", name: "Vikings" },
+    { code: "WEI", name: "Wei" },
+    { code: "WU", name: "Wu" },
+];
+
+/* Age of Empires 2 - End */
