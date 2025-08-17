@@ -9,6 +9,9 @@ body {
     background-color: rgba(255, 255, 255, 1);
     pointer-events: none;
     user-select: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
 }
 
 /* Ensure the civ-selector is visible and interactive */
@@ -17,10 +20,10 @@ body {
     user-select: auto;
     position: relative;
     z-index: 1000;
-    min-height: 40px;
     display: block;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    min-height: 40px;
 }
 
 .civ-select-container {
@@ -28,6 +31,7 @@ body {
     display: block;
     pointer-events: auto;
     width: 100%;
+    margin: 0;
 }
 
 .civ-select-input {
@@ -132,7 +136,7 @@ body {
     position: relative;
     z-index: 1000;
     width: 100%;
-    height: 100vh;
+    height: auto;
 }
 
 /* Back button styling */
