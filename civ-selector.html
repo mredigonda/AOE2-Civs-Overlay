@@ -340,7 +340,7 @@
                         // Resize window to match the content height
                         const result = await window.updateWindowSize(
                             currentWidth,
-                            civInfoHeight
+                            civInfoHeight - 1 // offset because sometimes there's a 1px line at the bottom... wtf
                         );
 
                         if (result.success) {
