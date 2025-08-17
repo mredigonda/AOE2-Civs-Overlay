@@ -62,7 +62,7 @@ const createWindow = () => {
     // Show window when ready to prevent invisible window issues
     mainWindow.once("ready-to-show", () => {
         console.log("Window ready to show");
-        mainWindow.show();
+        mainWindow.showInactive();
         // Ensure always-on-top is set after window is shown
         ensureAlwaysOnTop();
     });
@@ -101,9 +101,10 @@ app.whenReady().then(() => {
                 isWindowVisible = false;
                 console.log("Window hidden");
             } else {
-                mainWindow.show();
+                // Show window without focusing it
+                mainWindow.showInactive();
                 isWindowVisible = true;
-                console.log("Window shown");
+                console.log("Window shown without focus");
             }
         }
     });

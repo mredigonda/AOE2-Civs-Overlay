@@ -18,7 +18,7 @@ This application implements always-on-top functionality specifically optimized f
 
 ### Keyboard Shortcuts
 
--   `Ctrl+Alt+\``: Toggle window visibility
+-   `Ctrl+Alt+\``: Toggle window visibility (doesn't steal focus from current application)
 
 ### Drag Icon
 

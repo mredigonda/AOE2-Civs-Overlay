@@ -33,7 +33,7 @@ const createWindow = () => {
 
     mainWindow.once("ready-to-show", () => {
         console.log("Window ready to show");
-        mainWindow.show();
+        mainWindow.showInactive();
         // Ensure always-on-top on Windows
         if (process.platform === "win32") {
             mainWindow.setAlwaysOnTop(true, "screen-saver");
