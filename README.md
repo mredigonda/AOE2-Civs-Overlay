@@ -10,6 +10,12 @@ Note: you need to run Age of Empires II in "Full Desktop" in Options → Graphic
 ![Electron](https://img.shields.io/badge/Electron-37.3.0-blue)
 ![Windows](https://img.shields.io/badge/Windows-Supported-green)
 
+## 📦 How to install?
+
+The quickest way to install it is to download the `.exe` file from the [releases section](https://github.com/mredigonda/AOE2-Civs-Overlay/releases) in this repo.
+
+If you instead prefer to build it from the sorce code, read below the 🚀 Quick Start guide.
+
 ## ✨ Features
 
 ### 🎯 Core Functionality
@@ -36,12 +42,6 @@ Note: you need to run Age of Empires II in "Full Desktop" in Options → Graphic
 ### ⌨️ Keyboard Shortcuts
 
 -   **`Ctrl+Alt+\``**: Toggle overlay visibility (doesn't steal focus)
-
-## 📦 Installation
-
-The quickest way will be to download the `.exe` file from the [releases section](https://github.com/mredigonda/AOE2-Civs-Overlay/releases) in this repo.
-
-If you instead prefer to build it from the sorce code, read below.
 
 ## 🚀 Quick Start
 
