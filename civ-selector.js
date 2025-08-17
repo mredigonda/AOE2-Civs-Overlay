@@ -195,20 +195,6 @@
                     bestMatch = civ.name;
                 }
 
-                // Check aliases if present
-                if (civ.aliases && Array.isArray(civ.aliases)) {
-                    for (const alias of civ.aliases) {
-                        const aliasScore = jaroWinkler(
-                            normalizeString(alias),
-                            normalizedQuery
-                        );
-                        if (aliasScore > bestScore) {
-                            bestScore = aliasScore;
-                            bestMatch = alias;
-                        }
-                    }
-                }
-
                 // Check code
                 const codeScore = jaroWinkler(
                     normalizeString(civ.code),
