@@ -13,6 +13,55 @@
 
         <script src="./civ-selector.js"></script>
         <script>
+            // IPC communication for interactive state
+            const { ipcRenderer } = require("electron");
+
+            let interactiveTimeout;
+
+            ipcRenderer.on("make-interactive", () => {
+                console.log("Making window interactive");
+                document.body.style.pointerEvents = "auto";
+                document.body.style.userSelect = "auto";
+
+                // Clear any existing timeout
+                if (interactiveTimeout) {
+                    clearTimeout(interactiveTimeout);
+                }
+
+                // Show visual feedback
+                const feedback = document.createElement("div");
+                feedback.id = "interactive-feedback";
+                feedback.textContent = "Window is interactive for 5 seconds...";
+                feedback.style.cssText = `
+                    position: fixed;
+                    top: 10px;
+                    right: 10px;
+                    background: rgba(0, 255, 0, 0.8);
+                    color: white;
+                    padding: 10px;
+                    border-radius: 5px;
+                    z-index: 10000;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                `;
+                document.body.appendChild(feedback);
+            });
+
+            ipcRenderer.on("make-non-interactive", () => {
+                console.log("Making window non-interactive");
+                document.body.style.pointerEvents = "none";
+                document.body.style.userSelect = "none";
+
+                // Remove visual feedback
+                const feedback = document.getElementById(
+                    "interactive-feedback"
+                );
+                if (feedback) {
+                    feedback.remove();
+                }
+            });
+        </script>
+        <script>
             // Usage example
             const civs = [
                 { code: "ARM", name: "Armenians" },

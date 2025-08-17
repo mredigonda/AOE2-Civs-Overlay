@@ -1,7 +1,9 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, globalShortcut } = require("electron");
+
+let mainWindow;
 
 const createWindow = () => {
-    const win = new BrowserWindow({
+    mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
         frame: false,
@@ -11,13 +13,34 @@ const createWindow = () => {
         hasShadow: false,
         fullscreenable: false,
         focusable: false,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+        },
     });
 
-    win.loadFile("civ-selector.html");
+    mainWindow.loadFile("civ-selector.html");
 };
 
 app.whenReady().then(() => {
     createWindow();
+
+    // Register global shortcut for making window interactive
+    globalShortcut.register("CommandOrControl+Shift+P", () => {
+        if (mainWindow) {
+            // Make window interactive
+            mainWindow.setFocusable(true);
+            mainWindow.setAlwaysOnTop(false);
+            mainWindow.webContents.send("make-interactive");
+
+            // Revert after 5 seconds
+            setTimeout(() => {
+                mainWindow.setFocusable(false);
+                mainWindow.setAlwaysOnTop(true);
+                mainWindow.webContents.send("make-non-interactive");
+            }, 5000);
+        }
+    });
 });
 
 /* Age of Empires 2 - Start */
@@ -76,3 +99,8 @@ const civs = [
 ];
 
 /* Age of Empires 2 - End */
+
+// Cleanup when app is about to quit
+app.on("will-quit", () => {
+    globalShortcut.unregisterAll();
+});
