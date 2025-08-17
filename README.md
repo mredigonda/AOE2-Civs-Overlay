@@ -39,7 +39,7 @@ Note: you need to run Age of Empires II in "Full Desktop" in Options → Graphic
 
 ## 📦 Installation
 
-The quickest way will be to download the `.exe` file from the releases section in this repo.
+The quickest way will be to download the `.exe` file from the [releases section](https://github.com/mredigonda/AOE2-Civs-Overlay/releases) in this repo.
 
 If you instead prefer to build it from the sorce code, read below.
 
