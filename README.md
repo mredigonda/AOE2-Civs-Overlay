@@ -2,7 +2,9 @@
 
 ![Screenshot showcasing the app at work](./demo.png)
 
-A sleek, always-on-top overlay application that provides instant access to Age of Empires 2 civilization information during gameplay. Perfect for streamers, competitive players, and anyone who wants quick reference to civ bonuses without alt-tabbing.
+A sleek, always-on-top overlay application that provides instant access to Age of Empires 2 civilization information during gameplay. Perfect for anyone who wants a quick reference without a second monitor or alt-tabbing.
+
+Note: you need to run Age of Empires II in "Full Desktop" in Options → Graphics → Display Mode.
 
 ![AOE2 Overlay](https://img.shields.io/badge/Age%20of%20Empires%202-Overlay-brightgreen)
 ![Electron](https://img.shields.io/badge/Electron-37.3.0-blue)
@@ -12,7 +14,7 @@ A sleek, always-on-top overlay application that provides instant access to Age o
 
 ### 🎯 Core Functionality
 
--   **Instant Civilization Lookup**: Search and select any of the 42+ civilizations instantly
+-   **Instant Civilization Lookup**: Search and select any of the 50 civilizations instantly
 -   **Comprehensive Civ Information**: View detailed bonuses, unique units, technologies, and more
 -   **Always-On-Top**: Stays visible above your game window without interrupting gameplay
 -   **Non-Intrusive**: Transparent overlay that doesn't steal focus from your current application
@@ -34,7 +36,12 @@ A sleek, always-on-top overlay application that provides instant access to Age o
 ### ⌨️ Keyboard Shortcuts
 
 -   **`Ctrl+Alt+\``**: Toggle overlay visibility (doesn't steal focus)
--   **Drag Icon**: Click and drag to move the overlay anywhere on screen
+
+## 📦 Installation
+
+The quickest way will be to download the `.exe` file from the releases section in this repo.
+
+If you instead prefer to build it from the sorce code, read below.
 
 ## 🚀 Quick Start
 
@@ -62,11 +69,6 @@ A sleek, always-on-top overlay application that provides instant access to Age o
 
     ```bash
     npm start
-    ```
-
-4. **Test the Windows build**
-    ```bash
-    npm run start-test
     ```
 
 ### Building the Executable
@@ -132,66 +134,16 @@ Each civilization displays:
 -   **Smooth Dragging**: Native window dragging via CSS
 -   **Memory Efficient**: No unnecessary background processes
 
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Overlay not staying on top:**
-
--   Ensure you're running as administrator
--   Check Windows security settings
--   Try the `Ctrl+Alt+\`` shortcut to refresh
-
-**Shortcut not working:**
-
--   Make sure no other application is using the same shortcut
--   Try restarting the application
-
-**Window not draggable:**
-
--   Look for the small golden icon (⋮⋮) in the top-right corner
--   Ensure the window is visible (not hidden)
-
-### Debug Mode
-
-Run with debug information:
-
-```bash
-npm run dist-windows-debug
-```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-### Development Setup
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
--   **Age of Empires 2 Community** - For the inspiration and feedback
--   **Electron Team** - For the excellent desktop framework
--   **Civilization Data** - Compiled from official Age of Empires 2 sources
-
 ## 📞 Support
 
 If you encounter any issues or have suggestions:
 
 -   Open an issue on GitHub
--   Check the troubleshooting section above
--   Ensure you're running the latest version
 
 ---
 
 **Happy gaming! 🎮⚔️**
 
 _May your civilizations prosper and your strategies prevail!_
+
+(yes, the above, and in fact, the whole project, was super vibe-coded)
