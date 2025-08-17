@@ -7,22 +7,22 @@
         <link rel="stylesheet" href="./civ-selector.css" />
     </head>
     <body>
+        <div
+            id="drag-handle"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 30px;
+                background: rgba(0, 0, 0, 0.1);
+                cursor: move;
+                z-index: 9999;
+                -webkit-app-region: drag;
+            "
+        ></div>
         <div id="app">
-            <div
-                id="drag-handle"
-                style="
-                    display: none;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    height: 30px;
-                    background: rgba(0, 0, 0, 0.1);
-                    cursor: move;
-                    z-index: 9999;
-                    -webkit-app-region: drag;
-                "
-            ></div>
             <p>Loading civ-selector...</p>
         </div>
 

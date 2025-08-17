@@ -120,6 +120,9 @@
         }
 
         createElements() {
+            // Clear any existing content in the mount element
+            this.mount.innerHTML = "";
+
             this.container = document.createElement("div");
             this.container.className = "civ-select-container";
 
