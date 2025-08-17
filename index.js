@@ -11,6 +11,15 @@ let isWindowVisible = true;
 // Add console logging for debugging
 console.log("Electron app starting...");
 
+// Windows-specific always-on-top handling
+const ensureAlwaysOnTop = () => {
+    if (mainWindow && process.platform === "win32") {
+        // Force always-on-top on Windows
+        mainWindow.setAlwaysOnTop(true, "screen-saver");
+        console.log("Ensured window is always on top (Windows)");
+    }
+};
+
 // IPC handler for updating window size
 ipcMain.handle("update-window-size", async (event, width, height) => {
     if (mainWindow) {
@@ -36,6 +45,9 @@ const createWindow = () => {
         roundedCorners: false,
         show: false, // Don't show until ready
         backgroundColor: "#00000000", // Transparent background
+        // Windows-specific settings for better always-on-top behavior
+        skipTaskbar: true, // Hide from taskbar
+        type: process.platform === "win32" ? "toolbar" : undefined, // Use toolbar window type on Windows
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
@@ -51,6 +63,8 @@ const createWindow = () => {
     mainWindow.once("ready-to-show", () => {
         console.log("Window ready to show");
         mainWindow.show();
+        // Ensure always-on-top is set after window is shown
+        ensureAlwaysOnTop();
     });
 
     // Open dev tools for debugging (uncomment for development)
@@ -111,6 +125,26 @@ app.whenReady().then(() => {
             }
         }
     });
+
+    // Register global shortcut for toggling always-on-top
+    globalShortcut.register("CommandOrControl+Alt+T", () => {
+        if (mainWindow) {
+            const isAlwaysOnTop = mainWindow.isAlwaysOnTop();
+            mainWindow.setAlwaysOnTop(!isAlwaysOnTop);
+            console.log(
+                `Always-on-top ${!isAlwaysOnTop ? "enabled" : "disabled"}`
+            );
+        }
+    });
+
+    // Windows-specific: Periodically ensure always-on-top stays active
+    if (process.platform === "win32") {
+        setInterval(() => {
+            if (mainWindow && isWindowVisible) {
+                ensureAlwaysOnTop();
+            }
+        }, 5000); // Check every 5 seconds
+    }
 });
 
 // Handle window-all-closed event properly for Windows

@@ -17,6 +17,9 @@ const createWindow = () => {
         height: 300,
         show: false,
         backgroundColor: "#ffffff",
+        alwaysOnTop: true,
+        skipTaskbar: true,
+        type: process.platform === "win32" ? "toolbar" : undefined,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
@@ -31,6 +34,11 @@ const createWindow = () => {
     mainWindow.once("ready-to-show", () => {
         console.log("Window ready to show");
         mainWindow.show();
+        // Ensure always-on-top on Windows
+        if (process.platform === "win32") {
+            mainWindow.setAlwaysOnTop(true, "screen-saver");
+            console.log("Set always-on-top for Windows test window");
+        }
         // Open dev tools for debugging
         mainWindow.webContents.openDevTools({ mode: "detach" });
     });
