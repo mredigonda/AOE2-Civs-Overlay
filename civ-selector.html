@@ -29,11 +29,18 @@
             id="civ-info"
             style="
                 display: none;
-                margin-top: 20px;
+                margin-top: 40px;
                 color: white;
                 font-family: Arial, sans-serif;
                 font-size: 14px;
                 line-height: 1.4;
+                pointer-events: auto;
+                user-select: auto;
+                position: relative;
+                z-index: 1000;
+                width: calc(100% - 40px);
+                margin-left: 20px;
+                margin-right: 20px;
             "
         ></div>
 
@@ -189,23 +196,42 @@
             // Function to display civilization information
             function displayCivInfo(selectedCiv, allCivData) {
                 const civInfoDiv = document.getElementById("civ-info");
+                const appDiv = document.getElementById("app");
 
                 if (!selectedCiv || !allCivData) {
                     civInfoDiv.style.display = "none";
+                    appDiv.style.display = "block";
                     return;
                 }
 
                 const civ = allCivData.find((c) => c.code === selectedCiv.code);
                 if (!civ) {
                     civInfoDiv.style.display = "none";
+                    appDiv.style.display = "block";
                     return;
                 }
 
+                // Hide the civ selector and show civ info
+                appDiv.style.display = "none";
+                civInfoDiv.style.display = "block";
+
                 let html = `
                     <div style="background: rgba(0, 0, 0, 0.8); padding: 20px; border: 1px solid rgba(255, 255, 255, 0.2);">
-                        <h2 style="margin: 0 0 15px 0; color: #ffd700; font-size: 24px;">${
-                            civ.name
-                        }</h2>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <button id="back-button" style="
+                                background: none;
+                                border: none;
+                                color: #ffd700;
+                                font-size: 20px;
+                                cursor: pointer;
+                                margin-right: 10px;
+                                padding: 5px;
+                                transition: color 0.2s;
+                            " title="Back to civ selector">←</button>
+                            <h2 style="margin: 0; color: #ffd700; font-size: 24px;">${
+                                civ.name
+                            }</h2>
+                        </div>
                         
                         <div style="margin-bottom: 15px;">
                             <strong style="color: #ffd700;">Focus:</strong> ${
@@ -272,7 +298,31 @@
                 html += "</div>";
 
                 civInfoDiv.innerHTML = html;
-                civInfoDiv.style.display = "block";
+                
+                // Add event listener for back button
+                const backButton = document.getElementById("back-button");
+                if (backButton) {
+                    backButton.addEventListener("click", () => {
+                        // Show civ selector and hide civ info
+                        appDiv.style.display = "block";
+                        civInfoDiv.style.display = "none";
+                        
+                        // Clear the current selection
+                        if (window.civSelectInstance) {
+                            window.civSelectInstance.value = null;
+                            window.civSelectInstance.input.value = "";
+                        }
+                    });
+                    
+                    // Add hover effect
+                    backButton.addEventListener("mouseenter", () => {
+                        backButton.style.color = "#ffffff";
+                    });
+                    
+                    backButton.addEventListener("mouseleave", () => {
+                        backButton.style.color = "#ffd700";
+                    });
+                }
             }
         </script>
     </body>

@@ -127,3 +127,28 @@ body {
 .civ-select-dropdown::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.5);
 }
+
+#civ-info {
+    pointer-events: auto;
+    user-select: auto;
+    position: relative;
+    z-index: 1000;
+    margin-top: 40px;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Back button styling */
+#back-button {
+    pointer-events: auto !important;
+    user-select: auto !important;
+}
+
+#back-button:hover {
+    color: #ffffff !important;
+}
+
+#back-button:active {
+    transform: scale(0.95);
+}
