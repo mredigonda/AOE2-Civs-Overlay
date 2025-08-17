@@ -13,6 +13,7 @@ const createWindow = () => {
         hasShadow: false,
         fullscreenable: false,
         focusable: false,
+        roundedCorners: false,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
