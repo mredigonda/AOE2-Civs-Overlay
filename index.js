@@ -5,6 +5,7 @@ const {
 } = require("./constants.js");
 
 let mainWindow;
+let isWindowVisible = true;
 
 // IPC handler for updating window size
 ipcMain.handle("update-window-size", async (event, width, height) => {
@@ -56,6 +57,21 @@ app.whenReady().then(() => {
                 mainWindow.setAlwaysOnTop(true);
                 mainWindow.webContents.send("make-non-interactive");
             }, 5000);
+        }
+    });
+
+    // Register global shortcut for toggling window visibility
+    globalShortcut.register("CommandOrControl+Shift+O", () => {
+        if (mainWindow) {
+            if (isWindowVisible) {
+                mainWindow.hide();
+                isWindowVisible = false;
+                console.log("Window hidden");
+            } else {
+                mainWindow.show();
+                isWindowVisible = true;
+                console.log("Window shown");
+            }
         }
     });
 });
