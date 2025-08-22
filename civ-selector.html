@@ -37,6 +37,181 @@
         <div id="app">
             <p>Loading civ-selector...</p>
         </div>
+
+        <!-- Simple Screen Capture Component -->
+        <div
+            id="screen-capture"
+            style="
+                margin-top: 10px;
+                padding: 10px;
+                background: rgba(0, 0, 0, 0.8);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                pointer-events: auto !important;
+                user-select: auto;
+            "
+        >
+            <div
+                style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                "
+            >
+                <h3
+                    style="
+                        margin: 0;
+                        color: #ffd700;
+                        font-size: 16px;
+                        font-weight: bold;
+                    "
+                >
+                    Screen Capture
+                </h3>
+                <button
+                    id="capture-btn"
+                    style="
+                        background: rgba(255, 215, 0, 0.8);
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+                        color: rgba(0, 0, 0, 0.8);
+                        padding: 6px 12px;
+                        font-size: 12px;
+                        cursor: pointer;
+                        border-radius: 2px;
+                        font-weight: bold;
+                    "
+                >
+                    📸 Capture
+                </button>
+            </div>
+
+            <div
+                id="capture-status"
+                style="
+                    font-size: 12px;
+                    color: rgba(255, 255, 255, 0.7);
+                    margin-bottom: 10px;
+                "
+            >
+                Ready to capture screen
+            </div>
+            
+            <div
+                id="display-info"
+                style="
+                    font-size: 11px;
+                    color: rgba(255, 255, 255, 0.5);
+                    margin-bottom: 10px;
+                    display: none;
+                "
+            >
+                <div id="current-display-text"></div>
+                <button
+                    id="refresh-display-btn"
+                    style="
+                        background: rgba(255, 255, 255, 0.1);
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                        color: rgba(255, 255, 255, 0.7);
+                        padding: 2px 6px;
+                        font-size: 10px;
+                        cursor: pointer;
+                        border-radius: 2px;
+                        margin-top: 5px;
+                    "
+                >
+                    🔄 Refresh Display Info
+                </button>
+            </div>
+
+            <div
+                id="capture-preview"
+                style="
+                    display: none;
+                    max-width: 100%;
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    margin-top: 10px;
+                "
+            >
+                <div style="
+                    padding: 8px;
+                    background: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                ">
+                    <span style="font-size: 11px; color: rgba(255, 255, 255, 0.7)">
+                        Screenshot captured and saved automatically
+                    </span>
+                    <span style="font-size: 10px; color: rgba(255, 255, 255, 0.5)">
+                        Raw Image
+                    </span>
+                </div>
+                <img
+                    id="capture-image"
+                    style="width: 100%; height: auto; display: block"
+                />
+            </div>
+
+
+
+            <!-- OCR Text Display -->
+            <div
+                id="ocr-text-display"
+                style="
+                    display: none;
+                    margin-top: 10px;
+                    padding: 10px;
+                    background: rgba(0, 0, 0, 0.8);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    max-height: 200px;
+                    overflow-y: auto;
+                "
+            >
+                <div style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                ">
+                    <h4 style="
+                        margin: 0;
+                        color: #ffd700;
+                        font-size: 14px;
+                        font-weight: bold;
+                    ">Extracted Text</h4>
+                    <div style="
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    ">
+                        <div id="ocr-status" style="
+                            font-size: 11px;
+                            color: rgba(255, 255, 255, 0.6);
+                        ">Processing...</div>
+                        <button id="copy-text-btn" style="
+                            background: rgba(0, 123, 255, 0.8);
+                            border: 1px solid rgba(255, 255, 255, 0.3);
+                            color: white;
+                            padding: 4px 8px;
+                            font-size: 10px;
+                            cursor: pointer;
+                            border-radius: 2px;
+                            font-weight: bold;
+                            display: none;
+                        ">📋 Copy</button>
+                    </div>
+                </div>
+                <div id="ocr-text-content" style="
+                    font-size: 12px;
+                    color: white;
+                    line-height: 1.4;
+                    white-space: pre-wrap;
+                    font-family: monospace;
+                "></div>
+            </div>
+            </div>
+        </div>
         <div
             id="civ-info"
             style="
@@ -87,6 +262,217 @@
 
             // Make the function globally available
             window.updateWindowSize = updateWindowSize;
+
+            // Screen Capture Functionality
+            let capturedImageData = null;
+
+            // Initialize screen capture component
+            document.addEventListener("DOMContentLoaded", () => {
+                const captureBtn = document.getElementById("capture-btn");
+                const captureStatus = document.getElementById("capture-status");
+                const capturePreview =
+                    document.getElementById("capture-preview");
+                const captureImage = document.getElementById("capture-image");
+                const ocrDisplay = document.getElementById("ocr-text-display");
+                const ocrStatus = document.getElementById("ocr-status");
+                const ocrContent = document.getElementById("ocr-text-content");
+                const copyTextBtn = document.getElementById("copy-text-btn");
+                const displayInfo = document.getElementById("display-info");
+                const currentDisplayText = document.getElementById("current-display-text");
+                const refreshDisplayBtn = document.getElementById("refresh-display-btn");
+
+                // Capture button click handler
+                captureBtn.addEventListener("click", async () => {
+                    try {
+                        captureStatus.textContent = "Capturing screen...";
+                        captureBtn.disabled = true;
+                        captureBtn.textContent = "⏳ Capturing...";
+
+                        // Use IPC to capture screen from main process
+                        const result = await ipcRenderer.invoke(
+                            "capture-screen"
+                        );
+
+                        if (result.success) {
+                            capturedImageData = result.imageData;
+
+                            // Debug: Check if imageData is valid
+                            console.log(
+                                "Image data length:",
+                                capturedImageData
+                                    ? capturedImageData.length
+                                    : "null"
+                            );
+                            console.log(
+                                "Image data starts with:",
+                                capturedImageData
+                                    ? capturedImageData.substring(0, 50)
+                                    : "null"
+                            );
+
+                            if (
+                                !capturedImageData ||
+                                capturedImageData.length < 100
+                            ) {
+                                throw new Error("Invalid image data received");
+                            }
+
+                            // Display the captured image
+                            captureImage.src = capturedImageData;
+                            capturePreview.style.display = "block";
+
+                            // Auto-save the screenshot
+                            await autoSaveScreenshot(capturedImageData);
+
+                            // Extract text from screenshot using OCR
+                            await extractTextFromScreenshot(capturedImageData);
+
+                            captureBtn.textContent = "📸 Capture";
+                            captureBtn.disabled = false;
+
+                            // Auto-resize window to accommodate the preview
+                            setTimeout(async () => {
+                                try {
+                                    const currentWidth = window.innerWidth;
+                                    const captureComponent =
+                                        document.getElementById(
+                                            "screen-capture"
+                                        );
+                                    const totalHeight =
+                                        captureComponent.offsetHeight + 100;
+
+                                    await window.updateWindowSize(
+                                        currentWidth,
+                                        totalHeight
+                                    );
+                                } catch (error) {
+                                    console.error(
+                                        "Failed to resize window for capture preview:",
+                                        error
+                                    );
+                                }
+                            }, 100);
+                        } else {
+                            throw new Error(result.error);
+                        }
+                    } catch (error) {
+                        console.error("Screen capture failed:", error);
+                        captureStatus.textContent = `Capture failed: ${error.message}`;
+                        captureBtn.textContent = "📸 Capture";
+                        captureBtn.disabled = false;
+                    }
+                });
+
+                // Auto-save screenshot function
+                async function autoSaveScreenshot(imageData) {
+                    try {
+                        // Debug: Check image data before saving
+                        console.log(
+                            "Auto-saving image data length:",
+                            imageData.length
+                        );
+
+                        // Ensure the data URL is properly formatted
+                        if (!imageData.startsWith("data:image/")) {
+                            throw new Error("Invalid image data format");
+                        }
+
+                        // Save directly to file system using main process
+                        const saveResult = await ipcRenderer.invoke(
+                            "save-screenshot",
+                            imageData
+                        );
+
+                        if (saveResult.success) {
+                            captureStatus.textContent = `Screenshot captured and saved as ${saveResult.filename}!`;
+                            console.log(
+                                `Screenshot saved to: ${saveResult.filePath}`
+                            );
+                        } else {
+                            throw new Error(saveResult.error);
+                        }
+                    } catch (error) {
+                        console.error("Failed to auto-save image:", error);
+                        captureStatus.textContent = `Capture successful but save failed: ${error.message}`;
+                    }
+                }
+
+                // OCR text extraction function
+                async function extractTextFromScreenshot(imageData) {
+                    try {
+                        ocrDisplay.style.display = "block";
+                        ocrStatus.textContent = "Processing OCR...";
+                        ocrContent.textContent = "";
+                        copyTextBtn.style.display = "none";
+
+                        const ocrResult = await ipcRenderer.invoke("extract-text-from-screenshot", imageData);
+
+                        if (ocrResult.success) {
+                            const confidence = ocrResult.confidence ? Math.round(ocrResult.confidence) : null;
+                            ocrStatus.textContent = confidence ? `OCR completed (${confidence}% confidence)` : "OCR completed";
+                            ocrContent.textContent = ocrResult.text || "No text found";
+                            copyTextBtn.style.display = "block";
+                        } else {
+                            ocrStatus.textContent = "OCR failed";
+                            ocrContent.textContent = `Error: ${ocrResult.error}`;
+                        }
+                    } catch (error) {
+                        console.error("OCR processing failed:", error);
+                        ocrStatus.textContent = "OCR failed";
+                        ocrContent.textContent = `Error: ${error.message}`;
+                    }
+                }
+
+                // Copy text button click handler
+                copyTextBtn.addEventListener("click", async () => {
+                    try {
+                        const textToCopy = ocrContent.textContent;
+                        if (textToCopy && textToCopy !== "No text found") {
+                            await navigator.clipboard.writeText(textToCopy);
+                            copyTextBtn.textContent = "✅ Copied!";
+                            setTimeout(() => {
+                                copyTextBtn.textContent = "📋 Copy";
+                            }, 2000);
+                        }
+                    } catch (error) {
+                        console.error("Failed to copy text:", error);
+                        copyTextBtn.textContent = "❌ Failed";
+                        setTimeout(() => {
+                            copyTextBtn.textContent = "📋 Copy";
+                        }, 2000);
+                    }
+                });
+
+                // Display info functionality
+                async function updateDisplayInfo() {
+                    try {
+                        const result = await ipcRenderer.invoke("get-current-display-info");
+                        if (result.success) {
+                            const display = result.display;
+                            currentDisplayText.innerHTML = `
+                                <strong>Current Display:</strong> ID ${display.id}<br>
+                                <strong>Resolution:</strong> ${display.size.width}×${display.size.height}<br>
+                                <strong>Scale Factor:</strong> ${display.scaleFactor}x<br>
+                                <strong>Position:</strong> (${display.bounds.x}, ${display.bounds.y})
+                            `;
+                            displayInfo.style.display = "block";
+                        } else {
+                            currentDisplayText.textContent = `Error: ${result.error}`;
+                            displayInfo.style.display = "block";
+                        }
+                    } catch (error) {
+                        console.error("Failed to get display info:", error);
+                        currentDisplayText.textContent = `Error: ${error.message}`;
+                        displayInfo.style.display = "block";
+                    }
+                }
+
+                // Refresh display info button click handler
+                refreshDisplayBtn.addEventListener("click", updateDisplayInfo);
+
+                // Show display info on page load
+                updateDisplayInfo();
+            });
         </script>
         <script>
             // Usage example

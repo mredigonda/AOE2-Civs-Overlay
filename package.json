@@ -9,7 +9,8 @@
         "start-test": "electron test-windows.js",
         "dist": "electron-builder",
         "dist-windows": "electron-builder --win portable --x64",
-        "dist-windows-debug": "electron-builder --win portable --x64 --debug"
+        "dist-windows-debug": "electron-builder --win portable --x64 --debug",
+        "setup-python": "cd python-experiment-rapidocr && python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt"
     },
     "build": {
         "appId": "com.maxredigonda.aoe2-civs-overlay",
@@ -33,5 +34,8 @@
     "devDependencies": {
         "electron": "^37.3.0",
         "electron-builder": "^26.0.12"
+    },
+    "dependencies": {
+        "sharp": "^0.34.3"
     }
 }

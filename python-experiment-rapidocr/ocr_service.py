@@ -1,0 +1,157 @@
+#!/usr/bin/env python3
+import sys
+import json
+import base64
+import time
+from io import BytesIO
+from PIL import Image
+from rapidocr import RapidOCR
+
+
+def main():
+    try:
+        print("🐍 Python OCR service starting...", file=sys.stderr)
+        start_time = time.time()
+
+        # Read image data from stdin
+        print("📖 Reading image data from stdin...", file=sys.stderr)
+        image_data = sys.stdin.read()
+        print(f"📖 Read {len(image_data)} characters from stdin", file=sys.stderr)
+
+        # Parse the JSON input
+        print("🔍 Parsing JSON input...", file=sys.stderr)
+        input_json = json.loads(image_data)
+        base64_image = input_json.get("image")
+
+        if not base64_image:
+            raise ValueError("No image data provided")
+
+        print(
+            f"📊 Base64 image data length: {len(base64_image)} characters",
+            file=sys.stderr,
+        )
+
+        # Decode base64 image
+        print("🖼️ Decoding base64 image...", file=sys.stderr)
+        image_bytes = base64.b64decode(base64_image)
+        print(f"🖼️ Decoded image size: {len(image_bytes)} bytes", file=sys.stderr)
+
+        image = Image.open(BytesIO(image_bytes))
+        print(
+            f"🖼️ Image opened: {image.size[0]}x{image.size[1]} pixels, mode: {image.mode}",
+            file=sys.stderr,
+        )
+
+        # Initialize RapidOCR
+        print("🚀 Initializing RapidOCR engine...", file=sys.stderr)
+        engine = RapidOCR()
+        print("✅ RapidOCR engine initialized", file=sys.stderr)
+
+        # Perform OCR
+        print("🔍 Performing OCR on image...", file=sys.stderr)
+        ocr_start_time = time.time()
+        result = engine(image)
+        ocr_end_time = time.time()
+        print(
+            f"✅ OCR completed in {ocr_end_time - ocr_start_time:.2f} seconds",
+            file=sys.stderr,
+        )
+
+        # Extract text from results
+        print("📝 Extracting text from OCR results...", file=sys.stderr)
+        texts = []
+        if result and hasattr(result, "txts") and result.txts:
+            print(f"📝 Found {len(result.txts)} text detections", file=sys.stderr)
+            high_confidence_count = 0
+            for i, text in enumerate(result.txts):
+                confidence = (
+                    result.scores[i]
+                    if hasattr(result, "scores") and i < len(result.scores)
+                    else 0.0
+                )
+
+                # Extract bounding box coordinates
+                bounding_box = None
+                if (
+                    hasattr(result, "boxes")
+                    and result.boxes is not None
+                    and i < len(result.boxes)
+                ):
+                    box = result.boxes[i]
+                    # Convert numpy array to list and round coordinates
+                    bounding_box = [
+                        [round(float(coord), 2) for coord in point]
+                        for point in box.tolist()
+                    ]
+
+                texts.append(
+                    {
+                        "text": text,
+                        "confidence": confidence,
+                        "bounding_box": bounding_box,
+                    }
+                )
+
+                # Only log detections with >95% confidence
+                if confidence > 0.95:
+                    high_confidence_count += 1
+                    if bounding_box:
+                        # Extract top-left point (first point in the bounding box)
+                        top_left_x, top_left_y = bounding_box[0]
+                        print(
+                            f"📝 Detection {i+1}: '{text}' (confidence: {confidence:.3f}) at ({top_left_x}, {top_left_y})",
+                            file=sys.stderr,
+                        )
+                    else:
+                        print(
+                            f"📝 Detection {i+1}: '{text}' (confidence: {confidence:.3f})",
+                            file=sys.stderr,
+                        )
+
+            if high_confidence_count < len(result.txts):
+                low_confidence_count = len(result.txts) - high_confidence_count
+                print(
+                    f"📝 + {low_confidence_count} additional detections with <95% confidence (not shown)",
+                    file=sys.stderr,
+                )
+        else:
+            print("⚠️ No text detections found", file=sys.stderr)
+
+        # Combine all detected text
+        combined_text = " ".join([item["text"] for item in texts])
+        avg_confidence = (
+            sum([item["confidence"] for item in texts]) / len(texts) if texts else 0.0
+        )
+
+        print(
+            f"📊 Combined text length: {len(combined_text)} characters", file=sys.stderr
+        )
+        print(f"📊 Average confidence: {avg_confidence:.3f}", file=sys.stderr)
+
+        # Return results as JSON
+        output = {
+            "success": True,
+            "text": combined_text,
+            "confidence": avg_confidence,
+            "detections": texts,
+        }
+
+        total_time = time.time() - start_time
+        print(f"⏱️ Total processing time: {total_time:.2f} seconds", file=sys.stderr)
+        print("✅ Sending results to stdout...", file=sys.stderr)
+
+        print(json.dumps(output))
+        print("🎉 Python OCR service completed successfully", file=sys.stderr)
+
+    except Exception as e:
+        print(f"❌ Python OCR service error: {str(e)}", file=sys.stderr)
+        import traceback
+
+        print(f"📋 Traceback: {traceback.format_exc()}", file=sys.stderr)
+        error_output = {"success": False, "error": str(e)}
+        print(json.dumps(error_output))
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

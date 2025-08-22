@@ -1,5 +1,9 @@
 const { app, BrowserWindow, globalShortcut, ipcMain } = require("electron");
+const fs = require("fs");
 const path = require("path");
+const os = require("os");
+const OCRService = require("./ocr-service.js");
+const sharp = require("sharp");
 const {
     DEFAULT_WINDOW_WIDTH,
     DEFAULT_WINDOW_HEIGHT,
@@ -27,6 +31,287 @@ ipcMain.handle("update-window-size", async (event, width, height) => {
         return { success: true, width, height };
     }
     return { success: false, error: "Main window not found" };
+});
+
+// Screenshot counter for auto-incrementing filenames
+let screenshotCounter = 1;
+
+// IPC handler for screen capture
+ipcMain.handle("capture-screen", async (event) => {
+    try {
+        const { desktopCapturer, screen } = require("electron");
+
+        // Get the display where the main window is currently located
+        const currentDisplay = screen.getDisplayNearestPoint(
+            mainWindow.getBounds()
+        );
+
+        if (!currentDisplay) {
+            throw new Error("Could not determine current display");
+        }
+
+        console.log(
+            `Capturing from display: ${currentDisplay.id} (${currentDisplay.size.width}x${currentDisplay.size.height})`
+        );
+
+        // Get screen sources only (no audio) with higher resolution for better OCR
+        const sources = await desktopCapturer.getSources({
+            types: ["screen"],
+            thumbnailSize: { width: 3840, height: 2160 }, // 4K resolution for better OCR accuracy
+        });
+
+        if (sources.length === 0) {
+            throw new Error("No screen sources found");
+        }
+
+        // Find the source that matches our current display
+        let targetSource = null;
+
+        // On macOS, we can match by display ID
+        if (process.platform === "darwin") {
+            targetSource = sources.find(
+                (source) => source.display_id === currentDisplay.id.toString()
+            );
+        }
+
+        // On Windows, we can match by display bounds
+        if (process.platform === "win32") {
+            targetSource = sources.find((source) => {
+                const sourceBounds = source.display_id
+                    ? JSON.parse(source.display_id)
+                    : null;
+                if (sourceBounds) {
+                    return (
+                        sourceBounds.x === currentDisplay.bounds.x &&
+                        sourceBounds.y === currentDisplay.bounds.y
+                    );
+                }
+                return false;
+            });
+        }
+
+        // Fallback to first source if we can't find a match
+        if (!targetSource) {
+            console.log(
+                "Could not match display, using first available source"
+            );
+            targetSource = sources[0];
+        }
+
+        const imageData = targetSource.thumbnail.toDataURL();
+
+        return { success: true, imageData };
+    } catch (error) {
+        console.error("Screen capture failed:", error);
+        return { success: false, error: error.message };
+    }
+});
+
+// IPC handler for getting next screenshot filename
+ipcMain.handle("get-next-screenshot-filename", async (event) => {
+    const filename = `aoe2-civs-overlay-screenshot-${screenshotCounter
+        .toString()
+        .padStart(4, "0")}.png`;
+    screenshotCounter++;
+    return { success: true, filename };
+});
+
+// IPC handler for getting current display information
+ipcMain.handle("get-current-display-info", async (event) => {
+    try {
+        const { screen } = require("electron");
+
+        if (!mainWindow) {
+            return { success: false, error: "Main window not found" };
+        }
+
+        const currentDisplay = screen.getDisplayNearestPoint(
+            mainWindow.getBounds()
+        );
+
+        if (!currentDisplay) {
+            return {
+                success: false,
+                error: "Could not determine current display",
+            };
+        }
+
+        return {
+            success: true,
+            display: {
+                id: currentDisplay.id,
+                bounds: currentDisplay.bounds,
+                size: currentDisplay.size,
+                workArea: currentDisplay.workArea,
+                scaleFactor: currentDisplay.scaleFactor,
+                rotation: currentDisplay.rotation,
+                internal: currentDisplay.internal,
+                monochrome: currentDisplay.monochrome,
+                colorDepth: currentDisplay.colorDepth,
+                colorSpace: currentDisplay.colorSpace,
+                depthPerComponent: currentDisplay.depthPerComponent,
+            },
+        };
+    } catch (error) {
+        console.error("Failed to get display info:", error);
+        return { success: false, error: error.message };
+    }
+});
+
+// IPC handler for saving screenshot directly to file system
+ipcMain.handle("save-screenshot", async (event, imageData) => {
+    try {
+        // Generate filename
+        const filename = `aoe2-civs-overlay-screenshot-${screenshotCounter
+            .toString()
+            .padStart(4, "0")}.png`;
+        screenshotCounter++;
+
+        // Get downloads folder path
+        const downloadsPath = path.join(os.homedir(), "Downloads");
+        const filePath = path.join(downloadsPath, filename);
+
+        // Remove data URL prefix to get base64 data
+        const base64Data = imageData.replace(/^data:image\/png;base64,/, "");
+
+        // Write file directly to downloads folder
+        fs.writeFileSync(filePath, base64Data, "base64");
+
+        return { success: true, filename, filePath };
+    } catch (error) {
+        console.error("Failed to save screenshot:", error);
+        return { success: false, error: error.message };
+    }
+});
+
+// Image preprocessing function for OCR optimization
+// TODO: This preprocessing is currently disabled due to issues with image quality
+// The preprocessing was intended to improve OCR accuracy by:
+// - 2x upsampling for higher resolution
+// - Grayscale conversion
+// - Contrast normalization
+// - Threshold binarization
+// However, it seems to be degrading image quality instead of improving it
+// Need to investigate and tune the parameters before re-enabling
+async function preprocessImageForOCR(imageBuffer) {
+    try {
+        const preprocessedBuffer = await sharp(imageBuffer)
+            .resize({
+                width: Math.round(
+                    (await sharp(imageBuffer).metadata()).width * 2
+                ), // 2x upsampling
+            })
+            .grayscale()
+            .normalize() // boosts contrast
+            .threshold(160) // tune 140–190 for optimal results
+            .toBuffer();
+
+        const preprocessedBase64 = preprocessedBuffer.toString("base64");
+        const preprocessedDataUrl = `data:image/png;base64,${preprocessedBase64}`;
+
+        return {
+            buffer: preprocessedBuffer,
+            dataUrl: preprocessedDataUrl,
+        };
+    } catch (error) {
+        console.error("Image preprocessing failed:", error);
+        throw error;
+    }
+}
+
+// Initialize OCR service
+let ocrService = null;
+
+// Enhanced OCR function using RapidOCR
+async function ocrScreenshot(imageBuffer) {
+    try {
+        // Initialize OCR service if not already done
+        if (!ocrService) {
+            ocrService = new OCRService();
+            await ocrService.initialize();
+        }
+
+        // Perform OCR using RapidOCR
+        const result = await ocrService.performOCR(imageBuffer);
+
+        return {
+            text: result.text,
+            confidence: result.confidence,
+            preprocessedImage: null, // RapidOCR handles preprocessing internally
+        };
+    } catch (error) {
+        console.error("RapidOCR failed:", error);
+        throw error;
+    }
+}
+
+// IPC handler for OCR text extraction
+ipcMain.handle("extract-text-from-screenshot", async (event, imageData) => {
+    console.log("🔄 OCR request received from renderer process");
+    const startTime = Date.now();
+
+    try {
+        console.log("🖼️ Converting base64 image data to buffer...");
+        // Convert base64 image data to buffer
+        const base64Data = imageData.replace(/^data:image\/png;base64,/, "");
+        const imageBuffer = Buffer.from(base64Data, "base64");
+        console.log(`🖼️ Image buffer created: ${imageBuffer.length} bytes`);
+
+        console.log("🔍 Calling OCR service...");
+        // Use enhanced OCR function
+        const { text, confidence, preprocessedImage } = await ocrScreenshot(
+            imageBuffer
+        );
+
+        // Save preprocessed image to file (when preprocessing is enabled)
+        if (preprocessedImage) {
+            try {
+                const preprocessedBase64 = preprocessedImage.replace(
+                    /^data:image\/png;base64,/,
+                    ""
+                );
+                const preprocessedFilename = `aoe2-civs-overlay-screenshot-${(
+                    screenshotCounter - 1
+                )
+                    .toString()
+                    .padStart(4, "0")}-preprocessed.png`;
+                const downloadsPath = path.join(os.homedir(), "Downloads");
+                const preprocessedFilePath = path.join(
+                    downloadsPath,
+                    preprocessedFilename
+                );
+
+                fs.writeFileSync(
+                    preprocessedFilePath,
+                    preprocessedBase64,
+                    "base64"
+                );
+                console.log(
+                    `Preprocessed image saved to: ${preprocessedFilePath}`
+                );
+            } catch (error) {
+                console.error("Failed to save preprocessed image:", error);
+            }
+        }
+
+        const endTime = Date.now();
+        console.log(
+            `✅ OCR completed in ${
+                endTime - startTime
+            }ms with confidence: ${confidence}%`
+        );
+        console.log(
+            `📝 Extracted text: ${text.substring(0, 100)}${
+                text.length > 100 ? "..." : ""
+            }`
+        );
+
+        return { success: true, text, confidence };
+    } catch (error) {
+        const endTime = Date.now();
+        console.error(`❌ OCR failed after ${endTime - startTime}ms:`, error);
+        return { success: false, error: error.message };
+    }
 });
 
 const createWindow = () => {

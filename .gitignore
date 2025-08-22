@@ -137,3 +137,27 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Python virtual environments
+python-experiment-*/.venv/
+python-experiment-*/venv/
+python-experiment-*/__pycache__/
+python-experiment-*/*.pyc
+python-experiment-*/*.pyo
+python-experiment-*/*.pyd
+python-experiment-*/.Python
+python-experiment-*/pip-log.txt
+python-experiment-*/pip-delete-this-directory.txt
+
+# OCR output files
+python-experiment-*/vis_result.jpg
+python-experiment-*/output/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
