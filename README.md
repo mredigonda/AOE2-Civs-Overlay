@@ -69,6 +69,19 @@ If you instead prefer to build it from the source code, read below the 🚀 Quic
 
 2. **Run the automated setup script:**
 
+    **For Git Bash users (recommended):**
+
+    ```bash
+    # Clone the repository
+    git clone <repository-url>
+    cd aoe2-civs-overlay
+
+    # Run the setup script
+    ./setup-windows.sh
+    ```
+
+    **For Command Prompt users:**
+
     ```cmd
     # Clone the repository
     git clone <repository-url>
@@ -77,7 +90,7 @@ If you instead prefer to build it from the source code, read below the 🚀 Quic
     # Double-click setup-windows.bat in File Explorer
     ```
 
-    **Note**: Windows might show a security warning when running the script. Click "More info" → "Run anyway" to proceed.
+    **Note**: Windows might show a security warning when running the batch file. Click "More info" → "Run anyway" to proceed.
 
 The script will automatically:
 
@@ -88,8 +101,13 @@ The script will automatically:
 -   Test the build process
 -   Provide clear error messages if anything fails
 
-**Quick Verification:**
-If you want to check your setup without running the full setup, double-click `verify-windows-setup.bat` in File Explorer.
+**Quick Verification (Optional):**
+If you want to check your setup without running the full setup:
+
+-   **Git Bash**: Run `./verify-windows-setup.sh`
+-   **Command Prompt**: Double-click `verify-windows-setup.bat` in File Explorer
+
+**Note**: The verify script is optional and only checks your current setup. You can skip it and go directly to the setup script.
 
 **Option B: Manual Setup**
 
