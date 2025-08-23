@@ -11,6 +11,7 @@
         "dist-windows": "npm run build-python-win && sleep 5 && electron-builder --win portable --x64",
         "dist-windows-debug": "npm run build-python-win && electron-builder --win portable --x64 --debug",
         "setup-python": "cd python-experiment-rapidocr && python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt",
+        "setup-python-win": "cd python-experiment-rapidocr && python -m venv .venv && source .venv/Scripts/activate && pip install -r requirements.txt",
         "build-python": "cd python-experiment-rapidocr && source .venv/bin/activate && pip install pyinstaller && pyinstaller --onefile --windowed ocr_service.py --distpath ../resources/python-ocr",
         "build-python-win": "cd python-experiment-rapidocr && .venv\\Scripts\\activate && pip install pyinstaller && pyinstaller --onefile --windowed ocr_service.py --distpath ..\\resources\\python-ocr"
     },
