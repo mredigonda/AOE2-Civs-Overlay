@@ -8,7 +8,44 @@ from PIL import Image
 from rapidocr import RapidOCR
 
 
+def test_imports():
+    """Test all imports and print status"""
+    print("🧪 Running standalone import test...", file=sys.stderr)
+    try:
+        print("✅ sys import: OK", file=sys.stderr)
+        print("✅ json import: OK", file=sys.stderr)
+        print("✅ base64 import: OK", file=sys.stderr)
+        print("✅ time import: OK", file=sys.stderr)
+        print("✅ io.BytesIO import: OK", file=sys.stderr)
+        print("✅ PIL.Image import: OK", file=sys.stderr)
+        from rapidocr import RapidOCR
+        print("✅ rapidocr.RapidOCR import: OK", file=sys.stderr)
+        
+        # Test RapidOCR initialization
+        engine = RapidOCR()
+        print("✅ RapidOCR initialization: OK", file=sys.stderr)
+        
+        print("🎉 All imports and initialization successful!", file=sys.stderr)
+        return True
+    except Exception as e:
+        print(f"❌ Import test failed: {str(e)}", file=sys.stderr)
+        import traceback
+        print(f"📋 Traceback: {traceback.format_exc()}", file=sys.stderr)
+        return False
+
 def main():
+    # Check if we're running standalone (check command line args)
+    if len(sys.argv) > 1 and sys.argv[1] == "--test":
+        # Test mode requested
+        print("🔧 Test mode requested via --test flag", file=sys.stderr)
+        success = test_imports()
+        if success:
+            print(json.dumps({"success": True, "message": "Standalone test passed"}))
+            sys.exit(0)
+        else:
+            print(json.dumps({"success": False, "error": "Standalone test failed"}))
+            sys.exit(1)
+    
     try:
         print("🐍 Python OCR service starting...", file=sys.stderr)
         start_time = time.time()
