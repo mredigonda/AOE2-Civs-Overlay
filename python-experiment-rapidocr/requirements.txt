@@ -1,2 +1,3 @@
+rapidocr
 rapidocr-onnxruntime
 Pillow

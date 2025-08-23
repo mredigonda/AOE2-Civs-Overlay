@@ -141,8 +141,34 @@ class OCRService {
             console.log(
                 `🚀 Spawning process: ${pythonExecutable} ${args.join(" ")}`
             );
+            
+            // Set up environment to ensure Python finds the virtual environment packages
+            const env = { ...process.env };
+            if (fs.existsSync(venvPythonPath) || fs.existsSync(venvPythonPathWindows)) {
+                const venvPath = fs.existsSync(venvPythonPath) ? 
+                    path.join(__dirname, "..", "python-experiment-rapidocr", ".venv") :
+                    path.join(__dirname, "..", "python-experiment-rapidocr", ".venv");
+                
+                // Set VIRTUAL_ENV environment variable (critical for both platforms)
+                env.VIRTUAL_ENV = path.resolve(venvPath);
+                
+                // For Windows, we need to explicitly set PYTHONPATH to include site-packages
+                if (fs.existsSync(venvPythonPathWindows)) {
+                    const sitePackagesPath = path.join(venvPath, "Lib", "site-packages");
+                    if (env.PYTHONPATH) {
+                        env.PYTHONPATH = `${sitePackagesPath}${path.delimiter}${env.PYTHONPATH}`;
+                    } else {
+                        env.PYTHONPATH = sitePackagesPath;
+                    }
+                    console.log(`🔧 Windows: Set PYTHONPATH to: ${env.PYTHONPATH}`);
+                }
+                
+                console.log(`🔧 Set VIRTUAL_ENV to: ${env.VIRTUAL_ENV}`);
+            }
+            
             const process = spawn(pythonExecutable, args, {
                 stdio: ["pipe", "pipe", "pipe"],
+                env: env,
             });
 
             console.log(`📊 Process spawned with PID: ${process.pid}`);
