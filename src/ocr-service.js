@@ -9,11 +9,11 @@ class OCRService {
         this.isInitialized = false;
     }
 
-        async initialize() {
+    async initialize() {
         try {
             // Check if we're in development or production
             const isDev = process.env.NODE_ENV !== "production";
-            
+
             if (isDev) {
                 // Development mode: use Python script
                 this.pythonPath = await this.findPythonPath();
@@ -26,7 +26,10 @@ class OCRService {
                 console.log("🔧 Development mode: Using Python script");
             } else {
                 // Production mode: use bundled executable
-                const executableName = process.platform === "win32" ? "ocr_service.exe" : "ocr_service";
+                const executableName =
+                    process.platform === "win32"
+                        ? "ocr_service.exe"
+                        : "ocr_service";
                 this.pythonPath = path.join(
                     __dirname,
                     "..",
@@ -37,7 +40,7 @@ class OCRService {
                 this.scriptPath = null; // No script path needed for executable
                 console.log("🚀 Production mode: Using bundled executable");
             }
-            
+
             this.isInitialized = true;
             console.log("OCR Service initialized with path:", this.pythonPath);
         } catch (error) {
@@ -141,42 +144,75 @@ class OCRService {
             console.log(
                 `🚀 Spawning process: ${pythonExecutable} ${args.join(" ")}`
             );
-            
+
             // Set up environment to ensure Python finds the virtual environment packages
             const env = { ...process.env };
-            if (fs.existsSync(venvPythonPath) || fs.existsSync(venvPythonPathWindows)) {
-                const venvPath = fs.existsSync(venvPythonPath) ? 
-                    path.join(__dirname, "..", "python-experiment-rapidocr", ".venv") :
-                    path.join(__dirname, "..", "python-experiment-rapidocr", ".venv");
-                
+            if (
+                fs.existsSync(venvPythonPath) ||
+                fs.existsSync(venvPythonPathWindows)
+            ) {
+                const venvPath = fs.existsSync(venvPythonPath)
+                    ? path.join(
+                          __dirname,
+                          "..",
+                          "python-experiment-rapidocr",
+                          ".venv"
+                      )
+                    : path.join(
+                          __dirname,
+                          "..",
+                          "python-experiment-rapidocr",
+                          ".venv"
+                      );
+
                 // Set VIRTUAL_ENV environment variable (critical for both platforms)
                 env.VIRTUAL_ENV = path.resolve(venvPath);
-                
+
                 // For Windows, we need to explicitly set PYTHONPATH to include site-packages
                 if (fs.existsSync(venvPythonPathWindows)) {
-                    const sitePackagesPath = path.join(venvPath, "Lib", "site-packages");
+                    const sitePackagesPath = path.join(
+                        venvPath,
+                        "Lib",
+                        "site-packages"
+                    );
                     if (env.PYTHONPATH) {
                         env.PYTHONPATH = `${sitePackagesPath}${path.delimiter}${env.PYTHONPATH}`;
                     } else {
                         env.PYTHONPATH = sitePackagesPath;
                     }
-                    console.log(`🔧 Windows: Set PYTHONPATH to: ${env.PYTHONPATH}`);
+                    console.log(
+                        `🔧 Windows: Set PYTHONPATH to: ${env.PYTHONPATH}`
+                    );
                 }
-                
+
                 console.log(`🔧 Set VIRTUAL_ENV to: ${env.VIRTUAL_ENV}`);
             }
-            
-            const process = spawn(pythonExecutable, args, {
+
+            // Add Windows-specific debugging
+            if (process.platform === "win32") {
+                console.log(
+                    `🔧 Windows: Python executable path: ${pythonExecutable}`
+                );
+                console.log(`🔧 Windows: Script path: ${this.scriptPath}`);
+                console.log(`🔧 Windows: Arguments: ${JSON.stringify(args)}`);
+                console.log(
+                    `🔧 Windows: Environment keys: ${Object.keys(env).join(
+                        ", "
+                    )}`
+                );
+            }
+
+            const childProcess = spawn(pythonExecutable, args, {
                 stdio: ["pipe", "pipe", "pipe"],
                 env: env,
             });
 
-            console.log(`📊 Process spawned with PID: ${process.pid}`);
+            console.log(`📊 Process spawned with PID: ${childProcess.pid}`);
 
             let stdout = "";
             let stderr = "";
 
-            process.stdout.on("data", (data) => {
+            childProcess.stdout.on("data", (data) => {
                 const chunk = data.toString();
                 stdout += chunk;
                 console.log(
@@ -188,7 +224,7 @@ class OCRService {
                 );
             });
 
-            process.stderr.on("data", (data) => {
+            childProcess.stderr.on("data", (data) => {
                 const chunk = data.toString();
                 stderr += chunk;
                 console.log(
@@ -200,7 +236,7 @@ class OCRService {
                 );
             });
 
-            process.on("close", (code) => {
+            childProcess.on("close", (code) => {
                 console.log(`🔚 Process closed with code: ${code}`);
                 if (code === 0) {
                     console.log(`✅ Command completed successfully`);
@@ -213,7 +249,7 @@ class OCRService {
                 }
             });
 
-            process.on("error", (error) => {
+            childProcess.on("error", (error) => {
                 console.error(`💥 Process error:`, error);
                 reject(error);
             });
@@ -221,21 +257,24 @@ class OCRService {
             // Send input data to stdin if provided
             if (inputData) {
                 console.log(`📤 Sending input data to Python process...`);
-                process.stdin.write(inputData);
-                process.stdin.end();
+                childProcess.stdin.write(inputData);
+                childProcess.stdin.end();
                 console.log(`📤 Input data sent and stdin closed`);
             }
 
             // Add timeout handling
             const timeout = setTimeout(() => {
                 console.error(
-                    `⏰ Process timeout after 30 seconds, killing process ${process.pid}`
+                    `⏰ Process timeout after 30 seconds, killing process ${childProcess.pid}`
                 );
-                process.kill("SIGKILL");
+                // Use appropriate signal for the platform
+                const killSignal =
+                    process.platform === "win32" ? "SIGTERM" : "SIGKILL";
+                childProcess.kill(killSignal);
                 reject(new Error("Process timeout after 30 seconds"));
             }, 30000);
 
-            process.on("close", () => {
+            childProcess.on("close", () => {
                 clearTimeout(timeout);
             });
         });
