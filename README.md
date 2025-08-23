@@ -213,6 +213,14 @@ npm run dist-windows
 -   Try clearing npm cache: `npm cache clean --force`
 -   Reinstall dependencies: `rm -rf node_modules && npm install`
 
+**"EBUSY: resource busy or locked" Error:**
+
+-   Close any running instances of "AOE2 Civs Overlay.exe"
+-   Close File Explorer windows showing the dist folder
+-   Temporarily disable antivirus real-time scanning
+-   Try running the build command again
+-   If the issue persists, restart your computer and try again
+
 ### Local Development
 
 1. **Start the application**

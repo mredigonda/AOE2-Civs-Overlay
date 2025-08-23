@@ -137,7 +137,15 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "✅ Build test successful!"
+echo "✅ Python OCR service built successfully!"
+echo
+echo "Note: If you want to build the full Windows executable, run:"
+echo "npm run dist-windows"
+echo
+echo "If you get 'EBUSY: resource busy or locked' error:"
+echo "1. Close any running instances of 'AOE2 Civs Overlay.exe'"
+echo "2. Close File Explorer windows showing the dist folder"
+echo "3. Try running the build command again"
 echo
 
 echo "========================================"
