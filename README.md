@@ -74,9 +74,10 @@ If you instead prefer to build it from the source code, read below the 🚀 Quic
     git clone <repository-url>
     cd aoe2-civs-overlay
 
-    # Run the setup script
-    setup-windows.bat
+    # Double-click setup-windows.bat in File Explorer
     ```
+
+    **Note**: Windows might show a security warning when running the script. Click "More info" → "Run anyway" to proceed.
 
 The script will automatically:
 
@@ -88,11 +89,7 @@ The script will automatically:
 -   Provide clear error messages if anything fails
 
 **Quick Verification:**
-If you want to check your setup without running the full setup:
-
-```cmd
-verify-windows-setup.bat
-```
+If you want to check your setup without running the full setup, double-click `verify-windows-setup.bat` in File Explorer.
 
 **Option B: Manual Setup**
 
