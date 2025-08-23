@@ -14,7 +14,7 @@ Note: you need to run Age of Empires II in "Full Desktop" in Options → Graphic
 
 The quickest way to install it is to download the `.exe` file from the [releases section](https://github.com/mredigonda/AOE2-Civs-Overlay/releases) in this repo.
 
-If you instead prefer to build it from the sorce code, read below the 🚀 Quick Start guide.
+If you instead prefer to build it from the source code, read below the 🚀 Quick Start guide.
 
 ## ✨ Features
 
@@ -47,45 +47,170 @@ If you instead prefer to build it from the sorce code, read below the 🚀 Quick
 
 ### Prerequisites
 
--   **Node.js** (v16 or higher) - [Download here](https://nodejs.org/)
--   **Windows 10/11** (primary target platform)
+**For Windows Development (Building from Source):**
+
+1. **Node.js** (v16 or higher) - [Download here](https://nodejs.org/)
+2. **Python 3.8+** - [Download here](https://www.python.org/downloads/)
+3. **Git** - [Download here](https://git-scm.com/download/win)
+
+**For Running Pre-built Executable:**
+
+-   Windows 10/11 (no additional software required)
+
+### 🪟 Windows Development Setup
+
+**Option A: Automated Setup (Recommended)**
+
+1. **Download and install prerequisites:**
+
+    - [Node.js](https://nodejs.org/) (v16 or higher)
+    - [Python 3.8+](https://www.python.org/downloads/)
+    - [Git](https://git-scm.com/download/win)
+
+2. **Run the automated setup script:**
+
+    ```cmd
+    # Clone the repository
+    git clone <repository-url>
+    cd aoe2-civs-overlay
+
+    # Run the setup script
+    setup-windows.bat
+    ```
+
+The script will automatically:
+
+-   Verify all prerequisites are installed
+-   Install Node.js dependencies
+-   Create and configure Python virtual environment
+-   Install Python dependencies
+-   Test the build process
+-   Provide clear error messages if anything fails
+
+**Quick Verification:**
+If you want to check your setup without running the full setup:
+
+```cmd
+verify-windows-setup.bat
+```
+
+**Option B: Manual Setup**
+
+**Step 1: Verify Prerequisites**
+
+Open Command Prompt or PowerShell and run these commands to verify your installations:
+
+```cmd
+# Check Node.js version (should be 16.0.0 or higher)
+node --version
+
+# Check npm version
+npm --version
+
+# Check Python version (should be 3.8.0 or higher)
+python --version
+
+# Check Git version
+git --version
+```
+
+**Step 2: Clone and Setup**
+
+```cmd
+# Clone the repository
+git clone <repository-url>
+cd aoe2-civs-overlay
+
+# Install Node.js dependencies
+npm install
+```
+
+**Step 3: Setup Python Environment**
+
+```cmd
+# Navigate to Python experiment directory
+cd python-experiment-rapidocr
+
+# Create virtual environment
+python -m venv .venv
+
+# Activate virtual environment (Windows)
+.venv\Scripts\activate
+
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Install PyInstaller for building executables
+pip install pyinstaller
+
+# Return to project root
+cd ..
+```
+
+**Step 4: Verify Python Setup**
+
+```cmd
+# Activate the environment again (if needed)
+cd python-experiment-rapidocr
+.venv\Scripts\activate
+
+# Test Python imports
+python -c "import rapidocr_onnxruntime; import PIL; print('✅ Python dependencies installed successfully')"
+
+# Deactivate environment
+deactivate
+cd ..
+```
+
+**Step 5: Build the Application**
+
+```cmd
+# Build Python OCR service
+npm run build-python-win
+
+# Build Windows executable
+npm run dist-windows
+```
+
+**Step 6: Find Your Executable**
+
+-   Navigate to the `dist` folder
+-   Look for `AOE2 Civs Overlay.exe`
+-   Double-click to run
+
+### 🔧 Troubleshooting
+
+**"The system cannot find the path specified" Error:**
+
+-   Make sure you're running commands from the project root directory
+-   Verify Python virtual environment exists: `dir python-experiment-rapidocr\.venv`
+-   Re-run the Python setup steps if the `.venv` folder is missing
+
+**Python Import Errors:**
+
+-   Ensure you're using Python 3.8 or higher
+-   Try reinstalling dependencies: `pip install --upgrade -r requirements.txt`
+-   Check if you're in the correct virtual environment (should see `(.venv)` in your prompt)
+
+**Node.js Errors:**
+
+-   Ensure Node.js version 16+ is installed
+-   Try clearing npm cache: `npm cache clean --force`
+-   Reinstall dependencies: `rm -rf node_modules && npm install`
 
 ### Local Development
 
-1. **Clone the repository**
+1. **Start the application**
 
-    ```bash
-    git clone <repository-url>
-    cd aoe2-civs-overlay
-    ```
-
-2. **Install dependencies**
-
-    ```bash
-    npm install
-    ```
-
-3. **Run the application**
-
-    ```bash
+    ```cmd
     npm start
     ```
 
-### Building the Executable
+2. **Test Windows-specific features**
 
-1. **Open a terminal with admin permissions in Windows**
-
-2. **Install dependencies and build**
-
-    ```bash
-    npm install
-    npm run dist-windows
+    ```cmd
+    npm run start-test
     ```
-
-3. **Find your executable**
-    - Navigate to the `dist` folder
-    - Look for `AOE2 Civs Overlay.exe`
-    - Double-click to run
 
 ### Build Options
 
@@ -117,6 +242,7 @@ Each civilization displays:
 
 -   **Frontend**: Vanilla JavaScript with modern CSS
 -   **Backend**: Electron for cross-platform desktop functionality
+-   **OCR Engine**: Python-based RapidOCR for text recognition
 -   **Data**: JSON-based civilization database
 -   **Styling**: Custom CSS with Age of Empires 2 theming
 
