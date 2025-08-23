@@ -106,6 +106,7 @@ class OCRService {
             // Get the path to the virtual environment's Python executable (Unix/Linux/macOS)
             const venvPythonPath = path.join(
                 __dirname,
+                "..",
                 "python-experiment-rapidocr",
                 ".venv",
                 "bin",
@@ -114,6 +115,7 @@ class OCRService {
             // Get the path to the virtual environment's Python executable (Windows)
             const venvPythonPathWindows = path.join(
                 __dirname,
+                "..",
                 "python-experiment-rapidocr",
                 ".venv",
                 "Scripts",
