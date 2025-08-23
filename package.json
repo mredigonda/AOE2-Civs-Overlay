@@ -2,15 +2,17 @@
     "name": "aoe2-civs-overlay",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "src/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "electron .",
-        "start-test": "electron test-windows.js",
-        "dist": "electron-builder",
-        "dist-windows": "electron-builder --win portable --x64",
-        "dist-windows-debug": "electron-builder --win portable --x64 --debug",
-        "setup-python": "cd python-experiment-rapidocr && python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt"
+        "start-test": "electron src/utils/test-windows.js",
+        "dist": "npm run build-python && electron-builder",
+        "dist-windows": "npm run build-python-win && electron-builder --win portable --x64",
+        "dist-windows-debug": "npm run build-python-win && electron-builder --win portable --x64 --debug",
+        "setup-python": "cd python-experiment-rapidocr && python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt",
+        "build-python": "cd python-experiment-rapidocr && source .venv/bin/activate && pip install pyinstaller && pyinstaller ocr_service.spec --distpath ../resources/python-ocr",
+        "build-python-win": "cd python-experiment-rapidocr && .venv\\Scripts\\activate && pip install pyinstaller && pyinstaller ocr_service.spec --distpath ..\\resources\\python-ocr"
     },
     "build": {
         "appId": "com.maxredigonda.aoe2-civs-overlay",
@@ -23,7 +25,10 @@
             "**/*",
             "!node_modules/**/*",
             "!dist/**/*",
-            "!.git/**/*"
+            "!.git/**/*",
+            "!python-experiment-*/.venv/**/*",
+            "!python-experiment-*/venv/**/*",
+            "resources/python-ocr/**/*"
         ],
         "directories": {
             "output": "dist"
@@ -35,7 +40,5 @@
         "electron": "^37.3.0",
         "electron-builder": "^26.0.12"
     },
-    "dependencies": {
-        "sharp": "^0.34.3"
-    }
+    "dependencies": {}
 }

@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const os = require("os");
 const OCRService = require("./ocr-service.js");
-const sharp = require("sharp");
+
 const {
     DEFAULT_WINDOW_WIDTH,
     DEFAULT_WINDOW_HEIGHT,
@@ -183,41 +183,6 @@ ipcMain.handle("save-screenshot", async (event, imageData) => {
         return { success: false, error: error.message };
     }
 });
-
-// Image preprocessing function for OCR optimization
-// TODO: This preprocessing is currently disabled due to issues with image quality
-// The preprocessing was intended to improve OCR accuracy by:
-// - 2x upsampling for higher resolution
-// - Grayscale conversion
-// - Contrast normalization
-// - Threshold binarization
-// However, it seems to be degrading image quality instead of improving it
-// Need to investigate and tune the parameters before re-enabling
-async function preprocessImageForOCR(imageBuffer) {
-    try {
-        const preprocessedBuffer = await sharp(imageBuffer)
-            .resize({
-                width: Math.round(
-                    (await sharp(imageBuffer).metadata()).width * 2
-                ), // 2x upsampling
-            })
-            .grayscale()
-            .normalize() // boosts contrast
-            .threshold(160) // tune 140–190 for optimal results
-            .toBuffer();
-
-        const preprocessedBase64 = preprocessedBuffer.toString("base64");
-        const preprocessedDataUrl = `data:image/png;base64,${preprocessedBase64}`;
-
-        return {
-            buffer: preprocessedBuffer,
-            dataUrl: preprocessedDataUrl,
-        };
-    } catch (error) {
-        console.error("Image preprocessing failed:", error);
-        throw error;
-    }
-}
 
 // Initialize OCR service
 let ocrService = null;

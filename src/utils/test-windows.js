@@ -26,7 +26,7 @@ const createWindow = () => {
         },
     });
 
-    const htmlPath = path.join(__dirname, "civ-selector.html");
+    const htmlPath = path.join(__dirname, "..", "civ-selector.html");
     console.log("Loading HTML from:", htmlPath);
 
     mainWindow.loadFile(htmlPath);

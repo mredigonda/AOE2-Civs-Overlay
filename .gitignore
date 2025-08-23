@@ -153,7 +153,27 @@ python-experiment-*/pip-delete-this-directory.txt
 python-experiment-*/vis_result.jpg
 python-experiment-*/output/
 
-# macOS
+# OCR service executables
+resources/python-ocr/ocr_service
+resources/python-ocr/ocr_service.exe
+
+# Build and distribution files
+dist/
+build/
+*.spec
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*

@@ -5,23 +5,41 @@ const fs = require("fs");
 class OCRService {
     constructor() {
         this.pythonPath = null;
-        this.scriptPath = path.join(
-            __dirname,
-            "python-experiment-rapidocr",
-            "ocr_service.py"
-        );
+        this.scriptPath = null;
         this.isInitialized = false;
     }
 
-    async initialize() {
+        async initialize() {
         try {
-            // Try to find Python executable
-            this.pythonPath = await this.findPythonPath();
+            // Check if we're in development or production
+            const isDev = process.env.NODE_ENV !== "production";
+            
+            if (isDev) {
+                // Development mode: use Python script
+                this.pythonPath = await this.findPythonPath();
+                this.scriptPath = path.join(
+                    __dirname,
+                    "..",
+                    "python-experiment-rapidocr",
+                    "ocr_service.py"
+                );
+                console.log("🔧 Development mode: Using Python script");
+            } else {
+                // Production mode: use bundled executable
+                const executableName = process.platform === "win32" ? "ocr_service.exe" : "ocr_service";
+                this.pythonPath = path.join(
+                    __dirname,
+                    "..",
+                    "resources",
+                    "python-ocr",
+                    executableName
+                );
+                this.scriptPath = null; // No script path needed for executable
+                console.log("🚀 Production mode: Using bundled executable");
+            }
+            
             this.isInitialized = true;
-            console.log(
-                "OCR Service initialized with Python path:",
-                this.pythonPath
-            );
+            console.log("OCR Service initialized with path:", this.pythonPath);
         } catch (error) {
             console.error("Failed to initialize OCR Service:", error);
             throw error;
@@ -32,6 +50,7 @@ class OCRService {
         // First, check if virtual environment Python exists (Unix/Linux/macOS)
         const venvPythonPath = path.join(
             __dirname,
+            "..",
             "python-experiment-rapidocr",
             ".venv",
             "bin",
@@ -44,6 +63,7 @@ class OCRService {
         // Check for Windows virtual environment Python
         const venvPythonPathWindows = path.join(
             __dirname,
+            "..",
             "python-experiment-rapidocr",
             ".venv",
             "Scripts",
@@ -218,16 +238,17 @@ class OCRService {
                 `📝 Input data prepared (${inputData.length} characters)`
             );
 
-            // Run Python OCR script
+            // Run Python OCR script or executable
+            const args = this.scriptPath ? [this.scriptPath] : [];
             console.log(
-                `🐍 Spawning Python process: ${this.pythonPath} ${this.scriptPath}`
+                `🐍 Spawning process: ${this.pythonPath} ${args.join(" ")}`
             );
-            console.log("⏳ Waiting for Python OCR script to complete...");
+            console.log("⏳ Waiting for OCR process to complete...");
 
             const startTime = Date.now();
             const result = await this.runCommand(
                 this.pythonPath,
-                [this.scriptPath],
+                args,
                 inputData
             );
             const endTime = Date.now();
