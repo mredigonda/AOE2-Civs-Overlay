@@ -259,15 +259,21 @@ ipcMain.handle("extract-text-from-screenshot", async (event, imageData) => {
             imageAnalyzer = new ImageAnalyzer();
         }
 
-        // Analyze detections to find resource words
-        console.log("🔍 Analyzing OCR detections for resource words...");
+        // Analyze detections to find resource words and their numeric values
+        console.log(
+            "🔍 Analyzing OCR detections for resource words and numeric values..."
+        );
         const analysisResult = imageAnalyzer.analyzeDetections(detections);
 
         console.log(
-            `🎯 Image analysis result: ${imageAnalyzer.getSummary(
+            `🎯 Enhanced image analysis result: ${imageAnalyzer.getSummary(
                 analysisResult
             )}`
         );
+
+        // Format results for UI display
+        const formattedResources = imageAnalyzer.formatForUI(analysisResult);
+        console.log("📱 Formatted resources for UI:", formattedResources);
 
         // Save preprocessed image to file (when preprocessing is enabled)
         if (preprocessedImage) {
@@ -318,6 +324,7 @@ ipcMain.handle("extract-text-from-screenshot", async (event, imageData) => {
             confidence,
             detections,
             analysisResult,
+            formattedResources,
         };
     } catch (error) {
         const endTime = Date.now();
