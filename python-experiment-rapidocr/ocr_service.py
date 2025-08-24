@@ -84,7 +84,23 @@ def main():
 
         # Initialize RapidOCR
         print("🚀 Initializing RapidOCR engine...", file=sys.stderr)
-        engine = RapidOCR()
+        engine = RapidOCR(
+            params={
+                # Never skip detection because of size or aspect ratio
+                "Global.min_height": 1,  # ↓ from 30 so small crops still run Det
+                "Global.width_height_ratio": -1,  # disable aspect-ratio skip
+                # Make the detector see more pixels and keep weaker regions
+                "Det.limit_type": "min",
+                "Det.limit_side_len": 1920,  # ↑ upscale before Det (try 1280–1920)
+                "Det.thresh": 0.05,
+                "Det.box_thresh": 0.1,
+                "Det.unclip_ratio": 2.0,
+                "Det.use_dilation": True,
+                "Det.score_mode": "slow",  # more accurate box scoring, slower
+                "Global.text_score": 0.3,  # allow weak digit lines to pass
+            }
+        )
+
         print("✅ RapidOCR engine initialized", file=sys.stderr)
 
         # Perform OCR
