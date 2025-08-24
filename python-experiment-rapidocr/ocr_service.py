@@ -96,7 +96,6 @@ def main():
                 "Det.box_thresh": 0.1,
                 "Det.unclip_ratio": 2.0,
                 "Det.use_dilation": True,
-                "Det.score_mode": "slow",  # more accurate box scoring, slower
                 "Global.text_score": 0.3,  # allow weak digit lines to pass
             }
         )

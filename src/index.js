@@ -117,15 +117,8 @@ ipcMain.handle("capture-screen", async (event) => {
             height: cropHeight,
         });
 
-        // Resize the cropped image by 4x for better OCR accuracy
-        const resizedImage = croppedImage.resize({
-            width: originalSize.width * 4,
-            height: cropHeight * 4,
-            quality: "best",
-        });
-
         // Convert back to data URL
-        const croppedImageData = resizedImage.toDataURL();
+        const croppedImageData = croppedImage.toDataURL();
 
         console.log(
             `Cropped screenshot to top ${cropHeight}px and resized 4x: ${croppedImageData.length} characters`
