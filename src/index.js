@@ -202,6 +202,7 @@ async function ocrScreenshot(imageBuffer) {
         return {
             text: result.text,
             confidence: result.confidence,
+            detections: result.detections || [],
             preprocessedImage: null, // RapidOCR handles preprocessing internally
         };
     } catch (error) {
@@ -224,7 +225,7 @@ ipcMain.handle("extract-text-from-screenshot", async (event, imageData) => {
 
         console.log("🔍 Calling OCR service...");
         // Use enhanced OCR function
-        const { text, confidence, preprocessedImage } = await ocrScreenshot(
+        const { text, confidence, detections, preprocessedImage } = await ocrScreenshot(
             imageBuffer
         );
 
@@ -271,7 +272,7 @@ ipcMain.handle("extract-text-from-screenshot", async (event, imageData) => {
             }`
         );
 
-        return { success: true, text, confidence };
+        return { success: true, text, confidence, detections };
     } catch (error) {
         const endTime = Date.now();
         console.error(`❌ OCR failed after ${endTime - startTime}ms:`, error);

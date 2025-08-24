@@ -210,6 +210,44 @@
                     font-family: monospace;
                 "></div>
             </div>
+
+            <!-- Individual Detections Display -->
+            <div
+                id="detections-display"
+                style="
+                    display: none;
+                    margin-top: 10px;
+                    padding: 10px;
+                    background: rgba(0, 0, 0, 0.8);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    max-height: 300px;
+                    overflow-y: auto;
+                "
+            >
+                <div style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                ">
+                    <h4 style="
+                        margin: 0;
+                        color: #ffd700;
+                        font-size: 14px;
+                        font-weight: bold;
+                    ">Individual Detections</h4>
+                    <div id="detections-count" style="
+                        font-size: 11px;
+                        color: rgba(255, 255, 255, 0.6);
+                    "></div>
+                </div>
+                <div id="detections-content" style="
+                    font-size: 11px;
+                    color: white;
+                    line-height: 1.3;
+                    font-family: monospace;
+                "></div>
+            </div>
             </div>
         </div>
         <div
@@ -405,6 +443,13 @@
                         ocrContent.textContent = "";
                         copyTextBtn.style.display = "none";
 
+                        // Hide detections display initially
+                        const detectionsDisplay = document.getElementById("detections-display");
+                        const detectionsContent = document.getElementById("detections-content");
+                        const detectionsCount = document.getElementById("detections-count");
+                        detectionsDisplay.style.display = "none";
+                        detectionsContent.textContent = "";
+
                         const ocrResult = await ipcRenderer.invoke("extract-text-from-screenshot", imageData);
 
                         if (ocrResult.success) {
@@ -412,6 +457,31 @@
                             ocrStatus.textContent = confidence ? `OCR completed (${confidence}% confidence)` : "OCR completed";
                             ocrContent.textContent = ocrResult.text || "No text found";
                             copyTextBtn.style.display = "block";
+
+                            // Display individual detections if available
+                            if (ocrResult.detections && ocrResult.detections.length > 0) {
+                                detectionsDisplay.style.display = "block";
+                                detectionsCount.textContent = `${ocrResult.detections.length} detection(s)`;
+                                
+                                const detectionsHtml = ocrResult.detections.map((detection, index) => {
+                                    const confidencePercent = Math.round(detection.confidence * 100);
+                                    const confidenceColor = detection.confidence >= 0.8 ? "#4CAF50" : 
+                                                          detection.confidence >= 0.6 ? "#FF9800" : "#F44336";
+                                    
+                                    let detectionText = `${index + 1}. "${detection.text}" (${confidencePercent}%)`;
+                                    
+                                    if (detection.bounding_box && detection.bounding_box.length > 0) {
+                                        const [x, y] = detection.bounding_box[0];
+                                        detectionText += ` at (${x}, ${y})`;
+                                    }
+                                    
+                                    return `<div style="margin-bottom: 5px;">
+                                        <span style="color: ${confidenceColor};">${detectionText}</span>
+                                    </div>`;
+                                }).join("");
+                                
+                                detectionsContent.innerHTML = detectionsHtml;
+                            }
                         } else {
                             ocrStatus.textContent = "OCR failed";
                             ocrContent.textContent = `Error: ${ocrResult.error}`;

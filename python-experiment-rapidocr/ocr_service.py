@@ -129,28 +129,19 @@ def main():
                     }
                 )
 
-                # Only log detections with >95% confidence
-                if confidence > 0.95:
-                    high_confidence_count += 1
-                    if bounding_box:
-                        # Extract top-left point (first point in the bounding box)
-                        top_left_x, top_left_y = bounding_box[0]
-                        print(
-                            f"📝 Detection {i+1}: '{text}' (confidence: {confidence:.3f}) at ({top_left_x}, {top_left_y})",
-                            file=sys.stderr,
-                        )
-                    else:
-                        print(
-                            f"📝 Detection {i+1}: '{text}' (confidence: {confidence:.3f})",
-                            file=sys.stderr,
-                        )
-
-            if high_confidence_count < len(result.txts):
-                low_confidence_count = len(result.txts) - high_confidence_count
-                print(
-                    f"📝 + {low_confidence_count} additional detections with <95% confidence (not shown)",
-                    file=sys.stderr,
-                )
+                # Log all detections with their confidence scores
+                if bounding_box:
+                    # Extract top-left point (first point in the bounding box)
+                    top_left_x, top_left_y = bounding_box[0]
+                    print(
+                        f"📝 Detection {i+1}: '{text}' (confidence: {confidence:.3f}) at ({top_left_x}, {top_left_y})",
+                        file=sys.stderr,
+                    )
+                else:
+                    print(
+                        f"📝 Detection {i+1}: '{text}' (confidence: {confidence:.3f})",
+                        file=sys.stderr,
+                    )
         else:
             print("⚠️ No text detections found", file=sys.stderr)
 

@@ -181,3 +181,6 @@ build/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Custom
+human-wishlist.md
