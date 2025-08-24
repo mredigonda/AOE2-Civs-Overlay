@@ -98,9 +98,32 @@ ipcMain.handle("capture-screen", async (event) => {
             targetSource = sources[0];
         }
 
-        const imageData = targetSource.thumbnail.toDataURL();
+        // Get the full screen image and crop it to top 200px using nativeImage
+        const { nativeImage } = require("electron");
+        const fullImage = nativeImage.createFromDataURL(
+            targetSource.thumbnail.toDataURL()
+        );
 
-        return { success: true, imageData };
+        // Get the original size
+        const originalSize = fullImage.getSize();
+
+        // Crop to top 200px (or full height if less than 200px)
+        const cropHeight = Math.min(200, originalSize.height);
+        const croppedImage = fullImage.crop({
+            x: 0,
+            y: 0,
+            width: originalSize.width,
+            height: cropHeight,
+        });
+
+        // Convert back to data URL
+        const croppedImageData = croppedImage.toDataURL();
+
+        console.log(
+            `Cropped screenshot to top ${cropHeight}px: ${croppedImageData.length} characters`
+        );
+
+        return { success: true, imageData: croppedImageData };
     } catch (error) {
         console.error("Screen capture failed:", error);
         return { success: false, error: error.message };
