@@ -225,9 +225,8 @@ ipcMain.handle("extract-text-from-screenshot", async (event, imageData) => {
 
         console.log("🔍 Calling OCR service...");
         // Use enhanced OCR function
-        const { text, confidence, detections, preprocessedImage } = await ocrScreenshot(
-            imageBuffer
-        );
+        const { text, confidence, detections, preprocessedImage } =
+            await ocrScreenshot(imageBuffer);
 
         // Save preprocessed image to file (when preprocessing is enabled)
         if (preprocessedImage) {

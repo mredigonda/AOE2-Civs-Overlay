@@ -19,19 +19,22 @@ def test_imports():
         print("✅ io.BytesIO import: OK", file=sys.stderr)
         print("✅ PIL.Image import: OK", file=sys.stderr)
         from rapidocr import RapidOCR
+
         print("✅ rapidocr.RapidOCR import: OK", file=sys.stderr)
-        
+
         # Test RapidOCR initialization
         engine = RapidOCR()
         print("✅ RapidOCR initialization: OK", file=sys.stderr)
-        
+
         print("🎉 All imports and initialization successful!", file=sys.stderr)
         return True
     except Exception as e:
         print(f"❌ Import test failed: {str(e)}", file=sys.stderr)
         import traceback
+
         print(f"📋 Traceback: {traceback.format_exc()}", file=sys.stderr)
         return False
+
 
 def main():
     # Check if we're running standalone (check command line args)
@@ -45,7 +48,7 @@ def main():
         else:
             print(json.dumps({"success": False, "error": "Standalone test failed"}))
             sys.exit(1)
-    
+
     try:
         print("🐍 Python OCR service starting...", file=sys.stderr)
         start_time = time.time()
@@ -156,12 +159,40 @@ def main():
         )
         print(f"📊 Average confidence: {avg_confidence:.3f}", file=sys.stderr)
 
+        # Generate visualization image if detections were found
+        visualization_path = None
+        if result and hasattr(result, "vis") and texts:
+            try:
+                import os
+                from datetime import datetime
+
+                # Create a unique filename with timestamp
+                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                filename = f"ocr_visualization_{timestamp}.jpg"
+
+                # Save to the same directory as the script
+                script_dir = os.path.dirname(os.path.abspath(__file__))
+                visualization_path = os.path.join(script_dir, filename)
+
+                print(f"🖼️ Generating visualization image...", file=sys.stderr)
+                result.vis(visualization_path)
+                print(
+                    f"🖼️ Visualization saved to: {visualization_path}", file=sys.stderr
+                )
+
+            except Exception as vis_error:
+                print(
+                    f"⚠️ Failed to generate visualization: {vis_error}", file=sys.stderr
+                )
+                visualization_path = None
+
         # Return results as JSON
         output = {
             "success": True,
             "text": combined_text,
             "confidence": avg_confidence,
             "detections": texts,
+            "visualization_path": visualization_path,
         }
 
         total_time = time.time() - start_time
