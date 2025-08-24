@@ -248,6 +248,44 @@
                     font-family: monospace;
                 "></div>
             </div>
+
+            <!-- Resource Analysis Display -->
+            <div
+                id="resource-analysis-display"
+                style="
+                    display: none;
+                    margin-top: 10px;
+                    padding: 10px;
+                    background: rgba(0, 0, 0, 0.8);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    max-height: 200px;
+                    overflow-y: auto;
+                "
+            >
+                <div style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                ">
+                    <h4 style="
+                        margin: 0;
+                        color: #00ff00;
+                        font-size: 14px;
+                        font-weight: bold;
+                    ">Resource Analysis</h4>
+                    <div id="resource-count" style="
+                        font-size: 11px;
+                        color: rgba(255, 255, 255, 0.6);
+                    "></div>
+                </div>
+                <div id="resource-content" style="
+                    font-size: 11px;
+                    color: white;
+                    line-height: 1.3;
+                    font-family: monospace;
+                "></div>
+            </div>
             </div>
         </div>
         <div
@@ -450,6 +488,13 @@
                         detectionsDisplay.style.display = "none";
                         detectionsContent.textContent = "";
 
+                        // Hide resource analysis display initially
+                        const resourceDisplay = document.getElementById("resource-analysis-display");
+                        const resourceContent = document.getElementById("resource-content");
+                        const resourceCount = document.getElementById("resource-count");
+                        resourceDisplay.style.display = "none";
+                        resourceContent.textContent = "";
+
                         const ocrResult = await ipcRenderer.invoke("extract-text-from-screenshot", imageData);
 
                         if (ocrResult.success) {
@@ -481,6 +526,34 @@
                                 }).join("");
                                 
                                 detectionsContent.innerHTML = detectionsHtml;
+                            }
+
+                            // Display resource analysis if available
+                            if (ocrResult.analysisResult && ocrResult.analysisResult.foundResources) {
+                                resourceDisplay.style.display = "block";
+                                resourceCount.textContent = `${ocrResult.analysisResult.resourceCount} resource(s) found`;
+                                
+                                if (ocrResult.analysisResult.foundResources.length > 0) {
+                                    const resourceHtml = ocrResult.analysisResult.foundResources.map((resource, index) => {
+                                        const confidencePercent = Math.round(resource.confidence * 100);
+                                        const confidenceColor = resource.confidence >= 0.8 ? "#4CAF50" : 
+                                                              resource.confidence >= 0.6 ? "#FF9800" : "#F44336";
+                                        
+                                        let resourceText = `${index + 1}. ${resource.resource} (${confidencePercent}%)`;
+                                        
+                                        if (resource.coordinates) {
+                                            resourceText += ` at (${resource.coordinates.x}, ${resource.coordinates.y})`;
+                                        }
+                                        
+                                        return `<div style="margin-bottom: 5px;">
+                                            <span style="color: ${confidenceColor};">${resourceText}</span>
+                                        </div>`;
+                                    }).join("");
+                                    
+                                    resourceContent.innerHTML = resourceHtml;
+                                } else {
+                                    resourceContent.textContent = "No resource words found";
+                                }
                             }
                         } else {
                             ocrStatus.textContent = "OCR failed";

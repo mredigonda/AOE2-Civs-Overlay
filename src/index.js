@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const os = require("os");
 const OCRService = require("./ocr-service.js");
+const ImageAnalyzer = require("./image-analyzer.js");
 
 const {
     DEFAULT_WINDOW_WIDTH,
@@ -208,8 +209,9 @@ ipcMain.handle("save-screenshot", async (event, imageData) => {
     }
 });
 
-// Initialize OCR service
+// Initialize OCR service and image analyzer
 let ocrService = null;
+let imageAnalyzer = null;
 
 // Enhanced OCR function using RapidOCR
 async function ocrScreenshot(imageBuffer) {
@@ -251,6 +253,21 @@ ipcMain.handle("extract-text-from-screenshot", async (event, imageData) => {
         // Use enhanced OCR function
         const { text, confidence, detections, preprocessedImage } =
             await ocrScreenshot(imageBuffer);
+
+        // Initialize image analyzer if not already done
+        if (!imageAnalyzer) {
+            imageAnalyzer = new ImageAnalyzer();
+        }
+
+        // Analyze detections to find resource words
+        console.log("🔍 Analyzing OCR detections for resource words...");
+        const analysisResult = imageAnalyzer.analyzeDetections(detections);
+
+        console.log(
+            `🎯 Image analysis result: ${imageAnalyzer.getSummary(
+                analysisResult
+            )}`
+        );
 
         // Save preprocessed image to file (when preprocessing is enabled)
         if (preprocessedImage) {
@@ -295,7 +312,13 @@ ipcMain.handle("extract-text-from-screenshot", async (event, imageData) => {
             }`
         );
 
-        return { success: true, text, confidence, detections };
+        return {
+            success: true,
+            text,
+            confidence,
+            detections,
+            analysisResult,
+        };
     } catch (error) {
         const endTime = Date.now();
         console.error(`❌ OCR failed after ${endTime - startTime}ms:`, error);
