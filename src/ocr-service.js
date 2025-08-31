@@ -322,6 +322,9 @@ class OCRService {
                     console.log(
                         `🔧 Windows: Added Scripts to PATH: ${scriptsPath}`
                     );
+
+                    // Set VIRTUAL_ENV to help Python find the virtual environment
+                    env.VIRTUAL_ENV = venvPath;
                 }
             } else {
                 // Get the path to the virtual environment's Python executable (Unix/Linux/macOS)
