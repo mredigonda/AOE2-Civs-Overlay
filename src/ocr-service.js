@@ -49,6 +49,51 @@ class OCRService {
         }
     }
 
+    async initializeV2() {
+        try {
+            // Check if we're in development or production
+            const isDev = process.env.NODE_ENV !== "production";
+
+            if (isDev) {
+                // Development mode: use Tesseract Python script
+                this.pythonPathV2 = await this.findPythonPathV2();
+                this.scriptPathV2 = path.join(
+                    __dirname,
+                    "..",
+                    "python-experiment-tesseract",
+                    "process.py"
+                );
+                console.log(
+                    "🔧 Development mode V2: Using Tesseract Python script"
+                );
+            } else {
+                // Production mode: use bundled executable (same as V1 for now)
+                const executableName =
+                    process.platform === "win32"
+                        ? "ocr_service.exe"
+                        : "ocr_service";
+                this.pythonPathV2 = path.join(
+                    __dirname,
+                    "..",
+                    "resources",
+                    "python-ocr",
+                    executableName
+                );
+                this.scriptPathV2 = null; // No script path needed for executable
+                console.log("🚀 Production mode V2: Using bundled executable");
+            }
+
+            this.isInitializedV2 = true;
+            console.log(
+                "OCR Service V2 initialized with path:",
+                this.pythonPathV2
+            );
+        } catch (error) {
+            console.error("Failed to initialize OCR Service V2:", error);
+            throw error;
+        }
+    }
+
     async findPythonPath() {
         // First, check if virtual environment Python exists (Unix/Linux/macOS)
         const venvPythonPath = path.join(
@@ -68,6 +113,52 @@ class OCRService {
             __dirname,
             "..",
             "python-experiment-rapidocr",
+            ".venv",
+            "Scripts",
+            "python.exe"
+        );
+        if (fs.existsSync(venvPythonPathWindows)) {
+            return venvPythonPathWindows;
+        }
+
+        // Fallback to system Python
+        const pythonNames = ["python3", "python", "py"];
+
+        for (const name of pythonNames) {
+            try {
+                const result = await this.runCommand(name, ["--version"]);
+                if (result.success) {
+                    return name;
+                }
+            } catch (error) {
+                // Continue to next option
+            }
+        }
+
+        throw new Error(
+            "Python executable not found. Please ensure Python 3.7+ is installed and in PATH"
+        );
+    }
+
+    async findPythonPathV2() {
+        // First, check if virtual environment Python exists (Unix/Linux/macOS)
+        const venvPythonPath = path.join(
+            __dirname,
+            "..",
+            "python-experiment-tesseract",
+            ".venv",
+            "bin",
+            "python"
+        );
+        if (fs.existsSync(venvPythonPath)) {
+            return venvPythonPath;
+        }
+
+        // Check for Windows virtual environment Python
+        const venvPythonPathWindows = path.join(
+            __dirname,
+            "..",
+            "python-experiment-tesseract",
             ".venv",
             "Scripts",
             "python.exe"
@@ -424,9 +515,11 @@ class OCRService {
     async performOCRV2(imageBuffer) {
         console.log("🔍 Starting OCRV2 processing with Tesseract...");
 
-        if (!this.isInitialized) {
-            console.log("⚠️ OCR Service not initialized, initializing now...");
-            await this.initialize();
+        if (!this.isInitializedV2) {
+            console.log(
+                "⚠️ OCR Service V2 not initialized, initializing now..."
+            );
+            await this.initializeV2();
         }
 
         try {
@@ -446,54 +539,9 @@ class OCRService {
                 `📝 Input data prepared (${inputData.length} characters)`
             );
 
-            // Use tesseract script path instead of rapidocr
-            const tesseractScriptPath = path.join(
-                __dirname,
-                "..",
-                "python-experiment-tesseract",
-                "process.py"
-            );
-
-            // Find Python path for tesseract (similar to existing logic but for tesseract directory)
-            let pythonPath = this.pythonPath;
-
-            // Check if virtual environment Python exists for tesseract (Unix/Linux/macOS)
-            const tesseractVenvPythonPath = path.join(
-                __dirname,
-                "..",
-                "python-experiment-tesseract",
-                ".venv",
-                "bin",
-                "python"
-            );
-            if (fs.existsSync(tesseractVenvPythonPath)) {
-                pythonPath = tesseractVenvPythonPath;
-                console.log(
-                    "✅ Using Tesseract virtual environment Python:",
-                    pythonPath
-                );
-            } else {
-                // Check for Windows virtual environment Python for tesseract
-                const tesseractVenvPythonPathWindows = path.join(
-                    __dirname,
-                    "..",
-                    "python-experiment-tesseract",
-                    ".venv",
-                    "Scripts",
-                    "python.exe"
-                );
-                if (fs.existsSync(tesseractVenvPythonPathWindows)) {
-                    pythonPath = tesseractVenvPythonPathWindows;
-                    console.log(
-                        "✅ Using Windows Tesseract virtual environment Python:",
-                        pythonPath
-                    );
-                } else {
-                    console.log(
-                        "⚠️ No Tesseract virtual environment found, using system Python"
-                    );
-                }
-            }
+            // Use tesseract script path from V2 initialization
+            const tesseractScriptPath = this.scriptPathV2;
+            const pythonPath = this.pythonPathV2;
 
             // Run Tesseract OCR script
             console.log(
