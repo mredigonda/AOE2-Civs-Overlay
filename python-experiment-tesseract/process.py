@@ -6,6 +6,16 @@ import tesserocr
 import base64
 from io import BytesIO
 
+# Import tesseract locator for Windows
+try:
+    from tesseract_locator import setup_tesseract_environment
+
+    # Set up Tesseract environment on Windows
+    if os.name == "nt":  # Windows
+        setup_tesseract_environment()
+except ImportError:
+    pass  # tesseract_locator not available, continue normally
+
 # ---------- Tunables ----------
 IMG_PATH = sys.argv[1] if len(sys.argv) > 1 else "test-screenshot.png"
 OUT_DIR = Path("out")

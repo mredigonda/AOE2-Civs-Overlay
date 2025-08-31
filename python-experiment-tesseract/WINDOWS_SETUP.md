@@ -160,19 +160,25 @@ This means OpenCV failed to install.
 
 ## Testing the Installation
 
-1. **Test Tesseract directly:**
+1. **Test Tesseract locator:**
+
+    ```cmd
+    python tesseract_locator.py
+    ```
+
+2. **Test Tesseract directly:**
 
     ```cmd
     tesseract --version
     ```
 
-2. **Test Python wrapper:**
+3. **Test Python wrapper:**
 
     ```cmd
     python -c "import tesserocr; print('Success!')"
     ```
 
-3. **Test the OCR script:**
+4. **Test the OCR script:**
     ```cmd
     python process.py test-screenshot.png
     ```

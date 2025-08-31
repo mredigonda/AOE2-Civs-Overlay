@@ -55,10 +55,11 @@ if %errorlevel% neq 0 (
 
 echo.
 echo Step 6: Testing Tesseract installation...
-python -c "import tesserocr; print('Tesseract version:', tesserocr.get_tesseract_version())"
+echo First, trying to locate Tesseract...
+python tesseract_locator.py
 if %errorlevel% neq 0 (
     echo.
-    echo ERROR: Tesseract library not found!
+    echo ERROR: Tesseract not found!
     echo.
     echo Please install Tesseract OCR:
     echo 1. Download from: https://github.com/UB-Mannheim/tesseract/wiki
@@ -66,6 +67,25 @@ if %errorlevel% neq 0 (
     echo 3. Add to PATH environment variable
     echo.
     echo Or use Chocolatey: choco install tesseract
+    echo.
+    pause
+    exit /b 1
+)
+
+echo.
+echo Step 7: Testing tesserocr Python wrapper...
+python -c "import tesserocr; print('Tesseract version:', tesserocr.get_tesseract_version())"
+if %errorlevel% neq 0 (
+    echo.
+    echo ERROR: tesserocr Python wrapper failed!
+    echo.
+    echo This might be due to:
+    echo 1. Missing Visual C++ Redistributable
+    echo 2. Architecture mismatch (32-bit vs 64-bit)
+    echo 3. Missing dependencies
+    echo.
+    echo Try installing Visual C++ Redistributable from:
+    echo https://aka.ms/vs/17/release/vc_redist.x64.exe
     echo.
     pause
     exit /b 1
