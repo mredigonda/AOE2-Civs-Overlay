@@ -305,26 +305,18 @@ class OCRService {
                         "site-packages"
                     );
 
-                    // Always set PYTHONPATH explicitly for Windows
+                    // Set VIRTUAL_ENV to help Python find the virtual environment
+                    env.VIRTUAL_ENV = venvPath;
+
+                    // Set PYTHONPATH to include site-packages
                     env.PYTHONPATH = sitePackagesPath;
 
-                    // Also add the Scripts directory to PATH for Windows
-                    const scriptsPath = path.join(venvPath, "Scripts");
-                    if (env.PATH) {
-                        env.PATH = `${scriptsPath};${env.PATH}`;
-                    } else {
-                        env.PATH = scriptsPath;
-                    }
-
+                    console.log(
+                        `🔧 Windows: Set VIRTUAL_ENV to: ${env.VIRTUAL_ENV}`
+                    );
                     console.log(
                         `🔧 Windows: Set PYTHONPATH to: ${env.PYTHONPATH}`
                     );
-                    console.log(
-                        `🔧 Windows: Added Scripts to PATH: ${scriptsPath}`
-                    );
-
-                    // Set VIRTUAL_ENV to help Python find the virtual environment
-                    env.VIRTUAL_ENV = venvPath;
                 }
             } else {
                 // Get the path to the virtual environment's Python executable (Unix/Linux/macOS)
