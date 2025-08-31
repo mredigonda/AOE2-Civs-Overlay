@@ -151,6 +151,9 @@ class OCRService {
             "python"
         );
         if (fs.existsSync(venvPythonPath)) {
+            console.log(
+                `✅ Found Unix virtual environment Python: ${venvPythonPath}`
+            );
             return venvPythonPath;
         }
 
@@ -164,19 +167,60 @@ class OCRService {
             "python.exe"
         );
         if (fs.existsSync(venvPythonPathWindows)) {
+            console.log(
+                `✅ Found Windows virtual environment Python: ${venvPythonPathWindows}`
+            );
             return venvPythonPathWindows;
         }
 
-        // Fallback to system Python
+        console.log(
+            "⚠️ Virtual environment Python not found, checking system Python..."
+        );
+
+        // Fallback to system Python - use spawn directly to avoid circular dependency
         const pythonNames = ["python3", "python", "py"];
+        const { spawn } = require("child_process");
 
         for (const name of pythonNames) {
             try {
-                const result = await this.runCommand(name, ["--version"]);
+                const result = await new Promise((resolve, reject) => {
+                    const child = spawn(name, ["--version"], {
+                        stdio: ["pipe", "pipe", "pipe"],
+                    });
+
+                    let stdout = "";
+                    let stderr = "";
+
+                    child.stdout.on(
+                        "data",
+                        (data) => (stdout += data.toString())
+                    );
+                    child.stderr.on(
+                        "data",
+                        (data) => (stderr += data.toString())
+                    );
+
+                    child.on("close", (code) => {
+                        if (code === 0) {
+                            resolve({ success: true, stdout, stderr });
+                        } else {
+                            reject(
+                                new Error(`Process exited with code ${code}`)
+                            );
+                        }
+                    });
+
+                    child.on("error", (error) => {
+                        reject(error);
+                    });
+                });
+
                 if (result.success) {
+                    console.log(`✅ Found system Python: ${name}`);
                     return name;
                 }
             } catch (error) {
+                console.log(`⚠️ Python ${name} not found: ${error.message}`);
                 // Continue to next option
             }
         }
@@ -343,6 +387,8 @@ class OCRService {
                         ", "
                     )}`
                 );
+                console.log(`🔧 Windows: VIRTUAL_ENV: ${env.VIRTUAL_ENV}`);
+                console.log(`🔧 Windows: PYTHONPATH: ${env.PYTHONPATH}`);
             }
 
             const childProcess = spawn(pythonExecutable, args, {
