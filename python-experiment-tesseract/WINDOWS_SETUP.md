@@ -2,6 +2,8 @@
 
 This guide will help you set up the Tesseract OCR environment on Windows.
 
+> **Note for Git Bash users**: This guide works with both Command Prompt and Git Bash. If you're using Git Bash, use the `.sh` scripts instead of `.bat` files for a more native experience.
+
 ## Prerequisites
 
 1. **Python 3.7+** - Download from https://python.org
@@ -39,10 +41,17 @@ winget install UB-Mannheim.TesseractOCR
 
 ### Quick Setup (Recommended)
 
-Run the provided setup script:
+**For Command Prompt users:**
 
 ```cmd
 setup-windows.bat
+```
+
+**For Git Bash users:**
+
+```bash
+chmod +x setup-windows.sh
+./setup-windows.sh
 ```
 
 ### Manual Setup
