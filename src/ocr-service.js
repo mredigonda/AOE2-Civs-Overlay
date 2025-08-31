@@ -95,7 +95,7 @@ class OCRService {
         );
     }
 
-    async runCommand(command, args, inputData = null) {
+    async runCommand(command, args, inputData = null, customPythonPath = null) {
         return new Promise((resolve, reject) => {
             console.log(
                 `🔧 runCommand called with: ${command} ${args.join(" ")}`
@@ -106,39 +106,45 @@ class OCRService {
                 );
             }
 
-            // Get the path to the virtual environment's Python executable (Unix/Linux/macOS)
-            const venvPythonPath = path.join(
-                __dirname,
-                "..",
-                "python-experiment-rapidocr",
-                ".venv",
-                "bin",
-                "python"
-            );
-            // Get the path to the virtual environment's Python executable (Windows)
-            const venvPythonPathWindows = path.join(
-                __dirname,
-                "..",
-                "python-experiment-rapidocr",
-                ".venv",
-                "Scripts",
-                "python.exe"
-            );
-
-            // Use the virtual environment Python if it exists, otherwise fall back to system Python
+            // If a custom Python path is provided, use it directly
             let pythonExecutable = command;
-            if (fs.existsSync(venvPythonPath)) {
-                pythonExecutable = venvPythonPath;
-                console.log(
-                    `✅ Using virtual environment Python: ${pythonExecutable}`
-                );
-            } else if (fs.existsSync(venvPythonPathWindows)) {
-                pythonExecutable = venvPythonPathWindows;
-                console.log(
-                    `✅ Using Windows virtual environment Python: ${pythonExecutable}`
-                );
+            if (customPythonPath) {
+                console.log(`✅ Using custom Python path: ${customPythonPath}`);
+                pythonExecutable = customPythonPath;
             } else {
-                console.log(`⚠️ Using system Python: ${pythonExecutable}`);
+                // Get the path to the virtual environment's Python executable (Unix/Linux/macOS)
+                const venvPythonPath = path.join(
+                    __dirname,
+                    "..",
+                    "python-experiment-rapidocr",
+                    ".venv",
+                    "bin",
+                    "python"
+                );
+                // Get the path to the virtual environment's Python executable (Windows)
+                const venvPythonPathWindows = path.join(
+                    __dirname,
+                    "..",
+                    "python-experiment-rapidocr",
+                    ".venv",
+                    "Scripts",
+                    "python.exe"
+                );
+
+                // Use the virtual environment Python if it exists, otherwise fall back to system Python
+                if (fs.existsSync(venvPythonPath)) {
+                    pythonExecutable = venvPythonPath;
+                    console.log(
+                        `✅ Using virtual environment Python: ${pythonExecutable}`
+                    );
+                } else if (fs.existsSync(venvPythonPathWindows)) {
+                    pythonExecutable = venvPythonPathWindows;
+                    console.log(
+                        `✅ Using Windows virtual environment Python: ${pythonExecutable}`
+                    );
+                } else {
+                    console.log(`⚠️ Using system Python: ${pythonExecutable}`);
+                }
             }
 
             console.log(
@@ -147,29 +153,17 @@ class OCRService {
 
             // Set up environment to ensure Python finds the virtual environment packages
             const env = { ...process.env };
-            if (
-                fs.existsSync(venvPythonPath) ||
-                fs.existsSync(venvPythonPathWindows)
-            ) {
-                const venvPath = fs.existsSync(venvPythonPath)
-                    ? path.join(
-                          __dirname,
-                          "..",
-                          "python-experiment-rapidocr",
-                          ".venv"
-                      )
-                    : path.join(
-                          __dirname,
-                          "..",
-                          "python-experiment-rapidocr",
-                          ".venv"
-                      );
 
-                // Set VIRTUAL_ENV environment variable (critical for both platforms)
+            if (customPythonPath) {
+                // For custom Python path, extract the venv path from the Python executable path
+                const venvPath = customPythonPath
+                    .replace(/\/bin\/python$/, "")
+                    .replace(/\\Scripts\\python\.exe$/, "");
                 env.VIRTUAL_ENV = path.resolve(venvPath);
+                console.log(`🔧 Set VIRTUAL_ENV to: ${env.VIRTUAL_ENV}`);
 
                 // For Windows, we need to explicitly set PYTHONPATH to include site-packages
-                if (fs.existsSync(venvPythonPathWindows)) {
+                if (process.platform === "win32") {
                     const sitePackagesPath = path.join(
                         venvPath,
                         "Lib",
@@ -184,8 +178,66 @@ class OCRService {
                         `🔧 Windows: Set PYTHONPATH to: ${env.PYTHONPATH}`
                     );
                 }
+            } else {
+                // Get the path to the virtual environment's Python executable (Unix/Linux/macOS)
+                const venvPythonPath = path.join(
+                    __dirname,
+                    "..",
+                    "python-experiment-rapidocr",
+                    ".venv",
+                    "bin",
+                    "python"
+                );
+                // Get the path to the virtual environment's Python executable (Windows)
+                const venvPythonPathWindows = path.join(
+                    __dirname,
+                    "..",
+                    "python-experiment-rapidocr",
+                    ".venv",
+                    "Scripts",
+                    "python.exe"
+                );
 
-                console.log(`🔧 Set VIRTUAL_ENV to: ${env.VIRTUAL_ENV}`);
+                if (
+                    fs.existsSync(venvPythonPath) ||
+                    fs.existsSync(venvPythonPathWindows)
+                ) {
+                    const venvPath = fs.existsSync(venvPythonPath)
+                        ? path.join(
+                              __dirname,
+                              "..",
+                              "python-experiment-rapidocr",
+                              ".venv"
+                          )
+                        : path.join(
+                              __dirname,
+                              "..",
+                              "python-experiment-rapidocr",
+                              ".venv"
+                          );
+
+                    // Set VIRTUAL_ENV environment variable (critical for both platforms)
+                    env.VIRTUAL_ENV = path.resolve(venvPath);
+
+                    // For Windows, we need to explicitly set PYTHONPATH to include site-packages
+                    if (fs.existsSync(venvPythonPathWindows)) {
+                        const sitePackagesPath = path.join(
+                            venvPath,
+                            "Lib",
+                            "site-packages"
+                        );
+                        if (env.PYTHONPATH) {
+                            env.PYTHONPATH = `${sitePackagesPath}${path.delimiter}${env.PYTHONPATH}`;
+                        } else {
+                            env.PYTHONPATH = sitePackagesPath;
+                        }
+                        console.log(
+                            `🔧 Windows: Set PYTHONPATH to: ${env.PYTHONPATH}`
+                        );
+                    }
+
+                    console.log(`🔧 Set VIRTUAL_ENV to: ${env.VIRTUAL_ENV}`);
+                }
             }
 
             // Add Windows-specific debugging
@@ -370,9 +422,143 @@ class OCRService {
     }
 
     async performOCRV2(imageBuffer) {
-        console.log("🔍 Starting OCRV2 processing...");
+        console.log("🔍 Starting OCRV2 processing with Tesseract...");
 
-        console.log("Not implemented yet");
+        if (!this.isInitialized) {
+            console.log("⚠️ OCR Service not initialized, initializing now...");
+            await this.initialize();
+        }
+
+        try {
+            console.log("📊 Converting image buffer to base64...");
+            // Convert buffer to base64
+            const base64Image = imageBuffer.toString("base64");
+            console.log(
+                `📊 Image converted to base64 (${base64Image.length} characters)`
+            );
+
+            // Prepare input data for tesseract script
+            console.log("📝 Preparing input data for Tesseract script...");
+            const inputData = JSON.stringify({
+                image: base64Image,
+            });
+            console.log(
+                `📝 Input data prepared (${inputData.length} characters)`
+            );
+
+            // Use tesseract script path instead of rapidocr
+            const tesseractScriptPath = path.join(
+                __dirname,
+                "..",
+                "python-experiment-tesseract",
+                "process.py"
+            );
+
+            // Find Python path for tesseract (similar to existing logic but for tesseract directory)
+            let pythonPath = this.pythonPath;
+
+            // Check if virtual environment Python exists for tesseract (Unix/Linux/macOS)
+            const tesseractVenvPythonPath = path.join(
+                __dirname,
+                "..",
+                "python-experiment-tesseract",
+                ".venv",
+                "bin",
+                "python"
+            );
+            if (fs.existsSync(tesseractVenvPythonPath)) {
+                pythonPath = tesseractVenvPythonPath;
+                console.log(
+                    "✅ Using Tesseract virtual environment Python:",
+                    pythonPath
+                );
+            } else {
+                // Check for Windows virtual environment Python for tesseract
+                const tesseractVenvPythonPathWindows = path.join(
+                    __dirname,
+                    "..",
+                    "python-experiment-tesseract",
+                    ".venv",
+                    "Scripts",
+                    "python.exe"
+                );
+                if (fs.existsSync(tesseractVenvPythonPathWindows)) {
+                    pythonPath = tesseractVenvPythonPathWindows;
+                    console.log(
+                        "✅ Using Windows Tesseract virtual environment Python:",
+                        pythonPath
+                    );
+                } else {
+                    console.log(
+                        "⚠️ No Tesseract virtual environment found, using system Python"
+                    );
+                }
+            }
+
+            // Run Tesseract OCR script
+            console.log(
+                `🐍 Spawning Tesseract process: ${pythonPath} ${tesseractScriptPath}`
+            );
+            console.log("⏳ Waiting for Tesseract OCR process to complete...");
+
+            const startTime = Date.now();
+            const result = await this.runCommand(
+                pythonPath,
+                [tesseractScriptPath],
+                inputData,
+                pythonPath
+            );
+            const endTime = Date.now();
+
+            console.log(
+                `✅ Tesseract OCR script completed in ${endTime - startTime}ms`
+            );
+            console.log(
+                `📄 Tesseract stdout length: ${result.stdout.length} characters`
+            );
+            console.log(
+                `⚠️ Tesseract stderr length: ${result.stderr.length} characters`
+            );
+
+            if (result.stderr) {
+                console.log("⚠️ Tesseract stderr output:", result.stderr);
+            }
+
+            // Parse the result
+            console.log("🔍 Parsing Tesseract OCR result...");
+            const ocrResult = JSON.parse(result.stdout);
+            console.log("✅ Tesseract OCR result parsed successfully");
+
+            if (!ocrResult.success) {
+                console.error(
+                    "❌ Tesseract OCR script returned error:",
+                    ocrResult.error
+                );
+                throw new Error(
+                    ocrResult.error || "Tesseract OCR processing failed"
+                );
+            }
+
+            console.log(`✅ Tesseract OCR completed successfully!`);
+            console.log(
+                `📝 Detected text length: ${ocrResult.text.length} characters`
+            );
+            console.log(`📊 Average confidence: ${ocrResult.confidence}`);
+            console.log(
+                `🔢 Number of detections: ${
+                    ocrResult.detections ? ocrResult.detections.length : 0
+                }`
+            );
+
+            return {
+                text: ocrResult.text,
+                confidence: ocrResult.confidence,
+                detections: ocrResult.detections || [],
+            };
+        } catch (error) {
+            console.error("❌ Tesseract OCR processing failed:", error);
+            throw error;
+        }
     }
 }
 

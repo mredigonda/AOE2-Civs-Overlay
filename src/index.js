@@ -213,7 +213,7 @@ ipcMain.handle("save-screenshot", async (event, imageData) => {
 let ocrService = null;
 let imageAnalyzer = null;
 
-// Enhanced OCR function using RapidOCR
+// Enhanced OCR function using Tesseract (OCR V2)
 async function ocrScreenshot(imageBuffer) {
     try {
         // Initialize OCR service if not already done
@@ -222,17 +222,17 @@ async function ocrScreenshot(imageBuffer) {
             await ocrService.initialize();
         }
 
-        // Perform OCR using RapidOCR
-        const result = await ocrService.performOCR(imageBuffer);
+        // Perform OCR using Tesseract (OCR V2)
+        const result = await ocrService.performOCRV2(imageBuffer);
 
         return {
             text: result.text,
             confidence: result.confidence,
             detections: result.detections || [],
-            preprocessedImage: null, // RapidOCR handles preprocessing internally
+            preprocessedImage: null, // Tesseract handles preprocessing internally
         };
     } catch (error) {
-        console.error("RapidOCR failed:", error);
+        console.error("Tesseract OCR failed:", error);
         throw error;
     }
 }
