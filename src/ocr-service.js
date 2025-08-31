@@ -304,13 +304,23 @@ class OCRService {
                         "Lib",
                         "site-packages"
                     );
-                    if (env.PYTHONPATH) {
-                        env.PYTHONPATH = `${sitePackagesPath}${path.delimiter}${env.PYTHONPATH}`;
+
+                    // Always set PYTHONPATH explicitly for Windows
+                    env.PYTHONPATH = sitePackagesPath;
+
+                    // Also add the Scripts directory to PATH for Windows
+                    const scriptsPath = path.join(venvPath, "Scripts");
+                    if (env.PATH) {
+                        env.PATH = `${scriptsPath};${env.PATH}`;
                     } else {
-                        env.PYTHONPATH = sitePackagesPath;
+                        env.PATH = scriptsPath;
                     }
+
                     console.log(
                         `🔧 Windows: Set PYTHONPATH to: ${env.PYTHONPATH}`
+                    );
+                    console.log(
+                        `🔧 Windows: Added Scripts to PATH: ${scriptsPath}`
                     );
                 }
             } else {
