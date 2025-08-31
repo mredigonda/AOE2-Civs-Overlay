@@ -99,8 +99,9 @@ ipcMain.handle("capture-screen", async (event) => {
             targetSource = sources[0];
         }
 
-        const HEIGHT_TO_CROP = 400;
-        // Get the full screen image and crop it to top 400px using nativeImage
+        const CROP_WIDTH = 1750;
+        const CROP_HEIGHT = 276;
+        // Get the full screen image and crop it to the specified dimensions using nativeImage
         const { nativeImage } = require("electron");
         const fullImage = nativeImage.createFromDataURL(
             targetSource.thumbnail.toDataURL()
@@ -109,12 +110,13 @@ ipcMain.handle("capture-screen", async (event) => {
         // Get the original size
         const originalSize = fullImage.getSize();
 
-        // Crop to top 400px (or full height if less than 400px)
-        const cropHeight = Math.min(HEIGHT_TO_CROP, originalSize.height);
+        // Crop to the specified dimensions (or full size if smaller)
+        const cropWidth = Math.min(CROP_WIDTH, originalSize.width);
+        const cropHeight = Math.min(CROP_HEIGHT, originalSize.height);
         const croppedImage = fullImage.crop({
             x: 0,
             y: 0,
-            width: originalSize.width,
+            width: cropWidth,
             height: cropHeight,
         });
 
@@ -122,7 +124,7 @@ ipcMain.handle("capture-screen", async (event) => {
         const croppedImageData = croppedImage.toDataURL();
 
         console.log(
-            `Cropped screenshot to top ${cropHeight}px and resized 4x: ${croppedImageData.length} characters`
+            `Cropped screenshot to ${cropWidth}x${cropHeight}px: ${croppedImageData.length} characters`
         );
 
         return { success: true, imageData: croppedImageData };

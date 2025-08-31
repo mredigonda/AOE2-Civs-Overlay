@@ -12,7 +12,10 @@ OUT_DIR = Path("out")
 OUT_DIR.mkdir(exist_ok=True)
 
 
-CROP_TOP_FRAC = 0.30
+# HUD cropping parameters - crop to the top area where resources are displayed
+CROP_TOP_FRAC = 0.15  # Reduced from 0.30 to focus on the resource area
+CROP_WIDTH = 1750  # Target width for HUD area
+CROP_HEIGHT = 276  # Target height for HUD area
 INVERT = True
 KERNEL = (1, 3)  # unused (closing off)
 CLOSE_ITERS = 1  # unused (closing off)
@@ -182,9 +185,16 @@ def ocr_rois_with_tesseract(binary_img, boxes, api):
 def process_once(bgr, api, save_debug=False):
     t0 = time.perf_counter()
 
-    # 1) HUD crop
-    hud_h = max(1, int(CROP_TOP_FRAC * bgr.shape[0]))
-    hud = bgr[:hud_h, :]
+    # 1) HUD crop - crop to the specified dimensions for resource detection
+    H, W = bgr.shape[:2]
+
+    # Calculate crop dimensions based on target size and image size
+    crop_width = min(CROP_WIDTH, W)
+    crop_height = min(CROP_HEIGHT, H)
+
+    # Crop from top-left corner
+    hud = bgr[:crop_height, :crop_width]
+    hud_h = crop_height
 
     # 2) Gray (+ optional invert)
     gray = cv2.cvtColor(hud, cv2.COLOR_BGR2GRAY)
