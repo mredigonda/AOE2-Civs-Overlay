@@ -368,6 +368,12 @@ class OCRService {
             throw error;
         }
     }
+
+    async performOCRV2(imageBuffer) {
+        console.log("🔍 Starting OCRV2 processing...");
+
+        console.log("Not implemented yet");
+    }
 }
 
 module.exports = OCRService;
