@@ -38,8 +38,7 @@
     "author": "Maximiliano Redigonda",
     "license": "ISC",
     "devDependencies": {
-        "electron": "^37.3.0",
+        "electron": "^44.9.3",
         "electron-builder": "^26.0.12"
-    },
-    "dependencies": {}
+    }
 }
