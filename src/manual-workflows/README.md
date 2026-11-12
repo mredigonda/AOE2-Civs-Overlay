@@ -11,12 +11,12 @@ To refresh the data after a patch or a new DLC:
 ```bash
 node src/manual-workflows/fetch-civs-from-fandom.js
 node src/manual-workflows/parse-civs-from-pasted.js
-git diff src/civ-info.json
+git diff ui/civ-info.json
 ```
 
 `fetch-civs-from-fandom.js` downloads the page and writes it as plain text to
 `copy-paste-from-fandom.txt` (what a manual copy-paste of the page gives, cleaned up).
-`parse-civs-from-pasted.js` turns that text into `src/civ-info.json`. If a new civilization
+`parse-civs-from-pasted.js` turns that text into `ui/civ-info.json`. If a new civilization
 shows up, the parser stops and asks for its code in `civCodes`. Read the `git diff` before
 committing: it is the list of what changed in the game.
 

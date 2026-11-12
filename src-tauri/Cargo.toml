@@ -1,0 +1,23 @@
+[package]
+name = "aoe2-civs-overlay"
+version = "2.0.0"
+description = "Always-on-top Age of Empires II civilization overlay"
+authors = ["Maximiliano Redigonda"]
+edition = "2021"
+
+[lib]
+name = "aoe2_civs_overlay_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["macos-private-api"] }
+tauri-plugin-global-shortcut = "2"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

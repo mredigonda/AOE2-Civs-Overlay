@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AoE2 Civs Overlay</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div id="root">
+            <header class="bar">
+                <div class="drag" data-tauri-drag-region title="Drag to move">⋮⋮</div>
+                <div class="pick" id="pick-you"></div>
+                <span class="vs" id="vs">vs</span>
+                <div class="pick" id="pick-rival"></div>
+                <button class="icon-btn" id="settings-btn" title="Settings">⚙</button>
+            </header>
+
+            <section class="settings" id="settings" hidden>
+                <label><input type="checkbox" data-setting="showRival" /> Show rival column</label>
+                <div class="settings-title">Sections</div>
+                <div id="section-toggles"></div>
+            </section>
+
+            <main class="columns" id="columns"></main>
+        </div>
+
+        <script src="./civ-search.js"></script>
+        <script src="./app.js"></script>
+    </body>
+</html>

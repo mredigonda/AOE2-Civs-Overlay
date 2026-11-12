@@ -1,0 +1,212 @@
+:root {
+    --gold: #ffd700;
+    --text: #f2efe6;
+    --muted: #b9b2a0;
+    --panel: rgba(12, 10, 6, 0.86);
+    --line: rgba(255, 215, 0, 0.25);
+    --card-width: 400px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    background: transparent;
+    color: var(--text);
+    font: 13px/1.4 -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+/* Only the viewport scrolls (when the window is capped to the screen height);
+   a scrolling body would clip the civ dropdown. */
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#root {
+    width: calc(var(--card-width) + 12px);
+    padding: 6px;
+}
+
+#root.two {
+    width: calc(var(--card-width) * 2 + 18px);
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.drag {
+    cursor: move;
+    color: var(--gold);
+    font-weight: bold;
+    padding: 0 4px;
+    user-select: none;
+}
+
+.vs {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.pick {
+    position: relative;
+    flex: 1;
+}
+
+.pick-input {
+    width: 100%;
+    padding: 5px 8px;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font: inherit;
+    outline: none;
+}
+
+.pick-input:focus {
+    border-color: var(--gold);
+}
+
+.pick-list {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 2px);
+    left: 0;
+    right: 0;
+    max-height: 260px;
+    overflow-y: auto;
+    background: rgba(12, 10, 6, 0.97);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+}
+
+.pick-item,
+.pick-empty {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.pick-empty {
+    color: var(--muted);
+    cursor: default;
+}
+
+.pick-item.selected,
+.pick-item:hover {
+    background: rgba(255, 215, 0, 0.18);
+}
+
+.pick-item .code {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.settings {
+    margin-top: 6px;
+    padding: 8px 10px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.settings[hidden] {
+    display: none;
+}
+
+#section-toggles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 14px;
+}
+
+.settings label {
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.settings-title {
+    color: var(--gold);
+    margin-top: 6px;
+}
+
+.columns {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+    align-items: flex-start;
+}
+
+.card {
+    width: var(--card-width);
+    padding: 10px 12px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.card h2 {
+    margin: 0;
+    color: var(--gold);
+    font-size: 18px;
+}
+
+.card .focus {
+    margin: 2px 0 0;
+    color: var(--muted);
+}
+
+.card .empty {
+    margin: 0;
+    color: var(--muted);
+}
+
+.block h3 {
+    margin: 10px 0 2px;
+    color: var(--gold);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.block ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.block p {
+    margin: 0;
+}
+
+.block .note {
+    color: var(--muted);
+    font-style: italic;
+}
+
+.block strong {
+    color: #fff;
+}

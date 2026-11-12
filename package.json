@@ -1,44 +1,17 @@
 {
     "name": "aoe2-civs-overlay",
-    "version": "1.0.0",
-    "description": "",
-    "main": "src/index.js",
+    "version": "2.0.0",
+    "private": true,
+    "description": "Always-on-top Age of Empires II civilization overlay (Tauri)",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "electron .",
-        "start-test": "electron src/utils/test-windows.js",
-        "dist": "npm run build-python && electron-builder",
-        "dist-windows": "npm run build-python-win && sleep 5 && electron-builder --win portable --x64",
-        "dist-windows-debug": "npm run build-python-win && electron-builder --win portable --x64 --debug",
-        "setup-python": "cd python-experiment-rapidocr && python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt",
-        "setup-python-win": "cd python-experiment-rapidocr && python -m venv .venv && .venv\\Scripts\\activate && pip install -r requirements.txt",
-        "build-python": "cd python-experiment-rapidocr && source .venv/bin/activate && pip install pyinstaller && pyinstaller --onefile --windowed ocr_service.py --distpath ../resources/python-ocr",
-        "build-python-win": "cd python-experiment-rapidocr && .venv\\Scripts\\activate && pip install pyinstaller && pyinstaller --onefile --windowed ocr_service.py --distpath ..\\resources\\python-ocr"
-    },
-    "build": {
-        "appId": "com.maxredigonda.aoe2-civs-overlay",
-        "productName": "AOE2 Civs Overlay",
-        "win": {
-            "target": "portable",
-            "icon": "icon.ico"
-        },
-        "files": [
-            "**/*",
-            "!node_modules/**/*",
-            "!dist/**/*",
-            "!.git/**/*",
-            "!python-experiment-*/.venv/**/*",
-            "!python-experiment-*/venv/**/*",
-            "resources/python-ocr/**/*"
-        ],
-        "directories": {
-            "output": "dist"
-        }
+        "dev": "tauri dev",
+        "build": "tauri build",
+        "tauri": "tauri",
+        "civs:refresh": "node src/manual-workflows/fetch-civs-from-fandom.js && node src/manual-workflows/parse-civs-from-pasted.js"
     },
     "author": "Maximiliano Redigonda",
     "license": "ISC",
     "devDependencies": {
-        "electron": "^44.9.3",
-        "electron-builder": "^26.0.12"
+        "@tauri-apps/cli": "^2.12.4"
     }
 }

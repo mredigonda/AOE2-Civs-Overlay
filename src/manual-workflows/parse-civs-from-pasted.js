@@ -383,7 +383,7 @@ function nextNonEmptyLine(lines, i) {
 
 const path = require("path");
 const inputPath = path.join(__dirname, "copy-paste-from-fandom.txt");
-const outputPath = path.join(__dirname, "..", "civ-info.json");
+const outputPath = path.join(__dirname, "..", "..", "ui", "civ-info.json");
 
 const civilizations = parseCivilizations(fs.readFileSync(inputPath, "utf8"));
 fs.writeFileSync(outputPath, JSON.stringify(civilizations, null, 2) + "\n");

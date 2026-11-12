@@ -186,3 +186,6 @@ Thumbs.db
 human-wishlist.md
 ocr_visualization_*
 test-screenshot.png
+# Tauri
+src-tauri/target
+src-tauri/gen/schemas
