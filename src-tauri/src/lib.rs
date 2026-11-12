@@ -53,10 +53,23 @@ fn fit_window(window: WebviewWindow, width: f64, height: f64) {
     }
 }
 
+/// At startup (before you're in a game), installs a newer release if there is
+/// one and restarts. Releases are signed with the key in tauri.conf.json, so
+/// only builds from this project are accepted.
+async fn update(app: AppHandle) -> tauri_plugin_updater::Result<()> {
+    use tauri_plugin_updater::UpdaterExt;
+    if let Some(update) = app.updater()?.check().await? {
+        update.download_and_install(|_, _| {}, || {}).await?;
+        app.restart();
+    }
+    Ok(())
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     let shortcut = toggle_shortcut();
     tauri::Builder::default()
+        .plugin(tauri_plugin_updater::Builder::new().build())
         .plugin(
             tauri_plugin_global_shortcut::Builder::new()
                 .with_handler(move |app, pressed, event| {
@@ -72,6 +85,13 @@ pub fn run() {
             #[cfg(target_os = "macos")]
             app.set_activation_policy(tauri::ActivationPolicy::Accessory);
             app.global_shortcut().register(shortcut)?;
+            if !cfg!(debug_assertions) {
+                let handle = app.handle().clone();
+                tauri::async_runtime::spawn(async move {
+                    // No network or no release yet: just keep the current version.
+                    let _ = update(handle).await;
+                });
+            }
             Ok(())
         })
         .invoke_handler(tauri::generate_handler![hide_overlay, fit_window])

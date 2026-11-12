@@ -39,6 +39,27 @@
             "icons/128x128@2x.png",
             "icons/icon.icns",
             "icons/icon.ico"
-        ]
+        ],
+        "createUpdaterArtifacts": true,
+        "shortDescription": "Age of Empires II civ overlay",
+        "longDescription": "Always-on-top overlay with your civ's and your rival's bonuses, unique units and tech tree gaps for Age of Empires II: Definitive Edition.",
+        "category": "Utility",
+        "homepage": "https://mredigonda.github.io/AOE2-Civs-Overlay/",
+        "macOS": {
+            "signingIdentity": "-"
+        },
+        "windows": {
+            "nsis": {
+                "installMode": "currentUser"
+            }
+        }
+    },
+    "plugins": {
+        "updater": {
+            "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEE0NDgyQTEyODBCQjJDMTAKUldRUUxMdUFFaXBJcE5Pd3djZHo5SzkyeXp0RllHVGlVeGJqNVhtUllZZ0kvaWxnYWRGbEcvMVcK",
+            "endpoints": [
+                "https://github.com/mredigonda/AOE2-Civs-Overlay/releases/latest/download/latest.json"
+            ]
+        }
     }
 }
