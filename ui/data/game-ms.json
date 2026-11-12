@@ -1,0 +1,1766 @@
+{
+  "source": "SiegeEngineers/aoe2techtree@e56728e",
+  "labels": {
+    "uniqueUnits": "Unit Unik",
+    "uniqueTechnologies": "Teknologi Unik",
+    "teamBonus": "Bonus Pasukan"
+  },
+  "civs": [
+    {
+      "code": "ARM",
+      "name": "Orang Armenia",
+      "nameEn": "Armenians",
+      "focus": "Tamadun Infantri dan Tentera Laut",
+      "civilizationBonuses": [
+        "Pedati Keldai berkos -25%",
+        "Kesan teknologi Pedati Keldai +40%",
+        "Naik taraf barisan Askar Lembing dan Militia (kecuali Askar Bersenjata) tersedia satu zaman lebih awal",
+        "Gereja Berkubu yang pertama menerima Relik percuma",
+        "Barisan Ghali dan Dromon menembak projektil tambahan"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pemanah Komposit",
+          "description": "Pemanah Berjalan Kaki unik Armenia yang mengabaikan baju zirah. Kuat lwn Infantri dan Pasukan Berkuda. Lemah lwn Unit Memanah dan Senjata Pengepungan."
+        },
+        {
+          "name": "Paderi Pahlawan",
+          "description": "Infantri Biara unik Armenia yang boleh menyembuhkan unit mesra. Boleh mengumpul Relik dan membawanya ke Biara. Kuat lwn Infantri. Lemah lwn Unit Barisan Pasukan Berkuda Pengintip dan Unit Memanah."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Armada Cilicia",
+          "description": "Kapal Perobohan +20% radius letupan; Barisan Ghali dan Dromon +1 jarak"
+        },
+        {
+          "name": "Fereter",
+          "description": "Infantri (kecuali barisan Askar Lembing) +30 HP, Paderi Tempur sembuh +100% lebih cepat"
+        }
+      ],
+      "teamBonus": "Infantri +2 garis penglihatan"
+    },
+    {
+      "code": "AZT",
+      "name": "Orang Aztec",
+      "nameEn": "Aztecs",
+      "focus": "Tamadun Infantri dan Rahib",
+      "civilizationBonuses": [
+        "Bermula dengan +50 emas",
+        "Orang Kampung membawa +3",
+        "Unit Tentera berlatih +15% lebih pantas",
+        "Rahib memperoleh +5 HP untuk setiap teknologi Biara yang diselidik"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pahlawan Jaguar",
+          "description": "Infantri unik Orang Aztec yang mendapat kerosakan tambahan apabila mengalahkan unit tentera. Sangat kuat lwn Infantri. Lemah lwn Pasukan Berkuda dan Unit Memanah."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Pelontar Lembing",
+          "description": "Askar Peninjau +1 serangan, +1 jarak"
+        },
+        {
+          "name": "Perang Bunga",
+          "description": "Infantri +4 serangan"
+        }
+      ],
+      "teamBonus": "Relik menjana +33% emas"
+    },
+    {
+      "code": "BENG",
+      "name": "Orang Bengali",
+      "nameEn": "Bengalis",
+      "focus": "Tamadun Gajah dan Tentera Laut",
+      "civilizationBonuses": [
+        "Pusat Bandar menjelmakan 2 Orang Kampung apabila Zaman seterusnya dicapai",
+        "Pasukan Berkuda +2 serangan lwn Askar Peninjau",
+        "Unit Gajah menerima -25% kerosakan bonus dan lebih tahan terhadap penukaran haluan",
+        "Rahib +3 melee/+3 perisai tembusan",
+        "Kapal menjana semula 15 HP setiap minit"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ratha",
+          "description": "Pemanah Berkuda"
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Paik",
+          "description": "Unit Ratha dan Gajah menyerang +20% lebih cepat"
+        },
+        {
+          "name": "Mahayana",
+          "description": "Orang Kampung dan Rahib mengambil -10% ruang populasi"
+        }
+      ],
+      "teamBonus": "Unit Perdagangan menjana +10% makanan sebagai tambahan kepada emas"
+    },
+    {
+      "code": "BER",
+      "name": "Orang Berber",
+      "nameEn": "Berbers",
+      "focus": "Tamadun Berkuda dan Tentera Laut",
+      "civilizationBonuses": [
+        "Orang Kampung bergerak +5% lebih pantas dalam Zaman Gelap, +10% lebih pantas bermula pada Zaman Feudal",
+        "Kos Unit Kandang -15/20% dalam Zaman Kastil/Empayar",
+        "Kapal bergerak +10% lebih pantas"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pemanah Unta",
+          "description": "Pemanah Berkuda unik Orang Berber. Luar biasa kuat lwn Pemanah Berkuda. Lemah lwn barisan Askar Lembing, Askar Peninjau dan Penunggang Unta."
+        },
+        {
+          "name": "Genitour",
+          "description": "Askar Peninjau Berkuda antipemanah yang tidak boleh menyerang dari jarak dekat. Kuat lwn Askar Jarak Jauh. Lemah lwn unit dari jarak dekat. Boleh dilatih oleh Orang Berber dan sekutu mereka."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kasbah",
+          "description": "Kastil Pasukan berfungsi +25% lebih pantas"
+        },
+        {
+          "name": "Unta Maghrebi",
+          "description": "Unit Unta menjana semula 15 HP setiap minit"
+        }
+      ],
+      "teamBonus": "Genitour boleh didapati di Padang Memanah bermula pada Zaman Kastil"
+    },
+    {
+      "code": "BOH",
+      "name": "Orang Bohemia",
+      "nameEn": "Bohemians",
+      "focus": "Tamadun Serbuk Letupan dan Rahib",
+      "civilizationBonuses": [
+        "Teknologi Khemah Perlombongan percuma",
+        "Tukang Besi dan Universiti berkos -100 kayu",
+        "Barisan Askar Lembing mengenakan +25% kerosakan bonus",
+        "Semangat dan Kesucian mempengaruhi Orang Kampung",
+        "Kimia dan Askar Meriam Tangan tersedia dalam Zaman Kastil"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Gerabak Hus",
+          "description": "Unit Serbuk Letupan Pengepungan unik Orang Bohemia. Unit-unit di belakangnya menerima 50% kurang kerosakan daripada projektil yang mendatang. Kuat lwn Askar Jarak Jauh. Lemah lwn barisan Mangonel."
+        },
+        {
+          "name": "Houfnice",
+          "description": "Unit Serbuk Letupan Pengepungan unik Bohemia dengan jarak jauh, tetapi tidak boleh menyerang dari jarak dekat. Kuat lwn bangunan dan Senjata Pengepungan. Lemah lwn unit dari jarak dekat."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Taktik Wagenburg",
+          "description": "Unit Serbuk Letupan bergerak +10% lebih cepat"
+        },
+        {
+          "name": "Pembaharuan Hus",
+          "description": "Kos emas teknologi Rahib dan Biara digantikan dengan kos makanan"
+        }
+      ],
+      "teamBonus": "Pasar berfungsi +80% lebih cepat"
+    },
+    {
+      "code": "BRI",
+      "name": "Orang British",
+      "nameEn": "Britons",
+      "focus": "Tamadun Pemanah Berjalan Kaki",
+      "civilizationBonuses": [
+        "Penggembala bekerja +25% lebih pantas",
+        "Pusat Bandar berkos -50% kayu bermula pada Zaman Kastil",
+        "Pemanah Berjalan Kaki +1/+2 jarak dalam Zaman Kastil/Empayar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pemanah Busur Panjang",
+          "description": "Pemanah Berjalan Kaki British unik dengan jarak yang sangat jauh. Kuat lwn Infantri. Lemah lwn Pasukan Berkuda dan Askar Peninjau."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Petani",
+          "description": "Pemanah Berjalan Kaki dan barisan Askar Peninjau +1 jarak; barisan Menara Penjaga +2 serangan"
+        },
+        {
+          "name": "Serigala Perang",
+          "description": "Trebuchet mengenakan kerosakan letupan"
+        }
+      ],
+      "teamBonus": "Padang Memanah berkerja +10% lebih pantas"
+    },
+    {
+      "code": "BUL",
+      "name": "Orang Bulgaria",
+      "nameEn": "Bulgarians",
+      "focus": "Tamadun Infantri dan Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Naik taraf barisan Militia percuma",
+        "Kos teknolosi Tukang Besi dan Bengkel Pengepungan -50% makanan",
+        "Kos Pusat Bandar -50% batu",
+        "Boleh membina Krepost dalam Zaman Kastil"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Konnik",
+          "description": "Pasukan Berkuda Berat unik Orang Bulgaria yang terus bertempur sebagai Infantri apabila dijatuhkan. Kuat lwn Infantri dan Pasukan Berkuda. Lemah lwn barisan Askar Lembing dan Rahib"
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Rakap",
+          "description": "Pasukan Berkuda menyerang +33% lebih cepat"
+        },
+        {
+          "name": "Bagain",
+          "description": "barisan Militia mendapat +5 baju zirah"
+        }
+      ],
+      "teamBonus": "Tukang Besi bekerja +80% lebih cepat"
+    },
+    {
+      "code": "BURGU",
+      "name": "Orang Burgundy",
+      "nameEn": "Burgundians",
+      "focus": "Tamadun pasukan berkuda",
+      "civilizationBonuses": [
+        "Naik taraf ekonomi tersedia satu zaman lebih awal dan berkos -40% makanan",
+        "Kos teknologi kandang -50%",
+        "Naik taraf Kesatria tersedia pada Zaman Kastil",
+        "Unit Serbuk Letupan +25% serangan"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Coustillier",
+          "description": "Pasukan Berkuda Berat Burgundy yang unik dengan serangan serbuan yang kuat. Kuat lwn Infantri dan Unit Memanah. Lemah lwn Penunggang Unta dan Rahib"
+        },
+        {
+          "name": "Flemish Militia",
+          "description": "Infantri antipasukan berkuda Burgundy yang unik. Kuat lwn Pasukan Berkuda. Lemah lwn Askar Jarak Jauh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Ladang Anggur Burgundy",
+          "description": "Petani menjana emas dengan perlahan-lahan di samping makanan"
+        },
+        {
+          "name": "Revolusi Flemish",
+          "description": "Semua Orang Kampung yang sedia ada ditukar kepada Militia Flemish"
+        }
+      ],
+      "teamBonus": "Relik menjana makanan sebagai tambahan kepada emas"
+    },
+    {
+      "code": "BUR",
+      "name": "Orang Burma",
+      "nameEn": "Burmese",
+      "focus": "Tamadun Infantri dan Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Teknologi Khemah Balak percuma",
+        "Infantri +1/+2/+3 serangan dalam Zaman Feudal/Kastil/Empayar",
+        "Gajah Tempur +1 melee/+1 perisai tembusan",
+        "Kos teknologi biara -50%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arambai",
+          "description": "Unit Berkuda jarak jauh Burma yang unik dengan serangan yang kuat tetapi tidak tepat. Kuat lwn unit dari jarak sederhana dan dekat. Lemah lwn Unit Memanah dan Senjata Pengepungan."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Pasukan Berkuda Manipur",
+          "description": "Pasukan Berkuda +4 serangan lwn Askar Jarak Jauh"
+        },
+        {
+          "name": "Rengga",
+          "description": "Gajah Tempur +1 melee/+1 perisai tembusan"
+        }
+      ],
+      "teamBonus": "Relik boleh dilihat pada peta pada permulaan permainan"
+    },
+    {
+      "code": "BYZ",
+      "name": "Orang Byzantine",
+      "nameEn": "Byzantines",
+      "focus": "Tamadun Pertahanan",
+      "civilizationBonuses": [
+        "Bangunan +10/20/30/40% HP dalam Zaman Gelap/Feudal/",
+        "Kastil/Empayar",
+        "Kos Penunggang Unta, Askar Peninjau dan barisan Askar Lembing -25%",
+        "Pengawal Menara, Rondaan Bandar percuma",
+        "Maju ke Zaman Empayar dengan kos -33%",
+        "Kapal Api dan Dromon menyerang +25% lebih pantas"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Katafrak",
+          "description": "Pasukan Berkuda Berat unik Byzantine. Sangat kuat lwn Infantri. Lemah lwn Unit Memanah."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Api Yunani",
+          "description": "Kapal Api +1 jarak; Dromon dan Menara Bedilan meningkatkan jejari letupan"
+        },
+        {
+          "name": "Logistik",
+          "description": "Katafrak dan Pengawal Varangian mengenakan kerosakan penginjakan"
+        }
+      ],
+      "teamBonus": "Rahib sembuh +100% lebih pantas"
+    },
+    {
+      "code": "CEL",
+      "name": "Orang Celt",
+      "nameEn": "Celts",
+      "focus": "Tamadun Infantri dan Pengepungan",
+      "civilizationBonuses": [
+        "Pembalak berkerja +15% lebih pantas",
+        "Haiwan ternakan dalam garis penglihatan unit Celt tidak boleh dicuri",
+        "Infantri bergerak +5/10/15/20% lebih pantas dalam Zaman Gelap/Feudal/",
+        "Zaman Kastil/Empayar",
+        "Serangan Senjata Pengepungan +25% lebih pantas"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Penyerang Woad",
+          "description": "Infantri unik Celtic dengan kelajuan pergerakan yang pantas. Kuat lwn Infantri dan Senjata Pengepungan. Lemah lwn Unit Memanah dan Pasukan Berkuda."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Benteng",
+          "description": "Kastil dan barisan Menara Penjaga menyerang +33% lebih pantas; Kastil menyembuhkan Infantri bersekutu dalam radius 7 jubin"
+        },
+        {
+          "name": "Furor Celtica",
+          "description": "Senjata Pengepungan +40% HP"
+        }
+      ],
+      "teamBonus": "Bengkel Pengepungan berfungsi +20% lebih pantas"
+    },
+    {
+      "code": "CHI",
+      "name": "Orang Cina",
+      "nameEn": "Chinese",
+      "focus": "Tamadun Pemanah dan Serbuk Letupan",
+      "civilizationBonuses": [
+        "Mula dengan +3 Orang Kampung, tetapi -50 kayu dan -200 makanan",
+        "Teknologi berkos -5/10/15% dalam Zaman Feudal/Kastil/Empayar",
+        "Pusat Bandar +7 garis penglihatan dan menyediakan +15 ruang populasi",
+        "Tombak Berkuda Api dan Kapal Api bergerak +5/10% lebih pantas dalam Zaman Kastil/Empayar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Chu Ko Nu",
+          "description": "Pemanah Berjalan Kaki Cina unik dengan serangan menembak pantas. Kuat lwn infantri. Lemah lwn Unit Pemanah dan Senjata Pengepungan."
+        },
+        {
+          "name": "Kapal Naga",
+          "description": "Kapal Perang unik Orang Cina yang menembakkan api dari jarak dekat. Kuat lwn barisan Ghali. Lemah lwn Kapal Perobohan."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tembok Besar",
+          "description": "Tembok, Menara Penjaga dan Menara Bedilan +30% HP"
+        },
+        {
+          "name": "Sains Roket",
+          "description": "Kala Jengking, Pedati Roket dan Lou Chuan +25% serangan; Lou Chuan menembakkan roket"
+        }
+      ],
+      "teamBonus": "Ladang +10% makanan"
+    },
+    {
+      "code": "CUM",
+      "name": "Orang Cuman",
+      "nameEn": "Cumans",
+      "focus": "Tamadun Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Satu Pusat Bandar tambahan boleh dibina dalam Zaman Feudal",
+        "Unit Berkuda bergerak +5/10/15% lebih pantas dalam Zaman Feudal/",
+        "Kastil/Empayar",
+        "Padang Memanah dan Kandang berkos -75 kayu",
+        "Bengkel Pengepungan dan Kayu Pelantak tersedia dalam Zaman Feudal; Kayu Pelantak Bertukup tersedia dalam Zaman Kastil"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kipchak",
+          "description": "Pemanah Berkuda unik Cuman yang menembak berbilang anak panah. Kuat lwn Infantri dan Senjata Pengepungan. Lemah lwn Pemanah Berjalan Kaki."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Penternakan Steppe",
+          "description": "Barisan Pasukan Berkuda Pengintip, Tombak Berkuda Steppe dan Pemanah Berkuda berlatih +100% lebih pantas"
+        },
+        {
+          "name": "Askar Upahan Cuman",
+          "description": "Semua ahli pasukan boleh melatih 5 Kipchak Elit percuma setiap Kastil"
+        }
+      ],
+      "teamBonus": "Pagar Kubu +33% HP"
+    },
+    {
+      "code": "DAN",
+      "name": "Orang Denmark",
+      "nameEn": "Danes",
+      "focus": "Tamadun Infantri dan Pengepungan",
+      "civilizationBonuses": [
+        "Kapal Nelayan dan Orang Kampung menghantar +5% makanan",
+        "Rampasan 25% kos sumber setiap bangunan yang musnah",
+        "Naik taraf Berek dan Bengkel Pengepungan berkos -66% emas",
+        "Pengawal Varangian dan Kapal Panjang bergerak +10% lebih pantas"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Jomsviking",
+          "description": "Infantri unik Denmark yang membaling obor apabila menyerang bangunan dan kapal. Sangat kuat lwn Pasukan Berkuda dan bangunan. Lemah lwn Askar Jarak Jauh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Hamask",
+          "description": "Infantri menangani lebih banyak kerosakan apabila mereka kehilangan HP"
+        },
+        {
+          "name": "Kemarakan Pahlawan Utara",
+          "description": "Barisan Mangonel dan Tarbil Geliung +1 jarak; Senjata Pengepungan dan Kapal Perang Pengepungan + 40% serangan lwn bangunan"
+        }
+      ],
+      "teamBonus": "Senjata Pengepungan +2 garis penglihatan"
+    },
+    {
+      "code": "DRAV",
+      "name": "Orang Dravidia",
+      "nameEn": "Dravidians",
+      "focus": "Tamadun Infantri dan Tentera Laut",
+      "civilizationBonuses": [
+        "Nelayan dan Kapal Nelayan membawa +15",
+        "Terima +200 kayu apabila mara ke Zaman seterusnya",
+        "Askar Peninjau dan Pemanah Gajah menyerang +25% lebih pantas",
+        "Kos teknologi berek -50%",
+        "Kos Senjata Pengepungan -33% kayu"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Askar Pedang Urumi",
+          "description": "Infantri unik Dravidia dengan serbuan serangan letupan. Kuat lwn bangunan dan unit pada jarak dekat. Lemah lwn Askar Jarak Jauh dari jarak jauh."
+        },
+        {
+          "name": "Thirisadai",
+          "description": "Kapal perang unik Dravidia serba guna dengan ketahanan tinggi. Kuat lwn kebanyakan Kapal Perang. Lemah lwn Kapal Api."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kor Perubatan",
+          "description": "Unit Gajah menjana semula 30 HP setiap minit"
+        },
+        {
+          "name": "Keluli Wootz",
+          "description": "Serangan Infantri dan Pasukan Berkuda mengabaikan baju zirah"
+        }
+      ],
+      "teamBonus": "Dok menyediakan +5 ruang populasi"
+    },
+    {
+      "code": "ETH",
+      "name": "Orang Etiopia",
+      "nameEn": "Ethiopians",
+      "focus": "Tamadun pemanah",
+      "civilizationBonuses": [
+        "Terima +100 emas, +100 makanan apabila mara ke Zaman seterusnya",
+        "Askar Berjalan Kaki menyerang +18% lebih cepat",
+        "Askar Tombak menaik taraf percuma"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pahlawan Shotel",
+          "description": "Infantri unik Ethiopia dengan serangan tinggi dan kelajuan latihan yang pantas. Bergerak pantas. Kuat lwn Infantri. Lemah lwn Unit Pemanah."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Pewaris Diraja",
+          "description": "Pahlawan Shotel dan Penunggang Unta menerima -3 kerosakan daripada Unit Berkuda"
+        },
+        {
+          "name": "Enjin Kilasan",
+          "description": "meningkatkan radius letupan Unit Bengkel Pengepungan"
+        }
+      ],
+      "teamBonus": "Menara Peninjau +3 garis penglihatan dan tidak memerlukan kos batu"
+    },
+    {
+      "code": "FRK",
+      "name": "Orang Frank",
+      "nameEn": "Franks",
+      "focus": "Tamadun Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Pencari Makanan bekerja +15% lebih pantas",
+        "Teknologi Kilang percuma",
+        "Unit Berkuda +20% HP bermula pada Zaman Feudal",
+        "Kos Kastil -15/25% dalam Zaman Kastil/Empayar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Askar Kapak Lontar",
+          "description": "Infantri unik Frank dengan serangan melee jarak jauh. Kuat lwn infantri. Lemah lwn Unit Pemanah dan Senjata Pengepungan."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kompeni Ordonnance",
+          "description": "Pemanah Busur Silang Berkuda -40 emas"
+        },
+        {
+          "name": "Kesateriaan",
+          "description": "Kandang bekerja +40% lebih pantas"
+        }
+      ],
+      "teamBonus": "Barisan Satria +2 garis penglihatan"
+    },
+    {
+      "code": "GEO",
+      "name": "Orang Georgia",
+      "nameEn": "Georgians",
+      "focus": "Tamadun Pertahanan dan Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Bermula dengan Pedati Keldai",
+        "Unit dan bangunan menerima -15% kerosakan apabila terletak di ketinggian yang lebih tinggi",
+        "Unit Berkuda menjana semula 2/8/14 HP setiap minit dalam Zaman Feudal/Kastil/Empayar",
+        "Gereja Berkubu menyediakan Orang Kampung dalam radius 9 jubin dengan +10% kadar kerja"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Monaspa",
+          "description": "Pasukan Berkuda unik Georgia yang menjadi lebih kuat apabila unit Monaspa atau barisan Satria lain berdekatan. Kuat lwn Infantri dan Pasukan Berkuda. Lemah lwn barisan Askar Lembing dan Rahib."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Menara Svan",
+          "description": "Pengubuan +2 serangan; Barisan Menara Penjaga mengenakan kerosakan sepanjang garisan"
+        },
+        {
+          "name": "Pasukan Berkuda Aznauri",
+          "description": "Unit Berkuda mengambil -20% ruang populasi"
+        }
+      ],
+      "teamBonus": "Kos membaiki bangunan -25%"
+    },
+    {
+      "code": "GOT",
+      "name": "Orang Goth",
+      "nameEn": "Goths",
+      "focus": "Tamadun Infantri",
+      "civilizationBonuses": [
+        "Alat tenun diselidik serta-merta",
+        "Pemburu membawa +15; haiwan yang diburu bertahan +20% lebih lama",
+        "Infantri berkos -15/20/25/30% dalam Zaman Gelap/Feudal/Kastil/",
+        "Zaman Empayar",
+        "Infantri +1/+2/+3 serangan lwn. bangunan dalam Zaman Feudal/",
+        "Kastil/Empayar",
+        "+10 ruang populasi dalam Zaman Empayar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Huskarl",
+          "description": "Infantri unik Goth dengan perisai tembusan tinggi. Kuat lwn Askar Jarak Jauh dan bangunan. Lemah lwn Pasukan Berkuda dan barisan Militia."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Anarki",
+          "description": "Huskarl boleh dilatih di Berek"
+        },
+        {
+          "name": "Perfusi",
+          "description": "Berek bekerja +100% lebih pantas"
+        }
+      ],
+      "teamBonus": "Berek bekerja +20% lebih pantas"
+    },
+    {
+      "code": "GURJ",
+      "name": "Orang Gurjara",
+      "nameEn": "Gurjaras",
+      "focus": "Tamadun Pasukan Berkuda dan Unta",
+      "civilizationBonuses": [
+        "Bermula dengan 2 Pohon Hijauan",
+        "Boleh menempatkan ternakan di Kilang untuk menghasilkan makanan secara pasif",
+        "Unit Berkuda mengenakan +20/30/40% kerosakan bonus dalam Zaman Feudal/Kastil/Empayar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pelontar Chakram",
+          "description": "Infantri unik Gurjara dengan serangan jarak jauh yang mengenakan kerosakan melee sepanjang garisan. Kuat lwn Infantri dan kumpulan besar unit. Lemah lwn Pasukan Berkuda dan Senjata Pengepungan."
+        },
+        {
+          "name": "Penunggang Shrivamsha",
+          "description": "Pasukan Berkuda Gurjara yang bergerak pantas yang boleh mengelak projektil. Kuat lwn Askar Jarak Jauh. Lemah lwn barisan Askar Lembing dan Penunggang Unta."
+        },
+        {
+          "name": "Peninjau Berunta",
+          "description": "Peninjau unik Gurjara. Pasukan Berkuda antipasukan berkuda yang bergerak pantas. Kuat lwn Unit Berkuda. Lemah lwn Infantri, Rahib dan Pemanah Berjalan Kaki."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kshatriya",
+          "description": "Unit Tentera berkos -25% makanan"
+        },
+        {
+          "name": "Pengawal Sempadan",
+          "description": "Penunggang Unta dan Pemanah Gajah +4 baju zirah melee"
+        }
+      ],
+      "teamBonus": "Unit Unta dan Gajah berlatih +25% lebih pantas"
+    },
+    {
+      "code": "HIN",
+      "name": "Orang Hindustan",
+      "nameEn": "Hindustanis",
+      "focus": "Tamadun Unta dan Serbuk Letupan",
+      "civilizationBonuses": [
+        "Kos Orang Kampung -8/13/18/23% dalam Zaman Gelap/Feudal/Kastil/",
+        "Zaman Empayar",
+        "Penunggang Unta menyerang +20% lebih pantas",
+        "Unit Serbuk Letupan +1 melee/+1 perisai tembusan",
+        "Boleh membina Caravanserai dalam Zaman Empayar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ghulam",
+          "description": "Infantri unik Hindustan yang menusuk lembingnya menembusi beberapa sasaran. Sangat kuat lwn Unit Pemanah dan barisan Askar Lembing. Lemah lwn Pasukan Berkuda."
+        },
+        {
+          "name": "Penunggang Unta Diraja",
+          "description": "Pasukan Berkuda Antipasukan Berkuda yang bergerak pantas unik Hindustan. Kuat lwn Unit Berkuda. Lemah lwn Infantri, Rahib dan Pemanah Berjalan Kaki."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Jalan Grand Trunk",
+          "description": "Semua pendapatan emas +10% lebih pantas; Yuran dagangan pasaran dikurangkan kepada 10%"
+        },
+        {
+          "name": "Shatagni",
+          "description": "Askar Meriam Tangan +2 jarak"
+        }
+      ],
+      "teamBonus": "Barisan Pasukan Berkuda Pengintip dan Unit Unta +2 serangan lwn bangunan"
+    },
+    {
+      "code": "HUN",
+      "name": "Orang Hun",
+      "nameEn": "Huns",
+      "focus": "Tamadun Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Tidak memerlukan rumah, tetapi bermula dengan -100 kayu",
+        "Pemanah Berkuda berharga -10/20% dalam Zaman Kastil/Empayar",
+        "Trebuchet menembak dengan lebih tepat pada unit dan sasaran kecil",
+        "Pada peta Nomad, Pusat Bandar pertama menjelmakan Kuda peninjau"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Tarkan",
+          "description": "Pasukan Berkuda Berat Hun yang unik. Sangat kuat lwn bangunan. Lemah lwn barisan Askar Lembing dan Penunggang Unta."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Penjarah",
+          "description": "Tarkan boleh dilatih di Kandang"
+        },
+        {
+          "name": "Ateisme",
+          "description": "Relik Musuh menjana -50% sumber; Kemenangan Struktur Keajaiban dan Relik mengambil masa +100 tahun"
+        }
+      ],
+      "teamBonus": "Kandang berfungsi +20% lebih pantas"
+    },
+    {
+      "code": "INC",
+      "name": "Orang Inca",
+      "nameEn": "Inca",
+      "focus": "Tamadun Infantri",
+      "civilizationBonuses": [
+        "Rumah dan Penempatan menyediakan +5 ruang populasi",
+        "Bangunan berkos -15% batu",
+        "Unit Tentera berkos -15/20/25/30% makanan dalam Zaman Gelap/Feudal/Kastil/Empayar",
+        "Orang Kampung yang mendapat kesan disebabkan naik taraf Tukang Besi Infantri bermula pada Zaman Kastil"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kamayuk",
+          "description": "Infantri unik Inca dengan jarak serangan yang lebih jauh. Kuat lwn Pasukan Berkuda dan Infantri. Lemah lwn Unit Memanah dan Penembak."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Ali-ali Andean",
+          "description": "Askar Peninjau dan Askar Ali-ali tiada jarak minimum; Askar Ali-ali +1 serangan"
+        },
+        {
+          "name": "Perisai Fabrik",
+          "description": "Kamayuk, Askar Ali-ali dan Pahlawan Champi +1 melee/+1 perisai tembusan"
+        }
+      ],
+      "teamBonus": "Bermula dengan Llama percuma"
+    },
+    {
+      "code": "ITA",
+      "name": "Orang Itali",
+      "nameEn": "Italians",
+      "focus": "Tamadun Pemanah dan Tentera Laut",
+      "civilizationBonuses": [
+        "Maju ke Zaman seterusnya berkos -15%",
+        "Pemanah Berjalan Kaki dan Condottieri +1 melee/+1 perisai tembusan",
+        "Kos Teknologi Dok dan Universiti -25%",
+        "Kos Unit Serbuk Letupan -20%",
+        "Kos Kapal Nelayan -15%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pemanah Busur Silang Genoa",
+          "description": "Pemanah Berjalan Kaki Itali unik. Sangat kuat lwn Pasukan Berkuda. Lemah lwn Unit Pemanah dan Senjata Pengepungan."
+        },
+        {
+          "name": "Condottieri",
+          "description": "Infantri antiserbuk letupan pantas. Kuat lwn Unit Serbuk Letupan. Lemah lwn Unit Pasukan Berkuda dan Memanah. Boleh dilatih oleh orang Itali dan sekutu mereka."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Laluan Sutera",
+          "description": "Kos Unit Perdagangan -50%"
+        },
+        {
+          "name": "Pirotechnia",
+          "description": "Askar Meriam Tangan mengenakan +15% kerosakan sepanjang garisan dan lebih tepat"
+        }
+      ],
+      "teamBonus": "Condottiero boleh didapati di Berek pada Zaman Empayar"
+    },
+    {
+      "code": "JAP",
+      "name": "Orang Jepun",
+      "nameEn": "Japanese",
+      "focus": "Tamadun Infantri",
+      "civilizationBonuses": [
+        "Kilang, Khemah Balak dan Perlombongan berkos -50%",
+        "Infantri menyerang +33% lebih pantas bermula pada Zaman Feudal",
+        "Pemanah Berkuda +2 serangan lwn Askar Jarak Jauh (kecuali Askar Peninjau)",
+        "Kapal Nelayan berfungsi +5/10/15/20% lebih pantas dalam Zaman Gelap/Feudal/Kastil/Empayar; +100% HP"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Samurai",
+          "description": "Infantri Jepun unik yang cepat menyerbu ke dalam pertempuran dan mempunyai serangan pantas. Kuat lwn Unit Unik. Lemah lwn Unit Memanah dan Penembak."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Yasama",
+          "description": "barisan Menara Penjaga menembak anak panah tambahan"
+        },
+        {
+          "name": "Kataparuto",
+          "description": "Trebuchet menyerang dan dibungkus/dipasang dengan lebih pantas"
+        }
+      ],
+      "teamBonus": "Barisan ghali +4 garis penglihatan"
+    },
+    {
+      "code": "JUR",
+      "name": "Orang Jurchen",
+      "nameEn": "Jurchens",
+      "focus": "Tamadun Pasukan Berkuda dan Serbuk Letupan",
+      "civilizationBonuses": [
+        "Daging haiwan yang diburu dan ternakan tidak mereput",
+        "Unit Berkuda dan Tombak Berkuda Api menyerang +25% lebih pantas bermula pada Zaman Feudal",
+        "Jurutera Pengepungan tersedia dalam Zaman Kastil",
+        "Peningkatan Pengepungan dan Pengubuan berkos -75% kayu dan diselidik +100% lebih pantas",
+        "Unit menerima -50% kerosakan api mesra"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pagoda Besi",
+          "description": "Pasukan Berkuda Berat unik Jurchen dengan baju zirah tahan lama yang boleh menyekat serangan jarak dekat sepenuhnya. Kuat lwn Infantri dan Askar Jarak Jauh. Lemah lwn barisan Askar Lembing dan Penunggang Unta."
+        },
+        {
+          "name": "Grenadier",
+          "description": "Unit Serbuk Letupan unik Jurchen dengan serangan letupan jarak jauh, tetapi tidak boleh menyerang pada jarak dekat. Kuat lwn Infantri dan kumpulan unit yang ketat. Lemah lwn Askar Jarah Jauh dan unit jarak dekat."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Benteng Berkubu",
+          "description": "Pengubuan menjana semula 500 HP seminit"
+        },
+        {
+          "name": "Bom Petir",
+          "description": "Pedati Roket, Grenadier dan Lou Chuan meletup apabila dikalahkan; peluru menghasilkan letupan tambahan"
+        }
+      ],
+      "teamBonus": "Unit Serbuk Letupan +2 garis penglihatan"
+    },
+    {
+      "code": "KHI",
+      "name": "Orang Khitan",
+      "nameEn": "Khitans",
+      "focus": "Tamadun Infantri dan Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Padang rumput menggantikan Ladang",
+        "Kesan peningkatan serangan melee digandakan",
+        "Latihan dan peningkatan barisan Askar Peninjau, Askar Lembing dan Pasukan Berkuda Pengintip +15% lebih pantas",
+        "Peningkatan Pemanah Berkuda Berat tersedia dalam Zaman Kastil dan memerlukan -50%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Liao Dao",
+          "description": "Infantri unik Khitan dengan serangan kuat yang mencederakan musuh, mengenakan kerosakan dari semasa ke semasa. Kuat lwn Pasukan Berkuda dan Infantri. Lemah lwn Askar Jarak Jauh."
+        },
+        {
+          "name": "Trebuchet Berkuda",
+          "description": "Pasukan Berkuda Pengepungan unik Khitan dengan jarak jauh, tetapi tidak boleh menyerang dari jarak dekat. Peluru meninggalkan api yang berlarutan di atas tanah. Kuat lwn Senjata Pengepungan dan kumpulan unit yang rapat. Lemah lwn unit dari jarak dekat."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Baju Zirah Lamellar",
+          "description": "Infantri dan Askar Peninjau mencerminkan kerosakan 25% melee kembali kepada penyerang"
+        },
+        {
+          "name": "Pasukan Berkuda Ordo",
+          "description": "Pasukan Berkuda menjana semula HP dalam pertempuran"
+        }
+      ],
+      "teamBonus": "Infantri +2 serangan lwn. Askar Jarak Jauh"
+    },
+    {
+      "code": "KHM",
+      "name": "Orang Khmer",
+      "nameEn": "Khmer",
+      "focus": "Tamadun Pengepungan dan Gajah",
+      "civilizationBonuses": [
+        "Tiada bangunan diperlukan untuk mara ke Zaman seterusnya atau untuk membuka kunci bangunan lain",
+        "Petani tidak memerlukan Kilang atau Pusat Bandar untuk menyerahkan makanan",
+        "Orang Kampung boleh ditempatkan di dalam Rumah",
+        "Gajah Tempur bergerak +10% lebih cepat"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Gajah Balista",
+          "description": "Pasukan Berkuda Pengepungan unik Khmer dengan serangan sepanjang garisan. Boleh memusnahkan pokok. Kuat lwn Infantri dan Askar Jarak Jauh. Lemah lwn Pasukan Berkuda dan Senjata Pengepungan."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Pedang Gading",
+          "description": "Gajah Tempur +3 serangan"
+        },
+        {
+          "name": "Dwibusur Silang",
+          "description": "Gajah Balista dan Kala Jengking menembak peluru tambahan"
+        }
+      ],
+      "teamBonus": "Kala Jengking +1 jarak"
+    },
+    {
+      "code": "KOR",
+      "name": "Orang Korea",
+      "nameEn": "Koreans",
+      "focus": "Tamadun Pertahanan dan Tentera Laut",
+      "civilizationBonuses": [
+        "Pelombong batu bekerja +20% lebih cepat",
+        "Kos Askar Jarak Jauh dan Infantri -50% kayu",
+        "Naik taraf Baju zirah pemanah dan menara percuma (Menara Bedilan memerlukan Kimia)",
+        "Kos Kapal perang -20% kayu"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Gerabak Perang",
+          "description": "Pemanah Berkuda unik Korea. Perlahan tetapi tahan lama. Kuat lwn Unit Infantri dan Pemanah. Lemah lwn barisan Askar Lembing, Askar Peninjau, dan Penunggang Unta."
+        },
+        {
+          "name": "Kapal Penyu",
+          "description": "Kapal Perang Pengepungan unik Korea dengan baju zirah dan serangan yang tinggi. Kuat lwn kebanyakan Kapal Perang dan bangunan. Lemah lwn Ghali."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Eupseong",
+          "description": "barisan Menara Penjaga +2 jarak"
+        },
+        {
+          "name": "Shinkichon",
+          "description": "Pedati Roket dan Kapal Penyu +1 jarak, menembak peluru tambahan"
+        }
+      ],
+      "teamBonus": "Orang Kampung +3 garis penglihatan"
+    },
+    {
+      "code": "LIT",
+      "name": "Orang Lithuania",
+      "nameEn": "Lithuanians",
+      "focus": "Tamadun Pasukan Berkuda dan Rahib",
+      "civilizationBonuses": [
+        "Setiap Pusat Bandar memberikan +100 makanan",
+        "Barisan Askar Lembing dan Askar Peninjau bergerak +10% lebih cepat",
+        "Setiap relik yang ditempatkan memberikan +1 serangan kepada barisan Satria dan Leitis (maksimum +4)"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Leitis",
+          "description": "Pasukan Berkuda Berat unik Lithuania yang mengabaikan baju zirah. Kuat lwn Pasukan Berkuda dan Infantri, terutamanya dengan baju zirah tinggi. Lemah lwn Unit Memanah."
+        },
+        {
+          "name": "Hussar Bersayap",
+          "description": "Pasukan Berkuda Poland dan Lithuania yang unik dan bergerak pantas untuk peninjauan dan serbuan. Tahan terhadap penukaran haluan. Sangat kuat lwn Unit Biara. Lemah lwn barisan Askar Lembing dan Penunggang Unta."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kubu Bukit",
+          "description": "Pusat Bandar +3 jarak"
+        },
+        {
+          "name": "Perisai Menara",
+          "description": "Barisan Askar Lembing dan Askar Peninjau +2 perisai tembusan"
+        }
+      ],
+      "teamBonus": "Biara bekerja +20% lebih cepat"
+    },
+    {
+      "code": "MAG",
+      "name": "Orang Magyar",
+      "nameEn": "Magyars",
+      "focus": "Tamadun Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Orang Kampung mengalahkan serigala dengan satu serangan",
+        "Kos barisan Pasukan Berkuda Pengintip -15%",
+        "Naik taraf serangan melee percuma"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Magyar Huszar",
+          "description": "Pasukan Berkuda unik Magyar. Kuat lwn Senjata Pengepungan. Lemah lwn barisan Askar Lembing dan Penunggang Unta."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tentera Corvinian",
+          "description": "Kos emas Magyar Huszar digantikan dengan kos makanan tambahan"
+        },
+        {
+          "name": "Busur Lentik",
+          "description": "Pemanah Berkuda +1 serangan, +1 jarak"
+        }
+      ],
+      "teamBonus": "Pemanah Berkuda berlatih +25% lebih pantas"
+    },
+    {
+      "code": "MALY",
+      "name": "Orang Melayu",
+      "nameEn": "Malay",
+      "focus": "Tamadun Tentera Laut",
+      "civilizationBonuses": [
+        "Maju ke Zaman seterusnya adalah +66% lebih pantas",
+        "Naik taraf baju zirah Infantri percuma",
+        "Gajah Tempur berharga -25/35% pada Zaman Kastil/Empayar",
+        "Perangkap Ikan berkos -33% dan menyediakan +200% makanan"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pahlawan Karambit",
+          "description": "Infantri unik Orang Melayu yang hanya mengambil separuh ruang populasi. Kuat dalam jumlah yang tinggi. Lemah lwn Pasukan Berkuda dan Askar Jarak Jauh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Talasokrasi",
+          "description": "Dok dinaik taraf kepada Pelabuhan"
+        },
+        {
+          "name": "Levi Paksaan",
+          "description": "Kos emas barisan Militia digantikan dengan kos makanan tambahan"
+        }
+      ],
+      "teamBonus": "Dok +6 garis penglihatan"
+    },
+    {
+      "code": "MAL",
+      "name": "Orang Mali",
+      "nameEn": "Malians",
+      "focus": "Tamadun infantri",
+      "civilizationBonuses": [
+        "Bangunan berkos -15% kayu",
+        "Orang kampung menyerahkan +10% lebih banyak emas",
+        "Unit Berek +1/+2/+3 perisai tembusan dalam Zaman Feudal/",
+        "Kastil/Empayar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Gbeto",
+          "description": "Infantri unik Mali dengan serangan melee jarak jauh. Bergerak pantas. Kuat lwn Infantri dan Senjata Pengepungan. Lemah lwn Askar Jarak Jauh dan Senjata Pengepungan."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tigui",
+          "description": "Pusat Bandar menembak anak panah walaupun dibatalkan garison"
+        },
+        {
+          "name": "Farimba",
+          "description": "Pasukan Berkuda +5 serangan"
+        }
+      ],
+      "teamBonus": "Universiti bekerja +80% lebih pantas"
+    },
+    {
+      "code": "MAPU",
+      "name": "Orang Mapuche",
+      "nameEn": "Mapuche",
+      "focus": "Tamadun Unit Penentang dan Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Pencari Makanan menyerahkan +25% makanan",
+        "Petempatan boleh melatih barisan Askar Lembing dan Askar Peninjau",
+        "Infantri, Askar Ali-ali dan Askar Peninjau +5/10/15 HP dalam Zaman Feudal/Kastil/Empayar",
+        "Unit Berkuda menjana +3 emas apabila mengalahkan unit tentera",
+        "Kastil Musuh didedahkan pada peta"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kona",
+          "description": "Pasukan Berkuda unik orang Mapuche yang mengenakan kerosakan yang semakin meningkat kepada unit yang cedera. Kuat lwn Infantri dan Pemanah Berjalan Kaki. Lemah lwn barisan Askar Lembing, Penunggang Unta dan Sami."
+        },
+        {
+          "name": "Penunggang Bolas",
+          "description": "Pemanah Berkuda unik orang Mapuche dengan serangan bercas yang memperlahankan unit musuh. Unit Kuat lwn Unit Berkuda. Lemah lwn Pemanah Berjalan Kaki, Askar Peninjau dan unit pada jarak dekat."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Malon",
+          "description": "Penunggang Bolas, Askar Ali-ali dan Askar Peninjau mengenakan kerosakan sepanjang garisan"
+        },
+        {
+          "name": "Butalmapu",
+          "description": "Unit Unik Kastil Pasukan dan Penunggang Bolas berharga -15%"
+        }
+      ],
+      "teamBonus": "Barisan Askar Lembing dan Askar Peninjau +2 garis penglihatan"
+    },
+    {
+      "code": "MAY",
+      "name": "Orang Maya",
+      "nameEn": "Maya",
+      "focus": "Tamadun Pemanah",
+      "civilizationBonuses": [
+        "Bermula dengan +1 Orang Kampung, tetapi -50 makanan",
+        "Sumber bertahan +15% lebih lama",
+        "Kos Pemanah Berjalan Kaki -10/20/30% dalam Zaman Feudal/Kastil/Empayar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pemanah Berambu",
+          "description": "Pemanah unik Maya yang bergerak pantas. Kuat lwn Unit Pemanah dan Infantri. Lemah lwn Pasukan Berkuda."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Pelontar Lembing Hul'che",
+          "description": "Askar Peninjau menembakkan peluru tambahan"
+        },
+        {
+          "name": "Holcan",
+          "description": "Pahlawan Helang +40 HP"
+        }
+      ],
+      "teamBonus": "Tembok berkos -50%"
+    },
+    {
+      "code": "MON",
+      "name": "Orang Mongol",
+      "nameEn": "Mongols",
+      "focus": "Tamadun Pemanah Berkuda",
+      "civilizationBonuses": [
+        "Pemburu bekerja +40% lebih pantas",
+        "Pemanah Berkuda menyerang +25% lebih pantas",
+        "Barisan Pasukan Berkuda Pengintip dan Tombak Berkuda Steppe +20/30% HP dalam Zaman Kastil/Empayar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Mangudai",
+          "description": "Pemanah Berkuda Mongol unik dengan serangan cepat. Kuat lwn Senjata Pengepungan dan Infantri. Lemah lwn Askar Peninjau, barisan Askar Lembing dan Penunggang Unta."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Nomad",
+          "description": "Rumah Hilang tidak mengurangkan ruang populasi"
+        },
+        {
+          "name": "Gerudi",
+          "description": "Unit Bengkel Pengepungan bergerak +50% lebih pantas"
+        }
+      ],
+      "teamBonus": "Barisan Pasukan Berkuda Pengintip +2 garis penglihatan"
+    },
+    {
+      "code": "MUI",
+      "name": "Orang Muisca",
+      "nameEn": "Muisca",
+      "focus": "Tamadun Pemanah dan Rahib",
+      "civilizationBonuses": [
+        "Mara ke Zaman seterusnya berharga -50% emas",
+        "Petempatan berharga -33% dan menyembuhkan unit berdekatan",
+        "Pahlawan Champi dan Unit Padang Memanah +1/2/3 baju zirah melee dalam Zaman Feudal/Kastil/Empayar",
+        "Rahib mendapatkan semula kepercayaan +50% lebih pantas",
+        "Karavan, Persatuan percuma"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pahlawan Guecha",
+          "description": "Askar Peninjau Muisca unik yang menjana semula HP apabila Pahlawan Guecha berdekatan dikalahkan. Kuat lwn Askar Jarak Jauh. Lemah lwn unit dari jarak dekat."
+        },
+        {
+          "name": "Pengawal Kuil",
+          "description": "Infantri Kejutan unik Muisca yang menyerang lebih pantas semakin lama ia kekal dalam pertempuran. Kuat lwn bangunan dan Unit Berkuda. Lemah lwn barisan Militia."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Herbalisme",
+          "description": "Barisan Pemanah dan Pahlawan Champi bergerak +15% lebih pantas"
+        },
+        {
+          "name": "Huaracas",
+          "description": "Askar Ali-ali +1 jarak; berlatih +50% lebih pantas"
+        }
+      ],
+      "teamBonus": "Sumber emas semula jadi bertahan +15% lebih lama"
+    },
+    {
+      "code": "PER",
+      "name": "Orang Parsi",
+      "nameEn": "Persians",
+      "focus": "Tamadun Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Bermula dengan +50 kayu dan +50 makanan",
+        "Pusat Bandar dan Dok +100% HP dan bekerja +5/10/15/20% lebih pantas dalam Zaman Gelap/Feudal/Kastil/Empayar",
+        "Taktik Partia tersedia dalam Zaman Kastil",
+        "Boleh membina Caravanserai dalam Zaman Empayar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Gajah Perang",
+          "description": "Pasukan Berkuda Parsi unik yang mengenakan kerosakan injak. Kuat lwn bangunan dan unit dari jarak dekat. Lemah lwn barisan Askar Lembing dan Rahib."
+        },
+        {
+          "name": "Savar",
+          "description": "Pasukan Berkuda Berat Parsi serba boleh yang unik. Sangat kuat lwn Askar Jarak Jauh. Lemah lwn garisan Askar Lembing, Penunggang Unta dan Rahib."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kamandaran",
+          "description": "Kos emas barisan Pemanah digantikan dengan kos kayu tambahan"
+        },
+        {
+          "name": "Kubu Kota",
+          "description": "Kastil +4 serangan, +3 lwn Kayu Pelantak, +3 lwn Infantri dan menerima -25% kerosakan bonus"
+        }
+      ],
+      "teamBonus": "Barisan Satria +2 serangan lwn Askar Jarak Jauh"
+    },
+    {
+      "code": "POL",
+      "name": "Orang Poland",
+      "nameEn": "Poles",
+      "focus": "Tamadun Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Folwark menggantikan Kilang",
+        "Orang Kampung menjana semula 10/15/20 HP dalam Zaman Feudal/Kastil/Empayar",
+        "Pelombong Batu menjana emas sebagai tambahan kepada batu",
+        "Kos naik taraf Keturunan dan barisan Pasukan Berkuda Pengintip -50% makanan"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Obuch",
+          "description": "Infantri unik Poland yang merobek baju zirah unit musuh yang sedang dilawan. Kuat lwn bangunan, Pasukan Berkuda dan Infantri. Lemah lwn Unit Memanah dan Penembak."
+        },
+        {
+          "name": "Hussar Bersayap",
+          "description": "Pasukan Berkuda Poland dan Lithuania yang unik dan bergerak pantas untuk peninjauan dan serbuan. Tahan terhadap penukaran haluan. Sangat kuat lwn Unit Biara. Lemah lwn barisan Askar Lembing dan Penunggang Unta."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Keistimewaan Szlachta",
+          "description": "kos barisan Satria -60% emas"
+        },
+        {
+          "name": "Warisan Lechitic",
+          "description": "Pasukan Berkuda Pengintip mengenakan kerosakan injak"
+        }
+      ],
+      "teamBonus": "Pasukan Berkuda Pengintip +1 serangan lwn Askar Jarak Jauh"
+    },
+    {
+      "code": "POR",
+      "name": "Orang Portugis",
+      "nameEn": "Portuguese",
+      "focus": "Tamadun Tentera Laut dan Serbuk Letupan",
+      "civilizationBonuses": [
+        "Pencari Makanan menjana kayu sebagai tambahan kepada makanan",
+        "Semua unit berkos -20% emas",
+        "Boleh membina Feitoria dalam Zaman Empayar",
+        "Kapal +10/15/20% HP dalam Zaman Feudal/Kastil/Empayar."
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ribauldequin",
+          "description": "Unit Serbuk Letupan Pengepungan unik Portugis. Menembakkan banyak peluru dengan serentak. Kuat lwn kumpulan besar unit. Lemah lwn Pasukan Berkuda dan barisan Mangonel."
+        },
+        {
+          "name": "Karavel",
+          "description": "Kapal Perang unik Portugis dengan serangan sepanjang garisan jarak jauh. Kuat lwn kumpulan kapal yang besar. Lemah lwn Kapal Api."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Mengelilingi Dunia: Peta ditanda telah diteroka sepenuhnya; Kapal dilatih +33% lebih pantas",
+          "description": ""
+        },
+        {
+          "name": "Senapang Kopak",
+          "description": "Unit Serbuk Letupan menembak dengan lebih tepat pada sasaran bergerak"
+        }
+      ],
+      "teamBonus": "Teknologi menyelidik +25% lebih pantas"
+    },
+    {
+      "code": "ROM",
+      "name": "Orang Rom",
+      "nameEn": "Romans",
+      "focus": "Tamadun Infantri dan Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Orang Kampung mengumpul, membina dan membaiki +5% lebih pantas",
+        "Kesan naik taraf baju zirah infantri digandakan",
+        "Kos kala Jengking -50% emas",
+        "Barisan Ghali dan Dromon +1 melee/+1 perisai tembusan"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Centurion",
+          "description": "Pasukan Berkuda Berat unik Rom yang meningkatkan pergerakan dan kelajuan serangan unit barisan Militia berdekatan. Kuat lwn Infantri dan Pemanah Berjalan Kaki. Lemah lwn barisan Askar Lembing dan Penunggang Unta."
+        },
+        {
+          "name": "Askar Legion",
+          "description": "Unit Infantri serba boleh Rom yang unik. Sangat kuat lwn Infantri. Kuat lwn bangunan, Pasukan Berkuda Pengintip dan barisan Askar Peninjau. Askar Lemah lwn. Jarak Jauh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Balista",
+          "description": "serangan Kala Jengking +33% lebih pantas; barisan Ghali +2 serangan"
+        },
+        {
+          "name": "Comitaten",
+          "description": "barisan Militia, barisan Satria dan Centurion berlatih +50% lebih pantas dan menerima serangan serbuan"
+        }
+      ],
+      "teamBonus": "Jarak minimum Kala Jengking dikurangkan"
+    },
+    {
+      "code": "SAR",
+      "name": "Orang Saracen",
+      "nameEn": "Saracens",
+      "focus": "Tamadun Unta dan Tentera Laut",
+      "civilizationBonuses": [
+        "Yuran dagangan pasar hanya 5%; Pasar berkos -100 kayu",
+        "Unit Unta +25% HP",
+        "Serangan barisan Ghali +25% lebih pantas",
+        "Kapal Pengangkutan +100% HP, +20 kapasiti muatan"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Mamluk",
+          "description": "Pasukan Berkuda unik Saracen dengan serangan melee dari jarak jauh. Kuat lwn Unit Berkuda. Lemah lwn Unit Memanah dan barisan Askar Lembing."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Bimaristan",
+          "description": "Rahib menyembuhkan berbilang unit berdekatan secara pasif"
+        },
+        {
+          "name": "Berat Pengimbang",
+          "description": "Trebuchet dan barisan Mangonel +15% serangan"
+        }
+      ],
+      "teamBonus": "Pemanah Berjalan Kaki dan Askar Peninjau +2 serangan lwn bangunan"
+    },
+    {
+      "code": "SAX",
+      "name": "Saxon",
+      "nameEn": "Saxons",
+      "focus": "Tamadun Infantri dan Pertahanan",
+      "civilizationBonuses": [
+        "Kilang, Kem Balak dan Perlombongan menyediakan +50 makanan dan +10 batu apabila dibina",
+        "Askar Pejalan Kaki berharga -5% setiap Pusat Bandar atau Istana yang dikawal (maksimum -20%)",
+        "Menara dan Kastil menembak anak panah asas +100% bermula pada Zaman Kastil",
+        "Kapal Panjang dan Tarbil Geliung +20% HP"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Askar Pengiring",
+          "description": "Infantri unik Saxon yang melontar lembing sebelum memulakan pertempuran melee. Kuat lwn Askar Jarak Jauh. Lemah lwn Pasuka Berkuda."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Pengambilan Rahib",
+          "description": "Jarak penukaran haluan Rahib +1; latih +33% lebih pantas"
+        },
+        {
+          "name": "Dinding Perisai",
+          "description": "Infantri mendapat perisai tambahan apabila beramai"
+        }
+      ],
+      "teamBonus": "Pembaikan bekerja +25% lebih cepat"
+    },
+    {
+      "code": "SHU",
+      "name": "Orang Shu",
+      "nameEn": "Shu",
+      "focus": "Tamadun Pemanah dan Pengepungan",
+      "civilizationBonuses": [
+        "Pembalak menjana makanan sebagai tambahan kepada kayu",
+        "Kos teknologi Unit Pemanah di Padang Memanah dan Tukang Besi -25%",
+        "Senjata Pengepungan dan Kapal Perang Pengepungan bergerak +10/15% lebih pantas dalam Zaman Kastil/Empayar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pengawal Bulu Putih",
+          "description": "Infantri unik Shu yang memperlahankan unit yang diserangnya buat sementara waktu. Kuat lwn Pasukan Berkuda. Lemah lwn. Askar Jarak Jauh."
+        },
+        {
+          "name": "Rata Perang",
+          "description": "Pasukan Berkuda Pengepungan unik Shu dengan serangan pantas tetapi tidak boleh menyerang dari jarak dekat. Mempunyai masa isi semula peluru yang panjang. Boleh bertukar kepada mod bertubi-tubi, yang meliputi lebih banyak kawasan tetapi kurang tepat. Kuat lwn Askar Jarak Jauh. Lemah lwn. Pasukan Berkuda dan Senjata Pengepungan."
+        },
+        {
+          "name": "Liu Bei",
+          "description": "Wira Infantri unik orang Shu, yang menyembuhkan semua unit berdekatan. Sangat berkuasa. Mempunyai had satu, tidak boleh ditukar haluan."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tatasusunan Ular Bergelung",
+          "description": "barisan Askar Lembing dan Pengawal Bulu Putih mendapat HP tambahan apabila berdekatan antara satu sama lain"
+        },
+        {
+          "name": "Magazin Bolt",
+          "description": "barisan Pemanah, Rata Perang dan Lou Chuan menembak peluru tambahan"
+        }
+      ],
+      "teamBonus": "Pemanah Berjalan Kaki +2 garis penglihatan"
+    },
+    {
+      "code": "SIC",
+      "name": "Orang Siciliy",
+      "nameEn": "Sicilians",
+      "focus": "Tamadun Infantri dan Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Bermula dengan +100 batu",
+        "Naik taraf Ladang menyediakan +125% makanan tambahan",
+        "Askar menerima -40% kerosakan bonus",
+        "Boleh membina Donjon dalam Zaman Gelap, menggantikan barisan Menara Penjaga",
+        "Pengubuan dibina +50% lebih pantas; Pusat Bandar dibina +100% lebih pantas"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Sarjan",
+          "description": "Infantri unik Sicily yang boleh membina Donjon. Kuat lwn Infantri dan Penunggang Unta. Lemah lwn Pemanah Berkuda dan Penembak."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Perang Salib Pertama",
+          "description": "Sehingga 5 Pusat Bandar menjelmakan 5 Sarjan setiap satu; unit lebih tahan terhadap penukaran haluan"
+        },
+        {
+          "name": "Hauberk",
+          "description": "barisan Satria +1 melee/+2 perisai tembusan"
+        }
+      ],
+      "teamBonus": "Kapal Pengangkutan +5 garis penglihatan dan berkos -50%"
+    },
+    {
+      "code": "SLV",
+      "name": "Orang Slavik",
+      "nameEn": "Slavs",
+      "focus": "Tamadun Infantri dan Pengepungan",
+      "civilizationBonuses": [
+        "Petani bekerja +15% lebih pantas",
+        "Pembakaran, Gambeson percuma",
+        "Kos Unit Bengkel Pengepungan -15%",
+        "Rahib bergerak +20% lebih pantas"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Boyar",
+          "description": "Pasukan Berkuda unik Slavia dengan baju zirah melee yang luar biasa. Kuat lwn unit dari jarak dekat. Lemah lwn barisan Askar Lembing dan Rahib."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Detinet",
+          "description": "Menggantikan 40% kos batu Kastil dan barisan Menara Penjaga dengan kos kayu tambahan"
+        },
+        {
+          "name": "Druzhina",
+          "description": "Infantri mengenakan kerosakan injak"
+        }
+      ],
+      "teamBonus": "Bangunan tentera (kecuali Kastil) menyediakan +5 ruang populasi"
+    },
+    {
+      "code": "SPN",
+      "name": "Orang Sepanyol",
+      "nameEn": "Spanish",
+      "focus": "Tamadun Serbuk letupan dan Rahib",
+      "civilizationBonuses": [
+        "Pembina bekerja +30% lebih pantas",
+        "Terima +20 emas untuk setiap teknologi yang diselidik",
+        "Naik taraf Tukang Besi tidak memerlukan emas",
+        "Unit Serbuk letupan menyerang +18% lebih pantas",
+        "Geliung Meriam menembak dengan lebih tepat pada sasaran bergerak"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Konkuistador",
+          "description": "Penembak Berkuda Sepanyol yang unik dengan serangan dan mobiliti yang kuat. Kuat lwn unit dari jarak jauh. Lemah lwn barisan Askar Lembing, Askar Peninjau, dan Rahib."
+        },
+        {
+          "name": "Mubaligh",
+          "description": "Rahib Berkuda unik Sepanyol. Menukar haluan unit musuh dan menyembuhkan unit mesra. Lebih pantas daripada Rahib tetapi kurang penglihatan dan jarak. Kuat lwn unit perlahan dan unit bukan jarak jauh. Lemah lwn barisan Pasukan Berkuda Pengintip, Pahlawan Helang dan Askar Jarak Jauh. Boleh memungut Relik dan membawanya ke Biara."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Penyiasatan",
+          "description": "Rahib dan Mubaligh menukar haluan lebih cepat; Mubaligh +1 jarak"
+        },
+        {
+          "name": "Keulungan",
+          "description": "Orang Kampung +40 HP, +6 serangan, +2 melee/+2 perisai tembusan"
+        }
+      ],
+      "teamBonus": "Unit Perdagangan menjana +25% emas"
+    },
+    {
+      "code": "TAT",
+      "name": "Orang Tatar",
+      "nameEn": "Tatars",
+      "focus": "Tamadun Pemanah Berkuda",
+      "civilizationBonuses": [
+        "Haiwan ternakan bertahan +50% lebih lama",
+        "Unit mengenakan +25% kerosakan apabila bertarung dari ketinggian yang lebih tinggi",
+        "Pusat Bandar baharu menjelmakan 2 Biri-biri bermula pada Zaman Kastil",
+        "Cincin Ibu Jari, Taktik Partia percuma"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Keshik",
+          "description": "Pasukan Berkuda Berat unik Tatar yang menjana emas apabila melawan unit lain. Kuat lwn Unit Pemanah. Lemah lwn barisan Askar Lembing, Penunggang Unta dan Rahib."
+        },
+        {
+          "name": "Unta Berapi",
+          "description": "Pasukan Berkuda Pengepungan perobohan unik Tatar. Kuat lwn Unit Berkuda, terutamanya Gajah. Lemah lwn Pemanah Kaki dan Infantri. Memusnahkan diri sendiri apabila digunakan."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Baju Zirah Sutera",
+          "description": "Barisan Pasukan Berkuda Pengintip dan Tombak Berkuda Steppe dan Pemanah Berkuda +1 melee/+1 perisai tembusan"
+        },
+        {
+          "name": "Ketukangan Alat Pengepungan Timurid",
+          "description": "Trebuchet +2 jarak"
+        }
+      ],
+      "teamBonus": "Pemanah Berkuda +2 garis penglihatan"
+    },
+    {
+      "code": "TEU",
+      "name": "Orang Teuton",
+      "nameEn": "Teutons",
+      "focus": "Tamadun Infantri dan Pertahanan",
+      "civilizationBonuses": [
+        "Ladang berkos -40%",
+        "Pusat Bandar +10 kapasiti petempatan; Menara +5 kapasiti petempatan",
+        "Unit Infantri dan Berkuda +1/+2 baju zirah melee pada Zaman Kastil/Empayar",
+        "Rahib +100% jarak penyembuhan",
+        "Lubang Bunuh, Ubat Herba percuma"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Satria Teuton",
+          "description": "Infantri unik Teuton dengan baju zirah melee yang luar biasa. Perlahan tetapi tahan terhadap penukaran haluan. Kuat lwn unit melee. Lemah lwn Unit Memanah dan Penembak."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Berperisai",
+          "description": "Senjata Pengepungan +4 baju zirah melee"
+        },
+        {
+          "name": "Baluarti",
+          "description": "Kastil +3 jarak; Infantri yang ditempatkan menembak anak panah"
+        }
+      ],
+      "teamBonus": "Unit lebih tahan terhadap penukaran haluan"
+    },
+    {
+      "code": "TUP",
+      "name": "Orang Tupi",
+      "nameEn": "Tupi",
+      "focus": "Tamadun Pemanah dan Infantri",
+      "civilizationBonuses": [
+        "Mulakan dengan +25 daripada setiap sumber",
+        "Orang Kampung boleh ditempatkan di Petempatan",
+        "Unit yang jatuh mengembalikan 15% daripada kos mereka",
+        "Penaiktarafan Padang Memanah dan Berek berkos -50% makanan"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pemanah Blackwood",
+          "description": "Pemanah Berjalan Kaki unik Tupi yang dilatih secara berpasangan dan hanya mengambil separuh ruang populasi. Kuat dalam jumlah yang tinggi. Lemah lwn unit dari jarak dekat."
+        },
+        {
+          "name": "Pahlawan Ibirapema",
+          "description": "Tupi Infantri unik dengan serangan kawasan hadapan yang kuat. Kuat lwn Infantri. Lemah lwn Pemanah Berjalan Kaki dari jarak jauh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Caciques",
+          "description": "Pahlawan Champi dan Askar Ali-ali menyerang +25% lebih pantas"
+        },
+        {
+          "name": "Curare",
+          "description": "Pemanah Berjalan Kaki dan Pengubuan mengenakan kerosakan racun"
+        }
+      ],
+      "teamBonus": "Menara dan Kastil menyediakan +10 ruang populasi"
+    },
+    {
+      "code": "TUR",
+      "name": "Orang Turki",
+      "nameEn": "Turks",
+      "focus": "Tamadun Serbuk Letupan",
+      "civilizationBonuses": [
+        "Pelombong emas bekerja +25% lebih pantas",
+        "Barisan Pasukan Berkuda Pengintip +1 perisai tembusan dan naik taraf percuma",
+        "Kimia percuma; Teknologi Serbuk Letupan berkos -50%",
+        "Unit Serbuk Letupan +25% HP"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Janissari",
+          "description": "Penembak Berjalan Kaki unik Turki dengan serangan yang kuat. Kuat lwn Infantri. Lemah lwn Unit Memanah dan Askar Peninjau."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Sipahi",
+          "description": "Pemanah Berkuda +20 HP"
+        },
+        {
+          "name": "Artileri",
+          "description": "Menara Bedilan, Meriam Bedilan, Geliung Meriam +2 jarak"
+        }
+      ],
+      "teamBonus": "Unit Serbuk Letupan berlatih +25% lebih pantas"
+    },
+    {
+      "code": "VAR",
+      "name": "Varangian",
+      "nameEn": "Varangians",
+      "focus": "Tamadun Pasukan Berkuda dan Tentera Laut",
+      "civilizationBonuses": [
+        "Penggembalaan, memancing dan memburu juga menjana Emas",
+        "Kesan Keturunan dan Karavan +50%",
+        "Pengawal Varangian menyerang +25% lebih pantas dan menjana +50% Emas",
+        "Serangan Kapal Panjang dan Tarbil Geliung +15% lebih pantas"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Jarl",
+          "description": "Pasukan Berkuda unik Varangian dengan serangan melee. Sangat kuat lwn Infantri. Lemah lwn Penunggang Unta dan Rahib."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Warisan Vendel",
+          "description": "Barisan Satria mengenakan kerosakan penginjakan"
+        },
+        {
+          "name": "Gothikon",
+          "description": "Pengawal Varangian membaling kapak secara berkala"
+        }
+      ],
+      "teamBonus": "Serangan +1 barisan Satria lwn Infantri"
+    },
+    {
+      "code": "VIE",
+      "name": "Orang Vietnam",
+      "nameEn": "Vietnamese",
+      "focus": "Tamadun Pemanah",
+      "civilizationBonuses": [
+        "Pusat Bandar musuh didedahkan pada permulaan permainan",
+        "Naik taraf ekonomi tidak memerlukan kayu dan penyelidikan +100% lebih pantas",
+        "Unit Pemanah Bejalan Kaki dan Askar Peninjau +20% HP",
+        "Pengerahan percuma"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pemanah Rotan",
+          "description": "Pemanah Berjalan Kaki unik Orang Vietnam dengan baju zirah tembusan yang teguh. Kuat lwn Unit Pemanah dan infantri. Lemah lwn Pasukan Berkuda, Askar Peninjau dan Senjata Pengepungan."
+        },
+        {
+          "name": "Askar Peninjau Diraja",
+          "description": "Askar Peninjau antipemanah yang tidak boleh menyerang dari jarak dekat. Kuat lwn Askar Jarak Jauh dan barisan Askar Lembing. Lemah lwn unit dari jarak dekat. Boleh dilatih oleh Orang Vietnam dan sekutu mereka."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Chatra",
+          "description": "Gajah Tempur +100 HP"
+        },
+        {
+          "name": "Wang Kertas",
+          "description": "Pembalak menjana emas secara perlahan-lahan sebagai tambahan kepada kayu"
+        }
+      ],
+      "teamBonus": "Naik taraf Askar Peninjau Diraja tersedia pada Zaman Empayar"
+    },
+    {
+      "code": "VIK",
+      "name": "Orang Viking",
+      "nameEn": "Vikings",
+      "focus": "Tamadun Infantri dan Tentera Laut",
+      "civilizationBonuses": [
+        "Kereta Sorong, Kart Tangan percuma",
+        "Infantri +20% HP bermula pada Zaman Feudal",
+        "Kapal Perang berkos -10/15/20% dalam Zaman Feudal/Kastil/Empayar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Berserk",
+          "description": "Infantri unik Orang Viking yang menjana semula HP. Kuat lwn Infantri dan Senjata Pengepungan. Lemah lwn Unit Memanah dan Penembak."
+        },
+        {
+          "name": "Perahu Panjang",
+          "description": "Kapal Perang"
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Orang Besar",
+          "description": "Infantri +5 serangan lwn Pasukan Berkuda, +4 lwn Unit Unta"
+        },
+        {
+          "name": "Bogsveigar",
+          "description": "Barisan Pemanah dan Perahu Panjang +1 serangan"
+        }
+      ],
+      "teamBonus": "Dok berkos -15%"
+    },
+    {
+      "code": "WEI",
+      "name": "Orang Wei",
+      "nameEn": "Wei",
+      "focus": "Tamadun Pasukan Berkuda",
+      "civilizationBonuses": [
+        "Mendapat satu Orang Kampung percuma untuk setiap naik taraf ekonomi yang diselidik",
+        "Pasukan Berkuda Hei Guang dan Perompak Xianbei +20/30% HP dalam Zaman Kastil/Empayar",
+        "Kos Trebuchet Tarikan dan Lou Chuan -25%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pasukan Berkuda Harimau",
+          "description": "Pasukan Berkuda unik Wei yang mendapat HP dan menyerang apabila mengalahkan tentera musuh. Sangat kuat lwn Askar Jarak Jauh. Lemah lwn barisan Askar Lembing."
+        },
+        {
+          "name": "Penyerang Xianbei",
+          "description": "Pemanah Berkuda unik Wei dengan serangan serbuan jarak jauh. Kuat lwn Infantri. Lemah lwn Askar Peninjau dan Penunggang Unta."
+        },
+        {
+          "name": "Cao Cao",
+          "description": "Wira Pasukan Berkuda unik orang Wei, yang meningkatkan kelajuan serangan unit berdekatan. Sangat berkuasa. Mempunyai had satu, tidak boleh ditukar haluan."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tuntian",
+          "description": "Askar menghasilkan makanan secara pasif"
+        },
+        {
+          "name": "Baju Zirah Ming Guang",
+          "description": "Unit Berkuda +4 baju zirah melee"
+        }
+      ],
+      "teamBonus": "Pasukan Berkuda +2 serangan lwn Senjata Pengepungan"
+    },
+    {
+      "code": "WU",
+      "name": "Orang Wu",
+      "nameEn": "Wu",
+      "focus": "Tamadun Infantri dan Tentera Laut",
+      "civilizationBonuses": [
+        "Bangunan pengeluaran ketenteraan dan Dok menyediakan +55 makanan apabila dibina",
+        "Infantri menjana semula 10/15/30 HP setiap minit dalam Zaman Feudal/Kastil/Empayar",
+        "Askar Pedang Jian dan Pasukan Berkuda Hei Guang +2 serangan dalam Zaman Empayar",
+        "Pemiringan, Dok Kering percuma"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pemanah Api",
+          "description": "Pemanah Berjalan Kaki unik Wu yang menembak beberapa anak panah ke unit dan menggunakan serangan jarak jauh terhadap bangunan. Kuat lwn Infantri, Senjata Pengepungan dan bangunan. Lemah lwn Pasukan Berkuda dan Askar Peninjau."
+        },
+        {
+          "name": "Askar Pedang Jian",
+          "description": "Wu Infantri Kejutan unik yang memperoleh kelajuan pergerakan dan serangan tetapi kehilangan perisai apabila ambang kerosakan dicapai. Sangat kuat lwn Unit Memanah. Lemah lwn barisan Militia."
+        },
+        {
+          "name": "Sun Jian",
+          "description": "Wira Pasukan Berkuda unik orang Wu, yang meningkatkan kelajuan pergerakan unit berdekatan. Sangat berkuasa. Mempunyai had satu, tidak boleh ditukar haluan."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Taktik Red Cliff",
+          "description": "Kapal Perobohan dan Pemanah Api mengenakan kerosakan kebakaran pada kapal dan bangunan"
+        },
+        {
+          "name": "Harimau Duduk",
+          "description": "Trebuchet Tarikan dan senjata trebuchet Lou Chuan menembakkan projektil tambahan"
+        }
+      ],
+      "teamBonus": "Rumah dibina +100% lebih pantas"
+    }
+  ]
+}

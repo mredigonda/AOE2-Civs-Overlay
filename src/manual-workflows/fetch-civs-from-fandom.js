@@ -7,29 +7,12 @@
 
 const fs = require("fs");
 const path = require("path");
+const { htmlToText, fetchJson } = require("./lib");
 
 const PAGE = "Civilization_(Age_of_Empires_II)";
 const API = `https://ageofempires.fandom.com/api.php?action=parse&page=${encodeURIComponent(
     PAGE
 )}&prop=text|revid&format=json&formatversion=2`;
-
-const BLOCK_TAGS =
-    "p|div|li|dt|dd|h1|h2|h3|h4|h5|h6|br|tr|table|ul|ol|dl|figure|figcaption";
-
-function htmlToText(html) {
-    const text = html
-        .replace(/<(style|script|sup)\b[\s\S]*?<\/\1>/gi, "")
-        .replace(new RegExp(`<\\/?(?:${BLOCK_TAGS})\\b[^>]*>`, "gi"), "\n")
-        .replace(/<[^>]+>/g, "")
-        .replace(/&nbsp;/g, " ")
-        .replace(/&amp;/g, "&")
-        .replace(/&lt;/g, "<")
-        .replace(/&gt;/g, ">")
-        .replace(/&quot;/g, '"')
-        .replace(/&#0?39;/g, "'")
-        .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)));
-    return text.split("\n").map((l) => l.replace(/[ \t ]+/g, " ").trim());
-}
 
 // Keeps only the civilization sections and drops what a reader skips over:
 // the "[]" edit markers after headings, footnote asterisks, castle captions
@@ -67,9 +50,7 @@ function nextNonEmpty(lines, i) {
 }
 
 async function main() {
-    const res = await fetch(API, { headers: { "User-Agent": "aoe2-civs-overlay" } });
-    if (!res.ok) throw new Error(`Fandom answered ${res.status}`);
-    const json = await res.json();
+    const json = await fetchJson(API);
     const text = normalize(htmlToText(json.parse.text));
     const out = path.join(__dirname, "copy-paste-from-fandom.txt");
     fs.writeFileSync(out, text);

@@ -16,6 +16,8 @@ MB and starts instantly. Version 1 was an Electron app.
 -   **⚙**: turn the rival column and each section (bonuses, unique units, team bonus,
     Wonder…) on or off. Settings and the last civs picked are remembered.
 -   Drag it by the **⋮⋮** handle.
+-   **Language** (in ⚙): English or Spanish from the Fandom wikis (the most detail), or
+    the game's own text in any of its 17 languages, with the official names.
 
 On Windows, run the game in "Full Desktop" (Options → Graphics → Display Mode) so the
 overlay can stay on top of it.
@@ -32,19 +34,18 @@ npm run dev
 `npm run build` makes the installers for the OS it runs on (a `.app`/`.dmg` on macOS;
 an `.exe`/`.msi` must be built on Windows).
 
--   `ui/`: the page (plain HTML/CSS/JS, no build step) and `civ-info.json`.
+-   `ui/`: the page (plain HTML/CSS/JS, no build step) and the civ data (`ui/data/`).
 -   `src-tauri/`: the Rust side: the window, the global shortcut, resizing the window
     to its content.
 
 ## Civilization data
 
-`ui/civ-info.json` comes from the
-[Fandom wiki](https://ageofempires.fandom.com/wiki/Civilization_(Age_of_Empires_II)).
-After a patch or a new DLC:
+`ui/data/` has one file per language option: the English and Spanish Fandom wikis and
+the game's own text in 17 languages. After a patch or a new DLC:
 
 ```bash
 npm run civs:refresh
-git diff ui/civ-info.json
+git diff --stat ui/data
 ```
 
 See [src/manual-workflows/README.md](src/manual-workflows/README.md).

@@ -17,9 +17,14 @@
             </header>
 
             <section class="settings" id="settings" hidden>
-                <label><input type="checkbox" data-setting="showRival" /> Show rival column</label>
-                <div class="settings-title">Sections</div>
+                <label class="language">
+                    <span id="language-label"></span>
+                    <select id="language"></select>
+                </label>
+                <label><input type="checkbox" data-setting="showRival" /> <span id="show-rival-label"></span></label>
+                <div class="settings-title" id="sections-title"></div>
                 <div id="section-toggles"></div>
+                <div class="source" id="source"></div>
             </section>
 
             <main class="columns" id="columns"></main>

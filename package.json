@@ -7,7 +7,7 @@
         "dev": "tauri dev",
         "build": "tauri build",
         "tauri": "tauri",
-        "civs:refresh": "node src/manual-workflows/fetch-civs-from-fandom.js && node src/manual-workflows/parse-civs-from-pasted.js"
+        "civs:refresh": "node src/manual-workflows/fetch-civs-from-fandom.js && node src/manual-workflows/parse-civs-from-pasted.js && node src/manual-workflows/fetch-civs-from-game.js && node src/manual-workflows/fetch-civs-from-fandom-es.js"
     },
     "author": "Maximiliano Redigonda",
     "license": "ISC",

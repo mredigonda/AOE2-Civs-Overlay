@@ -39,17 +39,25 @@
     const norm = (s) =>
         s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 
+    // Matches the name in the current language, the English one and the code,
+    // so "francos", "franks" and "FRK" all find the Franks.
     function score(civ, query) {
         const q = norm(query);
-        const name = norm(civ.name);
-        // A name that starts with what you typed always wins ("ma" → Magyars, Malay…)
-        if (name.startsWith(q)) return 2 - name.length / 100;
-        return Math.max(jaroWinkler(name, q), jaroWinkler(norm(civ.code), q));
+        let best = jaroWinkler(norm(civ.code), q);
+        for (const raw of [civ.name, civ.nameEn]) {
+            if (!raw) continue;
+            const name = norm(raw);
+            // A name that starts with what you typed always wins ("ma" → Magyars, Malay…)
+            if (name.startsWith(q)) return 2 - name.length / 100;
+            best = Math.max(best, jaroWinkler(name, q));
+        }
+        return best;
     }
 
     class CivSearch {
-        constructor({ mount, civs, placeholder, onChange, onChangeLayout }) {
+        constructor({ mount, civs = [], placeholder = "", onChange, onChangeLayout }) {
             this.civs = civs;
+            this.noResults = "No civilizations found";
             this.onChange = onChange;
             this.onChangeLayout = onChangeLayout || (() => {});
             this.results = [];
@@ -111,7 +119,7 @@
                       })
                     : [Object.assign(document.createElement("div"), {
                           className: "pick-empty",
-                          textContent: "No civilizations found",
+                          textContent: this.noResults,
                       })])
             );
             this.list.hidden = false;
@@ -141,6 +149,13 @@
             this.set(civ);
             this.close();
             this.onChange(civ);
+        }
+
+        setCivs(civs, placeholder, noResults) {
+            this.civs = civs;
+            this.input.placeholder = placeholder;
+            this.noResults = noResults;
+            if (this.isOpen) this.search();
         }
 
         set(civ) {

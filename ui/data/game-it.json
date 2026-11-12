@@ -1,0 +1,1762 @@
+{
+  "source": "SiegeEngineers/aoe2techtree@e56728e",
+  "labels": {
+    "uniqueUnits": "Unità riservate",
+    "uniqueTechnologies": "Tecnologie riservate",
+    "teamBonus": "Bonus di squadra"
+  },
+  "civs": [
+    {
+      "code": "ARM",
+      "name": "Armeni",
+      "nameEn": "Armenians",
+      "focus": "Civiltà nota per la fanteria e le imbarcazioni",
+      "civilizationBonuses": [
+        "Costo dei carri trainati da muli: -25%",
+        "Effetti delle tecnologie per i carri trainati da muli aumentata: +40%",
+        "Potenziamenti delle unità delle linee dei lancieri e della milizia sono disponibili con un'età d'anticipo (eccetto la fanteria scelta)",
+        "La prima chiesa fortificata riceve una reliquia gratuita",
+        "La linea delle galee e i dromoni scagliano un proiettile aggiuntivo"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arciere con arco composito",
+          "description": "Arciere riservato agli Armeni con attacco che ignora la corazza. Forte contro la fanteria e la cavalleria. Debole contro gli arcieri e le armi d'assedio."
+        },
+        {
+          "name": "Sacerdote guerriero",
+          "description": "Unità di fanteria del monastero riservata agli Armeni che può guarire le unità alleate. Può raccogliere reliquie e portarle nei monasteri. Forte contro la fanteria. Debole contro la linea degli esploratori a cavallo e gli arcieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Flotta cilicia",
+          "description": "area d'impatto delle navi da demolizione: +20%; gittata della linea delle galee e dei dromoni: +1"
+        },
+        {
+          "name": "Portatori di fercoli",
+          "description": "resistenza ai colpi della fanteria, eccetto le unità della linea dei lancieri: +30; velocità di guarigione dei sacerdoti guerrieri: +100%"
+        }
+      ],
+      "teamBonus": "Campo visivo della fanteria: +2"
+    },
+    {
+      "code": "AZT",
+      "name": "Aztechi",
+      "nameEn": "Aztecs",
+      "focus": "Civiltà nota per fanteria e monaci",
+      "civilizationBonuses": [
+        "Inizia con +50 oro",
+        "Capacità di trasporto degli abitanti del villaggio: +3",
+        "Velocità di addestramento delle unità militari: +15%",
+        "I monaci ottengono +5 resistenza ai colpi per ogni tecnologia dei monasteri sviluppata"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Guerriero giaguaro",
+          "description": "Unità di fanteria riservata agli Aztechi che infligge danni aggiuntivi quando sconfigge unità militari. Straordinariamente forte contro la fanteria. Debole contro cavalleria e unità di tipo arciere."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Atlatl",
+          "description": "fanteria leggera: +1 attacco, +1 gittata"
+        },
+        {
+          "name": "Guerre dei fiori",
+          "description": "fanteria: +4 attacco"
+        }
+      ],
+      "teamBonus": "Le reliquie generano +33% oro"
+    },
+    {
+      "code": "BENG",
+      "name": "Bengalesi",
+      "nameEn": "Bengalis",
+      "focus": "Civiltà nota per gli elefanti e le navi",
+      "civilizationBonuses": [
+        "I centri città generano 2 abitanti del villaggio quando viene raggiunta l'età successiva",
+        "Cavalleria: +2 attacco contro la fanteria leggera",
+        "Le unità su elefante subiscono il 25% in meno di danni bonus e sono più resistenti alla conversione",
+        "Monaci: +3 corazza da corpo a corpo/+3 corazza per armi da lancio",
+        "Le navi rigenerano 15 punti di resistenza ai colpi al minuto"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ratha",
+          "description": "arciere a cavallo"
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Paik",
+          "description": "velocità di attacco di ratha e unità su elefante: +20%"
+        },
+        {
+          "name": "Mahayana",
+          "description": "spazi popolazione occupati dagli abitanti del villaggio e dai monaci: -10%"
+        }
+      ],
+      "teamBonus": "Oltre all'oro, le unità commerciali producono il 10% in più di cibo"
+    },
+    {
+      "code": "BER",
+      "name": "Berberi",
+      "nameEn": "Berbers",
+      "focus": "Civiltà nota per cavalleria e navi",
+      "civilizationBonuses": [
+        "Velocità di movimento degli abitanti del villaggio: +5% nell'Alto Medioevo, +10% a partire dall'età feudale",
+        "Costo delle unità delle scuderie: -15/20% nell'età dei castelli/imperiale",
+        "Velocità di movimento delle navi: +10%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arciere a cammello",
+          "description": "Arciere a cavallo riservato ai Berberi. Eccezionalmente forte contro arcieri a cavallo. Debole contro linea dei lancieri, fanteria leggera e cammellieri."
+        },
+        {
+          "name": "Genitour",
+          "description": "Fanteria leggera a cavallo anti-arcieri che non può attaccare a corto raggio. Forte contro soldati a distanza. Debole contro unità a corto raggio. Può essere addestrata dai Berberi e i loro alleati."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kasbah",
+          "description": "velocità di lavoro dei castelli della squadra: +25%"
+        },
+        {
+          "name": "Cammelli magrebini",
+          "description": "le unità cammello rigenerano 15 punti di resistenza ai colpi al minuto"
+        }
+      ],
+      "teamBonus": "Genitour disponibile presso l'area di tiro con l'arco a partire dall'età dei castelli"
+    },
+    {
+      "code": "BOH",
+      "name": "Boemi",
+      "nameEn": "Bohemians",
+      "focus": "Civiltà nota per polvere da sparo e monaci",
+      "civilizationBonuses": [
+        "Tecnologie delle aree minerarie gratuite",
+        "Costo in legname di fabbri e università: -100",
+        "Le linee di lancieri infliggono +25% di danni bonus",
+        "Fervore e Santità colpiscono gli abitanti del villaggio",
+        "Chimica e cannonieri disponibili nell'età dei castelli"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Carro ussita",
+          "description": "Unità d'assedio dotata di polvere da sparo riservata ai Boemi. Le unità dietro di essa ricevono il 50% di danni in meno dai colpi in arrivo. Forte contro i soldati a distanza. Debole contro la linea dei mangani."
+        },
+        {
+          "name": "Obice",
+          "description": "Unità d'assedio dotata di polvere da sparo riservata ai Boemi. Lunga gittata, ma non può attaccare da distanza ravvicinata. Forte contro costruzioni e armi d'assedio. Debole contro le unità a distanza ravvicinata."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tattiche di fortezze di carri",
+          "description": "velocità delle unità dotate di polvere da sparo: +10%"
+        },
+        {
+          "name": "Riforme ussite",
+          "description": "le tecnologie di monaci e monasteri costano cibo invece di oro"
+        }
+      ],
+      "teamBonus": "Velocità di lavoro dei mercati: +80%"
+    },
+    {
+      "code": "BRI",
+      "name": "Britanni",
+      "nameEn": "Britons",
+      "focus": "Civiltà nota per gli arcieri a piedi",
+      "civilizationBonuses": [
+        "Velocità di lavoro dei pastori: +25%",
+        "Costo dei centri città: -50% unità di legname a partire dall'età dei castelli",
+        "Arcieri a piedi: +1/+2 gittata nell'età dei castelli/imperiale"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arciere arco lungo",
+          "description": "Arciere a piedi riservato ai Britanni dalla lunghissima gittata. Forte contro la fanteria. Debole contro cavalleria e fanteria leggera."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Yeomen",
+          "description": "gittata arcieri a piedi e linea della fanteria leggera: +1; attacco linea delle torri di osservazione: +2"
+        },
+        {
+          "name": "Warwolf",
+          "description": "i trabucchi infliggono danni ad area e sono più precisi"
+        }
+      ],
+      "teamBonus": "Velocità di lavoro dell'area di tiro con l'arco: +10%"
+    },
+    {
+      "code": "BUL",
+      "name": "Bulgari",
+      "nameEn": "Bulgarians",
+      "focus": "Civiltà nota per fanteria e cavalleria",
+      "civilizationBonuses": [
+        "Potenziamenti delle linee della milizia gratuiti",
+        "Costo tecnologie di fabbro e laboratorio d'assedio: -50% unità di cibo",
+        "Costo centri città: -50% unità di pietra",
+        "Può costruire krepost nell'età dei castelli"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Konnik",
+          "description": "Unità di cavalleria pesante riservata ai Bulgari che combatte come un'unità di fanteria quando viene atterrata. Forte contro fanteria e cavalleria. Debole contro monaci e linea dei lancieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Staffe",
+          "description": "velocità d'attacco cavalleria: +33%"
+        },
+        {
+          "name": "Bagains",
+          "description": "linee della milizia: +5 corazza da corpo a corpo"
+        }
+      ],
+      "teamBonus": "Velocità di lavoro dei fabbri: +80%"
+    },
+    {
+      "code": "BURGU",
+      "name": "Borgognoni",
+      "nameEn": "Burgundians",
+      "focus": "Civiltà nota per la cavalleria",
+      "civilizationBonuses": [
+        "I potenziamenti economici sono disponibili con un'età d'anticipo e costano meno cibo (-40%)",
+        "Costo delle tecnologie della scuderia: -50%",
+        "Potenziamento cavaliere scelto disponibile nell'età dei castelli",
+        "Attacco delle unità dotate di polvere da sparo: +25%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Coustillier",
+          "description": "Cavalleria pesante riservata ai Borgognoni con un potente attacco caricato. Forte contro fanteria e arcieri. Debole contro cammellieri e monaci."
+        },
+        {
+          "name": "Milizia fiamminga",
+          "description": "Unità di fanteria anti-cavalleria riservata ai Borgognoni. Forte contro le unità su cavalcatura. Debole contro i soldati a distanza."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Vigneti borgognoni",
+          "description": "i contadini generano lentamente oro oltre al cibo"
+        },
+        {
+          "name": "Rivoluzione fiamminga",
+          "description": "Tutti gli abitanti del villaggio esistenti vengono trasformati in milizia fiamminga"
+        }
+      ],
+      "teamBonus": "le reliquie generano cibo in aggiunta all'oro"
+    },
+    {
+      "code": "BUR",
+      "name": "Birmani",
+      "nameEn": "Burmese",
+      "focus": "Civiltà nota per fanteria e cavalleria",
+      "civilizationBonuses": [
+        "Potenziamenti falegnameria gratuiti",
+        "Attacco fanteria +1 nell'età feudale, +2 nell'età dei castelli, +3 nell'età imperiale",
+        "Elefanti da combattimento: +1 corazza da corpo a corpo/+1 corazza per armi da lancio",
+        "Costo tecnologie monastero: -50%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arambai",
+          "description": "Unità a cavallo a distanza riservata ai Birmani con un attacco potente ma impreciso. Forte contro le unità a distanza media e ravvicinata. Debole contro arcieri e armi d'assedio"
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Cavalleria manipur",
+          "description": "attacco cavalleria contro i soldati a distanza: +4"
+        },
+        {
+          "name": "Howdah",
+          "description": "elefanti da combattimento: +1 corazza da corpo a corpo/+1 corazza per armi da lancio"
+        }
+      ],
+      "teamBonus": "Reliquie visibili sulla mappa all'inizio della partita"
+    },
+    {
+      "code": "BYZ",
+      "name": "Bizantini",
+      "nameEn": "Byzantines",
+      "focus": "Civiltà difensiva",
+      "civilizationBonuses": [
+        "Resistenza ai colpi delle costruzioni: +10% nell'Alto Medioevo, +20% nell'età feudale,",
+        "+30% nell'età dei castelli, +40% nell'età imperiale",
+        "Costo di cammellieri, fanteria leggera e lancieri: -25%",
+        "Guardia cittadina e ronda cittadina gratuite",
+        "Costo del passaggio all'età imperiale: -33%",
+        "Velocità d'attacco di dromoni e navi incendiarie: +25%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Catafratto",
+          "description": "Unità di cavalleria pesante riservata ai Bizantini. Eccezionalmente forte contro fanteria. Debole contro unità di tipo arciere."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Fuoco greco",
+          "description": "gittata delle navi incendiarie: +1; area d'impatto di dromoni e torri con bombarda aumentata"
+        },
+        {
+          "name": "Logistica",
+          "description": "catafratti e guardie variaghe infliggono danni da travolgimento"
+        }
+      ],
+      "teamBonus": "Velocità di guarigione dei monaci: +100%"
+    },
+    {
+      "code": "CEL",
+      "name": "Celti",
+      "nameEn": "Celts",
+      "focus": "Civiltà nota per fanteria e unità d'assedio",
+      "civilizationBonuses": [
+        "Velocità di lavoro dei taglialegna: +15%",
+        "Il bestiame all'interno del campo visivo delle unità celtiche non può essere rubato",
+        "Velocità di movimento della fanteria: +5% nell'Alto Medioevo, +10% nell'età feudale/",
+        "+15% nell'età dei castelli, +20% nell'età imperiale",
+        "Velocità d'attacco delle armi d'assedio: +25%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Predone del guado",
+          "description": "Unità di fanteria riservata ai Celti con elevata velocità di movimento. Forte contro fanteria e armi d'assedio. Debole contro unità di tipo arciere e cavalleria."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Fortezza",
+          "description": "velocità d'attacco di castelli e linee di osservazione: +33%; i castelli guariscono la fanteria alleata in un raggio di 7 caselle"
+        },
+        {
+          "name": "Furore celtico",
+          "description": "unità d'assedio: +40% resistenza ai colpi"
+        }
+      ],
+      "teamBonus": "Velocità di lavoro dei laboratori d'assedio: +20%"
+    },
+    {
+      "code": "CHI",
+      "name": "Cinesi",
+      "nameEn": "Chinese",
+      "focus": "Civiltà nota per gli arcieri e la polvere da sparo",
+      "civilizationBonuses": [
+        "Inizia con +3 abitanti del villaggio, ma -50 unità di legname e -200 unità di cibo",
+        "Costo tecnologie: -5/10/15% nell'età feudale/dei castelli/imperiale",
+        "I centri città forniscono +15 spazi popolazione e ottengono +7 campo visivo",
+        "La velocità di movimento di lancieri da fuoco e navi incendiarie aumenta del +5/10% nell'età dei castelli/età imperiale"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Chu Ko Nu",
+          "description": "Arciere a piedi riservato ai Cinesi con attacco rapido. Forte contro la fanteria. Debole contro unità di tipo arciere e armi d'assedio."
+        },
+        {
+          "name": "Nave drago",
+          "description": "Nave da guerra riservata ai Cinesi che sputa fuoco a distanza ravvicinata. Forte contro la linea delle galee. Debole contro le navi da demolizione."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Grande Muraglia",
+          "description": "mura, linea delle torri di osservazione e torri con bombarda: +30% resistenza ai colpi"
+        },
+        {
+          "name": "Missilistica (scorpioni, carri con razzi e lou chuan: +25% attacco); lou chuan sparano razzi",
+          "description": ""
+        }
+      ],
+      "teamBonus": "Le fattorie producono +10% unità di cibo"
+    },
+    {
+      "code": "CUM",
+      "name": "Cumani",
+      "nameEn": "Cumans",
+      "focus": "Civiltà nota per la cavalleria",
+      "civilizationBonuses": [
+        "Nell'età feudale è possibile costruire un centro città aggiuntivo",
+        "Velocità di movimento unità a cavallo: +5% nell'età feudale,",
+        "+10% nell'età dei castelli, +15% nell'età imperiale",
+        "Costo aree di tiro con l'arco e scuderie: -75 unità di legname",
+        "Laboratorio d'assedio e ariete disponibili nell'età feudale; ariete coperto disponibile nell'età dei castelli"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kipchaki",
+          "description": "Arciere a cavallo riservato ai Cumani che scaglia frecce multiple. Forte contro fanteria e armi d'assedio. Debole contro gli arcieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Allevamento nella steppa",
+          "description": "velocità di addestramento di linea degli esploratori a cavallo, lancieri della steppa e arcieri a cavallo: +100%"
+        },
+        {
+          "name": "Mercenari cumani",
+          "description": "tutti i membri della squadra possono creare 5 kipchaki d'élite gratuiti per castello"
+        }
+      ],
+      "teamBonus": "Cinta a palizzata: +33% resistenza ai colpi"
+    },
+    {
+      "code": "DAN",
+      "name": "Danesi",
+      "nameEn": "Danes",
+      "focus": "Civiltà nota per la fanteria e le unità d'assedio",
+      "civilizationBonuses": [
+        "Navi da pesca e abitanti del villaggio depositano il 5% di cibo in più",
+        "Ottieni il 25% del costo in risorse di ogni costruzione distrutta",
+        "I miglioramenti di alloggiamenti e laboratorio d'assedio hanno un costo in oro ridotto (-66%)",
+        "Le guardie variaghe e le barcacce hanno +10% velocità di movimento"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Jómsvíking",
+          "description": "Fanteria riservata ai Danesi che scaglia torce incendiarie quando attacca costruzioni o navi. Eccezionalmente forte contro cavalleria e costruzioni. Debole contro i soldati a distanza."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Hamask",
+          "description": "la fanteria infligge più danni quando perde punti di resistenza ai colpi"
+        },
+        {
+          "name": "Furia nordica",
+          "description": "la linea dei mangani e i galeoni con catapulta hanno +1 gittata; armi d'assedio e navi da guerra d'assedio hanno +40% attacco contro le costruzioni"
+        }
+      ],
+      "teamBonus": "Le armi d'assedio hanno +2 campo visivo"
+    },
+    {
+      "code": "DRAV",
+      "name": "Dravidi",
+      "nameEn": "Dravidians",
+      "focus": "Civiltà nota per la fanteria e le navi",
+      "civilizationBonuses": [
+        "Trasporto pescatori e navi da pesca: +15",
+        "Ricevi +200 unità di legname quando passi all'età successiva",
+        "Velocità d'attacco di fanteria leggera e arcieri su elefante: +25%",
+        "Costo tecnologie degli alloggiamenti: -50%",
+        "Le armi d'assedio costano -33% legname"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Spadaccino urumi",
+          "description": "Unità di fanteria riservata ai Dravidi con attacco ad area caricato. Forte contro costruzioni e unità a distanza ravvicinata. Debole contro soldati a distanza distanti."
+        },
+        {
+          "name": "Thirisadai",
+          "description": "Resistente nave da guerra riservata ai Dravidi. Forte contro la maggior parte delle navi da guerra. Debole contro le navi incendiarie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Corpo medico",
+          "description": "le unità su elefante rigenerano 30 punti di resistenza ai colpi al minuto"
+        },
+        {
+          "name": "Acciaio wootz",
+          "description": "gli attacchi di fanteria e cavalleria ignorano la corazza"
+        }
+      ],
+      "teamBonus": "I moli forniscono +5 spazi popolazione"
+    },
+    {
+      "code": "ETH",
+      "name": "Etiopi",
+      "nameEn": "Ethiopians",
+      "focus": "Civiltà nota per gli arcieri",
+      "civilizationBonuses": [
+        "Ricevi +100 unità d'oro e +100 unità di cibo quando passi all'età successiva",
+        "Velocità d'attacco degli arcieri a piedi: +18%",
+        "Potenziamento picchieri gratuito"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Guerriero con Shotel",
+          "description": "Veloce unità di fanteria riservata agli Etiopi con un'elevata velocità di addestramento e attacco potente. Forte contro fanteria. Debole contro unità di tipo arciere."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Eredi reali",
+          "description": "i guerrieri con shotel e le unità cammello ricevono -3 danni dalle unità a cavallo"
+        },
+        {
+          "name": "Motori di torsione",
+          "description": "aumenta l'area d'impatto delle unità del laboratorio d'assedio"
+        }
+      ],
+      "teamBonus": "Campo visivo avamposti +3 senza costo in pietra"
+    },
+    {
+      "code": "FRK",
+      "name": "Franchi",
+      "nameEn": "Franks",
+      "focus": "Civiltà nota per la cavalleria",
+      "civilizationBonuses": [
+        "Velocità di lavoro dei raccoglitori: +15%",
+        "Tecnologie del mulino gratuite",
+        "Resistenza ai colpi delle unità a cavallo: +20% a partire dall'età feudale",
+        "Costo dei castelli: -15% nell'età dei castelli, -25% nell'età imperiale"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Lanciatore di ascia",
+          "description": "Unità di fanteria riservata ai Franchi con attacco corpo a corpo a distanza. Forte contro fanteria. Debole contro unità di tipo arciere e armi d'assedio."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Compagnie d'ordonnance",
+          "description": "costo in oro dei balestrieri a cavallo: -40%"
+        },
+        {
+          "name": "Cavalleria",
+          "description": "velocità di lavoro delle scuderie: +40%"
+        }
+      ],
+      "teamBonus": "Campo visivo della linea della cavalleria: +2"
+    },
+    {
+      "code": "GEO",
+      "name": "Georgiani",
+      "nameEn": "Georgians",
+      "focus": "Civiltà difensiva nota per la cavalleria",
+      "civilizationBonuses": [
+        "Inizia con un carro trainato da muli",
+        "Le unità e le costruzioni subiscono il 15% di danni in meno quando combattono da posizioni sopraelevate",
+        "Le unità su cavalcatura rigenerano 2/8/14 punti di resistenza ai colpi al minuto nell'età feudale/dei castelli/imperiale",
+        "Le chiese fortificate conferiscono +10% alla velocità di lavoro degli abitanti del villaggio nel raggio di 9 caselle"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Monaspa",
+          "description": "Unità di cavalleria pesante riservata ai Georgiani che diventa più forte quando ci sono altri monaspa o unità della linea dei cavalieri nelle vicinanze. Forte contro la fanteria e la cavalleria. Debole contro lancieri e cammellieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Torri svan",
+          "description": "attacco delle fortificazioni: +2; le torri di osservazione infliggono danni perforanti"
+        },
+        {
+          "name": "Cavalleria aznauri",
+          "description": "le unità a cavallo occupano il 20% in meno di spazio popolazione"
+        }
+      ],
+      "teamBonus": "costo di riparazione delle costruzioni: -25%"
+    },
+    {
+      "code": "GOT",
+      "name": "Goti",
+      "nameEn": "Goths",
+      "focus": "Civiltà nota per la fanteria",
+      "civilizationBonuses": [
+        "Il telaio può essere sviluppato istantaneamente",
+        "I cacciatori trasportano +15 unità; gli animali cacciati durano il +20% più a lungo",
+        "Costo fanteria: -15% nell'Alto Medioevo, -20% nell'età feudale, -25% nell'età dei castelli/",
+        "-30% nell'età imperiale",
+        "Fanteria: +1/+2/+3 attacco contro le costruzioni nell'età feudale/",
+        "dei castelli/imperiale",
+        "+10 spazio popolazione nell'età imperiale"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Huskarl",
+          "description": "Unità di fanteria riservata ai Goti con corazza per armi da lancio eccezionale. Forte contro soldati a distanza e costruzioni. Debole contro unità di tipo milizia e cavalleria."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Anarchia",
+          "description": "puoi creare gli huskarl negli alloggiamenti"
+        },
+        {
+          "name": "Mobilitazione",
+          "description": "velocità di lavoro degli alloggiamenti: +100%"
+        }
+      ],
+      "teamBonus": "Velocità di lavoro degli alloggiamenti: +20%"
+    },
+    {
+      "code": "GURJ",
+      "name": "Gurjara",
+      "nameEn": "Gurjaras",
+      "focus": "Civiltà nota per la cavalleria e i cammelli",
+      "civilizationBonuses": [
+        "Inizia con 2 aree di raccolta",
+        "Può mettere il bestiame a presidio nei mulini per produrre cibo passivamente",
+        "Le unità a cavallo infliggono +20 danni bonus nell'età feudale, +30 nell'età dei castelli, +40 nell'età imperiale"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Lanciatore di chakram",
+          "description": "Unità di fanteria riservata ai Gurjara con attacco corpo a corpo a distanza che infligge danni perforanti. Forte contro fanteria e grandi gruppi di unità. Debole contro cavalleria e armi d'assedio."
+        },
+        {
+          "name": "Cavaliere con Shrivamsha",
+          "description": "Unità di cavalleria veloce riservata ai Gurjara in grado di schivare i proiettili. Forte contro i soldati a distanza. Debole contro linea dei lancieri e cammellieri."
+        },
+        {
+          "name": "Esploratore con cammello",
+          "description": "Esploratore riservato ai Gurjara. Veloce unità di cavalleria anti-cavalleria. Forte contro le unità con cavalcatura. Debole contro fanteria, monaci e arcieri a piedi."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kshatriya",
+          "description": "costo in cibo delle unità militari: -25%"
+        },
+        {
+          "name": "Guardie di frontiera",
+          "description": "corazza corpo a corpo di cammellieri e arcieri su elefante: +4"
+        }
+      ],
+      "teamBonus": "Velocità di addestramento di unità con cammelli ed elefanti: +25%"
+    },
+    {
+      "code": "HIN",
+      "name": "Indostani",
+      "nameEn": "Hindustanis",
+      "focus": "Civiltà nota per i cammelli e la polvere da sparo",
+      "civilizationBonuses": [
+        "Gli abitanti del villaggio costano -8/13/18/23% nell'Alto Medioevo/età feudale/età dei castelli/",
+        "età imperiale",
+        "Velocità d'attacco dei cammellieri: +20%",
+        "Unità dotate di polvere da sparo: +1 corazza corpo a corpo / +1 corazza per armi da lancio",
+        "Può costruire il caravanserraglio nell'età imperiale"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ghulam",
+          "description": "Unità di fanteria riservata agli Indostani che trafigge diversi bersagli con la sua lancia. Eccezionalmente forte contro unità di tipo arciere e linea dei lancieri. Debole contro la cavalleria."
+        },
+        {
+          "name": "Cammelliere imperiale",
+          "description": "Veloce unità di cavalleria anti-cavalleria riservata agli Indostani. Forte contro unità a cavallo. Debole contro fanteria, monaci e arcieri a piedi."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Grand Trunk Road",
+          "description": "velocità entrate d'oro: +10%; dazio sulla compravendita di merci ridotto al 10%"
+        },
+        {
+          "name": "Shatagni",
+          "description": "gittata dei cannonieri: +2"
+        }
+      ],
+      "teamBonus": "Linea degli esploratori a cavallo e unità su cammello: +2 attacco contro le costruzioni"
+    },
+    {
+      "code": "HUN",
+      "name": "Unni",
+      "nameEn": "Huns",
+      "focus": "Civiltà nota per la cavalleria",
+      "civilizationBonuses": [
+        "Non ha bisogno di case, ma inizia con -100 unità di legname",
+        "Costo degli arcieri a cavallo: -10/20% nell'età dei castelli/imperiale",
+        "I trabucchi sparano con più precisione contro unità e bersagli piccoli",
+        "Nelle mappe di tipo nomade, il primo centro città genera un esploratore a cavallo"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Tarkan",
+          "description": "Unità di cavalleria pesante riservata agli Unni. Eccezionalmente forte contro costruzioni. Debole contro linea dei lancieri e cammellieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Predoni",
+          "description": "i tarkan possono essere addestrati presso le scuderie"
+        },
+        {
+          "name": "Ateismo",
+          "description": "le reliquie nemiche generano -50% di risorse; le vittorie con meraviglia e reliquia richiedono +100 anni"
+        }
+      ],
+      "teamBonus": "Velocità di lavoro delle scuderie: +20%"
+    },
+    {
+      "code": "INC",
+      "name": "Inca",
+      "nameEn": "Inca",
+      "focus": "Civiltà nota per la fanteria",
+      "civilizationBonuses": [
+        "Case e insediamenti forniscono +5 spazi popolazione",
+        "Costo delle costruzioni: -15% unità di pietra",
+        "Le unità militari costano meno cibo nell'alto Medioevo/età feudale/età dei castelli/età imperiale (-15/20/25/30%)",
+        "Gli abitanti del villaggio sono influenzati dai potenziamenti del fabbro per la fanteria a partire dall'età dei castelli"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kamayuk",
+          "description": "Unità di fanteria riservata agli Inca con portata d'attacco maggiore. Forte contro cavalleria e fanteria. Debole contro arcieri e artiglieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Fionda andina",
+          "description": "fanteria leggera e frombolieri senza gittata minima, frombolieri: +1 attacco"
+        },
+        {
+          "name": "Scudi di tessuto",
+          "description": "kamayuk, frombolieri e guerrieri champi: +1 corazza corpo a corpo / +1 corazza per armi da lancio"
+        }
+      ],
+      "teamBonus": "Inizia con un lama gratuito"
+    },
+    {
+      "code": "ITA",
+      "name": "Italiani",
+      "nameEn": "Italians",
+      "focus": "Civiltà nota per arcieri e navi",
+      "civilizationBonuses": [
+        "Costo di avanzamento di età: -15%",
+        "Arcieri a piedi e condottieri: +1 corazza corpo a corpo/+1 corazza per armi da lancio",
+        "Costo delle tecnologie del molo e dell'università: -25%",
+        "Costo delle unità dotate di polvere da sparo: -20%",
+        "Costo delle navi da pesca: -15%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Balestriere Genovese",
+          "description": "Arciere a piedi riservato agli Italiani. Eccezionalmente forte contro la cavalleria. Debole contro unità di tipo arciere e armi d'assedio."
+        },
+        {
+          "name": "Condottiero",
+          "description": "Unità di fanteria veloce anti-polvere da sparo. Forte contro le unità dotate di polvere da sparo. Debole contro cavalleria e unità di tipo arciere. Addestrabile dagli Italiani e dai loro alleati."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Via della seta",
+          "description": "costo unità commerciali: -50%"
+        },
+        {
+          "name": "Pirotecnia",
+          "description": "i cannonieri infliggono +15% di danni perforanti e sono più precisi"
+        }
+      ],
+      "teamBonus": "Condottiero disponibile presso gli alloggiamenti nell'età imperiale"
+    },
+    {
+      "code": "JAP",
+      "name": "Giapponesi",
+      "nameEn": "Japanese",
+      "focus": "Civiltà nota per la fanteria",
+      "civilizationBonuses": [
+        "Costo di mulino, falegnameria e area mineraria: -50%",
+        "Velocità di attacco della fanteria: +33% a partire dall'età feudale",
+        "Attacco arcieri a cavallo: +2 attacco contro soldati a distanza (a eccezione della fanteria leggera)",
+        "Navi da pesca: velocità di lavoro +5% nell'Alto Medioevo, +10% nell'età feudale, +15% nell'età dei castelli, +20% nell'età imperiale; +100% resistenza ai colpi"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Samurai",
+          "description": "Unità di fanteria riservata ai Giapponesi che carica velocemente in combattimento e attacca rapidamente. Forte contro le unità riservate. Debole contro unità di tipo arciere e artiglieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Yasama",
+          "description": "le linee di torri di osservazione scoccano frecce aggiuntive"
+        },
+        {
+          "name": "Kataparuto",
+          "description": "i trabucchi attaccano e si montano/smontano più velocemente"
+        }
+      ],
+      "teamBonus": "Campo visivo galee: +4"
+    },
+    {
+      "code": "JUR",
+      "name": "Juzhen",
+      "nameEn": "Jurchens",
+      "focus": "Civiltà nota per la cavalleria e la polvere da sparo",
+      "civilizationBonuses": [
+        "La carne degli animali cacciati e del bestiame non deperisce",
+        "Le unità a cavallo e i lancieri da fuoco attaccano il 25% più velocemente a partire dall'età feudale",
+        "I genieri d'assedio sono disponibili a partire dall'età dei castelli",
+        "I potenziamenti per unità d'assedio e fortificazioni costano il 75% in meno e vengono sviluppati il 100% più velocemente",
+        "Le unità subiscono il 50% di danni da fuoco amico in meno"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pagoda di ferro",
+          "description": "Unità di cavalleria pesante riservata agli Jurchen dotata di corazza resistente in grado di bloccare completamente gli attacchi corpo a corpo. Forte contro fanteria e soldati a distanza. Debole contro linea dei lancieri e cammellieri."
+        },
+        {
+          "name": "Granatiere",
+          "description": "Unità dotata di polvere da sparo riservata agli Jurchen con un attacco ad area a distanza, ma non può attaccare a distanza ravvicinata. Forte contro fanteria e piccoli raggruppamenti di unità. Debole contro soldati a distanza e unità a distanza ravvicinata."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Bastioni fortificati",
+          "description": "le fortificazioni rigenerano 500 punti di resistenza ai colpi al minuto"
+        },
+        {
+          "name": "Bombe tonanti",
+          "description": "carri con razzi, granatieri e lou chuan esplodono quando vengono sconfitti; i proiettili provocano esplosioni aggiuntive"
+        }
+      ],
+      "teamBonus": "Le unità dotate di polvere da sparo ottengono +2 campo visivo."
+    },
+    {
+      "code": "KHI",
+      "name": "Kitai",
+      "nameEn": "Khitans",
+      "focus": "Civiltà nota per la fanteria e la cavalleria",
+      "civilizationBonuses": [
+        "I pascoli sostituiscono le fattorie",
+        "Effetti dei potenziamenti agli attacchi corpo a corpo raddoppiati",
+        "L'addestramento e il potenziamento di fanteria leggera, lancieri ed esploratori a cavallo avviene il 15% più velocemente",
+        "Il potenziamento degli arcieri corazzati a cavallo è disponibile a partire dall'età dei castelli e ha un costo ridotto del 50%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Liao dao",
+          "description": "Unità di fanteria riservata ai Kitai con un potente attacco che ferisce i nemici infliggendo loro danni nel tempo. Forte contro cavalleria e fanteria. Debole contro soldati a distanza lontani."
+        },
+        {
+          "name": "Trabucco con cavalcatura",
+          "description": "Cavalleria d'assedio riservata ai Kitai con lunga gittata, ma non può attaccare da distanza ravvicinata. I proiettili provocano incendi persistenti sul terreno. Forte contro armi d'assedio e piccoli raggruppamenti di unità. Debole contro le unità a distanza ravvicinata."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Corazza lamellare: unità di fanteria e fanteria leggera restituiscono il 25% dei danni corpo a corpo subiti agli aggressori",
+          "description": ""
+        },
+        {
+          "name": "Cavalleria ordo: la cavalleria recupera resistenza ai colpi durante il combattimento",
+          "description": ""
+        }
+      ],
+      "teamBonus": "la fanteria ottiene +2 attacco contro i soldati a distanza"
+    },
+    {
+      "code": "KHM",
+      "name": "Khmer",
+      "nameEn": "Khmer",
+      "focus": "Civiltà nota per unità d'assedio ed elefanti",
+      "civilizationBonuses": [
+        "Non sono richieste costruzioni per passare all'età successiva o sbloccare altre costruzioni",
+        "I contadini non hanno bisogno di mulini o centri città per depositare cibo",
+        "Gli abitanti del villaggio possono presidiare le case",
+        "Velocità di movimento elefante da combattimento: +10%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Elefante con balista",
+          "description": "Elefante equipaggiato con attacco perforante a distanza riservato ai Khmer. Può distruggere gli alberi. Forte contro fanteria e soldati a distanza. Debole contro cavalleria e armi d'assedio."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Zanne armate",
+          "description": "elefanti da combattimento: +3 attacco"
+        },
+        {
+          "name": "Balestra doppia",
+          "description": "elefanti con balista e scorpioni scagliano un proiettile aggiuntivo"
+        }
+      ],
+      "teamBonus": "Gittata scorpioni: +1"
+    },
+    {
+      "code": "KOR",
+      "name": "Coreani",
+      "nameEn": "Koreans",
+      "focus": "Civiltà difensiva nota per le navi",
+      "civilizationBonuses": [
+        "Velocità di lavoro dei cavatori: +20%",
+        "Costo di soldati a distanza e fanteria: -50% unità di legname",
+        "Potenziamenti delle torri e delle corazze per arcieri gratuiti (le torri con bombarda richiedono Chimica)",
+        "Costo delle navi da guerra: -20% unità di legname"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Carro da guerra",
+          "description": "Arciere a cavallo riservato ai Coreani. Lenta ma resistente. Forte contro fanteria e unità di tipo arciere. Debole contro linea dei lancieri, fanteria leggera e cammellieri."
+        },
+        {
+          "name": "Nave testuggine",
+          "description": "Nave da guerra d'assedio riservata ai Coreani con corazza e attacco elevati. Forte contro la maggior parte delle navi da guerra e costruzioni. Debole contro galee."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Eupseong",
+          "description": "gittata delle torri di osservazione: +2"
+        },
+        {
+          "name": "Shinkichon",
+          "description": "carri con razzi e navi testuggine hanno +1 gittata e scagliano proiettili aggiuntivi"
+        }
+      ],
+      "teamBonus": "campo visivo degli abitanti del villaggio: +3"
+    },
+    {
+      "code": "LIT",
+      "name": "Lituani",
+      "nameEn": "Lithuanians",
+      "focus": "Civiltà nota per la cavalleria e i monaci",
+      "civilizationBonuses": [
+        "Ogni centro città fornisce +100 unità di cibo",
+        "Velocità di movimento di linee dei lancieri e fanteria leggera: +10%",
+        "Ogni reliquia messa al sicuro fornisce +1 attacco alla linea dei cavalieri e leitis (massimo +4)"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Leitis",
+          "description": "Cavalleria pesante riservata ai Lituani con attacco che ignora la corazza. Forte contro cavalleria e fanteria, specialmente con corazza elevata. Debole contro gli arcieri."
+        },
+        {
+          "name": "Ussaro alato",
+          "description": "Unità di cavalleria veloce riservata a Polacchi e Lituani per esplorazione e razzie. Resistente alla conversione. Straordinariamente forte contro le unità del monastero. Debole contro la linea dei lancieri e i cammellieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Forti di collina",
+          "description": "gittata centri città: +3"
+        },
+        {
+          "name": "Scudi a torre",
+          "description": "linee di lancieri e fanteria leggera: +2 corazza per armi da lancio"
+        }
+      ],
+      "teamBonus": "Velocità di lavoro dei monasteri: +20%"
+    },
+    {
+      "code": "MAG",
+      "name": "Magiari",
+      "nameEn": "Magyars",
+      "focus": "Civiltà nota per la cavalleria",
+      "civilizationBonuses": [
+        "Gli abitanti del villaggio sconfiggono i lupi con un colpo solo",
+        "Costo della linea degli esploratori a cavallo: -15%",
+        "Potenziamenti degli attacchi corpo a corpo gratuiti"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ussaro Magiaro",
+          "description": "Cavalleria riservata ai Magiari. Forte contro le armi d'assedio. Debole contro linea dei lancieri e cammellieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Esercito corviniano",
+          "description": "costo in oro degli ussari magiari sostituito da un costo in cibo aggiuntivo"
+        },
+        {
+          "name": "Arco ricurvo",
+          "description": "arcieri a cavallo: +1 attacco, +1 gittata"
+        }
+      ],
+      "teamBonus": "velocità di addestramento arcieri a cavallo: +25%"
+    },
+    {
+      "code": "MALY",
+      "name": "Malesi",
+      "nameEn": "Malay",
+      "focus": "Civiltà navale",
+      "civilizationBonuses": [
+        "Velocità di avanzamento all'età successiva: +66%",
+        "Potenziamenti corazza per fanteria gratuiti",
+        "Costo degli elefanti da combattimento: -25% nell'età dei castelli, -35% nell'età imperiale",
+        "Le trappole per pesci costano il 33% in meno e forniscono +200% cibo"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Guerriero con karambit",
+          "description": "Unità di fanteria riservata ai Malesi che richiede soltanto la metà dello spazio popolazione. Forte in grandi quantità. Debole contro cavalleria e soldati a distanza."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Talassocrazia",
+          "description": "i moli vengono trasformati in porti"
+        },
+        {
+          "name": "Leva obbligatoria",
+          "description": "il costo in oro della linea della milizia è sostituito da un costo in cibo aggiuntivo"
+        }
+      ],
+      "teamBonus": "Campo visivo dei moli: +6"
+    },
+    {
+      "code": "MAL",
+      "name": "Maliani",
+      "nameEn": "Malians",
+      "focus": "Civiltà nota per la fanteria",
+      "civilizationBonuses": [
+        "Costo delle costruzioni: -15% unità di legname",
+        "Gli abitanti del villaggio depositano il 10% di oro in più",
+        "Unità degli alloggiamenti: +1/+2/+3 corazza per armi da lancio nell'età feudale/",
+        "dei castelli/imperiale"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Gbeto",
+          "description": "Veloce unità di fanteria riservata ai Maliani con attacco corpo a corpo a distanza. Forte contro fanteria e armi d'assedio. Debole contro i soldati a distanza."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tigui",
+          "description": "i centri città scagliano frecce anche quando non presidiati"
+        },
+        {
+          "name": "Farimba",
+          "description": "cavalleria: +5 attacco"
+        }
+      ],
+      "teamBonus": "velocità di lavoro delle università: +80%"
+    },
+    {
+      "code": "MAPU",
+      "name": "Mapuche",
+      "nameEn": "Mapuche",
+      "focus": "Civiltà nota per la cavalleria e le unità di contrasto",
+      "civilizationBonuses": [
+        "I raccoglitori depositano più cibo (+25%)",
+        "Gli insediamenti possono addestrare fanteria leggera e linea dei lancieri",
+        "Fanteria, frombolieri e fanteria leggera: +5/10/15 resistenza ai colpi nell'età feudale/dei castelli/imperiale",
+        "Le unità a cavallo generano +3 unità di oro quando sconfiggono unità militari",
+        "I castelli nemici vengono rivelati sulla mappa"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kona",
+          "description": "Unità di cavalleria riservata ai Mapuche che infligge danni crescenti alle unità ferite. Forte contro fanteria e arcieri a piedi. Debole contro linea di lancieri, cammellieri e monaci."
+        },
+        {
+          "name": "Cavaliere con bolas",
+          "description": "Arciere a cavallo riservato ai Mapuche con un attacco caricato che rallenta le unità nemiche. Forte contro unità a cavallo. Debole contro arcieri a piedi, fanteria leggera e unità a distanza ravvicinata."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Malon",
+          "description": "cavalieri con bolas, frombolieri e fanteria leggera infliggono danni perforanti"
+        },
+        {
+          "name": "Butalmapu",
+          "description": "costo delle unità riservate del castello e dei cavalieri con bolas della squadra: -15%"
+        }
+      ],
+      "teamBonus": "Campo visivo delle linee di lancieri e fanteria leggera: +2"
+    },
+    {
+      "code": "MAY",
+      "name": "Maya",
+      "nameEn": "Maya",
+      "focus": "Civiltà nota per gli arcieri",
+      "civilizationBonuses": [
+        "Inizia con +1 abitante del villaggio, ma -50 unità di cibo",
+        "Durata delle risorse: +15%",
+        "Costo degli arcieri a piedi: -10/20/30% nell'età feudale/dei castelli/imperiale"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arciere piumato",
+          "description": "Arciere a piedi veloce riservato ai Maya. Forte contro arcieri e fanteria. Debole contro cavalleria."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Giavellottisti hul'che",
+          "description": "la fanteria leggera scaglia un proiettile aggiuntivo"
+        },
+        {
+          "name": "Holcan",
+          "description": "guerrieri aquila: +40 resistenza ai colpi"
+        }
+      ],
+      "teamBonus": "Costo delle mura: -50%"
+    },
+    {
+      "code": "MON",
+      "name": "Mongoli",
+      "nameEn": "Mongols",
+      "focus": "Civiltà nota per gli arcieri a cavallo",
+      "civilizationBonuses": [
+        "Velocità di lavoro dei cacciatori: +40%",
+        "Velocità d'attacco degli arcieri a cavallo: +25%",
+        "Resistenza ai colpi della linea degli esploratori a cavallo e dei lancieri della steppa: +20% nell'età dei castelli e +30% nell'età imperiale"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Mangudai",
+          "description": "Arciere a cavallo riservato ai Mongoli con elevata velocità d'attacco. Forte contro armi d'assedio e fanteria. Debole contro fanteria leggera, unità di tipo lanciere e cammellieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Nomadi",
+          "description": "le case andate perse non riducono lo spazio popolazione"
+        },
+        {
+          "name": "Esercitazioni",
+          "description": "velocità di movimento delle unità generate dal laboratorio d'assedio: +50%"
+        }
+      ],
+      "teamBonus": "Campo visivo degli esploratori a cavallo: +2"
+    },
+    {
+      "code": "MUI",
+      "name": "Muisca",
+      "nameEn": "Muisca",
+      "focus": "Civiltà nota per arcieri e monaci",
+      "civilizationBonuses": [
+        "Costo di avanzamento di età: -50% oro",
+        "Gli insediamenti costano meno (-33%) e guariscono le unità nelle vicinanze",
+        "Guerrieri champi e unità dell'area di tiro con l'arco: +1/2/3 corazza corpo a corpo nell'età feudale/dei castelli/imperiale",
+        "I monaci recuperano la fede il 50% più velocemente",
+        "Carovana e Gilde gratuite"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Guerriero guecha",
+          "description": "Unità di fanteria leggera riservata ai Muisca che rigenera resistenza ai colpi quando un guerriero guecha nelle vicinanze viene sconfitto. Forte contro soldati a distanza. Debole contro unità a distanza ravvicinata."
+        },
+        {
+          "name": "Guardia del Tempio",
+          "description": "Fanteria d'assalto riservata ai Muisca che attacca più velocemente quanto più a lungo rimane in combattimento. Forte contro edifici e unità a cavallo. Debole contro linea dei miliziani."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Erboristeria",
+          "description": "linee di arcieri e guerrieri champi: +15% velocità di movimento"
+        },
+        {
+          "name": "Huaracas",
+          "description": "frombolieri: +1 gittata; +50% velocità di addestramento"
+        }
+      ],
+      "teamBonus": "Le fonti naturali di oro durano il 15% in più"
+    },
+    {
+      "code": "PER",
+      "name": "Persiani",
+      "nameEn": "Persians",
+      "focus": "Civiltà nota per la cavalleria",
+      "civilizationBonuses": [
+        "Inizia con +50 unità di legname e di cibo",
+        "Centro città e molo: +100% resistenza ai colpi; +5% velocità di lavoro nell'Alto Medioevo, +10% nell'età feudale, +15% nell'età dei castelli, +20% nell'età imperiale",
+        "Tattica dei Parti disponibile nell'età dei castelli",
+        "Può costruire il caravanserraglio nell'età imperiale"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Elefante da guerra",
+          "description": "Unità di cavalleria riservata ai Persiani che infligge danni da travolgimento. Forte contro costruzioni e unità a distanza ravvicinata. Debole contro unità di tipo lanciere e monaci."
+        },
+        {
+          "name": "Savaran",
+          "description": "Unità di cavalleria pesante polivalente riservata ai Persiani. Straordinariamente forte contro soldati a distanza. Debole contro linea di lancieri, cammellieri e monaci."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kamandaran",
+          "description": "il costo in oro della linea degli arcieri è sostituito da un costo aggiuntivo in legname"
+        },
+        {
+          "name": "Cittadelle",
+          "description": "castelli: +4 attacco, +3 contro arieti, +3 contro fanteria; -25% danni bonus subiti"
+        }
+      ],
+      "teamBonus": "Linea dei cavalieri: +2 attacco contro soldati a distanza"
+    },
+    {
+      "code": "POL",
+      "name": "Polacchi",
+      "nameEn": "Poles",
+      "focus": "Civiltà nota per la cavalleria",
+      "civilizationBonuses": [
+        "I folwark sostituiscono i mulini",
+        "Gli abitanti del villaggio rigenerano 10 punti di resistenza ai colpi nell'età feudale, 15 nell'età dei castelli, 20 nell'età imperiale",
+        "I cavatori di pietra generano oro oltre alla pietra",
+        "Costo dei potenziamenti per purosangue e linea degli esploratori a cavallo: -50% cibo"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Obuch",
+          "description": "Unità di fanteria riservata ai Polacchi che distrugge la corazza delle unità contro cui combatte. Forte contro costruzioni, cavalleria e fanteria. Debole contro arcieri e artiglieri."
+        },
+        {
+          "name": "Ussaro alato",
+          "description": "Unità di cavalleria veloce riservata a Polacchi e Lituani per esplorazione e razzie. Resistente alla conversione. Straordinariamente forte contro le unità del monastero. Debole contro la linea dei lancieri e i cammellieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Privilegi di szlachta",
+          "description": "costo in oro della linea dei cavalieri: -60%"
+        },
+        {
+          "name": "Eredità lechitica",
+          "description": "la linea degli esploratori a cavallo travolge l'avversario"
+        }
+      ],
+      "teamBonus": "Linea degli esploratori a cavallo: +1 attacco contro soldati a distanza"
+    },
+    {
+      "code": "POR",
+      "name": "Portoghesi",
+      "nameEn": "Portuguese",
+      "focus": "Civiltà nota per navi e polvere da sparo",
+      "civilizationBonuses": [
+        "I raccoglitori generano legname, oltre al cibo",
+        "Costo di tutte le unità: -20% unità di oro",
+        "Può costruire la feitoria nell'età imperiale",
+        "Navi: +10/15/20% resistenza ai colpi nell'età feudale/dei castelli/imperiale"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Organo",
+          "description": "Unità d'assedio dotata di polvere da sparo riservata ai Portoghesi. Spara una raffica di proiettili. Forte contro grandi gruppi di unità. Debole contro cavalleria e linea dei mangani."
+        },
+        {
+          "name": "Caravella",
+          "description": "Nave da guerra riservata ai Portoghesi con un attacco perforante a distanza. Forte contro grossi gruppi di navi. Debole contro navi incendiarie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Circumnavigazione",
+          "description": "imposta l'intera mappa come esplorata; velocità di addestramento delle navi +33%"
+        },
+        {
+          "name": "Archibugio",
+          "description": "le unità dotate di polvere da sparo sparano con più precisione ai bersagli in movimento"
+        }
+      ],
+      "teamBonus": "Velocità di sviluppo delle tecnologie: +25%"
+    },
+    {
+      "code": "ROM",
+      "name": "Romani",
+      "nameEn": "Romans",
+      "focus": "Civiltà nota per la fanteria e la cavalleria",
+      "civilizationBonuses": [
+        "Velocità di raccolta, costruzione e riparazione degli abitanti del villaggio: +5%",
+        "Effetti di potenziamento della corazza per la fanteria: x2",
+        "Costo degli scorpioni: -50% unità di oro",
+        "Corazza di dromoni e linea delle galee: +1 corpo a corpo, +1 armi da lancio"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Centurione",
+          "description": "Unità di cavalleria pesante riservata ai Romani. Aumenta il movimento e la velocità di attacco delle unità della linea della milizia vicine. Forte contro fanteria e arcieri a piedi. Debole contro picchieri e cammellieri."
+        },
+        {
+          "name": "Legionario",
+          "description": "Unità di fanteria polivalente riservata ai Romani. Straordinariamente forte contro la fanteria. Forte contro costruzioni, cavalieri da perlustrazione e linea schermagliatore. Debole contro soldati a distanza da lunga distanza."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Baliste",
+          "description": "velocità d'attacco degli scorpioni: +33%; attacco della linea delle galee: +2"
+        },
+        {
+          "name": "Comitatensi",
+          "description": "velocità di addestramento di linea della milizia, linea dei cavalieri e centurioni: +50%; ricevono anche un attacco di carica"
+        }
+      ],
+      "teamBonus": "Gittata minima degli scorpioni ridotta"
+    },
+    {
+      "code": "SAR",
+      "name": "Saraceni",
+      "nameEn": "Saracens",
+      "focus": "Civiltà nota per i cammelli e le navi",
+      "civilizationBonuses": [
+        "Costo del commercio al mercato: solo 5%; costo del mercato: -100 unità di legname",
+        "Unità su cammello: +25% resistenza ai colpi",
+        "Velocità d'attacco della linea delle galee: +25%",
+        "Navi da trasporto: +100% resistenza ai colpi, +20 capacità di trasporto"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Mamelucco",
+          "description": "Unità di cavalleria riservata ai Saraceni con attacco corpo a corpo a distanza. Forte contro unità a cavallo. Debole contro unità di tipo arciere e linea dei lancieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Bimaristan",
+          "description": "i monaci guariscono passivamente più unità vicine"
+        },
+        {
+          "name": "Contrappesi",
+          "description": "attacco di trabucchi e linea dei mangani: +15%"
+        }
+      ],
+      "teamBonus": "Arcieri a piedi e fanteria leggera: +2 attacco contro le costruzioni"
+    },
+    {
+      "code": "SAX",
+      "name": "Sassoni",
+      "nameEn": "Saxons",
+      "focus": "Civiltà difensiva nota per la fanteria",
+      "civilizationBonuses": [
+        "Mulini, falegnamerie e aree minerarie forniscono +50 unità di cibo e +10 unità di pietra una volta costruiti",
+        "Costo soldati di fanteria: -5% per ogni centro città o castello controllato (massimo -20% )",
+        "Torri e castelli tirano il 100% di frecce base in più a partire dall'età dei castelli",
+        "Barcacce e galeoni con catapulta hanno +20% resistenza ai colpi"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Fanteria domestica",
+          "description": "Fanteria riservata ai Sassoni che scaglia un giavellotto prima di attaccare corpo a corpo. Forte contro i soldati a distanza. Debole contro la cavalleria."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Reclutamento religioso",
+          "description": "+1 raggio di conversione e +33% velocità di addestramento dei monaci"
+        },
+        {
+          "name": "Muro di scudi",
+          "description": "la fanteria ottiene corazza aggiuntiva quando viene ammassata"
+        }
+      ],
+      "teamBonus": "I riparatori lavorano il 25% più velocemente"
+    },
+    {
+      "code": "SHU",
+      "name": "Shu",
+      "nameEn": "Shu",
+      "focus": "Civiltà nota per gli arcieri e le unità d'assedio",
+      "civilizationBonuses": [
+        "I taglialegna generano cibo in aggiunta al legname",
+        "Le tecnologie per gli arcieri presso l'area di tiro con l'arco e il fabbro costano il 25% in meno",
+        "Le armi d'assedio e le navi da guerra d'assedio si muovono il 10/15% più velocemente nell'età dei castelli/imperiale"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Guardia alata bianca",
+          "description": "Unità di fanteria riservata agli Shu che rallenta temporaneamente l'unità attaccata. Forte contro la cavalleria. Debole contro i soldati a distanza."
+        },
+        {
+          "name": "Carro da guerra",
+          "description": "Unità di cavalleria d'assedio riservata agli Shu con attacco a fuoco rapido, ma che non può attaccare a distanza ravvicinata. Ha tempi di ricarica lunghi. Può passare alla modalità sbarramento, che copre un'area più ampia a scapito della precisione. Forte contro i soldati a distanza. Debole contro cavalleria e armi d'assedio."
+        },
+        {
+          "name": "Liu Bei",
+          "description": "Eroe di fanteria riservato agli Shu che guarisce tutte le unità vicine. Estremamente potente. Massimo uno, non può essere convertito."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Schiera della serpe avviluppata",
+          "description": "la linea dei lancieri e le guardie alate bianche guadagnano resistenza ai colpi aggiuntiva quando sono vicini tra loro"
+        },
+        {
+          "name": "Caricatore di dardi",
+          "description": "linea degli arcieri, carri da guerra e lou chuan scagliano proiettili aggiuntivi"
+        }
+      ],
+      "teamBonus": "Campo visivo degli arcieri a piedi: +2"
+    },
+    {
+      "code": "SIC",
+      "name": "Siciliani",
+      "nameEn": "Sicilians",
+      "focus": "Civiltà nota per fanteria e cavalleria",
+      "civilizationBonuses": [
+        "Inizia con +100 unità di pietra",
+        "I potenziamenti delle fattorie forniscono +125% unità di cibo aggiuntive",
+        "I soldati ricevono il 40% di danni bonus in meno",
+        "Può costruire torrioni al posto delle torri di osservazione nell'alto medioevo",
+        "Velocità di costruzione delle fortificazioni: +50%; centri città: +100%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Serjeant",
+          "description": "Unità di fanteria riservata ai Siciliani che può costruire torrioni. Forte contro fanteria e cammellieri. Debole contro arcieri a cavallo e artiglieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Prima crociata",
+          "description": "fino a 5 centri città generano 5 serjeant ciascuno; le unità sono più resistenti alla conversione"
+        },
+        {
+          "name": "Usbergo",
+          "description": "linea dei cavalieri: +1 corazza corpo a corpo/+2 corazza armi da lancio"
+        }
+      ],
+      "teamBonus": "Navi da trasporto: +5 campo visivo e -50% costo"
+    },
+    {
+      "code": "SLV",
+      "name": "Slavi",
+      "nameEn": "Slavs",
+      "focus": "Civiltà nota per fanteria e unità d'assedio",
+      "civilizationBonuses": [
+        "Velocità di lavoro dei contadini: +15%",
+        "Incendio doloso e farsetto d'arme gratuiti",
+        "Costo delle unità del laboratorio d'assedio: -15%",
+        "Velocità di movimento dei monaci: +20%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Boiardo",
+          "description": "Unità di cavalleria slava riservata con corazza corpo a corpo straordinaria. Forte contro le unità a distanza ravvicinata. Debole contro la linea di lancieri e i monaci."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Cremlini",
+          "description": "sostituisce il 40% del costo in pietra delle linee del castello e della torre di osservazione con un costo in legname aggiuntivo"
+        },
+        {
+          "name": "Druzina",
+          "description": "la fanteria infligge danni da travolgimento"
+        }
+      ],
+      "teamBonus": "Le costruzioni militari (eccetto i castelli) forniscono +5 spazio popolazione"
+    },
+    {
+      "code": "SPN",
+      "name": "Spagnoli",
+      "nameEn": "Spanish",
+      "focus": "Civiltà nota per polvere da sparo e monaci",
+      "civilizationBonuses": [
+        "Velocità di lavoro dei costruttori: +30%",
+        "Ricevi +20 unità d'oro per ogni tecnologia sviluppata",
+        "I potenziamenti del fabbro non costano oro",
+        "Velocità d'attacco delle unità dotate di polvere da sparo: +18%",
+        "I galeoni armati sparano con più precisione ai bersagli in movimento"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Conquistador",
+          "description": "Artigliere su cavalcatura riservato agli Spagnoli con attacco potente e mobilità. Forte contro le unità a distanza. Debole contro la linea dei lancieri, la fanteria leggera e i monaci."
+        },
+        {
+          "name": "Missionario",
+          "description": "Monaco a cavallo riservato agli Spagnoli. Converte le unità nemiche e guarisce le unità alleate. Più veloce del monaco, ma con meno campo visivo e raggio d'azione. Forte contro le unità lente e non a distanza. Debole contro linea degli esploratori a cavallo, guerrieri aquila e soldati a distanza. Può raccogliere reliquie e portarle ai monasteri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Inquisizione",
+          "description": "monaci e missionari convertono più rapidamente; missionari: +1 gittata"
+        },
+        {
+          "name": "Supremazia",
+          "description": "abitanti del villaggio: +40 resistenza ai colpi, +6 attacco, +2 corazza corpo a corpo/+2 corazza per armi da lancio"
+        }
+      ],
+      "teamBonus": "Le unità commerciali generano +25% oro"
+    },
+    {
+      "code": "TAT",
+      "name": "Tartari",
+      "nameEn": "Tatars",
+      "focus": "Civiltà nota per gli arcieri a cavallo",
+      "civilizationBonuses": [
+        "Il bestiame dura il 50% più a lungo",
+        "+25% di danni inflitti dalle unità che combattono da posizioni sopraelevate",
+        "I nuovi centri città generano 2 pecore a partire dall'età dei castelli",
+        "Anello da pollice e Tattica dei Parti sviluppati gratuitamente"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Keshik",
+          "description": "Unità di cavalleria pesante riservata ai Tartari che genera oro quando combatte contro altre unità. Forte contro le unità di tipo arciere. Debole contro cammellieri, monaci e linea dei lancieri."
+        },
+        {
+          "name": "Cammello in fiamme",
+          "description": "Cavalleria d'assedio da demolizione riservata ai Tartari. Forte contro unità a cavallo, in particolare elefanti. Debole contro arcieri e fanteria. Si autodistrugge quando utilizzata."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Corazza di seta",
+          "description": "linea degli esploratori a cavallo, lancieri della steppa e arcieri a cavallo: +1 corazza corpo a corpo/+1 corazza per armi da lancio"
+        },
+        {
+          "name": "Tattiche d'assedio timuridi",
+          "description": "trabucchi: +2 gittata"
+        }
+      ],
+      "teamBonus": "Arcieri a cavallo: +2 campo visivo"
+    },
+    {
+      "code": "TEU",
+      "name": "Teutoni",
+      "nameEn": "Teutons",
+      "focus": "Civiltà nota per la fanteria e la difesa",
+      "civilizationBonuses": [
+        "Costo delle fattorie: -40%",
+        "Capacità di presidio dei centri città: +10; capacità di presidio delle torri: +5",
+        "Corazza corpo a corpo di fanteria e unità a cavallo: +1 nell'età dei castelli, +2 nell'età imperiale",
+        "Gittata di guarigione dei monaci: +100%",
+        "Piombatoie ed erbe medicinali gratuite"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Cavaliere teutonico",
+          "description": "Unità di fanteria riservata ai Teutoni con eccezionale attacco corpo a corpo. Lento ma resistente alla conversione. Forte contro le unità corpo a corpo. Debole contro unità di tipo arciere e artiglieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Rivestimento di ferro",
+          "description": "corazza corpo a corpo delle armi d'assedio: +4"
+        },
+        {
+          "name": "Merli",
+          "description": "gittata dei castelli: +3; la fanteria di presidio scaglia frecce"
+        }
+      ],
+      "teamBonus": "Le unità sono più resistenti alla conversione"
+    },
+    {
+      "code": "TUP",
+      "name": "Tupi",
+      "nameEn": "Tupi",
+      "focus": "Civiltà nota per fanteria e arcieri",
+      "civilizationBonuses": [
+        "Inizia con +25 di ogni risorsa",
+        "Gli abitanti del villaggio possono presidiare gli insediamenti",
+        "Le unità eliminate restituiscono il 15% del loro costo",
+        "Potenziamento dell'area di tiro con l'arco e degli alloggiamenti: -50% unità di cibo"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arciere ebano",
+          "description": "Arcieri a piedi riservati ai Tupi, vengono addestrati in coppia e occupano solo metà dello spazio popolazione. Forti in grandi quantità. Deboli contro unità a distanza ravvicinata."
+        },
+        {
+          "name": "Guerriero ibirapema",
+          "description": "Unità di fanteria riservata ai Tupi con un potente attacco frontale ad area. Forte contro fanteria. Debole contro arcieri a piedi a distanza."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Cacicco",
+          "description": "velocità di attacco di guerrieri champi e frombolieri: +25%"
+        },
+        {
+          "name": "Curaro",
+          "description": "gli arcieri a piedi e le fortificazioni infliggono danni da avvelenamento"
+        }
+      ],
+      "teamBonus": "Le torri e i castelli forniscono +10 spazi popolazione"
+    },
+    {
+      "code": "TUR",
+      "name": "Turchi",
+      "nameEn": "Turks",
+      "focus": "Civiltà nota per la polvere da sparo",
+      "civilizationBonuses": [
+        "Cercatori d'oro: +25% velocità di lavoro",
+        "Linea degli esploratori a cavallo: +1 corazza per armi da lancio e potenziamenti gratuiti",
+        "Chimica gratuita; costo delle tecnologie basate sulla polvere da sparo: -50%",
+        "Unità con polvere da sparo: +25% resistenza ai colpi"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Giannizzero",
+          "description": "Artigliere a piedi riservato ai Turchi con un potente attacco. Forte contro fanteria. Debole contro unità di tipo arciere e fanteria leggera."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Sipahi",
+          "description": "arcieri a cavallo: +20 resistenza ai colpi"
+        },
+        {
+          "name": "Artiglieria",
+          "description": "torri con bombarda, bombarde e galeoni armati: +2 gittata"
+        }
+      ],
+      "teamBonus": "Velocità di addestramento delle unità con polvere da sparo: +25%"
+    },
+    {
+      "code": "VAR",
+      "name": "Variaghi",
+      "nameEn": "Varangians",
+      "focus": "Civiltà nota per la cavalleria e le navi",
+      "civilizationBonuses": [
+        "La pastorizia, la pesca e la caccia generano anche oro",
+        "Gli effetti di Purosangue e Carovana sono aumentati del 50%",
+        "Le guardie variaghe hanno +25% velocità d'attacco e generano +50% di oro",
+        "La velocità d'attacco di barcacce e galeoni con catapulta è aumentata del 15%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Jarl",
+          "description": "Cavalleria riservata ai Variaghi con un attacco corpo a corpo a distanza. Eccezionalmente forte contro la fanteria. Debole contro cammellieri e monaci."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Eredità di Vendel",
+          "description": "la linea dei cavalieri infligge danni da travolgimento"
+        },
+        {
+          "name": "Gothikon",
+          "description": "le guardie variaghe lanciano periodicamente delle asce"
+        }
+      ],
+      "teamBonus": "La linea dei cavalieri ha +1 attacco contro la fanteria"
+    },
+    {
+      "code": "VIE",
+      "name": "Vietnamiti",
+      "nameEn": "Vietnamese",
+      "focus": "Civiltà nota per gli arcieri",
+      "civilizationBonuses": [
+        "I centri città nemici vengono rivelati all'inizio della partita",
+        "I potenziamenti economici non costano legname e la ricerca è più veloce del 100%",
+        "Resistenza ai colpi di arcieri a piedi e fanteria leggera: +20%",
+        "Reclutamento gratuito"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arciere con rattan",
+          "description": "Arciere riservato ai Vietnamiti con una straordinaria corazza per armi da lancio. Forte contro arcieri e fanteria. Debole contro cavalleria, fanteria leggera e armi d'assedio."
+        },
+        {
+          "name": "Fanteria leggera imperiale",
+          "description": "Unità a distanza anti-arcieri che non può attaccare a corto raggio. Forte contro soldati a distanza e di tipo lanciere. Debole contro unità a corto raggio. Può essere addestrata dai Vietnamiti e dai loro alleati."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Chatras",
+          "description": "elefanti da combattimento: +100 resistenza ai colpi"
+        },
+        {
+          "name": "Banconote",
+          "description": "i taglialegna generano lentamente oro oltre al legname"
+        }
+      ],
+      "teamBonus": "Potenziamento della fanteria leggera imperiale disponibile nell'età imperiale"
+    },
+    {
+      "code": "VIK",
+      "name": "Vichinghi",
+      "nameEn": "Vikings",
+      "focus": "Civiltà nota per la fanteria e le navi",
+      "civilizationBonuses": [
+        "Carriola e carretto a mano gratuiti",
+        "Fanteria: +20% di resistenza ai colpi a partire dall'età feudale",
+        "Costo delle navi da guerra: -10% nell'età feudale, -15% nell'età dei castelli, -20% nell'età imperiale"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Berserker",
+          "description": "Unità di fanteria riservata ai Vichinghi che rigenera punti di resistenza ai colpi. Forte contro fanteria e armi d'assedio. Debole contro unità di tipo arciere e artiglieri."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Capitani",
+          "description": "fanteria: +5 attacco contro la cavalleria, +4 contro le unità a cammello"
+        },
+        {
+          "name": "Bogsveigar",
+          "description": "linea degli arcieri e barcacce: +1 attacco"
+        }
+      ],
+      "teamBonus": "Costo dei moli: -15%"
+    },
+    {
+      "code": "WEI",
+      "name": "Wei",
+      "nameEn": "Wei",
+      "focus": "Civiltà nota per la cavalleria",
+      "civilizationBonuses": [
+        "Ricevi un abitante del villaggio gratuito per ogni miglioramento economico sviluppato",
+        "Cavalleria in cotta di maglia e predoni xianbei hanno il 20% di resistenza ai colpi in più nell'età dei castelli e il 30% di resistenza ai colpi in più nell'età imperiale",
+        "Manganelle e lou chuan costano il 25% in meno"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Cavalleria della tigre",
+          "description": "Cavalleria Wei che ottiene resistenza ai colpi e all'attacco quando sconfigge unità militari nemiche. Straordinariamente forte contro i soldati a distanza. Debole contro i lancieri."
+        },
+        {
+          "name": "Predone xianbei",
+          "description": "Arciere a cavallo riservato ai Wei con un attacco a distanza caricato. Forte contro la fanteria. Debole contro fanteria leggera e cammellieri."
+        },
+        {
+          "name": "Cao Cao",
+          "description": "Eroe di cavalleria riservato ai Wei che aumenta la velocità d'attacco delle unità vicine. Estremamente potente. Massimo uno, non può essere convertito."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tuntiana",
+          "description": "i soldati producono passivamente cibo"
+        },
+        {
+          "name": "Corazza Ming Guang",
+          "description": "le unità con cavalcatura hanno +4 corazza corpo a corpo"
+        }
+      ],
+      "teamBonus": "Attacco della cavalleria contro le armi d'assedio: +2"
+    },
+    {
+      "code": "WU",
+      "name": "Wu",
+      "nameEn": "Wu",
+      "focus": "Civiltà nota per la fanteria e le navi",
+      "civilizationBonuses": [
+        "Le costruzioni di produzione militare e i moli forniscono +55 unità di cibo quando costruiti",
+        "Le unità di fanteria rigenerano 10 punti di resistenza ai colpi al minuto nell'età feudale, 15 punti nell'età dei castelli e 30 punti nell'età imperiale",
+        "Spadaccini Jian e cavalleria in cotta di maglia hanno +2 attacco nell'età imperiale",
+        "Carenaggio e bacino di carenaggio gratuiti"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arciere con frecce infuocate",
+          "description": "Arciere a piedi riservato ai Wu che scaglia frecce multiple contro le unità e utilizza un attacco a lunga gittata contro le costruzioni. Forte contro fanteria, armi d'assedio e costruzioni. Debole contro cavalleria e fanteria leggera."
+        },
+        {
+          "name": "Spadaccino Jian",
+          "description": "Fanteria d'assalto dei Wu che ottiene velocità di movimento e attacco, ma perde corazza quando raggiunge una certa soglia di danni. Straordinariamente forte contro gli arcieri. Debole contro la milizia."
+        },
+        {
+          "name": "Sun Jian",
+          "description": "Eroe di cavalleria riservato ai Wu che aumenta la velocità di movimento delle unità vicine. Estremamente potente. Massimo uno, non può essere convertito."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tattiche delle Scogliere Rosse",
+          "description": "le navi da demolizione e gli arcieri con frecce infuocate infliggono danni da fuoco a navi e costruzioni"
+        },
+        {
+          "name": "Tigre seduta",
+          "description": "le manganelle e i trabucchi delle lou chuan scagliano proiettili aggiuntivi"
+        }
+      ],
+      "teamBonus": "Velocità di costruzione delle case: +100%"
+    }
+  ]
+}

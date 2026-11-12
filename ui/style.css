@@ -149,6 +149,30 @@ html {
     cursor: pointer;
 }
 
+.settings .language {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.settings select {
+    flex: 1;
+    min-width: 0;
+    padding: 3px 6px;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font: inherit;
+}
+
+.settings .source {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
 .settings-title {
     color: var(--gold);
     margin-top: 6px;

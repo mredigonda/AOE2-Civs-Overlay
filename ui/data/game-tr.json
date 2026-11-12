@@ -1,0 +1,1762 @@
+{
+  "source": "SiegeEngineers/aoe2techtree@e56728e",
+  "labels": {
+    "uniqueUnits": "Özgün Birim",
+    "uniqueTechnologies": "Özgün Teknoloji",
+    "teamBonus": "Takım Bonusu"
+  },
+  "civs": [
+    {
+      "code": "ARM",
+      "name": "Ermeniler",
+      "nameEn": "Armenians",
+      "focus": "Piyade ve Donanma medeniyeti",
+      "civilizationBonuses": [
+        "Katır Arabalarının maliyeti %25 azalır",
+        "Katır Arabası teknolojileri %40 daha etkilidir",
+        "Mızraklı Asker ve Milis türü yükseltmeleri (Silahşor hariç) bir çağ önceden açılır",
+        "İlk Güçlendirilmiş Kilise, ücretsiz bir Kadim Eser alır",
+        "Kadırga türleri ve Dromonlar ek bir mermi daha fırlatır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Karma Okçu",
+          "description": "Zırhı yok sayan, Ermenilere özgü bir Yaya Okçu. Piyadelere ve Süvarilere karşı güçlüdür. Okçu Birimlere ve Kuşatma Silahlarına karşı zayıftır."
+        },
+        {
+          "name": "Savaşçı Rahip",
+          "description": "Dost birimleri iyileştirebilen, Ermenilere özgü Manastır Piyadesi. Kadim Eserleri toplayarak Manastırlara getirebilir. Piyadelere karşı güçlüdür. Atlı Gözcü türlerine ve Okçu Birimlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kilikya Filosu",
+          "description": "İmha Gemilerinin patlama yarıçapı %20 artar; Kadırga türlerinin ve Dromonların menzili 1 artar"
+        },
+        {
+          "name": "Casuslar",
+          "description": "Mızraklı Asker türleri hariç Piyadeler +30 DP kazanır; Savaşçı Rahipler ise %100 daha hızlı iyileşir"
+        }
+      ],
+      "teamBonus": "Piyadelerin görüş hattı +2 artar"
+    },
+    {
+      "code": "AZT",
+      "name": "Aztekler",
+      "nameEn": "Aztecs",
+      "focus": "Piyade ve Keşiş medeniyeti",
+      "civilizationBonuses": [
+        "+50 altınla başlanır",
+        "Köylülerin taşıma kapasitesi +3 artar",
+        "Askerî Birimler %15 daha hızlı eğitilir",
+        "Keşişler, araştırılan her Manastır teknolojisi başına +5 DP kazanır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Jaguar Savaşçı",
+          "description": "Askerî birimleri alt ettikçe fazladan hasar kazanan, Azteklere özgü Piyade. Piyadelere karşı son derece güçlüdür. Süvarilere ve Okçu Birimlerine karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Atlatl",
+          "description": "Akıncılar +1 saldırı ve +1 menzil kazanır"
+        },
+        {
+          "name": "Süs Savaşları",
+          "description": "Piyadelerin saldırısı +4 artar"
+        }
+      ],
+      "teamBonus": "Kadim Eserler %33 daha fazla altın getirir"
+    },
+    {
+      "code": "BENG",
+      "name": "Bengalliler",
+      "nameEn": "Bengalis",
+      "focus": "Fil ve Donanma medeniyeti",
+      "civilizationBonuses": [
+        "Şehir Merkezleri sonraki Çağa ulaşıldığında 2 Köylü verir",
+        "Süvariler, Akıncılara karşı +2 saldırı kazanır",
+        "Fil Birimleri %25 daha az hasar alır ve dönüştürülmeye daha dayanıklıdır",
+        "Keşişler +3 yakın dövüş/+3 delici zırh kazanır",
+        "Gemiler dakika başına 15 DP yeniler"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ratha",
+          "description": "Binekli Okçu"
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Paik Sistemi",
+          "description": "Rathalar ve Fil Birimleri %20 daha hızlı saldırır"
+        },
+        {
+          "name": "Mahayana",
+          "description": "Köylüler ve Keşişler %10 daha az nüfus alanı kaplar"
+        }
+      ],
+      "teamBonus": "Ticaret Birimleri altına ek olarak %10 daha fazla yiyecek getirir"
+    },
+    {
+      "code": "BER",
+      "name": "Berberiler",
+      "nameEn": "Berbers",
+      "focus": "Süvari ve Donanma medeniyeti",
+      "civilizationBonuses": [
+        "Köylüler; Karanlık Çağ'da %5, Feodal Çağ'dan itibaren %10 daha hızlı hareket eder",
+        "Ahır Birimleri; Kale Çağı'nda %15, İmparatorluk Çağı'nda %20 daha ucuzdur",
+        "Gemiler %10 daha hızlı hareket eder"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Develi Okçu",
+          "description": "Berberilere özgü Binekli Okçu. Binekli Okçulara karşı son derece güçlüdür. Mızraklı Asker türlerine, Akıncılara ve Deve Binicilerine karşı zayıftır."
+        },
+        {
+          "name": "Genitour",
+          "description": "Yakın mesafede saldıramayan, okçu karşıtı Binekli Akıncı. Menzilli Askerlere karşı güçlüdür. Yakın mesafedeki birimlere karşı zayıftır. Berberiler ve müttefikleri tarafından eğitilebilir."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kasbah",
+          "description": "Takım Kaleleri %25 daha hızlı çalışır"
+        },
+        {
+          "name": "Mağrip Develeri",
+          "description": "Deve Birimleri dakika başına 15 DP yeniler"
+        }
+      ],
+      "teamBonus": "Genitour birimleri, Kale Çağı'ndan itibaren Okçuluk Binasında eğitilebilir"
+    },
+    {
+      "code": "BOH",
+      "name": "Bohemyalılar",
+      "nameEn": "Bohemians",
+      "focus": "Barut ve Keşiş medeniyeti",
+      "civilizationBonuses": [
+        "Maden Kampı teknolojileri ücretsizdir",
+        "Demircilerin ve Üniversitelerin odun bedeli -100 azalır",
+        "Mızraklı Asker %25 daha fazla hasar verir",
+        "Tutku ve Kutsallık, köylüleri etkiler",
+        "Kimya ve Tüfekçi, Kale Çağı'nda açılır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Hussit Yük Arabası",
+          "description": "Bohemya'ya özgü Barutlu Kuşatma Birimi. Arkasındaki birimler, gelen atışlardan %50 daha az hasar alır. Menzilli Askerlere karşı güçlüdür. Mancınık türlerine karşı zayıftır."
+        },
+        {
+          "name": "Obüs",
+          "description": "Uzun menzilli, Bohemya'ya özgü Barutlu Kuşatma Birimi. Yakın menzilden saldıramaz. Binalara ve Kuşatma Silahlarına karşı güçlüdür. Yakın dövüş birimlerine karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Wagenburg Taktikleri",
+          "description": "Barutlu Birimler %10 daha hızlı hareket eder"
+        },
+        {
+          "name": "Hussit Reformları",
+          "description": "Keşişlerin ve Manastır teknolojilerinin altın bedeli yerine yiyecek bedeli getirilir"
+        }
+      ],
+      "teamBonus": "Marketler %80 daha hızlı çalışır"
+    },
+    {
+      "code": "BRI",
+      "name": "Britonlar",
+      "nameEn": "Britons",
+      "focus": "Yaya Okçu medeniyeti",
+      "civilizationBonuses": [
+        "Çobanlar %25 daha hızlı çalışır",
+        "Şehir Merkezleri, Kale Çağı'ndan itibaren %50 daha az odun gerektirir",
+        "Yaya Okçular Kale Çağı'nda +1, İmparatorluk Çağı'nda +2 menzil kazanır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Uzun Yay Okçusu",
+          "description": "Son derece uzun menzilli, İngilizlere özgü Yaya Okçusu. Piyadelere karşı güçlüdür. Süvarilere ve Akıncılarakarşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Levazımcı",
+          "description": "Yaya Okçulara ve AAkıncılara1 menzil; Gözcü Kulesi türlerine 2 saldırı kazandırır"
+        },
+        {
+          "name": "Savaş Kurdu",
+          "description": "Katapultlar patlama hasarı verir ve daha isabetlidir"
+        }
+      ],
+      "teamBonus": "Okçuluk Binası %10 daha hızlı çalışır"
+    },
+    {
+      "code": "BUL",
+      "name": "Bulgarlar",
+      "nameEn": "Bulgarians",
+      "focus": "Piyade ve Süvari medeniyeti",
+      "civilizationBonuses": [
+        "Milis türlerinin yükseltmeleri ücretsizdir",
+        "Demirci ve Kuşatma Atölyesi teknolojileri %50 daha az yiyecek gerektirir",
+        "Şehir Merkezleri %50 daha az taş gerektirir",
+        "Kale Çağı'nda Krepost inşa edilebilir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Konnik",
+          "description": "Düştüğünde piyade olarak savaşmaya devam eden, Bulgarlara özgü Ağır Süvari. Piyadelere ve Süvarilere karşı güçlüdür. Mızraklı Asker türlerine ve Keşişlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Üzengiler",
+          "description": "Süvariler %33 daha hızlı saldırır"
+        },
+        {
+          "name": "Bagainler",
+          "description": "Milis türleri +5 yakın dövüş zırhı kazanır"
+        }
+      ],
+      "teamBonus": "Demirciler %80 daha hızlı çalışır"
+    },
+    {
+      "code": "BURGU",
+      "name": "Burgonyalılar",
+      "nameEn": "Burgundians",
+      "focus": "Süvari medeniyeti",
+      "civilizationBonuses": [
+        "Ekonomik yükseltmeler bir çağ öndecen açılır ve %40 daha az yiyeceğe mal olur",
+        "Ahır teknolojileri %50 daha ucuzdur",
+        "Süvari yükseltmesi Kale Çağı'nda açılır",
+        "Tüfekli Birimler %25 saldırı kazanır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Coustillier",
+          "description": "Güçlü hücum saldırısı yapan, Burgonyalılara özgü Ağır Süvari. Piyadelere ve Okçu Birimlerine karşı güçlü. Deve Binicilerine ve Keşişlere karşı zayıf."
+        },
+        {
+          "name": "Flaman Milis",
+          "description": "Burgonya'ya özgü, süvari karşıtı bir Piyade türü. Binekli Birimlere karşı güçlüdür. Menzilli Askerlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Burgonya Bağları",
+          "description": "Çiftçiler yiyeceğe ek olarak yavaş yavaş altın üretir"
+        },
+        {
+          "name": "Flaman Devrimi",
+          "description": "Tüm mevcut Köylüler Flaman Milislerine dönüştürülür"
+        }
+      ],
+      "teamBonus": "Kadim Eserler altına ek olarak yiyecek sağlar"
+    },
+    {
+      "code": "BUR",
+      "name": "Birmanlar",
+      "nameEn": "Burmese",
+      "focus": "Piyade ve Süvari medeniyeti",
+      "civilizationBonuses": [
+        "Kereste Kampı teknolojileri ücretsizdir",
+        "Piyadeler; Feodal Çağ'da +1, Kale Çağı'nda +2, İmparatorluk Çağı'nda +3 saldırı kazanır",
+        "Savaş Filleri +1 yakın dövüş/+1 delici zırh kazanır",
+        "Manastır teknolojileri %50 daha ucuzdur"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arambai",
+          "description": "Güçlü fakat isabeti düşük saldırı yapan, Birmanlara özgü menzilli Binekli Birimi. Orta ve yakın mesafedeki birimlere karşı güçlüdür. Okçu Birimlerine ve Kuşatma Silahlarına karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Manipur Atlısı",
+          "description": "Süvariler, Menzilli Askerlere karşı +4 saldırı kazanır"
+        },
+        {
+          "name": "Mahfe",
+          "description": "Savaş Filleri +1 yakın dövüş/+1 delici zırh kazanır"
+        }
+      ],
+      "teamBonus": "Kadim Eserler oyunun başında haritada görülebilir"
+    },
+    {
+      "code": "BYZ",
+      "name": "Bizanslılar",
+      "nameEn": "Byzantines",
+      "focus": "Savunma medeniyeti",
+      "civilizationBonuses": [
+        "Binalar Karanlık Çağ'da +%10, Feodal Çağ'da +%20,",
+        "Kale Çağı'nda +%30, İmparatorluk Çağı'nda +%40 DP kazanır",
+        "Deve Binicileri, Avcı Erleri ve Mızraklı asker türleri %25 daha ucuzdur",
+        "Şehir Gözcüsü ve Şehir Devriyesi ücretsizdir",
+        "İmparatorluk Çağı'na geçmek %33 daha ucuzdur",
+        "Ateş Gemileri ve Dromonlar %25 daha hızlı saldırır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Zırhlı Atlı",
+          "description": "Bizanslılara özgü Ağır Süvari. Piyadelere karşı son derece güçlüdür. Okçu Birimlerine karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Yunan Ateşi",
+          "description": "Ateş Gemileri +1 menzil kazanır, Dromonların ve Bombardıman Kulelerinin patlama alanı artar"
+        },
+        {
+          "name": "Lojistika",
+          "description": "Zırhlı Atlılar ve Vareg Muhafızları ezme hasarı verir"
+        }
+      ],
+      "teamBonus": "Keşişler %100 daha hızlı iyileştirir"
+    },
+    {
+      "code": "CEL",
+      "name": "Keltler",
+      "nameEn": "Celts",
+      "focus": "Piyade ve Kuşatma medeniyeti",
+      "civilizationBonuses": [
+        "Oduncular %15 daha hızlı çalışır",
+        "Kelt birimlerinin görüş hattındaki besi hayvanları çalınamaz",
+        "Piyadeler; Karanlık Çağ'da %5, Feodal Çağ'da %10,",
+        "Kale Çağı'nda %15, İmparatorluk Çağı'nda %20 daha hızlı hareket eder",
+        "Kuşatma Silahları %25 daha hızlı saldırır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Çivit Baskıncısı",
+          "description": "Yüksek hareket hızına sahip özgün Kelt Piyadesi. Piyadelere ve Kuşatma Silahlarına karşı güçlü. Okçu birimlere ve Süvarilere karşı zayıf."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Sığınak",
+          "description": "Kaleler ve Gözcü Kulesi türleri %33 daha hızlı saldırır; Kaleler, etrafındaki 7 kare yarıçapında bir dairede bulunan müttefik Piyadeleri iyileştirir"
+        },
+        {
+          "name": "Kelt Gazabı",
+          "description": "Kuşatma Silahlarının DP'si %40 artar"
+        }
+      ],
+      "teamBonus": "Kuşatma Atölyeleri %20 daha hızlı çalışır"
+    },
+    {
+      "code": "CHI",
+      "name": "Çinliler",
+      "nameEn": "Chinese",
+      "focus": "Okçu ve Barut medeniyeti",
+      "civilizationBonuses": [
+        "+3 Köylü, -50 odun ve -200 yiyecek ile başlarsın",
+        "Teknolojiler Feodal Çağ'da %5, Kale Çağı'nda %10, İmparatorluk Çağı'nda %15 daha ucuzdur",
+        "Şehir Merkezleri +7 görüş hattı kazanır ve +15 nüfus alanı sağlar",
+        "Alev Mızraklı Süvariler ve Ateş Gemileri Kale Çağı'nda %5, İmparatorluk Çağı'nda %10 daha hızlı hareket eder"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Chu Ko Nu",
+          "description": "Seri saldıran, özgün Çinli Yaya Okçu birimi. Piyadelere karşı güçlü. Okçular ve kuşatma silahlarına karşı zayıf."
+        },
+        {
+          "name": "Ejder Gemisi",
+          "description": "Yakın mesafede ateş püskürten, Çinlilere özgü Savaş Gemisi. Kadırga türlerine karşı güçlüdür. İmha Gemilerine karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Çin Seddi",
+          "description": "Surlar, Gözcü Kulesi türleri ve Bombardıman Kuleleri %30 DP kazanır"
+        },
+        {
+          "name": "Roket",
+          "description": "Akrepler, Roket Arabaları ve Lou Chuanlar +%25 saldırı kazanır; Lou Chuanlar roket ateşler"
+        }
+      ],
+      "teamBonus": "Tarlalar +%10 yiyecek kazanır"
+    },
+    {
+      "code": "CUM",
+      "name": "Kumanlar",
+      "nameEn": "Cumans",
+      "focus": "Süvari medeniyeti",
+      "civilizationBonuses": [
+        "Feodal Çağ'da bir Şehir Merkezi daha inşa edilebilir",
+        "Binekli Birimler Feodal Çağ'da %5,",
+        "Kale Çağı'nda %10, İmparatorluk Çağı'nda %15 daha hızlı hareket eder",
+        "Okçuluk Binalarının ve Ahırların odun bedeli 75 azalır",
+        "Kuşatma Atölyesi ve Koçbaşı, Feodal Çağ'da açılır; Metal Kafalı Koçbaşı Kale Çağı'nda açılır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kıpçak",
+          "description": "Birden fazla ok atan, Kumanlara özgü Binekli Okçu. Piyadelere ve Kuşatma Silahlarına karşı güçlüdür. Yaya Okçulara karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Bozkır Hayvancılığı",
+          "description": "Atlı Gözcü Türleri, Bozkır Mızraklıları ve Atlı Okçular %100 daha hızlı eğitilir"
+        },
+        {
+          "name": "Kuman Paralı Askerleri",
+          "description": "Tüm takım üyeleri Kale başına 5 ücretsiz Elit Kıpçak eğitebilir"
+        }
+      ],
+      "teamBonus": "Çit Surların DP'si %33 artar"
+    },
+    {
+      "code": "DAN",
+      "name": "Danimarkalılar",
+      "nameEn": "Danes",
+      "focus": "Piyade ve Kuşatma medeniyeti",
+      "civilizationBonuses": [
+        "Balıkçı Gemileri ve Köylüler %5 daha fazla yiyecek bırakır",
+        "Yıkılan her binanın kaynak maliyetinin %25'i yağmalanır",
+        "Kışla ve Kuşatma Atölyesi yükseltmelerinin altın maliyeti %66 azalır",
+        "Vareg Muhafızları ve Uzun Yelkenliler %10 daha hızlı hareket eder"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Jomsviking",
+          "description": "Binalara ve gemilere saldırırken meşale fırlatan, Danimarkalılara özgü Piyade. Süvarilere ve binalara karşı son derece güçlüdür. Menzilli Askerlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Hamask",
+          "description": "Piyadeler DP kaybettikçe daha fazla hasar verir"
+        },
+        {
+          "name": "Kuzeyli Öfkesi",
+          "description": "Mancınık türleri ve Mancınıklı Kalyonlar +1 menzil kazanır; Kuşatma Silahları ve Kuşatma Gemileri, binalara karşı +%40 hasar kazanır"
+        }
+      ],
+      "teamBonus": "Kuşatma Silahlarına +2 görüş hattı"
+    },
+    {
+      "code": "DRAV",
+      "name": "Dravidler",
+      "nameEn": "Dravidians",
+      "focus": "Piyade ve Donanma medeniyeti",
+      "civilizationBonuses": [
+        "Balıkçıların ve Balıkçı Gemilerinin kapasitesi +15 artar",
+        "Sonraki Çağa geçildiğinde 200 odun kazanılır",
+        "Akıncılar ve Filli Okçular %25 daha hızlı saldırır",
+        "Kışla teknolojileri %50 daha ucuzdur",
+        "Kuşatma Silahları %33 daha az oduna mal olur"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Urumi Savaşçısı",
+          "description": "Hücum ederek patlama saldırısı yapabilen, Dravidlere özgü piyade birimi. Binalara ve yakın mesafedeki birimlere karşı güçlüdür. Uzak mesafedeki Menzilli Askerlere karşı zayıftır."
+        },
+        {
+          "name": "Thirisadai",
+          "description": "Yüksek dayanıklılığa sahip, Dravidlere özgü Savaş Gemisi. Çoğu Savaş Gemisine karşı güçlüdür. Ateş Gemilerine karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Sıhhiye Birimleri",
+          "description": "Fil Birimleri dakika başına 30 DP yeniler"
+        },
+        {
+          "name": "Wootz Çeliği",
+          "description": "Piyade ve Süvari saldırıları zırhı yok sayar"
+        }
+      ],
+      "teamBonus": "Rıhtımlar +5 nüfus alanı sağlar"
+    },
+    {
+      "code": "ETH",
+      "name": "Etiyopyalılar",
+      "nameEn": "Ethiopians",
+      "focus": "Okçu medeniyeti",
+      "civilizationBonuses": [
+        "Sonraki Çağa geçerken +100 altın ve +100 yiyecek alınır",
+        "Yaya Okçular %18 daha hızlı saldırır",
+        "Ağır Mızraklı Asker yükseltmeleri ücretsizdir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Shotel Savaşçısı",
+          "description": "Yüksek saldırısı olan ve hızlı eğitilen, Etiyopya'ya özgü Piyade. Hızlı hareket eder. Piyadelere karşı güçlüdür. Okçu Birimlerine karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Asil Mirasçılar",
+          "description": "Shotel Savaşçılarının ve Deve Binicilerinin Binekli Birimlerden aldığı hasar -3 azalır"
+        },
+        {
+          "name": "Torsiyon Makineleri",
+          "description": "Kuşatma Atölyesi Birimlerinin patlama yarıçapı artar"
+        }
+      ],
+      "teamBonus": "Karakollar +3 görüş hattı kazanır ve taş gerektirmez"
+    },
+    {
+      "code": "FRK",
+      "name": "Franklar",
+      "nameEn": "Franks",
+      "focus": "Süvari medeniyeti",
+      "civilizationBonuses": [
+        "Toplayıcılar %15 daha hızlı çalışır",
+        "Değirmen teknolojileri ücretsizdir",
+        "Feodal Çağ'dan itibaren Binekli Birimlere %20 daha fazla DP",
+        "Kaleler, Kale Çağı'nda %15, İmparatorluk Çağı'nda %25 daha ucuzdur"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Balta Atar",
+          "description": "Menzilli yakın dövüş saldırısı yapan, özgün Frank piyade. Piyadelere karşı güçlü. Okçu birimlere ve kuşatma silahlarına karşı zayıf."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Nizamname Birlikleri",
+          "description": "Atlı Okçıların altın maliyeti %40 azalır"
+        },
+        {
+          "name": "Şövalyelik",
+          "description": "Ahırlar %40 daha hızlı çalışır"
+        }
+      ],
+      "teamBonus": "Şövalye sınıflarına +2 görüş hattı"
+    },
+    {
+      "code": "GEO",
+      "name": "Gürcistanlılar",
+      "nameEn": "Georgians",
+      "focus": "Savunma ve Süvari medeniyeti",
+      "civilizationBonuses": [
+        "Katır Arabasıyla başlanır",
+        "Birimler ve binalar daha yüksekte olduğunda %15 daha az hasar alır",
+        "Binekli Birimler dakika başına Feodal Çağ'da 2, Kale Çağı'nda 8, İmparatorluk Çağı'nda 14 DP yeniler",
+        "Güçlendirilmiş Kiliseler, etrafında 9 kare yarıçapındaki bir daire içinde bulunan Köylülere %10 çalışma hızı kazandırır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Monaspa",
+          "description": "Yakınında başka Monaspalar veya Şövalye türü birimler olduğunda güçlenen, Gürcülere özgü Ağır Süvari. Piyadelere ve Süvarilere karşı güçlüdür. Mızraklı Asker türevlerine ve Keşişlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Svan Kuleleri",
+          "description": "Surlar +2 saldırı kazanır; Gözcü Kulesi türleri delici hasar verir"
+        },
+        {
+          "name": "Aznauri Süvarisi",
+          "description": "Binekli Birimler %20 daha az nüfus alanı kaplar"
+        }
+      ],
+      "teamBonus": "Bina onarımları %25 daha ucuz olur"
+    },
+    {
+      "code": "GOT",
+      "name": "Gotlar",
+      "nameEn": "Goths",
+      "focus": "Piyade medeniyeti",
+      "civilizationBonuses": [
+        "Dokuma Tezgâhı anında araştırılır",
+        "Avcılar +15 daha fazla et taşır; avlanan hayvanlar %20 daha uzun dayanır",
+        "Piyadeler Karanlık Çağ'da %15, Feodal Çağ'da %20, Kale Çağı'nda %25,",
+        "İmparatorluk Çağı'nda %30 daha ucuz olur",
+        "Piyadeler binalara karşı Feodal Çağ'da 1,",
+        "Kale Çağı'nda 2, İmparatorluk Çağında 3 saldırı kazanır",
+        "Nüfus alanı İmparatorluk Çağı'nda +10 artar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Huskarl",
+          "description": "Son derece delici zırha sahip, Gotlara özgü Piyade. Menzilli Askerlere ve binalara karşı güçlüdür. Süvarilere ve Milis türlerine karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Anarşi",
+          "description": "Huskarllar Kışladan üretilebilir"
+        },
+        {
+          "name": "Perfüzyon",
+          "description": "Kışlalar %100 daha hızlı çalışır"
+        }
+      ],
+      "teamBonus": "Kışlalar %20 daha hızlı çalışır"
+    },
+    {
+      "code": "GURJ",
+      "name": "Gurjaralar",
+      "nameEn": "Gurjaras",
+      "focus": "Süvari ve Deve medeniyeti",
+      "civilizationBonuses": [
+        "2 Böğürtlen Çalısıyla başlarsın",
+        "Besi hayvanları pasif olarak yiyecek üretecek şekilde Değirmenlere yerleştirilebilir",
+        "Binekli Birimler; Feodal Çağ'da %20, Kale Çağı'nda %30, İmparatorluk Çağı'nda %40 daha fazla hasar verir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Chakram Fırlatıcısı",
+          "description": "Menzilli yakın dövüş saldırısı yapan ve delici hasar veren, Gurjaralara özgü Piyade. Piyadelere ve kalabalık birim gruplarına karşı güçlüdür. Süvarilere ve Kuşatma Silahlarına karşı zayıftır."
+        },
+        {
+          "name": "Shrivamsha Atlısı",
+          "description": "Mermileri savuşturabilen ve hızlı hareket eden, Gurjaralara özgü Süvari. Menzilli Askerlere karşı güçlü. Mızraklı Asker türlerine ve Deve Binicilerine karşı zayıf."
+        },
+        {
+          "name": "Develi Gözcü",
+          "description": "Gurjaralara özgü gözcü. Hızlı hareket eden, süvari karşıtı bir Süvari türü. Binekli Birimlere karşı güçlüdür. Piyadelere, Keşişlere ve Yaya Okçulara karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kshatriyalar",
+          "description": "Askerî Birimler %25 daha az yiyecek gerektirir"
+        },
+        {
+          "name": "Sınır Muhafızları",
+          "description": "Deve Binicileri ve Filli Okçular +4 yakın dövüş zırhı kazanır"
+        }
+      ],
+      "teamBonus": "Deve ve Fil Birimleri %25 daha hızlı eğitilir"
+    },
+    {
+      "code": "HIN",
+      "name": "Hindistanlılar",
+      "nameEn": "Hindustanis",
+      "focus": "Deve ve Barut medeniyeti",
+      "civilizationBonuses": [
+        "Köylüler; Karanlık Çağ'da %8, Feodal Çağ'da %13, Kale Çağı'nda %18,",
+        "İmparatorluk Çağı'nda %23 daha ucuzdur",
+        "Deve Binicileri %20 daha hızlı saldırır",
+        "Barut Birimleri +1 yakın dövüş/+1 delici zırh kazanır",
+        "İmparatorluk Çağı'nda Kervansaray inşa edilebilir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ghulam",
+          "description": "Mızrağını birden fazla hedefe saplayabilen, Hindistan'a özgü Piyade. Okçu Birimlerine ve Mızraklı Asker türlerine karşı son derece güçlüdür. Süvarilere karşı zayıftır."
+        },
+        {
+          "name": "İmparatorluk Deve Binicisi",
+          "description": "Hızlı hareket eden, özgün Hindistanlı süvari karşıtı Süvari. Binekli Birimlere karşı güçlü. Piyadelere, Keşişlere ve Yaya Okçulara karşı zayıf."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Büyük Kuzey Yolu",
+          "description": "Tüm altın geliri %10 hızlanır; Market ticaret bedeli %10'a düşer"
+        },
+        {
+          "name": "Shatagni",
+          "description": "Tüfekçilerin menzili +2 artar"
+        }
+      ],
+      "teamBonus": "Atlı Gözcü türleri ve Deve Birimleri binalara karşı +2 saldırı kazanır"
+    },
+    {
+      "code": "HUN",
+      "name": "Hunlar",
+      "nameEn": "Huns",
+      "focus": "Süvari medeniyeti",
+      "civilizationBonuses": [
+        "Eve ihtiyaç olmaz fakat -100 odunla başlanır",
+        "Atlı Okçular; Kale Çağı'nda %10, İmparatorluk Çağı'nda %20 daha ucuzdur",
+        "Katapultlar, birimleri ve küçük hedefleri daha yüksek isabetle vurur",
+        "Göçebe haritalarında, ilk Şehir Merkezinde bir gözcü atı belirir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Tarkan",
+          "description": "Hunlara özgü Ağır Süvari. Binalara karşı son derece güçlüdür. Mızraklı Asker türlerine ve Deve Binicilerine karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Yağmacılar",
+          "description": "Tarkanlar Ahırda eğitilebilir"
+        },
+        {
+          "name": "Ateizm",
+          "description": "Düşman Kadim Eserleri %50 daha az kaynak üretir; Dünya Harikası ve Kadim Eserle zafer 100 yıl daha uzun sürer"
+        }
+      ],
+      "teamBonus": "Ahırlar %20 daha hızlı çalışır"
+    },
+    {
+      "code": "INC",
+      "name": "İnka",
+      "nameEn": "Inca",
+      "focus": "Piyade medeniyeti",
+      "civilizationBonuses": [
+        "Evler ve Yerleşimler +5 nüfus alanı daha verir",
+        "Binalar %15 daha az taş gerektirir",
+        "Askerî Birimler; Karanlık Çağ'da %15, Feodal Çağ'da %20, Kale Çağı'nda %25, İmparatorluk Çağı'nda %30 daha az yiyecek gerektirir",
+        "Kale Çağı'ndan itibaren Köylüler, Demircideki Piyade yükseltmelerinden etkilenir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kamayuk",
+          "description": "Fazladan saldırı menzili olan, İnkalara özgü Piyade. Süvarilere ve Piyadelere karşı güçlüdür. Okçu Birimlerine ve Silahlılara karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "And Sapanı",
+          "description": "Avcı Erlerinin ve Sapancıların minimum menzili yoktur; Sapancılar +1 saldırı kazanır"
+        },
+        {
+          "name": "Kumaş Kalkanlar",
+          "description": "Kamayuklar, Sapancılar ve Champi Savaşçıları +1 yakın dövüş/+1 delici zırh kazanır"
+        }
+      ],
+      "teamBonus": "Ücretsiz bir Lamayla başlanır"
+    },
+    {
+      "code": "ITA",
+      "name": "İtalyanlar",
+      "nameEn": "Italians",
+      "focus": "Okçu ve Donanma medeniyeti",
+      "civilizationBonuses": [
+        "Sonraki Çağa geçmek %15 daha ucuzdur",
+        "Yaya Okçular ve Condottieri +1 yakın dövüş/+1 delici zırh kazanır",
+        "Rıhtım ve Üniversite teknolojileri %25 daha ucuzdur",
+        "Barut Birimleri %20 daha ucuzdur",
+        "Balıkçı Gemileri %15 daha ucuzdur"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Cenevizli Kundaklı Yaycı",
+          "description": "İtalyanlara özgü Yaya Okçu. Süvarilere karşı son derece güçlüdür. Okçu Birimlere ve Kuşatma Silahlarına karşı zayıftır."
+        },
+        {
+          "name": "Condottiero",
+          "description": "Hızlı hareket eden, barut birimi karşıtı Piyade. Tüfekli Birimlere karşı güçlü. Süvarilere ve Okçu Birimlere karşı zayıf. İtalyanlar ve onların müttefikleri eğitebilir."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "İpek Yolu",
+          "description": "Ticaret Birimleri %50 daha ucuzdur"
+        },
+        {
+          "name": "Pirotekni",
+          "description": "Tüfekçiler %15 delici hasar verir ve daha isabetlidir"
+        }
+      ],
+      "teamBonus": "Condottiero, İmparatorluk Çağı'nda Kışlada eğitilebilir"
+    },
+    {
+      "code": "JAP",
+      "name": "Japonlar",
+      "nameEn": "Japanese",
+      "focus": "Piyade medeniyeti",
+      "civilizationBonuses": [
+        "Değirmenler, Kereste ve Maden Kampları %50 daha ucuzdur",
+        "Piyade saldırıları Feodal Çağ'dan itibaren %33 daha hızlı olur",
+        "Atlı Okçular, Menzilli Askerlere (Avcı Erleri hariç) karşı +2 saldırı kazanır",
+        "Balıkçı gemileri Karanlık Çağ'da %5, Feodal Çağ'da %10, Kale Çağı'nda %15, İmparatorluk Çağı'nda %20 daha hızlı çalışır; ayrıca %100 DP kazanır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Samuray",
+          "description": "Savaşta hızla hücum eden ve hızlı saldıran, Japonlara özgü bir piyade birimi. Özgün birimlere karşı güçlüdür. Okçu Birimlerine ve Silahlılara karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Yasama",
+          "description": "Gözcü Kulesi türleri fazladan ok atar"
+        },
+        {
+          "name": "Kataparuto",
+          "description": "Katapultların saldırısı artar, toplanması ve kurulması hızlanır"
+        }
+      ],
+      "teamBonus": "Kadırga türleri +4 görüş hattı kazanır"
+    },
+    {
+      "code": "JUR",
+      "name": "Curçenler",
+      "nameEn": "Jurchens",
+      "focus": "Süvari ve Barut medeniyeti",
+      "civilizationBonuses": [
+        "Avlanan hayvanların ve besi hayvanlarının eti çürümez",
+        "Feodal Çağ'dan itibaren Binekli Birimler ve Alev Mızraklı Süvariler %25 daha hızlı saldırır",
+        "Kuşatma Mühendisleri, Kale Çağı'nda açılır.",
+        "Kuşatma ve Sur yükseltmeleri %75 daha az odun gerektirir ve %100 daha hızlı araştırılır",
+        "Birimler -%50 daha az dost ateşi hasarı alır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Demir Pagoda",
+          "description": "Yakın dövüş saldırılarını tamamen engelleyen dayanıklı zırha sahip, Curçenlere özgü Ağır Süvari. Piyadelere ve Menzilli Askerlere karşı güçlüdür. Mızraklı Asker türlerine ve Deve Binicilerine karşı zayıftır."
+        },
+        {
+          "name": "El Bombacısı",
+          "description": "Menzilli patlama saldırısı yapabilen, Curçenlere özgü Tüfekli Kuşatma Birimi. Yakın menzilde saldıramaz. Piyadelere ve yoğun birim gruplarına karşı güçlüdür. Menzilli Askerlere ve yakın menzildeki birimlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Güçlendirilmiş Burçlar",
+          "description": "Surlar dakikada 500 DP yeniler"
+        },
+        {
+          "name": "Gök Gürültüsü Bombaları",
+          "description": "Roket Arabaları, El Bombacıları ve Lou Chuanlar yenildiğinde patlar; mermiler ise ek patlamalar yaratır"
+        }
+      ],
+      "teamBonus": "Tüfekli Birimler +2 görüş hattı kazanır"
+    },
+    {
+      "code": "KHI",
+      "name": "Hıtaylar",
+      "nameEn": "Khitans",
+      "focus": "Piyade ve Süvari medeniyeti",
+      "civilizationBonuses": [
+        "Çiftliklerin yerini Meralar alır",
+        "Yakın dövüş saldırısının yükseltme etkileri iki katına çıkar",
+        "Avcı Erleri, Mızraklı Askerler ve Atlı Gözcü türleri %15 daha hızlı eğitilir ve yükseltilir",
+        "Ağır Atlı Okçu yükseltmesi Kale Çağı'nda açılır ve %50 daha az maliyetli olur"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Liao Dao",
+          "description": "Düşmanlarını yaralayan ve zamanla hasar veren güçlü bir saldırıya sahip, Hıtaylara özgü Piyade. Süvarilere ve Piyadelere karşı güçlüdür. Uzun menzilde Menzilli Askerlere karşı zayıftır."
+        },
+        {
+          "name": "Taşınabilir Katapult",
+          "description": "Uzun menzilli, Hıtaylara özgü Kuşatma Süvarisi. Yakın menzilde saldıramaz. Mermiler yerde kalıcı ateş bırakır. Kuşatma Silahlarına ve yoğun birim gruplarına karşı güçlüdür. Yakın menzildeki birimlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Lamel Zırh",
+          "description": "Piyadeler ve Avcı Erleri, yakın dövüş hasarının %25'ini saldırgana geri yansıtır"
+        },
+        {
+          "name": "Ordo Süvarisi",
+          "description": "Süvari savaşta DP yeniler"
+        }
+      ],
+      "teamBonus": "Piyadeler, Menzilli Askerlere karşı +2 saldırı kazanır"
+    },
+    {
+      "code": "KHM",
+      "name": "Kmerler",
+      "nameEn": "Khmer",
+      "focus": "Kuşatma ve Fil medeniyeti",
+      "civilizationBonuses": [
+        "Sonraki Çağa ilerlemek ve diğer binaları açmak için bina gerekmez",
+        "Çiftçilerin yiyecek bırakması için Değirmen veya Şehir Merkezi gerekmez",
+        "Köylüler evlerde garnizon kurabilir",
+        "Savaş Filleri %10 daha hızlı hareket eder"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Balistalı Fil",
+          "description": "Menzilli delici saldırı yapabilen, Kmerlere özgü Kuşatma Süvarisi. Ağaçları yok edebilir. Piyadelere ve Menzilli Askerlere karşı güçlüdür. Süvarilere ve Kuşatma Silahlarına karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Fil Dişi Süngüleri",
+          "description": "Savaş Filleri +3 saldırı kazanır"
+        },
+        {
+          "name": "Çift Arbalet",
+          "description": "Balistalı Filler ve Akrepler fazladan bir cisim fırlatır"
+        }
+      ],
+      "teamBonus": "Akrepler +1 menzil kazanır"
+    },
+    {
+      "code": "KOR",
+      "name": "Koreliler",
+      "nameEn": "Koreans",
+      "focus": "Savunma ve Donanma medeniyeti",
+      "civilizationBonuses": [
+        "Taş madencileri %20 daha hızlı çalışır",
+        "Menzilli Askerler ve Piyadeler %50 daha az odun gerektirir",
+        "Okçu zırhı ve kule yükseltmeleri ücretsizdir (Bombardıman Kulesi, Kimya gerektirir)",
+        "Savaş Gemileri %20 daha az odun gerektirir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Savaş Vagonu",
+          "description": "Korelilere özgü Binekli Okçu. Yavaş ama dayanıklıdır. Piyadelere ve Okçu Birimlerine karşı güçlüdür. Mızraklı Asker türlerine, Akıncılara ve Deve Binicilerine karşı zayıftır."
+        },
+        {
+          "name": "Kaplumbağa Gemi",
+          "description": "Yüksek zırha ve saldırıya sahip, Korelilere özgü Kuşatma Savaş Gemisi. Çoğu Savaş Gemisine ve binalara karşı güçlüdür. Kadırgalara karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Eupseong",
+          "description": "Gözcü Kulesi türleri +2 menzil kazanır"
+        },
+        {
+          "name": "Shinkichon",
+          "description": "Roket Arabaları ve Kaplumbağa Gemileri +1 menzil kazanır ve ek mermi ateşler"
+        }
+      ],
+      "teamBonus": "Köylüler +3 görüş hattı kazanır"
+    },
+    {
+      "code": "LIT",
+      "name": "Litvanyalılar",
+      "nameEn": "Lithuanians",
+      "focus": "Süvari ve Keşiş medeniyeti",
+      "civilizationBonuses": [
+        "Her Şehir Merkezi fazladan +100 yemek verir",
+        "Mızraklı Asker türleri ve Akıncı türleri %10 daha hızlı hareket eder",
+        "Binaya yerleştirilen her Kadim Eser, Şövalye türlerine ve Leitislere +1 saldırı kazandırır (bu en fazla +4 olabilir)"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Leitis",
+          "description": "Zırhı yok sayan, Litvanya Ağır Süvarisi. Özellikte yüksek zırhları olan Süvarilere ve Piyadelere karşı güçlüdür. Okçu birimlerine karşı zayıftır."
+        },
+        {
+          "name": "Kanatlı Hüssar",
+          "description": "Gözcülük ve baskın için kullanılan ve hızlı hareket eden, Polonya ve Litvanya'ya özgü Süvari. Dönüştürülmeye dirençlidir. Manastır Birimlerine karşı son derece güçlüdür. Mızraklı Asker türlerine ve Deve Binicilerine karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Yüksek Kaleler",
+          "description": "Şehir Merkezlerinin menzili +3 artar"
+        },
+        {
+          "name": "Kule Kalkanlar",
+          "description": "Mızraklı Asker türleri ve Akıncılar +2 delici zırh kazanır"
+        }
+      ],
+      "teamBonus": "Manastırlar %20 daha hızlı çalışır"
+    },
+    {
+      "code": "MAG",
+      "name": "Macarlar",
+      "nameEn": "Magyars",
+      "focus": "Süvari medeniyeti",
+      "civilizationBonuses": [
+        "Köylüler, kurtları bir darbeyle yener",
+        "Atlı Gözcü türleri %15 daha ucuzdur",
+        "Yakın dövüş saldırısı yükseltmeleri ücretsizdir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Macar Huszar",
+          "description": "Macarlara özgü Süvari. Kuşatma Silahlarına karşı güçlüdür. Mızraklı Asker türlerine ve Deve Binicilerine karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Corvinia Ordusu",
+          "description": "Macar Huszarlar için altın bedeli yerine ek yiyecek bedeli getirilir"
+        },
+        {
+          "name": "Eğimli Yay",
+          "description": "Binekli Okçular +1 saldırı ve +1 menzil kazanır"
+        }
+      ],
+      "teamBonus": "Binekli Okçular %25 daha hızlı eğitilir"
+    },
+    {
+      "code": "MALY",
+      "name": "Malaylar",
+      "nameEn": "Malay",
+      "focus": "Donanma medeniyeti",
+      "civilizationBonuses": [
+        "Sonraki Çağa %66 daha hızlı geçilir",
+        "Piyade zırh yükseltmeleri ücretsizdir",
+        "Savaş Filleri; Kale Çağı'nda %25, İmparatorluk Çağı'nda %35 daha ucuzdur",
+        "Balık Kapanları %33 daha ucuzdur ve %200 daha fazla yiyecek sağlar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Karambit Savaşçısı",
+          "description": "Yarım nüfus alanı kaplayan, Malaylara özgü Piyade. Çok sayıdayken güçlüdür. Süvarilere ve Menzilli Askerlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Deniz Gücü",
+          "description": "Rıhtımlar yükseltilerek Liman olur"
+        },
+        {
+          "name": "Zorla Askere Alma",
+          "description": "Milis türlerinin altın bedeli yerine ek yiyecek bedeli getirilir"
+        }
+      ],
+      "teamBonus": "Rıhtımların görüş hattı +6 artar"
+    },
+    {
+      "code": "MAL",
+      "name": "Malililer",
+      "nameEn": "Malians",
+      "focus": "Piyade medeniyeti",
+      "civilizationBonuses": [
+        "Binalar %15 daha az odun gerektirir",
+        "Köylüler %10 daha fazla altın bırakır",
+        "Kışla Birimleri; Feodal Çağ'da +1,",
+        "Kale Çağı'nda +2, İmparatorluk Çağı'nda +3 delici zırh kazanır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Gbeto",
+          "description": "Menzilli yakın dövüş saldırısı yapan ve hızlı hareket eden, Malililere özgü Piyade türü. Piyadelere ve Kuşatma Silahlarına karşı güçlüdür. Menzilli Askerlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tigui",
+          "description": "Şehir Merkezleri garnizona gerek duymadan ok fırlatır"
+        },
+        {
+          "name": "Farimba",
+          "description": "Süvariler +5 saldırı kazanır"
+        }
+      ],
+      "teamBonus": "Üniversiteler %80 daha hızlı çalışır"
+    },
+    {
+      "code": "MAPU",
+      "name": "Mapuçe",
+      "nameEn": "Mapuche",
+      "focus": "Süvari ve Karşıt Birlik medeniyeti",
+      "civilizationBonuses": [
+        "Toplayıcılar %25 daha fazla yiyecek bırakır",
+        "Yerleşimler, Mızraklı Asker türlerini ve Avcı Erleri eğitebilir",
+        "Piyadeler, Sapancılar ve Avcı Erleri Feodal Çağ'da +5, Kale Çağı'nda +10 ve İmparatolruk Çağı'nda +15 DP'ye sahip olur",
+        "Binekli birimler, askerî birimleri yendiğinde +3 daha fazla altın üretir",
+        "Düşman Kaleleri haritada görülebilir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kona",
+          "description": "Yaralı birimlere gittikçe artan hasar veren özel Mapuçe Süvarisi. Piyadelere ve Yaya Okçulara karşı güçlüdür. Mızraklı Asker türlerine, Deve Binicilerine ve Keşişlere karşı zayıftır."
+        },
+        {
+          "name": "Bolas Binicisi",
+          "description": "Düşman birimleri hücum saldırısıyla yavaşlatan özel Mapuçe Binekli Okçusu. Binekli birimlere karşı güçlüdür. Yaya Okçulara, Avcı Erlerine ve yakındaki birimlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Malon",
+          "description": "Bolas Binicileri, Sapancılar ve Avcı Erleri delici hasar verir"
+        },
+        {
+          "name": "Butalmapu",
+          "description": "Takım Kalesi Özgün Birimlerinin ve Bolas Binicilerinin maliyeti %15 azalır"
+        }
+      ],
+      "teamBonus": "Mızraklı Asker türleri ve Avcı Erleri +2 görüş hattı kazanır"
+    },
+    {
+      "code": "MAY",
+      "name": "Maya",
+      "nameEn": "Maya",
+      "focus": "Okçu medeniyeti",
+      "civilizationBonuses": [
+        "+1 Köylüyle fakat -50 yiyecekle başlanır",
+        "Kaynaklar %15 daha uzun süre dayanır",
+        "Yaya Okçular; Feodal Çağ'da %10, Kale Çağı'nda %20, İmparatorluk Çağı'nda %30 daha ucuzdur"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Tüylü Okçu",
+          "description": "Hızlı hareket eden, Mayalara özgü Yaya Okçu. Okçu Birimlerine ve Piyadelere karşı güçlüdür. Süvarilere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Hul'che Mızraklıları",
+          "description": "Avcı Erleri ek bir cisim fırlatır"
+        },
+        {
+          "name": "Holkanlar",
+          "description": "Kartal Savaşçıların DP'si +40 artar"
+        }
+      ],
+      "teamBonus": "Surların bedeli %50 azalır"
+    },
+    {
+      "code": "MON",
+      "name": "Moğollar",
+      "nameEn": "Mongols",
+      "focus": "Atlı Okçu medeniyeti",
+      "civilizationBonuses": [
+        "Avcılar %40 daha hızlı çalışır",
+        "Atlı Okçular %25 daha hızlı saldırır",
+        "Atlı Gözcü türleri ve Bozkır Mızraklılarının DP'si Kale Çağı'nda %20, İmparatorluk Çağı'nda %30 artar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Mangudai",
+          "description": "Hızlı saldırabilen, Moğollara özgü Binekli Okçu. Kuşatma Silahlarına ve Piyadelere karşı güçlüdür. Akıncılara, Mızraklı Asker türlerine ve Deve Binicilere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Göçebeler",
+          "description": "Evlerin eksilmesi nüfus alanını azaltmaz"
+        },
+        {
+          "name": "Tatbikat",
+          "description": "Kuşatma Atölyesi Birimleri %50 daha hızlı hareket eder"
+        }
+      ],
+      "teamBonus": "Atlı Gözcü türleri +2 görüş hattı kazanır"
+    },
+    {
+      "code": "MUI",
+      "name": "Muisca",
+      "nameEn": "Muisca",
+      "focus": "Okçu ve Keşiş medeniyeti",
+      "civilizationBonuses": [
+        "Bir sonraki Çağa atlama %50 daha az altına mal olur",
+        "Yerleşim maliyeti %33 daha azdır ve yerleşimler yakındaki birimleri iyileştirir",
+        "Champi Savaşçıları ve Okçuluk Binası Birimleri Feodal/Kale/İmparatorluk Çağlarında +1/2/3 yakın dövüş zırhı kazanır",
+        "Keşişler +%50 daha hızlı inanç kazanır",
+        "Kervanlar ve Loncalar ücretsizdir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Guecha Savaşçısı",
+          "description": "Yakınında bir Guecha Savaşçısı yenilgiye uğradığında DP yenileyen özel Muisca Avcı Eri. Menzilli Askerlere karşı güçlüdür. Yakın mesafedeki birimlere karşı zayıftır."
+        },
+        {
+          "name": "Tapınak Nöbetçisi",
+          "description": "Savaşta ne kadar uzun süre kalırsa o kadar hızlı saldırı gerçekleştiren özel Muisca Hücum Piyadesi. Binalara ve Binekli Birimlere karşı güçlüdür. Milis türü askerlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Bitkisel Tedavi",
+          "description": "Okçu türleri ve Champi Savaşçıları %15 daha hızlı hareket eder"
+        },
+        {
+          "name": "Huaracas",
+          "description": "Sapancıların menzili +1 artar ve %50 daha hızlı eğitilirler"
+        }
+      ],
+      "teamBonus": "Doğal altın kaynakları %15 daha uzun süre dayanır"
+    },
+    {
+      "code": "PER",
+      "name": "Persler",
+      "nameEn": "Persians",
+      "focus": "Süvari medeniyeti",
+      "civilizationBonuses": [
+        "+50 odun ve +50 yiyecekle başlar",
+        "Şehir Merkezleri ve Rıhtımlar %100 DP kazanır ve Karanlık Çağ'da %5, Feodal Çağ'da %10, Kale Çağı'nda %15, İmparatorluk Çağı'nda %20 daha hızlı çalışır",
+        "Parthialı Taktikleri Kale Çağı'nda açılabilir",
+        "İmparatorluk Çağı'nda Kervansaray inşa edebilir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Savaş Fili",
+          "description": "Ezme hasarı veren özgün Pers süvarisi. Binalara ve yakın mesafedeki birimlere karşı güçlü. Mızraklı Asker türlerine ve Keşişlere karşı zayıf."
+        },
+        {
+          "name": "Savar",
+          "description": "Her amaca uygun, Perslere özgü Ağır Süvari. Menzilli Askerlere karşı oldukça güçlüdür. Mızraklı Asker türlerine, Deve Binicilerine ve Keşişlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kamandaran",
+          "description": "Okçu türlerinin altın bedeli yerine ek odun bedeli gelir"
+        },
+        {
+          "name": "Hisarlar",
+          "description": "Kaleler normalde 4, Koçbaşlarına ve Piyadelere karşı 3 saldırı kazanır ve -%25 bonus hasar verir"
+        }
+      ],
+      "teamBonus": "Şövalye türleri Menzilli Askerlere karşı 2 saldırı kazanır"
+    },
+    {
+      "code": "POL",
+      "name": "Polonyalılar",
+      "nameEn": "Poles",
+      "focus": "Süvari medeniyeti",
+      "civilizationBonuses": [
+        "Folwark, Değirmenin yerine geçer",
+        "Köylüler; Feodal Çağ'da 10, Kale Çağı'nda 15, İmparatorluk Çağı'nda 20 DP yeniler",
+        "Taş Madencileri taşa ek olarak altın üretir",
+        "Nesil ve Atlı Gözcü türlerinin yükseltmeleri %50 daha az yiyecek gerektirir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Obuch",
+          "description": "Savaştığı birimlerin zırhını parçalayabilen, Polonya'ya özgü Piyade. Binalara, Süvarilere ve Piyadelere karşı güçlüdür. Okçu Birimlerine ve Silahlılara karşı zayıftır."
+        },
+        {
+          "name": "Kanatlı Hüssar",
+          "description": "Gözcülük ve baskın için kullanılan ve hızlı hareket eden, Polonya ve Litvanya'ya özgü Süvari. Dönüştürülmeye dirençlidir. Manastır Birimlerine karşı son derece güçlüdür. Mızraklı Asker türlerine ve Deve Binicilerine karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Szlachta Ayrıcalıkları",
+          "description": "Süvari türleri %60 daha az altına mal olur"
+        },
+        {
+          "name": "Leh Mirası",
+          "description": "Atlı Gözcü türleri ezme hasarı verir"
+        }
+      ],
+      "teamBonus": "Atlı Gözcü türleri Menzilli Askerlere karşı +1 saldırı kazanır"
+    },
+    {
+      "code": "POR",
+      "name": "Portekizliler",
+      "nameEn": "Portuguese",
+      "focus": "Donanma ve Barut medeniyeti",
+      "civilizationBonuses": [
+        "Toplayıcılar, yiyeceğe ek olarak odun da toplar",
+        "Tüm birimler %20 daha az altın gerektirir",
+        "İmparatorluk Çağı'nda Feitoria inşa edilebilir",
+        "Gemilerin DP'si Feodal Çağ'da %10, Kale Çağı'nda %15 ve İmparatorluk Çağı'nda %20 daha fazladır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Organ Topu",
+          "description": "Portekizlilere özgü Tüfekli Kuşatma Birimi. Mermi yağdırır. Geniş birim gruplarına karşı güçlüdür. Süvarilere ve Mancınık türlerine karşı zayıftır."
+        },
+        {
+          "name": "Karavela",
+          "description": "Menzilli delici saldırı yapabilen, Portekizlilere özgü Savaş Gemisi. Kalabalık gemi gruplarına karşı güçlüdür. Ateş Gemilerine karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Dünya Turu",
+          "description": "Tüm harita keşfedilmiş olarak ayarlanır; gemiler %33 daha hızlı eğitilir"
+        },
+        {
+          "name": "Arkebüz",
+          "description": "Barut Birimleri, hareket eden hedefleri daha yüksek isabetle vurur"
+        }
+      ],
+      "teamBonus": "Teknolojiler %25 daha hızlı araştırılır"
+    },
+    {
+      "code": "ROM",
+      "name": "Romalılar",
+      "nameEn": "Romans",
+      "focus": "Piyade ve Süvari medeniyeti",
+      "civilizationBonuses": [
+        "Köylüler %5 daha hızlı toplama, inşaat ve tamir yapar",
+        "Piyade zırh yükseltmelerinin etkisi iki katına çıkar",
+        "Akrepler %50 daha az altın gerektirir",
+        "Kadırga türleri ve Dromonlar +1 yakın dövüş zırhı ve +1 delici zırh kazanır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Bölük Komutanı",
+          "description": "Yakındaki Milis türü birimlerin hareket ve saldırı hızını artıran, Romalılara özgü Ağır Süvari. Piyadelere ve Yaya Okçulara karşı güçlüdür. Mızraklı Asker türlerine ve Deve Binicilerine karşı zayıftır."
+        },
+        {
+          "name": "Lejyoner",
+          "description": "Her koşula uygun, Romalılara özgü Piyade birimi. Piyadelere karşı oldukça güçlüdür. Binalara, Atlı Gözcülere ve Akıncı türlerine karşı güçlüdür. Uzak mesafedeki Menzilli Askerlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Balistalar",
+          "description": "Akrepler %33 daha hızlı saldırır; Kadırga türleri +2 saldırı kazanır"
+        },
+        {
+          "name": "Comitatenses",
+          "description": "Milis türleri, Şövalye türleri ve Bölük Komutanları %50 daha hızlı eğitilir ve hücum saldırısı kazanır"
+        }
+      ],
+      "teamBonus": "Akreplerin minimum menzili azalır"
+    },
+    {
+      "code": "SAR",
+      "name": "Sarazenler",
+      "nameEn": "Saracens",
+      "focus": "Deve ve Deniz medeniyeti",
+      "civilizationBonuses": [
+        "Markette takas bedeli sadece %5 olur ve Market inşaat maliyeti +100 odun azalır",
+        "Deve Birimlerinin DP'si %25 artar",
+        "Kadırga türlerinin saldırıları %25 hızlanır",
+        "Taşıma Gemilerinin DP'si %100, taşıma kapasitesi +20 artar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Memluk",
+          "description": "Menzilli yakın dövüş saldırısı yapabilen, Sarazenlere özgü Süvari. Binekli Birimlere karşı güçlüdür. Okçu Birimlerine ve Mızraklı Asker türlerine karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Bimaristan",
+          "description": "Keşişler yakındaki birden çok birimi pasif olarak iyileştirir"
+        },
+        {
+          "name": "Karşı Ağırlıklar",
+          "description": "Katapultlar ve Mancınık türleri %15 saldırı kazanır"
+        }
+      ],
+      "teamBonus": "Yaya Okçular ve Avcı Erleri, binalara karşı +2 saldırı kazanır"
+    },
+    {
+      "code": "SAX",
+      "name": "Saksonlar",
+      "nameEn": "Saxons",
+      "focus": "Piyade ve Savunma medeniyeti",
+      "civilizationBonuses": [
+        "Değirmenler, Kereste ve Maden Kampları inşa edildiğinde +50 yemek ve +10 taş sağlar",
+        "Piyadelerin maliyeti, kontrol edilen Şehir Merkezi veya Kale başına %5 azalır (en fazla %20)",
+        "Kuleler ve Kaleler, Kale Çağı'ndan itibaren %100 daha fazla temel ok fırlatır",
+        "Uzun Yelkenliler ve Mancınıklı Kalyonlar +%20 DP kazanır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ateş Birliği",
+          "description": "Yakın dövüşe girmeden önce mızrak fırlatan, Saksonlara özgü Piyade. Menzilli Askerlere karşı güçlüdür. Süvarilere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Keşiş Yetiştirme",
+          "description": "Keşişlerin dönüştürme menzili 1 artar; %33 daha hızlı eğitilirler"
+        },
+        {
+          "name": "Kalkan Duvarı",
+          "description": "Piyadeler toplu hâldeyken ek zırh kazanır"
+        }
+      ],
+      "teamBonus": "Tamirciler %25 daha hızlı çalışır"
+    },
+    {
+      "code": "SHU",
+      "name": "Shu",
+      "nameEn": "Shu",
+      "focus": "Okçu ve Kuşatma medeniyeti",
+      "civilizationBonuses": [
+        "Oduncular oduna ek olarak yiyecek üretir",
+        "Okçuluk Binasındaki ve Demircideki Okçu Birim teknolojileri %25 daha ucuzdur",
+        "Kuşatma Silahları ve Kuşatma Gemileri, Kale Çağı'nda/İmparatorluk Çağı'nda %10/%15 daha hızlıdır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Beyaz Tüy Muhafızı",
+          "description": "Saldırdığı birimi geçici olarak yavaşlatan, Shu'ya özgü bir Piyade türü. Süvarilere karşı güçlüdür. Menzilli Askerlere karşı zayıftır."
+        },
+        {
+          "name": "Savaş Arabası",
+          "description": "Seri ateş eden fakat yakın mesafeden saldıramayan, Shu'ya özgü bir Kuşatma Süvarisi türü. Yeniden doldurma süresi uzundur. Daha fazla alanı kapsayan ancak isabet oranı daha düşük olan yaylım ateşi moduna geçebilir. Menzilli Askerlere karşı güçlüdür. Süvarilere ve Kuşatma Silahlarına karşı zayıftır."
+        },
+        {
+          "name": "Liu Bei",
+          "description": "Yakındaki tüm birimleri iyileştiren, Shu'ya özgü bir Piyade Kahraman. Son derece güçlüdür. Yalnızca bir tane oluşturulabilir ve dönüştürülemez."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Sarmal Yılan Dizilimi",
+          "description": "Mızraklı Asker Türleri ve Beyaz Tüy Muhafızları birbirine yakınken ek DP kazanır"
+        },
+        {
+          "name": "Ok Haznesi",
+          "description": "Okçu türleri, Savaş Arabaları ve Lou Chuanlar fazladan mermi atar"
+        }
+      ],
+      "teamBonus": "Yaya Okçuların görüş hattı +2 artar"
+    },
+    {
+      "code": "SIC",
+      "name": "Sicilyalılar",
+      "nameEn": "Sicilians",
+      "focus": "Piyade ve Süvari medeniyeti",
+      "civilizationBonuses": [
+        "Fazladan +100 taşla başlanır",
+        "Tarla yükseltmeleri %125 daha fazla yiyecek sağlar",
+        "Askerler %40 daha az bonus hasar alır",
+        "Karanlık Çağ'da Gözcü Kulesi yerine geçen Donjon inşa edilebilir",
+        "Surlar %50 daha hızlı inşa edilir; Şehir Merkezleri %100 daha hızlı inşa edilir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Serjeant",
+          "description": "Donjon inşa edebilen, Sicilya'ya özgü bir Piyade türü. Piyadelere ve Deve Biniclerine karşı güçlüdür. Binekli Okçulara ve Silahlılara karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "İlk Haçlı Seferi",
+          "description": "İlk 5 Şehir Merkezinin her biri 5 Serjeant getirir; birimler dönüştürülmeye daha dayanıklıdır"
+        },
+        {
+          "name": "Hauberk",
+          "description": "Şövalye türleri +1 yakın dövüş/+2 delici zırh kazanır"
+        }
+      ],
+      "teamBonus": "Taşıma Gemilerinin görüş hattı +5 artar ve bedeli %50 azalır"
+    },
+    {
+      "code": "SLV",
+      "name": "Slavlar",
+      "nameEn": "Slavs",
+      "focus": "Piyade ve Kuşatma medeniyeti",
+      "civilizationBonuses": [
+        "Çiftçiler %15 daha hızlı çalışır",
+        "Kundakçılık ve Gambesonlar ücretsizdir",
+        "Kuşatma Atölyesi Birimleri %15 daha ucuzdur",
+        "Keşişler %20 daha hızlı hareket eder"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Boyar",
+          "description": "Üstün yakın dövüş zırhına sahip, Slavlara özgü Süvari. Yakın mesafedeki birimlere karşı güçlüdür. Mızraklı Asker türlerine ve Keşişlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Detinetler",
+          "description": "Kale ve Gözcü Kulesi türlerinin taş bedelinin %40'ı yerine ek odun bedeli getirilir"
+        },
+        {
+          "name": "Druzhina",
+          "description": "Piyadeler ezme hasarı verir"
+        }
+      ],
+      "teamBonus": "Askerî binalar (Kaleler hariç) +5 nüfus alanı daha sağlar"
+    },
+    {
+      "code": "SPN",
+      "name": "İspanyollar",
+      "nameEn": "Spanish",
+      "focus": "Barut ve Keşiş medeniyeti",
+      "civilizationBonuses": [
+        "İnşaat Ustaları %30 daha hızlı çalışır",
+        "Araştırılan her teknoloji +20 altın kazandırır",
+        "Demirci yükseltmeleri altın gerektirmez",
+        "Barut Birimleri %18 daha hızlı saldırır",
+        "Toplu Kalyonlar, hareket eden hedefleri daha yüksek isabetle vurur"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Konkistador",
+          "description": "Güçlü saldırı yapabilen, hareket kabiliyetine sahip, İspanyollara özgü Binekli Silahlı. Uzak mesafedeki birimlere karşı güçlüdür. Mızraklı Asker türlerine, Akıncılarave Keşişlere karşı zayıftır."
+        },
+        {
+          "name": "Misyoner",
+          "description": "İspanyollara özgü Binekli Keşiş. Düşman birimleri dönüştürüp dost birimleri iyileştirir. Keşişten daha hızlıdır ama görüşü ve menzili daha azdır. Yavaş, menzilsiz birimlere karşı güçlüdür. Atlı Gözcü türlerine, Kartal Savaşçılara ve Menzilli Askerlere karşı zayıftır. Kadim Eserleri toplayarak Manastırlara götürebilir."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Engizisyon",
+          "description": "Keşişler ve Misyonerler, hedefleri daha hızlı dönüştürür; Misyonerlerin menzili +1 artar"
+        },
+        {
+          "name": "Üstünlük",
+          "description": "Köylüler +40 DP, +6 saldırı, +2 yakın dövüş/+2 delici zırh kazanır"
+        }
+      ],
+      "teamBonus": "Ticaret Birimleri %25 daha fazla altın getirir"
+    },
+    {
+      "code": "TAT",
+      "name": "Tatarlar",
+      "nameEn": "Tatars",
+      "focus": "Atlı Okçu medeniyeti",
+      "civilizationBonuses": [
+        "Besi hayvanları %50 daha uzun süre dayanır",
+        "Birimler daha yüksek bir konumdan savaşırken %25 daha fazla hasar verir",
+        "Kale Çağı'ndan itibaren yeni Şehir Merkezlerinde 2 Koyun belirir",
+        "Zihgir ve Parthialı Taktikleri ücretsizdir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Keshik",
+          "description": "Başka birimlerle savaşırken altın üreten, Tatarlara özgü Ağır Süvari. Okçu Birimlerine karşı güçlüdür. Mızraklı Asker türlerine, Deve Binicilerine ve Keşişlere karşı zayıftır."
+        },
+        {
+          "name": "Yanan Deve",
+          "description": "Özgün Tatar imha Kuşatma Süvarisi. Özellikle Filler gibi Binekli Birimlere karşı güçlü. Yaya Okçular ve Piyadelere karşı zayıf. Kullanıldığında kendini yok eder."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "İpek Zırh",
+          "description": "Atlı Gözcü Türleri, Bozkır Mızraklıları ve Atlı Okçular +1 yakın dövüş/+1 delici zırh kazanır"
+        },
+        {
+          "name": "Timur Kuşatma İşçiliği",
+          "description": "Katapultların menzili +2 artar"
+        }
+      ],
+      "teamBonus": "Binekli Okçuların görüş hattı +2 artar"
+    },
+    {
+      "code": "TEU",
+      "name": "Tötonlar",
+      "nameEn": "Teutons",
+      "focus": "Piyade ve Savunma medeniyeti",
+      "civilizationBonuses": [
+        "Tarlalar %40 daha ucuz olur",
+        "Şehir Merkezleri +10; Kuleler +5 garnizon kapasitesi kazanır",
+        "Piyade ve Binekli Birimler Kale Çağı'nda 1, İmparatorluk Çağı'nda 2 yakın dövüş zırhı kazanır",
+        "Keşişlerin iyileştirme menzili %100 artar",
+        "Senkendazlar ve Bitkisel İlaçlar ücretsizdir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Töton Şövalyesi",
+          "description": "Üstün yakın dövüş zırhına sahip özgün Töton Piyadesi. Yavaş ama dönüştürülmeye karşı dayanıklı. Yakın dövüş birimlerine karşı güçlü. Okçu Birimlere ve Silahlılara karşı zayıf."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Zırhlı Araç",
+          "description": "Kuşatma Silahları +4 yakın dövüş zırhı kazanır"
+        },
+        {
+          "name": "Mazgallı Siperler",
+          "description": "Kaleler +3 menzil kazanır, garnizondaki Piyadeler ok atar"
+        }
+      ],
+      "teamBonus": "Birimler dönüştürülmeye daha dayanıklı olur"
+    },
+    {
+      "code": "TUP",
+      "name": "Tupi",
+      "nameEn": "Tupi",
+      "focus": "Okçu ve Piyade medeniyeti",
+      "civilizationBonuses": [
+        "Her kaynak için +25 ile başlarsın",
+        "Köylüler, Yerleşimlerde görevlendirilebilir",
+        "Düşen birimler maliyetlerinin %15'ini iade eder",
+        "Okçuluk Binası ve Kışla yükseltirken yiyecek maliyeti %50 daha az olur"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Karaodun Okçusu",
+          "description": "Çiftler hâlinde eğitilen ve yarım nüfus alanı kaplayan özel Tupi Yaya Okçusu. Sayısı çokken güçlüdür. Yakın mesafedeki birimlere karşı zayıftır."
+        },
+        {
+          "name": "Ibirapema Savaşçısı",
+          "description": "Önündeki alana güçlü bir saldırı gerçekleştiren özel Tupi Piyade. Piyadelere karşı güçlüdür. Uzak mesafedeki yaya okçulara karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Cacique",
+          "description": "Champi Savaşçıları ve Sapancılar +%25 daha hızlı saldırır"
+        },
+        {
+          "name": "Kürar",
+          "description": "Yaya Okçular ve Surlar zehir hasarı verir"
+        }
+      ],
+      "teamBonus": "Kuleler ve Kaleler +10 daha fazla nüfus alanı sunar"
+    },
+    {
+      "code": "TUR",
+      "name": "Türkler",
+      "nameEn": "Turks",
+      "focus": "Barut medeniyeti",
+      "civilizationBonuses": [
+        "Altın madencileri %25 daha hızlı çalışır",
+        "Atlı Gözcü türleri +1 delici zırh kazanır ve bedelsiz yükseltilir",
+        "Kimya ücretsizdir; Barut teknolojileri -%50 daha az maliyete sahiptir",
+        "Tüfekli Birimlerin DP'si %25 artar"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Yeniçeri",
+          "description": "Güçlü bir saldırıya sahip, Türklere özgü Yaya Silahlı. Piyadelere karşı güçlüdür. Okçu Birimlerine ve Akıncılara karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Sipahi",
+          "description": "Atlı Okçular +20 DP kazanır"
+        },
+        {
+          "name": "Topçuluk",
+          "description": "Bombardıman Kulelerinin, Bombardıman Toplarının ve Toplu Kalyonların menzili +2 artar"
+        }
+      ],
+      "teamBonus": "Tüfekli Birimler %25 daha hızlı eğitilir"
+    },
+    {
+      "code": "VAR",
+      "name": "Varegler",
+      "nameEn": "Varangians",
+      "focus": "Süvari ve Donanma medeniyeti",
+      "civilizationBonuses": [
+        "Çobanlık, balıkçılık ve avcılık da altın üretir",
+        "Nesiller ve Kervan etkileri %50 artar",
+        "Vareg Muhafızları %25 daha hızlı saldırır ve %50 daha fazla altın üretir",
+        "Uzun Yelkenliler ve Mancınıklı Kalyonlar %15 daha hızlı saldırır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Jarl",
+          "description": "Menzilli yakın dövüş saldırısı yapabilen, Vareglere özgü Süvari. Piyadelere karşı son derece güçlüdür. Deve Binicilerine ve Keşişlere karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Vendel Mirası",
+          "description": "Şövalye türleri ezme hasarı verir"
+        },
+        {
+          "name": "Gotikon",
+          "description": "Vareg Muhafızları belirli aralıklarla balta fırlatır"
+        }
+      ],
+      "teamBonus": "Şövalyeler, Piyadelere karşı +1 saldırı kazanır"
+    },
+    {
+      "code": "VIE",
+      "name": "Vietnamlılar",
+      "nameEn": "Vietnamese",
+      "focus": "Okçu medeniyeti",
+      "civilizationBonuses": [
+        "Oyun başlangıcında düşman Şehir Merkezleri görünür olur",
+        "Ekonomik yükseltmeler odun gerektirmez ve araştırmalar %100 daha hızlı olur",
+        "Yaya Okçuların ve Avcı Erlerinin %20 daha fazla DP'si olur",
+        "Zorunlu Askerlik ücretsizdir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Rattan Okçu",
+          "description": "Son derece yüksek delici zırhı olan, Vietnam'a özgü Yaya Okçu. Okçu Birimlerine ve Piyadelere karşı güçlü. Süvarilere, Akıncılara ve Kuşatma Silahlarına karşı zayıf."
+        },
+        {
+          "name": "İmparatorluk Akıncısı",
+          "description": "Yakın mesafede saldıramayan, okçu karşıtı Avcı Eri. Menzilli Askerlere ve Mızraklı Asker türlerine karşı güçlü. Yakın mesafedeki birimlere karşı zayıf. Vietnamlılar ve müttefikleri tarafından eğitilebilir."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Ettenkalkan",
+          "description": "Savaş Fillerine +100 DP"
+        },
+        {
+          "name": "Kağıt Para",
+          "description": "Oduncular oduna ek olarak yavaşça altın üretir"
+        }
+      ],
+      "teamBonus": "İmparatorluk Çağı'nda İmparatorluk Akıncısı yükseltmesi açılır"
+    },
+    {
+      "code": "VIK",
+      "name": "Vikingler",
+      "nameEn": "Vikings",
+      "focus": "Piyade ve Deniz medeniyeti",
+      "civilizationBonuses": [
+        "El Arabası ücretsizdir",
+        "Feodal Çağ'dan itibaren Piyadelerin DP'si %20 artar",
+        "Savaş Gemilerinin bedeli Feodal Çağ'da %10, Kale Çağı'nda %15, İmparatorluk Çağı'nda %20 azalır"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Berserk",
+          "description": "DP yenileyen, Vikinglere özgü Piyade. Piyadelere ve Kuşatma Silahlarına karşı güçlüdür. Okçu Birimlerine ve Silahlılara karşı zayıftır."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Klan Şefleri",
+          "description": "Piyadeler; Süvarilere karşı +5, Deve Birimlerine karşı +4 saldırı kazanır"
+        },
+        {
+          "name": "Bogsveigar",
+          "description": "Okçu türleri ve Uzun Gemiler +1 saldırı kazanır"
+        }
+      ],
+      "teamBonus": "Rıhtımların bedeli %15 azalır"
+    },
+    {
+      "code": "WEI",
+      "name": "Wei",
+      "nameEn": "Wei",
+      "focus": "Süvari medeniyeti",
+      "civilizationBonuses": [
+        "Araştırılan her ekonomi geliştirmesi için ücretsiz bir Köylü verir",
+        "Hei Guang Süvarisi ve Siyenpi Akıncıları, Kale Çağı'nda %20 ve İmparatorluk Çağı'nda %30 DP kazanır",
+        "Mancınıklar ve Lou Chuanlar %25 daha ucuzdur"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kaplan Süvari",
+          "description": "Düşman ordusunu yendiğinde DP ve saldırı kazanan, Wei'ye özgü bir Süvari türü. Menzilli Askerlere karşı son derece güçlüdür. Mızraklı Askerlere karşı zayıftır."
+        },
+        {
+          "name": "Siyenpi Akıncısı",
+          "description": "Yüklü menzilli saldırıya sahip, Wei'ye özgü bir Binekli Okçu türü. Piyadelere karşı güçlüdür. Akıncılara ve Deve Binicilere karşı zayıftır."
+        },
+        {
+          "name": "Cao Cao",
+          "description": "Yakındaki birimlerin saldırı hızını artıran, Wei'ye özgü bir Süvari Kahraman. Son derece güçlüdür. Yalnızca bir tane oluşturulabilir ve dönüştürülemez."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tuntian",
+          "description": "Askerler pasif olarak yiyecek üretir"
+        },
+        {
+          "name": "Ming Guang Zırhı",
+          "description": "Binekli Okçular +4 yakın dövüş zırhı kazanır"
+        }
+      ],
+      "teamBonus": "Süvariler, Kuşatma Silahlarına karşı +2 saldırı kazanır"
+    },
+    {
+      "code": "WU",
+      "name": "Wu",
+      "nameEn": "Wu",
+      "focus": "Piyade ve Donanma medeniyeti",
+      "civilizationBonuses": [
+        "Askerî üretim binaları ve Rıhtımlar inşa edildiklerinde +55 yiyecek verir",
+        "Piyadeler dakika başına Feodal Çağ'da 10, Kale Çağı'nda 15, İmparatorluk Çağı'nda 30 DP yeniler",
+        "Jian Kılıç Ustaları ve Hei Guang Süvarileri, İmparatorluk Çağı'nda +2 saldırı kazanır",
+        "Karinalama ve Kuru Havuz ücretsizdir"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Alev Okçusu",
+          "description": "Birimlere karşı çoklu ok fırlatan, binalara karşı uzun menzilli saldırı gerçekleştiren, Wu'ya özgü bir Yaya Okçu türü. Piyadelere, Kuşatma Silahlarına ve binalara karşı güçlüdür. Süvarilere ve Akıncılara karşı zayıftır."
+        },
+        {
+          "name": "Jian Kılıç Ustası",
+          "description": "Belirli bir hasar eşiğine ulaşıldığında hareket hızı ve saldırı kazanan ama zırhını kaybeden, Wu'ya özgü Hücum Piyadesi türü. Okçu Birimlerine karşı son derece güçlüdür. Milis türevlerine karşı zayıftır."
+        },
+        {
+          "name": "Sun Jian",
+          "description": "Yakındaki birimlerin hareket hızını artıran, Wu'ya özgü Süvari Kahraman. Son derece güçlüdür. Yalnızca bir tane oluşturulabilir ve dönüştürülemez."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kızıl Kayalar Taktikleri",
+          "description": "İmha Gemileri ve Alev Okçuları, gemilere ve binalara ateş hasarı verir"
+        },
+        {
+          "name": "Oturan Kaplan",
+          "description": "Mancınıklar ve Lou Chuan katapult silahları ek cisimler fırlatır"
+        }
+      ],
+      "teamBonus": "Evler %100 daha hızlı inşa edilir"
+    }
+  ]
+}

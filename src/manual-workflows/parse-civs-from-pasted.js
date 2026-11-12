@@ -1,64 +1,6 @@
 const fs = require("fs");
 
-// Civilization code mapping
-const civCodes = {
-    Armenians: "ARM",
-    Aztecs: "AZT",
-    Bengalis: "BENG",
-    Berbers: "BER",
-    Bohemians: "BOH",
-    Britons: "BRI",
-    Bulgarians: "BUL",
-    Burgundians: "BURGU",
-    Burmese: "BUR",
-    Byzantines: "BYZ",
-    Celts: "CEL",
-    Chinese: "CHI",
-    Cumans: "CUM",
-    Danes: "DAN",
-    Dravidians: "DRAV",
-    Ethiopians: "ETH",
-    Franks: "FRK",
-    Georgians: "GEO",
-    Goths: "GOT",
-    Gurjaras: "GURJ",
-    Hindustanis: "HIN",
-    Huns: "HUN",
-    Inca: "INC",
-    Italians: "ITA",
-    Japanese: "JAP",
-    Jurchens: "JUR",
-    Khitans: "KHI",
-    Khmer: "KHM",
-    Koreans: "KOR",
-    Lithuanians: "LIT",
-    Magyars: "MAG",
-    Malay: "MALY",
-    Malians: "MAL",
-    Mapuche: "MAPU",
-    Maya: "MAY",
-    Mongols: "MON",
-    Muisca: "MUI",
-    Persians: "PER",
-    Poles: "POL",
-    Portuguese: "POR",
-    Romans: "ROM",
-    Saracens: "SAR",
-    Saxons: "SAX",
-    Shu: "SHU",
-    Sicilians: "SIC",
-    Slavs: "SLV",
-    Spanish: "SPN",
-    Tatars: "TAT",
-    Teutons: "TEU",
-    Tupi: "TUP",
-    Turks: "TUR",
-    Varangians: "VAR",
-    Vietnamese: "VIE",
-    Vikings: "VIK",
-    Wei: "WEI",
-    Wu: "WU",
-};
+const { civCodes } = require("./lib");
 
 function parseCivilizations(text) {
     const lines = text.split("\n");
@@ -383,10 +325,14 @@ function nextNonEmptyLine(lines, i) {
 
 const path = require("path");
 const inputPath = path.join(__dirname, "copy-paste-from-fandom.txt");
-const outputPath = path.join(__dirname, "..", "..", "ui", "civ-info.json");
+const outputPath = path.join(__dirname, "..", "..", "ui", "data", "en-fandom.json");
 
 const civilizations = parseCivilizations(fs.readFileSync(inputPath, "utf8"));
-fs.writeFileSync(outputPath, JSON.stringify(civilizations, null, 2) + "\n");
+const civs = civilizations.map((c) => ({ ...c, nameEn: c.name }));
+fs.writeFileSync(
+    outputPath,
+    JSON.stringify({ source: "ageofempires.fandom.com", civs }, null, 2) + "\n"
+);
 
 console.log(`Successfully parsed ${civilizations.length} civilizations`);
 console.log(`Output written to ${outputPath}`);

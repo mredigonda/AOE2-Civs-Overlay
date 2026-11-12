@@ -1,0 +1,1762 @@
+{
+  "source": "SiegeEngineers/aoe2techtree@e56728e",
+  "labels": {
+    "uniqueUnits": "Đơn vị chuyên biệt",
+    "uniqueTechnologies": "Công nghệ chuyên biệt",
+    "teamBonus": "Thưởng đội"
+  },
+  "civs": [
+    {
+      "code": "ARM",
+      "name": "Quân Armenia",
+      "nameEn": "Armenians",
+      "focus": "Nền văn minh Bộ binh và Hải quân",
+      "civilizationBonuses": [
+        "Xe la giảm -25% chi phí",
+        "Công nghệ Xe la có hiệu quả tăng +40%",
+        "Nâng cấp đơn vị dòng Lính giáo và Dân binh (trừ Quân binh) có sẵn trước một thời đại",
+        "Nhà thờ gia cố đầu tiên nhận một Thánh tích miễn phí",
+        "Dòng Thuyền ga-lê và tàu Dromon bắn thêm một đạn"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Cung thủ cung liên hợp",
+          "description": "Đơn vị cung thủ đi bộ chuyên biệt của quân Armenia với đòn tấn công bỏ qua điểm giáp. Mạnh khi đối đầu với bộ binh và kỵ binh. Yếu khi đối đầu với cung thủ và vũ khí công thành."
+        },
+        {
+          "name": "Linh mục chiến binh",
+          "description": "Đơn vị Bộ binh tu viện chuyên biệt của quân Armenia có thể hồi máu cho các đơn vị đồng minh. Có thể thu thập và mang Thánh tích đến Tu viện. Mạnh khi đối đầu với Bộ binh. Yếu khi đối đầu với Hàng Kỵ binh do thám và Đơn vị Cung thủ."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Hạm đội Cilician",
+          "description": "Tàu phá hủy +20% bán kính vụ nổ; dòng Thuyền ga-lê và Tàu Dromon +1 phạm vi"
+        },
+        {
+          "name": "Hòm thánh cốt",
+          "description": "Bộ binh (trừ dòng Lính giáo) +30 Máu, Linh mục chiến binh +100% tốc độ hồi máu"
+        }
+      ],
+      "teamBonus": "Bộ binh +2 tầm nhìn"
+    },
+    {
+      "code": "AZT",
+      "name": "Aztec",
+      "nameEn": "Aztecs",
+      "focus": "Nền văn minh Bộ binh và Thầy tu",
+      "civilizationBonuses": [
+        "Bắt đầu với +50 vàng",
+        "Dân làng mang +3 tài nguyên",
+        "Đơn vị quân đội đào tạo nhanh hơn +15%",
+        "Thầy tu tăng +5 Máu sau khi mỗi công nghệ tại Tu viện được nghiên cứu"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Chiến binh báo đốm",
+          "description": "Đơn vị Bộ binh chuyên biệt của quân Aztec có thêm sát thương bổ sung khi đánh bại các đơn vị quân đội của kẻ địch. Đặc biệt mạnh khi đối đầu với Bộ binh. Yếu khi đối đầu với các đơn vị kỵ binh và cung thủ."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tên ném",
+          "description": "Lính giao tranh +1 điểm tấn công, +1 phạm vi"
+        },
+        {
+          "name": "Chiến tranh vòng hoa",
+          "description": "Bộ binh +4 điểm tấn công"
+        }
+      ],
+      "teamBonus": "Thánh tích tạo ra thêm +33% vàng"
+    },
+    {
+      "code": "BENG",
+      "name": "Quân Bengal",
+      "nameEn": "Bengalis",
+      "focus": "Nền văn minh Voi và Hải quân",
+      "civilizationBonuses": [
+        "Nhà chính sinh ra 2 Dân làng khi lên đến Thời đại tiếp theo",
+        "Kỵ binh +2 điểm tấn công khi đối đầu Lính giao tranh",
+        "Giảm -25% sát thương thưởng mà đơn vị cưỡi voi phải chịu và có khả năng chống chuyển đổi cao hơn",
+        "Thầy tu +3 giáp cận chiến/+3 giáp chống xuyên",
+        "Tàu hồi 15 Máu mỗi phút"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ratha",
+          "description": "Cung thủ cưỡi thú"
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Paiks",
+          "description": "Ratha và đơn vị cưỡi Voi tấn công nhanh hơn +20%"
+        },
+        {
+          "name": "Đại thừa",
+          "description": "Giảm -10% suất dân số cho Dân làng và Thầy tu"
+        }
+      ],
+      "teamBonus": "Ngoài vàng ra, đơn vị giao thương còn tạo ra +10% lương thực"
+    },
+    {
+      "code": "BER",
+      "name": "Berber",
+      "nameEn": "Berbers",
+      "focus": "Nền văn minh Kỵ binh và Hải quân",
+      "civilizationBonuses": [
+        "Dân làng di chuyển nhanh hơn +5% trong Thời kỳ Tăm tối, nhanh hơn +10% bắt đầu từ Thời Phong kiến",
+        "Đơn vị từ Chuồng ngựa giảm -15 / 20% chi phí trong Thời Lâu đài / Thời đại Đế quốc",
+        "Tàu di chuyển nhanh hơn +10%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Cung thủ lạc đà",
+          "description": "Đơn vị Cung thủ cưỡi thú chuyên biệt của quân Berber. Đặc biệt mạnh khi đối đầu Cung thủ cưỡi thú. Yếu khi đối đầu các đơn vị dòng Lính giáo, Lính giao tranh và Kỵ sĩ Lạc đà."
+        },
+        {
+          "name": "Kỵ binh phóng lao",
+          "description": "Đơn vị Lính giao tranh cưỡi thú chống cung thủ, không thể tấn công ở cự ly gần. Mạnh khi đối đầu Lính đánh xa. Yếu khi đối đầu các đơn vị ở cự ly gần. Có thể huấn luyện trong quân Berber và đồng minh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Thành lũy",
+          "description": "Lâu đài của đội hoạt động nhanh hơn +25%"
+        },
+        {
+          "name": "Lạc đà Maghrebi",
+          "description": "Đơn vị lạc đà hồi 15 Máu mỗi phút"
+        }
+      ],
+      "teamBonus": "Kỵ binh phóng lao có thể huấn luyện tại Trường bắn bắt đầu từ Thời Lâu đài"
+    },
+    {
+      "code": "BOH",
+      "name": "Bohemia",
+      "nameEn": "Bohemians",
+      "focus": "Nền văn minh Thuốc súng và Thầy tu",
+      "civilizationBonuses": [
+        "Công nghệ tại Trại khai thác miễn phí",
+        "Lò rèn và Đại học giảm -100 gỗ",
+        "Dòng Lính giáo gây thêm +25% sát thương bổ sung",
+        "Nhiệt huyết và Sự thiêng liêng ảnh hưởng đến Dân làng",
+        "Hóa học và Pháo thủ có sẵn trong Thời Lâu đài"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Xe Hussite",
+          "description": "Đơn vị quân dùng thuốc súng công thành chuyên biệt của quân Bohem. Các đơn vị phía sau đơn vị này được giảm -50% sát thương phải chịu từ đạn phóng đến. Mạnh khi đối đầu với Lính đánh xa. Yếu khi đối đầu với Hàng Máy bắn đá."
+        },
+        {
+          "name": "Lựu pháo",
+          "description": "Đơn vị quân dùng thuốc súng công thành tầm xa chuyên biệt của quân Bohem, nhưng không thể tấn công ở phạm vi gần. Mạnh khi đối đầu với công trình và Vũ khí công thành. Yếu khi đối đầu các đơn vị ở phạm vi gần."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Chiến thuật Wagenburg",
+          "description": "Đơn vị quân dùng thuốc súng di chuyển nhanh hơn +10%"
+        },
+        {
+          "name": "Cải cách Hussite",
+          "description": "Thầy tu và công nghệ Tu viện thay chi phí vàng bằng chi phí lương thực"
+        }
+      ],
+      "teamBonus": "Chợ hoạt động nhanh hơn +80%"
+    },
+    {
+      "code": "BRI",
+      "name": "Briton",
+      "nameEn": "Britons",
+      "focus": "Nền văn minh Cung thủ đi bộ",
+      "civilizationBonuses": [
+        "Người chăn cừu làm việc nhanh hơn +25%",
+        "Nhà chính giảm -50% chi phí gỗ bắt đầu từ Thời Lâu đài",
+        "Cung thủ đi bộ được +1/+2 tầm bắn trong Thời Lâu đài/Thời đại Đế quốc"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Trường cung binh",
+          "description": "Đơn vị Cung thủ đi bộ chuyên biệt của quân Anh với tầm bắn rất xa. Mạnh khi đối đầu với Bộ binh. Yếu khi đối đầu với Kỵ binh và Lính giao tranh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Nghĩa dũng binh",
+          "description": "Cung thủ đi bộ và dòng Lính giao tranh được +1 tầm bắn; dòng Tháp quan sát được +2 điểm tấn công"
+        },
+        {
+          "name": "Sói chiến",
+          "description": "Máy lăng đá gây sát thương nổ và bắn chính xác hơn"
+        }
+      ],
+      "teamBonus": "Trường bắn hoạt động nhanh hơn +10%"
+    },
+    {
+      "code": "BUL",
+      "name": "Bulgaria",
+      "nameEn": "Bulgarians",
+      "focus": "Nền văn minh Bộ binh và Kỵ binh",
+      "civilizationBonuses": [
+        "Nâng cấp dòng Dân binh miễn phí",
+        "Công nghệ Lò rèn và Xưởng vũ khí công thành -50% chi phí lương thực",
+        "Nhà chính giảm -50% chi phí đá",
+        "Có thể xây dựng Đồn lũy ở Thời Lâu đài"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Konnik",
+          "description": "Đơn vị Kỵ binh hạng nặng chuyên biệt của quân Bulgaria chiến đấu như Bộ binh khi bị ngã ngựa. Mạnh khi đối đầu với Bộ binh và Kỵ binh. Yếu khi đối đầu với Hàng Lính giáo và Thầy tu."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Bàn đạp ngựa",
+          "description": "Kỵ binh tấn công nhanh hơn +33%"
+        },
+        {
+          "name": "Thương lượng",
+          "description": "Dòng Dân binh nhận +5 giáp"
+        }
+      ],
+      "teamBonus": "Lò rèn làm việc nhanh hơn +80%"
+    },
+    {
+      "code": "BURGU",
+      "name": "Burgundy",
+      "nameEn": "Burgundians",
+      "focus": "Nền văn minh Kỵ binh",
+      "civilizationBonuses": [
+        "Nâng cấp kinh tế có trước một thời và giảm -40% chi phí lương thực",
+        "Công nghệ Chuồng ngựa giảm -50% chi phí",
+        "Có thể nâng cấp Kỵ sĩ ở Thời Lâu đài",
+        "Đơn vị quân dùng thuốc súng +25% điểm tấn công"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kỵ binh phóng lao",
+          "description": "Đơn vị Kỵ binh hạng nặng chuyên biệt của quân Burgundy với một đòn tấn công xung kích mạnh mẽ. Mạnh khi đối đầu các đơn vị bộ binh và cung thủ. Yếu khi đối đầu Kỵ sĩ Lạc đà và Thầy tu."
+        },
+        {
+          "name": "Dân binh Flemish",
+          "description": "Đơn vị Bộ binh chống kỵ binh chuyên biệt của quân Burgundy. Mạnh khi đối đầu với Đơn vị cưỡi thú. Yếu khi đối đầu với Lính đánh xa."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Vườn nho Burgundy",
+          "description": "Nông dân từ từ tạo thêm vàng ngoài lương thực"
+        },
+        {
+          "name": "Cách mạng Flemish",
+          "description": "Chuyển đổi tất cả Dân làng hiện có thành Dân binh Flemish"
+        }
+      ],
+      "teamBonus": "Thánh tích tạo ra cả vàng và lương thực"
+    },
+    {
+      "code": "BUR",
+      "name": "Miến Điện",
+      "nameEn": "Burmese",
+      "focus": "Nền văn minh Bộ binh và Kỵ binh",
+      "civilizationBonuses": [
+        "Công nghệ ở Trại đốn gỗ nghiên cứu miễn phí",
+        "Bộ binh +1/+2/+3 điểm tấn công trong Thời Phong kiến/Thời Lâu đài/Thời đại Đế quốc",
+        "Voi chiến +1 giáp cận chiến/+1 giáp chống xuyên",
+        "Công nghệ ở Tu viện giảm -50% chi phí"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kỵ binh phi tiêu",
+          "description": "Đơn vị cưỡi thú tầm xa chuyên biệt của quân Miến Điện có một đòn tấn công mạnh mẽ nhưng kém chính xác. Mạnh khi đối đầu các đơn vị ở tầm trung và gần. Yếu khi đối đầu các đơn vị cung thủ và vũ khí công thành."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kỵ binh Manipur",
+          "description": "Kỵ binh +4 điểm tấn công khi đối đầu Lính tầm xa"
+        },
+        {
+          "name": "Kiệu voi",
+          "description": "Voi chiến +1 giáp cận chiến/+1 giáp chống xuyên"
+        }
+      ],
+      "teamBonus": "Thánh tích hiển thị trên bản đồ khi bắt đầu trò chơi"
+    },
+    {
+      "code": "BYZ",
+      "name": "Đông La Mã",
+      "nameEn": "Byzantines",
+      "focus": "Nền văn minh Phòng thủ",
+      "civilizationBonuses": [
+        "Công trình +10/20/30/40% Máu trong Thời kỳ Tăm tối / Thời Phong kiến /",
+        "Thời Lâu đài / Thời đại Đế quốc",
+        "Dòng Kỵ sĩ Lạc đà, Lính giao tranh và Lính giáo giảm -25% chi phí",
+        "Gác thành, Tuần tra thành nghiên cứu miễn phí",
+        "Tiến lên Thời đại Đế quốc giảm -33% chi phí",
+        "Tàu phun lửa và Tàu Dromon tấn công nhanh hơn +25%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Thiết kỵ",
+          "description": "Đơn vị Kỵ binh hạng nặng chuyên biệt của quân Đông La Mã. Đặc biệt mạnh khi đối đầu Bộ binh. Yếu khi đối đầu các đơn vị Cung thủ."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Lửa Hy Lạp",
+          "description": "Tàu phun lửa +1 tầm bắn; Tàu Dromon và Tháp pháo tăng bán kính nổ"
+        },
+        {
+          "name": "Hậu cần học",
+          "description": "Thiết kỵ và Vệ binh Varangian gây sát thương giẫm đạp"
+        }
+      ],
+      "teamBonus": "Thầy tu hồi máu nhanh hơn +100%"
+    },
+    {
+      "code": "CEL",
+      "name": "Celt",
+      "nameEn": "Celts",
+      "focus": "Nền văn minh Bộ binh và Công thành",
+      "civilizationBonuses": [
+        "Thợ đốn gỗ làm việc nhanh hơn +15%",
+        "Gia súc trong tầm nhìn của đơn vị quân Celt không thể bị đánh cắp",
+        "Bộ binh di chuyển nhanh hơn +5/10/15/20% trong Thời Tăm tối/Thời Phong kiến/",
+        "Thời Lâu đài/Thời đại Đế quốc",
+        "Vũ khí công thành tấn công nhanh hơn +25%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Lính đột kích xanh",
+          "description": "Bộ binh chuyên biệt của quân Celt với tốc độ di chuyển nhanh. Mạnh khi đối đầu với bộ binh và vũ khí công thành. Yếu khi đối đầu với đơn vị cung thủ và kỵ binh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Thành trì",
+          "description": "Lâu đài và dòng Tháp quan sát tấn công nhanh hơn +33%; Lâu đài hồi máu cho Bộ binh đồng minh trong bán kính 7 ô"
+        },
+        {
+          "name": "Bạo binh Celt",
+          "description": "Vũ khí công thành được +40% Máu"
+        }
+      ],
+      "teamBonus": "Xưởng vũ khí công thành hoạt động nhanh hơn +20%"
+    },
+    {
+      "code": "CHI",
+      "name": "Trung Quốc",
+      "nameEn": "Chinese",
+      "focus": "Nền văn minh Cung thủ và Thuốc súng",
+      "civilizationBonuses": [
+        "Bắt đầu với +3 Dân làng, nhưng -50 Gỗ và -200 Lương thực",
+        "Công nghệ được giảm -5/10/15% chi phí trong Thời Phong kiến/Thời lâu đài/Thời đại Đế quốc",
+        "Nhà chính được +7 tầm nhìn và cung cấp +15 suất dân số",
+        "Kỵ binh giáo lửa và Tàu phun lửa di chuyển nhanh hơn +5/10% trong Thời Lâu đài/Thời đại Đế quốc"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Nỏ liên châu",
+          "description": "Cung thủ đi bộ chuyên biệt của Trung Quốc có tốc độ bắn nhanh. Mạnh khi đối đầu với bộ binh. Yếu khi đối đầu với cung thủ và vũ khí công thành."
+        },
+        {
+          "name": "Tàu rồng",
+          "description": "Thuyền chiến chuyên biệt của quân Trung Quốc phun lửa ở khoảng cách gần. Mạnh khi đối đầu đơn vị dòng Thuyền ga-lê. Yếu khi đối đầu Tàu phá hủy."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Vạn Lý Trường Thành",
+          "description": "Tường, dòng Tháp quan sát và Tháp pháo được +30% Máu"
+        },
+        {
+          "name": "Thuật hỏa tiễn",
+          "description": "Nỏ máy, Xe hỏa tiễn và Lâu Thuyền được +25% điểm tấn công; Lâu Thuyền bắn ra hỏa tiễn"
+        }
+      ],
+      "teamBonus": "Nông trại được +10% Lương thực"
+    },
+    {
+      "code": "CUM",
+      "name": "Cuman",
+      "nameEn": "Cumans",
+      "focus": "Nền văn minh Kỵ binh",
+      "civilizationBonuses": [
+        "Có thể xây thêm một Nhà chính trong Thời phong kiến",
+        "Các đơn vị cưỡi thú di chuyển nhanh hơn +5/10/15% trong Thời phong kiến /",
+        "Thời lâu đài / Thời đại đế quốc",
+        "Trường bắn và Chuồng ngựa giảm -75 chi phí gỗ",
+        "Xưởng vũ khí công thành và Trục phá có sẵn trong Thời phong kiến; Trục phá có mái che có sẵn trong Thời lâu đài"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kipchak",
+          "description": "Đơn vị Cung thủ cưỡi thú chuyên biệt của quân Cuman có thể bắn nhiều mũi tên. Mạnh khi đối đầu bộ binh và vũ khí công thành. Yếu khi đối đầu Cung thủ đi bộ."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Chăn nuôi trên đồng cỏ",
+          "description": "Dòng Kỵ binh do thám, Kỵ binh giáo thảo nguyên và Cung kỵ binh huấn luyện nhanh hơn +100%"
+        },
+        {
+          "name": "Lính đánh thuê Cuman",
+          "description": "Tất cả thành viên trong đội có thể huấn luyện 5 Kipchak Tinh nhuệ miễn phí ở mỗi Lâu đài"
+        }
+      ],
+      "teamBonus": "Tường rào tăng +33% máu"
+    },
+    {
+      "code": "DAN",
+      "name": "Người Dane",
+      "nameEn": "Danes",
+      "focus": "Nền văn minh Bộ binh và Công thành",
+      "civilizationBonuses": [
+        "Tàu đánh cá và Dân làng thả thêm +5% Lương thực",
+        "Thu hồi 25% chi phí tài nguyên cho mỗi công trình bị phá hủy",
+        "Chi phí nâng cấp Nhà lính và Xưởng vũ khí công thành giảm -66% Vàng",
+        "Vệ binh Varangian và Tàu dài di chuyển nhanh hơn +10%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Jomsviking",
+          "description": "Đơn vị Bộ binh chuyên biệt của người Dane có khả năng ném đuốc khi tấn công các công trình và tàu thuyền. Đặc biệt mạnh khi đối đầu Kỵ binh và công trình. Yếu khi đối đầu lính đánh xa."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Hamask",
+          "description": "Bộ binh gây thêm sát thương khi mất Máu"
+        },
+        {
+          "name": "Cơn cuồng nộ của người phương Bắc",
+          "description": "Dòng Máy bắn đá và Chiến hạm bắn đá được +1 tầm bắn; Vũ khí công thành và tàu chiến công thành được +40% điểm tấn công khi đối đầu công trình"
+        }
+      ],
+      "teamBonus": "Vũ khí công thành được +2 tầm nhìn"
+    },
+    {
+      "code": "DRAV",
+      "name": "Quân Dravida",
+      "nameEn": "Dravidians",
+      "focus": "Nền văn minh Bộ binh và Hải quân",
+      "civilizationBonuses": [
+        "Ngư dân và Tàu đánh cá mang thêm +15 tài nguyên",
+        "Nhận +200 gỗ khi tiến lên Thời đại tiếp theo",
+        "Lính giao tranh và Cung thủ cưỡi voi tấn công nhanh hơn +25%",
+        "Công nghệ ở Nhà lính giảm -50% chi phí",
+        "Vũ khí công thành giảm -33% chi phí gỗ"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kiếm sĩ Urumi",
+          "description": "Đơn vị Bộ binh chuyên biệt của quân Dravida với một đòn tấn công nổ xung kích. Mạnh khi đối đầu công trình và các đơn vị ở cự ly gần. Yếu khi đối đầu lính đánh xa ở tầm xa."
+        },
+        {
+          "name": "Thirisadai",
+          "description": "Thuyền chiến chuyên biệt có sức bền cao của quân Dravida. Mạnh khi đối đầu với hầu hết Thuyền chiến. Yếu khi đối đầu với Tàu phun lửa."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Quân đoàn Y tế",
+          "description": "Đơn vị cưỡi Voi hồi 30 Máu mỗi phút"
+        },
+        {
+          "name": "Thép Wootz",
+          "description": "Bộ binh và Kỵ binh tấn công bỏ qua giáp địch"
+        }
+      ],
+      "teamBonus": "Bến tàu cung cấp thêm +5 suất dân số"
+    },
+    {
+      "code": "ETH",
+      "name": "Ethiopia",
+      "nameEn": "Ethiopians",
+      "focus": "Nền văn minh Cung thủ",
+      "civilizationBonuses": [
+        "Nhận +100 vàng, +100 lương thực khi phát triển lên đời tiếp theo",
+        "Cung thủ đi bộ tấn công nhanh hơn +18%",
+        "Nâng cấp miễn phí Lính mác"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Lính kiếm cong",
+          "description": "Đơn vị Bộ binh chuyên biệt của quân Ethiopia có khả năng tấn công mạnh và tốc độ huấn luyện nhanh. Di chuyển nhanh. Mạnh khi đối đầu bộ binh. Yếu khi đối đầu các đơn vị Cung thủ."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Người kế vị",
+          "description": "các đơn vị Lính kiếm cong và Lạc đà giảm -3 sát thương phải chịu từ các đơn vị cưỡi thú của địch"
+        },
+        {
+          "name": "Cơ chế xoắn",
+          "description": "tăng phạm vi công phá của các đơn vị từ Xưởng vũ khí công thành"
+        }
+      ],
+      "teamBonus": "Tiền đồn +3 tầm nhìn và không tốn đá"
+    },
+    {
+      "code": "FRK",
+      "name": "Frank",
+      "nameEn": "Franks",
+      "focus": "Nền văn minh Kỵ binh",
+      "civilizationBonuses": [
+        "Thợ cắt cỏ làm việc nhanh hơn +15%",
+        "Công nghệ Nhà xay lương nghiên cứu miễn phí",
+        "Đơn vị cưỡi thú được +20% Máu bắt đầu từ Thời Phong kiến",
+        "Lâu đài giảm -15/25% chi phí trong Thời Lâu đài/Thời đại Đế quốc"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Lính ném rìu",
+          "description": "Đơn vị bộ binh chuyên biệt của quân Frank, có thể tấn công cận chiến tầm xa. Mạnh khi đối đầu với bộ binh. Yếu khi đối đầu với các đơn vị cung thủ và vũ khí công thành."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Đại đội Ordonnance",
+          "description": "Nỏ kỵ binh giảm -40 chi phí Vàng"
+        },
+        {
+          "name": "Tinh thần hiệp sĩ",
+          "description": "Chuồng ngựa hoạt động nhanh hơn +40%"
+        }
+      ],
+      "teamBonus": "Dòng Hiệp sĩ +2 tầm nhìn"
+    },
+    {
+      "code": "GEO",
+      "name": "Quân Gruzia",
+      "nameEn": "Georgians",
+      "focus": "Nền văn minh Phòng thủ và Kỵ binh",
+      "civilizationBonuses": [
+        "Bắt đầu với một Xe la",
+        "Các đơn vị và công trình giảm -15% sát thương phải chịu khi nằm ở địa hình cao hơn",
+        "Các đơn vị cưỡi thú hồi 2/8/14 Máu mỗi phút trong Thời phong kiến/Thời lâu đài/Thời đại đế quốc",
+        "Nhà thờ kiên cố cung cấp +10% tốc độ làm việc cho Dân làng trong bán kính 9 ô"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Monaspa",
+          "description": "Đơn vị kỵ binh hạng nặng chuyên biệt của quân Georgia, đơn vị này sẽ trở nên mạnh mẽ hơn khi có Monaspa khác hoặc đơn vị dòng Hiệp sĩ ở gần. Mạnh khi đối đầu với bộ binh và kỵ binh. Yếu khi đối đầu với dòng Lính giáo và Thầy tu."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tháp Svan",
+          "description": "Tường gia cố +2 tấn công; dòng Tháp quan sát gây sát thương xuyên qua"
+        },
+        {
+          "name": "Kỵ binh Aznauri",
+          "description": "Đơn vị cưỡi thú giảm -20% suất dân số chiếm dụng"
+        }
+      ],
+      "teamBonus": "Chi phí sửa chữa công trình giảm -25%"
+    },
+    {
+      "code": "GOT",
+      "name": "Goth",
+      "nameEn": "Goths",
+      "focus": "Nền văn minh Bộ binh",
+      "civilizationBonuses": [
+        "Công nghệ Dệt may được nghiên cứu ngay lập tức",
+        "Thợ săn mang thêm +15 tài nguyên; động vật săn được cho lương thực lâu hơn +20%",
+        "Chi phí bộ binh giảm -15/20/25/30% trong Thời Tăm tối/Thời Phong kiến/Thời Lâu đài/",
+        "Thời đại Đế quốc",
+        "Bộ binh được +1/+2/+3 điểm tấn công khi đối đầu công trình trong Thời Phong kiến/",
+        "Thời Lâu đài/Thời đại Đế quốc",
+        "+10 suất dân số trong Thời đại Đế quốc"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Huskarl",
+          "description": "Đơn vị Bộ binh chuyên biệt Gothic với chỉ số giáp chống xuyên đặc biệt cao. Mạnh khi đối đầu với Lính đánh xa và công trình. Yếu khi đối đầu với Kỵ binh và đơn vị dòng Dân binh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Vô chính phủ",
+          "description": "Huskarl có thể được huấn luyện tại Nhà lính"
+        },
+        {
+          "name": "Kỹ thuật vảy",
+          "description": "Nhà lính làm việc nhanh hơn +100%"
+        }
+      ],
+      "teamBonus": "Nhà lính hoạt động nhanh hơn +20%"
+    },
+    {
+      "code": "GURJ",
+      "name": "Quân Gurjara",
+      "nameEn": "Gurjaras",
+      "focus": "Nền văn minh Kỵ binh và Lạc đà",
+      "civilizationBonuses": [
+        "Bắt đầu với 2 Bụi cỏ",
+        "Có thể đồn trú gia súc trong Nhà xay lương để sản xuất lương thực thụ động",
+        "Đơn vị cưỡi thú gây +20/30/40% sát thương thưởng trong Thời Phong kiến/Thời Lâu đài/Thời đại Đế quốc"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Lính ném Chakram",
+          "description": "Đơn vị Bộ binh chuyên biệt của quân Gurjara với khả năng tấn công xuyên tầm xa gây sát thương cận chiến. Mạnh khi đối đầu với Bộ binh và các nhóm đơn vị lớn. Yếu khi đối đầu với Kỵ binh và Vũ khí công thành."
+        },
+        {
+          "name": "Kỵ sĩ Shrivamsha",
+          "description": "Kỵ binh chuyên biệt di chuyển nhanh của quân Gurjara có khả năng né đạn. Mạnh khi đối đầu Lính đánh xa. Yếu khi đối đầu các đơn vị dòng Lính giáo và Kỵ sĩ lạc đà."
+        },
+        {
+          "name": "Lính do thám lạc đà",
+          "description": "Đơn vị Lính do thám chuyên biệt của quân Gurjara. Mạnh khi đối đầu với Đơn vị cưỡi thú. Yếu khi đối đầu với Bộ binh, Thầy tu và Cung thủ đi bộ."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Đẳng cấp Kshatriyas",
+          "description": "Đơn vị quân đội giảm -25% chi phí lương thực"
+        },
+        {
+          "name": "Vệ binh biên giới",
+          "description": "Kỵ sĩ lạc đà và Cung thủ cưỡi voi +4 giáp cận chiến"
+        }
+      ],
+      "teamBonus": "Đơn vị cưỡi lạc đà và cưỡi voi huấn luyện nhanh hơn +25%"
+    },
+    {
+      "code": "HIN",
+      "name": "Quân Hindustan",
+      "nameEn": "Hindustanis",
+      "focus": "Nền văn minh Lạc đà và Thuốc súng",
+      "civilizationBonuses": [
+        "Dân làng giảm -8/13/18/23% chi phí trong Thời đại tăm tối/Thời phong kiến/Thời lâu đài/",
+        "Thời đại đế quốc",
+        "Kỵ sĩ lạc đà tấn công nhanh hơn +20%",
+        "Đơn vị dùng thuốc súng +1 giáp cận chiến / +1 giáp xuyên thấu",
+        "Có thể xây dựng Caravanserai trong Thời đại đế quốc"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ghulam",
+          "description": "Đơn vị Bộ binh chuyên biệt của quân Hindustani có thể xuyên giáo của mình qua nhiều mục tiêu. Đặc biệt mạnh khi đối đầu các đơn vị Cung thủ và dòng Lính giáo. Yếu khi đối đầu Kỵ binh."
+        },
+        {
+          "name": "Kỵ sĩ lạc đà đế quốc",
+          "description": "Đơn vị Kỵ binh chống kỵ binh di chuyển nhanh của Hindustan. Mạnh khi đối đầu các đơn vị cưỡi thú. Yếu khi đối đầu Bộ binh, Thầy tu và Cung thủ đi bộ."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Đường Grand Trunk",
+          "description": "Tất cả thu nhập vàng nhanh hơn +10%; Phí giao dịch ở Chợ giảm xuống còn 10%"
+        },
+        {
+          "name": "Súng Shatagni",
+          "description": "Pháo thủ +2 phạm vi"
+        }
+      ],
+      "teamBonus": "Đơn vị dòng Kỵ binh do thám và Đơn vị cưỡi lạc đà tăng +2 điểm tấn công khi đánh công trình"
+    },
+    {
+      "code": "HUN",
+      "name": "Hung",
+      "nameEn": "Huns",
+      "focus": "Nền văn minh Kỵ binh",
+      "civilizationBonuses": [
+        "Không cần nhà ở, nhưng bắt đầu với -100 gỗ",
+        "Cung kỵ binh giảm -10 / 20% chi phí trong Thời Lâu đài / Thời đại Đế quốc",
+        "Máy lăng đá bắn chính xác hơn vào các đơn vị và mục tiêu nhỏ",
+        "Trên bản đồ du mục, Nhà chính đầu tiên sinh ra một ngựa do thám"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Tarkan",
+          "description": "Đơn vị Kỵ binh hạng nặng chuyên biệt của quân Hung. Đặc biệt mạnh khi đối đầu với công trình. Yếu khi đối đầu với Hàng Lính giáo và Kỵ sĩ lạc đà."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Đạo tặc",
+          "description": "Tarkan có thể được huấn luyện tại Chuồng ngựa"
+        },
+        {
+          "name": "Vô thần",
+          "description": "Giảm -50% tài nguyên do Thánh tích của kẻ địch tạo ra; chiến thắng nhờ Kỳ quan và Thánh tích cần thêm +100 năm"
+        }
+      ],
+      "teamBonus": "Chuồng ngựa hoạt động nhanh hơn +20%"
+    },
+    {
+      "code": "INC",
+      "name": "Inca",
+      "nameEn": "Inca",
+      "focus": "Nền văn minh Bộ binh",
+      "civilizationBonuses": [
+        "Nhà ở và Khu định cư cung cấp +5 suất dân số",
+        "Chi phí công trình giảm -15% đá",
+        "Đơn vị quân đội giảm -15/20/25/30% chi phí lương thực trong Thời kỳ Tăm tối/Thời Phong kiến/Thời Lâu đài/Thời đại Đế quốc",
+        "Dân làng chịu ảnh hưởng khi nâng cấp Lò rèn Bộ binh bắt đầu từ Thời Lâu đài"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kamayuk",
+          "description": "Đơn vị Bộ binh chuyên biệt của quân Inca có phạm vi tấn công tăng lên. Mạnh khi đối đầu Kỵ binh và Bộ binh. Yếu khi đối đầu các đơn vị Cung thủ và Xạ thủ."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Dây ném Andes",
+          "description": "Lính giao tranh và Lính ném đá không có phạm vi tối thiểu; Lính ném đá +1 điểm tấn công"
+        },
+        {
+          "name": "Khiên vải",
+          "description": "Kamayuk, Lính ném đá và Chiến binh Champi +1 giáp cận chiến/+1 giáp chống xuyên"
+        }
+      ],
+      "teamBonus": "Bắt đầu với 1 Lạc đà không bướu miễn phí"
+    },
+    {
+      "code": "ITA",
+      "name": "Ý",
+      "nameEn": "Italians",
+      "focus": "Nền văn minh Cung thủ và Hải quân",
+      "civilizationBonuses": [
+        "Nâng cấp lên thời đại tiếp theo giảm -15% chi phí",
+        "Cung thủ đi bộ và Tư lệnh +1 giáp cận chiến/+1 giáp chống xuyên",
+        "Chi phí công nghệ tại Bến tàu và Đại học giảm -25%",
+        "Đơn vị thuốc súng giảm -20% chi phí",
+        "Tàu đánh cá giảm -15% chi phí"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Nỏ binh Genova",
+          "description": "Đơn vị Cung thủ đi bộ chuyên biệt của quân Ý. Đặc biệt mạnh khi đối đầu với Kỵ binh. Yếu khi đối đầu với Đơn vị Cung thủ và Vũ khí công thành."
+        },
+        {
+          "name": "Tư lệnh",
+          "description": "Bộ binh chống đơn vị dùng thuốc súng, có tốc độ di chuyển nhanh. Mạnh khi đối đầu đơn vị dùng thuốc súng. Yếu khi đối đầu đơn vị kỵ binh và cung thủ. Có thể huấn luyện bởi quân Ý và đồng minh của họ."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Con đường tơ lụa",
+          "description": "Đơn vị giao thương giảm -50% chi phí"
+        },
+        {
+          "name": "Hỏa thương",
+          "description": "Pháo thủ gây thêm +15% sát thương xuyên qua và chính xác hơn"
+        }
+      ],
+      "teamBonus": "Tư lệnh có thể huấn luyện tại Nhà lính trong Thời đại đế quốc"
+    },
+    {
+      "code": "JAP",
+      "name": "Nhật Bản",
+      "nameEn": "Japanese",
+      "focus": "Nền văn minh Bộ binh",
+      "civilizationBonuses": [
+        "Nhà xay lương, Trại đốn gỗ và Trại khai thác giảm -50% chi phí",
+        "Bộ binh tấn công nhanh hơn +33% bắt đầu từ Thời Phong kiến",
+        "Cung kỵ binh được +2 điểm tấn công khi đối đầu Lính đánh xa (trừ Lính giao tranh)",
+        "Tàu đánh cá hoạt động nhanh hơn +5/10/15/20% trong Thời kỳ Tăm tối/Thời Phong kiến/Thời Lâu đài/Thời đại Đế quốc; được +100% Máu"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Samurai",
+          "description": "Đơn vi bộ binh chuyên biệt của Nhật Bản có khả năng xông pha và tấn công nhanh. Mạnh khi đối đầu với đơn vị chuyên biệt. Yếu khi đối đầu với các đơn vị Cung thủ và Xạ thủ."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Khe bắn tên",
+          "description": "Dòng Tháp quan sát bắn thêm tên"
+        },
+        {
+          "name": "Máy bắn đá",
+          "description": "Máy lăng đá tấn công và xếp gọn/mở ra nhanh hơn"
+        }
+      ],
+      "teamBonus": "Dòng Thuyền ga-lê tăng +4 tầm nhìn"
+    },
+    {
+      "code": "JUR",
+      "name": "Nữ Chân",
+      "nameEn": "Jurchens",
+      "focus": "Nền văn minh Kỵ binh và Thuốc súng",
+      "civilizationBonuses": [
+        "Thịt của động vật săn được và gia súc không bị phân hủy",
+        "Đơn vị cưỡi thú và Kỵ binh giáo lửa tấn công nhanh hơn +25% bắt đầu từ Thời phong kiến",
+        "Có Kỹ sư công thành từ Thời lâu đài",
+        "Chi phí nâng cấp đơn vị công thành và Tường gia cố giảm -75% gỗ và được nghiên cứu nhanh hơn +100%",
+        "Sát thương mà các đơn vị phải chịu do hỏa lực đồng minh giảm -50%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Thiết phù đồ",
+          "description": "Đơn vị Kỵ binh hạng nặng chuyên biệt của Nữ Chân với giáp bền chắc hoàn toàn có thể chặn các đòn tấn công cận chiến. Mạnh khi đối đầu Bộ binh và Lính đánh xa. Yếu khi đối đầu đơn vị dòng Lính giáo và Kỵ sĩ lạc đà."
+        },
+        {
+          "name": "Lính ném lựu",
+          "description": "Đơn vị dùng thuốc súng chuyên biệt của Nữ Chân với đòn tấn công nổ tầm xa, nhưng không thể tấn công ở cự ly gần. Mạnh khi đối đầu Bộ binh và các nhóm đơn vị đứng gần nhau. Yếu khi đối đầu Lính đánh xa và các đơn vị ở cự ly gần."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Pháo đài gia cố",
+          "description": "Tường gia cố hồi 500 Máu mỗi phút"
+        },
+        {
+          "name": "Bom sấm sét",
+          "description": "Xe hỏa tiễn, Lính lựu đạn và Lâu thuyền phát nổ khi bị đánh bại; đạn gây thêm các vụ nổ"
+        }
+      ],
+      "teamBonus": "Đơn vị quân dùng Thuốc súng được +2 tầm nhìn"
+    },
+    {
+      "code": "KHI",
+      "name": "Khiết Đan",
+      "nameEn": "Khitans",
+      "focus": "Nền văn minh Bộ binh và Kỵ binh",
+      "civilizationBonuses": [
+        "Đồng cỏ thay thế Nông trại",
+        "Hiệu ứng nâng cấp tấn công cận chiến tăng gấp đôi",
+        "Huấn luyện và nâng cấp Lính giao tranh, dòng Lính giáo và dòng Kỵ binh do thám nhanh hơn +15%",
+        "Nâng cấp Cung kỵ binh hạng nặng có sẵn trong Thời Lâu đài và chi phí giảm -50%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Liêu đao binh",
+          "description": "Đơn vị Bộ binh chuyên biệt của Khiết Đan với đòn tấn công mạnh mẽ làm bị thương kẻ địch, gây sát thương kéo dài theo thời gian. Mạnh khi đối đầu Kỵ binh và Bộ binh. Yếu khi đối đầu Lính đánh xa ở tầm xa."
+        },
+        {
+          "name": "Máy lăng đá gắn thú",
+          "description": "Đơn vị Kỵ binh công thành chuyên biệt của Khiết Đan với tầm bắn xa, nhưng không thể tấn công ở cự ly gần. Đạn để lại lửa cháy lâu trên mặt đất. Mạnh khi đối đầu Vũ khí công thành và các nhóm đơn vị đứng gần nhau. Yếu khi đối đầu các đơn vị ở cự ly gần."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Giáp Lamellar",
+          "description": "Bộ binh và Lính giao tranh phản lại 25% sát thương cận chiến lên kẻ tấn công"
+        },
+        {
+          "name": "Kỵ binh Ordo",
+          "description": "Kỵ binh hồi máu trong khi chiến đấu"
+        }
+      ],
+      "teamBonus": "Bộ binh được +2 điểm tấn công khi đối đầu Lính đánh xa"
+    },
+    {
+      "code": "KHM",
+      "name": "Khmer",
+      "nameEn": "Khmer",
+      "focus": "Nền văn minh Công thành và Voi",
+      "civilizationBonuses": [
+        "Không cần công trình để phát triển lên thời tiếp theo hoặc để mở khóa các công trình khác",
+        "Nông dân không cần Nhà xay lương hay Nhà chính để cất chứa lương thực",
+        "Dân làng có thể đồn trú trong Nhà ở",
+        "Voi chiến di chuyển nhanh hơn +10%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Voi bắn tên",
+          "description": "Đơn vị Kỵ binh công thành chuyên biệt của quân Khmer với khả năng tấn công xuyên tầm xa. Có thể phá hủy cây. Mạnh khi đối đầu bộ binh và lính tầm xa. Yếu khi đối đầu kỵ binh và vũ khí công thành."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kiếm ngà",
+          "description": "Voi chiến +3 điểm tấn công"
+        },
+        {
+          "name": "Nỏ đôi",
+          "description": "Voi bắn tên và Nỏ máy bắn thêm một đạn"
+        }
+      ],
+      "teamBonus": "Nỏ máy +1 phạm vi"
+    },
+    {
+      "code": "KOR",
+      "name": "Triều Tiên",
+      "nameEn": "Koreans",
+      "focus": "Nền văn minh Phòng thủ và Hải quân",
+      "civilizationBonuses": [
+        "Thợ đào đá làm việc nhanh hơn +20%",
+        "Lính tầm xa và bộ binh giảm -50% chi phí gỗ",
+        "Nâng cấp giáp cung thủ và tháp miễn phí (Tháp pháo yêu cầu nghiên cứu Hóa học)",
+        "Thuyền chiến giảm -20% chi phí gỗ"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Chiến xa Triều Tiên",
+          "description": "Đơn vị Cung thủ cưỡi thú chuyên biệt của quân Triều Tiên. Di chuyển chậm nhưng chịu đòn tốt. Mạnh khi đối đầu Bộ binh và Cung thủ. Yếu khi đối đầu đơn vị dòng Lính giáo, Lính giao tranh và Kỵ sĩ lạc đà."
+        },
+        {
+          "name": "Tàu rùa",
+          "description": "Loại Thuyền chiến công thành chuyên biệt của quân Triều Tiên với chỉ số giáp và tấn công cao. Mạnh khi đối đầu hầu hết các Thuyền chiến và công trình. Yếu khi đối đầu Thuyền ga-lê."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Eupseong",
+          "description": "Dòng công trình Tháp quan sát +2 phạm vi"
+        },
+        {
+          "name": "Thần cơ tiễn",
+          "description": "Xe hỏa tiễn và Tàu rùa +1 phạm vi, bắn thêm đạn"
+        }
+      ],
+      "teamBonus": "Dân làng +3 tầm nhìn"
+    },
+    {
+      "code": "LIT",
+      "name": "Lithuania",
+      "nameEn": "Lithuanians",
+      "focus": "Nền văn minh Kỵ binh và Thầy tu",
+      "civilizationBonuses": [
+        "Mỗi Nhà chính cung cấp +100 lương thực",
+        "Dòng Lính giáo và Lính giao tranh di chuyển nhanh hơn +10%",
+        "Mỗi Thánh tích đồn trú cung cấp +1 điểm tấn công cho dòng Hiệp sĩ và Leitis (tối đa +4 điểm)"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Leitis",
+          "description": "Đơn vị Kỵ binh hạng nặng chuyên biệt của quân Lithuania có thể tấn công bỏ qua giáp của địch. Mạnh khi đối đầu Kỵ binh và Bộ binh, đặc biệt là các đơn vị có điểm giáp cao. Yếu khi đối đầu các đơn vị cung thủ."
+        },
+        {
+          "name": "Kỵ binh có cánh",
+          "description": "Kỵ binh chuyên biệt di chuyển nhanh của quân Ba Lan và Lithuania để do thám và đột kích. Kháng chuyển đổi. Đặc biệt mạnh khi đối đầu các đơn vị từ Tu viện. Yếu khi đối đầu các đơn vị dòng Lính giáo và Kỵ sĩ Lạc đà."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Hào lũy trên đồi",
+          "description": "Nhà chính +3 phạm vi"
+        },
+        {
+          "name": "Khiên tháp",
+          "description": "Dòng Lính giáo và Lính giao tranh +2 giáp chống xuyên"
+        }
+      ],
+      "teamBonus": "Tu viện làm việc nhanh hơn +20%"
+    },
+    {
+      "code": "MAG",
+      "name": "Magyar",
+      "nameEn": "Magyars",
+      "focus": "Nền văn minh Kỵ binh",
+      "civilizationBonuses": [
+        "Dân làng đánh bại sói bằng một đòn",
+        "Chi phí dòng kỵ binh do thám giảm -15%",
+        "Nâng cấp tấn công cận chiến miễn phí"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kỵ binh Magyar",
+          "description": "Kỵ binh chuyên biệt của quân Magyar. Mạnh khi đối đầu vũ khí công thành. Yếu khi đối đầu đơn vị dòng Lính giáo và Kỵ sĩ Lạc đà."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Quân đội Corvinia",
+          "description": "chi phí vàng cho Kỵ binh Magyar được thay thế bằng chi phí lương thực bổ sung"
+        },
+        {
+          "name": "Cung cong",
+          "description": "Cung thủ cưỡi thú +1 điểm tấn công, +1 phạm vi"
+        }
+      ],
+      "teamBonus": "Cung thủ cưỡi thú huấn luyện nhanh hơn +25%"
+    },
+    {
+      "code": "MALY",
+      "name": "Mã Lai",
+      "nameEn": "Malay",
+      "focus": "Nền văn minh Hải quân",
+      "civilizationBonuses": [
+        "Tiến lên Thời đại tiếp theo nhanh hơn +66%",
+        "Nâng cấp giáp bộ binh miễn phí",
+        "Voi chiến giảm -25/35% chi phí trong Thời Lâu đài / Thời đại Đế quốc",
+        "Bẫy cá giảm -33% chi phí và cung cấp +200% lương thực"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Lính dao cong",
+          "description": "Đơn vị Bộ binh chuyên biệt của quân Mã Lai chỉ chiếm một nửa suất dân số. Mạnh khi có quân số đông. Yếu khi đối đầu Kỵ binh và Lính tầm xa."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Đế chế trên biển",
+          "description": "Bến tàu được nâng cấp lên Cảng"
+        },
+        {
+          "name": "Trưng binh bắt buộc",
+          "description": "Chi phí vàng cho dòng Dân binh được thay thế bằng chi phí lương thực bổ sung"
+        }
+      ],
+      "teamBonus": "Bến tàu +6 tầm nhìn"
+    },
+    {
+      "code": "MAL",
+      "name": "Mali",
+      "nameEn": "Malians",
+      "focus": "Nền văn minh Bộ binh",
+      "civilizationBonuses": [
+        "Công trình giảm -15% chi phí gỗ",
+        "Dân làng thả thêm +10% vàng",
+        "Đơn vị từ Nhà lính +1/+2/+3 giáp xuyên thấu trong Thời Phong kiến /",
+        "Thời Lâu đài / Thời đại Đế quốc"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Lính phi dao",
+          "description": "Đơn vị Bộ binh chuyên biệt của quân Mali với khả năng tấn công cận chiến tầm xa. Di chuyển nhanh. Mạnh khi đối đầu với Bộ binh và Vũ khí công thành. Yếu khi đối đầu với Lính tầm xa."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tigui",
+          "description": "Nhà chính bắn tên mà không cần đồn trú"
+        },
+        {
+          "name": "Farimba",
+          "description": "Kỵ binh +5 điểm tấn công"
+        }
+      ],
+      "teamBonus": "Đại học làm việc nhanh hơn +80%"
+    },
+    {
+      "code": "MAPU",
+      "name": "Mapuche",
+      "nameEn": "Mapuche",
+      "focus": "Nền văn minh Kỵ binh và Đơn vị khắc chế",
+      "civilizationBonuses": [
+        "Thợ cắt cỏ thả thêm +25% Lương thực",
+        "Các Khu định cư có thể huấn luyện đơn vị dòng Lính giáo và Lính giao tranh",
+        "Bộ binh, Lính Ném Đá và Lính giao tranh được +5/10/15 Máu trong Thời Phong kiến/Lâu đài/Đế quốc",
+        "Các đơn vị kỵ binh tạo ra +3 Vàng khi đánh bại các đơn vị quân đội",
+        "Lâu đài của kẻ địch được tiết lộ trên bản đồ"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kona",
+          "description": "Đơn vị Kỵ binh chuyên biệt của quân Mapuche có thể gây thêm sát thương lên các đơn vị đã bị thương. Mạnh khi đối đầu Bộ binh và Cung thủ đi bộ. Yếu khi đối đầu các đơn vị dòng Lính giáo, Kỵ sĩ lạc đà và Thầy tu."
+        },
+        {
+          "name": "Kỵ Binh Bolas",
+          "description": "Đơn vị Cung thủ cưỡi ngựa chuyên biệt của quân Mapuche với đòn tấn công xung kích làm chậm các đơn vị địch. Mạnh khi đối đầu các đơn vị cưỡi thú. Yếu khi đối đầu Cung thủ đi bộ, Lính giao tranh và các đơn vị ở cự ly gần."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Malon",
+          "description": "Kỵ Binh Bolas, Lính Ném Đá và Lính giao tranh gây sát thương đâm xuyên"
+        },
+        {
+          "name": "Butalmapu",
+          "description": "Chi phí huấn luyện Đơn vị chuyên biệt từ Lâu đài Đội và Kỵ Binh Bolas giảm -15%"
+        }
+      ],
+      "teamBonus": "Đơn vị dòng Lính giáo và Lính giao tranh được +2 tầm nhìn"
+    },
+    {
+      "code": "MAY",
+      "name": "Maya",
+      "nameEn": "Maya",
+      "focus": "Nền văn minh Cung thủ",
+      "civilizationBonuses": [
+        "Bắt đầu với +1 Dân làng, nhưng -50 Lương thực",
+        "Tài nguyên kéo dài lâu hơn +15%",
+        "Cung thủ đi bộ giảm -10/20/30% chi phí trong Thời phong kiến/Thời lâu đài/Thời đại đế quốc"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Cung thủ lông vũ",
+          "description": "Đơn vị Cung thủ đi bộ chuyên biệt di chuyển nhanh của quân Maya. Mạnh khi đối đầu cung thủ và bộ binh. Yếu khi đối đầu kỵ binh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Lính phóng lao Hul'che",
+          "description": "Lính giao tranh bắn thêm một đạn"
+        },
+        {
+          "name": "Holcan",
+          "description": "Chiến binh đại bàng +40 máu"
+        }
+      ],
+      "teamBonus": "Chi phí Tường giảm -50%"
+    },
+    {
+      "code": "MON",
+      "name": "Mông Cổ",
+      "nameEn": "Mongols",
+      "focus": "Nền văn minh Cung kỵ binh",
+      "civilizationBonuses": [
+        "Thợ săn làm việc nhanh hơn +40%",
+        "Cung kỵ binh tấn công nhanh hơn +25%",
+        "Đơn vị dòng Kỵ binh do thám và Kỵ binh giáo thảo nguyên tăng +20/30% máu trong Thời lâu đài/Thời đại đế quốc"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kỵ xạ Mông Cổ",
+          "description": "Đơn vị cung thủ cưỡi thú chuyên biệt của quân Mông Cổ có khả năng bắn nhanh. Mạnh khi đối đầu với vũ khí công thành và bộ binh. Yếu khi đối đầu với Lính giao tranh, dòng Lính giáo và Kỵ sĩ lạc đà."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Nomad",
+          "description": "Nhà ở bị mất không làm giảm suất dân số"
+        },
+        {
+          "name": "Thao luyện",
+          "description": "Các đơn vị từ Xưởng vũ khí công thành di chuyển nhanh hơn +50%"
+        }
+      ],
+      "teamBonus": "Đơn vị dòng Kỵ binh do thám tăng +2 tầm nhìn"
+    },
+    {
+      "code": "MUI",
+      "name": "Muisca",
+      "nameEn": "Muisca",
+      "focus": "Nền văn minh Cung thủ và Thầy tu",
+      "civilizationBonuses": [
+        "Chi phí phát triển lên Thời đại tiếp theo giảm -50% Vàng",
+        "Chi phí Khu định cư giảm -33% và Khu định cư hồi máu cho các đơn vị lân cận",
+        "Chiến binh Champi và Đơn vị từ Trường bắn được tăng +1/2/3 giáp cận chiến trong Thời Phong kiến/Lâu đài/Đế quốc",
+        "Thầy tu phục hồi đức tin nhanh hơn +50%",
+        "Xe lưu động, Phường hội được miễn phí"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Chiến binh Guecha",
+          "description": "Đơn vị Lính giao tranh chuyên biệt của quân Muisca có khả năng hồi máu khi Chiến binh Guecha lân cận bị đánh bại. Mạnh khi đối đầu với các đơn vị lính đánh xa. Yếu khi đối đầu các đơn vị ở cự ly gần."
+        },
+        {
+          "name": "Thần Điện Vệ Binh",
+          "description": "Đơn vị Bộ binh xung kích chuyên biệt của quân Muisca với khả năng càng chiến đấu lâu, tấn công càng nhanh hơn. Mạnh khi đối đầu công trình và đơn vị cưỡi thú. Yếu khi đối đầu đơn vị dòng Dân binh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Thảo dược",
+          "description": "Đơn vị dòng Cung thủ và Chiến Binh Champi di chuyển nhanh hơn +15%"
+        },
+        {
+          "name": "Huaracas",
+          "description": "Lính Ném Đá được +1 tầm bắn; huấn luyện nhanh hơn +50%"
+        }
+      ],
+      "teamBonus": "Mỏ Vàng tự nhiên tồn tại lâu hơn +15%"
+    },
+    {
+      "code": "PER",
+      "name": "Ba Tư",
+      "nameEn": "Persians",
+      "focus": "Nền văn minh Kỵ binh",
+      "civilizationBonuses": [
+        "Bắt đầu với +50 gỗ và +50 lương thực",
+        "Nhà chính và Bến tàu +100% Máu và làm việc nhanh hơn +5/10/15/20% trong Thời kỳ Tăm tối / Thời Phong kiến / Thời Lâu đài / Thời đại Đế quốc",
+        "Chiến thuật Parthia có sẵn trong Thời Lâu đài",
+        "Có thể xây dựng Caravanserai trong Thời đại Đế quốc"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Voi chiến",
+          "description": "Đơn vị kỵ binh chuyên biệt của quân Ba Tư gây sát thương giẫm đạp. Mạnh khi đối đầu với công trình và các đơn vị ở cự ly gần. Yếu khi đối đầu với dòng Lính giáo và Thầy tu."
+        },
+        {
+          "name": "Savar",
+          "description": "Kỵ binh hạng nặng đa năng chuyên biệt của quân Ba Tư. Đặc biệt mạnh khi đối đầu với binh lính đánh xa. Yếu khi đối đầu với dòng Lính giáo, Kỵ sĩ Lạc đà và Thầy tu."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kamandaran",
+          "description": "chi phí vàng của dòng Cung thủ được thay thế bằng chi phí gỗ bổ sung"
+        },
+        {
+          "name": "Thành cổ",
+          "description": "Lâu đài +4 điểm tấn công, +3 khi đối đầu với Trục phá, +3 khi đối đầu với Bộ binh và giảm -25% sát thương thưởng phải chịu"
+        }
+      ],
+      "teamBonus": "Đơn vị dòng Hiệp sĩ +2 điểm tấn công khi đối đầu với lính đánh xa"
+    },
+    {
+      "code": "POL",
+      "name": "Ba Lan",
+      "nameEn": "Poles",
+      "focus": "Nền văn minh Kỵ binh",
+      "civilizationBonuses": [
+        "Trang trại thay thế Nhà xay lương",
+        "Dân làng hồi 10/15/20 Máu trong Thời Phong kiến / Thời Lâu đài / Thời đại Đế quốc",
+        "Thợ đào đá tạo ra vàng và đá",
+        "Nâng cấp Huyết mạch và dòng Kỵ binh do thám giảm -50% chi phí lương thực"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Obuch",
+          "description": "Đơn vị Bộ binh chuyên biệt của quân Ba Lan có khả năng xé giáp của các đơn vị đang đối đầu. Mạnh khi đối đầu các công trình, Kỵ binh và Bộ binh. Yếu khi đối đầu các đơn vị Cung thủ và Xạ thủ."
+        },
+        {
+          "name": "Kỵ binh có cánh",
+          "description": "Kỵ binh chuyên biệt di chuyển nhanh của quân Ba Lan và Lithuania để do thám và đột kích. Kháng chuyển đổi. Đặc biệt mạnh khi đối đầu các đơn vị từ Tu viện. Yếu khi đối đầu các đơn vị dòng Lính giáo và Kỵ sĩ Lạc đà."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Đặc quyền Szlachta",
+          "description": "Dòng Hiệp sĩ giảm -60% chi phí vàng"
+        },
+        {
+          "name": "Di sản Lechite",
+          "description": "Dòng Kỵ binh do thám gây sát thương giẫm đạp"
+        }
+      ],
+      "teamBonus": "Kỵ binh do thám +1 điểm tấn công khi đối đầu binh lính tầm xa"
+    },
+    {
+      "code": "POR",
+      "name": "Bồ Đào Nha",
+      "nameEn": "Portuguese",
+      "focus": "Nền văn minh Hải quân và Thuốc súng",
+      "civilizationBonuses": [
+        "Thợ cắt cỏ tạo ra gỗ bên cạnh lương thực",
+        "Tất cả các đơn vị giảm -20% chi phí vàng",
+        "Có thể xây dựng Trạm mậu dịch trong Thời đại Đế quốc",
+        "Tàu +10/15/20% Máu trong Thời Phong kiến/Thời Lâu đài/Thời đại Đế quốc."
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Súng đa nòng",
+          "description": "Đơn vị dùng thuốc súng công thành chuyên biệt của quân Bồ Đào Nha. Bắn một loạt đạn. Mạnh khi đối đầu các nhóm đơn vị lớn. Yếu khi đối đầu Kỵ binh và các đơn vị dòng Máy bắn đá."
+        },
+        {
+          "name": "Tàu Caravel",
+          "description": "Thuyền chiến chuyên biệt của Bồ Đào Nha với khả năng tấn công xuyên tầm xa. Mạnh khi đối đầu nhóm tàu thuyền lớn. Yếu khi đối đầu Tàu phun lửa."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Vòng quanh thế giới",
+          "description": "Đặt toàn bộ bản đồ thành chế độ khám phá; đóng tàu nhanh hơn +33%"
+        },
+        {
+          "name": "Súng hỏa mai",
+          "description": "Đơn vị thuốc súng bắn chính xác hơn vào các mục tiêu đang di chuyển"
+        }
+      ],
+      "teamBonus": "Công nghệ nghiên cứu nhanh hơn +25%"
+    },
+    {
+      "code": "ROM",
+      "name": "La Mã",
+      "nameEn": "Romans",
+      "focus": "Nền văn minh Bộ binh và Kỵ binh",
+      "civilizationBonuses": [
+        "Dân làng thu thập, xây dựng và sửa chữa nhanh hơn +5%",
+        "Hiệu ứng nâng cấp giáp bộ binh được nhân đôi",
+        "Nỏ máy giảm -50% chi phí vàng",
+        "Dòng Thuyền ga-lê và Tàu Dromon +1 giáp cận chiến/+1 giáp chống xuyên"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Centurion",
+          "description": "Kỵ binh hạng nặng chuyên biệt của quân La Mã giúp tăng tốc độ di chuyển và tấn công của các đơn vị dòng Dân binh lân cận. Mạnh khi đối đầu với bộ binh và cung thủ đi bộ. Yếu khi đối đầu với dòng Lính giáo và Kỵ sĩ Lạc đà."
+        },
+        {
+          "name": "Lính lê dương",
+          "description": "Đơn vị bộ binh đa năng chuyên biệt của La Mã. Đặc biệt mạnh khi đối đầu với Bộ binh. Mạnh khi đối đầu với công trình, dòng Kỵ binh do thám và Lính giao tranh. Yếu khi đối đầu với binh lính tầm xa ở tầm xa."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Máy Bắn Tên",
+          "description": "Nỏ máy tấn công nhanh hơn +33%; dòng Thuyền ga-lê +2 điểm tấn công"
+        },
+        {
+          "name": "Quân Comitatenses",
+          "description": "Dòng Dân binh, Hiệp sĩ và Centurion huấn luyện nhanh hơn +50% và nhận được một tấn công xung kích"
+        }
+      ],
+      "teamBonus": "Giảm phạm vi tối thiểu của Nỏ máy"
+    },
+    {
+      "code": "SAR",
+      "name": "Saracen",
+      "nameEn": "Saracens",
+      "focus": "Nền văn minh Lạc đà và Hải quân",
+      "civilizationBonuses": [
+        "Phí giao dịch ở Chợ chỉ còn 5%; Chợ giảm -100 chi phí gỗ",
+        "Đơn vị cưỡi lạc đà +25% Máu",
+        "Đơn vị dòng Thuyền ga-lê tấn công nhanh hơn +25%",
+        "Tàu vận tải +100% Máu, +20 tải trọng"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Lính nô lệ",
+          "description": "Đơn vị Kỵ binh chuyên biệt của quân Saracen với đòn tấn công cận chiến tầm xa. Mạnh khi đối đầu các đơn vị cưỡi thú. Yếu khi đối đầu các đơn vị Cung thủ và đơn vị dòng Lính giáo."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Bệnh viện Hồi giáo",
+          "description": "Thầy tu hồi máu thụ động cho nhiều đơn vị lân cận"
+        },
+        {
+          "name": "Đối trọng",
+          "description": "Máy lăng đá và đơn vị dòng Máy bắn đá +15% điểm tấn công"
+        }
+      ],
+      "teamBonus": "Cung thủ đi bộ và Lính giao tranh +2 điểm tấn công khi đối đầu với công trình"
+    },
+    {
+      "code": "SAX",
+      "name": "Người Saxon",
+      "nameEn": "Saxons",
+      "focus": "Nền văn minh Bộ binh và Phòng thủ",
+      "civilizationBonuses": [
+        "Nhà xay lương, Trại đốn gỗ và Trại khai thác cung cấp thêm +50 Lương thực và +10 Đá khi được xây dựng",
+        "Chi phí huấn luyện Bộ binh giảm -5% cho mỗi Nhà chính hoặc Lâu đài đang kiểm soát (giảm tối đa -20%)",
+        "Tháp và Lâu đài bắn thêm +100% mũi tên cơ bản bắt đầu từ Thời Lâu đài",
+        "Tàu dài và Chiến hạm bắn đá được +20% Máu"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Cận binh",
+          "description": "Đơn vị Bộ binh chuyên biệt của quân Saxon có khả năng ném lao trước khi tham gia cận chiến. Mạnh khi đối đầu lính đánh xa. Yếu khi đối đầu Kỵ binh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Chiêu Mộ Giáo Sĩ",
+          "description": "Thầy tu được +1 phạm vi chuyển đổi; huấn luyện nhanh hơn +33%"
+        },
+        {
+          "name": "Tường khiên",
+          "description": "Bộ binh nhận thêm giáp khi tập trung thành đội hình đông quân"
+        }
+      ],
+      "teamBonus": "Thợ sửa chữa làm việc nhanh hơn +25%"
+    },
+    {
+      "code": "SHU",
+      "name": "Thục",
+      "nameEn": "Shu",
+      "focus": "Nền văn minh Cung thủ và Công thành",
+      "civilizationBonuses": [
+        "Ngoài gỗ, Thợ đốn gỗ còn tạo ra lương thực",
+        "Công nghệ của Đơn vị cung thủ tại Trường bắn và Lò rèn giảm -25% chi phí",
+        "Vũ khí công thành và Thuyền chiến công thành di chuyển nhanh hơn +10/15% trong Thời Lâu đài/Thời đại Đế quốc"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Bạch Vũ Vệ Binh",
+          "description": "Đơn vị bộ binh chuyên biệt của quân Thục tạm thời làm chậm các đơn vị mà đơn vị này tấn công. Mạnh khi đối đầu Kỵ binh. Yếu khi đối đầu Lính đánh xa."
+        },
+        {
+          "name": "Chiến xa",
+          "description": "Đơn vị kỵ binh công thành chuyên biệt của quân Thục với khả năng bắn nhanh nhưng không thể tấn công ở cự ly gần. Có thời gian nạp đạn lâu. Có thể chuyển sang chế độ Pháo kích càn quét tấn công khu vực rộng hơn nhưng kém chính xác hơn. Mạnh khi đối đầu Lính tầm xa. Yếu khi đối đầu Kỵ binh và Vũ khí công thành."
+        },
+        {
+          "name": "Lưu Bị",
+          "description": "Tướng Bộ binh chuyên biệt của quân Thục, hồi máu cho tất cả các đơn vị lân cận. Vô cùng mạnh mẽ. Có giới hạn huấn luyện là một, không thể bị chuyển đổi."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Dàn binh xoắn tốc",
+          "description": "Dòng lính giáo và Bạch vũ vệ binh tăng Máu khi ở gần nhau"
+        },
+        {
+          "name": "Ổ đạn",
+          "description": "Dòng Cung thủ, Chiến xa và Lâu thuyền bắn thêm đạn"
+        }
+      ],
+      "teamBonus": "Cung thủ đi bộ được +2 tầm nhìn"
+    },
+    {
+      "code": "SIC",
+      "name": "Sicily",
+      "nameEn": "Sicilians",
+      "focus": "Nền văn minh Bộ binh và Kỵ binh",
+      "civilizationBonuses": [
+        "Bắt đầu với +100 đá",
+        "Nâng cấp Nông trại cung cấp +125% lương thực bổ sung",
+        "Giảm -40% sát thương thưởng mà binh lính phải chịu",
+        "Có thể xây dựng Donjon trong Thời Tăm tối, thay thế dòng Tháp quan sát",
+        "Tường gia cố được xây dựng nhanh hơn +50%; Nhà chính được xây dựng nhanh hơn +100%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Thị vệ",
+          "description": "Đơn vị Bộ binh chuyên biệt của quân Sicilia có thể xây dựng Tháp canh. Mạnh khi đối đầu với Bộ binh và Kỵ sĩ Lạc đà. Yếu khi đối đầu với Cung thủ cưỡi thú và Xạ thủ."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Cuộc Thập tự chinh đầu tiên",
+          "description": "Mỗi Nhà chính sinh ra 5 Serjeant tại tối đa 5 Nhà chính; các đơn vị kháng chuyển đổi tốt hơn"
+        },
+        {
+          "name": "Áo giáp dài",
+          "description": "Hiệp sĩ +1 giáp cận chiến/+2 giáp chống xuyên"
+        }
+      ],
+      "teamBonus": "Tàu vận tải +5 tầm nhìn và chi phí giảm -50%"
+    },
+    {
+      "code": "SLV",
+      "name": "Slav",
+      "nameEn": "Slavs",
+      "focus": "Nền văn minh Bộ binh và Công thành",
+      "civilizationBonuses": [
+        "Nông dân làm việc nhanh hơn +15%",
+        "Phóng hỏa, Gambeson miễn phí",
+        "Chi phí đơn vị Xưởng vũ khí công thành giảm -15%",
+        "Thầy tu di chuyển nhanh hơn +20%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Quý tộc thiết kỵ",
+          "description": "Đơn vị Kỵ binh chuyên biệt của người Slav với giáp cận chiến đặc biệt. Mạnh khi đối đầu các đơn vị ở cự ly gần. Yếu khi đối đầu các đơn vị dòng Lính giáo và Thầy tu."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Pháo đài Detinet",
+          "description": "Thay thế 40% chi phí Đá cho Lâu đài và dòng công trình Tháp quan sát bằng chi phí Gỗ bổ sung"
+        },
+        {
+          "name": "Thân binh",
+          "description": "Bộ binh gây sát thương giẫm đạp"
+        }
+      ],
+      "teamBonus": "Các công trình quân sự (trừ Lâu đài) cung cấp +5 suất dân số"
+    },
+    {
+      "code": "SPN",
+      "name": "Tây Ban Nha",
+      "nameEn": "Spanish",
+      "focus": "Nền văn mình Thuốc súng và Thầy tu",
+      "civilizationBonuses": [
+        "Thợ xây làm việc nhanh hơn +30%",
+        "Nhận +20 vàng cho mỗi công nghệ được nghiên cứu",
+        "Nâng cấp Lò rèn không tốn vàng",
+        "Đơn vị dùng thuốc súng tấn công nhanh hơn +18%",
+        "Pháo hạm bắn chính xác hơn vào các mục tiêu di động"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Tướng chinh phục",
+          "description": "Đơn vị Xạ thủ cưỡi thú chuyên biệt của quân Tây Ban Nha với khả năng tấn công mạnh mẽ và tính cơ động cao. Mạnh khi đối đầu các đơn vị ở tầm xa. Yếu khi đối đầu các đơn vị dòng Lính giáo, Lính giao tranh và Thầy tu."
+        },
+        {
+          "name": "Truyền đạo sư",
+          "description": "Đơn vị Thầy tu cưỡi thú chuyên biệt của quân Tây Ban Nha. Chuyển đổi các đơn vị địch và hồi máu cho đơn vị đồng minh. Di chuyển nhanh hơn Thầy tu nhưng tầm nhìn và phạm vi chuyển đổi kém hơn. Mạnh khi đối đầu các đơn vị cận chiến, di chuyển chậm. Yếu khi đối đầu các đơn vị dòng Kỵ binh do thám, Chiến binh đại bàng và lính đánh xa. Có thể thu thập Thánh tích và mang đến Tu viện."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tòa án dị giáo",
+          "description": "Tu sĩ và Truyền đạo sư chuyển đổi nhanh hơn; Truyền đạo sư +1 phạm vi"
+        },
+        {
+          "name": "Quyền tối thượng",
+          "description": "Dân làng +40 Máu, +6 điểm tấn công, +2 giáp cận chiến/+2 giáp chống xuyên"
+        }
+      ],
+      "teamBonus": "Đơn vị Giao thương tạo ra thêm +25% vàng"
+    },
+    {
+      "code": "TAT",
+      "name": "Tatar",
+      "nameEn": "Tatars",
+      "focus": "Nền văn minh Cung kỵ binh",
+      "civilizationBonuses": [
+        "Gia súc tồn tại lâu hơn +50%",
+        "Đơn vị gây thêm +25% sát thương khi chiến đấu từ địa hình cao hơn",
+        "Nhà chính mới tạo ra 2 con cừu bắt đầu từ Thời lâu đài",
+        "Vòng ngón tay cái, Chiến thuật Parthia nghiên cứu miễn phí"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Keshik",
+          "description": "Đơn vị Kỵ binh hạng nặng chuyên biệt của quân Tatar tạo ra vàng khi chiến đấu với các đơn vị khác. Mạnh khi đối đầu với Đơn vị Cung thủ. Yếu khi đối đầu với Hàng Lính giáo, Kỵ sĩ lạc đà và Thầy tu."
+        },
+        {
+          "name": "Lạc đà lửa",
+          "description": "Đơn vị Kỵ binh công thành phá hủy chuyên biệt của quân Tatar. Mạnh khi đối đầu các đơn vị cưỡi thú, đặc biệt là voi. Yếu khi đối đầu Cung thủ đi bộ và Bộ binh. Tự hủy khi sử dụng xong."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Giáp lụa",
+          "description": "Dòng Kỵ binh do thám, Kỵ binh giáo thảo nguyên và Cung kỵ binh +1 giáp cận chiến/+1 giáp chống xuyên"
+        },
+        {
+          "name": "Thuật công thành Timurid",
+          "description": "Máy lăng đá +2 phạm vi"
+        }
+      ],
+      "teamBonus": "Cung thủ cưỡi thú tăng +2 tầm nhìn"
+    },
+    {
+      "code": "TEU",
+      "name": "Teuton",
+      "nameEn": "Teutons",
+      "focus": "Nền văn minh Bộ binh và Phòng thủ",
+      "civilizationBonuses": [
+        "Chi phí Nông trại giảm -40%",
+        "Nhà chính +10 suất đồn trú; Tháp +5 suất đồn trú",
+        "Bộ binh và Đơn vị Cưỡi thú được +1/+2 giáp cận chiến trong Thời Lâu đài/Thời đại Đế quốc",
+        "Thầy tu +100% phạm vi hồi máu",
+        "Lỗ sát nhân, Thảo dược được nghiên cứu miễn phí"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Hiệp sĩ Teuton",
+          "description": "Bộ binh chuyên biệt của quân Teuton với giáp cận chiến đặc biệt hiệu quả. Chậm nhưng có khả năng chống chuyển đổi. Mạnh khi đối đầu với đơn vị cận chiến. Yếu khi đối đầu với các đơn vị cung thủ và xạ thủ."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Bọc sắt",
+          "description": "Vũ khí công thành được +4 giáp cận chiến"
+        },
+        {
+          "name": "Tường răng cưa",
+          "description": "Lâu đài được +3 tầm bắn, bộ binh đồn trú bắn tên"
+        }
+      ],
+      "teamBonus": "Đơn vị có khả năng kháng chuyển đổi mạnh hơn"
+    },
+    {
+      "code": "TUP",
+      "name": "Tupi",
+      "nameEn": "Tupi",
+      "focus": "Nền văn minh Cung thủ và Bộ binh",
+      "civilizationBonuses": [
+        "Bắt đầu với mỗi loại tài nguyên được tăng +25",
+        "Dân làng có thể đồn trú trong Khu định cư",
+        "Các đơn vị tử trận trả lại 15% chi phí",
+        "Chi phí nâng cấp Trường bắn và Nhà lính giảm -50% lương thực"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Hắc Mộc Cung Thủ",
+          "description": "Đơn vị Cung thủ đi bộ chuyên biệt của quân Tupi được huấn luyện theo cặp và chỉ chiếm một nửa suất dân số. Mạnh khi có quân số đông. Yếu khi đối đầu các đơn vị ở cự ly gần."
+        },
+        {
+          "name": "Chiến binh Ibirapema",
+          "description": "Đơn vị Bộ binh chuyên biệt của quân Tupi với khả năng tấn công diện rộng phía trước mạnh mẽ. Mạnh khi đối đầu Bộ binh. Yếu khi đối đầu Cung thủ đi bộ ở tầm xa."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Caciques",
+          "description": "Chiến binh Champi và Lính Ném Đá tấn công nhanh hơn +25%"
+        },
+        {
+          "name": "Curare",
+          "description": "Cung thủ đi bộ và Công sự gây ra sát thương độc"
+        }
+      ],
+      "teamBonus": "Tháp và Lâu đài cung cấp thêm +10 suất dân số"
+    },
+    {
+      "code": "TUR",
+      "name": "Thổ",
+      "nameEn": "Turks",
+      "focus": "Nền văn minh Thuốc súng",
+      "civilizationBonuses": [
+        "Thợ đào vàng làm việc nhanh hơn +25%",
+        "Dòng Kỵ binh do thám được +1 giáp xuyên thấu và nâng cấp miễn phí",
+        "Hóa học được nghiên cứu miễn phí; Chi phí nghiên cứu công nghệ thuốc súng giảm -50%",
+        "Đơn vị quân dùng thuốc súng +25% Máu"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Vệ binh Đột Quyết",
+          "description": "Đơn vị Xạ thủ đi bộ chuyên biệt của quân Turk với khả năng tấn công mạnh mẽ. Mạnh khi đối đầu Bộ binh. Yếu khi đối đầu các đơn vị Cung thủ và Lính giao tranh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Sipahi",
+          "description": "Cung thủ cưỡi thú được +20 Máu"
+        },
+        {
+          "name": "Pháo binh",
+          "description": "Tháp pháo, Đại bác oanh tạc, Pháo hạm được +2 tầm bắn"
+        }
+      ],
+      "teamBonus": "Đơn vị quân dùng thuốc súng huấn luyện nhanh hơn +25%"
+    },
+    {
+      "code": "VAR",
+      "name": "Quân Varangian",
+      "nameEn": "Varangians",
+      "focus": "Nền văn minh Kỵ binh và Hải quân",
+      "civilizationBonuses": [
+        "Chăn gia súc, đánh cá và săn bắn cũng tạo ra Vàng",
+        "Hiệu ứng Huyết mạch và Xe lưu động được +50%",
+        "Vệ binh Varangian tấn công nhanh hơn +25% và tạo ra thêm +50% vàng",
+        "Tàu dài và Chiến hạm bắn đá tấn công nhanh hơn +15%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Jarl",
+          "description": "Đơn vị Kỵ binh chuyên biệt của quân Varangian với khả năng tấn công cận chiến tầm xa. Đặc biệt mạnh khi đối đầu Bộ binh. Yếu khi đối đầu Kỵ sĩ lạc đà và Thầy tu."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Di sản Vendel",
+          "description": "Dòng Hiệp sĩ gây sát thương giẫm đạp"
+        },
+        {
+          "name": "Lễ Gothikon",
+          "description": "Vệ binh Varangian ném rìu theo chu kỳ"
+        }
+      ],
+      "teamBonus": "Dòng Hiệp sĩ được +1 điểm tấn công khi đối đầu bộ binh"
+    },
+    {
+      "code": "VIE",
+      "name": "Đại Việt",
+      "nameEn": "Vietnamese",
+      "focus": "Nền văn minh Cung thủ",
+      "civilizationBonuses": [
+        "Vị trí Nhà chính của địch xuất hiện khi bắt đầu ván chơi",
+        "Nâng cấp kinh tế không tốn gỗ và nghiên cứu nhanh hơn +100%",
+        "Các đơn vị Cung thủ đi bộ và Lính giao tranh được +20% máu",
+        "Cưỡng chế tòng quân nghiên cứu miễn phí"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Cung thủ giáp mây",
+          "description": "Đơn vị Cung thủ đi bộ chuyên biệt của quân Đại Việt có giáp chống xuyên đặc biệt mạnh. Mạnh khi đối đầu cung thủ và bộ binh. Yếu khi đối đầu kỵ binh, Lính giao tranh và vũ khí công thành."
+        },
+        {
+          "name": "Lính giao tranh đế quốc",
+          "description": "Đơn vị Lính giao tranh chống cung thủ, không thể tấn công ở phạm vi gần. Mạnh khi đối đầu cung thủ. Yếu khi đối đầu các đơn vị ở gần. Có thể huấn luyện trong quân Đại Việt và đồng minh."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Chatra",
+          "description": "Voi chiến +100 Máu"
+        },
+        {
+          "name": "Tiền giấy",
+          "description": "Ngoài Gỗ, Thợ đốn gỗ từ từ tạo ra Vàng"
+        }
+      ],
+      "teamBonus": "Có thể nâng cấp Lính giao tranh đế quốc ở Thời đại Đế quốc"
+    },
+    {
+      "code": "VIK",
+      "name": "Viking",
+      "nameEn": "Vikings",
+      "focus": "Nền văn minh Bộ binh và Hải quân",
+      "civilizationBonuses": [
+        "Xe đẩy tay, Xe kéo tay miễn phí",
+        "Bộ binh được +20% Máu bắt đầu từ Thời phong kiến",
+        "Thuyền chiến giảm -10/15/20% chi phí trong Thời phong kiến/Thời lâu đài/Thời đại đế quốc"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Cuồng binh",
+          "description": "Đơn vị Bộ binh chuyên biệt của quân Viking có thể tự hồi máu. Mạnh khi đối đầu bộ binh và vũ khí công thành. Yếu khi đối đầu đơn vị Cung thủ và Xạ thủ."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Thủ lĩnh",
+          "description": "Bộ binh được +5 điểm tấn công khi đối đầu với Kỵ binh, +4 khi đối đầu với đơn vị cưỡi Lạc đà"
+        },
+        {
+          "name": "Bogsveigar",
+          "description": "Dòng Cung thủ và Thuyền dài được +1 điểm tấn công"
+        }
+      ],
+      "teamBonus": "Chi phí Bến tàu giảm -15%"
+    },
+    {
+      "code": "WEI",
+      "name": "Ngụy",
+      "nameEn": "Wei",
+      "focus": "Nền văn minh Kỵ binh",
+      "civilizationBonuses": [
+        "Nhận một Dân làng miễn phí cho mỗi nâng cấp kinh tế được nghiên cứu",
+        "Kỵ binh Hắc Quang và Thảo Khấu Tiên Ti +20/30% Máu trong Thời Lâu đài/Thời đại Đế quốc",
+        "Máy bắn đá người kéo và Lâu thuyền giảm -25% chi phí"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kỵ binh Hổ",
+          "description": "Đơn vị kỵ binh chuyên biệt của quân Ngụy có khả năng tăng máu và điểm tấn công khi đánh bại quân địch. Đặc biệt mạnh khi đối đầu với binh lính đánh xa. Yếu khi đối đầu với đơn vị dòng Lính giáo."
+        },
+        {
+          "name": "Thảo Khấu Tiên Ti",
+          "description": "Đơn vị cung thủ cưỡi thú chuyên biệt của quân Ngụy với một lượt tấn công tầm xa xung kích. Mạnh khi đối đầu Bộ binh. Yếu khi đối đầu Lính giao tranh và Kỵ sĩ Lạc đà."
+        },
+        {
+          "name": "Tào Tháo",
+          "description": "Tướng kỵ binh chuyên biệt của quân Ngụy, giúp tăng tốc độ tấn công của các đơn vị lân cận. Vô cùng mạnh mẽ. Có giới hạn huấn luyện là một, không thể bị chuyển đổi."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Đồn điền",
+          "description": "Binh lính sản xuất lương thực thụ động"
+        },
+        {
+          "name": "Giáp Minh Quang",
+          "description": "Đơn vị cưỡi thú +4 giáp cận chiến"
+        }
+      ],
+      "teamBonus": "Kỵ binh +2 điểm tấn công khi đối đầu Vũ khí công thành"
+    },
+    {
+      "code": "WU",
+      "name": "Ngô",
+      "nameEn": "Wu",
+      "focus": "Nền văn minh Bộ binh và Hải quân",
+      "civilizationBonuses": [
+        "Các công trình sản xuất quân sự và Bến tàu cung cấp +55 Lương thực khi được xây dựng",
+        "Bộ binh hồi 10/15/30 Máu mỗi phút trong Thời Phong kiến/Thời Lâu đài/Thời đại Đế quốc",
+        "Kiếm sĩ Trung Quốc và Kỵ binh Hắc Quang +2 điểm tấn công trong Thời đại Đế quốc",
+        "Nối đất, Xưởng cạn được miễn phí"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Hỏa cung thủ",
+          "description": "Đơn vị Cung thủ đi bộ chuyên biệt của quân Ngô bắn loạt mũi tên vào các đơn vị và tấn công tầm xa vào các công trình. Mạnh khi đối đầu với Bộ binh, Vũ khí công thành và công trình. Yếu khi đối đầu với Kỵ binh và Lính giao tranh."
+        },
+        {
+          "name": "Kiếm sĩ Trung Quốc",
+          "description": "Đơn vị Bộ binh xung kích chuyên biệt của quân Ngô đạt được tốc độ di chuyển và điểm tấn công nhưng mất điểm giáp khi đạt đến một ngưỡng sát thương. Đặc biệt mạnh khi đối đầu các đơn vị cung thủ. Yếu khi đối đầu các đơn vị dòng Dân binh."
+        },
+        {
+          "name": "Tôn Kiên",
+          "description": "Tướng Kỵ binh chuyên biệt của quân Ngô, tăng tốc độ di chuyển của các đơn vị lân cận. Vô cùng mạnh mẽ. Có giới hạn huấn luyện là một, không thể bị chuyển đổi."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Chiến thuật Xích Bích",
+          "description": "Tàu phá hủy và Hỏa cung thủ gây sát thương hỏa lực cho tàu và công trình"
+        },
+        {
+          "name": "Ngọa Hổ",
+          "description": "Máy bắn đá người kéo và Máy lăng đá Lâu Thuyền bắn thêm đá"
+        }
+      ],
+      "teamBonus": "Nhà ở xây nhanh hơn +100%"
+    }
+  ]
+}

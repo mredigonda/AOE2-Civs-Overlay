@@ -1,0 +1,1762 @@
+{
+  "source": "SiegeEngineers/aoe2techtree@e56728e",
+  "labels": {
+    "uniqueUnits": "Unidades únicas",
+    "uniqueTechnologies": "Tecnologías únicas",
+    "teamBonus": "Bonificación de equipo"
+  },
+  "civs": [
+    {
+      "code": "ARM",
+      "name": "Armenios",
+      "nameEn": "Armenians",
+      "focus": "Civilización naval y de infantería",
+      "civilizationBonuses": [
+        "Los carros de mulas cuestan un 25 % menos",
+        "Las tecnologías del carro de mulas son un 40 % más efectivas",
+        "Las mejoras de la línea de lanceros y milicia están disponibles una edad antes (excepto hombres de armas)",
+        "La primera iglesia fortificada recibe una reliquia gratuita",
+        "Las galeras y los dromones disparan un proyectil adicional"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arquero arco compuesto",
+          "description": "Arquero a pie exclusivo de los armenios que ignora la armadura. Fuerte contra infantería y caballería. Débil contra arqueros y armas de asedio."
+        },
+        {
+          "name": "Sacerdote guerrero",
+          "description": "Infantería monástica exclusiva de los armenios que puede curar a las unidades aliadas. Puede recoger reliquias y llevarlas a los monasterios. Fuerte contra infantería. Débil contra caballería de exploración y arqueros."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Flota de Cilicia",
+          "description": "aumenta el radio de explosión de los barcos de demolición un 20 %; las galeras y dromones tienen +1 de alcance"
+        },
+        {
+          "name": "Relicarios",
+          "description": "la infantería, a excepción de los lanceros, obtiene +30 PR; los sacerdotes guerreros curan un 100 % más rápido"
+        }
+      ],
+      "teamBonus": "La infantería gana +2 de campo de visión"
+    },
+    {
+      "code": "AZT",
+      "name": "Aztecas",
+      "nameEn": "Aztecs",
+      "focus": "Civilización de infantería y monjes",
+      "civilizationBonuses": [
+        "Comienzas con +50 de oro",
+        "Los aldeanos cargan +3",
+        "Las unidades militares se entrenan un 15 % más rápido",
+        "Los monjes obtienen +5 PR por cada tecnología de monasterio investigada"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Guerrero jaguar",
+          "description": "Unidad de infantería exclusiva de los aztecas que inflige daño adicional al derrotar unidades militares. Excepcionalmente fuerte contra infantería. Débil contra caballería y unidades de arqueros."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Atlatl",
+          "description": "+1 ataque, +1 alcance para guerrilleros"
+        },
+        {
+          "name": "Guerras florales",
+          "description": "+4 ataque para infantería"
+        }
+      ],
+      "teamBonus": "Las reliquias generan un 33 % más de oro"
+    },
+    {
+      "code": "BENG",
+      "name": "Bengalíes",
+      "nameEn": "Bengalis",
+      "focus": "Civilización naval y de elefantes",
+      "civilizationBonuses": [
+        "Los centros urbanos generan 2 aldeanos cuando se avanza a la siguiente edad",
+        "La caballería cuenta con +2 de ataque contra los guerrilleros",
+        "Las unidades en elefante reciben un 25 % menos de daño adicional y son más resistentes a la conversión",
+        "Los monjes obtienen +3 de armadura cuerpo a cuerpo/+3 de armadura antiperforación",
+        "Los barcos regeneran 15 PR por minuto"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ratha",
+          "description": "arquero a caballo"
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Paiks",
+          "description": "los rathas y las unidades en elefante atacan un 20 % más rápido"
+        },
+        {
+          "name": "Mahāyāna",
+          "description": "los aldeanos y los monjes ocupan un 10 % menos de espacio de población"
+        }
+      ],
+      "teamBonus": "Las unidades de comercio generan un 10 % de comida además de oro"
+    },
+    {
+      "code": "BER",
+      "name": "Bereberes",
+      "nameEn": "Berbers",
+      "focus": "Civilización naval y de caballería",
+      "civilizationBonuses": [
+        "Los aldeanos se mueven un 5 % más rápido en la Edad Oscura y un 10 % más rápido a partir de la Edad Feudal",
+        "Las unidades de los establos cuestan un 15 % menos en la Edad de los Castillos y un 20 % menos en la Edad Imperial",
+        "Los barcos se mueven un 10 % más rápido"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arquero en camello",
+          "description": "Arquero montado exclusivo de los bereberes. Excepcionalmente fuerte contra arqueros a caballo. Débil contra línea de lanceros, guerrilleros y jinetes de camello."
+        },
+        {
+          "name": "Escaramuzador zenete",
+          "description": "Guerrillero montado antiarqueros que no puede atacar a corta distancia. Fuerte contra soldados a distancia. Débil contra unidades a corta distancia. Unidad de los bereberes y sus aliados."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Alcazabas",
+          "description": "los castillos de todo el equipo funcionan un 25 % más rápido"
+        },
+        {
+          "name": "Camellos magrebíes",
+          "description": "las unidades a camello regeneran 15 PR por minuto"
+        }
+      ],
+      "teamBonus": "El escaramuzador zenete está disponible en la galería de tiro con arco a partir de la Edad de los Castillos"
+    },
+    {
+      "code": "BOH",
+      "name": "Bohemios",
+      "nameEn": "Bohemians",
+      "focus": "Civilización de pólvora y monjes",
+      "civilizationBonuses": [
+        "Las tecnologías de los campamentos mineros son gratuitas",
+        "Las herrerías y las universidades cuestan 100 menos de madera",
+        "La línea de lanceros inflige un 25 % más de daño",
+        "Fervor y Santidad afectan a los aldeanos",
+        "Química y Artillero manual disponibles en la Edad de los Castillos"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Carro de guerra husita",
+          "description": "Unidad de pólvora de asedio exclusiva de los bohemios. Las unidades tras ella reciben un 50 % menos de daño con los proyectiles. Fuerte contra soldados a distancia. Débil contra línea de mangoneles."
+        },
+        {
+          "name": "Obús",
+          "description": "Unidad de pólvora de asedio exclusiva de los bohemios de largo alcance que no puede atacar a corta distancia. Fuerte contra edificios y armas de asedio. Débil contra unidades a corta distancia."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tácticas de fuerte de carretas",
+          "description": "las unidades de pólvora se mueven un 10 % más rápido"
+        },
+        {
+          "name": "Reformas husitas",
+          "description": "el coste de oro de los monjes y de las tecnologías del monasterio se reemplaza por comida"
+        }
+      ],
+      "teamBonus": "los mercados funcionan un 80 % más rápido"
+    },
+    {
+      "code": "BRI",
+      "name": "Britanos",
+      "nameEn": "Britons",
+      "focus": "Civilización de arqueros a pie",
+      "civilizationBonuses": [
+        "Los pastores trabajan un +25 % más rápido",
+        "Los centros urbanos cuestan un 50 % menos de madera a partir de la Edad de los Castillos",
+        "Los arqueros a pie ganan +1/+2 de alcance en la Edad de los Castillos y la Edad Imperial"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arquero con arco largo",
+          "description": "Arquero a pie exclusivo de los ingleses con un alcance excepcional. Fuerte contra infantería. Débil contra caballería y guerrilleros."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Hidalgo",
+          "description": "los arqueros a pie y los guerrilleros ganan +1 de alcance, las atalayas obtienen +2 de ataque"
+        },
+        {
+          "name": "Lobo de guerra",
+          "description": "los trebuchets infligen daño explosivo y son más precisos"
+        }
+      ],
+      "teamBonus": "Las galerías de tiro con arco funcionan un +10 % más rápido"
+    },
+    {
+      "code": "BUL",
+      "name": "Búlgaros",
+      "nameEn": "Bulgarians",
+      "focus": "Civilización de infantería y caballería",
+      "civilizationBonuses": [
+        "Mejoras gratis para la línea de milicia",
+        "Tecnologías del herrero y del taller de maquinaria de asedio cuestan un 50 % menos de comida",
+        "Los centros urbanos cuestan un 50 % menos de piedra",
+        "Se puede construir el krepost en la Edad de los Castillos"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Konnik",
+          "description": "Unidad de caballería pesada exclusiva de los búlgaros que lucha como infantería tras ser derribada. Fuerte contra infantería y caballería. Débil contra línea de lanceros y monjes"
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Estribos",
+          "description": "la caballería ataca un 33 % más rápido"
+        },
+        {
+          "name": "Bagains",
+          "description": "la línea de milicia gana +5 de armadura"
+        }
+      ],
+      "teamBonus": "Los herreros trabajan un 80 % más rápido"
+    },
+    {
+      "code": "BURGU",
+      "name": "Borgoñeses",
+      "nameEn": "Burgundians",
+      "focus": "Civilización de caballería",
+      "civilizationBonuses": [
+        "Las mejoras económicas están disponibles una edad antes y cuestan un 40% menos de comida",
+        "Las tecnologías de los establos cuestan un 50 % menos",
+        "Mejora a caballeros disponible en la Edad de los Castillos",
+        "Unidades de pólvora: +25 % más de ataque"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Costiller",
+          "description": "Unidad de caballería pesada exclusiva de los borgoñeses con un poderoso ataque cargado. Fuerte contra unidades de infantería y arqueros. Débil contra jinetes de camello y monjes."
+        },
+        {
+          "name": "Milicia flamenca",
+          "description": "Unidad de infantería anticaballería exclusiva de los borgoñeses. Fuerte contra unidades montadas. Débil contra soldados a distancia."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Viñedos de Borgoña",
+          "description": "los agricultores generan oro gradualmente además de comida"
+        },
+        {
+          "name": "Revolución flamenca",
+          "description": "todos los aldeanos existentes se transforman en milicia flamenca"
+        }
+      ],
+      "teamBonus": "Las reliquias generan comida además de oro."
+    },
+    {
+      "code": "BUR",
+      "name": "Birmanos",
+      "nameEn": "Burmese",
+      "focus": "Civilización de infantería y caballería",
+      "civilizationBonuses": [
+        "Tecnologías de campamento maderero gratis",
+        "La infantería obtiene +1/2/3 de ataque en las edades Feudal/de los Castillos/Imperial",
+        "Elefantes de combate: +1 de armadura cuerpo a cuerpo/+1 de armadura antiperforación",
+        "Las tecnologías del monasterio cuestan un 50 % menos"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arambai",
+          "description": "Unidad montada a distancia exclusiva de los birmanos con un ataque potente pero impreciso. Fuerte contra unidades a media y corta distancia. Débil contra unidades de arqueros y armas de asedio."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Caballería manipur",
+          "description": "la caballería cuenta con +4 de ataque contra soldados a distancia"
+        },
+        {
+          "name": "Howdah",
+          "description": "los elefantes de combate ganan +1 de armadura cuerpo a cuerpo/+1 de armadura antiperforación"
+        }
+      ],
+      "teamBonus": "Reliquias visibles en el mapa desde el inicio del juego"
+    },
+    {
+      "code": "BYZ",
+      "name": "Bizantinos",
+      "nameEn": "Byzantines",
+      "focus": "Civilización defensiva",
+      "civilizationBonuses": [
+        "Los edificios ganan un 10/20/30/40 % más de PR en la Edad Oscura, la Edad Feudal,",
+        "la Edad de los Castillos y la Edad Imperial, respectivamente",
+        "Los jinetes de camello, los guerrilleros y los lanceros cuestan un 25 % menos",
+        "Torres de vigilancia y guardia de la ciudad gratis",
+        "Avanzar a la Edad Imperial cuesta un 33 % menos",
+        "Los barcos incendiarios y los dromones atacan un 25 % más rápido"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Catafracta",
+          "description": "Unidad de caballería pesada exclusiva de los bizantinos. Extraordinariamente fuerte contra infantería. Débil contra unidades de arqueros."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Fuego griego",
+          "description": "los barcos incendiarios ganan +1 de alcance y las torres de bombardeo y los dromones ganan radio de explosión"
+        },
+        {
+          "name": "Logística",
+          "description": "las catafractas y guardia varega infligen daño de aplastamiento"
+        }
+      ],
+      "teamBonus": "Los monjes sanan unidades un 100 % más rápido"
+    },
+    {
+      "code": "CEL",
+      "name": "Celtas",
+      "nameEn": "Celts",
+      "focus": "Civilización de infantería y asedio",
+      "civilizationBonuses": [
+        "Los leñadores trabajan un 15 % más rápido",
+        "El ganado dentro del campo de visión de una unidad celta no se puede robar",
+        "La infantería se mueve un 5/10/15/20 % más rápido en la Edad Oscura, la Edad Feudal,",
+        "la Edad de los Castillos y la Edad Imperial, ,respectivamente",
+        "Las armas de asedio atacan un 25 % más rápido"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Incursor azul",
+          "description": "Infantería exclusiva de los celtas con velocidad de movimiento rápida. Fuerte contra infantería y armas de asedio. Débil contra unidades arqueras y caballería."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Bastión",
+          "description": "los castillos y la línea de atalayas atacan un 33 % más rápido; los castillos curan a la infantería aliada en un radio de 7 casillas"
+        },
+        {
+          "name": "Furor celta",
+          "description": "las armas de asedio obtienen un 40 % más de PR"
+        }
+      ],
+      "teamBonus": "Los talleres de maquinaria de asedio funcionan un 20 % más rápido"
+    },
+    {
+      "code": "CHI",
+      "name": "Chinos",
+      "nameEn": "Chinese",
+      "focus": "Civilización de arqueros y de pólvora",
+      "civilizationBonuses": [
+        "Comienza con +3 aldeanos, -50 de madera, -200 de comida",
+        "Las tecnologías cuestan un 5/10/15 % menos en la Edad Feudal, la Edad de los Castillos y la Edad Imperial, respectivamente",
+        "Los centros urbanos ganan +7 de campo de visión y habilitan +15 de espacio de población",
+        "Los lanceros de fuego y los brulotes se mueven un +5/10 % más rápido en la Edad de los Castillos y la Edad Imperial"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Chu ko nu",
+          "description": "Arquero a pie exclusivo de los chinos con ataque de disparo rápido. Fuerte contra infantería. Débil contra arqueros y armas de asedio."
+        },
+        {
+          "name": "Bote dragón",
+          "description": "Barco de guerra exclusivo de los chinos que escupe fuego a corta distancia. Fuerte contra línea de galeras. Débil contra barcos de demolición."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "La Gran Muralla",
+          "description": "las murallas, las líneas de atalayas y las torres de bombarda ganan un +30 % más de PR"
+        },
+        {
+          "name": "Cohetería",
+          "description": "los escorpiones, los carros de cohetes y los Lou Chuan ganan un +25 % de ataque; los Lou Chuan disparan cohetes"
+        }
+      ],
+      "teamBonus": "Las granjas ganan un +10 % más de comida"
+    },
+    {
+      "code": "CUM",
+      "name": "Cumanos",
+      "nameEn": "Cumans",
+      "focus": "Civilización de caballería",
+      "civilizationBonuses": [
+        "Se puede construir un centro urbano adicional en la Edad Feudal",
+        "Las unidades montadas se mueven un 5/10/15 % más rápido en la Edad Feudal/",
+        "Edad de los Castillos/Edad Imperial",
+        "Las galerías de tiro y los establos cuestan 75 menos de madera",
+        "Talleres de maquinaria de asedio y ariete disponibles en la Edad Feudal; arietes cubiertos disponibles en la Edad de los Castillos"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kipchak",
+          "description": "Arquero montado exclusivo de los cumanos que dispara múltiples flechas. Fuerte contra infantería y armas de asedio. Débil contra arqueros a pie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Ganadería de la estepa",
+          "description": "la línea de caballería de exploración, los lanceros esteparios y los arqueros a caballo entrenan un 100 % más rápido"
+        },
+        {
+          "name": "Mercenarios cumanos",
+          "description": "todos los integrantes del equipo pueden generar 5 guerreros kipchak de élite gratis por castillo"
+        }
+      ],
+      "teamBonus": "Las empalizadas tienen un 33 % más de PR"
+    },
+    {
+      "code": "DAN",
+      "name": "Daneses",
+      "nameEn": "Danes",
+      "focus": "Civilización de infantería y asedio",
+      "civilizationBonuses": [
+        "Los buques de pesca y los aldeanos dejan un 5 % más de comida",
+        "Se obtiene un botín equivalente al 25 % del coste en recursos de cada edificio destruido",
+        "Las mejoras del cuartel y el taller de maquinaria de asedio cuestan un 66 % menos de oro",
+        "Los guardias varegos y los drakkars se mueven un 10 % más rápido"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Vikingo de Jomsborg",
+          "description": "Infantería exclusiva de los daneses que lanza antorchas al atacar edificios y barcos. Muy fuerte contra caballería y edificios. Débil contra soldados a distancia."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Hamask",
+          "description": "la infantería inflige más daño a medida que pierden PR"
+        },
+        {
+          "name": "Furia nórdica",
+          "description": "línea de mangoneles y galeones con catapulta: +1 de alcance; armas de asedio y barcos de guerra de asedio: +40 % de ataque contra edificios"
+        }
+      ],
+      "teamBonus": "Las armas de asedio: +2 de campo de visión"
+    },
+    {
+      "code": "DRAV",
+      "name": "Dravídicos",
+      "nameEn": "Dravidians",
+      "focus": "Civilización naval y de infantería",
+      "civilizationBonuses": [
+        "Los pescadores y buques de pesca pueden transportar +15",
+        "Recibes +200 de madera al avanzar a la siguiente edad",
+        "Los guerrilleros y los arqueros sobre elefantes atacan un 25 % más rápido",
+        "Las tecnologías de los cuarteles cuestan un 50 % menos",
+        "Las armas de asedio cuestan un 33 % menos de madera"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Espadachín urumi",
+          "description": "Unidad de infantería exclusiva de los pueblos dravídicos con ataque de impacto cargado. Fuerte contra edificios y unidades a corta distancia. Débil contra soldados a distancia a larga distancia."
+        },
+        {
+          "name": "Thirisadai",
+          "description": "Barco de guerra de gran resistencia exclusivo de los dravídicos. Fuerte contra la mayoría de barcos de guerra. Débil contra brulotes."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Cuerpo de médicos",
+          "description": "las unidades en elefante regeneran 30 PR por minuto"
+        },
+        {
+          "name": "Acero wootz",
+          "description": "los ataques de infantería y caballería ignoran la armadura"
+        }
+      ],
+      "teamBonus": "Cada muelle proporciona +5 de espacio de población"
+    },
+    {
+      "code": "ETH",
+      "name": "Etíopes",
+      "nameEn": "Ethiopians",
+      "focus": "Civilización de arqueros",
+      "civilizationBonuses": [
+        "Reciben +100 de oro y +100 de comida al avanzar a la siguiente edad",
+        "Los arqueros atacan un 18 % más rápido",
+        "Mejoras de piquero gratis"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Shotelai",
+          "description": "Unidad de infantería exclusiva de los etíopes, con ataque alto y velocidad de entrenamiento rápida. Desplazamiento rápido. Fuerte contra infantería. Débil contra unidades de arqueros."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Herederos regios",
+          "description": "los shotelai y las unidades a camello reciben -3 de daño de unidades montadas"
+        },
+        {
+          "name": "Mecanismos de torsión",
+          "description": "mayor área de daño para unidades del taller de maquinaria de asedio"
+        }
+      ],
+      "teamBonus": "Los puestos de avanzada tienen +3 de CDV y no cuestan piedra"
+    },
+    {
+      "code": "FRK",
+      "name": "Francos",
+      "nameEn": "Franks",
+      "focus": "Civilización de caballería",
+      "civilizationBonuses": [
+        "Los recolectores trabajan un +15 % más rápido",
+        "Tecnologías de molino gratuitas",
+        "Las unidades montadas ganan un +20 % más de PR a partir de la Edad Feudal",
+        "Los castillos cuestan un 15/25 % menos en la Edad de los Castillos y la Edad Imperial, respectivamente"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Lanzador de hachas",
+          "description": "Infantería exclusiva de los francos con ataque de tipo cuerpo a cuerpo a distancia. Fuerte contra infantería. Débil contra unidades arqueras y armas de asedio."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Compagnies d'ordonnance",
+          "description": "los ballesteros a caballo cuestan un 40 % menos de oro"
+        },
+        {
+          "name": "Caballería",
+          "description": "los establos funcionan un +40 % más rápido"
+        }
+      ],
+      "teamBonus": "La línea de caballeros gana +2 de campo de visión"
+    },
+    {
+      "code": "GEO",
+      "name": "Georgianos",
+      "nameEn": "Georgians",
+      "focus": "Civilización defensiva y de caballería",
+      "civilizationBonuses": [
+        "Comienza con un carro de mulas",
+        "Las unidades y los edificios reciben un 15 % menos de daño al luchar desde una elevación superior",
+        "La caballería regenera 2/8/14 PR por minuto en la Edad Feudal/Edad de los Castillos/Edad Imperial",
+        "Las iglesias fortificadas proporcionan un 10 % más de velocidad de trabajo a los aldeanos en un radio de 9 casillas"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Monaspa",
+          "description": "Caballería pesada exclusiva de los georgianos que se vuelve más fuerte cuando hay otros monaspas o unidades de caballería cerca. Fuerte contra infantería y caballería. Débil contra la línea de lanceros y monjes."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Torres esvanas",
+          "description": "las fortificaciones ganan 2 de ataque; la línea de torres inflige daño cuando se atraviesan"
+        },
+        {
+          "name": "Caballería aznauri",
+          "description": "las unidades de caballería ocupan un 20 % menos de espacio de población"
+        }
+      ],
+      "teamBonus": "Reparar edificios cuesta un 25 % menos"
+    },
+    {
+      "code": "GOT",
+      "name": "Godos",
+      "nameEn": "Goths",
+      "focus": "Civilización de infantería",
+      "civilizationBonuses": [
+        "Telar puede investigarse al instante",
+        "Los cazadores cargan +15; los animales que caces duran un 20 % más",
+        "La infantería cuesta un 15/20/25/30 % menos en la Edad Oscura, la Edad Feudal, la Edad de los Castillos",
+        "y la Edad Imperial, respectivamente",
+        "La infantería obtiene +1/+2/+3 de ataque contra edificios en la Edad Feudal,",
+        "la Edad de los Castillos y la Edad Imperial, respectivamente",
+        "Ganas +10 de población en la Edad Imperial"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Huscarle",
+          "description": "Unidad de infantería exclusiva de los godos con una armadura antiperforación excepcional. Fuerte contra soldados a distancia y edificios. Débil contra caballería y línea de milicias."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Anarquía",
+          "description": "los huscarles pueden entrenarse en los cuarteles"
+        },
+        {
+          "name": "Movilización",
+          "description": "los cuarteles funcionan un 100 % más rápido"
+        }
+      ],
+      "teamBonus": "Los cuarteles funcionan un 20 % más rápido"
+    },
+    {
+      "code": "GURJ",
+      "name": "Gurjara",
+      "nameEn": "Gurjaras",
+      "focus": "Civilización de camellos y caballería",
+      "civilizationBonuses": [
+        "Empieza con 2 arbustos",
+        "Se puede guarnecer ganado en el molino para producir comida de forma pasiva",
+        "Las unidades montadas infligen un 20/30/40 % más de daño en las edades Feudal/de los Castillos/Imperial"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Lanzador de chakrams",
+          "description": "Unidad de infantería exclusiva de los gurjaras con ataque cuerpo a cuerpo a distancia que inflige daño perforante. Fuerte contra infantería y grupos grandes de unidades. Débil contra caballería y armas de asedio."
+        },
+        {
+          "name": "Jinete shrivamsha",
+          "description": "Caballería rápida exclusiva de los gurjaras que puede esquivar proyectiles. Fuerte contra soldados a distancia. Débil contra línea de lanceros y jinetes de camello."
+        },
+        {
+          "name": "Explorador a camello",
+          "description": "Caballería anticaballería de desplazamiento rápido exclusiva de los gurjaras. Fuerte contra unidades montadas. Débil contra infantería, monjes y arqueros a pie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Chatrias",
+          "description": "las unidades militares cuestan un 25 % menos de comida"
+        },
+        {
+          "name": "Guardas fronterizos",
+          "description": "+4 de armadura cuerpo a cuerpo a los jinetes de camello y arqueros sobre elefante"
+        }
+      ],
+      "teamBonus": "Las unidades del camello y el elefante entrenan un 25 % más rápido"
+    },
+    {
+      "code": "HIN",
+      "name": "Indostanos",
+      "nameEn": "Hindustanis",
+      "focus": "Civilización de camellos y pólvora",
+      "civilizationBonuses": [
+        "Los aldeanos cuestan un 8/13/18/23% menos en la Edad Oscura/Edad Feudal/Edad de los Castillos/",
+        "Edad Imperial",
+        "Los jinetes de camello atacan un 20 % más rápido",
+        "Las unidades de pólvora obtienen +1 de armadura/+1 de armadura antiperforación",
+        "Pueden construir caravasar en la Edad Imperial"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ghulam",
+          "description": "Unidad de infantería exclusiva de los indostanos que ensarta a varios objetivos con su lanza. Extremadamente fuerte contra unidades de arqueros y línea de lanceros. Débil contra caballería."
+        },
+        {
+          "name": "Jinete de camello imperial",
+          "description": "Caballería anticaballería de desplazamiento rápido exclusiva de los indostanos. Fuerte contra unidades montadas. Débil contra infantería, monjes y arqueros a pie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Camino del Gran Tronco",
+          "description": "todos los ingresos de oro son un 10 % más rápidos; la tarifa de mercado se reduce al 10 %"
+        },
+        {
+          "name": "Shatagni",
+          "description": "los artilleros manuales obtienen +2 de alcance"
+        }
+      ],
+      "teamBonus": "Las líneas de caballería de exploración infligen +2 de ataque contra edificios"
+    },
+    {
+      "code": "HUN",
+      "name": "Hunos",
+      "nameEn": "Huns",
+      "focus": "Civilización de caballería",
+      "civilizationBonuses": [
+        "No necesitan casas, pero comienzan con 100 menos de madera",
+        "Los arqueros a caballo cuestan un 10 % menos en la Edad de los Castillos y un 20 % menos en la Edad Imperial",
+        "Los trebuchets son más precisos contra unidades y objetivos pequeños",
+        "En los mapas nómadas, el primer centro urbano genera un caballo explorador"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Tarcano",
+          "description": "Caballería pesada exclusiva de los hunos. Excepcionalmente fuerte contra edificios. Débil contra línea de lanceros y jinetes a camello."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Razias",
+          "description": "crear tarcanos en establos"
+        },
+        {
+          "name": "Ateísmo",
+          "description": "las reliquias enemigas generan un 50 % menos de recursos; las victorias por maravillas y reliquias tardan 100 años más"
+        }
+      ],
+      "teamBonus": "Los establos funcionan un 20 % más rápido"
+    },
+    {
+      "code": "INC",
+      "name": "Inca",
+      "nameEn": "Inca",
+      "focus": "Civilización de infantería",
+      "civilizationBonuses": [
+        "Las casas y los asentamientos proporcionan +5 de espacio de población",
+        "El coste de piedra de los edificios se reduce un 15 %",
+        "El coste de comida de las unidades militares se reduce un 15 %/20 %/25 % y 30 % en la Edad Oscura, la Edad Feudal, la Edad de los Castillos y la Edad Imperial, respectivamente",
+        "Los aldeanos afectados por las mejoras de infantería de la herrería comienzan en la Edad de los Castillos"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kamayuk",
+          "description": "Infantería exclusiva de los incas con mayor alcance de ataque. Fuerte contra caballería e infantería. Débil contra unidades de arqueros y artilleros."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Honda andina",
+          "description": "los guerrilleros y los soldados con honda no tienen alcance mínimo; los soldados con honda ganan +1 de ataque"
+        },
+        {
+          "name": "Escudos de tela",
+          "description": "los kamayuks, los soldados con honda y los guerreros champi ganan +1 de armadura y +1 de armadura perforante"
+        }
+      ],
+      "teamBonus": "Comienzas con una llama gratis"
+    },
+    {
+      "code": "ITA",
+      "name": "Italianos",
+      "nameEn": "Italians",
+      "focus": "Civilización naval y de arqueros",
+      "civilizationBonuses": [
+        "Avanzar a la siguiente edad cuesta un 15 % menos",
+        "Los arqueros a pie y los condotieri obtienen +1 de armadura cuerpo a cuerpo y +1 de armadura antiperforación",
+        "Las tecnologías de los muelles y de la universidad cuestan un 25 % menos",
+        "Las unidades de pólvora cuestan un 20 % menos",
+        "Los buques de pesca cuestan un 15 % menos"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Genovés ballestero",
+          "description": "Arquero a pie exclusivo de los italianos. Excepcionalmente fuerte contra caballería. Débil contra unidades de arqueros y armas de asedio."
+        },
+        {
+          "name": "Condotiero",
+          "description": "Infantería antipólvora de desplazamiento rápido. Fuerte contra unidades de pólvora. Débil contra caballería y unidades de arqueros. Lo entrenan los italianos y sus aliados."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Ruta de la seda",
+          "description": "las unidades mercantes cuestan un 50 % menos"
+        },
+        {
+          "name": "Pirotecnia",
+          "description": "los artilleros manuales infligen un 15 % más de daño perforante y son más precisos"
+        }
+      ],
+      "teamBonus": "Condotiero disponible en los cuarteles en la Edad Imperial"
+    },
+    {
+      "code": "JAP",
+      "name": "Japoneses",
+      "nameEn": "Japanese",
+      "focus": "Civilización de infantería",
+      "civilizationBonuses": [
+        "Los molinos y los campamentos mineros/madereros cuestan un 50 % menos",
+        "La infantería ataca un +33 % más rápido a partir de la Edad Feudal",
+        "Los arqueros a caballo ganan +2 de ataque contra los soldados a distancia (salvo los hostigadores)",
+        "Los buques de pesca trabajan un 5/10/15/20 % más rápido en la Edad Oscura, la Edad Feudal, la Edad de los Castillos y la Edad Imperial, respectivamente, y ganan un 100 % más de PR"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Samurai",
+          "description": "Infantería exclusiva de los japoneses que entra en combate rápidamente y que tiene un ataque rápido. Fuerte contra unidades exclusivas. Débil contra unidades de arqueros y artilleros."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Yasama",
+          "description": "las torres disparan flechas adicionales"
+        },
+        {
+          "name": "Kataparuto",
+          "description": "los trebuchets atacan y se arman y desarman más rápido"
+        }
+      ],
+      "teamBonus": "Las galeras tienen +4 de campo de visión"
+    },
+    {
+      "code": "JUR",
+      "name": "Yurchen",
+      "nameEn": "Jurchens",
+      "focus": "Civilización de caballería y pólvora",
+      "civilizationBonuses": [
+        "La carne de los animales que caces y del ganado no se descompone",
+        "Las unidades montadas y los lanceros incendiarios atacan un 25 % más rápido a partir de la Edad Feudal",
+        "Los ingenieros de asedio están disponibles en la Edad de los Castillos",
+        "Las mejoras de asedio y fortificación cuestan un 75 % menos de madera y se investigan un 100 % más rápido",
+        "Las unidades reciben un 50 % menos de daño por fuego amigo"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Pagoda de hierro",
+          "description": "Caballería pesada exclusiva de los yurchen con una armadura resistente que puede bloquear totalmente los ataques cuerpo a cuerpo. Fuerte contra infantería y soldados a distancia. Débil contra línea de lanceros y jinetes de camello."
+        },
+        {
+          "name": "Granadero",
+          "description": "Unidad de pólvora exclusiva de los yurchen con ataque explosivo a distancia que no puede atacar a corta distancia. Fuerte contra infantería y grupos compactos de unidades. Débil contra soldados a distancia y unidades a corta distancia."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Bastiones fortificados",
+          "description": "las fortificaciones regeneran 500 puntos de resistencia por minuto"
+        },
+        {
+          "name": "Bombas trueno",
+          "description": "los carros de cohetes, los granaderos y los Lou Chuan detonan al ser derrotados; los proyectiles producen explosiones adicionales"
+        }
+      ],
+      "teamBonus": "Las unidades de pólvora obtienen 2 de campo de visión"
+    },
+    {
+      "code": "KHI",
+      "name": "Kitán",
+      "nameEn": "Khitans",
+      "focus": "Civilización de infantería y caballería",
+      "civilizationBonuses": [
+        "Las pasturas reemplazan a las granjas",
+        "Los efectos de mejora de los ataques cuerpo a cuerpo se duplican",
+        "Los guerrilleros, lanceros y caballería de exploración entrenan y se mejoran un +15 % más rápido",
+        "Mejora del arquero de caballería pesada disponible en la Edad de los Castillos y cuesta un 50 % menos"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Liao Dao",
+          "description": "Infantería exclusiva de los kitán con un poderoso ataque que hiere a los enemigos y les inflige daño permanente. Fuerte contra caballería e infantería. Débil contra soldados a distancia a larga distancia."
+        },
+        {
+          "name": "Trebuchet montado",
+          "description": "Caballería de asedio exclusiva de los kitán de largo alcance que no puede atacar a corta distancia. Los proyectiles dejan unas llamas persistentes sobre el terreno. Fuerte contra armas de asedio y grupos compactos de unidades. Débil contra unidades a corta distancia."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Armadura laminada",
+          "description": "la infantería y los guerrilleros devuelven un 25 % del daño cuerpo a cuerpo al atacante"
+        },
+        {
+          "name": "Caballería ordo",
+          "description": "la caballería regenera puntos de resistencia en combate"
+        }
+      ],
+      "teamBonus": "La infantería obtiene +2 de ataque contra soldados a distancia"
+    },
+    {
+      "code": "KHM",
+      "name": "Jemeres",
+      "nameEn": "Khmer",
+      "focus": "Civilización de asedio y elefantes",
+      "civilizationBonuses": [
+        "No se necesitan edificios para avanzar a la siguiente edad o para desbloquear otros edificios",
+        "Los granjeros no necesitan molinos o centros urbanos para depositar comida",
+        "Los aldeanos pueden guarnecerse en casas",
+        "Los elefantes de combate se mueven un +10 % más rápido"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Elefante con balista",
+          "description": "Caballería de asedio exclusiva de los jemeres con ataque de paso a distancia. Puede derribar árboles. Fuerte contra infantería y soldados a distancia. Débil contra caballería y armas de asedio."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Colmillos de acero",
+          "description": "+3 de ataque en elefantes de combate"
+        },
+        {
+          "name": "Ballesta doble",
+          "description": "los elefantes con balistas y los escorpiones disparan un proyectil adicional"
+        }
+      ],
+      "teamBonus": "+1 de alcance para escorpiones"
+    },
+    {
+      "code": "KOR",
+      "name": "Coreanos",
+      "nameEn": "Koreans",
+      "focus": "Civilización naval y defensiva",
+      "civilizationBonuses": [
+        "Los canteros trabajan un +20 % más rápido",
+        "Los soldados a distancia y la infantería cuestan un 50 % menos de madera",
+        "Mejoras de armadura para arquero y torres gratis (la torre de bombarda requiere Química)",
+        "Los barcos de guerra cuestan un 20 % menos de madera"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Carreta de guerra",
+          "description": "Arquero montado exclusivo de los coreanos. Lento pero duradero. Fuerte contra infantería y arqueros. Débil contra línea de lanceros, guerrilleros y jinetes de camello."
+        },
+        {
+          "name": "Barco tortuga",
+          "description": "Barco de guerra de asedio exclusivo de los coreanos con mucha armadura y ataque. Fuerte contra la mayoría de barcos de guerra y edificios. Débil contra galeras."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Eupseong",
+          "description": "línea de atalayas: +2 de alcance"
+        },
+        {
+          "name": "Shinkichon",
+          "description": "mangoneles: +1 de alcance"
+        }
+      ],
+      "teamBonus": "Mangoneles: se reduce su alcance mínimo"
+    },
+    {
+      "code": "LIT",
+      "name": "Lituanos",
+      "nameEn": "Lithuanians",
+      "focus": "Civilización de caballería y monjes",
+      "civilizationBonuses": [
+        "Cada centro urbano proporciona +100 de comida",
+        "Los lanceros y guerrilleros se mueven un 10 % más rápido",
+        "Cada reliquia guarnecida otorga +1 de ataque a la línea de caballeros y leitis (máximo +4)"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Leitis",
+          "description": "Caballería pesada exclusiva de los lituanos que ignora la armadura. Fuertes contra caballería e infantería, especialmente con armadura alta. Débil contra unidades de arqueros."
+        },
+        {
+          "name": "Húsar alado",
+          "description": "Caballería rápida exclusiva de los polacos y los lituanos para explorar y saquear. Resistente a la conversión. Extremadamente fuerte contra unidades del monasterio. Débil contra línea de lanceros y jinetes de camello."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Fuertes en las colinas",
+          "description": "centros urbanos: +3 de alcance"
+        },
+        {
+          "name": "Escudo rectangular",
+          "description": "lanceros y guerrilleros: +2 de armadura"
+        }
+      ],
+      "teamBonus": "Los monasterios funcionan un 20 % más rápido"
+    },
+    {
+      "code": "MAG",
+      "name": "Magiares",
+      "nameEn": "Magyars",
+      "focus": "Civilización de caballería",
+      "civilizationBonuses": [
+        "Los aldeanos eliminan a los lobos de un golpe",
+        "La línea de caballería de exploración cuesta un 15 % menos",
+        "Mejoras de ataque cuerpo a cuerpo gratis"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Huszár magiar",
+          "description": "Caballería exclusiva de los magiares. Fuerte contra armas de asedio. Débil contra línea de lanceros y jinetes de camello."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Ejército corviniano",
+          "description": "los huszár magiares dejan de costar oro y pasan a costar comida adicional"
+        },
+        {
+          "name": "Arco recurvo",
+          "description": "+1 ataque y +1 alcance para arqueros a caballo"
+        }
+      ],
+      "teamBonus": "Los arqueros a caballo se crean un 25 % más rápido"
+    },
+    {
+      "code": "MALY",
+      "name": "Malayos",
+      "nameEn": "Malay",
+      "focus": "Civilización naval",
+      "civilizationBonuses": [
+        "Avanzas a la siguiente edad un 66 % más rápido",
+        "Mejoras de armadura de infantería gratuitas",
+        "Los elefantes de combate cuestan un 25/35 % menos en la Edad de los Castillos y en la Edad Imperial",
+        "Las trampas para peces cuestan un 33 % menos y proporcionan un 200 % más de comida"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Recluta con karambit",
+          "description": "Infantería exclusiva de los malayos que solo ocupa medio espacio de población. Fuerte en gran número. Débil contra caballería y soldados a distancia."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Talasocracia",
+          "description": "mejora los muelles a puertos"
+        },
+        {
+          "name": "Leva en masa",
+          "description": "la milicia y subsiguientes dejan de costar oro y cuestan comida adicional"
+        }
+      ],
+      "teamBonus": "Los muelles obtienen +6 de campo de visión"
+    },
+    {
+      "code": "MAL",
+      "name": "Malíes",
+      "nameEn": "Malians",
+      "focus": "Civilización de infantería",
+      "civilizationBonuses": [
+        "Los edificios cuestan un 15 % menos de madera",
+        "Los aldeanos depositan un 10 % más de oro",
+        "Las unidades de los cuarteles obtienen +1 de armadura antiperforación en la Edad Feudal,",
+        "+2 en la Edad de los Castillos y +3 en la Edad Imperial"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Guardiana gbeto",
+          "description": "Infantería exclusiva de los malienses con ataque cuerpo a cuerpo a distancia. Desplazamiento rápido. Fuerte contra infantería y armas de asedio. Débil contra soldados a distancia."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Gran asamblea",
+          "description": "los centros urbanos disparan flechas sin unidades guarnecidas"
+        },
+        {
+          "name": "Farimba",
+          "description": "+5 de ataque para la caballería"
+        }
+      ],
+      "teamBonus": "Las universidades funcionan un 80 % más rápido"
+    },
+    {
+      "code": "MAPU",
+      "name": "Mapuches",
+      "nameEn": "Mapuche",
+      "focus": "Civilización de caballería y unidades de contraataque",
+      "civilizationBonuses": [
+        "Los recolectores entregan un 25 % más de comida",
+        "Los asentamientos pueden entrenar líneas de lanceros y guerrilleros",
+        "La infantería, los soldados con honda y los guerrilleros reciben 5/10/15 PS en la Edad Feudal/de los Castillos/Imperial",
+        "Las unidades montadas generan +3 de oro al derrotar a unidades militares",
+        "Los castillos enemigos se muestran en el mapa"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kona",
+          "description": "Caballería exclusiva de los mapuches que inflige daño en aumento a las unidades heridas. Fuerte contra infantería y arqueros a pie. Débil contra líneas de lanceros, jinetes de camello y monjes."
+        },
+        {
+          "name": "Jinete con boleadoras",
+          "description": "Arquero montado exclusivo de los mapuches con un ataque cargado que ralentiza a las unidades enemigas. Fuerte contra unidades montadas. Débil contra arqueros a pie, guerrilleros y unidades a corta distancia."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Malón",
+          "description": "los jinetes con boleadoras, los soldados con honda y los guerrilleros infligen daño perforante"
+        },
+        {
+          "name": "Butalmapu",
+          "description": "las unidades únicas de equipo del castillo y los jinetes con boleadoras cuestan un 15 % menos"
+        }
+      ],
+      "teamBonus": "Línea de lanceros y guerrilleros: +2 al campo de visión"
+    },
+    {
+      "code": "MAY",
+      "name": "Maya",
+      "nameEn": "Maya",
+      "focus": "Civilización de arqueros",
+      "civilizationBonuses": [
+        "Comienzan con 1 aldeano más, pero con 50 menos de comida",
+        "Los recursos duran un 15 % más",
+        "El coste de los arqueros a pie se reduce un 10 %/20 %/30 % en la Edad Feudal, la Edad de los Castillos y la Edad Imperial, respectivamente"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arquero emplumado",
+          "description": "Arquero a pie exclusivo de los mayas de movimiento rápido. Fuerte contra unidades de arqueros e infantería. Débil contra caballería."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Lanzadores de hul'che",
+          "description": "los guerrilleros disparan un proyectil adicional"
+        },
+        {
+          "name": "Holcanes",
+          "description": "+40 PR para los guerreros águila"
+        }
+      ],
+      "teamBonus": "Los muros cuestan un 50 % menos"
+    },
+    {
+      "code": "MON",
+      "name": "Mongoles",
+      "nameEn": "Mongols",
+      "focus": "Civilización de arqueros a caballo",
+      "civilizationBonuses": [
+        "Los cazadores trabajan un 40 % más rápido",
+        "Los arqueros a caballo atacan un 25 % más rápido",
+        "La línea de caballería de exploración y los lanceros esteparios cuentan con un 20/30 % de PR más en la Edad de los Castillos y la Edad Imperial"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Mangudai",
+          "description": "Arquero de caballería único de los mongoles con ataque rápido. Fuerte contra armas de asedio e infantería. Débil contra guerrilleros, línea de lanceros y jinetes de camello"
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Nómadas",
+          "description": "las casas perdidas no disminuyen el espacio de población"
+        },
+        {
+          "name": "Instrucción militar",
+          "description": "las unidades del taller de maquinaria de asedio se mueven un 50 % más rápido"
+        }
+      ],
+      "teamBonus": "La línea de caballería de exploración recibe +2 de campo de visión"
+    },
+    {
+      "code": "MUI",
+      "name": "Muiscas",
+      "nameEn": "Muisca",
+      "focus": "Civilización de arqueros y monjes",
+      "civilizationBonuses": [
+        "Avanzar a la siguiente edad cuesta -50 % de oro",
+        "Los asentamientos cuestan -33 % y curan a las unidades cercanas",
+        "Los guerreros champi y las unidades de la galería de tiro con arco reciben +1/2/3 de armadura cuerpo a cuerpo en la Edad Feudal/de los Castillos/Imperial",
+        "Los monjes recuperan fe un 50 % más rápido",
+        "Las caravanas y los gremios son gratis"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Guerrero guecha",
+          "description": "Guerrillero exclusivo de los muiscas que regenera PR cuando un guerrero guecha cercano cae derrotado. Fuerte contra soldados a distancia. Débil contra unidades a corta distancia."
+        },
+        {
+          "name": "Guardia del templo",
+          "description": "Infantería de choque exclusiva de los muiscas que ataca más rápido cuanto más tiempo siga en combate. Fuerte contra edificios y unidades montadas. Débil contra línea de milicias."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Herbología",
+          "description": "la línea de arqueros y los guerreros champi se mueven un 15 % más rápido"
+        },
+        {
+          "name": "Huaracas",
+          "description": "los soldados con honda añaden 1 al alcance; entrenan un 50 % más rápido"
+        }
+      ],
+      "teamBonus": "Las fuentes de oro naturales duran un 15 % más"
+    },
+    {
+      "code": "PER",
+      "name": "Persas",
+      "nameEn": "Persians",
+      "focus": "Civilización de caballería",
+      "civilizationBonuses": [
+        "Empieza con +50 de madera y comida",
+        "Los centros urbanos y los muelles ganan un 100 % más de PR y trabajan un 5/10/15/20 % más rápido en la Edad Oscura, la Edad Feudal, la Edad de los Castillos, y la Edad Imperial, respectivamente",
+        "Tácticas de los partias disponibles en la Edad de los Castillos",
+        "Puedes construir caravasares en la Edad Imperial"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Elefante de guerra",
+          "description": "Unidad de caballería exclusiva de los persas que inflige daño de arrollamiento. Fuerte contra edificios y unidades a corta distancia. Débil contra línea de lanceros y monjes."
+        },
+        {
+          "name": "Savar",
+          "description": "Caballería pesada polivalente única de los persas. Excepcionalmente fuerte contra unidades a distancia. Débil contra lanceros, jinetes de camello y monjes."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kamandaran",
+          "description": "el coste de oro de los arqueros se reemplaza por un coste adicional de madera"
+        },
+        {
+          "name": "Ciudadelas",
+          "description": "los castillos infligen +4 de ataque, +3 contra arietes, +3 contra infantería y reciben un 25 % menos de daño adicional"
+        }
+      ],
+      "teamBonus": "Los caballeros ganan +2 de ataque contra los soldados a distancia"
+    },
+    {
+      "code": "POL",
+      "name": "Polacos",
+      "nameEn": "Poles",
+      "focus": "Civilización de caballería",
+      "civilizationBonuses": [
+        "El folwark sustituye al molino",
+        "Los aldeanos regeneran 10/15/20 PR en las edades Feudal/de los Castillos/Imperial",
+        "Los canteros generan oro además de piedra",
+        "Las mejoras Pureza de sangre y la línea de caballería de exploración cuestan un 50 % menos de comida"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Martillo de guerra",
+          "description": "Unidad de infantería exclusiva de los polacos que destroza la armadura de las unidades contra las que lucha. Fuerte contra edificios, caballería e infantería. Débil contra unidades de arqueros y artilleros."
+        },
+        {
+          "name": "Húsar alado",
+          "description": "Caballería rápida exclusiva de los polacos y los lituanos para explorar y saquear. Resistente a la conversión. Extremadamente fuerte contra unidades del monasterio. Débil contra línea de lanceros y jinetes de camello."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Privilegios de Szlachta",
+          "description": "la línea de caballeros cuesta un 60 % menos de oro"
+        },
+        {
+          "name": "Legado lequítico",
+          "description": "la línea de caballería de exploración arrasa a su paso"
+        }
+      ],
+      "teamBonus": "La línea de caballería de exploración recibe +1 de ataque contra los soldados a distancia"
+    },
+    {
+      "code": "POR",
+      "name": "Portugueses",
+      "nameEn": "Portuguese",
+      "focus": "Civilización naval y de pólvora",
+      "civilizationBonuses": [
+        "Los recolectores generan madera además de comida",
+        "Todas las unidades cuestan un 20 % menos de oro",
+        "Pueden construir factorías en la Edad Imperial",
+        "Los barcos tienen un 10 %/15 %/20 % más de PR en la Edad Imperial, la Edad de los Castillos y la Edad Feudal, respectivamente"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Cañón de salvas",
+          "description": "Unidad de pólvora de asedio exclusiva de los portugueses. Dispara una andanada de balas. Fuerte contra grupos grandes de unidades. Débil contra caballería y mangoneles."
+        },
+        {
+          "name": "Carabela",
+          "description": "Barco de guerra exclusivo de los portugueses con ataque de paso a distancia. Fuerte contra grandes grupos de barcos. Débil contra barcos incendiarios."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Circunnavegación",
+          "description": "muestra el mapa como si estuviese explorado; los barcos entrenan un 33 % más rápido"
+        },
+        {
+          "name": "Arcabuz",
+          "description": "las unidades de pólvora son más precisas contra objetivos en movimiento"
+        }
+      ],
+      "teamBonus": "Las tecnologías se desarrollan un 25 % más rápido"
+    },
+    {
+      "code": "ROM",
+      "name": "Romanos",
+      "nameEn": "Romans",
+      "focus": "Civilización de infantería y caballería",
+      "civilizationBonuses": [
+        "Los aldeanos recolectan, construyen y reparan un 5 % más rápido",
+        "Los efectos de mejora de armadura de infantería se duplican",
+        "Los escorpiones cuestan un 50 % menos de oro",
+        "La línea de galeras y dromones obtiene +1 de armadura cuerpo a cuerpo y +1 de armadura antiperforación"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Centurión",
+          "description": "Unidad de caballería pesada romana única que aumenta el movimiento y la velocidad de ataque de las unidades cercanas de la línea de milicia. Fuerte contra infantería y arqueros a pie. Débil contra lanceros y jinetes de camello."
+        },
+        {
+          "name": "Legionario",
+          "description": "Unidad de infantería romana versátil. Excepcionalmente fuerte contra infantería. Fuerte contra edificios, caballería de exploración y guerrilleros. Débil contra soldados a larga distancia."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Balistas",
+          "description": "los escorpiones atacan un 33 % más rápido; la línea de galeras obtiene +2 de ataque"
+        },
+        {
+          "name": "Comitatenses",
+          "description": "las líneas de milicia y caballeros y los centuriones entrenan un 50 % más rápido y reciben un ataque de carga"
+        }
+      ],
+      "teamBonus": "Alcance mínimo de los escorpiones reducido"
+    },
+    {
+      "code": "SAR",
+      "name": "Sarracenos",
+      "nameEn": "Saracens",
+      "focus": "Civilización naval y de camellos",
+      "civilizationBonuses": [
+        "La tarifa de mercado cuesta solo un 5 %; los mercados cuestan 100 menos de madera",
+        "Las unidades a camello ganan un 25 % más de PR",
+        "La línea de galeras ataca un 25 % más rápido",
+        "Los barcos de transporte ganan un 100 % más de PR y 20 más de capacidad"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Mameluco",
+          "description": "Unidad de caballería exclusiva de los sarracenos con ataque cuerpo a cuerpo a distancia. Fuerte contra unidades montadas. Débil contra unidades de arqueros y línea de lanceros."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Bimaristán",
+          "description": "los monjes curan a varias unidades cercanas de forma automática"
+        },
+        {
+          "name": "Contrapesos",
+          "description": "los trebuchets y los mangoneles ganan un 15 % más de ataque"
+        }
+      ],
+      "teamBonus": "Los arqueros a pie y los guerrilleros ganan +2 de ataque contra los edificios"
+    },
+    {
+      "code": "SAX",
+      "name": "Sajones",
+      "nameEn": "Saxons",
+      "focus": "Civilización de infantería y defensa",
+      "civilizationBonuses": [
+        "Los molinos, los campamentos madereros y los campamentos mineros proporcionan +50 de comida y +10 de piedra al construirlos",
+        "La infantería cuesta un 5 % menos por cada centro urbano o castillo que controles (hasta un máximo de un 20 % menos)",
+        "Las torres y los castillos disparan un 100 % más de flechas básicas a partir de la Edad de los Castillos",
+        "Drakkars y galeones con catapulta: 20 % más de PR"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Tropas del hogar",
+          "description": "Infantería exclusiva de los sajones que lanza una jabalina antes de entrar en combate cuerpo a cuerpo. Fuerte contra soldados a distancia. Débil contra caballería."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Reclutamiento administrativo",
+          "description": "monjes: +1 de alcance de conversión; entrenan un 33 % más rápido"
+        },
+        {
+          "name": "Muralla escudo",
+          "description": "la infantería obtiene armadura adicional cuando se agrupa"
+        }
+      ],
+      "teamBonus": "Los reparadores trabajan un 25 % más rápido"
+    },
+    {
+      "code": "SHU",
+      "name": "Shu",
+      "nameEn": "Shu",
+      "focus": "Civilización de arqueros y asedio",
+      "civilizationBonuses": [
+        "Los leñadores generan comida adicional, además de madera",
+        "Las tecnologías de los arqueros de la galería de tiro con arco y del herrero cuestan un 25 % menos",
+        "Las armas de asedio y los barcos de guerra de asedio se mueven un 10 % o 15 % más rápido en la Edad de los Castillos o la Edad Imperial"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Guardia de la pluma blanca",
+          "description": "Infantería exclusiva de los Shu que ralentiza temporalmente a la unidad que ataca. Fuerte contra caballería. Débil contra soldados a distancia."
+        },
+        {
+          "name": "Carro de guerra",
+          "description": "Caballería de asedio exclusiva de los Shu con ataque de disparo rápido, pero no puede atacar a corta distancia. Cuenta con un tiempo de recarga muy largo. Puede cambiar a un modo de bombardeo que cubre más área, pero es menos preciso. Fuerte contra soldados a distancia. Débil contra caballería y armas de asedio."
+        },
+        {
+          "name": "Liu Bei",
+          "description": "Héroe de infantería exclusivo de los Shu que cura a todas las unidades cercanas. Extremadamente poderoso. Solo se puede tener uno y no se puede convertir."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Arsenal de la serpiente enroscada",
+          "description": "la línea de lanceros y los guardias de la pluma blanca obtienen PR adicionales cuando están cerca los unos de los otros"
+        },
+        {
+          "name": "Cargador",
+          "description": "la línea de arqueros, los carros de guerra y las unidades de Lou Chuan disparan proyectiles adicionales"
+        }
+      ],
+      "teamBonus": "Los arqueros a pie obtienen +2 de campo de visión"
+    },
+    {
+      "code": "SIC",
+      "name": "Sicilianos",
+      "nameEn": "Sicilians",
+      "focus": "Civilización de infantería y caballería",
+      "civilizationBonuses": [
+        "Se empieza con +100 de piedra",
+        "Las mejoras de las granjas proporcionan un 125 % de comida adicional",
+        "Los soldados reciben un 40 % menos de daño",
+        "La torre del homenaje se puede construir en la Edad Oscura y reemplaza la línea de atalayas",
+        "Las fortificaciones se construyen un 50 % más rápido y los centros urbanos un 100 % más rápido"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Serjeant",
+          "description": "Unidad de infantería exclusiva de los sicilianos que puede construir torres del homenaje. Fuerte contra infantería y jinetes de camellos. Débil contra arqueros montados y artilleros."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Primera cruzada",
+          "description": "hasta 5 centros urbanos generan un grupo de 5 serjeants, unidades más resistentes a la conversión"
+        },
+        {
+          "name": "Cota de malla",
+          "description": "la línea de caballeros obtiene +1 de armadura cuerpo a cuerpo y +2 de armadura antiperforación"
+        }
+      ],
+      "teamBonus": "Los barcos de transporte ganan +5 de campo de visión y cuestan un 50 % menos"
+    },
+    {
+      "code": "SLV",
+      "name": "Eslavos",
+      "nameEn": "Slavs",
+      "focus": "Civilización de infantería y asedio",
+      "civilizationBonuses": [
+        "Los agricultores trabajan un +15 % más rápido",
+        "Incendiarismo y gambesones gratis",
+        "Las unidades del taller de maquinaria de asedio son un 15 % más baratas",
+        "Los monjes se mueven un +20 % más rápido"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Boyardo",
+          "description": "Unidad de caballería exclusiva eslava con una excepcional armadura cuerpo a cuerpo. Fuerte contra unidades a corta distancia. Débil contra lanceros y monjes."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Detinets",
+          "description": "sustituye por madera el 40 % del coste de piedra de castillos y torres"
+        },
+        {
+          "name": "Druzhina",
+          "description": "la infantería inflige daño de arrollamiento"
+        }
+      ],
+      "teamBonus": "Cada edificio militar (excepto los castillos) proporciona +5 de espacio de población"
+    },
+    {
+      "code": "SPN",
+      "name": "Españoles",
+      "nameEn": "Spanish",
+      "focus": "Civilización de pólvora y monjes",
+      "civilizationBonuses": [
+        "Los constructores trabajan un +30 % más rápido",
+        "Recibes +20 de oro por cada tecnología investigada",
+        "Las mejoras del herrero no cuestan oro",
+        "Las unidades de pólvora atacan un +18 % más rápido",
+        "Los galeones artillados disparan con mayor precisión a los objetivos en movimiento"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Conquistador",
+          "description": "Artillero montado exclusivo de los españoles de ataque potente y alta movilidad. Fuerte contra unidades a distancia. Débil contra lanceros, guerrilleros y monjes."
+        },
+        {
+          "name": "Misionero",
+          "description": "Monje a caballo exclusivo de los españoles. Convierte unidades enemigas y cura unidades aliadas. Más rápido que el monje a pie, pero con menor alcance y campo visual. Fuerte contra unidades lentas y sin ataque a distancia. Débil contra caballería ligera, guerreros águila y soldados a distancia. Puede recoger reliquias y llevarlas a los monasterios."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Inquisición",
+          "description": "los monjes y los misioneros convierten más rápido; los misioneros ganan +1 de alcance"
+        },
+        {
+          "name": "Supremacía",
+          "description": "aldeanos +40 PR, + +6 de ataque, + +2 de armadura cuerpo a cuerpo/+ 2 de armadura antiperforación"
+        }
+      ],
+      "teamBonus": "Las unidades de comercio generan un +25 % más de oro"
+    },
+    {
+      "code": "TAT",
+      "name": "Tártaros",
+      "nameEn": "Tatars",
+      "focus": "Civilización de arqueros a caballo",
+      "civilizationBonuses": [
+        "El ganado dura un 50 % más",
+        "Las unidades infligen un 25 % más de daño cuando luchan desde una posición elevada",
+        "Los nuevos centros urbanos generan 2 ovejas a partir de la Edad de los Castillos",
+        "Tácticas de los partias y dactileras gratis"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Keshik",
+          "description": "Unidad de caballería pesada exclusiva de los tártaros que genera oro al luchar contra otras unidades. Fuerte contra unidades de arqueros. Débil contra línea de lanceros, jinetes de camello y monjes."
+        },
+        {
+          "name": "Camello llameante",
+          "description": "Caballería de asedio de demolición exclusiva de los tártaros. Fuerte contra unidades montadas, especialmente elefantes. Débil contra arqueros a pie e infantería. Se autodestruye cuando se usa."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Armadura de seda",
+          "description": "la línea de caballería de exploración, los lanceros esteparios y los arqueros a caballo reciben +1 de armadura cuerpo a cuerpo/+1 de armadura antiperforación"
+        },
+        {
+          "name": "Tácticas de asedio timúridas",
+          "description": "los trebuchets obtienen +2 de alcance"
+        }
+      ],
+      "teamBonus": "Los arqueros a caballo obtienen +2 de campo de visión"
+    },
+    {
+      "code": "TEU",
+      "name": "Teutones",
+      "nameEn": "Teutons",
+      "focus": "Civilización de infantería y defensiva",
+      "civilizationBonuses": [
+        "Las granjas cuestan un 40 % menos",
+        "Los centros urbanos tienen +10 de capacidad de guarnición, y las torres, +5",
+        "Las unidades de infantería y a caballo ganan +1/+2 de armadura cuerpo a cuerpo en la Edad de los Castillos y la Edad Imperial, respectivamente",
+        "Los monjes ganan un 100 % de alcance de curación",
+        "Matacanes, Hierba medicinal gratuitas"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Caballero teutónico",
+          "description": "Infantería exclusiva de los teutones con una armadura cuerpo a cuerpo excepcional. Lento pero resistente a la conversión. Fuerte contra unidades cuerpo a cuerpo. Débil contra unidades arqueras y artilleros."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Acorazado primitivo",
+          "description": "las armas de asedio ganan +4 de armadura cuerpo a cuerpo"
+        },
+        {
+          "name": "Almenas",
+          "description": "los castillos ganan +3 de alcance y la infantería guarecida dispara flechas"
+        }
+      ],
+      "teamBonus": "Las unidades se vuelven más resistentes a la conversión"
+    },
+    {
+      "code": "TUP",
+      "name": "Tupís",
+      "nameEn": "Tupi",
+      "focus": "Civilización de arqueros e infantería",
+      "civilizationBonuses": [
+        "Comienza con 25 más de cada recurso",
+        "Los aldeanos pueden guarnecerse en asentamientos",
+        "Las unidades muertas devuelven un 15 % de su coste",
+        "Las mejoras Galería de tiro con arco y Cuarteles cuestan un 50 % menos de comida"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arquero de los bosques",
+          "description": "Arquero a pie exclusivo de los tupís que se entrena en pareja y solo ocupa medio espacio de población. Fuerte en gran número. Débil contra unidades a corta distancia."
+        },
+        {
+          "name": "Guerrero ibirapema",
+          "description": "Infantería exclusiva de los tupís con un poderoso ataque en área frontal. Fuerte contra infantería. Débil contra arqueros a pie a larga distancia."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Caciques",
+          "description": "los guerreros champi y los soldados con honda atacan un 25 % más rápido"
+        },
+        {
+          "name": "Curare",
+          "description": "los arqueros a pie y las fortificaciones infligen daño de veneno"
+        }
+      ],
+      "teamBonus": "Las torres y los castillos proporcionan +10 de espacio de población"
+    },
+    {
+      "code": "TUR",
+      "name": "Turcos",
+      "nameEn": "Turks",
+      "focus": "Civilización de pólvora",
+      "civilizationBonuses": [
+        "Los mineros de oro trabajan un 25 % más rápido",
+        "La caballería de exploración obtiene 1 de armadura antiperforación y mejoras gratis",
+        "Química gratis; las tecnologías de la pólvora cuestan un 50 % menos",
+        "Las unidades de pólvora obtienen un 25 % más de PR"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Jenízaro",
+          "description": "Artillero a pie exclusivo de los turcos con ataque poderoso. Fuerte contra infantería. Débil contra unidades de arqueros y guerrilleros."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Sipahi",
+          "description": "los arqueros montados obtienen 20 de PR"
+        },
+        {
+          "name": "Artillería",
+          "description": "las torres de bombarda, los cañones de asedio y los galeones artillados obtienen 2 de alcance"
+        }
+      ],
+      "teamBonus": "Las unidades de pólvora se entrenan un 25 % más rápido"
+    },
+    {
+      "code": "VAR",
+      "name": "Varegos",
+      "nameEn": "Varangians",
+      "focus": "Civilización de caballería y naval",
+      "civilizationBonuses": [
+        "El pastoreo, la pesca y la caza también generan oro",
+        "Efectos de pureza de sangre y caravanas: +50 %",
+        "Los guardias varegos atacan un 25 % más rápido y generan un 50 % más de oro",
+        "Los drakkars y los galeones con catapulta atacan un 15 % más rápido"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Jarl",
+          "description": "Unidad de caballería exclusiva de los varegos con ataque de tipo cuerpo a cuerpo a distancia. Muy fuerte contra unidades de infantería. Débil contra jinetes de camello y monjes."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Legado de Vendel",
+          "description": "la línea de caballeros inflige daño de arrollamiento"
+        },
+        {
+          "name": "Gothikon",
+          "description": "los guardias varegos lanzan hachas periódicamente"
+        }
+      ],
+      "teamBonus": "Línea de caballeros: +1 de ataque contra infantería"
+    },
+    {
+      "code": "VIE",
+      "name": "Vietnamitas",
+      "nameEn": "Vietnamese",
+      "focus": "Civilización de arqueros",
+      "civilizationBonuses": [
+        "Revela los centros urbanos enemigos al inicio de la partida",
+        "Las mejoras económicas no cuestan madera y se investigarán un +100 % más rápido",
+        "Los arqueros a pie y guerrilleros ganan +20 % PR",
+        "Leva gratis"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arquero de ratán",
+          "description": "Arquero a pie exclusivo de los vietnamitas con una excepcional armadura antiperforación. Fuerte contra unidades de arqueros e infantería. Débil contra caballería, guerrilleros y armas de asedio."
+        },
+        {
+          "name": "Hostigador imperial",
+          "description": "Guerrillero antiarqueros que no puede atacar a corta distancia. Fuerte contra soldados a distancia y línea de lanceros. Débil contra unidades a corta distancia. Unidad de los vietnamitas y sus aliados."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Chatras",
+          "description": "elefantes de combate: +100 PR"
+        },
+        {
+          "name": "Papel moneda",
+          "description": "además de madera, los leñadores generan oro gradualmente"
+        }
+      ],
+      "teamBonus": "Mejora de guerrillero imperial disponible en la Edad Imperial"
+    },
+    {
+      "code": "VIK",
+      "name": "Vikingos",
+      "nameEn": "Vikings",
+      "focus": "Civilización naval y de infantería",
+      "civilizationBonuses": [
+        "La carretilla y el carro de mano son gratis",
+        "La infantería gana un 20 % más de PR a partir de la Edad Feudal",
+        "Los barcos de guerra cuestan un 10/15/20 % menos en la Edad Feudal, la Edad de los Castillos y la Edad Imperial, respectivamente"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Berserker",
+          "description": "Infantería exclusiva de los vikingos que regenera PR. Fuerte contra infantería y armas de asedio. Débil contra unidades de arqueros y artilleros."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Jefes",
+          "description": "la infantería gana +5 de ataque contra la caballería y +4 contra las unidades a camello"
+        },
+        {
+          "name": "Bogsveigar",
+          "description": "los arqueros y los drakkar ganan +1 de ataque"
+        }
+      ],
+      "teamBonus": "Los muelles cuestan un 15 % menos"
+    },
+    {
+      "code": "WEI",
+      "name": "Wei",
+      "nameEn": "Wei",
+      "focus": "Civilización de caballería",
+      "civilizationBonuses": [
+        "Recibe un aldeano gratis por cada mejora de cada economía investigada",
+        "La caballería de Hei Guang y el saqueador xianbei obtienen un 20/30 % más de PR en la Edad de los Castillos y la Edad Imperial, respectivamente",
+        "Los mangoneles y las unidades de Lou Chuan cuestan un 25 % menos"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Caballería tigresa",
+          "description": "Caballería exclusiva de los Wei que obtiene PR y ataque al derrotar ejércitos enemigos. Extraordinariamente fuerte contra soldados a distancia. Débil contra líneas de lanceros."
+        },
+        {
+          "name": "Saqueador xianbei",
+          "description": "Arquero montado exclusivo de los Wei con un ataque a distancia cargado. Fuerte contra la infantería. Débil contra los guerrilleros y los jinetes de camellos."
+        },
+        {
+          "name": "Cao Cao",
+          "description": "Héroe de caballería exclusivo de los Wei que aumenta la velocidad de ataque de las unidades cercanas. Extremadamente poderoso. Solo se puede tener uno y no se puede convertir."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tuntian",
+          "description": "los soldados producen alimentos de forma pasiva"
+        },
+        {
+          "name": "Armadura de Ming Guang",
+          "description": "las unidades montadas obtienen +4 de armadura cuerpo a cuerpo"
+        }
+      ],
+      "teamBonus": "La caballería obtiene +2 de ataque contra armas de asedio"
+    },
+    {
+      "code": "WU",
+      "name": "Wu",
+      "nameEn": "Wu",
+      "focus": "Civilización de infantería y naval",
+      "civilizationBonuses": [
+        "Los muelles y los edificios de producción militar proporcionan +55 de comida al construirlos.",
+        "La infantería se regenera 10/15/30 PR por minuto en la Edad Feudal, de los Castillos o Imperial.",
+        "Los espadachines de Jian y la caballería de Hei Guang obtienen +2 de ataque en la Edad Imperial.",
+        "Carenado y Dique seco son gratis"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arquero de fuego",
+          "description": "Arquero a pie exclusivo de los Wu que dispara múltiples flechas contra edificios. Fuerte contra infantería, armas de asedio y edificios. Débil contra caballería y guerrilleros."
+        },
+        {
+          "name": "Espadachín de Jian",
+          "description": "Infantería de choque exclusiva de los Wu que obtiene velocidad de movimiento y ataque, pero pierde armadura cuando se alcanza un umbral de daño. Extremadamente fuerte contra arqueros. Débil contra milicia."
+        },
+        {
+          "name": "Sun Jian",
+          "description": "Héroe de caballería exclusivo de los Wu, que aumenta la velocidad de movimiento de las unidades cercanas. Extremadamente poderoso. Solo se puede tener uno y no se puede convertir."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tácticas de los Acantilados Rojos (los barcos de demolición y los arqueros de fuego infligen daño por fuego a los barcos y edificios).",
+          "description": ""
+        },
+        {
+          "name": "Tigre sentado (los mangoneles y los trebuchets de Lou Chuan disparan proyectiles adicionales).",
+          "description": ""
+        }
+      ],
+      "teamBonus": "Las casas se construyen un +100 % más rápido."
+    }
+  ]
+}

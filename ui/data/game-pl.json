@@ -1,0 +1,1762 @@
+{
+  "source": "SiegeEngineers/aoe2techtree@e56728e",
+  "labels": {
+    "uniqueUnits": "Unikalne jednostki",
+    "uniqueTechnologies": "Unikalne technologie",
+    "teamBonus": "Premia drużynowa"
+  },
+  "civs": [
+    {
+      "code": "ARM",
+      "name": "Ormianie",
+      "nameEn": "Armenians",
+      "focus": "Cywilizacja piechoty i marynarki",
+      "civilizationBonuses": [
+        "Wozy ciągnięte przez muły są o 25% tańsze",
+        "Technologie wozów ciągniętych przez muły są o 40% efektywniejsze",
+        "Ulepszenia jednostek pochodnych od włóczników i pochodnych od straży obywatelskiej (z wyjątkiem zbrojnych) są dostępne o jedną erę wcześniej",
+        "Pierwszy umocniony kościół otrzymuje darmową relikwię",
+        "Okręty pochodne od galer i dromony strzelają dodatkowym pociskiem"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Łucznik kompozytowy",
+          "description": "Unikalny ormiański łucznik pieszy z atakiem ignorującym pancerz. Silny przeciwko piechocie i kawalerii. Słaby przeciwko łucznikom i machinom wojennym."
+        },
+        {
+          "name": "Wojowniczy kapłan",
+          "description": "Unikalna armeńska piechota klasztorna, która może leczyć sojusznicze jednostki. Może zbierać relikwie i zanosić je do klasztorów. Silna przeciwko piechocie. Słaba przeciwko jednostkom pochodnym od kawalerii zwiadowczej i łucznikom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Cylicyjska flota",
+          "description": "wybuchowe statki zyskują 20% pola rażenia; okręty pochodne od galer i dromony mają +1 pkt. zasięgu"
+        },
+        {
+          "name": "Relikwiarze",
+          "description": "piechota – z wyjątkiem jednostek pochodnych od włóczników – mają +30 PW, wojowniczy kapłani mają +100% do szybkości leczenia"
+        }
+      ],
+      "teamBonus": "Piechota ma +2 pkt. do pola widzenia"
+    },
+    {
+      "code": "AZT",
+      "name": "Aztekowie",
+      "nameEn": "Aztecs",
+      "focus": "Cywilizacja piechoty i mnichów",
+      "civilizationBonuses": [
+        "Zaczynasz z +50 szt. złota",
+        "Mieszkańcy zyskują +3 pkt. do udźwigu",
+        "Jednostki wojskowe szkolą się o 15% szybciej",
+        "Mnisi zyskują 5 PW za każdą technologię zbadaną w klasztorze"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Wojownik jaguarów",
+          "description": "Unikalna piechota aztecka, która zadaje dodatkowe obrażenia podczas pokonywania jednostek wojskowych. Wyjątkowo silna przeciwko piechocie. Słaba przeciwko kawalerii i łucznikom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Atlatl",
+          "description": "oszczepnicy +1 pkt. ataku i +1 pkt. zasięgu"
+        },
+        {
+          "name": "Wojny kwiatów",
+          "description": "piechota +4 pkt. ataku"
+        }
+      ],
+      "teamBonus": "Relikwie generują o 33% więcej złota."
+    },
+    {
+      "code": "BENG",
+      "name": "Bengalczycy",
+      "nameEn": "Bengalis",
+      "focus": "Cywilizacja słoni i marynarki",
+      "civilizationBonuses": [
+        "Centra miast tworzą 2 mieszkańców po przejściu do następnej ery",
+        "Kawaleria ma +2 pkt. ataku przeciwko oszczepnikom",
+        "Jednostki na słoniach otrzymują o 25% mniej dodatkowych obrażeń i są bardziej odporne na nawrócenie",
+        "Mnisi +3 pkt. pancerza do walki wręcz / +3 pkt. pancerza dystansowego",
+        "Statki regenerują 15 PW na minutę"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Wóz ratha",
+          "description": "jeździec z łukiem"
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Paika",
+          "description": "wozy ratha i jednostki na słoniach atakują o 20% szybciej"
+        },
+        {
+          "name": "Mahajana",
+          "description": "mieszkańcy i mnisi zajmują o 10% mniej miejsca w populacji"
+        }
+      ],
+      "teamBonus": "Handel oprócz złota zapewnia +10% żywności"
+    },
+    {
+      "code": "BER",
+      "name": "Berberowie",
+      "nameEn": "Berbers",
+      "focus": "Cywilizacja kawalerii i morska",
+      "civilizationBonuses": [
+        "Mieszkańcy poruszają się o 5% szybciej w Erze Mroku i o 10% szybciej począwszy od Ery Feudalnej",
+        "Jednostki ze stajni są tańsze o 15% w Erze Zamków i 20% w Erze Imperiów",
+        "Statki poruszają się o 10% szybciej"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Łucznik na wielbłądzie",
+          "description": "Unikalny berberyjski jeździec z łukiem. Wyjątkowo silny przeciwko jeźdźcom z łukami. Słaby przeciwko jednostkom pochodnym od włóczników, oszczepnikom i jeźdźcom na wielbłądach."
+        },
+        {
+          "name": "Jinete",
+          "description": "Oszczepnik na koniu, skuteczny przeciwko łucznikom. Nie może atakować z bliska. Silny przeciwko żołnierzom dystansowym. Słaby w walce z jednostkami na krótkim dystansie. Dostępny dla Berberów oraz ich sojuszników."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kasba",
+          "description": "zamki drużyny pracują o 25% szybciej"
+        },
+        {
+          "name": "Maghrebskie wielbłądy",
+          "description": "jednostki na wielbłądach regenerują 15 PW co minutę"
+        }
+      ],
+      "teamBonus": "Od Ery Zamków jinete są dostępne w strzelnicy"
+    },
+    {
+      "code": "BOH",
+      "name": "Czesi",
+      "nameEn": "Bohemians",
+      "focus": "Cywilizacja prochu i mnichów",
+      "civilizationBonuses": [
+        "Technologie kopalni są darmowe",
+        "Kuźnie i uniwersytety kosztują o 100 szt. drewna mniej",
+        "Jednostki pochodne od włóczników zadają o +25% większe obrażenia",
+        "Zapał i Świętość wpływają na mieszkańców",
+        "Chemia i kanonierzy są dostępni w Erze Zamków"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Husycki wóz bojowy",
+          "description": "Unikalna czeska jednostka oblężnicza używająca prochu. Jednostki znajdujące się za nią otrzymują o 50% mniejsze obrażenia od pocisków. Silna przeciwko żołnierzom dystansowym. Słaba przeciwko jednostkom pochodnym od mangoneli."
+        },
+        {
+          "name": "Hufnica",
+          "description": "Unikalna czeska jednostka oblężnicza używająca prochu i mająca duży zasięg. Nie może atakować z bliska. Silna przeciwko budynkom i machinom wojennym. Słaba w walce na krótkim dystansie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Szyk taborowy",
+          "description": "jednostki korzystające z prochu poruszają się o +10% szybciej"
+        },
+        {
+          "name": "Reformy husyckie",
+          "description": "za technologie mnichów i klasztorów płaci się żywnością, a nie złotem"
+        }
+      ],
+      "teamBonus": "Rynki działają o +80% szybciej"
+    },
+    {
+      "code": "BRI",
+      "name": "Brytowie",
+      "nameEn": "Britons",
+      "focus": "Cywilizacja pieszych łuczników",
+      "civilizationBonuses": [
+        "Pasterze pracują o 25% szybciej",
+        "Centra miast kosztują o 50% mniej drewna począwszy od Ery Zamków",
+        "Piesi łucznicy +1/+2 pkt. zasięgu w Erze Zamków/Imperiów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Wojownik z długim łukiem",
+          "description": "Unikalny brytyjski pieszy łucznik o wyjątkowym zasięgu. Silny przeciwko piechocie. Słaby przeciwko kawalerii i oszczepnikom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Yeoman",
+          "description": "piesi łucznicy i jednostki pochodne od oszczepników +1 pkt zasięgu; budynki pochodne od wieży obserwacyjnej + 2 pkt. ataku"
+        },
+        {
+          "name": "Warwolf",
+          "description": "trebusze zadają obrażenia obszarowe i są celniejsze"
+        }
+      ],
+      "teamBonus": "Strzelnice pracują o 10% szybciej"
+    },
+    {
+      "code": "BUL",
+      "name": "Bułgarzy",
+      "nameEn": "Bulgarians",
+      "focus": "Cywilizacja piechoty i kawalerii",
+      "civilizationBonuses": [
+        "Ulepszenia jednostek pochodnych od straży obywatelskiej są darmowe.",
+        "Technologie dostępne w kuźni i zakładzie artyleryjskim kosztują o 50% mniej żywności.",
+        "Centra miast kosztują o 50% mniej kamieni.",
+        "Można budować twierdzę w Erze Zamków."
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Konnik",
+          "description": "Unikalna ciężka kawaleria Bułgarów, która po strąceniu z konia walczy jako piechota. Silna przeciwko piechocie i kawalerii. Słaba przeciwko jednostkom pochodnym od włóczników i mnichom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Strzemiona",
+          "description": "kawaleria atakuje o 33% szybciej"
+        },
+        {
+          "name": "Bagainowie",
+          "description": "jednostki pochodne od straży obywatelskiej +5 pkt. pancerza do walki w zwarciu"
+        }
+      ],
+      "teamBonus": "Kuźnie pracują o 80% szybciej"
+    },
+    {
+      "code": "BURGU",
+      "name": "Burgundowie",
+      "nameEn": "Burgundians",
+      "focus": "Cywilizacja kawalerii",
+      "civilizationBonuses": [
+        "Ulepszenia gospodarcze są dostępne o jedną erę wcześniej i kosztują o 40% żywności mniej",
+        "Technologie w stajni są o 50% tańsze",
+        "Ulepszenie kawalerzysty dostępne w Erze Zamków",
+        "Jednostki używające prochu +25% ataku"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Coustillier",
+          "description": "Unikalna burgundzka ciężka kawaleria z potężną szarżą. Silna przeciwko piechocie i łucznikom. Słaba przeciwko jeźdźcom na wielbłądach i mnichom."
+        },
+        {
+          "name": "Flamandzka straż obywatelska",
+          "description": "Burgundzka unikalna jednostka piechoty do zwalczania kawalerii. Silna przeciwko jednostkom jazdy. Słaba przeciwko żołnierzom dystansowym."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Winnice burgundzkie",
+          "description": "rolnicy powoli generują złoto, oprócz żywności"
+        },
+        {
+          "name": "Flamandzka rewolucja",
+          "description": "wszyscy istniejący mieszkańcy zostają przekształceni we flamandzką straż obywatelską"
+        }
+      ],
+      "teamBonus": "Relikwie poza złotem generują również żywność"
+    },
+    {
+      "code": "BUR",
+      "name": "Birmańczycy",
+      "nameEn": "Burmese",
+      "focus": "Cywilizacja piechoty i kawalerii",
+      "civilizationBonuses": [
+        "Technologie w składach drewna są darmowe",
+        "Piechota zyskuje 1/2/3 pkt. ataku w Erze Feudalnej/Zamków/Imperiów",
+        "Słonie bojowe +1 pkt pancerza do walki wręcz / +1 pkt pancerza dystansowego",
+        "Technologie w klasztorach są o 50% tańsze"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Arambai",
+          "description": "Birmańska unikalna jednostka dystansowa o potężnym, ale niecelnym ataku. Silna przeciwko jednostkom na średnim i bliskim dystansie. Słaba przeciwko jednostkom łuczniczym i machinom wojennym."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kawaleria manipurska",
+          "description": "kawaleria +4 pkt. ataku przeciwko żołnierzom dystansowym"
+        },
+        {
+          "name": "Howdah",
+          "description": "słonie bojowe +1 pkt pancerza do walki wręcz / +1 pkt pancerza dystansowego"
+        }
+      ],
+      "teamBonus": "Relikwie są widoczne na mapie od początku gry"
+    },
+    {
+      "code": "BYZ",
+      "name": "Bizantyjczycy",
+      "nameEn": "Byzantines",
+      "focus": "Cywilizacja defensywna",
+      "civilizationBonuses": [
+        "Budynki mają +10/20/30/40% PW w Erze Mroku/Feudalnej/",
+        "Zamków/Imperiów",
+        "Jeźdźcy na wielbłądach, oszczepnicy i jednostki pochodne od włóczników są o 25% tańsze",
+        "Straż miejska i Patrol miejski są darmowe",
+        "Przejście do Ery Imperiów jest o 33% tańsze",
+        "Brandery i dromony atakują o 25% szybciej"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Katafrakt",
+          "description": "Unikalna bizantyjska ciężka kawaleria. Wyjątkowo silna przeciwko piechocie. Słaba przeciwko jednostkom łuczniczym."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Grecki ogień",
+          "description": "brandery mają +1 pkt zasięgu; dromony i wieże z bombardami mają większy promień wybuchu"
+        },
+        {
+          "name": "Logistike",
+          "description": "katafrakci i gwardia wareska zadają obrażenia od stratowania"
+        }
+      ],
+      "teamBonus": "Mnisi leczą o 100% szybciej"
+    },
+    {
+      "code": "CEL",
+      "name": "Celtowie",
+      "nameEn": "Celts",
+      "focus": "Cywilizacja piechoty i machin wojennych",
+      "civilizationBonuses": [
+        "Drwale pracują o 15% szybciej",
+        "Nie można kraść zwierząt gospodarskich w polu widzenia jednostek celtyckich",
+        "Piechota porusza się o 5/10/15/20% szybciej w Erze Mroku/Feudalnej/",
+        "Zamków/Imperiów",
+        "Machiny wojenne atakują o 25% szybciej"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Celtycki najeźdźca",
+          "description": "Unikalna piechota celtycka o dużej szybkości ruchu. Silna przeciwko piechocie i machinom wojennym. Słaba przeciwko jednostkom łuczniczym i kawalerii."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Forteca",
+          "description": "zamki i budynki pochodne od wież obserwacyjnych strzelają o 33% szybciej; zamki leczą sprzymierzoną piechotę w zasięgu 7 pól"
+        },
+        {
+          "name": "Celtycka furia",
+          "description": "machiny wojenne +40% PW"
+        }
+      ],
+      "teamBonus": "Zakłady artyleryjskie działają o 20% szybciej"
+    },
+    {
+      "code": "CHI",
+      "name": "Chińczycy",
+      "nameEn": "Chinese",
+      "focus": "Cywilizacja łuczników i prochu",
+      "civilizationBonuses": [
+        "Zaczynasz z +3 mieszkańcami, ale masz o 50 szt. drewna i o 200 szt. żywności mniej",
+        "Technologie są o 5/10/15% tańsze w Erze Feudalnej/Zamków/Imperiów",
+        "Centra miast +7 pkt. do pola widzenia i zapewniają +15 miejsc w populacji",
+        "Lansjerzy ogniści i brandery poruszają się o 5/10% szybciej w Erze Zamków/Imperiów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Chu-ko-nu",
+          "description": "Unikalny chiński pieszy łucznik z szybkim atakiem. Silny przeciwko piechocie. Słaby przeciwko łucznikom i machinom wojennym."
+        },
+        {
+          "name": "Smoczy okręt",
+          "description": "Unikalny chiński okręt wojenny, który pluje ogniem na niewielką odległość. Silny przeciwko jednostkom pochodnym od galer. Słaby przeciwko wybuchowym statkom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Wielki Mur",
+          "description": "mury, budynki pochodne od wieży obserwacyjnej i wieże z bombardą +30% PW"
+        },
+        {
+          "name": "Rakiety",
+          "description": "skorpiony, wozy rakietowe i Lou Chuany +25% do ataku; Lou Chuany miotają rakietami"
+        }
+      ],
+      "teamBonus": "Farmy dają +10% żywności"
+    },
+    {
+      "code": "CUM",
+      "name": "Kumanowie",
+      "nameEn": "Cumans",
+      "focus": "Cywilizacja kawalerii",
+      "civilizationBonuses": [
+        "W Erze Feudalnej można zbudować jedno dodatkowe centrum miasta",
+        "Jednostki kawalerii poruszają się o 5/10/15% szybciej w Erze Feudalnej/",
+        "Zamków/Imperiów",
+        "Strzelnice i stajnie kosztują o 75 szt. drewna mniej",
+        "Zakład artyleryjski i taran są dostępne w Erze Feudalnej; umocniony taran jest dostępny w Erze Zamków"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kipczak",
+          "description": "Unikalny kumański łucznik konny, który wystrzeliwuje wiele strzał. Silny przeciwko piechocie i machinom wojennym. Słaby przeciwko pieszym łucznikom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Hodowla stepowa",
+          "description": "jednostki pochodne od kawalerii zwiadowczej, ułani i kawaleria z łukiem szkoli się o 100% szybciej"
+        },
+        {
+          "name": "Kumańscy najemnicy",
+          "description": "wszyscy członkowie drużyny mogą wyszkolić 5 darmowych elitarnych kipczaków na każdy zamek"
+        }
+      ],
+      "teamBonus": "Palisady +33% PW"
+    },
+    {
+      "code": "DAN",
+      "name": "Duńczycy",
+      "nameEn": "Danes",
+      "focus": "Cywilizacja piechoty i machin wojennych",
+      "civilizationBonuses": [
+        "Łodzie rybackie i mieszkańcy przynoszą o 5% więcej żywności",
+        "Otrzymujesz 25% kosztu surowców z każdego zniszczonego budynku",
+        "Ulepszenia w koszarach i zakładach artyleryjskich kosztują o 66% mniej złota",
+        "Gwardia wareska i langskipy poruszają się o 10% szybciej"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Jomswiking",
+          "description": "Unikalna duńska jednostka, która rzuca pochodniami podczas atakowania budynków i statków. Wyjątkowo silna przeciwko kawalerii i budynkom. Słaba przeciwko żołnierzom dystansowym."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Hamask",
+          "description": "piechota zadaje większe obrażenia wraz z utratą PW"
+        },
+        {
+          "name": "Gniew Nordów",
+          "description": "jednostki pochodne od mangoneli i oraz galeony z katapultami mają +1 pkt. do zasięgu; machiny wojenne i okręty oblężnicze mają +40% ataku przeciwko budynkom"
+        }
+      ],
+      "teamBonus": "+2 pkt. do pola widzenia dla machin wojennych"
+    },
+    {
+      "code": "DRAV",
+      "name": "Drawidowie",
+      "nameEn": "Dravidians",
+      "focus": "Cywilizacja piechoty i marynarki",
+      "civilizationBonuses": [
+        "Pojemność rybaków i łodzi rybackich zwiększona o 15",
+        "Otrzymujesz +200 szt. drewna po przejściu do kolejnej ery",
+        "Oszczepnicy i łucznicy na słoniach atakują o 25% szybciej",
+        "Technologie w koszarach są o 50% tańsze",
+        "Machiny oblężnicze kosztują o 33% mniej drewna"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Zbrojny urumi",
+          "description": "Uniwersalna jednostka drawidyjska z obszarowym atakiem szarży. Silna przeciwko budynkom i piechocie na krótkim dystansie. Słaba przeciwko jednostkom dystansowym atakującym z daleka."
+        },
+        {
+          "name": "Thirisadai",
+          "description": "Uniwersalny okręt wojenny Drawidów o dużej wytrzymałości. Silny przeciwko większości okrętów wojennych. Słaby przeciwko branderom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Korpus medyczny",
+          "description": "jednostki na słoniach regenerują 30 PW na minutę"
+        },
+        {
+          "name": "Stal wootz",
+          "description": "ataki piechoty i kawalerii ignorują pancerz"
+        }
+      ],
+      "teamBonus": "Porty zapewniają +5 miejsc populacji"
+    },
+    {
+      "code": "ETH",
+      "name": "Etiopczycy",
+      "nameEn": "Ethiopians",
+      "focus": "Cywilizacja łuczników",
+      "civilizationBonuses": [
+        "Otrzymujesz +100 szt. złota i +100 szt. żywności po przejściu do kolejnej ery",
+        "Piesi łucznicy strzelają o 18% szybciej",
+        "Ulepszenie pikinierów jest darmowe"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Wojownik z szotelem",
+          "description": "Unikalna etiopska jednostka piechoty o potężnym ataku i krótkim czasie szkolenia. Szybka. Silna przeciwko piechocie. Słaba przeciwko jednostkom łuczniczym."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Następcy tronu",
+          "description": "wojownicy z szotelem i jeźdźcy na wielbłądach otrzymują o 3 pkt. mniej obrażeń od jednostek jazdy"
+        },
+        {
+          "name": "Machiny miotające",
+          "description": "zwiększa promień rażenia jednostek z zakładu artyleryjskiego"
+        }
+      ],
+      "teamBonus": "Strażnice zyskują +3 pkt. pola widzenia i nie kosztują kamieni"
+    },
+    {
+      "code": "FRK",
+      "name": "Frankowie",
+      "nameEn": "Franks",
+      "focus": "Cywilizacja kawalerii",
+      "civilizationBonuses": [
+        "Zbieracze pracują o 15% szybciej",
+        "Technologie w młynie są darmowe",
+        "Jednostki jazdy mają +20% PW od Ery Feudalnej",
+        "Zamki kosztują o 15/25% mniej w Erze Zamków/Imperiów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Wojownik z toporami",
+          "description": "Unikalna frankijska jednostka piechoty z dystansowym atakiem wręcz. Silna przeciwko piechocie. Słaba przeciwko łucznikom i machinom wojennym."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kompanie stanowione",
+          "description": "kusznicy na koniach kosztują o 40% mniej złota"
+        },
+        {
+          "name": "Rycerskość",
+          "description": "stajnie pracują o 40% szybciej"
+        }
+      ],
+      "teamBonus": "Jednostki pochodne od rycerzy mają +2 pkt. do pola widzenia"
+    },
+    {
+      "code": "GEO",
+      "name": "Gruzini",
+      "nameEn": "Georgians",
+      "focus": "Cywilizacja obronna i kawalerii",
+      "civilizationBonuses": [
+        "Zaczynasz z wozem ciągniętym przez muły",
+        "Jednostki i budynki otrzymują o 15% mniej obrażeń, gdy znajdują się na wyższym terenie",
+        "Jednostki kawalerii regenerują 2/8/14 PW na minutę w Erze Feudalnej/Zamków/Imperiów",
+        "Umocnione kościoły przyspieszają o 10% pracę mieszkańców w promieniu 9 pól"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Monaspa",
+          "description": "Gruzińska unikalna ciężka kawaleria, która staje się silniejsza, gdy w pobliżu znajdują się inni monaspowie lub jednostki pochodne od rycerzy. Silna przeciwko piechocie i kawalerii. Słaba przeciwko jednostkom pochodnym od włóczników i mnichom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Wieże Swanetii",
+          "description": "fortyfikacje +2 pkt. do ataku, budynki pochodne od wież obserwacyjnych zadają obrażenia przelotowe"
+        },
+        {
+          "name": "Kawaleria Aznauri",
+          "description": "jednostki kawalerii zajmują o 20% mniej miejsca w populacji"
+        }
+      ],
+      "teamBonus": "Naprawa budynków jest o 25% tańsza"
+    },
+    {
+      "code": "GOT",
+      "name": "Goci",
+      "nameEn": "Goths",
+      "focus": "Cywilizacja piechoty",
+      "civilizationBonuses": [
+        "Krosno jest opracowywane natychmiast",
+        "Udźwig myśliwych zwiększony o 15; upolowane zwierzęta wystarczają na 20% dłużej",
+        "Koszt piechoty −15/20/25/30% w Erze Mroku/Feudalnej/Zamków/",
+        "Imperiów",
+        "Piechota +1/+2/+3 pkt. ataku przeciwko budynkom w Erze Feudalnej/",
+        "Zamków/Imperiów",
+        "+10 miejsca w populacji w Erze Imperiów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Huskarl",
+          "description": "Unikalna gotycka jednostka piechoty o wyjątkowym pancerzu dystansowym. Silna przeciwko żołnierzom dystansowym i budynkom. Słaba przeciwko kawalerii i jednostkom pochodnym od straży obywatelskiej."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Anarchia",
+          "description": "huskarlowie mogą być szkoleni w koszarach"
+        },
+        {
+          "name": "Perfuzja",
+          "description": "koszary pracują o 100% szybciej"
+        }
+      ],
+      "teamBonus": "Koszary pracują o 20% szybciej"
+    },
+    {
+      "code": "GURJ",
+      "name": "Gurdźarowie",
+      "nameEn": "Gurjaras",
+      "focus": "Cywilizacja kawalerii i wielbłądów",
+      "civilizationBonuses": [
+        "Zaczynasz z dwoma krzewami owocowymi",
+        "Możesz umieszczać bydło w młynach, aby pasywnie generować żywność",
+        "Jednostki kawalerii zadają +20/30/40% dodatkowych obrażeń w Erze Feudalnej/Zamków/Imperiów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Wojownik z czakramem",
+          "description": "Unikalna jednostka piechoty Gurdźarów z dystansowym atakiem wręcz, która zadaje obrażenia przelotowe. Silna przeciwko piechocie i licznym grupom jednostek. Słaba przeciwko kawalerii i machinom wojennym."
+        },
+        {
+          "name": "Jeździec śriwamśa",
+          "description": "Unikalna jednostka kawalerii Gurdżarów, która może unikać pocisków. Silna przeciwko jednostkom dystansowym. Słaba przeciwko jednostkom pochodnym od włóczników i jeźdźcom na wielbłądach."
+        },
+        {
+          "name": "Zwiadowca na wielbłądzie",
+          "description": "Unikalny zwiadowca Gurdźarów. Szybko poruszająca się jednostka do zwalczania kawalerii. Silna przeciwko jednostkom jazdy. Słaba przeciwko piechocie, mnichom i pieszym łucznikom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kszatrijowie",
+          "description": "jednostki wojskowe kosztują o 25% mniej żywności"
+        },
+        {
+          "name": "Strażnicy graniczni",
+          "description": "jeźdźcy na wielbłądach i łucznicy na słoniach mają +4 pkt. pancerza do walki w zwarciu"
+        }
+      ],
+      "teamBonus": "Jednostki na wielbłądach i słoniach szkolą się o 25% szybciej"
+    },
+    {
+      "code": "HIN",
+      "name": "Hindustańczycy",
+      "nameEn": "Hindustanis",
+      "focus": "Cywilizacja wielbłądów i prochu",
+      "civilizationBonuses": [
+        "Mieszkańcy są tańsi o 8% w Erze Mroku, o 13% w Erze Feudalnej, o 18% w Erze Zamków",
+        "i o 23% w Erze Imperiów",
+        "Jeźdźcy na wielbłądach atakują o +20% szybciej",
+        "Jednostki używające prochu mają +1 pkt. pancerza do walki w zwarciu / +1 pkt. pancerza dystansowego",
+        "Karawanseraj dostępny jest w Erze Imperiów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Ghulam",
+          "description": "Unikalna piechota Hindustańczyków, która przebija włócznią wiele celów. Bardzo silna przeciwko łucznikom i jednostkom pochodnym od włóczników. Słaba przeciwko kawalerii."
+        },
+        {
+          "name": "Imperialny jeździec na wielbłądzie",
+          "description": "Unikalna szybka kawaleria Hindustańczyków, specjalizująca się w walce z kawalerią. Silna przeciwko jednostkom jazdy. Słaba przeciwko piechocie, mnichom i pieszym łucznikom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Droga Wielkiego Pnia",
+          "description": "szybkość pozyskiwania złota ze wszystkich źródeł wzrasta o +10%, opłata handlowa jest zmniejszona do 10%"
+        },
+        {
+          "name": "Shatagni",
+          "description": "kanonierzy +2 pkt. zasięgu"
+        }
+      ],
+      "teamBonus": "Jednostki pochodne od kawalerii zwiadowczej i jednostki na wielbłądach zyskują +2 pkt. ataku przeciwko budynkom"
+    },
+    {
+      "code": "HUN",
+      "name": "Hunowie",
+      "nameEn": "Huns",
+      "focus": "Cywilizacja kawalerii",
+      "civilizationBonuses": [
+        "Nie potrzebujesz domów, ale na początku rozgrywki masz o 100 szt. drewna mniej",
+        "Kawaleria z łukami jest tańsza o 10% w Erze Zamków i o 20% w Erze Imperiów",
+        "Trebusze celniej strzelają do jednostek i małych celów",
+        "Na mapach koczowniczych w pierwszym centrum miasta pojawia się koń zwiadowczy"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Tarkan",
+          "description": "Unikalna ciężka kawaleria hunnicka. Wyjątkowo silna przeciwko budynkom. Słaba przeciwko jednostkom pochodnym od włóczników i jeźdźcom na wielbłądach."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Maruderzy",
+          "description": "możliwość tworzenia tarkanów w stajni"
+        },
+        {
+          "name": "Ateizm",
+          "description": "relikwie w rękach wroga generują -50% surowców; wygrane w wyniku posiadania relikwii lub cudu trwają o 100 lat więcej"
+        }
+      ],
+      "teamBonus": "Stajnie pracują o 20% szybciej"
+    },
+    {
+      "code": "INC",
+      "name": "Inkowie",
+      "nameEn": "Inca",
+      "focus": "Cywilizacja piechoty",
+      "civilizationBonuses": [
+        "Domy i osady zapewniają +5 miejsc w populacji",
+        "Budynki kosztują o 15% mniej kamienia",
+        "Jednostki wojskowe kosztują o 15/20/25/30% mniej żywności w erze Mroku/Feudalnej/Zamków/Imperiów",
+        "Od Ery Zamków ulepszenia piechoty opracowywane w kuźni wpływają też na mieszkańców"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kamayuk",
+          "description": "Unikalna piechota Inków o zwiększonym zasięgu ataku. Silna przeciwko kawalerii i piechocie. Słaba przeciwko łucznikom i strzelcom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Proca andyjska",
+          "description": "oszczepnicy i procarze nie mają minimalnego zasięgu; procarze +1 pkt. ataku"
+        },
+        {
+          "name": "Tarcze tekstylne",
+          "description": "kamayukowie, procarze i wojownicy Champi zyskują +1 pkt. pancerza do walki wręcz / +1 pkt. pancerza dystansowego"
+        }
+      ],
+      "teamBonus": "Zaczynasz z darmową lamą"
+    },
+    {
+      "code": "ITA",
+      "name": "Włosi",
+      "nameEn": "Italians",
+      "focus": "Cywilizacja łuczników i morska",
+      "civilizationBonuses": [
+        "Wkroczenie do kolejnej ery jest tańsze o 15%",
+        "Piesi łucznicy i kondotierzy otrzymują +1 pkt do pancerza do walki w zwarciu / +1 pkt do pancerza dystansowego",
+        "Technologie w porcie i na uniwersytecie są tańsze o 25%",
+        "Jednostki korzystające z prochu są tańsze o 20%",
+        "Statki rybackie są tańsze o 15%"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kusznik genueński",
+          "description": "Unikalny pieszy włoski łucznik. Wyjątkowo silny przeciwko kawalerii. Słaby przeciwko jednostkom łuczniczym i machinom wojennym."
+        },
+        {
+          "name": "Kondotier",
+          "description": "Szybka piechota przeciwprochowa. Silna przeciwko jednostkom używającym prochu. Słaba przeciwko kawalerii i łucznikom. Mogą szkolić ich Włosi i ich sojusznicy."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Jedwabny szlak",
+          "description": "jednostki handlowe są tańsze o 50%"
+        },
+        {
+          "name": "Pirotechnika",
+          "description": "kanonierzy zadają +15% obrażeń przelotowych i są bardziej celni"
+        }
+      ],
+      "teamBonus": "Kondotier jest dostępny w koszarach w Erze Imperiów"
+    },
+    {
+      "code": "JAP",
+      "name": "Japończycy",
+      "nameEn": "Japanese",
+      "focus": "Cywilizacja piechoty",
+      "civilizationBonuses": [
+        "Młyny, składy drewna i kopalnie są o 50% tańsze",
+        "Piechota atakuje o 33% szybciej od Ery Feudalnej",
+        "Kawaleria z łukiem otrzymuje +2 pkt. ataku przeciwko żołnierzom dystansowym (z wyjątkiem lekkiej piechoty)",
+        "Statki rybackie pracują o 5/10/15/20% szybciej w Erze Mroku/Feudalnej/Zamków/Imperiów; otrzymują +100% PW"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Samuraj",
+          "description": "Japońska unikalna piechota o szybkim ataku, szarżująca do walki. Silna przeciwko unikalnym jednostkom. Słaba przeciwko łucznikom i strzelcom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Yasama",
+          "description": "budynki pochodne od wieży obserwacyjnej miotają dodatkowymi strzałami"
+        },
+        {
+          "name": "Kataparuto",
+          "description": "Trebusze szybciej atakują i składają/rozkładają się"
+        }
+      ],
+      "teamBonus": "Jednostki pochodne od Galery +4 pkt. do pola widzenia"
+    },
+    {
+      "code": "JUR",
+      "name": "Dżurdżeni",
+      "nameEn": "Jurchens",
+      "focus": "Cywilizacja kawalerii i prochu strzelniczego",
+      "civilizationBonuses": [
+        "Mięso zwierząt łownych i hodowlanych nie ulega rozkładowi",
+        "Jednostki jazdy i lansjerzy ogniści atakują o 25% szybciej od Ery Feudalnej",
+        "Inżynierowie oblężniczy są dostępni w Erze Zamków",
+        "Ulepszenia oblężnicze i fortyfikacji kosztują o 75% mniej drewna i badane są o 100% szybciej",
+        "Jednostki otrzymują o 50% mniej obrażeń od ognia sojuszniczego"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Żelazna pagoda",
+          "description": "Unikalna ciężka kawaleria Dżurdżenów z wytrzymałym pancerzem, który całkowicie blokuje ataki wręcz. Silna przeciwko piechocie i żołnierzom dystansowym. Słaba przeciwko jednostkom pochodnym od włóczników i jeźdźcom na wielbłądach."
+        },
+        {
+          "name": "Grenadier",
+          "description": "Unikalna jednostka Dżurdżenów korzystająca z prochu, z wybuchowym atakiem dystansowym. Nie może atakować z bliska. Silna przeciwko piechocie i zwartym grupom jednostek. Słaba przeciwko żołnierzom dystansowym i jednostkom w walce na krótkim dystansie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Ufortyfikowane bastiony",
+          "description": "fortyfikacje regenerują 500 PW na minutę"
+        },
+        {
+          "name": "Bomby grzmotowe",
+          "description": "wozy rakietowe, grenadierzy i Lou Chuany wybuchają po pokonaniu; pociski wywołują dodatkowe eksplozje"
+        }
+      ],
+      "teamBonus": "Jednostki używające prochu zyskują 2 pkt. pola widzenia."
+    },
+    {
+      "code": "KHI",
+      "name": "Kitanowie",
+      "nameEn": "Khitans",
+      "focus": "Cywilizacja piechoty i kawalerii",
+      "civilizationBonuses": [
+        "Pastwiska zastępują farmy",
+        "Efekty ulepszeń ataków w zwarciu są podwojone",
+        "Oszczepnicy oraz jednostki pochodne od włóczników i kawalerii zwiadowczej szkolą i ulepszają się o +15% szybciej",
+        "Ulepszenie ciężkiej kawalerii z łukiem jest dostępne w Erze Zamków i kosztuje o 50% mniej"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Liao dao",
+          "description": "Unikalna piechota Kitanów z potężnym atakiem, która rani wrogów, zadając obrażenia z biegiem czasu. Silna przeciwko kawalerii i piechocie. Słaba przeciwko żołnierzom dystansowym w walce na dużej odległości."
+        },
+        {
+          "name": "Zaprzęgnięty trebusz",
+          "description": "Unikalna kawaleria oblężnicza Kitanów mająca duży zasięg. Nie może atakować z bliska. Pociski pozostawiają na ziemi ogień. Silna przeciwko machinom wojennym i zwartym grupom jednostek. Słaba w walce na krótkim dystansie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Zbroja lamelkowa",
+          "description": "piechota i lekka piechota odbijają 25% obrażeń w walce wręcz z powrotem na atakującego"
+        },
+        {
+          "name": "Kawaleria Ordo",
+          "description": "kawaleria regeneruje PW w walce"
+        }
+      ],
+      "teamBonus": "Piechota zyskuje +2 pkt. ataku przeciwko żołnierzom walczącym z dystansu"
+    },
+    {
+      "code": "KHM",
+      "name": "Khmerowie",
+      "nameEn": "Khmer",
+      "focus": "Cywilizacja machin oblężniczych i słoni",
+      "civilizationBonuses": [
+        "Odblokowywanie innych budynków i wkraczanie w kolejne ery nie wymaga stawiania żadnych budynków.",
+        "Rolnicy nie potrzebują młynów / centrów miast, aby składować żywność",
+        "Mieszkańcy mogą wchodzić do domów",
+        "Słonie bojowe poruszają się o 10% szybciej"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Słoń z balistą",
+          "description": "Unikalna kawaleria oblężnicza Khmerów o dystansowym ataku przelotowym. Może niszczyć drzewa. Silna przeciwko piechocie i żołnierzom dystansowym. Słaba przeciwko kawalerii i machinom wojennym."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Miecze na kły słonia",
+          "description": "słonie bojowe zyskują +3 pkt. ataku"
+        },
+        {
+          "name": "Kusza dwustrzałowa",
+          "description": "słonie z balistą i skorpiony wypuszczają dodatkowy pocisk"
+        }
+      ],
+      "teamBonus": "Skorpiony +1 pkt. zasięgu"
+    },
+    {
+      "code": "KOR",
+      "name": "Koreańczycy",
+      "nameEn": "Koreans",
+      "focus": "Cywilizacja obronna i morska",
+      "civilizationBonuses": [
+        "Kamieniarze pracują o 20% szybciej",
+        "Żołnierze dystansowi i piechota kosztują o 50% mniej drewna",
+        "Ulepszenia pancerza łuczników i wież są darmowe (wieża z bombardą wymaga Chemii)",
+        "Okręty wojenne kosztują o 20% mniej drewna"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Furgon bitewny",
+          "description": "Unikalna koreańska jazda z łukiem. Silna, ale wytrzymała. Silna przeciwko piechocie i łucznikom. Słaba przeciwko jednostkom pochodnym od włóczników, oszczepnikom i jeźdźcom na wielbłądach."
+        },
+        {
+          "name": "Okręt-żółw",
+          "description": "Unikalny koreański oblężniczy okręt wojenny z wysokimi współczynnikami pancerza i ataku. Silny przeciwko większości okrętów i budynków. Słaby przeciwko galerom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Eupseong",
+          "description": "budynki pochodne od wież obserwacyjnych zyskują 2 pkt. zasięgu"
+        },
+        {
+          "name": "Singijeon",
+          "description": "wozy z rakietami i okręty-żółwie zyskują 1 pkt. zasięgu, wystrzeliwują dodatkowe pociski"
+        }
+      ],
+      "teamBonus": "Mieszkańcy zyskują 3 pkt. pola widzenia"
+    },
+    {
+      "code": "LIT",
+      "name": "Litwini",
+      "nameEn": "Lithuanians",
+      "focus": "Cywilizacja kawalerii i mnichów",
+      "civilizationBonuses": [
+        "Każde centrum miasta zapewnia +100 szt. żywności",
+        "Jednostki pochodne od włóczników i oszczepników są o 10% szybsze",
+        "Każda obsadzona relikwia zapewnia +1 pkt. ataku jednostkom pochodnym od rycerzy i leitisom (maks. +4)"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Leitis",
+          "description": "Unikalna litewska ciężka kawaleria, która ignoruje pancerz. Silna przeciwko kawalerii i piechocie, zwłaszcza z wysokim pancerzem. Słaba przeciwko jednostkom łuczniczym."
+        },
+        {
+          "name": "Huzar ze skrzydłami",
+          "description": "Szybko poruszająca się polska i litewska kawaleria do zwiadu i najazdów. Odporny na nawrócenie. Wyjątkowo silny przeciwko jednostkom z klasztoru. Słaby przeciwko jednostkom pochodnym od włóczników i jeźdźcom na wielbłądach."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Grodziska",
+          "description": "centra miast +3 pkt. zasięgu"
+        },
+        {
+          "name": "Wysokie tarcze",
+          "description": "jednostki pochodne od włóczników i oszczepnicy +2 pkt. pancerza dystansowego"
+        }
+      ],
+      "teamBonus": "Klasztory pracują o 20% szybciej"
+    },
+    {
+      "code": "MAG",
+      "name": "Węgrzy",
+      "nameEn": "Magyars",
+      "focus": "Cywilizacja kawalerii",
+      "civilizationBonuses": [
+        "Mieszkańcy zabijają wilki jednym ciosem",
+        "Jednostki pochodne od kawalerii zwiadowczej są tańsze o 15%",
+        "Darmowe ulepszenia do ataku w zwarciu"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Węgierski huzar",
+          "description": "Unikalny węgierski kawalerzysta. Silny przeciwko machinom wojennym. Słaby przeciwko jednostkom pochodnym od włóczników i jeźdźcom na wielbłądach."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Czarna Armia",
+          "description": "koszt w złocie węgierskich huzarów jest zastąpiony dodatkowym kosztem w żywności"
+        },
+        {
+          "name": "Łuk refleksyjny",
+          "description": "jeźdźcy z łukami zyskują 1 pkt. ataku i 1 pkt. zasięgu"
+        }
+      ],
+      "teamBonus": "Jeźdźcy z łukiem są szkoleni o 25% szybciej"
+    },
+    {
+      "code": "MALY",
+      "name": "Malajowie",
+      "nameEn": "Malay",
+      "focus": "Cywilizacja morska",
+      "civilizationBonuses": [
+        "Przejście do następnej ery jest o 66% szybsze",
+        "Ulepszenia pancerza piechoty są darmowe",
+        "Słonie bojowe kosztują o 25/35% mniej w Erze Zamków/Imperiów",
+        "Pułapki na ryby kosztują o 33% mniej i zapewniają o 200% więcej żywności"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Wojownik z karambitem",
+          "description": "Unikalna piechota malajska, która zajmuje tylko pół punktu populacji. Silna w dużej grupie. Słaba przeciwko kawalerii i żołnierzom dystansowym."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Talassokracja",
+          "description": "porty są ulepszane do przystani"
+        },
+        {
+          "name": "Wymuszony zaciąg",
+          "description": "koszt w złocie jednostek pochodnych od straży obywatelskiej jest zastępowany dodatkowym kosztem w żywności"
+        }
+      ],
+      "teamBonus": "Porty +6 pkt. pola widzenia"
+    },
+    {
+      "code": "MAL",
+      "name": "Malijczycy",
+      "nameEn": "Malians",
+      "focus": "Cywilizacja piechoty",
+      "civilizationBonuses": [
+        "Budynki kosztują o 15% mniej drewna",
+        "Mieszkańcy zostawiają o 10% więcej złota",
+        "Jednostki szkolone w koszarach zyskują +1/+2/+3 pkt. pancerza dystansowego w Erze Feudalnej/",
+        "Zamków/Imperiów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Gbeto",
+          "description": "Unikalna piechota malijska z dystansowym atakiem wręcz. Szybka. Silna przeciwko piechocie i machinom wojennym. Słaba przeciwko żołnierzom dystansowym."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tigui",
+          "description": "centra miast miotają strzałami nawet wtedy, gdy nie są obsadzone"
+        },
+        {
+          "name": "Farimba",
+          "description": "kawaleria +5 pkt. ataku"
+        }
+      ],
+      "teamBonus": "Uniwersytety pracują o 80% szybciej"
+    },
+    {
+      "code": "MAPU",
+      "name": "Mapucze",
+      "nameEn": "Mapuche",
+      "focus": "Cywilizacja kawalerii i jednostek kontrujących",
+      "civilizationBonuses": [
+        "Zbieracze przynoszą o 25% więcej żywności",
+        "W osadach można szkolić jednostki pochodne od włóczników i oszczepników",
+        "Piechota, procarze i oszczepnicy otrzymują w erze Feudalnej/Zamków/Imperiów odpowiednio +5/10/15 PW",
+        "Jednostki konne generują +3 szt. złota po pokonaniu jednostek wojskowych",
+        "Na mapie ujawnione zostają wrogie zamki"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Kona",
+          "description": "Unikalna kawaleria Mapuczów, która zadaje większe obrażenia rannym jednostkom. Skuteczna przeciwko piechocie i pieszym łucznikom. Słaba przeciwko jednostkom pochodnym od włóczników, jeźdźcom na wielbłądach i mnichom."
+        },
+        {
+          "name": "Jeździec z bolasem",
+          "description": "Unikalny konny łucznik Mapuczów z atakiem szarżą, który spowalnia wrogie jednostki. Skuteczny przeciwko jeździe. Słaby przeciwko pieszym łucznikom, lekkiej piechocie i podczas walki na niewielkim dystansie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Malon",
+          "description": "jeźdźcy z bolasem, procarze i oszczepnicy zadają obrażenia przelotowe"
+        },
+        {
+          "name": "Butalmapu",
+          "description": "w ramach drużyny unikalne jednostki z zamku i jeźdźcy z bolasem są o 15% tańsze"
+        }
+      ],
+      "teamBonus": "Jednostki pochodne od włóczników i oszczepnicy otrzymują +2 pkt. do pola widzenia"
+    },
+    {
+      "code": "MAY",
+      "name": "Majowie",
+      "nameEn": "Maya",
+      "focus": "Cywilizacja łuczników",
+      "civilizationBonuses": [
+        "Rozpoczynasz grę z dodatkowym mieszkańcem, ale masz o 50 szt. żywności mniej",
+        "Surowce wystarczają na 15% dłużej",
+        "Łucznicy piesi są tańsi o 10% w Erze Feudalnej, o 20% w Erze Zamków i o 30% w Erze Imperiów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Łucznik w pióropuszu",
+          "description": "Unikalny pieszy łucznik Majów o dużej szybkości ruchu. Silny przeciwko łucznikom i piechocie. Słaby przeciwko kawalerii."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Oszczepnicy z hul'che",
+          "description": "lekka piechota rzuca dodatkowym oszczepem"
+        },
+        {
+          "name": "Holcani",
+          "description": "wojownicy orłów mają +40 PW"
+        }
+      ],
+      "teamBonus": "Mury są tańsze o 50%"
+    },
+    {
+      "code": "MON",
+      "name": "Mongołowie",
+      "nameEn": "Mongols",
+      "focus": "Cywilizacja kawalerii z łukami",
+      "civilizationBonuses": [
+        "Łowcy pracują o 40% szybciej",
+        "Kawaleria z łukami atakuje o 25% szybciej",
+        "Jednostki pochodne od kawalerii zwiadowczej oraz ułani mają o 20% PW więcej w Erze Zamków i o 30% więcej w Erze Imperiów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Mangudai",
+          "description": "Unikalny mongolski jeździec z łukiem i szybkim atakiem. Silny przeciwko machinom wojennym i piechocie. Słaby przeciwko oszczepnikom, jednostkom pochodnym od włóczników i jeźdźcom na wielbłądach."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Koczownicy",
+          "description": "utracone domy nie obniżają limitu populacji"
+        },
+        {
+          "name": "Musztra",
+          "description": "jednostki z zakładów artyleryjskich poruszają się o 50% szybciej"
+        }
+      ],
+      "teamBonus": "+2 pkt. do pola widzenia jednostek pochodnych od kawalerii zwiadowczej"
+    },
+    {
+      "code": "MUI",
+      "name": "Muisca",
+      "nameEn": "Muisca",
+      "focus": "Cywilizacja łuczników i mnichów",
+      "civilizationBonuses": [
+        "Przejście do kolejnej ery kosztuje o 50% mniej złota",
+        "Osady kosztują o 33% mniej i leczą pobliskie jednostki",
+        "Wojownicy Champi i jednostki ze strzelnicy otrzymują w erze Feudalnej/Zamków/Imperiów odpowiednio +1/2/3 pkt. pancerza do walki w zwarciu",
+        "Mnisi odzyskują wiarę o 50% szybciej",
+        "Wózek i Gildie są darmowe"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Wojownik Guecha",
+          "description": "Unikalna lekka piechota Muisca, która regeneruje PW, gdy w pobliżu polegnie wojownik Guecha. Skuteczna przeciwko żołnierzom dystansowym. Słaba podczas walki na krótkim dystansie."
+        },
+        {
+          "name": "Strażnik świątynny",
+          "description": "Unikalna piechota szturmowa Muisca, która im dłużej pozostaje w walce, tym szybciej atakuje. Skuteczna przeciwko budynkom i jeździe. Słaba przeciwko jednostkom pochodnym od straży obywatelskiej."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Ziołolecznictwo",
+          "description": "jednostki pochodne od łuczników i wojownicy Champi poruszają się o 15% szybciej"
+        },
+        {
+          "name": "Huaracas",
+          "description": "procarze otrzymują 1 pkt. zasięgu i szkolą się o 50% szybciej"
+        }
+      ],
+      "teamBonus": "Naturalne źródła złota zapewniają o 15% więcej zasobów"
+    },
+    {
+      "code": "PER",
+      "name": "Persowie",
+      "nameEn": "Persians",
+      "focus": "Cywilizacja kawalerii",
+      "civilizationBonuses": [
+        "Zaczynasz z +50 szt. drewna i +50 szt. żywności",
+        "Centra miast i porty +100% PW i pracują o 5/10/15/20% szybciej w Erze Mroku/Feudalnej/Zamków/Imperiów",
+        "Partyjski strzał jest dostępny w Erze Zamków",
+        "Można zbudować karawanseraj w Erze Imperiów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Słoń bojowy",
+          "description": "Unikalna perska kawaleria zadająca obrażenia od stratowania. Silna przeciwko budynkom i jednostkom podczas walki z bliska. Słaba przeciwko jednostkom pochodnym od włóczników i mnichom."
+        },
+        {
+          "name": "Aswaran",
+          "description": "Unikalna wszechstronna ciężka kawaleria perska. Wyjątkowo silna przeciwko żołnierzom walczącym z dystansu. Słaba przeciwko jednostkom pochodnym od włóczników, jeźdźcom na wielbłądach i mnichom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Kamandaran",
+          "description": "koszt w złocie jednostek pochodnych od łuczników zostaje zastąpiony dodatkowym kosztem w drewnie"
+        },
+        {
+          "name": "Cytadele",
+          "description": "zamki +4 pkt. do ataku, +3 pkt. przeciwko taranom, +3 pkt. przeciwko piechocie; otrzymują –25% dodatkowych obrażeń"
+        }
+      ],
+      "teamBonus": "Jednostki pochodne od rycerzy +2 pkt. do ataku przeciwko żołnierzom dystansowym"
+    },
+    {
+      "code": "POL",
+      "name": "Polacy",
+      "nameEn": "Poles",
+      "focus": "Cywilizacja kawalerii",
+      "civilizationBonuses": [
+        "Folwark zastępuje młyn",
+        "Mieszkańcy odzyskują 10/15/20 PW w Erze Feudalnej/Zamków/Imperiów",
+        "Kamieniarze oprócz kamienia generują złoto",
+        "Ulepszenia rodowodów i jednostek pochodnych od kawalerii zwiadowczej kosztują -50% żywności"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Wojownik z obuchem",
+          "description": "Unikalna polska piechota, która rozrywa pancerze jednostek, z którymi walczy. Silna przeciwko budynkom, kawalerii i piechocie. Słaba przeciwko łucznikom i strzelcom."
+        },
+        {
+          "name": "Huzar ze skrzydłami",
+          "description": "Szybko poruszająca się polska i litewska kawaleria do zwiadu i najazdów. Odporny na nawrócenie. Wyjątkowo silny przeciwko jednostkom z klasztoru. Słaby przeciwko jednostkom pochodnym od włóczników i jeźdźcom na wielbłądach."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Przywileje szlachty",
+          "description": "jednostki pochodne od rycerzy kosztują o 60% mniej złota"
+        },
+        {
+          "name": "Spuścizna Lechitów",
+          "description": "jednostki pochodne od kawalerii zwiadowczej zadają obrażenia od stratowania"
+        }
+      ],
+      "teamBonus": "Jednostki pochodne od kawalerii zwiadowczej mają +1 pkt. ataku przeciwko żołnierzom dystansowym"
+    },
+    {
+      "code": "POR",
+      "name": "Portugalczycy",
+      "nameEn": "Portuguese",
+      "focus": "Cywilizacja morska i prochu",
+      "civilizationBonuses": [
+        "Zbieracze oprócz żywności generują też drewno",
+        "Wszystkie jednostki mają obniżony koszt w złocie o 20%",
+        "Możliwe zbudowanie faktorii w Erze Imperiów",
+        "Statki zyskują +10% PW w Erze Feudalnej, +15% PW w Erze Zamków i +20% PW w Erze Imperiów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Organki",
+          "description": "Unikalna portugalska machina wojenna używająca prochu. Wystrzeliwuje salwę pocisków. Silna przeciwko dużym grupom jednostek. Słaba przeciwko kawalerii i jednostkom pochodnym od mangoneli."
+        },
+        {
+          "name": "Karawela",
+          "description": "Unikalny portugalski okręt wojenny o dystansowym ataku przelotowym. Silny przeciwko dużym grupom statków. Słaby przeciwko branderom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Rejs dookoła świata",
+          "description": "oznacza całą mapę jako zbadaną; budowa statków jest o 33% szybsza"
+        },
+        {
+          "name": "Arkebuz",
+          "description": "jednostki korzystające z prochu strzelają celniej do ruchomych celów"
+        }
+      ],
+      "teamBonus": "Badanie technologii przebiega o +25% szybciej"
+    },
+    {
+      "code": "ROM",
+      "name": "Rzymianie",
+      "nameEn": "Romans",
+      "focus": "Cywilizacja piechoty i kawalerii",
+      "civilizationBonuses": [
+        "Mieszkańcy zbierają, budują i naprawiają o 5% szybciej",
+        "Efekty ulepszenia pancerza piechoty są podwojone",
+        "Skorpiony kosztują o 50% mniej złota",
+        "Statki pochodne od galer i dromony otrzymują +1 pkt. pancerza do walki w zwarciu / +1 pkt. pancerza dystansowego"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Centurion",
+          "description": "Rzymska unikalna ciężka kawaleria, która zwiększa szybkość ruchu i ataku pobliskich jednostek pochodnych od straży obywatelskiej. Silna przeciwko piechocie i pieszym łucznikom. Słaba przeciwko jednostkom pochodnym od włóczników i jeźdźcom na wielbłądach."
+        },
+        {
+          "name": "Legionista",
+          "description": "Rzymska unikalna uniwersalna jednostka piechoty. Wyjątkowo silna przeciwko piechocie. Silna przeciwko budynkom i jednostkom pochodnym od kawalerii zwiadowczej i oszczepników. Słaba przeciw żołnierzom walczącym na dalekim dystansie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Balisty",
+          "description": "skorpiony atakują o 33% szybciej, statki pochodne od galer otrzymują +2 pkt. ataku"
+        },
+        {
+          "name": "Comitatenses",
+          "description": "jednostki pochodne od straży obywatelskiej i od rycerzy oraz centurioni szkolą się o 50% szybciej i otrzymują atak szarżą"
+        }
+      ],
+      "teamBonus": "Zmniejszony minimalny zasięg skorpionów"
+    },
+    {
+      "code": "SAR",
+      "name": "Saraceni",
+      "nameEn": "Saracens",
+      "focus": "Cywilizacja wielbłądów i morska",
+      "civilizationBonuses": [
+        "Opłata handlowa wynosi tylko 5%; rynki kosztują o 100 szt. drewna mniej",
+        "Jednostki na wielbłądach mają +25% PW",
+        "Jednostki pochodne od galer atakują o +25% szybciej",
+        "Statki transportowe mają +100% PW, +20 pkt. do udźwigu"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Mameluk",
+          "description": "Unikalna saraceńska kawaleria z dystansowym atakiem wręcz. Silna przeciwko jeździe. Słaba przeciwko jednostkom łuczniczym i jednostkom pochodnym od włóczników."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Bimaristan",
+          "description": "mnisi pasywnie leczą wiele pobliskich jednostek"
+        },
+        {
+          "name": "Przeciwwagi",
+          "description": "trebusze i jednostki pochodne od mangoneli mają +15% do ataku"
+        }
+      ],
+      "teamBonus": "Piesi łucznicy i oszczepnicy zyskują +2 pkt. do ataku przeciwko budynkom"
+    },
+    {
+      "code": "SAX",
+      "name": "Sasi",
+      "nameEn": "Saxons",
+      "focus": "Cywilizacja piechoty i obrony",
+      "civilizationBonuses": [
+        "Młyny, składy drewna i kopalnie dają +50 szt. żywności i 10 szt. kamienia po zbudowaniu",
+        "Piechurzy kosztują o 5% mniej za każde kontrolowane centrum miasta lub kontrolowany zamek (maks. -20%)",
+        "Wieże i zamki wystrzeliwują bazowo o 100% większą liczbę strzał od Ery Zamków",
+        "Langskipy i galeony z katapultami mają +20% PW"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Saski huskarl",
+          "description": "Unikalna piechota Sasów, która rzuca oszczepem, zanim przejdzie do walki w zwarciu. Silna przeciwko żołnierzom dystansowym. Słaba przeciwko kawalerii."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Rekrutacja duchownych",
+          "description": "mnisi zyskują +1 pkt. do zasięgu nawracania i są szkoleni o 33% szybciej"
+        },
+        {
+          "name": "Mur tarcz",
+          "description": "piechota uzyskuje dodatkowy pancerz w dużych grupach"
+        }
+      ],
+      "teamBonus": "Naprawiacze pracują o 25% szybciej"
+    },
+    {
+      "code": "SHU",
+      "name": "Shu",
+      "nameEn": "Shu",
+      "focus": "Cywilizacja łuczników i machin wojennych",
+      "civilizationBonuses": [
+        "Drwale, oprócz drewna, wytwarzają żywność",
+        "Technologie jednostek łuczniczych w strzelnicy i kuźni są o 25% tańsze",
+        "Machiny wojenne i okręty wojenne poruszają się o 10/15% szybciej w Erze Zamków/Imperiów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Straż białych piór",
+          "description": "Unikalna piechota Shu, która tymczasowo spowalnia atakowaną jednostkę. Silna przeciwko kawalerii. Słaba przeciwko żołnierzom dystansowym."
+        },
+        {
+          "name": "Rydwan bojowy",
+          "description": "Unikalna kawaleria oblężnicza Shu, atakująca szybko. Nie może atakować z bliskiej odległości. Ma długi czas przeładowania. Może przejść w tryb ognia zaporowego, który obejmuje większy obszar, ale jest mniej dokładny. Silna przeciwko żołnierzom dystansowym. Słaba przeciwko kawalerii i machinom wojennym."
+        },
+        {
+          "name": "Liu Bei",
+          "description": "Unikalny bohater-piechur królestwa Shu, który leczy wszystkie pobliskie jednostki. Niezwykle potężna jednostka. Można posiadać tylko jednego. Jest odporny na nawracanie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Szyk zwiniętego węża",
+          "description": "jednostki pochodne od włóczników i straż białych piór zyskują dodatkowe PW, gdy znajdują się blisko siebie"
+        },
+        {
+          "name": "Magazynek na bełty",
+          "description": "jednostki pochodne od łuczników, rydwany wojenne i Lou Chuany wystrzeliwują dodatkowe pociski"
+        }
+      ],
+      "teamBonus": "Piesi łucznicy +2 pkt. pola widzenia"
+    },
+    {
+      "code": "SIC",
+      "name": "Sycylijczycy",
+      "nameEn": "Sicilians",
+      "focus": "Cywilizacja piechoty i kawalerii",
+      "civilizationBonuses": [
+        "Rozpoczynasz z +100 kamienia",
+        "Ulepszenia farm zapewniają +125% dodatkowej żywności",
+        "Żołnierze otrzymują −40% dodatkowych obrażeń",
+        "W Erze Mroku można budować donżony, które zastępują budynki pochodne od wieży obserwacyjnej",
+        "Fortyfikacje budowane są o 50% szybciej; centra miast budowane są o 100% szybciej"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Serjeant",
+          "description": "Unikalna piechota sycylijska, która potrafi budować donżony. Silna przeciwko piechocie i jeźdźcom na wielbłądach. Słaba przeciwko jeźdźcom z łukami i strzelcom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Pierwsza krucjata",
+          "description": "każde centrum miasta – maksymalnie 5 – tworzy po 5 serjeantów; jednostki są bardziej odporne na nawrócenie"
+        },
+        {
+          "name": "Kolczuga",
+          "description": "jednostki pochodne od rycerzy +1 pkt pancerza do walki wręcz / +2 pkt. pancerza dystansowego"
+        }
+      ],
+      "teamBonus": "Statki transportowe mają o 5 pkt. większe pole widzenia i są o 50% tańsze"
+    },
+    {
+      "code": "SLV",
+      "name": "Słowianie",
+      "nameEn": "Slavs",
+      "focus": "Cywilizacja piechoty i machin oblężniczych",
+      "civilizationBonuses": [
+        "Rolnicy pracują o +15% szybciej",
+        "Podpalenie i Przeszywanice są darmowe",
+        "Jednostki z zakładów artyleryjskich są o 15% tańsze",
+        "Mnisi poruszają się o +20% szybciej"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Bojar",
+          "description": "Unikalna słowiańska kawaleria z bardzo dużym pancerzem do walki wręcz. Silna przeciwko jednostkom podczas walki z bliska. Słaba przeciwko jednostkom pochodnym od włóczników i mnichom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Dziedziniec",
+          "description": "zastępuje 40% kosztu kamienia zamków i budynków pochodnych od wież obserwacyjnych drewnem"
+        },
+        {
+          "name": "Drużyna książęca",
+          "description": "piechota zadaje obrażenia od stratowania"
+        }
+      ],
+      "teamBonus": "Budynki wojskowe (z wyjątkiem zamków) zwiększają miejsce w populacji o +5"
+    },
+    {
+      "code": "SPN",
+      "name": "Hiszpanie",
+      "nameEn": "Spanish",
+      "focus": "Cywilizacja prochu strzelniczego i mnichów",
+      "civilizationBonuses": [
+        "Budowniczowie pracują o 30% szybciej",
+        "Otrzymujesz +20 szt. złota za każdą zbadaną technologię",
+        "Ulepszenia w kuźni są darmowe",
+        "Jednostki używające prochu atakują o 18% szybciej",
+        "Galeony z armatą celniej strzelają do ruchomych celów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Konkwistador",
+          "description": "Unikalny hiszpański strzelec konny z potężnym atakiem i o dużej mobilności. Silny w walce z jednostkami na odległość. Słaby przeciwko jednostkom pochodnym od włóczników, oszczepnikom i mnichom."
+        },
+        {
+          "name": "Misjonarz",
+          "description": "Unikalny hiszpański mnich na koniu. Nawraca wrogie i leczy sojusznicze jednostki. Jest szybszy od mnicha, ale ma mniejsze pole widzenia i zasięg. Silny przeciwko powolnym, walczącym w zwarciu jednostkom. Słaby przeciwko jednostkom pochodnym od kawalerii zwiadowczej, wojownikom orłów i jednostkom dystansowym. Może podnosić relikwie i zanosić je do klasztorów."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Inkwizycja",
+          "description": "mnisi i misjonarze szybciej nawracają jednostki i budynki; misjonarze zyskują +1 pkt. zasięgu"
+        },
+        {
+          "name": "Supremacja",
+          "description": "mieszkańcy mają +40 PW, +6 pkt. ataku, +2 pkt. pancerza do walki wręcz / +2 pkt. pancerza dystansowego"
+        }
+      ],
+      "teamBonus": "Jednostki handlowe generują o 25% złota więcej"
+    },
+    {
+      "code": "TAT",
+      "name": "Tatarzy",
+      "nameEn": "Tatars",
+      "focus": "Cywilizacja kawalerii z łukami",
+      "civilizationBonuses": [
+        "Zwierzęta hodowlane wystarczają na 50% dłużej",
+        "Jednostki zadają +25% obrażeń, gdy znajdują się wyżej od wrogów",
+        "Od Ery Zamków nowe centra miast produkują 2 owce",
+        "Technologie Zekier i Partyjski strzał są bezpłatne"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Keszik",
+          "description": "Unikalna ciężka kawaleria Tatarów, która generuje złoto podczas walki z innymi jednostkami. Silna przeciwko łucznikom. Słaba przeciwko jednostkom pochodnym od włóczników, jeźdźcom na wielbłądach i mnichom."
+        },
+        {
+          "name": "Płonący wielbłąd",
+          "description": "Unikalna tatarska kawaleria oblężnicza. Silna przeciwko jednostkom jazdy, zwłaszcza słoniom. Słaba przeciwko pieszym łucznikom i piechocie. Ulega samozniszczeniu po użyciu."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Jedwabny pancerz",
+          "description": "jednostki pochodne od kawalerii zwiadowczej, ułani i kawaleria z łukiem otrzymują +1 pkt pancerza do walki wręcz / +1 pkt pancerza dystansowego"
+        },
+        {
+          "name": "Timurydzka budowa machin wojennych",
+          "description": "trebusze +2 pkt. zasięgu"
+        }
+      ],
+      "teamBonus": "Łucznicy na koniach +2 pkt. pola widzenia"
+    },
+    {
+      "code": "TEU",
+      "name": "Teutoni",
+      "nameEn": "Teutons",
+      "focus": "Cywilizacja piechoty i defensywna",
+      "civilizationBonuses": [
+        "Farmy są o 40% tańsze",
+        "Centra miast mają +10 pkt. do pojemności garnizonu; wieże +5 pkt. do pojemności garnizonu",
+        "Piechota i jednostki konne +1/+2 pkt. pancerza do walki wręcz w Erze Zamków/Imperiów",
+        "Mnisi +100% do zasięgu leczenia",
+        "Mordownie i Ziołolecznictwo są darmowe"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Teutoński rycerz",
+          "description": "Teutońska unikalna piechota z wyjątkowym pancerzem do walki wręcz. Powolna, ale odporna na nawrócenie. Silna przeciwko jednostkom walczącym w zwarciu. Słaba przeciw łucznikom i strzelcom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Opancerzenie",
+          "description": "machiny wojenne mają +4 pkt. pancerza do walki wręcz"
+        },
+        {
+          "name": "Blanki",
+          "description": "zamki mają +3 pkt. zasięgu; obsadzona piechota miota strzałami"
+        }
+      ],
+      "teamBonus": "Jednostki są odporniejsze na nawrócenie"
+    },
+    {
+      "code": "TUP",
+      "name": "Tupi",
+      "nameEn": "Tupi",
+      "focus": "Cywilizacja łuczników i piechoty",
+      "civilizationBonuses": [
+        "Na początku rozgrywki masz dodatkowe 25 szt. każdego z zasobów",
+        "Mieszkańcy mogą stacjonować w osadach",
+        "Poległe jednostki zwracają 15% swojego kosztu",
+        "Ulepszenia w strzelnicy i koszar kosztują o 50% mniej żywności"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Leśny łucznik",
+          "description": "Unikalny pieszy łucznik Tupi, który jest szkolony w parach i zajmuje tylko połowę miejsca w populacji. Łucznicy Tupi są skuteczni w licznych grupach i słabo radzą sobie w walce na niewielkim dystansie."
+        },
+        {
+          "name": "Wojownik Ibirapema",
+          "description": "Unikalna piechota Tupi z silnym frontalnym atakiem obszarowym. Skuteczna przeciwko piechocie. Słaba przeciwko pieszym łucznikom w walce na dalekim dystansie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Cacique",
+          "description": "wojownicy Champi i procarze atakują o 25% szybciej"
+        },
+        {
+          "name": "Kurara",
+          "description": "piesi łucznicy i fortyfikacje zadają obrażenia od trucizny"
+        }
+      ],
+      "teamBonus": "Wieże i zamki zapewniają 10 miejsc w populacji"
+    },
+    {
+      "code": "TUR",
+      "name": "Turcy",
+      "nameEn": "Turks",
+      "focus": "Cywilizacja prochu",
+      "civilizationBonuses": [
+        "Górnicy wydobywający złoto pracują o +25% szybciej",
+        "Jednostki pochodne od kawalerii zwiadowczej mają +1 pkt. pancerza dystansowego i darmowe ulepszenia",
+        "Chemia jest darmowa; technologie prochowe kosztują o 50% mniej",
+        "Jednostki korzystające z prochu mają +25% PW"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Janczar",
+          "description": "Unikalny turecki pieszy strzelec zadający dużo obrażeń. Silny przeciwko piechocie. Słaby przeciwko jednostkom łuczniczym i oszczepnikom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Spahisi",
+          "description": "kawaleria z łukami +20 PW"
+        },
+        {
+          "name": "Artyleria",
+          "description": "wieże z bombardą, bombardy, galeony z armatą +2 pkt. zasięgu"
+        }
+      ],
+      "teamBonus": "Jednostki korzystające z prochu szkolą się o +25% szybciej"
+    },
+    {
+      "code": "VAR",
+      "name": "Waregowie",
+      "nameEn": "Varangians",
+      "focus": "Cywilizacja kawalerii i marynarki",
+      "civilizationBonuses": [
+        "Pozyskiwanie żywności z owiec, ryb i zwierzyny łownej generuje również złoto",
+        "Efekt technologii Rodowodów oraz Wózka +50%",
+        "Gwardia wareska atakuje o 25% szybciej i generuje o 50% więcej złota",
+        "Langskipy i galeony z katapultami atakują o 15% szybciej"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Jarl",
+          "description": "Unikalna jednostka kawalerii Waregów z dystansowym atakiem wręcz. Wyjątkowo silna przeciwko piechocie. Słaba przeciwko jeźdźcom na wielbłądach i mnichom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Dziedzictwo Vendel",
+          "description": "jednostki pochodne od rycerzy zadają obrażenia od stratowania"
+        },
+        {
+          "name": "Gothikon",
+          "description": "gwardia wareska co jakiś czas rzuca toporami"
+        }
+      ],
+      "teamBonus": "Jednostki pochodne od rycerzy mają +1 pkt. ataku przeciwko piechocie"
+    },
+    {
+      "code": "VIE",
+      "name": "Wietnamczycy",
+      "nameEn": "Vietnamese",
+      "focus": "Cywilizacja łuczników",
+      "civilizationBonuses": [
+        "Wrogie centra miast są odkrywane na początku gry",
+        "Ulepszenia gospodarcze nie mają kosztu w drewnie i są badane o 100% szybciej",
+        "Łucznicy piechotni i oszczepnicy mają +20% PW",
+        "Pobór powszechny jest darmowy"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Łucznik rattanowy",
+          "description": "Unikalny wietnamski łucznik pieszy z wyjątkowym pancerzem dystansowym. Silny przeciwko łucznikom i piechocie. Słaby przeciwko kawalerii, oszczepnikom i machinom wojennym."
+        },
+        {
+          "name": "Imperialny oszczepnik",
+          "description": "Jednostka skuteczna przeciwko łucznikom, która nie może atakować z bliska. Silna przeciwko żołnierzom dystansowym i jednostkom pochodnym od włóczników. Słaba przeciwko jednostkom na krótkim dystansie. Dostępna dla Wietnamczyków oraz ich sojuszników."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Chatra",
+          "description": "słonie bojowe mają +100 PW"
+        },
+        {
+          "name": "Papierowe pieniądze",
+          "description": "drwale powoli generują nie tylko drewno, ale i złoto"
+        }
+      ],
+      "teamBonus": "W Erze Imperiów dostępne jest ulepszenie do imperialnego oszczepnika"
+    },
+    {
+      "code": "VIK",
+      "name": "Wikingowie",
+      "nameEn": "Vikings",
+      "focus": "Cywilizacja piechoty i morska",
+      "civilizationBonuses": [
+        "Taczka i Wóz ręczny są darmowe",
+        "Piechota ma +20% PW od Ery Feudalnej",
+        "Okręty są o 10/15/20% tańsze w Erze Feudalnej/Zamków/Imperiów"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Berserker",
+          "description": "Unikalna piechota wikingów, która odzyskuje PW. Silna przeciwko piechocie i machinom wojennym. Słaba przeciwko łucznikom i strzelcom."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Wodzowie",
+          "description": "piechota ma +5 pkt. do ataku przeciwko kawalerii, +4 pkt. przeciwko jednostkom na wielbłądach"
+        },
+        {
+          "name": "Bogsveigar",
+          "description": "jednostki pochodne od łuczników i langskipy mają +1 pkt. do ataku"
+        }
+      ],
+      "teamBonus": "Porty są o 15% tańsze"
+    },
+    {
+      "code": "WEI",
+      "name": "Wei",
+      "nameEn": "Wei",
+      "focus": "Cywilizacja kawalerii",
+      "civilizationBonuses": [
+        "Otrzymujesz jednego darmowego mieszkańca za każdą zbadaną technologię gospodarczą",
+        "Kawaleria Hei Guang i najeźdźca Xianbei mają +20/30% PW w erze Zamków/Imperiów",
+        "Trebusze ciągnione i Lou Chuany są o 25% tańsze"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Tygrysia kawaleria",
+          "description": "Unikalna kawaleria Wei, która zyskuje PW i zwiększa atak po pokonaniu wojsk wroga. Niezwykle silna przeciwko żołnierzom walczącym na dystans. Słaba przeciwko jednostkom pochodnym od włóczników."
+        },
+        {
+          "name": "Najeźdźca Xianbei",
+          "description": "Unikalny konny łucznik Wei z ładowanym atakiem dystansowym. Silny przeciwko piechocie. Słaby przeciwko oszczepnikom i jeźdźcom na wielbłądach."
+        },
+        {
+          "name": "Cao Cao",
+          "description": "Unikalny bohater-kawalerzysta królestwa Wei, który zwiększa szybkość ataku pobliskich jednostek. Niezwykle potężna jednostka. Można posiadać tylko jednego. Jest odporny na nawracanie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Tuntian",
+          "description": "żołnierze pasywnie produkują żywność"
+        },
+        {
+          "name": "Pancerz Ming Guang",
+          "description": "jednostki konne mają +4 pkt. pancerza do walki w zwarciu"
+        }
+      ],
+      "teamBonus": "Kawaleria ma +2 pkt. do ataku przeciwko machinom wojennym"
+    },
+    {
+      "code": "WU",
+      "name": "Wu",
+      "nameEn": "Wu",
+      "focus": "Cywilizacja piechoty i morska",
+      "civilizationBonuses": [
+        "Budynki produkcji wojskowej i porty zapewniają +55 szt. żywności po zbudowaniu",
+        "Piechota regeneruje 10/15/30 PW na minutę w erze Feudalnej/Zamków/Imperiów",
+        "Szermierze Jian i kawaleria Hei Guang mają +2 pkt. ataku w Erze Imperiów",
+        "Karenaż i Suchy dok są bezpłatne"
+      ],
+      "uniqueUnits": [
+        {
+          "name": "Łucznik z płonącymi strzałami",
+          "description": "Unikalny pieszy łucznik Wu, który strzela kilkoma strzałami do jednostek i wykorzystuje atak dystansowy przeciwko budynkom. Silny przeciwko piechocie, machinom wojennym i budynkom. Słaby przeciwko kawalerii i oszczepnikom."
+        },
+        {
+          "name": "Szermierz Jian",
+          "description": "Unikalna piechota szarżująca Wu, która zyskuje szybkość ruchu i siłę ataku, ale traci pancerz po osiągnięciu progu obrażeń. Wyjątkowo silna przeciwko łucznikom. Słaba przeciwko jednostkom pochodnym od straży obywatelskiej."
+        },
+        {
+          "name": "Sun Jian",
+          "description": "Unikalny bohater-kawalerzysta królestwa Wu, który zwiększa szybkość ruchu pobliskich jednostek. Niezwykle potężna jednostka. Można posiadać tylko jednego. Jest odporny na nawracanie."
+        }
+      ],
+      "uniqueTechnologies": [
+        {
+          "name": "Taktyka Czerwonych Klifów",
+          "description": "wybuchowe statki i łucznicy z płonącymi strzałami zadają obrażenia od ognia statkom i budynkom"
+        },
+        {
+          "name": "Siedzący tygrys",
+          "description": "trebusze ciągnione i trebusz Lou Chuan wystrzeliwują dodatkowe pociski"
+        }
+      ],
+      "teamBonus": "Domy budują się o +100% szybciej"
+    }
+  ]
+}
