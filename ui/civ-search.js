@@ -65,9 +65,12 @@
             mount.append(this.input, this.list);
 
             this.input.addEventListener("input", () => this.search());
-            this.input.addEventListener("focus", () => {
-                this.input.select();
-                this.search();
+            // Focus alone (e.g. when the shortcut shows the overlay) only selects the
+            // text, so typing replaces it; the list opens on typing, ↓ or a click,
+            // and the civ info underneath stays visible until then.
+            this.input.addEventListener("focus", () => this.input.select());
+            this.input.addEventListener("click", () => {
+                if (!this.isOpen) this.search();
             });
             this.input.addEventListener("blur", () => setTimeout(() => this.close(), 120));
             this.input.addEventListener("keydown", (e) => this.key(e));
@@ -152,6 +155,7 @@
 
         focus() {
             this.input.focus();
+            this.input.select();
         }
     }
 

@@ -189,7 +189,12 @@
             if (e.key === "Escape") invoke("hide_overlay");
         });
 
-        if (tauri) tauri.event.listen("overlay-shown", () => pickers.you.focus());
+        if (tauri)
+            tauri.event.listen("overlay-shown", () => {
+                pickers.you.close();
+                pickers.rival.close();
+                pickers.you.focus();
+            });
         pickers.you.focus();
     }
 
