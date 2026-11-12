@@ -18,7 +18,7 @@ MB and starts instantly. Version 1 was an Electron app.
 -   Drag it by the **⋮⋮** handle.
 -   **Tech tree**, under each civ's name, in the game's icons: for each unit line with
     gaps, its best unit and then what it lacks, crossed out (no Arbalester, no Bracer,
-    no Bloodlines…); lines the civ doesn't have at all in one crossed-out row; complete
+    no Bloodlines…), after a ★ row with its unique units; lines the civ doesn't have at all in one crossed-out row; complete
     lines in a row with a ✓. Hover an icon for its name. ⚙ picks which lines count:
     army (default), economy, defense, navy.
 -   **Language** (in ⚙): English or Spanish from the Fandom wikis (the most detail), or

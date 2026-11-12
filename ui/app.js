@@ -198,9 +198,19 @@
     // Lines it doesn't have at all go in one crossed-out row, complete lines in
     // a row of small icons.
     function techTree(code) {
-        const lines = tree?.civs[code];
-        if (!lines) return null;
+        const summary = tree?.civs[code];
+        if (!summary) return null;
+        const lines = summary.lines;
         const wrap = el("div", "tree");
+        // ★ the civ's unique units first: who they are at a glance
+        if (summary.unique.length) {
+            const row = el("div", "tree-row tree-unique");
+            for (const u of summary.unique) {
+                row.append(icon(u.best, "tree-icon best"));
+                for (const m of u.missing) row.append(crossed(m, `${t("lacks")}: ${treeNames[m] || m}`));
+            }
+            wrap.append(row);
+        }
         const none = el("div", "tree-row tree-none");
         const full = el("div", "tree-row tree-full");
         for (const line of tree.lines) {

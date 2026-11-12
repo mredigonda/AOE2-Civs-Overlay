@@ -271,7 +271,8 @@ html {
 }
 
 .tree-full::before,
-.tree-none::before {
+.tree-none::before,
+.tree-unique::before {
     width: 36px;
     margin-right: 4px;
     text-align: center;
@@ -281,6 +282,11 @@ html {
 .tree-full::before {
     content: "✓";
     color: #7ccf6b;
+}
+
+.tree-unique::before {
+    content: "★";
+    color: var(--gold);
 }
 
 .tree-none::before {

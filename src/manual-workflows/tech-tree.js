@@ -154,7 +154,7 @@ function nodeIndex(tree) {
     return nodes;
 }
 
-// → { lines: { [lineId]: { best?, missing: [names] } }, nodes: Map }
+// → { lines: { [lineId]: { best?, missing: [names] } }, unique: [{ best, missing }], nodes: Map }
 function summarize(tree) {
     const nodes = nodeIndex(tree);
     const has = (name) => nodes.get(name)?.available === true;
@@ -177,7 +177,24 @@ function summarize(tree) {
         const missing = [...units.filter((u) => !covered(u)), ...line.techs.filter((t) => !has(t))];
         lines[line.id] = best ? { best, missing } : { missing };
     }
-    return { lines, nodes };
+
+    // The civ's unique units (Throwing Axeman, Warrior Priest…), each with its
+    // Elite upgrade; unique units that stand in for a line's upgrade (Winged
+    // Hussar, Legionary) are already shown in that line.
+    const inLines = allNames();
+    const unique = [];
+    for (const n of tree.units_techs) {
+        if (n.node_type !== "UniqueUnit" || n.name.startsWith("Elite ") || inLines.has(n.name)) continue;
+        if (unique.some((u) => u.base === n.name)) continue; // listed twice (Sicilians' Serjeant)
+        const elite = `Elite ${n.name}`;
+        const hasElite = nodes.has(elite);
+        unique.push({
+            base: n.name,
+            best: hasElite && has(elite) ? elite : n.name,
+            missing: hasElite && !has(elite) ? [elite] : [],
+        });
+    }
+    return { lines, unique: unique.map(({ best, missing }) => ({ best, missing })), nodes };
 }
 
 // Every node name the lines mention, to check it against the trees.

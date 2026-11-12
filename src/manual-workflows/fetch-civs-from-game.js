@@ -135,13 +135,18 @@ async function main() {
     const nodeInfo = new Map(); // English node name → { icon, nameStringId }
     for (const internal of Object.keys(data.civs)) {
         const tree = await raw(`trees/${internal.toUpperCase()}.json`);
-        const { lines, nodes } = summarize(tree);
-        treeCivs[civCodes[gameNameAliases[internal] || internal]] = lines;
+        const { lines, unique, nodes } = summarize(tree);
+        treeCivs[civCodes[gameNameAliases[internal] || internal]] = { lines, unique };
         for (const [name, info] of nodes) if (!nodeInfo.has(name)) nodeInfo.set(name, info);
     }
     const unknown = [...allNames()].filter((n) => !nodeInfo.has(n));
     if (unknown.length) throw new Error(`tech-tree.js names not in any tree: ${unknown.join(", ")}`);
-    const used = [...allNames()];
+    const used = [
+        ...new Set([
+            ...allNames(),
+            ...Object.values(treeCivs).flatMap((c) => c.unique.flatMap((u) => [u.best, ...u.missing])),
+        ]),
+    ];
 
     const unitIdsByCiv = {};
     // English first: it fixes which unit each entry is, for every other language.
