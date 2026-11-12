@@ -1,4 +1,4 @@
-use tauri::{AppHandle, Emitter, LogicalSize, Manager, WebviewWindow};
+use tauri::{AppHandle, Emitter, LogicalPosition, LogicalSize, Manager, WebviewWindow};
 use tauri_plugin_global_shortcut::{Code, Modifiers, Shortcut, ShortcutState};
 
 /// Ctrl+Alt+` on Windows/Linux, Cmd+Alt+` on macOS: shows or hides the overlay.
@@ -32,18 +32,25 @@ fn hide_overlay(window: WebviewWindow) {
 }
 
 /// Resizes the window to the content the page measured, capped to the screen.
+/// The top-left corner stays where it was (macOS would keep the bottom edge and
+/// grow the window upwards) and the window is kept inside its monitor.
 #[tauri::command]
 fn fit_window(window: WebviewWindow, width: f64, height: f64) {
-    let (max_w, max_h) = window
-        .current_monitor()
-        .ok()
-        .flatten()
-        .map(|m| {
-            let size = m.size().to_logical::<f64>(m.scale_factor());
-            (size.width * 0.95, size.height * 0.9)
-        })
-        .unwrap_or((f64::MAX, f64::MAX));
-    let _ = window.set_size(LogicalSize::new(width.min(max_w), height.min(max_h)));
+    let Some(monitor) = window.current_monitor().ok().flatten() else {
+        let _ = window.set_size(LogicalSize::new(width, height));
+        return;
+    };
+    let scale = monitor.scale_factor();
+    let area = monitor.size().to_logical::<f64>(scale);
+    let origin = monitor.position().to_logical::<f64>(scale);
+    let (w, h) = (width.min(area.width * 0.95), height.min(area.height * 0.9));
+    let before = window.outer_position().ok().map(|p| p.to_logical::<f64>(scale));
+    let _ = window.set_size(LogicalSize::new(w, h));
+    if let Some(p) = before {
+        let x = p.x.clamp(origin.x, origin.x + area.width - w);
+        let y = p.y.clamp(origin.y, origin.y + area.height - h);
+        let _ = window.set_position(LogicalPosition::new(x, y));
+    }
 }
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
