@@ -312,3 +312,70 @@ html {
         linear-gradient(to top right, transparent calc(50% - 1px), rgba(229, 83, 75, 0.85) calc(50% - 1px), rgba(229, 83, 75, 0.85) calc(50% + 1px), transparent calc(50% + 1px)),
         linear-gradient(to bottom right, transparent calc(50% - 1px), rgba(229, 83, 75, 0.85) calc(50% - 1px), rgba(229, 83, 75, 0.85) calc(50% + 1px), transparent calc(50% + 1px));
 }
+
+/* Tooltip over the tech tree icons */
+.tip {
+    position: absolute;
+    z-index: 20;
+    max-width: 300px;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: rgba(12, 10, 6, 0.97);
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.4;
+    pointer-events: none;
+}
+
+.tip-head {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.tip-head strong {
+    color: var(--gold);
+    font-size: 13px;
+}
+
+.tip-status {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.tip-status.lacks,
+.tip-status.none {
+    color: #e5534b;
+}
+
+.tip-status.complete {
+    color: #7ccf6b;
+}
+
+.tip-help {
+    margin: 4px 0 0;
+}
+
+.tip-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 10px;
+    margin-top: 6px;
+}
+
+.tip-stats b {
+    color: #fff;
+}
+
+.tip-cost {
+    margin-top: 4px;
+    color: var(--muted);
+}
+
+.tip-note {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 10px;
+    font-style: italic;
+}

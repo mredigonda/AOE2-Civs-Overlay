@@ -369,6 +369,2655 @@
     "Elite Fire Archer": "img/tree/Unit-528.png",
     "Sun Jian": "img/tree/Unit-467.png"
   },
+  "stats": {
+    "Archer": {
+      "cost": {
+        "Gold": 45,
+        "Wood": 25
+      },
+      "time": 35,
+      "hp": 30,
+      "attack": 4,
+      "melee": 0,
+      "pierce": 0,
+      "range": 4,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Crossbowman": {
+      "cost": {
+        "Gold": 45,
+        "Wood": 25
+      },
+      "time": 27,
+      "hp": 35,
+      "attack": 5,
+      "melee": 0,
+      "pierce": 0,
+      "range": 5,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Arbalester": {
+      "cost": {
+        "Gold": 45,
+        "Wood": 25
+      },
+      "time": 27,
+      "hp": 40,
+      "attack": 6,
+      "melee": 0,
+      "pierce": 0,
+      "range": 5,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Fletching": {
+      "cost": {
+        "Food": 100,
+        "Gold": 50
+      },
+      "time": 30
+    },
+    "Bodkin Arrow": {
+      "cost": {
+        "Food": 200,
+        "Gold": 100
+      },
+      "time": 35
+    },
+    "Bracer": {
+      "cost": {
+        "Food": 300,
+        "Gold": 200
+      },
+      "time": 40
+    },
+    "Padded Archer Armor": {
+      "cost": {
+        "Food": 100
+      },
+      "time": 40
+    },
+    "Leather Archer Armor": {
+      "cost": {
+        "Food": 150,
+        "Gold": 150
+      },
+      "time": 55
+    },
+    "Ring Archer Armor": {
+      "cost": {
+        "Food": 250,
+        "Gold": 250
+      },
+      "time": 70
+    },
+    "Thumb Ring": {
+      "cost": {
+        "Food": 300,
+        "Wood": 250
+      },
+      "time": 45
+    },
+    "Skirmisher": {
+      "cost": {
+        "Food": 25,
+        "Wood": 35
+      },
+      "time": 26,
+      "hp": 30,
+      "attack": 2,
+      "melee": 0,
+      "pierce": 3,
+      "range": 4,
+      "speed": 0.96,
+      "reload": 3
+    },
+    "Elite Skirmisher": {
+      "cost": {
+        "Food": 25,
+        "Wood": 35
+      },
+      "time": 22,
+      "hp": 35,
+      "attack": 3,
+      "melee": 0,
+      "pierce": 4,
+      "range": 5,
+      "speed": 0.96,
+      "reload": 3
+    },
+    "Imperial Skirmisher": {
+      "cost": {
+        "Food": 25,
+        "Wood": 35
+      },
+      "time": 22,
+      "hp": 35,
+      "attack": 4,
+      "melee": 0,
+      "pierce": 5,
+      "range": 5,
+      "speed": 0.96,
+      "reload": 3
+    },
+    "Cavalry Archer": {
+      "cost": {
+        "Gold": 60,
+        "Wood": 40
+      },
+      "time": 37,
+      "hp": 50,
+      "attack": 6,
+      "melee": 0,
+      "pierce": 0,
+      "range": 4,
+      "speed": 1.4,
+      "reload": 2
+    },
+    "Heavy Cavalry Archer": {
+      "cost": {
+        "Gold": 60,
+        "Wood": 40
+      },
+      "time": 30,
+      "hp": 60,
+      "attack": 7,
+      "melee": 1,
+      "pierce": 0,
+      "range": 4,
+      "speed": 1.4,
+      "reload": 2
+    },
+    "Mounted Crossbowman": {
+      "cost": {
+        "Gold": 65,
+        "Wood": 40
+      },
+      "time": 40,
+      "hp": 45,
+      "attack": 7,
+      "melee": 2,
+      "pierce": 0,
+      "range": 4,
+      "speed": 1.25,
+      "reload": 2.5
+    },
+    "Heavy Mounted Crossbowman": {
+      "cost": {
+        "Gold": 65,
+        "Wood": 40
+      },
+      "time": 30,
+      "hp": 55,
+      "attack": 8,
+      "melee": 2,
+      "pierce": 0,
+      "range": 4,
+      "speed": 1.25,
+      "reload": 2.5
+    },
+    "Parthian Tactics": {
+      "cost": {
+        "Food": 200,
+        "Gold": 250
+      },
+      "time": 65
+    },
+    "Militia": {
+      "cost": {
+        "Food": 50,
+        "Gold": 20
+      },
+      "time": 21,
+      "hp": 40,
+      "attack": 4,
+      "melee": 0,
+      "pierce": 1,
+      "range": 0,
+      "speed": 0.9,
+      "reload": 2
+    },
+    "Man-at-Arms": {
+      "cost": {
+        "Food": 50,
+        "Gold": 20
+      },
+      "time": 21,
+      "hp": 45,
+      "attack": 6,
+      "melee": 0,
+      "pierce": 1,
+      "range": 0,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Long Swordsman": {
+      "cost": {
+        "Food": 50,
+        "Gold": 20
+      },
+      "time": 21,
+      "hp": 60,
+      "attack": 9,
+      "melee": 1,
+      "pierce": 1,
+      "range": 0,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Two-Handed Swordsman": {
+      "cost": {
+        "Food": 50,
+        "Gold": 20
+      },
+      "time": 21,
+      "hp": 65,
+      "attack": 12,
+      "melee": 1,
+      "pierce": 1,
+      "range": 0,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Champion": {
+      "cost": {
+        "Food": 50,
+        "Gold": 20
+      },
+      "time": 21,
+      "hp": 70,
+      "attack": 14,
+      "melee": 1,
+      "pierce": 1,
+      "range": 0,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Champi Scout": {
+      "cost": {
+        "Food": 50,
+        "Gold": 25
+      },
+      "time": 42,
+      "hp": 35,
+      "attack": 3,
+      "melee": 0,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1,
+      "reload": 2
+    },
+    "Champi Runner": {
+      "cost": {
+        "Food": 50,
+        "Gold": 25
+      },
+      "time": 34,
+      "hp": 40,
+      "attack": 5,
+      "melee": 0,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1.1,
+      "reload": 2
+    },
+    "Champi Warrior": {
+      "cost": {
+        "Food": 50,
+        "Gold": 25
+      },
+      "time": 26,
+      "hp": 55,
+      "attack": 9,
+      "melee": 0,
+      "pierce": 3,
+      "range": 0,
+      "speed": 1.1,
+      "reload": 2
+    },
+    "Elite Champi Warrior": {
+      "cost": {
+        "Food": 50,
+        "Gold": 25
+      },
+      "time": 21,
+      "hp": 65,
+      "attack": 11,
+      "melee": 0,
+      "pierce": 4,
+      "range": 0,
+      "speed": 1.1,
+      "reload": 2
+    },
+    "Forging": {
+      "cost": {
+        "Food": 150
+      },
+      "time": 50
+    },
+    "Iron Casting": {
+      "cost": {
+        "Food": 220,
+        "Gold": 120
+      },
+      "time": 75
+    },
+    "Blast Furnace": {
+      "cost": {
+        "Food": 275,
+        "Gold": 225
+      },
+      "time": 100
+    },
+    "Scale Mail Armor": {
+      "cost": {
+        "Food": 100
+      },
+      "time": 40
+    },
+    "Chain Mail Armor": {
+      "cost": {
+        "Food": 200,
+        "Gold": 100
+      },
+      "time": 55
+    },
+    "Plate Mail Armor": {
+      "cost": {
+        "Food": 300,
+        "Gold": 150
+      },
+      "time": 70
+    },
+    "Squires": {
+      "cost": {
+        "Food": 100
+      },
+      "time": 40
+    },
+    "Gambesons": {
+      "cost": {
+        "Food": 50,
+        "Gold": 100
+      },
+      "time": 25
+    },
+    "Arson": {
+      "cost": {
+        "Food": 75,
+        "Gold": 25
+      },
+      "time": 25
+    },
+    "Legionary": {
+      "cost": {
+        "Food": 50,
+        "Gold": 20
+      },
+      "time": 21,
+      "hp": 75,
+      "attack": 12,
+      "melee": 2,
+      "pierce": 2,
+      "range": 0,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Spearman": {
+      "cost": {
+        "Food": 35,
+        "Wood": 25
+      },
+      "time": 22,
+      "hp": 45,
+      "attack": 3,
+      "melee": 0,
+      "pierce": 0,
+      "range": 0,
+      "speed": 1,
+      "reload": 3
+    },
+    "Pikeman": {
+      "cost": {
+        "Food": 35,
+        "Wood": 25
+      },
+      "time": 22,
+      "hp": 55,
+      "attack": 4,
+      "melee": 0,
+      "pierce": 0,
+      "range": 0,
+      "speed": 1,
+      "reload": 3
+    },
+    "Halberdier": {
+      "cost": {
+        "Food": 35,
+        "Wood": 25
+      },
+      "time": 22,
+      "hp": 60,
+      "attack": 6,
+      "melee": 0,
+      "pierce": 0,
+      "range": 0,
+      "speed": 1,
+      "reload": 3
+    },
+    "Knight": {
+      "cost": {
+        "Food": 60,
+        "Gold": 75
+      },
+      "time": 30,
+      "hp": 100,
+      "attack": 10,
+      "melee": 2,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1.35,
+      "reload": 1.8
+    },
+    "Cavalier": {
+      "cost": {
+        "Food": 60,
+        "Gold": 75
+      },
+      "time": 30,
+      "hp": 120,
+      "attack": 12,
+      "melee": 2,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1.35,
+      "reload": 1.8
+    },
+    "Paladin": {
+      "cost": {
+        "Food": 60,
+        "Gold": 75
+      },
+      "time": 30,
+      "hp": 160,
+      "attack": 14,
+      "melee": 2,
+      "pierce": 3,
+      "range": 0,
+      "speed": 1.35,
+      "reload": 1.9
+    },
+    "Bloodlines": {
+      "cost": {
+        "Food": 150,
+        "Gold": 100
+      },
+      "time": 50
+    },
+    "Husbandry": {
+      "cost": {
+        "Food": 150
+      },
+      "time": 40
+    },
+    "Scale Barding Armor": {
+      "cost": {
+        "Food": 150
+      },
+      "time": 45
+    },
+    "Chain Barding Armor": {
+      "cost": {
+        "Food": 250,
+        "Gold": 150
+      },
+      "time": 60
+    },
+    "Plate Barding Armor": {
+      "cost": {
+        "Food": 350,
+        "Gold": 200
+      },
+      "time": 75
+    },
+    "Scout Cavalry": {
+      "cost": {
+        "Food": 80
+      },
+      "time": 30,
+      "hp": 45,
+      "attack": 3,
+      "melee": 0,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1.2,
+      "reload": 2
+    },
+    "Light Cavalry": {
+      "cost": {
+        "Food": 80
+      },
+      "time": 30,
+      "hp": 60,
+      "attack": 7,
+      "melee": 0,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1.5,
+      "reload": 2
+    },
+    "Hussar": {
+      "cost": {
+        "Food": 80
+      },
+      "time": 30,
+      "hp": 75,
+      "attack": 7,
+      "melee": 0,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1.5,
+      "reload": 1.9
+    },
+    "Camel Scout": {
+      "cost": {
+        "Food": 55,
+        "Gold": 60
+      },
+      "time": 22,
+      "hp": 70,
+      "attack": 2,
+      "melee": 0,
+      "pierce": 0,
+      "range": 0,
+      "speed": 1.2,
+      "reload": 2
+    },
+    "Winged Hussar": {
+      "cost": {
+        "Food": 80
+      },
+      "time": 30,
+      "hp": 80,
+      "attack": 9,
+      "melee": 1,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1.5,
+      "reload": 1.9
+    },
+    "Camel Rider": {
+      "cost": {
+        "Food": 55,
+        "Gold": 60
+      },
+      "time": 22,
+      "hp": 100,
+      "attack": 6,
+      "melee": 0,
+      "pierce": 0,
+      "range": 0,
+      "speed": 1.45,
+      "reload": 2
+    },
+    "Heavy Camel Rider": {
+      "cost": {
+        "Food": 55,
+        "Gold": 60
+      },
+      "time": 22,
+      "hp": 120,
+      "attack": 7,
+      "melee": 0,
+      "pierce": 0,
+      "range": 0,
+      "speed": 1.45,
+      "reload": 2
+    },
+    "Imperial Camel Rider": {
+      "cost": {
+        "Food": 55,
+        "Gold": 60
+      },
+      "time": 20,
+      "hp": 140,
+      "attack": 8,
+      "melee": 0,
+      "pierce": 0,
+      "range": 0,
+      "speed": 1.45,
+      "reload": 2
+    },
+    "Battle Elephant": {
+      "cost": {
+        "Food": 100,
+        "Gold": 70
+      },
+      "time": 24,
+      "hp": 250,
+      "attack": 12,
+      "melee": 1,
+      "pierce": 2,
+      "range": 0,
+      "speed": 0.9,
+      "reload": 2
+    },
+    "Elite Battle Elephant": {
+      "cost": {
+        "Food": 100,
+        "Gold": 70
+      },
+      "time": 24,
+      "hp": 300,
+      "attack": 14,
+      "melee": 1,
+      "pierce": 3,
+      "range": 0,
+      "speed": 0.9,
+      "reload": 2
+    },
+    "Elephant Archer": {
+      "cost": {
+        "Food": 70,
+        "Gold": 80
+      },
+      "time": 32,
+      "hp": 220,
+      "attack": 6,
+      "melee": 0,
+      "pierce": 2,
+      "range": 4,
+      "speed": 0.9,
+      "reload": 2
+    },
+    "Elite Elephant Archer": {
+      "cost": {
+        "Food": 70,
+        "Gold": 80
+      },
+      "time": 32,
+      "hp": 270,
+      "attack": 7,
+      "melee": 0,
+      "pierce": 2,
+      "range": 4,
+      "speed": 0.9,
+      "reload": 2
+    },
+    "Steppe Lancer": {
+      "cost": {
+        "Food": 70,
+        "Gold": 40
+      },
+      "time": 24,
+      "hp": 60,
+      "attack": 9,
+      "melee": 0,
+      "pierce": 1,
+      "range": 1,
+      "speed": 1.45,
+      "reload": 2
+    },
+    "Elite Steppe Lancer": {
+      "cost": {
+        "Food": 70,
+        "Gold": 40
+      },
+      "time": 20,
+      "hp": 80,
+      "attack": 11,
+      "melee": 0,
+      "pierce": 2,
+      "range": 1,
+      "speed": 1.45,
+      "reload": 2
+    },
+    "Hei Guang Cavalry": {
+      "cost": {
+        "Food": 65,
+        "Gold": 65
+      },
+      "time": 28,
+      "hp": 60,
+      "attack": 11,
+      "melee": 4,
+      "pierce": 3,
+      "range": 0,
+      "speed": 1.35,
+      "reload": 1.8
+    },
+    "Heavy Hei Guang Cavalry": {
+      "cost": {
+        "Food": 65,
+        "Gold": 65
+      },
+      "time": 28,
+      "hp": 90,
+      "attack": 12,
+      "melee": 4,
+      "pierce": 3,
+      "range": 0,
+      "speed": 1.35,
+      "reload": 1.8
+    },
+    "Eagle Scout": {
+      "cost": {
+        "Food": 20,
+        "Gold": 50
+      },
+      "time": 46,
+      "hp": 50,
+      "attack": 4,
+      "melee": 0,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1.1,
+      "reload": 2
+    },
+    "Eagle Warrior": {
+      "cost": {
+        "Food": 20,
+        "Gold": 50
+      },
+      "time": 35,
+      "hp": 55,
+      "attack": 7,
+      "melee": 0,
+      "pierce": 3,
+      "range": 0,
+      "speed": 1.15,
+      "reload": 2
+    },
+    "Elite Eagle Warrior": {
+      "cost": {
+        "Food": 20,
+        "Gold": 50
+      },
+      "time": 20,
+      "hp": 60,
+      "attack": 9,
+      "melee": 0,
+      "pierce": 4,
+      "range": 0,
+      "speed": 1.3,
+      "reload": 2
+    },
+    "Varangian Guard": {
+      "cost": {
+        "Food": 65,
+        "Gold": 45
+      },
+      "time": 30,
+      "hp": 70,
+      "attack": 13,
+      "melee": 2,
+      "pierce": 1,
+      "range": 0,
+      "speed": 1.05,
+      "reload": 2
+    },
+    "Elite Varangian Guard": {
+      "cost": {
+        "Food": 65,
+        "Gold": 45
+      },
+      "time": 30,
+      "hp": 80,
+      "attack": 17,
+      "melee": 2,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1.05,
+      "reload": 2
+    },
+    "Fire Lancer": {
+      "cost": {
+        "Gold": 45,
+        "Wood": 45
+      },
+      "time": 35,
+      "hp": 65,
+      "attack": 9,
+      "melee": 1,
+      "pierce": 0,
+      "range": 0,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Elite Fire Lancer": {
+      "cost": {
+        "Gold": 45,
+        "Wood": 45
+      },
+      "time": 25,
+      "hp": 85,
+      "attack": 10,
+      "melee": 2,
+      "pierce": 1,
+      "range": 0,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Slinger": {
+      "cost": {
+        "Food": 50,
+        "Wood": 25
+      },
+      "time": 25,
+      "hp": 35,
+      "attack": 4,
+      "melee": 0,
+      "pierce": 0,
+      "range": 5,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Hand Cannoneer": {
+      "cost": {
+        "Food": 45,
+        "Gold": 50
+      },
+      "time": 34,
+      "hp": 40,
+      "attack": 17,
+      "melee": 1,
+      "pierce": 0,
+      "range": 7,
+      "speed": 0.96,
+      "reload": 3.45
+    },
+    "Battering Ram": {
+      "cost": {
+        "Gold": 75,
+        "Wood": 160
+      },
+      "time": 36,
+      "hp": 175,
+      "attack": 2,
+      "melee": -3,
+      "pierce": 180,
+      "range": 0,
+      "speed": 0.6,
+      "reload": 5
+    },
+    "Capped Ram": {
+      "cost": {
+        "Gold": 75,
+        "Wood": 160
+      },
+      "time": 36,
+      "hp": 200,
+      "attack": 3,
+      "melee": -2,
+      "pierce": 190,
+      "range": 0,
+      "speed": 0.6,
+      "reload": 5
+    },
+    "Siege Ram": {
+      "cost": {
+        "Gold": 75,
+        "Wood": 160
+      },
+      "time": 36,
+      "hp": 270,
+      "attack": 4,
+      "melee": -1,
+      "pierce": 195,
+      "range": 0,
+      "speed": 0.6,
+      "reload": 5
+    },
+    "Armored Elephant": {
+      "cost": {
+        "Food": 120,
+        "Gold": 95
+      },
+      "time": 36,
+      "hp": 180,
+      "attack": 4,
+      "melee": -2,
+      "pierce": 140,
+      "range": 0,
+      "speed": 0.6,
+      "reload": 3
+    },
+    "Siege Elephant": {
+      "cost": {
+        "Food": 120,
+        "Gold": 95
+      },
+      "time": 36,
+      "hp": 220,
+      "attack": 4,
+      "melee": -2,
+      "pierce": 150,
+      "range": 0,
+      "speed": 0.6,
+      "reload": 3
+    },
+    "Siege Engineers": {
+      "cost": {
+        "Food": 500,
+        "Wood": 600
+      },
+      "time": 45
+    },
+    "Mangonel": {
+      "cost": {
+        "Gold": 135,
+        "Wood": 160
+      },
+      "time": 46,
+      "hp": 50,
+      "attack": 40,
+      "melee": 0,
+      "pierce": 6,
+      "range": 7,
+      "speed": 0.6,
+      "reload": 6
+    },
+    "Onager": {
+      "cost": {
+        "Gold": 135,
+        "Wood": 160
+      },
+      "time": 46,
+      "hp": 60,
+      "attack": 55,
+      "melee": 0,
+      "pierce": 8,
+      "range": 8,
+      "speed": 0.6,
+      "reload": 6
+    },
+    "Siege Onager": {
+      "cost": {
+        "Gold": 135,
+        "Wood": 160
+      },
+      "time": 46,
+      "hp": 70,
+      "attack": 75,
+      "melee": 0,
+      "pierce": 8,
+      "range": 8,
+      "speed": 0.6,
+      "reload": 6
+    },
+    "Rocket Cart": {
+      "cost": {
+        "Gold": 155,
+        "Wood": 135
+      },
+      "time": 40,
+      "hp": 45,
+      "attack": 5,
+      "melee": 0,
+      "pierce": 6,
+      "range": 7,
+      "speed": 0.6,
+      "reload": 5.5
+    },
+    "Heavy Rocket Cart": {
+      "cost": {
+        "Gold": 155,
+        "Wood": 135
+      },
+      "time": 40,
+      "hp": 65,
+      "attack": 5,
+      "melee": 0,
+      "pierce": 8,
+      "range": 8,
+      "speed": 0.6,
+      "reload": 5.35
+    },
+    "Scorpion": {
+      "cost": {
+        "Gold": 75,
+        "Wood": 75
+      },
+      "time": 30,
+      "hp": 40,
+      "attack": 11,
+      "melee": 0,
+      "pierce": 7,
+      "range": 7,
+      "speed": 0.65,
+      "reload": 3.6
+    },
+    "Heavy Scorpion": {
+      "cost": {
+        "Gold": 75,
+        "Wood": 75
+      },
+      "time": 30,
+      "hp": 60,
+      "attack": 14,
+      "melee": 1,
+      "pierce": 8,
+      "range": 7,
+      "speed": 0.65,
+      "reload": 3.6
+    },
+    "Bombard Cannon": {
+      "cost": {
+        "Gold": 225,
+        "Wood": 225
+      },
+      "time": 56,
+      "hp": 80,
+      "attack": 40,
+      "melee": 2,
+      "pierce": 5,
+      "range": 12,
+      "speed": 0.7,
+      "reload": 6.5
+    },
+    "Monk": {
+      "cost": {
+        "Gold": 100
+      },
+      "time": 51,
+      "hp": 30,
+      "attack": 0,
+      "melee": 0,
+      "pierce": 0,
+      "range": 9,
+      "speed": 0.7,
+      "reload": 1.6
+    },
+    "Redemption": {
+      "cost": {
+        "Gold": 475
+      },
+      "time": 50
+    },
+    "Atonement": {
+      "cost": {
+        "Gold": 325
+      },
+      "time": 40
+    },
+    "Herbal Medicine": {
+      "cost": {
+        "Gold": 200
+      },
+      "time": 35
+    },
+    "Sanctity": {
+      "cost": {
+        "Gold": 175
+      },
+      "time": 60
+    },
+    "Fervor": {
+      "cost": {
+        "Gold": 140
+      },
+      "time": 50
+    },
+    "Theocracy": {
+      "cost": {
+        "Gold": 200
+      },
+      "time": 75
+    },
+    "Illumination": {
+      "cost": {
+        "Gold": 120
+      },
+      "time": 65
+    },
+    "Block Printing": {
+      "cost": {
+        "Gold": 200
+      },
+      "time": 55
+    },
+    "Faith": {
+      "cost": {
+        "Food": 550,
+        "Gold": 750
+      },
+      "time": 60
+    },
+    "Heresy": {
+      "cost": {
+        "Gold": 1000
+      },
+      "time": 60
+    },
+    "Wheelbarrow": {
+      "cost": {
+        "Food": 175,
+        "Wood": 50
+      },
+      "time": 75
+    },
+    "Hand Cart": {
+      "cost": {
+        "Food": 300,
+        "Wood": 200
+      },
+      "time": 55
+    },
+    "Double-Bit Axe": {
+      "cost": {
+        "Food": 100,
+        "Wood": 50
+      },
+      "time": 25
+    },
+    "Bow Saw": {
+      "cost": {
+        "Food": 150,
+        "Wood": 100
+      },
+      "time": 50
+    },
+    "Two-Man Saw": {
+      "cost": {
+        "Food": 300,
+        "Wood": 200
+      },
+      "time": 100
+    },
+    "Horse Collar": {
+      "cost": {
+        "Food": 75,
+        "Wood": 75
+      },
+      "time": 20
+    },
+    "Heavy Plow": {
+      "cost": {
+        "Food": 125,
+        "Wood": 125
+      },
+      "time": 40
+    },
+    "Crop Rotation": {
+      "cost": {
+        "Food": 250,
+        "Wood": 250
+      },
+      "time": 70
+    },
+    "Gold Mining": {
+      "cost": {
+        "Food": 100,
+        "Wood": 75
+      },
+      "time": 30
+    },
+    "Gold Shaft Mining": {
+      "cost": {
+        "Food": 175,
+        "Wood": 75
+      },
+      "time": 75
+    },
+    "Stone Mining": {
+      "cost": {
+        "Food": 100,
+        "Wood": 75
+      },
+      "time": 30
+    },
+    "Stone Shaft Mining": {
+      "cost": {
+        "Food": 175,
+        "Wood": 75
+      },
+      "time": 75
+    },
+    "Caravan": {
+      "cost": {
+        "Food": 200,
+        "Gold": 200
+      },
+      "time": 40
+    },
+    "Guilds": {
+      "cost": {
+        "Food": 300,
+        "Gold": 200
+      },
+      "time": 50
+    },
+    "Masonry": {
+      "cost": {
+        "Food": 150,
+        "Wood": 175
+      },
+      "time": 50
+    },
+    "Architecture": {
+      "cost": {
+        "Food": 300,
+        "Wood": 200
+      },
+      "time": 70
+    },
+    "Keep": {
+      "cost": {
+        "Food": 500,
+        "Wood": 350
+      },
+      "time": 75
+    },
+    "Bombard Tower": {
+      "cost": {
+        "Food": 800,
+        "Wood": 400
+      },
+      "time": 60
+    },
+    "Arrowslits": {
+      "cost": {
+        "Food": 250,
+        "Wood": 250
+      },
+      "time": 25
+    },
+    "Heated Shot": {
+      "cost": {
+        "Food": 350,
+        "Gold": 100
+      },
+      "time": 30
+    },
+    "Murder Holes": {
+      "cost": {
+        "Food": 200,
+        "Stone": 100
+      },
+      "time": 35
+    },
+    "Hoardings": {
+      "cost": {
+        "Food": 400,
+        "Wood": 400
+      },
+      "time": 75
+    },
+    "Fortified Wall": {
+      "cost": {
+        "Food": 200,
+        "Wood": 100
+      },
+      "time": 50
+    },
+    "Galley": {
+      "cost": {
+        "Gold": 30,
+        "Wood": 90
+      },
+      "time": 45,
+      "hp": 110,
+      "attack": 6,
+      "melee": 0,
+      "pierce": 3,
+      "range": 5,
+      "speed": 1.36,
+      "reload": 3
+    },
+    "War Galley": {
+      "cost": {
+        "Gold": 30,
+        "Wood": 90
+      },
+      "time": 27,
+      "hp": 125,
+      "attack": 7,
+      "melee": 0,
+      "pierce": 4,
+      "range": 6,
+      "speed": 1.36,
+      "reload": 3
+    },
+    "Galleon": {
+      "cost": {
+        "Gold": 30,
+        "Wood": 90
+      },
+      "time": 27,
+      "hp": 155,
+      "attack": 9,
+      "melee": 0,
+      "pierce": 6,
+      "range": 7,
+      "speed": 1.36,
+      "reload": 3
+    },
+    "Careening": {
+      "cost": {
+        "Food": 100,
+        "Gold": 200
+      },
+      "time": 50
+    },
+    "Dry Dock": {
+      "cost": {
+        "Food": 200,
+        "Gold": 400
+      },
+      "time": 60
+    },
+    "Shipwright": {
+      "cost": {
+        "Food": 1000,
+        "Gold": 300
+      },
+      "time": 60
+    },
+    "Fire Galley": {
+      "cost": {
+        "Gold": 45,
+        "Wood": 75
+      },
+      "time": 49,
+      "hp": 110,
+      "attack": 2,
+      "melee": 1,
+      "pierce": 4,
+      "range": 2.5,
+      "speed": 1.36,
+      "reload": 0.25
+    },
+    "Fire Ship": {
+      "cost": {
+        "Gold": 45,
+        "Wood": 75
+      },
+      "time": 27,
+      "hp": 120,
+      "attack": 3,
+      "melee": 2,
+      "pierce": 4,
+      "range": 2.5,
+      "speed": 1.47,
+      "reload": 0.25
+    },
+    "Fast Fire Ship": {
+      "cost": {
+        "Gold": 45,
+        "Wood": 75
+      },
+      "time": 27,
+      "hp": 140,
+      "attack": 4,
+      "melee": 3,
+      "pierce": 7,
+      "range": 2.5,
+      "speed": 1.56,
+      "reload": 0.25
+    },
+    "Demolition Raft": {
+      "cost": {
+        "Gold": 80,
+        "Wood": 45
+      },
+      "time": 45,
+      "hp": 40,
+      "attack": 75,
+      "melee": 0,
+      "pierce": 0,
+      "range": 0,
+      "speed": 1.42,
+      "reload": 0
+    },
+    "Demolition Ship": {
+      "cost": {
+        "Gold": 80,
+        "Wood": 45
+      },
+      "time": 31,
+      "hp": 50,
+      "attack": 95,
+      "melee": 1,
+      "pierce": 0,
+      "range": 0,
+      "speed": 1.52,
+      "reload": 0
+    },
+    "Heavy Demolition Ship": {
+      "cost": {
+        "Gold": 80,
+        "Wood": 45
+      },
+      "time": 31,
+      "hp": 70,
+      "attack": 120,
+      "melee": 2,
+      "pierce": 0,
+      "range": 0,
+      "speed": 1.52,
+      "reload": 0
+    },
+    "Cannon Galleon": {
+      "cost": {
+        "Gold": 150,
+        "Wood": 200
+      },
+      "time": 46,
+      "hp": 120,
+      "attack": 50,
+      "melee": 0,
+      "pierce": 5,
+      "range": 13,
+      "speed": 1.05,
+      "reload": 10
+    },
+    "Elite Cannon Galleon": {
+      "cost": {
+        "Gold": 150,
+        "Wood": 200
+      },
+      "time": 46,
+      "hp": 150,
+      "attack": 60,
+      "melee": 0,
+      "pierce": 6,
+      "range": 15,
+      "speed": 1.05,
+      "reload": 10
+    },
+    "Longship": {
+      "cost": {
+        "Gold": 50,
+        "Wood": 100
+      },
+      "time": 25,
+      "hp": 125,
+      "attack": 5,
+      "melee": 0,
+      "pierce": 3,
+      "range": 6,
+      "speed": 1.46,
+      "reload": 3
+    },
+    "Elite Longship": {
+      "cost": {
+        "Gold": 50,
+        "Wood": 100
+      },
+      "time": 25,
+      "hp": 130,
+      "attack": 7,
+      "melee": 1,
+      "pierce": 6,
+      "range": 7,
+      "speed": 1.46,
+      "reload": 3
+    },
+    "Dromon": {
+      "cost": {
+        "Gold": 150,
+        "Wood": 175
+      },
+      "time": 65,
+      "hp": 125,
+      "attack": 8,
+      "melee": 1,
+      "pierce": 6,
+      "range": 12,
+      "speed": 1.15,
+      "reload": 8
+    },
+    "Lou Chuan": {
+      "cost": {
+        "Gold": 225,
+        "Wood": 250
+      },
+      "time": 60,
+      "hp": 175,
+      "attack": 25,
+      "melee": 0,
+      "pierce": 9,
+      "range": 10,
+      "speed": 1.1,
+      "reload": 5.5
+    },
+    "Catapult Galleon": {
+      "cost": {
+        "Gold": 100,
+        "Wood": 225
+      },
+      "time": 55,
+      "hp": 140,
+      "attack": 30,
+      "melee": 0,
+      "pierce": 6,
+      "range": 12,
+      "speed": 1,
+      "reload": 6
+    },
+    "Elite Composite Bowman": {
+      "cost": {
+        "Gold": 45,
+        "Wood": 35
+      },
+      "time": 10,
+      "hp": 50,
+      "attack": 4,
+      "melee": 2,
+      "pierce": 0,
+      "range": 4,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Warrior Priest": {
+      "cost": {
+        "Food": 40,
+        "Gold": 50
+      },
+      "time": 30,
+      "hp": 80,
+      "attack": 11,
+      "melee": 1,
+      "pierce": 1,
+      "range": 0,
+      "speed": 0.85,
+      "reload": 2
+    },
+    "Elite Jaguar Warrior": {
+      "cost": {
+        "Food": 60,
+        "Gold": 30
+      },
+      "time": 12,
+      "hp": 75,
+      "attack": 19,
+      "melee": 2,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1,
+      "reload": 2
+    },
+    "Elite Ratha": {
+      "cost": {
+        "Gold": 60,
+        "Wood": 60
+      },
+      "time": 18,
+      "hp": 115,
+      "attack": 6,
+      "melee": 3,
+      "pierce": 3,
+      "range": 4,
+      "speed": 1.3,
+      "reload": 2
+    },
+    "Elite Genitour": {
+      "cost": {
+        "Food": 40,
+        "Wood": 35
+      },
+      "time": 23,
+      "hp": 55,
+      "attack": 4,
+      "melee": 0,
+      "pierce": 4,
+      "range": 4,
+      "speed": 1.35,
+      "reload": 3
+    },
+    "Elite Camel Archer": {
+      "cost": {
+        "Gold": 60,
+        "Wood": 50
+      },
+      "time": 25,
+      "hp": 60,
+      "attack": 8,
+      "melee": 1,
+      "pierce": 1,
+      "range": 4,
+      "speed": 1.4,
+      "reload": 2
+    },
+    "Houfnice": {
+      "cost": {
+        "Gold": 225,
+        "Wood": 225
+      },
+      "time": 56,
+      "hp": 90,
+      "attack": 50,
+      "melee": 2,
+      "pierce": 6,
+      "range": 12,
+      "speed": 0.7,
+      "reload": 6.5
+    },
+    "Elite Hussite Wagon": {
+      "cost": {
+        "Gold": 80,
+        "Wood": 110
+      },
+      "time": 26,
+      "hp": 230,
+      "attack": 13,
+      "melee": 1,
+      "pierce": 10,
+      "range": 6,
+      "speed": 0.8,
+      "reload": 3.45
+    },
+    "Elite Longbowman": {
+      "cost": {
+        "Gold": 40,
+        "Wood": 35
+      },
+      "time": 18,
+      "hp": 40,
+      "attack": 7,
+      "melee": 0,
+      "pierce": 1,
+      "range": 6,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Elite Konnik": {
+      "cost": {
+        "Food": 60,
+        "Gold": 70
+      },
+      "time": 16,
+      "hp": 120,
+      "attack": 14,
+      "melee": 2,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1.35,
+      "reload": 2.4
+    },
+    "Flemish Militia": {
+      "cost": {
+        "Food": 35,
+        "Gold": 25
+      },
+      "time": 16,
+      "hp": 40,
+      "attack": 5,
+      "melee": 1,
+      "pierce": 1,
+      "range": 0,
+      "speed": 0.94,
+      "reload": 2
+    },
+    "Elite Coustillier": {
+      "cost": {
+        "Food": 55,
+        "Gold": 55
+      },
+      "time": 14,
+      "hp": 145,
+      "attack": 11,
+      "melee": 2,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1.35,
+      "reload": 1.9
+    },
+    "Elite Arambai": {
+      "cost": {
+        "Gold": 60,
+        "Wood": 75
+      },
+      "time": 18,
+      "hp": 65,
+      "attack": 14,
+      "melee": 0,
+      "pierce": 2,
+      "range": 5,
+      "speed": 1.3,
+      "reload": 2
+    },
+    "Elite Cataphract": {
+      "cost": {
+        "Food": 70,
+        "Gold": 75
+      },
+      "time": 20,
+      "hp": 150,
+      "attack": 12,
+      "melee": 2,
+      "pierce": 1,
+      "range": 0,
+      "speed": 1.35,
+      "reload": 1.7
+    },
+    "Elite Woad Raider": {
+      "cost": {
+        "Food": 70,
+        "Gold": 25
+      },
+      "time": 10,
+      "hp": 85,
+      "attack": 15,
+      "melee": 0,
+      "pierce": 1,
+      "range": 0,
+      "speed": 1.17,
+      "reload": 2
+    },
+    "Dragon Ship": {
+      "cost": {
+        "Gold": 45,
+        "Wood": 75
+      },
+      "time": 27,
+      "hp": 135,
+      "attack": 5,
+      "melee": 3,
+      "pierce": 7,
+      "range": 3,
+      "speed": 1.56,
+      "reload": 0.25
+    },
+    "Elite Chu Ko Nu": {
+      "cost": {
+        "Gold": 35,
+        "Wood": 40
+      },
+      "time": 13,
+      "hp": 50,
+      "attack": 10,
+      "melee": 0,
+      "pierce": 0,
+      "range": 4,
+      "speed": 0.96,
+      "reload": 3
+    },
+    "Elite Kipchak": {
+      "cost": {
+        "Gold": 35,
+        "Wood": 60
+      },
+      "time": 20,
+      "hp": 45,
+      "attack": 5,
+      "melee": 0,
+      "pierce": 0,
+      "range": 4,
+      "speed": 1.4,
+      "reload": 2.2
+    },
+    "Elite Jomsviking": {
+      "cost": {
+        "Food": 65,
+        "Gold": 15
+      },
+      "time": 10,
+      "hp": 75,
+      "attack": 9,
+      "melee": 2,
+      "pierce": 2,
+      "range": 0,
+      "speed": 0.96,
+      "reload": 1.8
+    },
+    "Thirisadai": {
+      "cost": {
+        "Gold": 60,
+        "Wood": 180
+      },
+      "time": 40,
+      "hp": 250,
+      "attack": 10,
+      "melee": 2,
+      "pierce": 11,
+      "range": 7,
+      "speed": 1.25,
+      "reload": 3.45
+    },
+    "Elite Urumi Swordsman": {
+      "cost": {
+        "Food": 65,
+        "Gold": 20
+      },
+      "time": 9,
+      "hp": 65,
+      "attack": 11,
+      "melee": 1,
+      "pierce": 0,
+      "range": 0,
+      "speed": 1.1,
+      "reload": 2
+    },
+    "Elite Shotel Warrior": {
+      "cost": {
+        "Food": 50,
+        "Gold": 30
+      },
+      "time": 4,
+      "hp": 50,
+      "attack": 18,
+      "melee": 0,
+      "pierce": 1,
+      "range": 0,
+      "speed": 1.2,
+      "reload": 2
+    },
+    "Elite Throwing Axeman": {
+      "cost": {
+        "Food": 55,
+        "Gold": 25
+      },
+      "time": 13,
+      "hp": 70,
+      "attack": 8,
+      "melee": 1,
+      "pierce": 0,
+      "range": 6,
+      "speed": 1,
+      "reload": 2
+    },
+    "Elite Monaspa": {
+      "cost": {
+        "Food": 60,
+        "Gold": 45
+      },
+      "time": 14,
+      "hp": 80,
+      "attack": 14,
+      "melee": 5,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1.4,
+      "reload": 1.8
+    },
+    "Elite Huskarl": {
+      "cost": {
+        "Food": 75,
+        "Gold": 35
+      },
+      "time": 13,
+      "hp": 70,
+      "attack": 12,
+      "melee": 0,
+      "pierce": 8,
+      "range": 0,
+      "speed": 1.05,
+      "reload": 2
+    },
+    "Elite Shrivamsha Rider": {
+      "cost": {
+        "Food": 70,
+        "Gold": 30
+      },
+      "time": 20,
+      "hp": 70,
+      "attack": 11,
+      "melee": 0,
+      "pierce": 1,
+      "range": 0,
+      "speed": 1.6,
+      "reload": 1.9
+    },
+    "Elite Chakram Thrower": {
+      "cost": {
+        "Food": 65,
+        "Gold": 30
+      },
+      "time": 15,
+      "hp": 50,
+      "attack": 4,
+      "melee": 1,
+      "pierce": 0,
+      "range": 6,
+      "speed": 1.15,
+      "reload": 2
+    },
+    "Elite Ghulam": {
+      "cost": {
+        "Food": 30,
+        "Gold": 45
+      },
+      "time": 12,
+      "hp": 70,
+      "attack": 11,
+      "melee": 0,
+      "pierce": 6,
+      "range": 0,
+      "speed": 1.2,
+      "reload": 2
+    },
+    "Elite Tarkan": {
+      "cost": {
+        "Food": 60,
+        "Gold": 60
+      },
+      "time": 14,
+      "hp": 150,
+      "attack": 11,
+      "melee": 1,
+      "pierce": 4,
+      "range": 0,
+      "speed": 1.4,
+      "reload": 1.9
+    },
+    "Elite Kamayuk": {
+      "cost": {
+        "Food": 70,
+        "Gold": 30
+      },
+      "time": 10,
+      "hp": 80,
+      "attack": 8,
+      "melee": 1,
+      "pierce": 1,
+      "range": 1,
+      "speed": 1,
+      "reload": 2
+    },
+    "Condottiero": {
+      "cost": {
+        "Food": 50,
+        "Gold": 35
+      },
+      "time": 18,
+      "hp": 80,
+      "attack": 10,
+      "melee": 1,
+      "pierce": 0,
+      "range": 0,
+      "speed": 1.2,
+      "reload": 1.9
+    },
+    "Elite Genoese Crossbowman": {
+      "cost": {
+        "Gold": 40,
+        "Wood": 45
+      },
+      "time": 14,
+      "hp": 50,
+      "attack": 6,
+      "melee": 1,
+      "pierce": 0,
+      "range": 4,
+      "speed": 0.96,
+      "reload": 2
+    },
+    "Elite Samurai": {
+      "cost": {
+        "Food": 45,
+        "Gold": 30
+      },
+      "time": 9,
+      "hp": 80,
+      "attack": 12,
+      "melee": 1,
+      "pierce": 1,
+      "range": 0,
+      "speed": 1,
+      "reload": 1.9
+    },
+    "Grenadier": {
+      "cost": {
+        "Food": 55,
+        "Gold": 50
+      },
+      "time": 21,
+      "hp": 40,
+      "attack": 12,
+      "melee": 1,
+      "pierce": 1,
+      "range": 6,
+      "speed": 0.96,
+      "reload": 3.45
+    },
+    "Elite Iron Pagoda": {
+      "cost": {
+        "Food": 80,
+        "Gold": 55
+      },
+      "time": 14,
+      "hp": 140,
+      "attack": 13,
+      "melee": 2,
+      "pierce": 3,
+      "range": 0,
+      "speed": 1.4,
+      "reload": 2.15
+    },
+    "Mounted Trebuchet": {
+      "cost": {
+        "Food": 175,
+        "Gold": 175
+      },
+      "time": 46,
+      "hp": 75,
+      "attack": 30,
+      "melee": 2,
+      "pierce": 4,
+      "range": 10,
+      "speed": 0.8,
+      "reload": 6.5
+    },
+    "Elite Liao Dao": {
+      "cost": {
+        "Food": 40,
+        "Gold": 40
+      },
+      "time": 12,
+      "hp": 85,
+      "attack": 13,
+      "melee": 3,
+      "pierce": 1,
+      "range": 0,
+      "speed": 1,
+      "reload": 2.4
+    },
+    "Elite Ballista Elephant": {
+      "cost": {
+        "Food": 100,
+        "Gold": 80
+      },
+      "time": 25,
+      "hp": 280,
+      "attack": 10,
+      "melee": 0,
+      "pierce": 3,
+      "range": 5,
+      "speed": 0.8,
+      "reload": 2.5
+    },
+    "Elite Turtle Ship": {
+      "cost": {
+        "Gold": 130,
+        "Wood": 190
+      },
+      "time": 50,
+      "hp": 350,
+      "attack": 13,
+      "melee": 3,
+      "pierce": 12,
+      "range": 7,
+      "speed": 1,
+      "reload": 2
+    },
+    "Elite War Wagon": {
+      "cost": {
+        "Gold": 60,
+        "Wood": 200
+      },
+      "time": 21,
+      "hp": 200,
+      "attack": 9,
+      "melee": 0,
+      "pierce": 4,
+      "range": 5,
+      "speed": 1.2,
+      "reload": 2.5
+    },
+    "Elite Leitis": {
+      "cost": {
+        "Food": 70,
+        "Gold": 50
+      },
+      "time": 18,
+      "hp": 130,
+      "attack": 16,
+      "melee": 2,
+      "pierce": 1,
+      "range": 0,
+      "speed": 1.4,
+      "reload": 1.9
+    },
+    "Elite Magyar Huszar": {
+      "cost": {
+        "Food": 35,
+        "Gold": 45
+      },
+      "time": 12,
+      "hp": 90,
+      "attack": 11,
+      "melee": 0,
+      "pierce": 2,
+      "range": 0,
+      "speed": 1.5,
+      "reload": 1.8
+    },
+    "Elite Karambit Warrior": {
+      "cost": {
+        "Food": 25,
+        "Gold": 15
+      },
+      "time": 6,
+      "hp": 40,
+      "attack": 8,
+      "melee": 1,
+      "pierce": 1,
+      "range": 0,
+      "speed": 1.2,
+      "reload": 2
+    },
+    "Elite Gbeto": {
+      "cost": {
+        "Food": 50,
+        "Gold": 40
+      },
+      "time": 17,
+      "hp": 50,
+      "attack": 13,
+      "melee": 0,
+      "pierce": 0,
+      "range": 6,
+      "speed": 1.25,
+      "reload": 2
+    },
+    "Elite Bolas Rider": {
+      "cost": {
+        "Gold": 55,
+        "Wood": 50
+      },
+      "time": 28,
+      "hp": 65,
+      "attack": 6,
+      "melee": 0,
+      "pierce": 2,
+      "range": 5,
+      "speed": 1.5,
+      "reload": 2
+    },
+    "Elite Kona": {
+      "cost": {
+        "Food": 65,
+        "Gold": 40
+      },
+      "time": 14,
+      "hp": 145,
+      "attack": 11,
+      "melee": 0,
+      "pierce": 5,
+      "range": 0,
+      "speed": 1.55,
+      "reload": 2
+    },
+    "Elite Plumed Archer": {
+      "cost": {
+        "Gold": 55,
+        "Wood": 55
+      },
+      "time": 16,
+      "hp": 65,
+      "attack": 5,
+      "melee": 0,
+      "pierce": 2,
+      "range": 5,
+      "speed": 1.2,
+      "reload": 1.9
+    },
+    "Elite Mangudai": {
+      "cost": {
+        "Gold": 65,
+        "Wood": 55
+      },
+      "time": 26,
+      "hp": 60,
+      "attack": 8,
+      "melee": 1,
+      "pierce": 0,
+      "range": 4,
+      "speed": 1.4,
+      "reload": 2.1
+    },
+    "Elite Temple Guard": {
+      "cost": {
+        "Food": 70,
+        "Gold": 45
+      },
+      "time": 24,
+      "hp": 115,
+      "attack": 14,
+      "melee": 2,
+      "pierce": 2,
+      "range": 0,
+      "speed": 0.95,
+      "reload": 2
+    },
+    "Elite Guecha Warrior": {
+      "cost": {
+        "Gold": 60,
+        "Wood": 50
+      },
+      "time": 17,
+      "hp": 60,
+      "attack": 8,
+      "melee": 0,
+      "pierce": 5,
+      "range": 4,
+      "speed": 1.15,
+      "reload": 3
+    },
+    "Savar": {
+      "cost": {
+        "Food": 60,
+        "Gold": 75
+      },
+      "time": 30,
+      "hp": 145,
+      "attack": 14,
+      "melee": 3,
+      "pierce": 4,
+      "range": 0,
+      "speed": 1.35,
+      "reload": 1.8
+    },
+    "Elite War Elephant": {
+      "cost": {
+        "Food": 170,
+        "Gold": 85
+      },
+      "time": 25,
+      "hp": 600,
+      "attack": 20,
+      "melee": 1,
+      "pierce": 3,
+      "range": 0,
+      "speed": 0.8,
+      "reload": 2
+    },
+    "Elite Obuch": {
+      "cost": {
+        "Food": 55,
+        "Gold": 20
+      },
+      "time": 12,
+      "hp": 95,
+      "attack": 10,
+      "melee": 2,
+      "pierce": 2,
+      "range": 0,
+      "speed": 0.9,
+      "reload": 2
+    },
+    "Elite Caravel": {
+      "cost": {
+        "Gold": 43,
+        "Wood": 90
+      },
+      "time": 25,
+      "hp": 150,
+      "attack": 7,
+      "melee": 0,
+      "pierce": 6,
+      "range": 7,
+      "speed": 1.36,
+      "reload": 3
+    },
+    "Elite Organ Gun": {
+      "cost": {
+        "Gold": 70,
+        "Wood": 80
+      },
+      "time": 21,
+      "hp": 70,
+      "attack": 8,
+      "melee": 2,
+      "pierce": 6,
+      "range": 7,
+      "speed": 0.85,
+      "reload": 3.45
+    },
+    "Elite Centurion": {
+      "cost": {
+        "Food": 75,
+        "Gold": 85
+      },
+      "time": 24,
+      "hp": 155,
+      "attack": 15,
+      "melee": 3,
+      "pierce": 3,
+      "range": 0,
+      "speed": 1.35,
+      "reload": 1.9
+    },
+    "Elite Mameluke": {
+      "cost": {
+        "Food": 55,
+        "Gold": 85
+      },
+      "time": 23,
+      "hp": 80,
+      "attack": 10,
+      "melee": 1,
+      "pierce": 0,
+      "range": 3,
+      "speed": 1.4,
+      "reload": 2
+    },
+    "Elite Hearth Troop": {
+      "cost": {
+        "Gold": 35,
+        "Wood": 80
+      },
+      "time": 14,
+      "hp": 85,
+      "attack": 12,
+      "melee": 1,
+      "pierce": 4,
+      "range": 0,
+      "speed": 0.9,
+      "reload": 2
+    },
+    "War Chariot": {
+      "cost": {
+        "Food": 75,
+        "Gold": 90
+      },
+      "time": 32,
+      "hp": 65,
+      "attack": 8,
+      "melee": 0,
+      "pierce": 5,
+      "range": 6,
+      "speed": 0.9,
+      "reload": 6.5
+    },
+    "Elite White Feather Guard": {
+      "cost": {
+        "Food": 60,
+        "Gold": 15
+      },
+      "time": 11,
+      "hp": 100,
+      "attack": 8,
+      "melee": 0,
+      "pierce": 3,
+      "range": 0,
+      "speed": 0.95,
+      "reload": 2
+    },
+    "Liu Bei": {
+      "cost": {
+        "Food": 500,
+        "Gold": 500
+      },
+      "time": 60,
+      "hp": 425,
+      "attack": 15,
+      "melee": 3,
+      "pierce": 3,
+      "range": 0,
+      "speed": 0.9,
+      "reload": 2
+    },
+    "Elite Serjeant": {
+      "cost": {
+        "Food": 55,
+        "Gold": 25
+      },
+      "time": 12,
+      "hp": 85,
+      "attack": 11,
+      "melee": 6,
+      "pierce": 3,
+      "range": 0,
+      "speed": 0.95,
+      "reload": 2
+    },
+    "Elite Boyar": {
+      "cost": {
+        "Food": 60,
+        "Gold": 70
+      },
+      "time": 15,
+      "hp": 130,
+      "attack": 14,
+      "melee": 8,
+      "pierce": 3,
+      "range": 0,
+      "speed": 1.3,
+      "reload": 1.9
+    },
+    "Elite Conquistador": {
+      "cost": {
+        "Food": 75,
+        "Gold": 60
+      },
+      "time": 24,
+      "hp": 70,
+      "attack": 19,
+      "melee": 2,
+      "pierce": 2,
+      "range": 6,
+      "speed": 1.3,
+      "reload": 2.9
+    },
+    "Missionary": {
+      "cost": {
+        "Food": 30,
+        "Gold": 100
+      },
+      "time": 51,
+      "hp": 30,
+      "attack": 0,
+      "melee": 0,
+      "pierce": 0,
+      "range": 7,
+      "speed": 1.1,
+      "reload": 1.6
+    },
+    "Flaming Camel": {
+      "cost": {
+        "Food": 75,
+        "Gold": 30
+      },
+      "time": 30,
+      "hp": 55,
+      "attack": 20,
+      "melee": 0,
+      "pierce": 0,
+      "range": 0,
+      "speed": 1.3,
+      "reload": 0
+    },
+    "Elite Keshik": {
+      "cost": {
+        "Food": 60,
+        "Gold": 40
+      },
+      "time": 15,
+      "hp": 145,
+      "attack": 11,
+      "melee": 1,
+      "pierce": 3,
+      "range": 0,
+      "speed": 1.4,
+      "reload": 1.9
+    },
+    "Elite Teutonic Knight": {
+      "cost": {
+        "Food": 85,
+        "Gold": 30
+      },
+      "time": 12,
+      "hp": 110,
+      "attack": 17,
+      "melee": 8,
+      "pierce": 2,
+      "range": 0,
+      "speed": 0.8,
+      "reload": 2
+    },
+    "Elite Ibirapema Warrior": {
+      "cost": {
+        "Food": 30,
+        "Gold": 60
+      },
+      "time": 24,
+      "hp": 90,
+      "attack": 11,
+      "melee": 2,
+      "pierce": 1,
+      "range": 0,
+      "speed": 1,
+      "reload": 2
+    },
+    "Elite Blackwood Archer": {
+      "cost": {
+        "Gold": 45,
+        "Wood": 40
+      },
+      "time": 14,
+      "hp": 25,
+      "attack": 4,
+      "melee": 0,
+      "pierce": 0,
+      "range": 5,
+      "speed": 1.1,
+      "reload": 1.5
+    },
+    "Elite Janissary": {
+      "cost": {
+        "Food": 60,
+        "Gold": 55
+      },
+      "time": 21,
+      "hp": 40,
+      "attack": 22,
+      "melee": 2,
+      "pierce": 0,
+      "range": 8,
+      "speed": 0.96,
+      "reload": 3.45
+    },
+    "Elite Jarl": {
+      "cost": {
+        "Food": 75,
+        "Gold": 55
+      },
+      "time": 23,
+      "hp": 75,
+      "attack": 10,
+      "melee": 2,
+      "pierce": 1,
+      "range": 5,
+      "speed": 1.35,
+      "reload": 2
+    },
+    "Elite Rattan Archer": {
+      "cost": {
+        "Gold": 45,
+        "Wood": 50
+      },
+      "time": 16,
+      "hp": 40,
+      "attack": 7,
+      "melee": 0,
+      "pierce": 6,
+      "range": 5,
+      "speed": 1.1,
+      "reload": 2
+    },
+    "Elite Berserk": {
+      "cost": {
+        "Food": 65,
+        "Gold": 20
+      },
+      "time": 12,
+      "hp": 62,
+      "attack": 14,
+      "melee": 2,
+      "pierce": 1,
+      "range": 0,
+      "speed": 1.05,
+      "reload": 2
+    },
+    "Xianbei Raider": {
+      "cost": {
+        "Gold": 35,
+        "Wood": 65
+      },
+      "time": 29,
+      "hp": 30,
+      "attack": 5,
+      "melee": 0,
+      "pierce": 0,
+      "range": 4,
+      "speed": 1.4,
+      "reload": 1.8
+    },
+    "Elite Tiger Cavalry": {
+      "cost": {
+        "Food": 60,
+        "Gold": 80
+      },
+      "time": 18,
+      "hp": 125,
+      "attack": 13,
+      "melee": 0,
+      "pierce": 5,
+      "range": 0,
+      "speed": 1.35,
+      "reload": 1.9
+    },
+    "Cao Cao": {
+      "cost": {
+        "Food": 500,
+        "Gold": 500
+      },
+      "time": 60,
+      "hp": 475,
+      "attack": 14,
+      "melee": 3,
+      "pierce": 3,
+      "range": 0,
+      "speed": 1.3,
+      "reload": 2
+    },
+    "Jian Swordsman": {
+      "cost": {
+        "Food": 45,
+        "Gold": 50
+      },
+      "time": 35,
+      "hp": 70,
+      "attack": 8,
+      "melee": 0,
+      "pierce": 5,
+      "range": 0,
+      "speed": 1,
+      "reload": 2
+    },
+    "Elite Fire Archer": {
+      "cost": {
+        "Gold": 45,
+        "Wood": 45
+      },
+      "time": 17,
+      "hp": 40,
+      "attack": 6,
+      "melee": 0,
+      "pierce": 0,
+      "range": 6,
+      "speed": 0.96,
+      "reload": 3.5
+    },
+    "Sun Jian": {
+      "cost": {
+        "Food": 500,
+        "Gold": 500
+      },
+      "time": 60,
+      "hp": 400,
+      "attack": 15,
+      "melee": 4,
+      "pierce": 4,
+      "range": 0,
+      "speed": 1.55,
+      "reload": 2
+    }
+  },
   "civs": {
     "ARM": {
       "lines": {

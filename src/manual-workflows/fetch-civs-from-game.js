@@ -118,6 +118,30 @@ function parseCiv(text, strings, unitNameIds, unitIds) {
     };
 }
 
+// A tree node's entry in data.json (its cost, stats and string ids)
+function gameEntry(data, node) {
+    return node.kind === "Unit" ? data.data.Unit[node.id] : node.kind === "Tech" ? data.data.Tech[node.id] : undefined;
+}
+
+// Base stats, before any civ bonus or upgrade: the numbers the game's own tech
+// tree shows. Techs only have cost and time.
+function stats(entry) {
+    if (!entry) return null;
+    const cost = Object.fromEntries(Object.entries(entry.Cost || {}).filter(([, v]) => v > 0));
+    if (entry.HP === undefined) return { cost, time: entry.ResearchTime };
+    return {
+        cost,
+        time: entry.TrainTime,
+        hp: entry.HP,
+        attack: entry.Attack,
+        melee: entry.MeleeArmor,
+        pierce: entry.PierceArmor,
+        range: entry.Range,
+        speed: entry.Speed,
+        reload: entry.ReloadTime,
+    };
+}
+
 function mostCommon(values) {
     const counts = new Map();
     for (const v of values) counts.set(v, (counts.get(v) || 0) + 1);
@@ -194,10 +218,20 @@ async function main() {
         const treeNames = Object.fromEntries(
             used.map((n) => [n, (strings[String(nodeInfo.get(n).nameStringId)] || n).replace(/<br>\s*/g, " ").trim()])
         );
+        // The game's help text for each tree icon ("Strong vs. …" for units,
+        // the effect for techs), for the tooltip
+        const treeHelp = Object.fromEntries(
+            used.flatMap((n) => {
+                const entry = gameEntry(data, nodeInfo.get(n));
+                const help = entry ? unitHelp(strings, entry.LanguageNameId) : "";
+                return help ? [[n, help]] : [];
+            })
+        );
         const out = writeData(`game-${lang}.json`, {
             source: `${REPO}@${commit.slice(0, 7)}`,
             labels,
             treeNames,
+            treeHelp,
             civs,
         });
         const note = unitsWithoutHelp ? ` (${unitsWithoutHelp} unique units without a help text)` : "";
@@ -209,6 +243,10 @@ async function main() {
         source: `${REPO}@${commit.slice(0, 7)}`,
         lines: LINES.map(({ id, group, core }) => ({ id, group, core })),
         icons,
+        stats: Object.fromEntries(used.flatMap((n) => {
+            const st = stats(gameEntry(data, nodeInfo.get(n)));
+            return st ? [[n, st]] : [];
+        })),
         civs: treeCivs,
     });
     fs.mkdirSync(ICON_DIR, { recursive: true });

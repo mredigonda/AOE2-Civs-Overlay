@@ -59,6 +59,17 @@
             lacks: "lacks",
             complete: "complete",
             none: "doesn't have",
+            hp: "HP",
+            attack: "Attack",
+            armor: "Armor",
+            range: "Range",
+            speed: "Speed",
+            reload: "Reload",
+            Food: "food",
+            Wood: "wood",
+            Gold: "gold",
+            Stone: "stone",
+            baseStats: "Base values, before civ bonuses and upgrades",
         },
         es: {
             you: "Tu civ",
@@ -88,6 +99,17 @@
             lacks: "le falta",
             complete: "completo",
             none: "no tiene",
+            hp: "PR",
+            attack: "Ataque",
+            armor: "Armadura",
+            range: "Alcance",
+            speed: "Velocidad",
+            reload: "Recarga",
+            Food: "alimento",
+            Wood: "madera",
+            Gold: "oro",
+            Stone: "piedra",
+            baseStats: "Valores base, sin bonos de la civ ni mejoras",
         },
     };
 
@@ -142,6 +164,7 @@
     let data = { civs: [], labels: {}, source: "" };
     let tree = null; // ui/data/tree.json
     let treeNames = {}; // English node name → name in the current language
+    let treeHelp = {}; // English node name → the game's help text, in the current language
     const pickers = {};
     const cache = new Map();
 
@@ -179,19 +202,85 @@
         return section;
     }
 
-    function icon(name, className, tip) {
+    // status: what the tooltip says about it for this civ ("lacks", "complete"…)
+    function icon(name, className, status) {
         const img = el("img", className);
         img.src = tree.icons[name];
-        img.alt = img.title = tip || treeNames[name] || name;
+        img.alt = treeNames[name] || name;
+        img.dataset.node = name;
+        if (status) img.dataset.status = status;
         return img;
     }
 
     // The red cross the game's tech tree draws over what a civ can't get
-    function crossed(name, tip) {
+    function crossed(name, status) {
         const wrap = el("span", "tree-x");
-        wrap.append(icon(name, "tree-icon", tip));
+        wrap.append(icon(name, "tree-icon", status));
         return wrap;
     }
+
+    // ---- tooltip: shows at once on hover (the native one waits a second) ----
+    const tip = el("div", "tip");
+    tip.hidden = true;
+    document.body.append(tip);
+
+    const number = (n) => String(Math.round(n * 100) / 100);
+
+    function fillTip(name, status) {
+        tip.replaceChildren();
+        const head = el("div", "tip-head");
+        head.append(el("strong", "", treeNames[name] || name));
+        if (status) head.append(el("span", `tip-status ${status}`, t(status)));
+        tip.append(head);
+        if (treeHelp[name]) tip.append(el("p", "tip-help", treeHelp[name]));
+        const st = tree.stats?.[name];
+        if (!st) return;
+        if (st.hp !== undefined) {
+            const stats = el("div", "tip-stats");
+            const add = (label, value) => {
+                const cell = el("span");
+                cell.append(el("b", "", value), document.createTextNode(" " + label));
+                stats.append(cell);
+            };
+            add(t("hp"), number(st.hp));
+            add(t("attack"), number(st.attack));
+            add(t("armor"), `${number(st.melee)}/${number(st.pierce)}`);
+            if (st.range) add(t("range"), number(st.range));
+            add(t("speed"), number(st.speed));
+            if (st.reload) add(t("reload"), number(st.reload) + " s");
+            tip.append(stats);
+        }
+        const cost = Object.entries(st.cost || {}).map(([r, v]) => `${v} ${t(r)}`);
+        if (st.time) cost.push(`${number(st.time)} s`);
+        if (cost.length) tip.append(el("div", "tip-cost", cost.join(" · ")));
+        if (st.hp !== undefined) tip.append(el("div", "tip-note", t("baseStats")));
+    }
+
+    function placeTip(target) {
+        const r = target.getBoundingClientRect();
+        const width = document.documentElement.clientWidth;
+        tip.style.left = "0px";
+        tip.style.top = "0px";
+        const w = tip.offsetWidth;
+        tip.style.left = `${Math.max(4, Math.min(r.left, width - w - 4)) + window.scrollX}px`;
+        // Below the icon; the window grows to fit it (see fit) and shrinks back
+        tip.style.top = `${r.bottom + 6 + window.scrollY}px`;
+    }
+
+    document.addEventListener("mouseover", (e) => {
+        const target = e.target.closest?.("[data-node]");
+        if (!target) return;
+        fillTip(target.dataset.node, target.dataset.status);
+        tip.hidden = false;
+        placeTip(target);
+        fit();
+    });
+    document.addEventListener("mouseout", (e) => {
+        const target = e.target.closest?.("[data-node]");
+        if (!target || target.contains(e.relatedTarget)) return;
+        tip.hidden = true;
+        fit();
+    });
 
     // What the civ lacks, line by line, as the game's icons: for each line with
     // gaps, its best unit and then each missing upgrade or tech, crossed out.
@@ -207,7 +296,7 @@
             const row = el("div", "tree-row tree-unique");
             for (const u of summary.unique) {
                 row.append(icon(u.best, "tree-icon best"));
-                for (const m of u.missing) row.append(crossed(m, `${t("lacks")}: ${treeNames[m] || m}`));
+                for (const m of u.missing) row.append(crossed(m, "lacks"));
             }
             wrap.append(row);
         }
@@ -217,14 +306,12 @@
             if (!settings.treeGroups[line.group]) continue;
             const s = lines[line.id];
             if (!s) continue;
-            if (s.none) none.append(crossed(s.none, `${t("none")}: ${treeNames[s.none] || s.none}`));
-            else if (!s.missing.length) full.append(icon(s.best, "tree-icon small", `${treeNames[s.best]} · ${t("complete")}`));
+            if (s.none) none.append(crossed(s.none, "none"));
+            else if (!s.missing.length) full.append(icon(s.best, "tree-icon small", "complete"));
             else {
                 const row = el("div", "tree-row");
                 if (s.best) row.append(icon(s.best, "tree-icon best"));
-                const names = s.missing.map((m) => treeNames[m] || m).join(", ");
-                for (const m of s.missing) row.append(crossed(m, `${t("lacks")}: ${treeNames[m] || m}`));
-                row.title = `${s.best ? treeNames[s.best] + " · " : ""}${t("lacks")}: ${names}`;
+                for (const m of s.missing) row.append(crossed(m, "lacks"));
                 wrap.append(row);
             }
         }
@@ -290,7 +377,7 @@
             fitQueued = false;
             const root = $("root");
             let bottom = root.scrollHeight;
-            for (const dropdown of document.querySelectorAll(".pick-list:not([hidden])")) {
+            for (const dropdown of document.querySelectorAll(".pick-list:not([hidden]), .tip:not([hidden])")) {
                 bottom = Math.max(bottom, dropdown.getBoundingClientRect().bottom + window.scrollY + 8);
             }
             invoke("fit_window", { width: root.offsetWidth, height: Math.ceil(bottom) });
@@ -299,7 +386,9 @@
 
     async function loadTreeNames() {
         const source = language().names || language().id;
-        treeNames = (await loadLanguage(source)).treeNames || {};
+        const names = await loadLanguage(source);
+        treeNames = names.treeNames || {};
+        treeHelp = names.treeHelp || {};
     }
 
     async function loadLanguage(id) {

@@ -149,7 +149,14 @@ function nodeIndex(tree) {
         const prev = nodes.get(n.name);
         const available = n.node_status !== "NotAvailable";
         if (!prev || (available && !prev.available))
-            nodes.set(n.name, { available, icon: `${n.use_type}/${n.picture_index}`, nameStringId: n.name_string_id });
+            nodes.set(n.name, {
+                available,
+                icon: `${n.use_type}/${n.picture_index}`,
+                nameStringId: n.name_string_id,
+                // Where data.json keeps its stats: data.Unit[id] or data.Tech[id]
+                kind: n.use_type,
+                id: n.node_id,
+            });
     }
     return nodes;
 }
