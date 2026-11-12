@@ -20,6 +20,7 @@ civilization stops the scripts and asks for its code in `civCodes` (`lib.js`).
 |---|---|---|
 | `en-fandom.json` | `fetch-civs-from-fandom.js`, then `parse-civs-from-pasted.js` | [English Fandom](https://ageofempires.fandom.com/wiki/Civilization_(Age_of_Empires_II)): the most exact numbers |
 | `game-<lang>.json` (17 languages) | `fetch-civs-from-game.js` | The game's own strings, via [aoe2techtree](https://github.com/SiegeEngineers/aoe2techtree) (MIT): official names, always current |
+| `tree.json`, `ui/img/tree/` | `fetch-civs-from-game.js` (with `tech-tree.js`) | aoe2techtree's per-civ tech trees: what each civ lacks, line by line, and the icons for it |
 | `es-fandom.json` | `fetch-civs-from-fandom-es.js` (after the game script) | [Spanish Fandom](https://ageofempires.fandom.com/es/), one page per civ |
 
 What each source is good for:
@@ -32,3 +33,11 @@ What each source is good for:
 - **Spanish Fandom**: as detailed as the English one on most pages, but a few lag behind
   the game (in November 2026: the Bohemians' Wagenburg Tactics still said 15% instead of
   10%, the Byzantines' Logistica +6 attack vs infantry) and a few pages miss a bonus.
+
+The tech tree lines (which units and techs each line has, regional replacements such
+as the Mounted Crossbowman for the Cavalry Archer, unique replacements such as the Winged
+Hussar) are in `tech-tree.js`.
+
+The icons are Age of Empires II art, © Microsoft, used under Microsoft's
+[Game Content Usage Rules](https://www.xbox.com/en-US/developers/rules) for free fan
+tools, as aoe2techtree.net does.

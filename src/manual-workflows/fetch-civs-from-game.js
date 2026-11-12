@@ -6,9 +6,17 @@
 // Source: https://github.com/SiegeEngineers/aoe2techtree (MIT), which extracts
 // data.json and data/locales/<lang>/strings.json from the game files.
 //
+// Also writes ui/data/tree.json (what each civ lacks, line by line, from the
+// tech trees) and the icons it needs in ui/img/tree/.
+//
 // Usage: node fetch-civs-from-game.js
 
-const { civCodes, gameNameAliases, fetchJson, writeData } = require("./lib");
+const fs = require("fs");
+const path = require("path");
+const { civCodes, gameNameAliases, fetchJson, writeData, DATA_DIR } = require("./lib");
+const { LINES, summarize, allNames } = require("./tech-tree");
+
+const ICON_DIR = path.join(DATA_DIR, "..", "img", "tree");
 
 const REPO = "SiegeEngineers/aoe2techtree";
 const LANGS = ["br", "de", "en", "es", "fr", "hi", "it", "jp", "ko", "ms", "mx", "pl", "ru", "tr", "tw", "vi", "zh"];
@@ -122,6 +130,19 @@ async function main() {
     const data = await raw("data.json");
     const en = await raw("locales/en/strings.json");
 
+    // Tech trees: what each civ lacks, line by line (see tech-tree.js)
+    const treeCivs = {};
+    const nodeInfo = new Map(); // English node name → { icon, nameStringId }
+    for (const internal of Object.keys(data.civs)) {
+        const tree = await raw(`trees/${internal.toUpperCase()}.json`);
+        const { lines, nodes } = summarize(tree);
+        treeCivs[civCodes[gameNameAliases[internal] || internal]] = lines;
+        for (const [name, info] of nodes) if (!nodeInfo.has(name)) nodeInfo.set(name, info);
+    }
+    const unknown = [...allNames()].filter((n) => !nodeInfo.has(n));
+    if (unknown.length) throw new Error(`tech-tree.js names not in any tree: ${unknown.join(", ")}`);
+    const used = [...allNames()];
+
     const unitIdsByCiv = {};
     // English first: it fixes which unit each entry is, for every other language.
     for (const lang of ["en", ...LANGS.filter((l) => l !== "en")]) {
@@ -165,10 +186,36 @@ async function main() {
             uniqueTechnologies: mostCommon(headings.map((h) => h[1])),
             teamBonus: mostCommon(headings.map((h) => h[2])),
         };
-        const out = writeData(`game-${lang}.json`, { source: `${REPO}@${commit.slice(0, 7)}`, labels, civs });
+        const treeNames = Object.fromEntries(
+            used.map((n) => [n, (strings[String(nodeInfo.get(n).nameStringId)] || n).replace(/<br>\s*/g, " ").trim()])
+        );
+        const out = writeData(`game-${lang}.json`, {
+            source: `${REPO}@${commit.slice(0, 7)}`,
+            labels,
+            treeNames,
+            civs,
+        });
         const note = unitsWithoutHelp ? ` (${unitsWithoutHelp} unique units without a help text)` : "";
         console.log(`${lang}: ${civs.length} civs → ${out}${note}`);
     }
+
+    const icons = Object.fromEntries(used.map((n) => [n, `img/tree/${nodeInfo.get(n).icon.replace("/", "-")}.png`]));
+    writeData("tree.json", {
+        source: `${REPO}@${commit.slice(0, 7)}`,
+        lines: LINES.map(({ id, group, core }) => ({ id, group, core })),
+        icons,
+        civs: treeCivs,
+    });
+    fs.mkdirSync(ICON_DIR, { recursive: true });
+    for (const n of used) {
+        const icon = nodeInfo.get(n).icon;
+        const file = path.join(ICON_DIR, `${icon.replace("/", "-")}.png`);
+        if (fs.existsSync(file)) continue;
+        const res = await fetch(`https://raw.githubusercontent.com/${REPO}/${commit}/img/${icon}.png`);
+        if (!res.ok) throw new Error(`icon ${icon} (${n}): ${res.status}`);
+        fs.writeFileSync(file, Buffer.from(await res.arrayBuffer()));
+    }
+    console.log(`tree: ${Object.keys(treeCivs).length} civs, ${used.length} icons in ${ICON_DIR}`);
 }
 
 main().catch((e) => {

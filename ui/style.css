@@ -138,7 +138,8 @@ html {
     display: none;
 }
 
-#section-toggles {
+#section-toggles,
+#tree-group-toggles {
     display: flex;
     flex-wrap: wrap;
     gap: 2px 14px;
@@ -233,4 +234,75 @@ html {
 
 .block strong {
     color: #fff;
+}
+
+/* Tech tree: best unit of each line, then what it lacks, crossed out */
+.tree {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 8px;
+}
+
+.tree-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3px;
+}
+
+.tree-icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+}
+
+.tree-icon.best {
+    width: 36px;
+    height: 36px;
+    margin-right: 4px;
+    outline: 1px solid var(--gold);
+}
+
+.tree-icon.small {
+    width: 28px;
+    height: 28px;
+}
+
+.tree-full::before,
+.tree-none::before {
+    width: 36px;
+    margin-right: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tree-full::before {
+    content: "✓";
+    color: #7ccf6b;
+}
+
+.tree-none::before {
+    content: "✗";
+    color: #e5534b;
+}
+
+/* The red cross the game's tech tree draws over what a civ can't get */
+.tree-x {
+    position: relative;
+    display: block;
+}
+
+.tree-x img {
+    filter: grayscale(0.4) brightness(0.85);
+}
+
+.tree-x::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to top right, transparent calc(50% - 1px), rgba(229, 83, 75, 0.85) calc(50% - 1px), rgba(229, 83, 75, 0.85) calc(50% + 1px), transparent calc(50% + 1px)),
+        linear-gradient(to bottom right, transparent calc(50% - 1px), rgba(229, 83, 75, 0.85) calc(50% - 1px), rgba(229, 83, 75, 0.85) calc(50% + 1px), transparent calc(50% + 1px));
 }

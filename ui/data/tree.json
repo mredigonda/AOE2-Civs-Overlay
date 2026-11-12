@@ -1,0 +1,6218 @@
+{
+  "source": "SiegeEngineers/aoe2techtree@e56728e",
+  "lines": [
+    {
+      "id": "archers",
+      "group": "army",
+      "core": true
+    },
+    {
+      "id": "skirmishers",
+      "group": "army",
+      "core": true
+    },
+    {
+      "id": "cavalryArchers",
+      "group": "army",
+      "core": true
+    },
+    {
+      "id": "infantry",
+      "group": "army",
+      "core": true
+    },
+    {
+      "id": "spearmen",
+      "group": "army",
+      "core": true
+    },
+    {
+      "id": "knights",
+      "group": "army",
+      "core": true
+    },
+    {
+      "id": "scouts",
+      "group": "army",
+      "core": true
+    },
+    {
+      "id": "camels",
+      "group": "army",
+      "core": false
+    },
+    {
+      "id": "elephants",
+      "group": "army",
+      "core": false
+    },
+    {
+      "id": "elephantArchers",
+      "group": "army",
+      "core": false
+    },
+    {
+      "id": "steppeLancers",
+      "group": "army",
+      "core": false
+    },
+    {
+      "id": "heiGuang",
+      "group": "army",
+      "core": false
+    },
+    {
+      "id": "eagles",
+      "group": "army",
+      "core": false
+    },
+    {
+      "id": "varangianGuard",
+      "group": "army",
+      "core": false
+    },
+    {
+      "id": "fireLancers",
+      "group": "army",
+      "core": false
+    },
+    {
+      "id": "slingers",
+      "group": "army",
+      "core": false
+    },
+    {
+      "id": "handCannoneers",
+      "group": "army",
+      "core": true
+    },
+    {
+      "id": "rams",
+      "group": "army",
+      "core": true
+    },
+    {
+      "id": "mangonels",
+      "group": "army",
+      "core": true
+    },
+    {
+      "id": "scorpions",
+      "group": "army",
+      "core": true
+    },
+    {
+      "id": "bombardCannons",
+      "group": "army",
+      "core": true
+    },
+    {
+      "id": "monks",
+      "group": "army",
+      "core": true
+    },
+    {
+      "id": "economy",
+      "group": "economy",
+      "core": true
+    },
+    {
+      "id": "defense",
+      "group": "defense",
+      "core": true
+    },
+    {
+      "id": "galleys",
+      "group": "navy",
+      "core": true
+    },
+    {
+      "id": "fireShips",
+      "group": "navy",
+      "core": true
+    },
+    {
+      "id": "demolitionShips",
+      "group": "navy",
+      "core": true
+    },
+    {
+      "id": "cannonGalleons",
+      "group": "navy",
+      "core": true
+    },
+    {
+      "id": "regionalShips",
+      "group": "navy",
+      "core": false
+    }
+  ],
+  "icons": {
+    "Archer": "img/tree/Unit-17.png",
+    "Crossbowman": "img/tree/Unit-18.png",
+    "Arbalester": "img/tree/Unit-90.png",
+    "Fletching": "img/tree/Tech-34.png",
+    "Bodkin Arrow": "img/tree/Tech-35.png",
+    "Bracer": "img/tree/Tech-37.png",
+    "Padded Archer Armor": "img/tree/Tech-49.png",
+    "Leather Archer Armor": "img/tree/Tech-50.png",
+    "Ring Archer Armor": "img/tree/Tech-51.png",
+    "Thumb Ring": "img/tree/Tech-112.png",
+    "Skirmisher": "img/tree/Unit-20.png",
+    "Elite Skirmisher": "img/tree/Unit-21.png",
+    "Imperial Skirmisher": "img/tree/Unit-229.png",
+    "Cavalry Archer": "img/tree/Unit-19.png",
+    "Heavy Cavalry Archer": "img/tree/Unit-71.png",
+    "Mounted Crossbowman": "img/tree/Unit-900.png",
+    "Heavy Mounted Crossbowman": "img/tree/Unit-901.png",
+    "Parthian Tactics": "img/tree/Tech-111.png",
+    "Militia": "img/tree/Unit-8.png",
+    "Man-at-Arms": "img/tree/Unit-10.png",
+    "Long Swordsman": "img/tree/Unit-13.png",
+    "Two-Handed Swordsman": "img/tree/Unit-12.png",
+    "Champion": "img/tree/Unit-72.png",
+    "Champi Scout": "img/tree/Unit-540.png",
+    "Champi Runner": "img/tree/Unit-555.png",
+    "Champi Warrior": "img/tree/Unit-541.png",
+    "Elite Champi Warrior": "img/tree/Unit-542.png",
+    "Forging": "img/tree/Tech-17.png",
+    "Iron Casting": "img/tree/Tech-18.png",
+    "Blast Furnace": "img/tree/Tech-21.png",
+    "Scale Mail Armor": "img/tree/Tech-63.png",
+    "Chain Mail Armor": "img/tree/Tech-22.png",
+    "Plate Mail Armor": "img/tree/Tech-64.png",
+    "Squires": "img/tree/Tech-80.png",
+    "Gambesons": "img/tree/Tech-116.png",
+    "Arson": "img/tree/Tech-118.png",
+    "Legionary": "img/tree/Unit-139.png",
+    "Spearman": "img/tree/Unit-31.png",
+    "Pikeman": "img/tree/Unit-11.png",
+    "Halberdier": "img/tree/Unit-104.png",
+    "Knight": "img/tree/Unit-1.png",
+    "Cavalier": "img/tree/Unit-49.png",
+    "Paladin": "img/tree/Unit-2.png",
+    "Bloodlines": "img/tree/Tech-110.png",
+    "Husbandry": "img/tree/Tech-10.png",
+    "Scale Barding Armor": "img/tree/Tech-66.png",
+    "Chain Barding Armor": "img/tree/Tech-23.png",
+    "Plate Barding Armor": "img/tree/Tech-65.png",
+    "Scout Cavalry": "img/tree/Unit-64.png",
+    "Light Cavalry": "img/tree/Unit-91.png",
+    "Hussar": "img/tree/Unit-103.png",
+    "Camel Scout": "img/tree/Unit-392.png",
+    "Winged Hussar": "img/tree/Unit-371.png",
+    "Camel Rider": "img/tree/Unit-78.png",
+    "Heavy Camel Rider": "img/tree/Unit-79.png",
+    "Imperial Camel Rider": "img/tree/Unit-185.png",
+    "Battle Elephant": "img/tree/Unit-228.png",
+    "Elite Battle Elephant": "img/tree/Unit-246.png",
+    "Elephant Archer": "img/tree/Unit-393.png",
+    "Elite Elephant Archer": "img/tree/Unit-93.png",
+    "Steppe Lancer": "img/tree/Unit-273.png",
+    "Elite Steppe Lancer": "img/tree/Unit-274.png",
+    "Hei Guang Cavalry": "img/tree/Unit-429.png",
+    "Heavy Hei Guang Cavalry": "img/tree/Unit-430.png",
+    "Eagle Scout": "img/tree/Unit-109.png",
+    "Eagle Warrior": "img/tree/Unit-148.png",
+    "Elite Eagle Warrior": "img/tree/Unit-149.png",
+    "Varangian Guard": "img/tree/Unit-902.png",
+    "Elite Varangian Guard": "img/tree/Unit-903.png",
+    "Fire Lancer": "img/tree/Unit-457.png",
+    "Elite Fire Lancer": "img/tree/Unit-458.png",
+    "Slinger": "img/tree/Unit-143.png",
+    "Hand Cannoneer": "img/tree/Unit-22.png",
+    "Battering Ram": "img/tree/Unit-74.png",
+    "Capped Ram": "img/tree/Unit-63.png",
+    "Siege Ram": "img/tree/Unit-73.png",
+    "Armored Elephant": "img/tree/Unit-394.png",
+    "Siege Elephant": "img/tree/Unit-395.png",
+    "Siege Engineers": "img/tree/Tech-101.png",
+    "Mangonel": "img/tree/Unit-27.png",
+    "Onager": "img/tree/Unit-101.png",
+    "Siege Onager": "img/tree/Unit-102.png",
+    "Rocket Cart": "img/tree/Unit-459.png",
+    "Heavy Rocket Cart": "img/tree/Unit-460.png",
+    "Scorpion": "img/tree/Unit-80.png",
+    "Heavy Scorpion": "img/tree/Unit-89.png",
+    "Bombard Cannon": "img/tree/Unit-30.png",
+    "Monk": "img/tree/Unit-292.png",
+    "Redemption": "img/tree/Tech-92.png",
+    "Atonement": "img/tree/Tech-93.png",
+    "Herbal Medicine": "img/tree/Tech-114.png",
+    "Sanctity": "img/tree/Tech-83.png",
+    "Fervor": "img/tree/Tech-73.png",
+    "Theocracy": "img/tree/Tech-109.png",
+    "Illumination": "img/tree/Tech-84.png",
+    "Block Printing": "img/tree/Tech-82.png",
+    "Faith": "img/tree/Tech-11.png",
+    "Heresy": "img/tree/Tech-108.png",
+    "Wheelbarrow": "img/tree/Tech-79.png",
+    "Hand Cart": "img/tree/Tech-42.png",
+    "Double-Bit Axe": "img/tree/Tech-70.png",
+    "Bow Saw": "img/tree/Tech-71.png",
+    "Two-Man Saw": "img/tree/Tech-81.png",
+    "Horse Collar": "img/tree/Tech-2.png",
+    "Heavy Plow": "img/tree/Tech-1.png",
+    "Crop Rotation": "img/tree/Tech-0.png",
+    "Gold Mining": "img/tree/Tech-15.png",
+    "Gold Shaft Mining": "img/tree/Tech-62.png",
+    "Stone Mining": "img/tree/Tech-87.png",
+    "Stone Shaft Mining": "img/tree/Tech-88.png",
+    "Caravan": "img/tree/Tech-113.png",
+    "Guilds": "img/tree/Tech-58.png",
+    "Masonry": "img/tree/Tech-13.png",
+    "Architecture": "img/tree/Tech-14.png",
+    "Keep": "img/tree/Tech-16.png",
+    "Bombard Tower": "img/tree/Tech-47.png",
+    "Arrowslits": "img/tree/Tech-119.png",
+    "Heated Shot": "img/tree/Tech-104.png",
+    "Murder Holes": "img/tree/Tech-61.png",
+    "Hoardings": "img/tree/Tech-103.png",
+    "Fortified Wall": "img/tree/Tech-46.png",
+    "Galley": "img/tree/Unit-87.png",
+    "War Galley": "img/tree/Unit-25.png",
+    "Galleon": "img/tree/Unit-60.png",
+    "Careening": "img/tree/Tech-98.png",
+    "Dry Dock": "img/tree/Tech-99.png",
+    "Shipwright": "img/tree/Tech-97.png",
+    "Fire Galley": "img/tree/Unit-203.png",
+    "Fire Ship": "img/tree/Unit-86.png",
+    "Fast Fire Ship": "img/tree/Unit-85.png",
+    "Demolition Raft": "img/tree/Unit-202.png",
+    "Demolition Ship": "img/tree/Unit-84.png",
+    "Heavy Demolition Ship": "img/tree/Unit-83.png",
+    "Cannon Galleon": "img/tree/Unit-55.png",
+    "Elite Cannon Galleon": "img/tree/Unit-298.png",
+    "Longship": "img/tree/Unit-40.png",
+    "Elite Longship": "img/tree/Unit-474.png",
+    "Dromon": "img/tree/Unit-406.png",
+    "Lou Chuan": "img/tree/Unit-431.png",
+    "Catapult Galleon": "img/tree/Unit-591.png"
+  },
+  "civs": {
+    "ARM": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Cavalry Archer",
+        "missing": [
+          "Heavy Cavalry Archer",
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin",
+          "Plate Barding Armor"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": [
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": []
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Crop Rotation",
+          "Stone Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Keep",
+          "Arrowslits"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Dromon",
+        "missing": []
+      }
+    },
+    "AZT": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Ring Archer Armor",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "none": "Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Pikeman",
+        "missing": [
+          "Halberdier"
+        ]
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "none": "Scout Cavalry",
+        "missing": []
+      },
+      "eagles": {
+        "best": "Elite Eagle Warrior",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": []
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Masonry",
+          "Architecture",
+          "Keep",
+          "Bombard Tower",
+          "Hoardings"
+        ]
+      },
+      "galleys": {
+        "best": "War Galley",
+        "missing": [
+          "Galleon",
+          "Dry Dock"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Catapult Galleon",
+        "missing": []
+      }
+    },
+    "BENG": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "none": "Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Plate Mail Armor"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "elephants": {
+        "best": "Elite Battle Elephant",
+        "missing": []
+      },
+      "elephantArchers": {
+        "best": "Elite Elephant Archer",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Elephant",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Stone Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower",
+          "Hoardings"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "BER": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Pikeman",
+        "missing": [
+          "Halberdier"
+        ]
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "camels": {
+        "best": "Heavy Camel Rider",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Sanctity",
+          "Block Printing"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Keep",
+          "Bombard Tower"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "BOH": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Mounted Crossbowman",
+        "missing": [
+          "Heavy Mounted Crossbowman",
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin",
+          "Bloodlines",
+          "Plate Barding Armor"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": []
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Heated Shot",
+          "Hoardings"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock",
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "BRI": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Mounted Crossbowman",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin",
+          "Bloodlines"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Atonement",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation",
+          "Stone Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "BUL": {
+      "archers": {
+        "best": "Archer",
+        "missing": [
+          "Crossbowman",
+          "Arbalester",
+          "Ring Archer Armor"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Two-Handed Swordsman",
+        "missing": [
+          "Champion"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Atonement",
+          "Sanctity",
+          "Block Printing",
+          "Faith"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower",
+          "Arrowslits",
+          "Hoardings",
+          "Fortified Wall"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock",
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "BURGU": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Ring Archer Armor",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Mounted Crossbowman",
+        "missing": [
+          "Heavy Mounted Crossbowman",
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Paladin",
+        "missing": [
+          "Bloodlines"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram",
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Theocracy",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": []
+      },
+      "defense": {
+        "missing": [
+          "Heated Shot"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock",
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "BUR": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Leather Archer Armor",
+          "Ring Archer Armor",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "elephants": {
+        "best": "Elite Battle Elephant",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Stone Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower",
+          "Arrowslits",
+          "Hoardings"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "BYZ": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Blast Furnace"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Paladin",
+        "missing": [
+          "Bloodlines"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "camels": {
+        "best": "Heavy Camel Rider",
+        "missing": []
+      },
+      "varangianGuard": {
+        "best": "Elite Varangian Guard",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": [
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Herbal Medicine"
+        ]
+      },
+      "economy": {
+        "missing": []
+      },
+      "defense": {
+        "missing": [
+          "Masonry",
+          "Architecture",
+          "Heated Shot"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Dromon",
+        "missing": []
+      }
+    },
+    "CEL": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Bracer",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Mounted Crossbowman",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Squires"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Paladin",
+        "missing": [
+          "Bloodlines",
+          "Plate Barding Armor"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Atonement",
+          "Theocracy",
+          "Illumination",
+          "Block Printing"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Crop Rotation"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Bombard Tower"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "CHI": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Cavalry Archer",
+        "missing": [
+          "Heavy Cavalry Archer",
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "fireLancers": {
+        "best": "Elite Fire Lancer",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": [
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Heavy Rocket Cart",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Hoardings"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Lou Chuan",
+        "missing": []
+      }
+    },
+    "CUM": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Bracer"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Paladin",
+        "missing": [
+          "Husbandry"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "camels": {
+        "best": "Camel Rider",
+        "missing": [
+          "Heavy Camel Rider"
+        ]
+      },
+      "steppeLancers": {
+        "best": "Elite Steppe Lancer",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": [
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Theocracy",
+          "Illumination",
+          "Block Printing"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Stone Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Keep",
+          "Bombard Tower",
+          "Arrowslits",
+          "Fortified Wall"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock",
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Catapult Galleon",
+        "missing": []
+      }
+    },
+    "DAN": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Mounted Crossbowman",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Knight",
+        "missing": [
+          "Cavalier",
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "varangianGuard": {
+        "best": "Elite Varangian Guard",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Atonement",
+          "Herbal Medicine",
+          "Faith",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Crop Rotation",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Bombard Tower",
+          "Fortified Wall"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "none": "Demolition Raft",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Elite Longship",
+        "missing": []
+      }
+    },
+    "DRAV": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "none": "Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "elephants": {
+        "best": "Battle Elephant",
+        "missing": [
+          "Elite Battle Elephant"
+        ]
+      },
+      "elephantArchers": {
+        "best": "Elite Elephant Archer",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Elephant",
+        "missing": [
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Fervor",
+          "Illumination",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation",
+          "Gold Shaft Mining",
+          "Stone Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "ETH": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Two-Handed Swordsman",
+        "missing": [
+          "Champion",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin",
+          "Bloodlines",
+          "Plate Barding Armor"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "camels": {
+        "best": "Heavy Camel Rider",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Block Printing"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower",
+          "Arrowslits",
+          "Hoardings"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "FRK": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Bracer",
+          "Ring Archer Armor",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Mounted Crossbowman",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Paladin",
+        "missing": [
+          "Bloodlines"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Atonement"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Stone Shaft Mining",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Keep",
+          "Bombard Tower",
+          "Heated Shot"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "GEO": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Ring Archer Armor",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Atonement",
+          "Illumination"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Gold Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower",
+          "Heated Shot"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock",
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "GOT": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Plate Mail Armor",
+          "Gambesons",
+          "Arson"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin",
+          "Plate Barding Armor"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram",
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Atonement",
+          "Block Printing",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Gold Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Keep",
+          "Bombard Tower",
+          "Arrowslits",
+          "Hoardings",
+          "Fortified Wall"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Dromon",
+        "missing": []
+      }
+    },
+    "GURJ": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Ring Archer Armor"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "none": "Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Two-Handed Swordsman",
+        "missing": [
+          "Champion",
+          "Blast Furnace",
+          "Squires",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Spearman",
+        "missing": [
+          "Pikeman",
+          "Halberdier"
+        ]
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "camels": {
+        "best": "Heavy Camel Rider",
+        "missing": []
+      },
+      "elephantArchers": {
+        "best": "Elite Elephant Archer",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Elephant",
+        "missing": [
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Block Printing",
+          "Faith"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower",
+          "Arrowslits"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock"
+        ]
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "HIN": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Plate Mail Armor",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Pikeman",
+        "missing": [
+          "Halberdier"
+        ]
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "camels": {
+        "best": "Imperial Camel Rider",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Elephant",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Atonement",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Keep",
+          "Bombard Tower",
+          "Arrowslits",
+          "Heated Shot"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock",
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "HUN": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Ring Archer Armor"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Two-Handed Swordsman",
+        "missing": [
+          "Champion",
+          "Plate Mail Armor",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Paladin",
+        "missing": []
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": [
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Mangonel",
+        "missing": [
+          "Onager",
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Herbal Medicine",
+          "Theocracy",
+          "Block Printing"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation",
+          "Stone Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Keep",
+          "Bombard Tower",
+          "Arrowslits",
+          "Heated Shot",
+          "Hoardings",
+          "Fortified Wall"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Dromon",
+        "missing": []
+      }
+    },
+    "INC": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "none": "Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Elite Champi Warrior",
+        "missing": [
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "none": "Scout Cavalry",
+        "missing": []
+      },
+      "slingers": {
+        "best": "Slinger",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Atonement",
+          "Fervor"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Bombard Tower"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Catapult Galleon",
+        "missing": []
+      }
+    },
+    "ITA": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Mounted Crossbowman",
+        "missing": [
+          "Heavy Mounted Crossbowman",
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Pikeman",
+        "missing": [
+          "Halberdier"
+        ]
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram",
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Gold Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": []
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "JAP": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin",
+          "Plate Barding Armor"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation",
+          "Stone Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Bombard Tower",
+          "Heated Shot"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "JUR": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Man-at-Arms",
+        "missing": [
+          "Long Swordsman",
+          "Two-Handed Swordsman",
+          "Champion",
+          "Plate Mail Armor"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "steppeLancers": {
+        "best": "Elite Steppe Lancer",
+        "missing": []
+      },
+      "fireLancers": {
+        "best": "Elite Fire Lancer",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Heavy Rocket Cart",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Faith",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": []
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower",
+          "Heated Shot"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock",
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Lou Chuan",
+        "missing": []
+      }
+    },
+    "KHI": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Blast Furnace"
+        ]
+      },
+      "spearmen": {
+        "best": "Pikeman",
+        "missing": [
+          "Halberdier"
+        ]
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "camels": {
+        "best": "Heavy Camel Rider",
+        "missing": []
+      },
+      "steppeLancers": {
+        "best": "Elite Steppe Lancer",
+        "missing": []
+      },
+      "fireLancers": {
+        "best": "Elite Fire Lancer",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Heavy Rocket Cart",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Herbal Medicine",
+          "Block Printing"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Horse Collar",
+          "Heavy Plow",
+          "Crop Rotation",
+          "Gold Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Keep",
+          "Bombard Tower",
+          "Arrowslits",
+          "Hoardings"
+        ]
+      },
+      "galleys": {
+        "best": "War Galley",
+        "missing": [
+          "Galleon",
+          "Dry Dock",
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "KHM": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Two-Handed Swordsman",
+        "missing": [
+          "Champion",
+          "Plate Mail Armor",
+          "Squires",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "elephants": {
+        "best": "Elite Battle Elephant",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Atonement",
+          "Block Printing",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower",
+          "Arrowslits"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "KOR": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Blast Furnace",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin",
+          "Bloodlines",
+          "Plate Barding Armor"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "fireLancers": {
+        "best": "Elite Fire Lancer",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Heavy Rocket Cart",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Atonement",
+          "Illumination",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Hoardings"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "none": "Demolition Raft",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "LIT": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Blast Furnace",
+          "Plate Mail Armor",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Paladin",
+        "missing": []
+      },
+      "scouts": {
+        "best": "Winged Hussar",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram",
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": []
+      },
+      "economy": {
+        "missing": [
+          "Gold Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Arrowslits"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "MAG": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Plate Mail Armor",
+          "Squires",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Paladin",
+        "missing": []
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Atonement",
+          "Faith"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Stone Shaft Mining",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Keep",
+          "Bombard Tower",
+          "Arrowslits",
+          "Fortified Wall"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "MALY": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Cavalry Archer",
+        "missing": [
+          "Heavy Cavalry Archer",
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Two-Handed Swordsman",
+        "missing": [
+          "Champion",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin",
+          "Bloodlines",
+          "Chain Barding Armor",
+          "Plate Barding Armor"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "elephants": {
+        "best": "Elite Battle Elephant",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Fervor",
+          "Theocracy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Arrowslits",
+          "Hoardings",
+          "Fortified Wall"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "MAL": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Bracer"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Blast Furnace",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Pikeman",
+        "missing": [
+          "Halberdier"
+        ]
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "camels": {
+        "best": "Heavy Camel Rider",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram",
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Illumination"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower",
+          "Arrowslits"
+        ]
+      },
+      "galleys": {
+        "best": "War Galley",
+        "missing": [
+          "Galleon",
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "MAPU": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Bracer",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "none": "Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Elite Champi Warrior",
+        "missing": [
+          "Squires",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "none": "Scout Cavalry",
+        "missing": []
+      },
+      "slingers": {
+        "best": "Slinger",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Fervor",
+          "Illumination",
+          "Block Printing"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Keep",
+          "Heated Shot",
+          "Fortified Wall"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock",
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Catapult Galleon",
+        "missing": []
+      }
+    },
+    "MAY": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "none": "Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Two-Handed Swordsman",
+        "missing": [
+          "Champion",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "none": "Scout Cavalry",
+        "missing": []
+      },
+      "eagles": {
+        "best": "Elite Eagle Warrior",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": [
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Illumination"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Gold Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower",
+          "Arrowslits"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Catapult Galleon",
+        "missing": []
+      }
+    },
+    "MON": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Ring Archer Armor"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Pikeman",
+        "missing": [
+          "Halberdier"
+        ]
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin",
+          "Plate Barding Armor"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "camels": {
+        "best": "Heavy Camel Rider",
+        "missing": []
+      },
+      "steppeLancers": {
+        "best": "Elite Steppe Lancer",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Sanctity",
+          "Theocracy",
+          "Illumination",
+          "Block Printing"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Crop Rotation",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Keep",
+          "Bombard Tower",
+          "Arrowslits",
+          "Heated Shot"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "MUI": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Ring Archer Armor"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "none": "Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Elite Champi Warrior",
+        "missing": [
+          "Blast Furnace",
+          "Gambesons",
+          "Arson"
+        ]
+      },
+      "spearmen": {
+        "best": "Pikeman",
+        "missing": [
+          "Halberdier"
+        ]
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "none": "Scout Cavalry",
+        "missing": []
+      },
+      "slingers": {
+        "best": "Slinger",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": []
+      },
+      "economy": {
+        "missing": []
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Bombard Tower",
+          "Arrowslits",
+          "Heated Shot",
+          "Fortified Wall"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Catapult Galleon",
+        "missing": []
+      }
+    },
+    "PER": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Bracer"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Long Swordsman",
+        "missing": [
+          "Two-Handed Swordsman",
+          "Champion"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "camels": {
+        "best": "Heavy Camel Rider",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": [
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Atonement",
+          "Sanctity",
+          "Illumination",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": []
+      },
+      "defense": {
+        "missing": [
+          "Keep",
+          "Bombard Tower",
+          "Arrowslits",
+          "Fortified Wall"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "POL": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Ring Archer Armor"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Mounted Crossbowman",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Pikeman",
+        "missing": [
+          "Halberdier"
+        ]
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin",
+          "Plate Barding Armor"
+        ]
+      },
+      "scouts": {
+        "best": "Winged Hussar",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Atonement",
+          "Illumination",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Gold Shaft Mining",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Heated Shot"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock",
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "POR": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Mounted Crossbowman",
+        "missing": [
+          "Heavy Mounted Crossbowman",
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Squires"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Illumination"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Gold Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Arrowslits",
+          "Hoardings"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "none": "Demolition Raft",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "ROM": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Bracer",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Legionary",
+        "missing": [
+          "Plate Mail Armor",
+          "Gambesons",
+          "Arson"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Sanctity",
+          "Theocracy",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Stone Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower",
+          "Arrowslits",
+          "Heated Shot",
+          "Hoardings"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Dromon",
+        "missing": []
+      }
+    },
+    "SAR": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Pikeman",
+        "missing": [
+          "Halberdier"
+        ]
+      },
+      "knights": {
+        "best": "Knight",
+        "missing": [
+          "Cavalier",
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "camels": {
+        "best": "Heavy Camel Rider",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": []
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation",
+          "Stone Shaft Mining",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Bombard Tower",
+          "Heated Shot"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "SAX": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Mounted Crossbowman",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Blast Furnace"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin",
+          "Plate Barding Armor"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "varangianGuard": {
+        "best": "Elite Varangian Guard",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Fervor"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Stone Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "none": "Demolition Raft",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Elite Longship",
+        "missing": []
+      }
+    },
+    "SHU": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Iron Casting",
+          "Blast Furnace"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "heiGuang": {
+        "best": "Heavy Hei Guang Cavalry",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "none": "Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Herbal Medicine",
+          "Sanctity",
+          "Block Printing"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation",
+          "Stone Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Keep",
+          "Bombard Tower"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Lou Chuan",
+        "missing": []
+      }
+    },
+    "SIC": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Ring Archer Armor",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Mounted Crossbowman",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Atonement",
+          "Theocracy",
+          "Block Printing",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Keep",
+          "Bombard Tower",
+          "Fortified Wall"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "SLV": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Bracer",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Fervor",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Stone Shaft Mining",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Keep",
+          "Bombard Tower",
+          "Arrowslits",
+          "Heated Shot"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "SPN": {
+      "archers": {
+        "best": "Archer",
+        "missing": [
+          "Crossbowman",
+          "Arbalester"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Mounted Crossbowman",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Paladin",
+        "missing": []
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": [
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": []
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation",
+          "Gold Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Heated Shot"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "TAT": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Two-Handed Swordsman",
+        "missing": [
+          "Champion",
+          "Chain Mail Armor",
+          "Plate Mail Armor",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "camels": {
+        "best": "Heavy Camel Rider",
+        "missing": []
+      },
+      "steppeLancers": {
+        "best": "Elite Steppe Lancer",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Sanctity",
+          "Theocracy",
+          "Faith",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Stone Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Keep",
+          "Arrowslits",
+          "Hoardings"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "TEU": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Bracer",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Mounted Crossbowman",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": []
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Paladin",
+        "missing": [
+          "Husbandry"
+        ]
+      },
+      "scouts": {
+        "best": "Scout Cavalry",
+        "missing": [
+          "Light Cavalry",
+          "Hussar"
+        ]
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Siege Onager",
+        "missing": []
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": []
+      },
+      "economy": {
+        "missing": [
+          "Gold Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock",
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Cannon Galleon",
+        "missing": [
+          "Elite Cannon Galleon"
+        ]
+      }
+    },
+    "TUP": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "none": "Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Elite Champi Warrior",
+        "missing": [
+          "Blast Furnace",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "none": "Scout Cavalry",
+        "missing": []
+      },
+      "slingers": {
+        "best": "Slinger",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": [
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Atonement",
+          "Fervor",
+          "Block Printing"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation",
+          "Stone Shaft Mining",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Masonry",
+          "Architecture",
+          "Bombard Tower",
+          "Fortified Wall"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Catapult Galleon",
+        "missing": []
+      }
+    },
+    "TUR": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester"
+        ]
+      },
+      "skirmishers": {
+        "best": "Skirmisher",
+        "missing": [
+          "Elite Skirmisher"
+        ]
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Spearman",
+        "missing": [
+          "Pikeman",
+          "Halberdier"
+        ]
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "camels": {
+        "best": "Heavy Camel Rider",
+        "missing": []
+      },
+      "handCannoneers": {
+        "best": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": [
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Mangonel",
+        "missing": [
+          "Onager",
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Herbal Medicine",
+          "Illumination",
+          "Block Printing"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation",
+          "Stone Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": []
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "VAR": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Mounted Crossbowman",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Two-Handed Swordsman",
+        "missing": [
+          "Champion"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "varangianGuard": {
+        "best": "Elite Varangian Guard",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Sanctity",
+          "Block Printing",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Gold Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Keep",
+          "Bombard Tower",
+          "Arrowslits",
+          "Hoardings"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": []
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "none": "Demolition Raft",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Elite Longship",
+        "missing": []
+      }
+    },
+    "VIE": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": []
+      },
+      "skirmishers": {
+        "best": "Imperial Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Heavy Cavalry Archer",
+        "missing": [
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Blast Furnace",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "elephants": {
+        "best": "Elite Battle Elephant",
+        "missing": []
+      },
+      "fireLancers": {
+        "best": "Elite Fire Lancer",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Capped Ram",
+        "missing": [
+          "Siege Ram"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Scorpion",
+        "missing": [
+          "Heavy Scorpion"
+        ]
+      },
+      "bombardCannons": {
+        "best": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Fervor",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Gold Shaft Mining"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "best": "Elite Cannon Galleon",
+        "missing": []
+      }
+    },
+    "VIK": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Mounted Crossbowman",
+        "missing": [
+          "Heavy Mounted Crossbowman",
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Pikeman",
+        "missing": [
+          "Halberdier"
+        ]
+      },
+      "knights": {
+        "best": "Cavalier",
+        "missing": [
+          "Paladin",
+          "Bloodlines",
+          "Husbandry",
+          "Plate Barding Armor"
+        ]
+      },
+      "scouts": {
+        "best": "Light Cavalry",
+        "missing": [
+          "Hussar"
+        ]
+      },
+      "varangianGuard": {
+        "best": "Elite Varangian Guard",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": []
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Herbal Medicine",
+          "Sanctity",
+          "Theocracy",
+          "Illumination"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Stone Shaft Mining",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Keep",
+          "Bombard Tower"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fire Ship",
+        "missing": [
+          "Fast Fire Ship"
+        ]
+      },
+      "demolitionShips": {
+        "none": "Demolition Raft",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Elite Longship",
+        "missing": []
+      }
+    },
+    "WEI": {
+      "archers": {
+        "best": "Crossbowman",
+        "missing": [
+          "Arbalester"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "none": "Cavalry Archer",
+        "missing": []
+      },
+      "infantry": {
+        "best": "Two-Handed Swordsman",
+        "missing": [
+          "Champion",
+          "Plate Mail Armor",
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "heiGuang": {
+        "best": "Heavy Hei Guang Cavalry",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Siege Ram",
+        "missing": [
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Redemption",
+          "Atonement",
+          "Herbal Medicine",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Two-Man Saw",
+          "Guilds"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Architecture",
+          "Bombard Tower",
+          "Arrowslits"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Dry Dock",
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Demolition Ship",
+        "missing": [
+          "Heavy Demolition Ship"
+        ]
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Lou Chuan",
+        "missing": []
+      }
+    },
+    "WU": {
+      "archers": {
+        "best": "Arbalester",
+        "missing": [
+          "Ring Archer Armor",
+          "Thumb Ring"
+        ]
+      },
+      "skirmishers": {
+        "best": "Elite Skirmisher",
+        "missing": []
+      },
+      "cavalryArchers": {
+        "best": "Cavalry Archer",
+        "missing": [
+          "Heavy Cavalry Archer",
+          "Parthian Tactics"
+        ]
+      },
+      "infantry": {
+        "best": "Champion",
+        "missing": [
+          "Gambesons"
+        ]
+      },
+      "spearmen": {
+        "best": "Halberdier",
+        "missing": []
+      },
+      "knights": {
+        "none": "Knight",
+        "missing": []
+      },
+      "scouts": {
+        "best": "Hussar",
+        "missing": []
+      },
+      "heiGuang": {
+        "best": "Heavy Hei Guang Cavalry",
+        "missing": []
+      },
+      "handCannoneers": {
+        "none": "Hand Cannoneer",
+        "missing": []
+      },
+      "rams": {
+        "best": "Battering Ram",
+        "missing": [
+          "Capped Ram",
+          "Siege Ram",
+          "Siege Engineers"
+        ]
+      },
+      "mangonels": {
+        "best": "Onager",
+        "missing": [
+          "Siege Onager"
+        ]
+      },
+      "scorpions": {
+        "best": "Heavy Scorpion",
+        "missing": []
+      },
+      "bombardCannons": {
+        "none": "Bombard Cannon",
+        "missing": []
+      },
+      "monks": {
+        "best": "Monk",
+        "missing": [
+          "Block Printing",
+          "Heresy"
+        ]
+      },
+      "economy": {
+        "missing": [
+          "Crop Rotation"
+        ]
+      },
+      "defense": {
+        "missing": [
+          "Bombard Tower",
+          "Arrowslits",
+          "Hoardings",
+          "Fortified Wall"
+        ]
+      },
+      "galleys": {
+        "best": "Galleon",
+        "missing": [
+          "Shipwright"
+        ]
+      },
+      "fireShips": {
+        "best": "Fast Fire Ship",
+        "missing": []
+      },
+      "demolitionShips": {
+        "best": "Heavy Demolition Ship",
+        "missing": []
+      },
+      "cannonGalleons": {
+        "none": "Cannon Galleon",
+        "missing": []
+      },
+      "regionalShips": {
+        "best": "Lou Chuan",
+        "missing": []
+      }
+    }
+  }
+}

@@ -9,9 +9,9 @@
     // Where each language's civ data comes from (ui/data/*.json, built by the
     // scripts in src/manual-workflows). "ui" picks the interface strings below.
     const LANGUAGES = [
-        { id: "en-fandom", label: "English · Fandom (detailed)", ui: "en" },
+        { id: "en-fandom", label: "English · Fandom (detailed)", ui: "en", names: "game-en" },
         { id: "game-en", label: "English · in-game text", ui: "en" },
-        { id: "es-fandom", label: "Español · Fandom (detallado)", ui: "es" },
+        { id: "es-fandom", label: "Español · Fandom (detallado)", ui: "es", names: "game-es" },
         { id: "game-mx", label: "Español (Latinoamérica) · texto del juego", ui: "es" },
         { id: "game-es", label: "Español (España) · texto del juego", ui: "es" },
         { id: "game-br", label: "Português (Brasil)", ui: "en" },
@@ -50,6 +50,15 @@
             otherTechnologies: "Other technologies",
             teamBonus: "Team bonus",
             wonder: "Wonder",
+            techTree: "Tech tree",
+            treeGroups: "Tech tree lines",
+            army: "Army",
+            economy: "Economy",
+            defense: "Defense",
+            navy: "Navy",
+            lacks: "lacks",
+            complete: "complete",
+            none: "doesn't have",
         },
         es: {
             you: "Tu civ",
@@ -70,6 +79,15 @@
             otherTechnologies: "Otras tecnologías",
             teamBonus: "Bonificación de equipo",
             wonder: "Maravilla",
+            techTree: "Árbol tecnológico",
+            treeGroups: "Líneas del árbol",
+            army: "Ejército",
+            economy: "Economía",
+            defense: "Defensa",
+            navy: "Marina",
+            lacks: "le falta",
+            complete: "completo",
+            none: "no tiene",
         },
     };
 
@@ -77,6 +95,7 @@
     // lets each one be turned off.
     const SECTIONS = [
         "focus",
+        "techTree",
         "civilizationBonuses",
         "uniqueUnits",
         "uniqueTechnologies",
@@ -90,6 +109,7 @@
         language: "en-fandom",
         showRival: true,
         sections: Object.fromEntries(SECTIONS.map((s) => [s, s !== "wonder"])),
+        treeGroups: { army: true, economy: false, defense: false, navy: false },
         you: null,
         rival: null,
     };
@@ -97,7 +117,12 @@
     function loadSettings() {
         try {
             const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-            const merged = { ...defaults, ...saved, sections: { ...defaults.sections, ...saved.sections } };
+            const merged = {
+                ...defaults,
+                ...saved,
+                sections: { ...defaults.sections, ...saved.sections },
+                treeGroups: { ...defaults.treeGroups, ...saved.treeGroups },
+            };
             if (!LANGUAGES.some((l) => l.id === merged.language)) merged.language = defaults.language;
             return merged;
         } catch {
@@ -115,6 +140,8 @@
 
     const settings = loadSettings();
     let data = { civs: [], labels: {}, source: "" };
+    let tree = null; // ui/data/tree.json
+    let treeNames = {}; // English node name → name in the current language
     const pickers = {};
     const cache = new Map();
 
@@ -152,6 +179,50 @@
         return section;
     }
 
+    function icon(name, className, tip) {
+        const img = el("img", className);
+        img.src = tree.icons[name];
+        img.alt = img.title = tip || treeNames[name] || name;
+        return img;
+    }
+
+    // The red cross the game's tech tree draws over what a civ can't get
+    function crossed(name, tip) {
+        const wrap = el("span", "tree-x");
+        wrap.append(icon(name, "tree-icon", tip));
+        return wrap;
+    }
+
+    // What the civ lacks, line by line, as the game's icons: for each line with
+    // gaps, its best unit and then each missing upgrade or tech, crossed out.
+    // Lines it doesn't have at all go in one crossed-out row, complete lines in
+    // a row of small icons.
+    function techTree(code) {
+        const lines = tree?.civs[code];
+        if (!lines) return null;
+        const wrap = el("div", "tree");
+        const none = el("div", "tree-row tree-none");
+        const full = el("div", "tree-row tree-full");
+        for (const line of tree.lines) {
+            if (!settings.treeGroups[line.group]) continue;
+            const s = lines[line.id];
+            if (!s) continue;
+            if (s.none) none.append(crossed(s.none, `${t("none")}: ${treeNames[s.none] || s.none}`));
+            else if (!s.missing.length) full.append(icon(s.best, "tree-icon small", `${treeNames[s.best]} · ${t("complete")}`));
+            else {
+                const row = el("div", "tree-row");
+                if (s.best) row.append(icon(s.best, "tree-icon best"));
+                const names = s.missing.map((m) => treeNames[m] || m).join(", ");
+                for (const m of s.missing) row.append(crossed(m, `${t("lacks")}: ${treeNames[m] || m}`));
+                row.title = `${s.best ? treeNames[s.best] + " · " : ""}${t("lacks")}: ${names}`;
+                wrap.append(row);
+            }
+        }
+        if (none.childElementCount) wrap.append(none);
+        if (full.childElementCount) wrap.append(full);
+        return wrap.childElementCount ? wrap : null;
+    }
+
     function card(civ, role) {
         const article = el("article", "card");
         if (!civ) {
@@ -161,6 +232,8 @@
         article.append(el("h2", "", civ.name));
         const on = settings.sections;
         if (on.focus && civ.focus) article.append(el("p", "focus", civ.focus));
+        const treeView = on.techTree && techTree(civ.code);
+        if (treeView) article.append(treeView);
         if (on.civilizationBonuses && civ.civilizationBonuses.length)
             article.append(
                 block(title("civilizationBonuses"), list(civ.civilizationBonuses, (li, b) => (li.textContent = b)))
@@ -214,10 +287,15 @@
         }, 0);
     }
 
+    async function loadTreeNames() {
+        const source = language().names || language().id;
+        treeNames = (await loadLanguage(source)).treeNames || {};
+    }
+
     async function loadLanguage(id) {
         if (!cache.has(id)) {
             const json = await (await fetch(`./data/${id}.json`)).json();
-            json.civs.sort((a, b) => a.name.localeCompare(b.name));
+            if (Array.isArray(json.civs)) json.civs.sort((a, b) => a.name.localeCompare(b.name));
             json.labels ||= {};
             cache.set(id, json);
         }
@@ -234,6 +312,9 @@
         $("source").textContent = `${t("source")}: ${data.source}`;
         for (const span of document.querySelectorAll("[data-section-label]"))
             span.textContent = t(span.dataset.sectionLabel);
+        $("tree-groups-title").textContent = t("treeGroups");
+        for (const span of document.querySelectorAll("[data-group-label]"))
+            span.textContent = t(span.dataset.groupLabel);
         for (const role of ["you", "rival"]) {
             pickers[role].setCivs(data.civs, t(role), t("noResults"));
             pickers[role].set(byCode(settings[role]));
@@ -249,6 +330,7 @@
             settings.language = select.value;
             saveSettings();
             data = await loadLanguage(settings.language);
+            await loadTreeNames();
             applyLanguage();
         });
 
@@ -264,12 +346,25 @@
             label.append(box, " ", text);
             toggles.append(label);
         }
+        const groups = $("tree-group-toggles");
+        for (const id of Object.keys(defaults.treeGroups)) {
+            const label = el("label");
+            const box = el("input");
+            box.type = "checkbox";
+            box.dataset.group = id;
+            box.checked = !!settings.treeGroups[id];
+            const text = el("span");
+            text.dataset.groupLabel = id;
+            label.append(box, " ", text);
+            groups.append(label);
+        }
         const panel = $("settings");
         panel.querySelector("[data-setting=showRival]").checked = settings.showRival;
         panel.addEventListener("change", (e) => {
             const box = e.target;
             if (box.dataset.setting) settings[box.dataset.setting] = box.checked;
             else if (box.dataset.section) settings.sections[box.dataset.section] = box.checked;
+            else if (box.dataset.group) settings.treeGroups[box.dataset.group] = box.checked;
             else return;
             saveSettings();
             render();
@@ -282,6 +377,8 @@
 
     async function main() {
         data = await loadLanguage(settings.language);
+        tree = await loadLanguage("tree");
+        await loadTreeNames();
 
         for (const role of ["you", "rival"]) {
             pickers[role] = new CivSearch({
