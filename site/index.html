@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AoE2 Civs Overlay</title>
+        <meta
+            name="description"
+            content="A free, open-source overlay for Age of Empires II: DE with your civ's and your rival's bonuses, unique units and tech tree gaps, one shortcut away."
+        />
+        <link rel="icon" href="icon.png" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav class="lang-switch" aria-label="Language">
+            <button data-set-lang="en">English</button>
+            <button data-set-lang="es">Español</button>
+        </nav>
+
+        <header class="hero">
+            <img class="logo" src="icon.png" alt="" width="72" height="72" />
+            <h1>AoE2 Civs Overlay</h1>
+            <p class="lead" lang="en">
+                Your civ and your rival's, one shortcut away: bonuses, unique units and what each
+                tech tree lacks, on top of Age of Empires II: Definitive Edition.
+            </p>
+            <p class="lead" lang="es">
+                Tu civ y la de tu rival, a un atajo de teclado: bonificaciones, unidades únicas y
+                lo que le falta a cada árbol tecnológico, encima de Age of Empires II: Definitive
+                Edition.
+            </p>
+
+            <div class="download">
+                <a class="button" id="download-main" href="https://github.com/mredigonda/AOE2-Civs-Overlay/releases">
+                    <span lang="en">Download</span><span lang="es">Descargar</span>
+                    <small id="download-main-os"></small>
+                </a>
+                <p class="other" id="download-other"></p>
+                <p class="note" id="download-status"></p>
+            </div>
+            <p class="facts">
+                <span lang="en">Free · open source · ~5 MB · no admin rights needed · updates itself</span>
+                <span lang="es">Gratis · código abierto · ~5 MB · no pide permisos de administrador · se actualiza solo</span>
+            </p>
+        </header>
+
+        <main>
+            <figure class="shot">
+                <img src="screenshot.png" alt="The overlay showing the Franks next to the Mapuche" width="642" height="560" />
+            </figure>
+
+            <section id="install">
+                <h2 lang="en">Install: the warning is expected</h2>
+                <h2 lang="es">Instalar: la advertencia es normal</h2>
+                <p lang="en">
+                    The installers aren't code-signed yet (signing costs money every year), so the first
+                    time you open it Windows or macOS warns you that they don't know who made it. It's a
+                    one-time step. Everything is built in public from
+                    <a href="https://github.com/mredigonda/AOE2-Civs-Overlay">the source code</a>; see
+                    <a href="#safe">Is it safe?</a> below.
+                </p>
+                <p lang="es">
+                    Los instaladores todavía no están firmados (firmar cuesta plata todos los años), así
+                    que la primera vez Windows o macOS te avisan que no conocen al autor. Es un paso que se
+                    hace una sola vez. Todo se compila en público desde
+                    <a href="https://github.com/mredigonda/AOE2-Civs-Overlay">el código fuente</a>; mirá
+                    <a href="#safe">¿Es seguro?</a> más abajo.
+                </p>
+
+                <div class="os-steps" data-os="windows">
+                    <h3>Windows</h3>
+                    <ol lang="en">
+                        <li>Open the downloaded <code>…_x64-setup.exe</code>.</li>
+                        <li>A blue window says <b>"Windows protected your PC"</b>. Click <b>More info</b>.</li>
+                        <li>Click <b>Run anyway</b>. The installer runs without asking for admin rights.</li>
+                        <li>If your browser says the file "isn't commonly downloaded", choose <b>Keep</b> (in Edge: <b>…</b> → <b>Keep</b> → <b>Keep anyway</b>).</li>
+                    </ol>
+                    <ol lang="es">
+                        <li>Abrí el <code>…_x64-setup.exe</code> que descargaste.</li>
+                        <li>Aparece una ventana azul: <b>"Windows protegió su PC"</b>. Hacé clic en <b>Más información</b>.</li>
+                        <li>Hacé clic en <b>Ejecutar de todas formas</b>. El instalador no pide permisos de administrador.</li>
+                        <li>Si el navegador dice que el archivo "no se descarga con frecuencia", elegí <b>Conservar</b> (en Edge: <b>…</b> → <b>Conservar</b> → <b>Conservar de todos modos</b>).</li>
+                    </ol>
+                </div>
+
+                <div class="os-steps" data-os="mac">
+                    <h3>macOS</h3>
+                    <ol lang="en">
+                        <li>Open the <code>.dmg</code> and drag <b>AoE2 Civs Overlay</b> to <b>Applications</b>.</li>
+                        <li>Open it from Applications. macOS says it <b>can't be opened</b> or that it can't check it: click <b>Done</b> (not "Move to Trash").</li>
+                        <li>Go to <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b> next to "AoE2 Civs Overlay was blocked". Confirm with your password.</li>
+                        <li>macOS asks for permission for the keyboard shortcut the first time; allow it.</li>
+                    </ol>
+                    <ol lang="es">
+                        <li>Abrí la <code>.dmg</code> y arrastrá <b>AoE2 Civs Overlay</b> a <b>Aplicaciones</b>.</li>
+                        <li>Abrila desde Aplicaciones. macOS dice que <b>no se puede abrir</b> o que no la puede verificar: hacé clic en <b>OK</b> (no en "Trasladar a la papelera").</li>
+                        <li>Andá a <b>Ajustes del Sistema → Privacidad y seguridad</b>, bajá y hacé clic en <b>Abrir igualmente</b> junto a "Se bloqueó AoE2 Civs Overlay". Confirmá con tu contraseña.</li>
+                        <li>La primera vez macOS puede pedir permiso para el atajo de teclado; permitilo.</li>
+                    </ol>
+                </div>
+
+                <div class="os-steps" data-os="linux">
+                    <h3>Linux <small lang="en">(experimental)</small><small lang="es">(experimental)</small></h3>
+                    <ol lang="en">
+                        <li>Download the <code>.AppImage</code>, make it executable (<code>chmod +x</code>, or Properties → "Allow executing as program") and run it. Or install the <code>.deb</code>.</li>
+                        <li>Staying on top of a fullscreen Proton game depends on your desktop; under Wayland it may not. Run the game in borderless/windowed mode if it hides the overlay.</li>
+                    </ol>
+                    <ol lang="es">
+                        <li>Descargá el <code>.AppImage</code>, hacelo ejecutable (<code>chmod +x</code>, o Propiedades → "Permitir ejecutar como programa") y abrilo. O instalá el <code>.deb</code>.</li>
+                        <li>Que quede encima de un juego a pantalla completa con Proton depende de tu escritorio; con Wayland puede que no. Si el juego lo tapa, usá el modo ventana o ventana sin bordes.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="use">
+                <h2 lang="en">Use</h2>
+                <h2 lang="es">Uso</h2>
+                <ul lang="en">
+                    <li><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>`</kbd> (macOS: <kbd>⌘</kbd>+<kbd>⌥</kbd>+<kbd>`</kbd>) shows or hides it. <kbd>Esc</kbd> hides it too.</li>
+                    <li>Type a few letters of a civ and press <kbd>Enter</kbd>; then the rival's.</li>
+                    <li>Under each civ: its unique units (★), then each unit line with what it lacks crossed out.</li>
+                    <li><b>⚙</b>: language (19 options, with the game's official names), which sections and tech tree lines to show.</li>
+                    <li>On Windows, set the game to <b>Full Desktop</b> (Options → Graphics → Display Mode) so the overlay stays on top.</li>
+                </ul>
+                <ul lang="es">
+                    <li><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>`</kbd> (macOS: <kbd>⌘</kbd>+<kbd>⌥</kbd>+<kbd>`</kbd>) lo muestra u oculta. <kbd>Esc</kbd> también lo oculta.</li>
+                    <li>Escribí unas letras de una civ y apretá <kbd>Enter</kbd>; después la del rival.</li>
+                    <li>Debajo de cada civ: sus unidades únicas (★) y cada línea de unidades con lo que le falta tachado.</li>
+                    <li><b>⚙</b>: idioma (19 opciones, con los nombres oficiales del juego), qué secciones y qué líneas del árbol mostrar.</li>
+                    <li>En Windows, poné el juego en <b>Pantalla completa de escritorio</b> (Opciones → Gráficos → Modo de pantalla) para que el overlay quede encima.</li>
+                </ul>
+            </section>
+
+            <section id="safe">
+                <h2 lang="en">Is it safe?</h2>
+                <h2 lang="es">¿Es seguro?</h2>
+                <ul lang="en">
+                    <li><b>It can't get you banned.</b> It doesn't read the game's memory, inject anything or touch its files. It's a separate window with information from the wikis and the game's own texts, built in.</li>
+                    <li><b>No data leaves your computer.</b> The only connection it makes is to GitHub, to check for a new version of itself. No accounts, no tracking.</li>
+                    <li><b>Built in public.</b> Every installer is built by GitHub Actions from <a href="https://github.com/mredigonda/AOE2-Civs-Overlay">the open source code</a>, with a <a href="https://github.com/mredigonda/AOE2-Civs-Overlay/attestations">build attestation</a> proving which commit it came from.</li>
+                    <li><b>Easy to remove.</b> Windows: Settings → Apps → AoE2 Civs Overlay → Uninstall. macOS: move it to the Trash. Linux: delete the AppImage.</li>
+                </ul>
+                <ul lang="es">
+                    <li><b>No te pueden banear por usarlo.</b> No lee la memoria del juego, no se inyecta en él ni toca sus archivos. Es una ventana aparte con información de las wikis y de los textos del propio juego, que vienen incluidos.</li>
+                    <li><b>Tus datos no salen de tu computadora.</b> La única conexión que hace es a GitHub, para ver si hay una versión nueva de sí mismo. Sin cuentas, sin rastreo.</li>
+                    <li><b>Compilado en público.</b> Cada instalador lo arma GitHub Actions desde <a href="https://github.com/mredigonda/AOE2-Civs-Overlay">el código abierto</a>, con una <a href="https://github.com/mredigonda/AOE2-Civs-Overlay/attestations">certificación del build</a> que prueba de qué commit salió.</li>
+                    <li><b>Fácil de desinstalar.</b> Windows: Configuración → Aplicaciones → AoE2 Civs Overlay → Desinstalar. macOS: mandalo a la papelera. Linux: borrá el AppImage.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                <a href="https://github.com/mredigonda/AOE2-Civs-Overlay">GitHub</a> ·
+                <a href="https://github.com/mredigonda/AOE2-Civs-Overlay/releases">Releases</a> ·
+                <a href="https://github.com/mredigonda/AOE2-Civs-Overlay/issues" lang="en">Report a problem</a><a href="https://github.com/mredigonda/AOE2-Civs-Overlay/issues" lang="es">Reportar un problema</a>
+            </p>
+            <p class="legal">
+                Age of Empires II © Microsoft Corporation. AoE2 Civs Overlay was created under Microsoft's
+                "<a href="https://www.xbox.com/en-US/developers/rules">Game Content Usage Rules</a>" using
+                assets from Age of Empires II, and it is not endorsed by or affiliated with Microsoft.
+            </p>
+        </footer>
+
+        <script src="download.js"></script>
+    </body>
+</html>

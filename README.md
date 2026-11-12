@@ -7,6 +7,25 @@ shows it, type a few letters to pick a civ, Esc hides it again.
 Built with [Tauri](https://tauri.app) (Rust + the system's web view), so it is a few
 MB and starts instantly. Version 1 was an Electron app.
 
+## Install
+
+**Download it from https://mredigonda.github.io/AOE2-Civs-Overlay/** (Windows, macOS and
+Linux; about 5 MB; no admin rights needed; it updates itself).
+
+The installers are **not code-signed yet**, so the first time Windows or macOS warns you
+that it doesn't know the publisher. That's expected, and it's a one-time step:
+
+-   **Windows**: "Windows protected your PC" → click **More info** → **Run anyway**.
+-   **macOS**: "cannot be opened" → click **Done** → **System Settings → Privacy &
+    Security** → **Open Anyway**, and confirm with your password.
+-   **Linux** (experimental): make the AppImage executable (`chmod +x`) and run it, or
+    install the `.deb`.
+
+It doesn't read the game's memory or touch its files, so it can't get you banned, and
+it only connects to GitHub to check for its own updates. Every installer is built by
+GitHub Actions from this repository, with a build attestation
+(`gh attestation verify <file> -R mredigonda/AOE2-Civs-Overlay`).
+
 ## Use it
 
 -   **`Ctrl+Alt+``** (Windows) / **`Cmd+Alt+``** (macOS): show or hide the overlay.
@@ -36,8 +55,16 @@ npm install
 npm run dev
 ```
 
-`npm run build` makes the installers for the OS it runs on (a `.app`/`.dmg` on macOS;
-an `.exe`/`.msi` must be built on Windows).
+`npm run build` makes the installers for the OS it runs on. Releases are built for all
+three systems by `.github/workflows/release.yml`: bump the version in
+`src-tauri/tauri.conf.json`, `src-tauri/Cargo.toml` and `package.json`, then
+`git tag v<version> && git push origin v<version>`; it leaves a draft release to check
+and publish. The updater key's private half lives in the repo secret
+`TAURI_SIGNING_PRIVATE_KEY` (and in `~/.tauri/aoe2-civs-overlay.key` on the maintainer's
+machine); losing it means existing installs can't auto-update.
+
+The download page is `site/`, published to GitHub Pages by
+`.github/workflows/pages.yml`.
 
 -   `ui/`: the page (plain HTML/CSS/JS, no build step) and the civ data (`ui/data/`).
 -   `src-tauri/`: the Rust side: the window, the global shortcut, resizing the window

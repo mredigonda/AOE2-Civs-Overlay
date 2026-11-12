@@ -1,0 +1,91 @@
+# Builds the overlay for Windows, macOS and Linux and uploads the installers to
+# a draft GitHub release. Runs when a version tag is pushed (git tag v2.0.0 &&
+# git push origin v2.0.0) or by hand from the Actions tab. Publish the draft
+# from the Releases page once it looks right.
+#
+# Needs the repo secrets TAURI_SIGNING_PRIVATE_KEY (the updater key; its public
+# half is in src-tauri/tauri.conf.json) and TAURI_SIGNING_PRIVATE_KEY_PASSWORD
+# (empty). The installers themselves are not code-signed yet: see site/ for
+# what users see and how to get past it.
+
+name: Release
+
+on:
+    push:
+        tags: ["v*"]
+    workflow_dispatch:
+
+permissions:
+    contents: write
+    id-token: write
+    attestations: write
+
+jobs:
+    build:
+        strategy:
+            fail-fast: false
+            matrix:
+                include:
+                    - platform: windows-latest
+                      args: ""
+                    - platform: macos-latest
+                      args: "--target universal-apple-darwin"
+                    - platform: ubuntu-22.04
+                      args: ""
+        runs-on: ${{ matrix.platform }}
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version-file: .nvmrc
+                  cache: npm
+
+            - uses: dtolnay/rust-toolchain@stable
+              with:
+                  targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+
+            - uses: swatinem/rust-cache@v2
+              with:
+                  workspaces: src-tauri
+
+            - name: Linux build dependencies
+              if: matrix.platform == 'ubuntu-22.04'
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+
+            - run: npm ci
+
+            - uses: tauri-apps/tauri-action@v0
+              id: tauri
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+                  TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+              with:
+                  tagName: v__VERSION__
+                  releaseName: "AoE2 Civs Overlay v__VERSION__"
+                  releaseBody: |
+                      **Download and install: https://mredigonda.github.io/AOE2-Civs-Overlay/** (step-by-step, with pictures of the warnings).
+
+                      The installers are not code-signed yet, so Windows and macOS warn the first time:
+                      - **Windows**: "Windows protected your PC" → click **More info** → **Run anyway**.
+                      - **macOS**: "cannot be opened" → **System Settings → Privacy & Security** → **Open Anyway**.
+                      - **Linux**: make the AppImage executable (`chmod +x`) and run it.
+
+                      The overlay doesn't connect to the internet except to check for its own updates, doesn't read the game's memory or files, and can't get you banned. Every file below was built by GitHub Actions from this repository's source; see the build attestations.
+                  releaseDraft: true
+                  prerelease: false
+                  args: ${{ matrix.args }}
+
+            # Proof that each file was built here, from this commit
+            # (gh attestation verify <file> -R mredigonda/AOE2-Civs-Overlay)
+            - uses: actions/attest-build-provenance@v2
+              with:
+                  subject-path: |
+                      src-tauri/target/**/release/bundle/**/*.exe
+                      src-tauri/target/**/release/bundle/**/*.msi
+                      src-tauri/target/**/release/bundle/**/*.dmg
+                      src-tauri/target/**/release/bundle/**/*.AppImage
+                      src-tauri/target/**/release/bundle/**/*.deb
