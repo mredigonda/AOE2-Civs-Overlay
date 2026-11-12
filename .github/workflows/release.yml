@@ -5,8 +5,8 @@
 #
 # Needs the repo secrets TAURI_SIGNING_PRIVATE_KEY (the updater key; its public
 # half is in src-tauri/tauri.conf.json) and TAURI_SIGNING_PRIVATE_KEY_PASSWORD
-# (empty). The installers themselves are not code-signed yet: see site/ for
-# what users see and how to get past it.
+# (empty). The installers themselves are not code-signed (on purpose: see site/ for
+# why, what users see and how to get past it).
 
 name: Release
 
@@ -67,9 +67,9 @@ jobs:
                   tagName: v__VERSION__
                   releaseName: "AoE2 Civs Overlay v__VERSION__"
                   releaseBody: |
-                      **Download and install: https://mredigonda.github.io/AOE2-Civs-Overlay/** (step-by-step, with pictures of the warnings).
+                      **Download and install: https://mredigonda.github.io/AOE2-Civs-Overlay/** (step by step, in English and Spanish).
 
-                      The installers are not code-signed yet, so Windows and macOS warn the first time:
+                      The installers are not code-signed (that would cost about USD 320–540 a year for a free project), so Windows and macOS warn the first time:
                       - **Windows**: "Windows protected your PC" → click **More info** → **Run anyway**.
                       - **macOS**: "cannot be opened" → **System Settings → Privacy & Security** → **Open Anyway**.
                       - **Linux**: make the AppImage executable (`chmod +x`) and run it.

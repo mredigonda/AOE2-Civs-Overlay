@@ -10,7 +10,7 @@
         "civs:refresh": "node src/manual-workflows/fetch-civs-from-fandom.js && node src/manual-workflows/parse-civs-from-pasted.js && node src/manual-workflows/fetch-civs-from-game.js && node src/manual-workflows/fetch-civs-from-fandom-es.js"
     },
     "author": "Maximiliano Redigonda",
-    "license": "ISC",
+    "license": "GPL-3.0-only",
     "devDependencies": {
         "@tauri-apps/cli": "^2.12.4"
     }

@@ -12,8 +12,11 @@ MB and starts instantly. Version 1 was an Electron app.
 **Download it from https://mredigonda.github.io/AOE2-Civs-Overlay/** (Windows, macOS and
 Linux; about 5 MB; no admin rights needed; it updates itself).
 
-The installers are **not code-signed yet**, so the first time Windows or macOS warns you
-that it doesn't know the publisher. That's expected, and it's a one-time step:
+The installers are **not code-signed**, so the first time Windows or macOS warns you
+that it doesn't know the publisher. That's expected, and it's a one-time step. (Signing
+would cost about USD 320–540 a year for a free project: a Windows code signing certificate
+is USD 220–440 a year and needs a hardware token, and Apple's Developer Program is USD 99
+a year.)
 
 -   **Windows**: "Windows protected your PC" → click **More info** → **Run anyway**.
 -   **macOS**: "cannot be opened" → click **Done** → **System Settings → Privacy &
@@ -81,3 +84,14 @@ git diff --stat ui/data
 ```
 
 See [src/manual-workflows/README.md](src/manual-workflows/README.md).
+
+## License
+
+[GPL-3.0](LICENSE) © Maximiliano Redigonda: you can use, study, share and change it, but
+any copy or modified version you distribute must keep this license and the credit, and
+publish its source.
+
+The game icons in `ui/img/tree/` and the civilization texts taken from the game are Age of
+Empires II content, © Microsoft Corporation, used under Microsoft's
+[Game Content Usage Rules](https://www.xbox.com/en-US/developers/rules); they are not
+covered by the GPL. AoE2 Civs Overlay is not endorsed by or affiliated with Microsoft.

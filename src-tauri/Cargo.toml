@@ -3,6 +3,7 @@ name = "aoe2-civs-overlay"
 version = "2.0.0"
 description = "Always-on-top Age of Empires II civilization overlay"
 authors = ["Maximiliano Redigonda"]
+license = "GPL-3.0-only"
 edition = "2021"
 
 [lib]
