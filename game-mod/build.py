@@ -197,14 +197,20 @@ def draw_rings(img, cfg):
 
 
 def letter_icon(size, letter, color):
+    """Black, with the letter in the top-left corner: the bottom half is where the
+    game writes how many villagers work that resource."""
     img = Image.new("RGBA", size, (0, 0, 0, 255))
-    font = bold_font(int(size[1] * 0.62))
+    font = bold_font(int(size[1] * 0.42))
     d = ImageDraw.Draw(img)
     box = d.textbbox((0, 0), letter, font=font)
-    x = (size[0] - (box[2] - box[0])) / 2 - box[0]
-    y = (size[1] - (box[3] - box[1])) / 2 - box[1]
-    d.text((x, y), letter, fill=color, font=font)
+    pad = size[0] * 0.08
+    d.text((pad - box[0], pad - box[1]), letter, fill=color, font=font)
     return img
+
+
+def idle_icon(size, idle):
+    """The idle villagers button: black when nobody is idle, a red block when someone is."""
+    return Image.new("RGBA", size, (190, 20, 20, 255) if idle else (0, 0, 0, 255))
 
 
 def black_like(img):
@@ -214,10 +220,15 @@ def black_like(img):
     return Image.fromarray(a)
 
 
-def restyle_labels(widget, scale):
-    """Every number in the panel: bigger, white, with a black outline."""
+def restyle_labels(widget, scale, parent=None):
+    """Every number in the panel: bigger, white, with a black outline, and still
+    inside the icon it belongs to (the villagers per resource are drawn inside the
+    resource's icon, which clips them)."""
     w = widget.get("Widget", widget)
     if w.get("Type") == "Label":
+        # The age's name fills its bar already: same size, only the colors
+        if parent is not None and parent.get("_type") == "ProgressBar":
+            scale = 1
         for state in w.get("StateMaterials", {}).values():
             font = state.get("Font") if isinstance(state, dict) else None
             if font:
@@ -233,8 +244,38 @@ def restyle_labels(widget, scale):
             vp["height"] += grow_h
             if "Right" in w.get("TextAnchor", ""):
                 vp["xorigin"] -= grow_w
+            if parent and parent.get("width") and parent.get("height") and parent.get("_type") != "ProgressBar":
+                vp["width"] = min(vp["width"], parent["width"])
+                vp["height"] = min(vp["height"], parent["height"])
+                vp["xorigin"] = max(0, min(vp["xorigin"], parent["width"] - vp["width"]))
+                vp["yorigin"] = max(0, min(vp["yorigin"], parent["height"] - vp["height"]))
     for child in w.get("ChildWidgets", []):
-        restyle_labels(child, scale)
+        box = dict(w.get("ViewPort") or {}, _type=w.get("Type"))
+        restyle_labels(child, scale, box if w.get("Type") in ("Base", "Button", "ProgressBar") else None)
+
+
+def timer_with_black_box(panel):
+    """The game clock ("00:03:50 (Normal - 1.7)"): a black box behind it."""
+    box = {
+        "Widget": {
+            "Type": "Base",
+            "Name": "OverlayModTimerBackground",
+            "ViewPort": {"xorigin": -10, "yorigin": 0, "width": 640, "height": 52, "alignment": "TopLeft"},
+            "StateMaterials": {"StateNormal": {"Material": "FlatColorWithAlpha", "Color": {"r": 0, "g": 0, "b": 0, "a": 1}}},
+            "ChildWidgets": [],
+        }
+    }
+    for w in panel["Collection"]["Widgets"]:
+        W = w.get("Widget", w)
+        if W.get("Name") != "WorldTimer":
+            continue
+        kids = W.setdefault("ChildWidgets", [])
+        label = next((k for k in kids if k.get("Widget", {}).get("Name") == "WorldTimerLabel"), None)
+        if label:
+            b = copy.deepcopy(box)
+            b["Widget"]["ViewPort"]["yorigin"] = label["Widget"]["ViewPort"].get("yorigin", 0) - 4
+            kids.insert(kids.index(label), b)  # drawn first, so behind the text
+    return panel
 
 
 def build(ui, panel_layout, out):
@@ -267,6 +308,16 @@ def build(ui, panel_layout, out):
                 f = os.path.join(ui, "textures/ingame/icons", name)
                 if os.path.exists(f):
                     letter_icon(Image.open(f).size, cfg["letters"][res], cfg["letter_color"]).save(os.path.join(icons_out, name))
+        for name in ("idle-villager_normal.png", "idle-villager_hover.png", "idle-villager_active.png", "idle-villager_disabled.png"):
+            f = os.path.join(ui, "textures/ingame/icons", name)
+            if os.path.exists(f):
+                idle_icon(Image.open(f).size, "disabled" not in name).save(os.path.join(icons_out, name))
+        for name in ("worldtimerpanel.json", "timerpanel.json"):
+            f = os.path.join(ui, name)
+            if os.path.exists(f):
+                panel = timer_with_black_box(json.load(open(f, encoding="utf-8-sig")))
+                with open(os.path.join(out, "widgetui", name), "w", encoding="utf-8") as fh:
+                    json.dump(panel, fh, indent=2)
         styled = copy.deepcopy(panel_layout)
         for w in styled["Collection"]["Widgets"]:
             restyle_labels(w, cfg["font_scale"])

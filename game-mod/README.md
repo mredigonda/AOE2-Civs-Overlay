@@ -12,9 +12,11 @@ place for everything that is better done inside the game than in the overlay.
   stays as a thin dotted line between them. The minimap is a 2:1 diamond, so the
   rings are ellipses. Every culture's minimap frame gets them (all 11, Greek and
   Persian included).
-- **Black resource bar.** Black background, a letter instead of each resource's
-  picture (W wood, F food, G gold, S stone, V villagers/population) and bigger white
-  numbers with a black outline. It keeps the layout of the UI mod you have on (now
+- **Black resource bar.** Black background, a letter in the corner of each resource's
+  icon instead of its picture (W wood, F food, G gold, S stone, V villagers/population),
+  with the villagers working it below the letter, and bigger white numbers with a black
+  outline. The idle villagers button is black, and a red block when someone is idle.
+- **Black box behind the game clock** ("00:03:50 (Normal - 1.7)"). It keeps the layout of the UI mod you have on (now
   "[AllYourBase] Maximum Advantage UI"), only restyled. Besides being easy to read,
   it makes the numbers trivial for the overlay to read off the screen later.
 
