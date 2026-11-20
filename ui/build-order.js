@@ -60,6 +60,32 @@
         return RESOURCES.reduce((sum, k) => sum + Math.max(0, r[k]), 0) + Math.max(0, r.builder || 0);
     }
 
+    // Villagers at the start of a game (the dark-age start), for this build's civ
+    function startVillagers(bo) {
+        const names = civNames(bo);
+        const only = names.length === 1 ? names[0] : null;
+        return only === "Chinese" ? 6 : only === "Maya" ? 4 : 3;
+    }
+
+    // How many villagers you should have at game time `sec`, following the
+    // build's times: from the start to each step's count, evenly in between
+    // (one villager every ~25 s), flat while the count doesn't change.
+    function villagersAt(bo, sec) {
+        let t0 = 0;
+        let v0 = startVillagers(bo);
+        for (const step of bo.build_order) {
+            const v1 = Math.max(v0, stepVillagers(step));
+            const t1 = step.timeSec;
+            if (sec <= t1) {
+                if (t1 <= t0) return v1;
+                return Math.floor(v0 + ((v1 - v0) * (sec - t0)) / (t1 - t0));
+            }
+            t0 = t1;
+            v0 = v1;
+        }
+        return v0;
+    }
+
     // Times for every step when the build order brings none: villager production
     // plus age-ups and the Town Center techs named in the notes (RTS Overlay's
     // evaluateBOTimingAoE2, with its civ special cases).
@@ -91,7 +117,7 @@
             return faster(base, age);
         }
 
-        let villagers = is("Chinese") ? 6 : is("Maya") ? 4 : 3;
+        let villagers = startVillagers(bo);
         let age = 1;
         let agingUp = false;
         let total = 0;
@@ -127,35 +153,37 @@
 
     // Reads pasted text: one build order or a list of them. Returns
     // { orders: [...], errors: [...] }; each order is cleaned up, with `timeSec`
-    // per step and `estimated` when the times are ours.
+    // per step and `estimated` when the times are ours. Each error is
+    // { code, build?, step?, detail? } so the page can say it in its language:
+    // code is "json", "notObject", "noSteps" or "stepNotObject".
     function parse(text) {
         let json;
         try {
             json = JSON.parse(text);
         } catch (e) {
-            return { orders: [], errors: [`Not valid JSON: ${e.message}`] };
+            return { orders: [], errors: [{ code: "json", detail: e.message }] };
         }
         const list = Array.isArray(json) ? json : [json];
         const orders = [];
         const errors = [];
         list.forEach((raw, i) => {
-            const label = list.length > 1 ? `#${i + 1}: ` : "";
-            try {
-                orders.push(normalize(raw));
-            } catch (e) {
-                errors.push(label + e.message);
-            }
+            const result = normalize(raw);
+            if (result.code) errors.push({ ...result, build: list.length > 1 ? i + 1 : undefined });
+            else orders.push(result);
         });
         return { orders, errors };
     }
 
     function normalize(raw) {
-        if (!raw || typeof raw !== "object") throw new Error("Expected a build order object");
-        if (!Array.isArray(raw.build_order) || !raw.build_order.length)
-            throw new Error('Missing "build_order" (a list of steps)');
-        const steps = raw.build_order.map((s, i) => {
-            if (!s || typeof s !== "object") throw new Error(`Step ${i + 1} is not an object`);
-            const notes = Array.isArray(s.notes) ? s.notes.map(String) : typeof s.notes === "string" ? [s.notes] : [];
+        if (!raw || typeof raw !== "object" || Array.isArray(raw)) return { code: "notObject" };
+        if (!Array.isArray(raw.build_order) || !raw.build_order.length) return { code: "noSteps" };
+        const bad = raw.build_order.findIndex((s) => !s || typeof s !== "object");
+        if (bad >= 0) return { code: "stepNotObject", step: bad + 1 };
+        const steps = raw.build_order.map((s) => {
+            // Older builds name .png/.jpg icons; ours (and RTS Overlay's now) are .webp
+            const notes = (Array.isArray(s.notes) ? s.notes.map(String) : typeof s.notes === "string" ? [s.notes] : []).map(
+                (n) => n.replace(/@([^@\s]+)\.(png|jpe?g)@/gi, "@$1.webp@")
+            );
             const r = s.resources || {};
             const resources = Object.fromEntries(RESOURCES.map((k) => [k, int(r[k])]));
             if (r.builder !== undefined) resources.builder = int(r.builder);
@@ -170,6 +198,9 @@
             source: raw.source ? String(raw.source) : "",
             build_order: steps,
         };
+        // The builds the overlay comes with bring their id and Spanish name
+        if (typeof raw.id === "string") bo.id = raw.id;
+        if (typeof raw.name_es === "string") bo.name_es = raw.name_es;
         // Its own times when they all read and never go back; ours otherwise
         const given = steps.map((s) => timeToSec(s.time));
         const usable = given.every((t, i) => t >= 0 && (i === 0 || t >= given[i - 1]));
@@ -209,11 +240,90 @@
         let m;
         while ((m = re.exec(note))) {
             if (m.index > last) parts.push({ text: note.slice(last, m.index) });
-            parts.push({ icon: m[1] });
+            parts.push({ icon: m[1].replace(/\.(png|jpe?g|gif)$/i, ".webp") });
             last = re.lastIndex;
         }
         if (last < note.length) parts.push({ text: note.slice(last) });
         return parts;
+    }
+
+    // buildorderguide.com writes some things as its own names where it has no
+    // RTS Overlay icon ("castleAge", "foodUnderTC", "battleElephant"), and some
+    // buildings as plain words ("2 house, 1 market"). These become icons when we
+    // have one: by name in `index` (ui/img/bo/index.json: name → icon), or here.
+    const TOKEN_ICONS = {
+        foodundertc: ["resource/Aoe2de_food.webp", "town_center/Towncenter_aoe2DE.webp"],
+        stragglertree: ["resource/tree.webp"],
+        straggler: ["resource/tree.webp"],
+        darkage: ["age/DarkAgeIconDE_alpha.webp"],
+        feudalage: ["age/FeudalAgeIconDE_alpha.webp"],
+        castleage: ["age/CastleAgeIconDE_alpha.webp"],
+        imperialage: ["age/ImperialAgeIconDE_alpha.webp"],
+        villager: ["resource/MaleVillDE.webp"],
+        villagers: ["resource/MaleVillDE.webp"],
+        towncenter: ["town_center/Towncenter_aoe2DE.webp"],
+        tc: ["town_center/Towncenter_aoe2DE.webp"],
+        sheep: ["animal/Sheep_aoe2DE.webp"],
+        boar: ["animal/Boar_aoe2DE.webp"],
+        deer: ["animal/Deer_aoe2DE.webp"],
+        berries: ["resource/BerryBushDE.webp"],
+        farms: ["mill/FarmDE.webp"],
+        houses: ["other/House_aoe2DE.webp"],
+    };
+    // Plain lowercase words that become icons (camelCase names always do)
+    const WORD_ICONS = new Set(["house", "houses", "market", "mill", "farm", "farms", "dock", "barracks", "stable", "blacksmith", "monastery", "university", "castle", "tower", "sheep", "boar", "deer", "berries", "villager", "villagers", "tc"]);
+    const squash = (word) => word.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+    function tokenIcons(word, index) {
+        const key = squash(word);
+        return TOKEN_ICONS[key] || (index && index[key] ? [index[key]] : null);
+    }
+
+    // noteParts, plus those names and words as icons
+    function noteTokens(note, index) {
+        const out = [];
+        for (const part of noteParts(note)) {
+            if (part.icon) {
+                out.push(part);
+                continue;
+            }
+            const re = /\b([a-z]+(?:[A-Z][a-z]*|TC)+|[a-z]+)\b/g;
+            let last = 0;
+            let m;
+            while ((m = re.exec(part.text))) {
+                const word = m[1];
+                const camel = /[A-Z]/.test(word);
+                if (!camel && !WORD_ICONS.has(word)) continue;
+                const icons = tokenIcons(word, index);
+                if (!icons && !camel) continue;
+                if (m.index > last) out.push({ text: part.text.slice(last, m.index) });
+                if (icons) for (const icon of icons) out.push({ icon });
+                // An unknown name, readable: "battleElephant" → "battle elephant"
+                else out.push({ text: word.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase() });
+                last = re.lastIndex;
+            }
+            if (last < part.text.length) out.push({ text: part.text.slice(last) });
+        }
+        return out;
+    }
+
+    // Spanish for the way buildorderguide.com words its notes ("Create 6 … on …",
+    // "Move 1 … from … to …"); what it names stays as icons, so the sentence is
+    // all that changes. null when the note isn't one of these.
+    const ES_RULES = [
+        [/^Create (\S+) (.+?) on (.+)$/, "Hacé $1 $2 para $3"],
+        [/^Move (\S+) (.+?) from (.+?) to (.+)$/, "Pasá $1 $2 de $3 a $4"],
+        [/^Lure (.+)$/, "Atraé $1"],
+        [/^Click up to (.+)$/, "Pasá a $1"],
+        [/^Before (.+)$/, "Antes de $1"],
+        [/^In (.+)$/, "En $1"],
+        [/^Train (.+)$/, "Entrená $1"],
+        [/^Research (.+)$/, "Investigá $1"],
+        [/^Build (.+)$/, "Construí $1"],
+    ];
+    function noteToSpanish(note) {
+        for (const [re, to] of ES_RULES) if (re.test(note)) return note.replace(re, to);
+        return null;
     }
 
     // "town_center/LoomDE.webp" → "Loom": a readable name for the icon's tooltip
@@ -231,7 +341,25 @@
             .replace(/^\w/, (c) => c.toUpperCase());
     }
 
-    const api = { RESOURCES, GAME_SPEED, parse, timeToSec, secToTime, civNames, civCodes, estimateTimes, stepAt, delta, noteParts, iconLabel };
+    const api = {
+        RESOURCES,
+        GAME_SPEED,
+        parse,
+        timeToSec,
+        secToTime,
+        civNames,
+        civCodes,
+        estimateTimes,
+        startVillagers,
+        villagersAt,
+        stepAt,
+        delta,
+        noteParts,
+        noteTokens,
+        noteToSpanish,
+        iconLabel,
+        squash,
+    };
     if (typeof module === "object" && module.exports) module.exports = api;
     else root.BuildOrder = api;
 })(typeof window !== "undefined" ? window : globalThis);

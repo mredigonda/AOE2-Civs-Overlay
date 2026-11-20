@@ -399,7 +399,7 @@ html {
 
 .bo-bar {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 4px;
 }
 
@@ -407,7 +407,6 @@ html {
     flex: 1;
 }
 
-.bo-select,
 .bo-import textarea {
     flex: 1;
     min-width: 0;
@@ -635,4 +634,141 @@ html {
 
 .bo-cell.zero {
     opacity: 0.35;
+}
+
+/* The build chooser: plain buttons, so clicks alone are enough */
+.bo-chooser {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bo-choose {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    width: 100%;
+    padding: 5px 8px;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bo-choose .caret {
+    color: var(--gold);
+}
+
+.bo-list {
+    max-height: 340px;
+    overflow-y: auto;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.bo-list-title {
+    position: sticky;
+    top: 0;
+    padding: 3px 8px;
+    background: rgba(12, 10, 6, 0.97);
+    color: var(--gold);
+    font-size: 11px;
+}
+
+.bo-item {
+    display: block;
+    width: 100%;
+    padding: 4px 8px;
+    background: none;
+    border: none;
+    color: var(--text);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bo-item:hover,
+.bo-item.selected {
+    background: rgba(255, 215, 0, 0.18);
+}
+
+/* Timer running: only the steps and the clock */
+.bo-card.minimal {
+    gap: 4px;
+    padding: 8px 10px;
+}
+
+.bo-countdown {
+    color: #9be29b;
+}
+
+.bo-countdown.late {
+    color: #ff9c8a;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Build order keys, in ⚙ */
+.key-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.key-settings .note {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.key-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.key-row > span:first-child {
+    flex: 1;
+}
+
+.key-btn {
+    min-width: 90px;
+    padding: 2px 8px;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--gold);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font: 12px ui-monospace, Menlo, Consolas, monospace;
+    cursor: pointer;
+}
+
+.key-btn.recording {
+    border-color: var(--gold);
+    color: var(--text);
+}
+
+.key-taken {
+    color: #ff9c8a;
+    font-size: 11px;
+}
+
+/* Villagers you should have now, by the clock */
+.bo-now {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    margin-right: 4px;
+}
+
+.bo-now b {
+    font-size: 18px;
+    color: var(--gold);
+    font-variant-numeric: tabular-nums;
 }

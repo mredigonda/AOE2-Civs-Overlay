@@ -97,12 +97,29 @@
             boTimerReset: "Back to the start",
             boPrevious: "Previous step",
             boNextStep: "Next step",
-            boKeys: "In game: {mod}] next step · {mod}[ back · {mod}\\ timer",
+            boKeys: "In game: {next} next step · {previous} back · {timer} timer",
+            boKeysTitle: "Build order keys (they work in game)",
+            boKeysHint: "Pick keys the game doesn't use, such as F7, F8 or the numpad.",
+            keyNext: "Next step",
+            keyPrevious: "Previous step",
+            keyTimer: "Start / pause the timer",
+            keyPress: "Press a key… (Esc: cancel, Backspace: none)",
+            keyNone: "none",
+            keyTaken: "can't be used: another app has it",
+            boNow: "You should have {n} villagers now",
             age1: "Dark Age",
             age2: "Feudal Age",
             age3: "Castle Age",
             age4: "Imperial Age",
             boAgeUp: "Click up to the {age}",
+            boChoose: "Choose a build order",
+            boIn: "in {time}",
+            boLate: "{time} late",
+            boErrBuild: "Build {n}: ",
+            boErrjson: "That's not a build order in JSON ({detail}).",
+            boErrnotObject: "That's not a build order: expected a JSON object.",
+            boErrnoSteps: "No steps: a build order needs a \"build_order\" list.",
+            boErrstepNotObject: "Step {step} isn't readable.",
         },
         es: {
             you: "Tu civ",
@@ -170,12 +187,29 @@
             boTimerReset: "Volver al principio",
             boPrevious: "Paso anterior",
             boNextStep: "Paso siguiente",
-            boKeys: "En el juego: {mod}] paso siguiente · {mod}[ atrás · {mod}\\ reloj",
+            boKeys: "En el juego: {next} paso siguiente · {previous} atrás · {timer} reloj",
+            boKeysTitle: "Teclas del build order (funcionan en el juego)",
+            boKeysHint: "Elegí teclas que el juego no use, como F7, F8 o el teclado numérico.",
+            keyNext: "Paso siguiente",
+            keyPrevious: "Paso anterior",
+            keyTimer: "Arrancar / pausar el reloj",
+            keyPress: "Apretá una tecla… (Esc: cancelar, Borrar: ninguna)",
+            keyNone: "ninguna",
+            keyTaken: "no se puede usar: la tiene otra app",
+            boNow: "Ahora deberías tener {n} aldeanos",
             age1: "Edad Oscura",
             age2: "Edad Feudal",
             age3: "Edad de los Castillos",
             age4: "Edad Imperial",
             boAgeUp: "Pasá a la {age}",
+            boChoose: "Elegí un build order",
+            boIn: "en {time}",
+            boLate: "{time} tarde",
+            boErrBuild: "Build {n}: ",
+            boErrjson: "Eso no es un build order en JSON ({detail}).",
+            boErrnotObject: "Eso no es un build order: se esperaba un objeto JSON.",
+            boErrnoSteps: "No tiene pasos: un build order necesita una lista \"build_order\".",
+            boErrstepNotObject: "No se puede leer el paso {step}.",
         },
     };
 
@@ -201,6 +235,12 @@
         you: null,
         rival: null,
         mode: "civs", // or "bo": following a build order
+        // Global keys for the build order, in the shortcut syntax Rust parses
+        boKeys: {
+            next: "CmdOrCtrl+Alt+BracketRight",
+            previous: "CmdOrCtrl+Alt+BracketLeft",
+            timer: "CmdOrCtrl+Alt+Backslash",
+        },
         bo: null, // the build order's id
         boStep: 0,
     };
@@ -213,6 +253,7 @@
                 ...saved,
                 sections: { ...defaults.sections, ...saved.sections },
                 treeGroups: { ...defaults.treeGroups, ...saved.treeGroups },
+                boKeys: { ...defaults.boKeys, ...saved.boKeys },
             };
             if (!LANGUAGES.some((l) => l.id === merged.language)) merged.language = defaults.language;
             return merged;
@@ -511,6 +552,10 @@
             label.append(box, " ", text);
             toggles.append(label);
         }
+        const keyBox = el("div", "key-settings");
+        keyBox.id = "bo-key-settings";
+        $("source").before(keyBox);
+        renderKeySettings();
         const groups = $("tree-group-toggles");
         for (const id of Object.keys(defaults.treeGroups)) {
             const label = el("label");
@@ -545,7 +590,6 @@
     // cost the settings. Each one is BuildOrder.parse's output plus an id.
     const BO_KEY = "aoe2-civs-overlay:build-orders";
     const BO = window.BuildOrder;
-    const MOD = /Mac/.test(navigator.platform) ? "⌘⌥" : "Ctrl+Alt+";
     const fmt = (key, vars) => t(key).replace(/\{(\w+)\}/g, (_, k) => vars[k]);
     const AGE_ICON = {
         1: "age/DarkAgeIconDE_alpha.webp",
@@ -579,7 +623,30 @@
         }
     }
 
-    const currentBO = () => buildOrders.find((b) => b.id === settings.bo) || null;
+    // The builds the overlay comes with (ui/data/build-orders/), and the Spanish
+    // for their notes, which also covers the same notes in pasted builds.
+    let starters = [];
+    let notesEs = {};
+    let iconIndex = {};
+    async function loadStarters() {
+        try {
+            const text = await (await fetch("./data/build-orders/starter.json")).text();
+            starters = BO.parse(text).orders;
+            notesEs = (await (await fetch("./data/build-orders/es.json")).json()).notes || {};
+            iconIndex = await (await fetch("./img/bo/index.json")).json();
+        } catch {
+            // Missing files: only the pasted builds then.
+        }
+    }
+    const allBuildOrders = () => [...buildOrders, ...starters];
+    const isStarter = (b) => String(b.id).startsWith("starter:");
+    const currentBO = () => allBuildOrders().find((b) => b.id === settings.bo) || null;
+    const spanish = () => language().ui === "es";
+    const translateName = (b) => (spanish() && b.name_es) || b.name;
+    // Spanish: the starter builds' own translation, else buildorderguide.com's
+    // sentence patterns, else the note as it came
+    const translateNote = (note) => (spanish() && (notesEs[note] || BO.noteToSpanish(note))) || note;
+    const errorText = (e) => (e.build ? fmt("boErrBuild", { n: e.build }) : "") + fmt("boErr" + e.code, e);
 
     // The timer runs in game seconds: real time × the game's Normal speed.
     const timer = { running: false, startedAt: 0, base: 0, tick: null };
@@ -619,6 +686,9 @@
         else {
             const c = $("bo-clock");
             if (c) c.textContent = BO.secToTime(clock());
+            countdown(bo, settings.boStep);
+            const now = $("bo-now");
+            if (now) now.textContent = String(BO.villagersAt(bo, clock()));
         }
     }
 
@@ -642,6 +712,7 @@
     }
 
     function selectBO(id) {
+        chooserOpen = false;
         settings.bo = id;
         settings.boStep = 0;
         resetTimer();
@@ -682,7 +753,9 @@
     function removeBO() {
         buildOrders = buildOrders.filter((b) => b.id !== settings.bo);
         saveBuildOrders();
-        selectBO(buildOrders[0]?.id || null);
+        selectBO(null);
+        chooserOpen = true;
+        renderBO();
     }
 
     const boImg = (path, className, label) => {
@@ -698,32 +771,53 @@
         return byCode(code)?.name || code;
     }
 
-    // The <select>: builds for your civ first, then for any civ, then the rest
-    function boSelect() {
-        const select = el("select", "bo-select");
+    // The build chooser: a list in the overlay itself, not a <select>, so it
+    // works with clicks alone while the window can't take the focus. Builds for
+    // your civ first, then for any civ, then the rest.
+    let chooserOpen = false;
+    function boChooser() {
+        const wrap = el("div", "bo-chooser");
+        const bo = currentBO();
+        const head = el("button", "bo-choose", bo ? boTitle(bo) : t("boChoose"));
+        head.append(el("span", "caret", chooserOpen ? "▴" : "▾"));
+        head.addEventListener("click", () => {
+            chooserOpen = !chooserOpen;
+            renderBO();
+        });
+        wrap.append(head);
+        if (!chooserOpen) return wrap;
         const groups = { mine: [], any: [], other: [] };
-        for (const b of buildOrders) {
+        for (const b of allBuildOrders()) {
             const codes = BO.civCodes(b, data.civs);
             const key = !codes.length ? "any" : codes.includes(settings.you) ? "mine" : "other";
-            groups[key].push([b, codes]);
+            groups[key].push(b);
         }
+        const list = el("div", "bo-list");
         const add = (label, items) => {
             if (!items.length) return;
-            const group = el("optgroup");
-            group.label = label;
-            for (const [b, codes] of items) {
-                const civs = codes.length ? ` · ${codes.map(civLabel).join(", ")}` : "";
-                group.append(Object.assign(el("option", "", b.name + civs), { value: b.id }));
+            list.append(el("div", "bo-list-title", label));
+            for (const b of items) {
+                const item = el("button", "bo-item" + (b.id === settings.bo ? " selected" : ""), boTitle(b));
+                item.addEventListener("click", () => {
+                    chooserOpen = false;
+                    selectBO(b.id);
+                });
+                list.append(item);
             }
-            select.append(group);
         };
         if (settings.you) add(fmt("boForCiv", { civ: civLabel(settings.you) }), groups.mine);
         else groups.other.unshift(...groups.mine);
         add(t("boAnyCiv"), groups.any);
         add(t("boOtherCivs"), groups.other);
-        select.value = settings.bo || "";
-        select.addEventListener("change", () => selectBO(select.value));
-        return select;
+        wrap.append(list);
+        return wrap;
+    }
+
+    // "Scouts into knights" or, for builds for some civs, "Franks · 19 pop scouts"
+    function boTitle(b) {
+        const codes = BO.civCodes(b, data.civs);
+        const name = translateName(b);
+        return codes.length ? `${codes.map(civLabel).join(", ")} · ${name}` : name;
     }
 
     function resourceRow(bo, i, compact) {
@@ -756,7 +850,7 @@
         const ul = el("ul", "bo-notes");
         for (const note of step.notes) {
             const li = el("li");
-            for (const part of BO.noteParts(note))
+            for (const part of BO.noteTokens(translateNote(note), iconIndex))
                 li.append(part.icon ? boImg(part.icon, "bo-icon inline") : document.createTextNode(part.text));
             ul.append(li);
         }
@@ -765,6 +859,58 @@
 
     function stepTime(bo, i) {
         return (bo.estimated ? "~" : "") + BO.secToTime(bo.build_order[i].timeSec);
+    }
+
+    // While you play (build order mode, nothing to type) the window can't take
+    // the focus, so clicking it never pulls the game out of focus. Typing (the
+    // paste box, the civ search) makes it focusable again for as long as it lasts.
+    let typing = false;
+    let playing = null;
+    function syncPlaying() {
+        const want = settings.mode === "bo" && !importOpen && !typing;
+        if (want === playing) return;
+        playing = want;
+        invoke("set_playing", { playing: want });
+    }
+    document.addEventListener(
+        "pointerdown",
+        (e) => {
+            if (!e.target.closest?.("input, textarea")) return;
+            typing = true;
+            syncPlaying();
+        },
+        true
+    );
+    document.addEventListener("focusout", (e) => {
+        if (e.relatedTarget?.closest?.("input, textarea")) return;
+        setTimeout(() => {
+            if (document.activeElement?.closest?.("input, textarea")) return;
+            typing = false;
+            syncPlaying();
+        }, 150);
+    });
+
+    // How the step's due time compares with the clock: "in 0:23" or "0:05 late"
+    function countdown(bo, i) {
+        const left = bo.build_order[i].timeSec - clock();
+        const node = $("bo-countdown");
+        const text = left >= 0 ? fmt("boIn", { time: BO.secToTime(left) }) : fmt("boLate", { time: BO.secToTime(-left) });
+        if (node) {
+            node.textContent = text;
+            node.classList.toggle("late", left < 0);
+        }
+        return { text, late: left < 0 };
+    }
+
+    // How many villagers you should have right now, by the clock: compare it with
+    // the game's count to see at a glance if you're behind
+    function nowCounter(bo) {
+        const wrap = el("span", "bo-now");
+        if (!timer.running && !timer.base) return wrap;
+        const n = BO.villagersAt(bo, clock());
+        wrap.title = fmt("boNow", { n });
+        wrap.append(boImg(VILLAGER_ICON, "bo-icon", t("boVillagers")), Object.assign(el("b", "", String(n)), { id: "bo-now" }));
+        return wrap;
     }
 
     function renderBO() {
@@ -777,61 +923,67 @@
         $("root").classList.toggle("two", !on && settings.showRival);
         $("mode-btn").textContent = on ? "🏛" : "📜";
         $("mode-btn").title = on ? t("civsMode") : t("boMode");
+        syncPlaying();
         if (!on) return fit();
 
         const bo = currentBO();
-        const panel = el("div", "card bo-card");
+        if (!bo) chooserOpen = true;
+        // With the timer running, only what you need mid-game
+        const minimal = timer.running && !chooserOpen && !importOpen;
+        const panel = el("div", "card bo-card" + (minimal ? " minimal" : ""));
 
-        const bar = el("div", "bo-bar");
-        if (buildOrders.length) bar.append(boSelect());
-        else bar.append(el("span", "empty", t("boNone")));
-        const addBtn = el("button", "icon-btn", "+");
-        addBtn.title = t("boAdd");
-        addBtn.addEventListener("click", () => {
-            importOpen = !importOpen;
-            renderBO();
-        });
-        bar.append(addBtn);
-        if (bo) {
-            const del = el("button", "icon-btn", "🗑");
-            del.title = t("boRemove");
-            del.addEventListener("click", () => {
-                if (del.dataset.sure) return removeBO();
-                del.dataset.sure = "1";
-                del.title = t("boRemoveSure");
-                del.textContent = "🗑?";
-                setTimeout(() => {
-                    delete del.dataset.sure;
-                    del.textContent = "🗑";
-                    del.title = t("boRemove");
-                }, 3000);
+        if (!minimal) {
+            const bar = el("div", "bo-bar");
+            bar.append(boChooser());
+            const addBtn = el("button", "icon-btn", "+");
+            addBtn.title = t("boAdd");
+            addBtn.addEventListener("click", () => {
+                importOpen = !importOpen;
+                renderBO();
             });
-            bar.append(del);
+            bar.append(addBtn);
+            if (bo && !isStarter(bo)) {
+                const del = el("button", "icon-btn", "🗑");
+                del.title = t("boRemove");
+                del.addEventListener("click", () => {
+                    if (del.dataset.sure) return removeBO();
+                    del.dataset.sure = "1";
+                    del.title = t("boRemoveSure");
+                    del.textContent = "🗑?";
+                    setTimeout(() => {
+                        delete del.dataset.sure;
+                        del.textContent = "🗑";
+                        del.title = t("boRemove");
+                    }, 3000);
+                });
+                bar.append(del);
+            }
+            panel.append(bar);
+            if (importOpen) panel.append(importBox());
         }
-        panel.append(bar);
 
-        if (importOpen || !buildOrders.length) panel.append(importBox());
+        if (bo && !chooserOpen) {
+            if (!minimal) {
+                const meta = el("div", "bo-meta");
+                const bits = [];
+                if (bo.author) bits.push(`${t("boBy")} ${bo.author}`);
+                if (bo.estimated) bits.push(t("boEstimated"));
+                meta.textContent = bits.join(" · ");
+                panel.append(meta);
 
-        if (bo) {
-            const meta = el("div", "bo-meta");
-            const bits = [];
-            if (bo.author) bits.push(`${t("boBy")} ${bo.author}`);
-            if (bo.estimated) bits.push(t("boEstimated"));
-            meta.textContent = bits.join(" · ");
-            panel.append(meta);
-
-            const codes = BO.civCodes(bo, data.civs);
-            if (codes.length && settings.you && !codes.includes(settings.you)) {
-                const warn = el("div", "bo-warn", fmt("boMismatch", { civs: codes.map(civLabel).join(", ") }) + " ");
-                if (codes.length === 1) {
-                    const sw = el("button", "link-btn", fmt("boSwitch", { civ: civLabel(codes[0]) }));
-                    sw.addEventListener("click", () => {
-                        pickCiv(codes[0]);
-                        renderBO();
-                    });
-                    warn.append(sw);
+                const codes = BO.civCodes(bo, data.civs);
+                if (codes.length && settings.you && !codes.includes(settings.you)) {
+                    const warn = el("div", "bo-warn", fmt("boMismatch", { civs: codes.map(civLabel).join(", ") }) + " ");
+                    if (codes.length === 1) {
+                        const sw = el("button", "link-btn", fmt("boSwitch", { civ: civLabel(codes[0]) }));
+                        sw.addEventListener("click", () => {
+                            pickCiv(codes[0]);
+                            renderBO();
+                        });
+                        warn.append(sw);
+                    }
+                    panel.append(warn);
                 }
-                panel.append(warn);
             }
 
             const i = Math.min(settings.boStep, bo.build_order.length - 1);
@@ -839,7 +991,12 @@
             const cur = el("section", "bo-step");
             const head = el("div", "bo-step-head");
             head.append(el("span", "", fmt("boStep", { n: i + 1, total: bo.build_order.length })));
-            head.append(el("span", "bo-due", `${t("boDoneBy")} ${stepTime(bo, i)}`));
+            const due = el("span", "bo-due", `${t("boDoneBy")} ${stepTime(bo, i)}`);
+            if (timer.running) {
+                const c = countdown(bo, i);
+                due.append(" · ", Object.assign(el("b", "bo-countdown" + (c.late ? " late" : ""), c.text), { id: "bo-countdown" }));
+            }
+            head.append(due);
             cur.append(head, resourceRow(bo, i, false));
             const prevAge = i > 0 ? bo.build_order[i - 1].age : step.age;
             if (step.age > prevAge && AGE_ICON[step.age])
@@ -867,12 +1024,24 @@
                 btn("◀", "boPrevious", () => moveStep(-1), i === 0),
                 btn("▶", "boNextStep", () => moveStep(1), i === bo.build_order.length - 1),
                 el("span", "bo-spacer"),
+                nowCounter(bo),
                 btn(timer.running ? "⏸" : "⏱", timer.running ? "boTimerPause" : "boTimerStart", toggleTimer),
                 Object.assign(el("span", "bo-clock" + (timer.running ? " running" : ""), BO.secToTime(clock())), { id: "bo-clock" }),
                 btn("↺", "boTimerReset", resetTimer)
             );
             panel.append(controls);
-            panel.append(el("div", "bo-keys", fmt("boKeys", { mod: MOD })));
+            if (!minimal)
+                panel.append(
+                    el(
+                        "div",
+                        "bo-keys",
+                        fmt("boKeys", {
+                            next: keyLabel(settings.boKeys.next),
+                            previous: keyLabel(settings.boKeys.previous),
+                            timer: keyLabel(settings.boKeys.timer),
+                        })
+                    )
+                );
         }
         root.replaceChildren(panel);
         fit();
@@ -897,7 +1066,7 @@
                 importOpen = false;
                 return renderBO();
             }
-            status.textContent = [added ? `${t("boAdded")}: ${added}` : "", ...errors].filter(Boolean).join(" · ");
+            status.textContent = [added ? `${t("boAdded")}: ${added}` : "", ...errors.map(errorText)].filter(Boolean).join(" · ");
             status.className = "bo-status" + (errors.length ? " error" : "");
             fit();
         });
@@ -931,6 +1100,102 @@
         e.preventDefault();
     });
 
+    // ---- the build order's global keys ----
+    const IS_MAC = /Mac/.test(navigator.platform);
+    let keysFailed = [];
+
+    // "CmdOrCtrl+Alt+BracketRight" → "⌘⌥]" on macOS, "Ctrl+Alt+]" elsewhere
+    function keyLabel(accel) {
+        if (!accel) return t("keyNone");
+        const names = { BracketRight: "]", BracketLeft: "[", Backslash: "\\", Backquote: "`", Minus: "-", Equal: "=", Semicolon: ";", Quote: "'", Comma: ",", Period: ".", Slash: "/", Space: "Space" };
+        const mods = IS_MAC
+            ? { CmdOrCtrl: "⌘", Cmd: "⌘", Super: "⌘", Ctrl: "⌃", Alt: "⌥", Shift: "⇧" }
+            : { CmdOrCtrl: "Ctrl+", Cmd: "Win+", Super: "Win+", Ctrl: "Ctrl+", Alt: "Alt+", Shift: "Shift+" };
+        return accel
+            .split("+")
+            .map((part) => {
+                if (mods[part]) return mods[part];
+                if (names[part]) return names[part];
+                return part.replace(/^Key/, "").replace(/^Digit/, "").replace(/^Numpad/, "Num ");
+            })
+            .join("");
+    }
+
+    async function applyKeys() {
+        const failed = await invoke("set_build_order_keys", { keys: settings.boKeys });
+        keysFailed = Array.isArray(failed) ? failed : [];
+        renderKeySettings();
+        renderBO();
+    }
+
+    // A key press → the shortcut syntax ("Alt+F7", "Numpad1"); null for a lone modifier
+    function accelFrom(e) {
+        if (["Shift", "Control", "Alt", "Meta"].includes(e.key)) return null;
+        const mods = [];
+        if (e.metaKey) mods.push(IS_MAC ? "Cmd" : "Super");
+        if (e.ctrlKey) mods.push("Ctrl");
+        if (e.altKey) mods.push("Alt");
+        if (e.shiftKey) mods.push("Shift");
+        return [...mods, e.code].join("+");
+    }
+
+    let recording = null; // the action whose key is being picked
+    function renderKeySettings() {
+        const box = $("bo-key-settings");
+        if (!box) return;
+        box.replaceChildren(el("div", "settings-title", t("boKeysTitle")), el("div", "note", t("boKeysHint")));
+        for (const action of ["next", "previous", "timer"]) {
+            const row = el("div", "key-row");
+            row.append(el("span", "", t("key" + action[0].toUpperCase() + action.slice(1))));
+            const b = el("button", "key-btn" + (recording === action ? " recording" : ""));
+            b.textContent = recording === action ? t("keyPress") : keyLabel(settings.boKeys[action]);
+            b.addEventListener("click", () => startRecording(action));
+            row.append(b);
+            if (keysFailed.includes(action) && recording !== action) row.append(el("span", "key-taken", t("keyTaken")));
+            box.append(row);
+        }
+    }
+
+    function startRecording(action) {
+        recording = action;
+        typing = true; // the overlay needs the keyboard for this
+        syncPlaying();
+        // Free the current keys, so pressing one of them records it
+        invoke("set_build_order_keys", { keys: {} });
+        renderKeySettings();
+        fit();
+    }
+
+    function stopRecording() {
+        recording = null;
+        typing = false;
+        syncPlaying();
+        applyKeys();
+    }
+
+    document.addEventListener(
+        "keydown",
+        (e) => {
+            if (!recording) return;
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            if (e.key === "Escape") return stopRecording();
+            if (e.key === "Backspace" || e.key === "Delete") {
+                settings.boKeys[recording] = "";
+            } else {
+                const accel = accelFrom(e);
+                if (!accel) return;
+                // A key used by another action moves here
+                for (const other of Object.keys(settings.boKeys))
+                    if (settings.boKeys[other] === accel) settings.boKeys[other] = "";
+                settings.boKeys[recording] = accel;
+            }
+            saveSettings();
+            stopRecording();
+        },
+        true
+    );
+
     function onBuildOrderKey(action) {
         if (action === "next") moveStep(1);
         else if (action === "previous") moveStep(-1);
@@ -940,6 +1205,7 @@
     async function main() {
         data = await loadLanguage(settings.language);
         tree = await loadLanguage("tree");
+        await loadStarters();
         await loadTreeNames();
 
         for (const role of ["you", "rival"]) {
@@ -956,6 +1222,7 @@
         }
 
         buildSettings();
+        applyKeys();
         $("mode-btn").addEventListener("click", () => {
             settings.mode = settings.mode === "bo" ? "civs" : "bo";
             saveSettings();

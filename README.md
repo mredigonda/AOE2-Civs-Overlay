@@ -50,22 +50,40 @@ GitHub Actions from this repository, with a build attestation
 
 **📜** in the bar switches to build orders (**🏛** goes back to the civs).
 
--   **Add one**: on [buildorderguide.com](https://buildorderguide.com), open a build and
+-   **It never takes the focus from the game.** In this mode clicking the overlay
+    doesn't bring it to the front: the game keeps the keyboard and the mouse. It only
+    takes the keyboard while you type (the civ search, the paste box, picking a key), and
+    on macOS gives it back to the game when you're done. (Checked on macOS; on Windows
+    it uses the system's "no activate" window style, not tested there yet.)
+-   **Comes with 28 builds**: Hera's, as RTS Overlay shipped them up to version 1.9.2
+    (July 2024): generic ones (straight archers, scouts into knights, drush and fast
+    Castle, men-at-arms, hybrid and Nomad maps…) and civ-specific ones. They're from 2024,
+    so a later balance patch may have changed some details.
+-   **Add more**: on [buildorderguide.com](https://buildorderguide.com), open a build and
     click **Copy to clipboard for RTS Overlay**, then paste it anywhere on the overlay
     (or in the box under **+**). Any build order in
     [RTS Overlay](https://github.com/CraftySalamander/RTS_Overlay)'s AoE2 format works,
-    one or a list of them. Pasting the same build again replaces it.
+    one or a list of them. Pasting the same build again replaces it; 🗑 removes it.
 -   **Each step** shows the villager count and where they work, with the change from the
     previous step in green (**+3** wood: that's where the new villagers go), the age-up
     when there is one, the notes with the game's icons, the time it should be done by,
     and the next step underneath.
--   **In game**, without leaving it: **`Ctrl+Alt+]`** next step, **`Ctrl+Alt+[`**
-    previous, **`Ctrl+Alt+\`** starts or pauses the timer (**`Cmd+Alt`** on macOS). With
-    the overlay focused, → ← and Space do the same.
--   **The timer** runs in game time (the game's Normal speed is 1.608× real time, RTS
-    Overlay's measure) and moves to each step when its time comes. Builds without times
-    get them estimated from villager production, age-ups and Town Center techs (marked
-    "~"). If you're ahead or behind, ] and [ move the timer to that step.
+-   **In Spanish too**: the 28 builds have every note translated, and buildorderguide's
+    notes ("Create 6 … on …", "Move 1 … from … to …") are translated by their pattern. The
+    names it leaves as text where it has no icon (`castleAge`, `foodUnderTC`,
+    `battleElephant`…) show as icons.
+-   **Keys, in game**: by default **`Ctrl+Alt+]`** next step, **`Ctrl+Alt+[`** previous,
+    **`Ctrl+Alt+\`** starts or pauses the timer (**`Cmd+Alt`** on macOS). Change them in
+    **⚙ → Build order keys** to whatever is easiest for you: one key the game doesn't use,
+    such as F7/F8 or the numpad, works.
+-   **Stay in sync with the game**: start the timer when the game starts. It runs in game
+    time (the game's Normal speed is 1.608× real time, RTS Overlay's measure), moves to
+    each step when its time comes, says how long is left for the step or how late you
+    are, and shows **how many villagers you should have right now**: compare it with the
+    game's count. If you're ahead or behind, the next/previous keys move the timer to
+    that step. Builds without times get them estimated from villager production,
+    age-ups and Town Center techs (marked "~"). While the timer runs, the panel shows
+    only the steps and the clock.
 -   **Civ-aware**: the list puts the builds for your civ first, picking a build for one
     civ picks that civ if you hadn't, and a build for another civ says so, with a button
     to switch.
@@ -97,6 +115,9 @@ The download page is `site/`, published to GitHub Pages by
 -   `ui/build-order.js`: reading, timing and civ-matching build orders (no DOM, tested
     by `npm test`). `ui/img/bo/` are RTS Overlay's AoE2 icons, at the paths build orders
     name them; `src/manual-workflows/fetch-bo-icons.js` downloads them again.
+    `ui/data/build-orders/`: the builds the overlay comes with (`starter.json`, made by
+    `src/manual-workflows/fetch-starter-build-orders.js`) and the Spanish for their notes
+    (`es.json`, by hand; the tests check every note has one).
 -   `src-tauri/`: the Rust side: the window, the global shortcuts, resizing the window
     to its content.
 
@@ -120,7 +141,7 @@ publish its source.
 
 The build order format, its timing estimate and the icons in `ui/img/bo/` come from
 [RTS Overlay](https://github.com/CraftySalamander/RTS_Overlay) (GPL-3.0) by
-CraftySalamander.
+CraftySalamander, and so do the 28 starter build orders, written by Hera.
 
 The game icons in `ui/img/tree/` and `ui/img/bo/` and the civilization texts taken from the game are Age of
 Empires II content, © Microsoft Corporation, used under Microsoft's
