@@ -70,21 +70,63 @@ ICON_FILES = {
 }
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+# macOS: the game runs in a Porting Kit (Wineskin) wrapper in /Applications, with a
+# Windows drive inside. Windows: the drive itself.
 WRAPPER_GLOB = "/Applications/Age of Empires 2 Definitive Ed*.app/Contents/SharedSupport/prefix/drive_c"
 
 
+def steam_libraries():
+    """Steam's library folders on Windows (the game can be in any of them)."""
+    roots = [r"C:\Program Files (x86)\Steam", r"C:\Program Files\Steam"]
+    libs = list(roots)
+    for root in roots:
+        vdf = os.path.join(root, "steamapps", "libraryfolders.vdf")
+        if os.path.exists(vdf):
+            import re
+
+            text = open(vdf, encoding="utf-8", errors="replace").read()
+            libs += [p.replace("\\\\", "\\") for p in re.findall(r'"path"\s+"([^"]+)"', text)]
+    return libs
+
+
 def find_game():
+    """(the folder that has users/, the game's AoE2DE folder)"""
+    if os.name == "nt":
+        for lib in steam_libraries():
+            game = os.path.join(lib, "steamapps", "common", "AoE2DE")
+            if os.path.isdir(os.path.join(game, "widgetui")):
+                return os.path.join(os.environ.get("SystemDrive", "C:") + "\\", "Users"), game
     for drive in sorted(glob.glob(WRAPPER_GLOB)):
         game = os.path.join(drive, "Program Files (x86)/Steam/steamapps/common/AoE2DE")
         if os.path.isdir(os.path.join(game, "widgetui")):
-            return drive, game
+            return os.path.join(drive, "users"), game
     sys.exit("Didn't find the game; pass --game <AoE2DE folder> and --mods <mods folder>")
 
 
-def find_mods(drive):
-    """The profile's mods folder (the one with mod-status.json)."""
-    found = glob.glob(os.path.join(drive, "users/*/Games/Age of Empires 2 DE/*/mods/mod-status.json"))
+def find_mods(users):
+    """The profile's mods folder (the one with mod-status.json). On Windows it's
+    %USERPROFILE%\\Games\\Age of Empires 2 DE\\<profile id>\\mods."""
+    if os.name == "nt" and os.environ.get("USERPROFILE"):
+        found = glob.glob(os.path.join(os.environ["USERPROFILE"], "Games", "Age of Empires 2 DE", "*", "mods", "mod-status.json"))
+        if found:
+            return os.path.dirname(found[0])
+    found = glob.glob(os.path.join(users, "*", "Games", "Age of Empires 2 DE", "*", "mods", "mod-status.json"))
     return os.path.dirname(found[0]) if found else None
+
+
+# A bold sans font for the letters, from whichever system this runs on
+FONTS = [
+    "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+    r"C:\Windows\Fonts\arialbd.ttf",
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+]
+
+
+def bold_font(size):
+    for f in FONTS:
+        if os.path.exists(f):
+            return ImageFont.truetype(f, size)
+    return ImageFont.load_default(size)
 
 
 def enabled_base(mods, relpath):
@@ -156,7 +198,7 @@ def draw_rings(img, cfg):
 
 def letter_icon(size, letter, color):
     img = Image.new("RGBA", size, (0, 0, 0, 255))
-    font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial Bold.ttf", int(size[1] * 0.62))
+    font = bold_font(int(size[1] * 0.62))
     d = ImageDraw.Draw(img)
     box = d.textbbox((0, 0), letter, font=font)
     x = (size[0] - (box[2] - box[0])) / 2 - box[0]
@@ -205,8 +247,8 @@ def main():
     if args.game:
         game, mods = args.game, args.mods
     else:
-        drive, game = find_game()
-        mods = args.mods or find_mods(drive)
+        users, game = find_game()
+        mods = args.mods or find_mods(users)
     ui = os.path.join(game, "widgetui")
     out = os.path.join(HERE, "dist", MOD_TITLE)
     shutil.rmtree(out, ignore_errors=True)

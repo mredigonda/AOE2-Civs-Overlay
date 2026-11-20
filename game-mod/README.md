@@ -32,6 +32,21 @@ With the game closed. It reads the game from the Porting Kit (Wineskin) install 
 (keeping the previous one as `mod-status.json.bak`), so its files win over other mods'.
 Without `--install` it only builds.
 
+## On Windows
+
+Developed and tested on the Mac first; the same script runs on the Windows PC (not
+tried there yet). It finds the Steam game (`steamapps\common\AoE2DE`, in any Steam
+library) and the profile's mods in `%USERPROFILE%\Games\Age of Empires 2 DE\<id>\mods`,
+and draws the letters with Windows' Arial Bold. It needs Python 3 with Pillow and numpy:
+
+```bat
+py -m pip install pillow numpy
+py -I game-mod\build.py --install
+```
+
+The Microsoft Store version keeps the game in a protected folder, so `--game` would have
+to point to a copy of its `widgetui` folder.
+
 ## How it works
 
 The game's interface is files in `widgetui/`: JSON layouts (`resourcepanel.json`: each
