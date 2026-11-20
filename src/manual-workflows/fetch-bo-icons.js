@@ -7,6 +7,7 @@
 // Pinned to a commit so a rerun is reproducible; bump REF to pick up new icons.
 //
 //   GITHUB_TOKEN=$(gh auth token) node src/manual-workflows/fetch-bo-icons.js
+//   node src/manual-workflows/fetch-bo-icons.js --index-only   (just redo index.json)
 // (the token only avoids GitHub's 60-requests-an-hour limit for anonymous calls)
 
 const fs = require("fs");
@@ -32,7 +33,35 @@ async function main() {
         fs.writeFileSync(dest, Buffer.from(await img.arrayBuffer()));
         done++;
     }
+    writeIndex(files.map((f) => f.path.slice(PREFIX.length)));
     console.log(`${done} icons in ui/img/bo/`);
+}
+
+// ui/img/bo/index.json: each icon by its squashed name ("battleelephant" →
+// "stable/Battle_elephant_aoe2DE.webp"), to show buildorderguide.com's own names
+// as icons. Transparent "_alpha" versions win; on a clash, the first file.
+function writeIndex(paths) {
+    const { iconLabel, squash } = require("../../ui/build-order.js");
+    const index = {};
+    const sorted = [...paths].filter((p) => p.endsWith(".webp")).sort((a, b) => b.includes("_alpha") - a.includes("_alpha"));
+    for (const p of sorted) {
+        const key = squash(iconLabel(p));
+        if (key && !index[key]) index[key] = p;
+    }
+    fs.writeFileSync(path.join(OUT, "index.json"), JSON.stringify(index, null, 1) + "\n");
+}
+
+if (process.argv[2] === "--index-only") {
+    const list = [];
+    const walk = (dir, rel) => {
+        for (const e of fs.readdirSync(dir, { withFileTypes: true }))
+            if (e.isDirectory()) walk(path.join(dir, e.name), rel + e.name + "/");
+            else list.push(rel + e.name);
+    };
+    walk(OUT, "");
+    writeIndex(list);
+    console.log("ui/img/bo/index.json written");
+    return;
 }
 
 main().catch((e) => {

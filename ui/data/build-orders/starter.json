@@ -1,0 +1,5772 @@
+[
+ {
+  "id": "starter:straight_archers",
+  "name": "Straight archers",
+  "name_es": "Arqueros directos",
+  "civilization": "Generic",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 18,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 1,
+    "resources": {
+     "wood": 7,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a second @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 8,
+     "gold": 3,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 6 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @lumber_camp/Lumber_camp_aoe2de.webp@ (3) and to @mining_camp/Mining_camp_aoe2de.webp@ (3).",
+     "Build @barracks/Barracks_aoe2DE.webp@ at 60% up."
+    ]
+   },
+   {
+    "villager_count": 25,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 8,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@, build 2 @archery_range/Archery_range_aoe2DE.webp@ and make @archery_range/Archer_aoe2DE.webp@.",
+     "Send the next @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": 10,
+     "food": -1,
+     "gold": 8,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @blacksmith/Blacksmith_aoe2de.webp@, continue walling.",
+     "All new @resource/MaleVillDE.webp@ go to @resource/Aoe2de_wood.webp@ (straggler) and then make @mill/FarmDE.webp@.",
+     "Get @blacksmith/FletchingDE.webp@ and @town_center/WheelbarrowDE.webp@ (16-17 @resource/MaleVillDE.webp@). Move @archery_range/Archer_aoe2DE.webp@ out.",
+     "Send 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@ and click up to @age/CastleAgeIconDE.webp@.",
+     "Research @mill/HorseCollarDE.webp@, @mining_camp/GoldMiningDE.webp@, @blacksmith/PaddedArcherArmorDE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": 10,
+     "food": -1,
+     "gold": 8,
+     "stone": 0
+    },
+    "notes": [
+     "Research @archery_range/ArbalestDE.webp@, @blacksmith/BodkinArrowDE.webp@ and @lumber_camp/BowSawDE.webp@.",
+     "Drop 2 @town_center/Towncenter_aoe2DE.webp@, build a @university/University_AoE2_DE.webp@ and research @university/BallisticsDE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:scouts_into_skirms",
+  "name": "Scouts into skirmishers",
+  "name_es": "Exploradores y después hostigadores",
+  "civilization": "Generic",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 9,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ goes to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 1,
+    "resources": {
+     "wood": 6,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a second @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 3 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Build @barracks/Barracks_aoe2DE.webp@ at 60% up."
+    ]
+   },
+   {
+    "villager_count": 26,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 17,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @stable/Stable_aoe2DE.webp@ and start making @stable/Scoutcavalry_aoe2DE.webp@.",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mill/HorseCollarDE.webp@.",
+     "Next @resource/MaleVillDE.webp@ go to @resource/Aoe2de_wood.webp@ (straggler) and then make @mill/FarmDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 32,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 17,
+     "gold": 6,
+     "stone": 0
+    },
+    "notes": [
+     "Build an @archery_range/Archery_range_aoe2DE.webp@ and start making @archery_range/Skirmisher_aoe2DE.webp@.",
+     "Build a @blacksmith/Blacksmith_aoe2de.webp@ and research @blacksmith/FletchingDE.webp@.",
+     "Send 6 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Research @town_center/WheelbarrowDE.webp@.",
+     "Send @resource/MaleVillDE.webp@ from @resource/BerryBushDE.webp@ to @mill/FarmDE.webp@ (when depleted).",
+     "Click up to @age/CastleAgeIconDE.webp@ (produce 1-2 extra @resource/MaleVillDE.webp@ if needed).",
+     "Research @blacksmith/PaddedArcherArmorDE.webp@ and @mining_camp/GoldMiningDE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Upgrade to @archery_range/Elite_skirmisher_aoe2DE.webp@, research @blacksmith/BodkinArrowDE.webp@ and @lumber_camp/BowSawDE.webp@.",
+     "Make @stable/Knight_aoe2DE.webp@ and work your way to 3 @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:scouts_into_knights",
+  "name": "Scouts into knights",
+  "name_es": "Exploradores y después caballeros",
+  "civilization": "Generic",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 9,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ go to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 1,
+    "resources": {
+     "wood": 6,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a second @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 3 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Build @barracks/Barracks_aoe2DE.webp@ at 60% up."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @stable/Stable_aoe2DE.webp@ (with 2 @resource/MaleVillDE.webp@) and make @stable/Scoutcavalry_aoe2DE.webp@.",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mill/HorseCollarDE.webp@.",
+     "Send 1 extra @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 28,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 18,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ go to @resource/Aoe2de_wood.webp@ (straggler) and then make @mill/FarmDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 33,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 18,
+     "gold": 5,
+     "stone": 0
+    },
+    "notes": [
+     "Next 5 @resource/MaleVillDE.webp@ go to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 33,
+    "age": 3,
+    "resources": {
+     "wood": 10,
+     "food": 18,
+     "gold": 5,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @blacksmith/Blacksmith_aoe2de.webp@ and research @town_center/WheelbarrowDE.webp@.",
+     "Send @resource/MaleVillDE.webp@ from @resource/BerryBushDE.webp@ to @mill/FarmDE.webp@ (when depleted).",
+     "Click up to @age/CastleAgeIconDE.webp@.",
+     "Research @stable/BloodlinesDE.webp@, @blacksmith/ScaleBardingArmorDE.webp@, @mining_camp/GoldMiningDE.webp@ and build a second @stable/Stable_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": 10,
+     "food": 18,
+     "gold": 5,
+     "stone": 0
+    },
+    "notes": [
+     "Produce @stable/Knight_aoe2DE.webp@, drop 2 @town_center/Towncenter_aoe2DE.webp@ and research @lumber_camp/BowSawDE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:scouts_into_unique_unit",
+  "name": "Scouts into unique unit",
+  "name_es": "Exploradores y después unidad única",
+  "civilization": "Generic",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 9,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ go to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 1,
+    "resources": {
+     "wood": 6,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a second @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 3 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Build @barracks/Barracks_aoe2DE.webp@ at 60% up."
+    ]
+   },
+   {
+    "villager_count": 30,
+    "age": 2,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @stable/Stable_aoe2DE.webp@ (with 2 @resource/MaleVillDE.webp@) and make @stable/Scoutcavalry_aoe2DE.webp@.",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mill/HorseCollarDE.webp@.",
+     "Drop @mill/FarmDE.webp@ when you have enough @resource/Aoe2de_wood.webp@.",
+     "Work on full @defensive_structures/Palisade_wall_aoe2de.webp@ (with safe @resource/Aoe2de_stone.webp@ and @resource/Aoe2de_gold.webp@)."
+    ]
+   },
+   {
+    "villager_count": 33,
+    "age": 2,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": 0,
+     "stone": 3
+    },
+    "notes": [
+     "Build a @mining_camp/Mining_camp_aoe2de.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_stone.webp@."
+    ]
+   },
+   {
+    "villager_count": 37,
+    "age": 2,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": 4,
+     "stone": 3
+    },
+    "notes": [
+     "Build a @mining_camp/Mining_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 37,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": 5,
+     "stone": 5
+    },
+    "notes": [
+     "Build a @blacksmith/Blacksmith_aoe2de.webp@ and research @town_center/WheelbarrowDE.webp@.",
+     "When @resource/BerryBushDE.webp@ start to run out, send 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_stone.webp@ and 1 to @resource/Aoe2de_gold.webp@.",
+     "Last @resource/MaleVillDE.webp@ from @resource/BerryBushDE.webp@ builds a @mill/FarmDE.webp@.",
+     "Click up to @age/CastleAgeIconDE.webp@ (send 1-2 more @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@ if needed).",
+     "Research @mining_camp/GoldMiningDE.webp@ and essential upgrades for the unique unit (like @stable/BloodlinesDE.webp@)."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Build a @castle/Castle_aoe2DE.webp@ immediately in a secure position.",
+     "Begin producing UU (@unique_unit/MangudaiIcon-DE.webp@), continue getting related upgrades.",
+     "Research @lumber_camp/BowSawDE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:all_in_scouts",
+  "name": "All-in scouts",
+  "name_es": "Exploradores con todo",
+  "civilization": "Generic",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 9,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ go to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 1,
+    "resources": {
+     "wood": 6,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a second @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 3 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Build @barracks/Barracks_aoe2DE.webp@ at 60% up."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 11,
+     "gold": 1,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @stable/Stable_aoe2DE.webp@ and make @stable/Scoutcavalry_aoe2DE.webp@.",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mill/HorseCollarDE.webp@. Make more @mill/FarmDE.webp@.",
+     "Long distance @mining_camp/Mining_camp_aoe2de.webp@ with next @resource/MaleVillDE.webp@ to get 100 @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 28,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 18,
+     "gold": 1,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/WheelbarrowDE.webp@ (around 14 @mill/FarmDE.webp@)."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 2,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Research @stable/BloodlinesDE.webp@ with the 100 @resource/Aoe2de_gold.webp@. Send the @resource/MaleVillDE.webp@ from @mining_camp/Mining_camp_aoe2de.webp@ to @mill/FarmDE.webp@.",
+     "Send @resource/MaleVillDE.webp@ from @resource/BerryBushDE.webp@ to @mill/FarmDE.webp@ (when depleted).",
+     "Build a second @stable/Stable_aoe2DE.webp@ and a @blacksmith/Blacksmith_aoe2de.webp@. Research @blacksmith/ScaleBardingArmorDE.webp@ and @blacksmith/Forging_aoe2de.webp@.",
+     "Keep making @mill/FarmDE.webp@ (second @mill/Mill_aoe2de.webp@ if needed) and send @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@.",
+     "Make a @stable/Stable_aoe2DE.webp@ for each additional 6-7 @mill/FarmDE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:man_at_arms_into_archers",
+  "name": "Men-at-arms into archers",
+  "name_es": "Hombres de armas y después arqueros",
+  "civilization": "Generic",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@.",
+     "Push 1 @animal/Deer_aoe2DE.webp@ with @stable/Scoutcavalry_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 18,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@, then a @barracks/Barracks_aoe2DE.webp@, then another @other/House_aoe2DE.webp@.",
+     "Once done, send this @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 14,
+     "gold": 2,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @mining_camp/Mining_camp_aoe2de.webp@.",
+     "Send the next 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 9,
+     "gold": 2,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 5 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @resource/Aoe2de_wood.webp@ (build second @lumber_camp/Lumber_camp_aoe2de.webp@).",
+     "Make 3 @barracks/MilitiaDE.webp@ and send them forward."
+    ]
+   },
+   {
+    "villager_count": 26,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 9,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Research @barracks/ManAtArmsUpgDE.webp@, then @lumber_camp/DoubleBitAxe_aoe2DE.webp@.",
+     "Seed 4-5 @mill/FarmDE.webp@ with @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@.",
+     "Build the first @archery_range/Archery_range_aoe2DE.webp@ and send the next 5 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Build a @blacksmith/Blacksmith_aoe2de.webp@, and research @blacksmith/FletchingDE.webp@.",
+     "Keep seeding @mill/FarmDE.webp@ and research @town_center/WheelbarrowDE.webp@ (around min 16-17).",
+     "Click up to @age/CastleAgeIconDE.webp@. Build the second @archery_range/Archery_range_aoe2DE.webp@ and research @mill/HorseCollarDE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:drush_into_archers",
+  "name": "Drush into archers",
+  "name_es": "Drush y después arqueros",
+  "civilization": "Generic",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ builds a @other/House_aoe2DE.webp@, then a @barracks/Barracks_aoe2DE.webp@, then another @other/House_aoe2DE.webp@.",
+     "Once done, start the @defensive_structures/Palisade_wall_aoe2de.webp@ with this @resource/MaleVillDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 18,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 1,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ mines 10 @resource/Aoe2de_gold.webp@ without building @mining_camp/Mining_camp_aoe2de.webp@.",
+     "Once done, send this @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 12,
+     "gold": 1,
+     "stone": 0
+    },
+    "notes": [
+     "Make 3 @barracks/MilitiaDE.webp@ and send them forward with the @stable/Scoutcavalry_aoe2DE.webp@.",
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@ (first @lumber_camp/Lumber_camp_aoe2de.webp@)."
+    ]
+   },
+   {
+    "villager_count": 24,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 18,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next 5 @resource/MaleVillDE.webp@ (+ @resource/Aoe2de_gold.webp@ one) go to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@.",
+     "Make 4 @mill/FarmDE.webp@ before @animal/Sheep_aoe2DE.webp@ run out."
+    ]
+   },
+   {
+    "villager_count": 24,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 10,
+     "gold": 3,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 8 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @resource/Aoe2de_wood.webp@ (5) and to @resource/Aoe2de_gold.webp@ (3).",
+     "Build second @lumber_camp/Lumber_camp_aoe2de.webp@ and first @mining_camp/Mining_camp_aoe2de.webp@ with these @resource/MaleVillDE.webp@.",
+     "As @resource/Aoe2de_food.webp@ from @town_center/Towncenter_aoe2DE.webp@ runs out, send @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@ (straggler)."
+    ]
+   },
+   {
+    "villager_count": 28,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 10,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and build 2 @archery_range/Archery_range_aoe2DE.webp@ at front.",
+     "Make @archery_range/Archer_aoe2DE.webp@ and a few @barracks/Spearman_aoe2DE.webp@ if needed.",
+     "Build @other/House_aoe2DE.webp@ and continue @defensive_structures/Palisade_wall_aoe2de.webp@.",
+     "Build @blacksmith/Blacksmith_aoe2de.webp@, research @blacksmith/FletchingDE.webp@. Then, send out @archery_range/Archer_aoe2DE.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Make @mill/FarmDE.webp@ with 4-5 new @resource/MaleVillDE.webp@ until about 13, then get @town_center/WheelbarrowDE.webp@.",
+     "When @resource/BerryBushDE.webp@ run out, 2 @resource/MaleVillDE.webp@ go to @resource/Aoe2de_gold.webp@ and 2 go to @resource/Aoe2de_wood.webp@ or @mill/FarmDE.webp@.",
+     "Click up to @age/CastleAgeIconDE.webp@. Keep massing @archery_range/Archer_aoe2DE.webp@.",
+     "Research @mill/HorseCollarDE.webp@, @mining_camp/GoldMiningDE.webp@ and @blacksmith/PaddedArcherArmorDE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Research @archery_range/ArbalestDE.webp@, @blacksmith/BodkinArrowDE.webp@ and @lumber_camp/BowSawDE.webp@.",
+     "Drop 2 @town_center/Towncenter_aoe2DE.webp@ (extra @resource/Aoe2de_wood.webp@ and secondary @resource/Aoe2de_gold.webp@)."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:drush_fc_into_crossbows",
+  "name": "Drush, fast Castle, crossbows",
+  "name_es": "Drush, Castillos rápida, ballesteros",
+  "civilization": "Generic",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ builds a @other/House_aoe2DE.webp@, then a @barracks/Barracks_aoe2DE.webp@, then another @other/House_aoe2DE.webp@.",
+     "Once done, this @resource/MaleVillDE.webp@ goes to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 18,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 13,
+     "gold": 1,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ mines 10 @resource/Aoe2de_gold.webp@ without building @mining_camp/Mining_camp_aoe2de.webp@.",
+     "Once done, send this @resource/MaleVillDE.webp@ to the first @lumber_camp/Lumber_camp_aoe2de.webp@."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 1,
+    "resources": {
+     "wood": 8,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Make 3 @barracks/MilitiaDE.webp@ and send them forward with the @stable/Scoutcavalry_aoe2DE.webp@.",
+     "Add 3 @resource/MaleVillDE.webp@ (+1 from @resource/Aoe2de_gold.webp@) to @resource/Aoe2de_wood.webp@ (build second @lumber_camp/Lumber_camp_aoe2de.webp@ with new @resource/MaleVillDE.webp@)."
+    ]
+   },
+   {
+    "villager_count": 23,
+    "age": 1,
+    "resources": {
+     "wood": 8,
+     "food": 15,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next 2 @resource/MaleVillDE.webp@ go to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@ (6 @resource/MaleVillDE.webp@ on @animal/Sheep_aoe2DE.webp@)."
+    ]
+   },
+   {
+    "villager_count": 27,
+    "age": 1,
+    "resources": {
+     "wood": 8,
+     "food": 15,
+     "gold": 4,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @mining_camp/Mining_camp_aoe2de.webp@. Add 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 27,
+    "age": 2,
+    "resources": {
+     "wood": 8,
+     "food": 15,
+     "gold": 4,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 29,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 15,
+     "gold": 4,
+     "stone": 0
+    },
+    "notes": [
+     "Build 1 @archery_range/Archery_range_aoe2DE.webp@ with 2 @resource/MaleVillDE.webp@, make @archery_range/Archer_aoe2DE.webp@.",
+     "Build @blacksmith/Blacksmith_aoe2de.webp@ with 1 @resource/MaleVillDE.webp@.",
+     "Send 2 @resource/MaleVillDE.webp@ to the second @lumber_camp/Lumber_camp_aoe2de.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Click up to @age/CastleAgeIconDE.webp@ (max 20 sec of idle @town_center/Towncenter_aoe2DE.webp@).",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mill/HorseCollarDE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Research @archery_range/ArbalestDE.webp@, @blacksmith/BodkinArrowDE.webp@ and @lumber_camp/BowSawDE.webp@.",
+     "Drop 2 @town_center/Towncenter_aoe2DE.webp@ (extra @resource/Aoe2de_wood.webp@ and secondary @resource/Aoe2de_gold.webp@).",
+     "Research @town_center/WheelbarrowDE.webp@ (around min 21)."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:pre_mill_drush_fast_castle",
+  "name": "Pre-mill drush, fast Castle",
+  "name_es": "Drush antes del molino, Castillos rápida",
+  "civilization": "Generic",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ builds a @other/House_aoe2DE.webp@, then a @barracks/Barracks_aoe2DE.webp@.",
+     "Once done, start gathering @resource/BerryBushDE.webp@ with this @resource/MaleVillDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 13,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 9,
+     "gold": 1,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ mines 10 @resource/Aoe2de_gold.webp@ without building @mining_camp/Mining_camp_aoe2de.webp@.",
+     "Once done, start the @defensive_structures/Palisade_wall_aoe2de.webp@ with this @resource/MaleVillDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Make 3 @barracks/MilitiaDE.webp@ and send them forward (when all ready).",
+     "Do not idle the @town_center/Towncenter_aoe2DE.webp@.",
+     "Add 3 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@, building a @mill/Mill_aoe2de.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "The next one helps with the @defensive_structures/Palisade_wall_aoe2de.webp@."
+    ]
+   },
+   {
+    "villager_count": 24,
+    "age": 1,
+    "resources": {
+     "wood": 10,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a second @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 5 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 25,
+    "age": 1,
+    "resources": {
+     "wood": 10,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@.",
+     "Make @mill/FarmDE.webp@ with @resource/MaleVillDE.webp@ from @resource/Aoe2de_food.webp@, until you have 7-8."
+    ]
+   },
+   {
+    "villager_count": 29,
+    "age": 1,
+    "resources": {
+     "wood": 10,
+     "food": 13,
+     "gold": 4,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @mining_camp/Mining_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 29,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 13,
+     "gold": 4,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Continue the @defensive_structures/Palisade_wall_aoe2de.webp@."
+    ]
+   },
+   {
+    "villager_count": 31,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 13,
+     "gold": 6,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @blacksmith/Blacksmith_aoe2de.webp@ and a first @archery_range/Archery_range_aoe2DE.webp@ (or @stable/Stable_aoe2DE.webp@).",
+     "Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 31,
+    "age": 3,
+    "resources": {
+     "wood": 10,
+     "food": 13,
+     "gold": 8,
+     "stone": 0
+    },
+    "notes": [
+     "Click up to @age/CastleAgeIconDE.webp@. Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mill/HorseCollarDE.webp@.",
+     "Send the 2 @resource/MaleVillDE.webp@ from @defensive_structures/Palisade_wall_aoe2de.webp@ to @resource/Aoe2de_gold.webp@ (when fully walled).",
+     "Build a second @archery_range/Archery_range_aoe2DE.webp@ (or @stable/Stable_aoe2DE.webp@).",
+     "Produce @archery_range/Archer_aoe2DE.webp@ and research @blacksmith/FletchingDE.webp@ (if applicable).",
+     "Seed @mill/FarmDE.webp@, send extra @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Research @archery_range/ArbalestDE.webp@ and @blacksmith/BodkinArrowDE.webp@ (if applicable).",
+     "Research @lumber_camp/BowSawDE.webp@ and @town_center/WheelbarrowDE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:fast_castle_knights",
+  "name": "Fast Castle knights",
+  "name_es": "Castillos rápida con caballeros",
+  "civilization": "Generic",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 more @resource/MaleVillDE.webp@ on @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 1 extra @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ builds a @other/House_aoe2DE.webp@, then starts the @defensive_structures/Palisade_wall_aoe2de.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 1,
+    "resources": {
+     "wood": 7,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a second @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "The next 3 @resource/MaleVillDE.webp@ go to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 22,
+    "age": 1,
+    "resources": {
+     "wood": 7,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @mill/FarmDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 23,
+    "age": 1,
+    "resources": {
+     "wood": 7,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ builds a @other/House_aoe2DE.webp@, then helps building the @defensive_structures/Palisade_wall_aoe2de.webp@."
+    ]
+   },
+   {
+    "villager_count": 26,
+    "age": 1,
+    "resources": {
+     "wood": 7,
+     "food": 14,
+     "gold": 3,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @mining_camp/Mining_camp_aoe2de.webp@.",
+     "Send 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 26,
+    "age": 2,
+    "resources": {
+     "wood": 7,
+     "food": 14,
+     "gold": 3,
+     "stone": 0
+    },
+    "notes": [
+     "Click up to @age/FeudalAgeIconDE.webp@ (@town_center/LoomDE.webp@ is optional).",
+     "Make @mill/FarmDE.webp@ with the @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@, when @animal/Sheep_aoe2DE.webp@ run out.",
+     "Build @barracks/Barracks_aoe2DE.webp@ (with 2 walling @resource/MaleVillDE.webp@)."
+    ]
+   },
+   {
+    "villager_count": 28,
+    "age": 2,
+    "resources": {
+     "wood": 7,
+     "food": 12,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @stable/Stable_aoe2DE.webp@ and a @blacksmith/Blacksmith_aoe2de.webp@ (with 2 walling @resource/MaleVillDE.webp@).",
+     "Send 2 new @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 28,
+    "age": 3,
+    "resources": {
+     "wood": 7,
+     "food": 12,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Click up to @age/CastleAgeIconDE.webp@.",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mill/HorseCollarDE.webp@",
+     "Make a second @stable/Stable_aoe2DE.webp@.",
+     "Research @stable/BloodlinesDE.webp@ and @blacksmith/ScaleBardingArmorDE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Spam @stable/Knight_aoe2DE.webp@ from 2 @stable/Stable_aoe2DE.webp@.",
+     "Keep making @resource/MaleVillDE.webp@ and send them to @mill/FarmDE.webp@ or @resource/Aoe2de_gold.webp@.",
+     "Start adding @town_center/Towncenter_aoe2DE.webp@ after making 10-12 @stable/Knight_aoe2DE.webp@ or when no damage possible."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:hybrid_map",
+  "name": "Hybrid map (land and water)",
+  "name_es": "Mapa híbrido (tierra y agua)",
+  "civilization": "Generic",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@ near water, then a @dock/Dock_aoe2de.webp@, then another @other/House_aoe2DE.webp@.",
+     "Once done, fish @animal/AoE2_DE_shore_fish_icon.webp@ with this @resource/MaleVillDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 6,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 6,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Make @dock/FishingShipDE.webp@ when you can afford, up to 4.",
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 1,
+    "resources": {
+     "wood": 6,
+     "food": 15,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 6 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 2,
+    "resources": {
+     "wood": 14,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 8 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @resource/Aoe2de_wood.webp@ (build second @lumber_camp/Lumber_camp_aoe2de.webp@).",
+     "When @resource/Aoe2de_food.webp@ runs out, send the @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@ (straggler).",
+     "Build @barracks/Barracks_aoe2DE.webp@ when you can afford it."
+    ]
+   },
+   {
+    "villager_count": 28,
+    "age": 2,
+    "resources": {
+     "wood": 14,
+     "food": 7,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@, build @other/House_aoe2DE.webp@ and @archery_range/Archery_range_aoe2DE.webp@.",
+     "Make @dock/Fire_galley_aoe2DE.webp@ as soon as possible (number to adapt).",
+     "Send the next 7 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 32,
+    "age": 2,
+    "resources": {
+     "wood": 14,
+     "food": 11,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Add 4 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Build a second @archery_range/Archery_range_aoe2DE.webp@ and a @blacksmith/Blacksmith_aoe2de.webp@. Research @blacksmith/FletchingDE.webp@.",
+     "Make @archery_range/Archer_aoe2DE.webp@ and @barracks/Spearman_aoe2DE.webp@ if needed.",
+     "Build @other/House_aoe2DE.webp@ and work on @defensive_structures/Palisade_wall_aoe2de.webp@.",
+     "Start making @mill/FarmDE.webp@ with straggler @resource/MaleVillDE.webp@.",
+     "Get @town_center/WheelbarrowDE.webp@ after 12-13 @mill/FarmDE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Click up to @age/CastleAgeIconDE.webp@ (max 20 sec of idle @town_center/Towncenter_aoe2DE.webp@).",
+     "Research @mill/HorseCollarDE.webp@, @mining_camp/GoldMiningDE.webp@, @blacksmith/PaddedArcherArmorDE.webp@ and mass @archery_range/Archer_aoe2DE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:nomad_map",
+  "name": "Nomad map",
+  "name_es": "Mapa Nómada",
+  "civilization": "Generic",
+  "author": "Hera",
+  "source": "https://www.youtube.com/watch?v=gZTDWkfZNLU",
+  "build_order": [
+   {
+    "villager_count": 3,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 0,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build @town_center/Towncenter_aoe2DE.webp@ as soon as possible next to @resource/Aoe2de_wood.webp@, with 2 @resource/MaleVillDE.webp@.",
+     "The other @resource/MaleVillDE.webp@ builds a @dock/Dock_aoe2de.webp@ (water on the edge, next to @animal/AoE2_DE_shore_fish_icon.webp@).",
+     "After @dock/Dock_aoe2de.webp@, this last @resource/MaleVillDE.webp@ builds a @other/House_aoe2DE.webp@, then gathers @animal/AoE2_DE_shore_fish_icon.webp@.",
+     "All @animal/Sheep_aoe2DE.webp@ scout around your @town_center/Towncenter_aoe2DE.webp@ (find @animal/Boar_aoe2DE.webp@ & @animal/Sheep_aoe2DE.webp@)."
+    ]
+   },
+   {
+    "villager_count": 5,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 1,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Once @town_center/Towncenter_aoe2DE.webp@ is done, send the first @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 8,
+    "age": 1,
+    "resources": {
+     "wood": 2,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @dock/FishingShipDE.webp@ when you can, then send @resource/MaleVillDE.webp@ on @animal/Sheep_aoe2DE.webp@ (keep 2 on @resource/Aoe2de_wood.webp@).",
+     "Force drop @resource/Aoe2de_food.webp@ and build @other/House_aoe2DE.webp@ when needed."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 6,
+     "food": 5,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "When you have 5 @resource/MaleVillDE.webp@ on @animal/Sheep_aoe2DE.webp@, send the others to @resource/Aoe2de_wood.webp@.",
+     "Move @resource/MaleVillDE.webp@ from @animal/Sheep_aoe2DE.webp@ to @resource/Aoe2de_wood.webp@, while maintaining @resource/MaleVillDE.webp@ production."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 1,
+    "resources": {
+     "wood": 8,
+     "food": 16,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send next @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@ and @animal/Boar_aoe2DE.webp@ (6 stay on @resource/Aoe2de_wood.webp@).",
+     "When needed, build @other/House_aoe2DE.webp@ close to @town_center/Towncenter_aoe2DE.webp@. Produce @dock/FishingShipDE.webp@.",
+     "Build a @lumber_camp/Lumber_camp_aoe2de.webp@ before aging up. Add @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 2,
+    "resources": {
+     "wood": 14,
+     "food": 6,
+     "gold": 4,
+     "stone": 0
+    },
+    "notes": [
+     "Click up to @age/FeudalAgeIconDE.webp@ (without researching @town_center/LoomDE.webp@).",
+     "Balance @resource/Aoe2de_food.webp@ and @resource/Aoe2de_wood.webp@. Build a second @dock/Dock_aoe2de.webp@ (space them).",
+     "Send 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@. Stop building @dock/FishingShipDE.webp@ (spare for @dock/Fire_galley_aoe2DE.webp@)."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@, and queue a few @dock/Fire_galley_aoe2DE.webp@. Fight for water.",
+     "The @resource/MaleVillDE.webp@ from @dock/Dock_aoe2de.webp@ is responsible for @other/House_aoe2DE.webp@ and @animal/AoE2_DE_shore_fish_icon.webp@.",
+     "Look for resources to @mill/Mill_aoe2de.webp@ or for extra @animal/Boar_aoe2DE.webp@.",
+     "Prepare for @age/CastleAgeIconDE.webp@, potentially already mining @resource/Aoe2de_stone.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:empire_wars_archers_crossbow",
+  "name": "Empire Wars: archers, crossbows",
+  "name_es": "Empire Wars: arqueros, ballesteros",
+  "civilization": "Generic",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 27,
+    "age": 2,
+    "resources": {
+     "wood": 12,
+     "food": 11,
+     "gold": 4,
+     "stone": 0
+    },
+    "notes": [
+     "The @resource/MaleVillDE.webp@ under @town_center/Towncenter_aoe2DE.webp@ go to @animal/Sheep_aoe2DE.webp@.",
+     "Build 1 @archery_range/Archery_range_aoe2DE.webp@ with a @resource/MaleVillDE.webp@ from @resource/Aoe2de_wood.webp@, then 2 @other/House_aoe2DE.webp@.",
+     "Scout your opponents with @stable/Scoutcavalry_aoe2DE.webp@. Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 2,
+    "resources": {
+     "wood": 12,
+     "food": -1,
+     "gold": 4,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ go to @animal/Sheep_aoe2DE.webp@.",
+     "Make @archery_range/Archer_aoe2DE.webp@ and 2-3 @barracks/Spearman_aoe2DE.webp@ (1 if only opponent @archery_range/Archer_aoe2DE.webp@).",
+     "Start the @defensive_structures/Palisade_wall_aoe2de.webp@ (including @other/House_aoe2DE.webp@) with 2-3 @resource/MaleVillDE.webp@. Research @blacksmith/FletchingDE.webp@.",
+     "Keep 4-5 @resource/MaleVillDE.webp@ on @animal/Sheep_aoe2DE.webp@. The others (under @town_center/Towncenter_aoe2DE.webp@) seed @mill/FarmDE.webp@.",
+     "Move with @archery_range/Archer_aoe2DE.webp@ & @barracks/Spearman_aoe2DE.webp@ when fully @defensive_structures/Palisade_wall_aoe2de.webp@ (sooner ok but risky)."
+    ]
+   },
+   {
+    "villager_count": 42,
+    "age": 2,
+    "resources": {
+     "wood": 15,
+     "food": 18,
+     "gold": 9,
+     "stone": 0
+    },
+    "notes": [
+     "When depleted, send 5 @resource/MaleVillDE.webp@ from @animal/Sheep_aoe2DE.webp@ to @resource/Aoe2de_gold.webp@.",
+     "Next @resource/MaleVillDE.webp@ go to @mill/FarmDE.webp@ (up to 14), then @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 42,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Click up to @age/CastleAgeIconDE.webp@. Build second @archery_range/Archery_range_aoe2DE.webp@.",
+     "Make @archery_range/Archer_aoe2DE.webp@. Research @mill/HorseCollarDE.webp@, @mining_camp/GoldMiningDE.webp@ and @blacksmith/PaddedArcherArmorDE.webp@",
+     "Add 1 extra @archery_range/Archery_range_aoe2DE.webp@ or @stable/Stable_aoe2DE.webp@.",
+     "Once in @age/CastleAgeIconDE.webp@, research @blacksmith/BodkinArrowDE.webp@, @archery_range/ArbalestDE.webp@ and @lumber_camp/BowSawDE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:bohemians_drush_fc_cannoneers",
+  "name": "Drush, fast Castle, hand cannoneers",
+  "name_es": "Drush, Castillos rápida, artilleros manuales",
+  "civilization": "Bohemians",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ builds a @other/House_aoe2DE.webp@, then a @barracks/Barracks_aoe2DE.webp@, then another @other/House_aoe2DE.webp@.",
+     "Once done, this @resource/MaleVillDE.webp@ starts the @defensive_structures/Palisade_wall_aoe2de.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 15,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Make 3 @barracks/MilitiaDE.webp@ and send them forward with the @stable/Scoutcavalry_aoe2DE.webp@.",
+     "Next 3 @resource/MaleVillDE.webp@ go to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 15,
+     "gold": 1,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ mines 10 @resource/Aoe2de_gold.webp@ without building @mining_camp/Mining_camp_aoe2de.webp@.",
+     "Once done, send this @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 22,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 16,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @defensive_structures/Palisade_wall_aoe2de.webp@ (for full wall)."
+    ]
+   },
+   {
+    "villager_count": 25,
+    "age": 1,
+    "resources": {
+     "wood": 7,
+     "food": 16,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next 3 @resource/MaleVillDE.webp@ go to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 27,
+    "age": 1,
+    "resources": {
+     "wood": 10,
+     "food": 13,
+     "gold": 4,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @mining_camp/Mining_camp_aoe2de.webp@. Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@.",
+     "Seed @mill/FarmDE.webp@ when @animal/Sheep_aoe2DE.webp@ are depleted. Keep 3 @resource/MaleVillDE.webp@ on @resource/Aoe2de_wood.webp@ (straggler).",
+     "Once full @defensive_structures/Palisade_wall_aoe2de.webp@ is done, send the 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@ (maybe after @age/FeudalAgeIconDE.webp@)."
+    ]
+   },
+   {
+    "villager_count": 27,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 13,
+     "gold": 4,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Keep harassing with @barracks/MilitiaDE.webp@ and @stable/Scoutcavalry_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 29,
+    "age": 2,
+    "resources": {
+     "wood": 7,
+     "food": 13,
+     "gold": 6,
+     "stone": 0
+    },
+    "notes": [
+     "Build 1 @archery_range/Archery_range_aoe2DE.webp@ and 1 @blacksmith/Blacksmith_aoe2de.webp@ with the 3 @resource/MaleVillDE.webp@ on @resource/Aoe2de_wood.webp@ (straggler).",
+     "Send next 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 29,
+    "age": 3,
+    "resources": {
+     "wood": 7,
+     "food": 16,
+     "gold": 6,
+     "stone": 0
+    },
+    "notes": [
+     "Click up to @age/CastleAgeIconDE.webp@.",
+     "Research @mill/HorseCollarDE.webp@, @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and (later) @blacksmith/PaddedArcherArmorDE.webp@.",
+     "After @mill/HorseCollarDE.webp@, build 3 @mill/FarmDE.webp@ with the builder @resource/MaleVillDE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Continue producing @resource/MaleVillDE.webp@ for @resource/Aoe2de_gold.webp@/@resource/Aoe2de_wood.webp@/@mill/FarmDE.webp@.",
+     "Build @university/University_AoE2_DE.webp@ and 2 @archery_range/Archery_range_aoe2DE.webp@. Research @university/ChemistryDE.webp@, @lumber_camp/BowSawDE.webp@ and @blacksmith/LeatherArcherArmorDE.webp@.",
+     "After @university/ChemistryDE.webp@, produce @archery_range/Hand_cannoneer_aoe2DE.webp@ non stop to put pressure.",
+     "Build @siege_workshop/Siege_workshop_aoe2DE.webp@ for @siege_workshop/Mangonel_aoe2DE.webp@/@siege_workshop/Scorpion_aoe2DE.webp@. Build @monastery/MonasteryAoe2DE.webp@ for @monastery/Monk_aoe2DE.webp@ and @monastery/FervorDE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:britons_20_pop_archers",
+  "name": "20-pop archers",
+  "name_es": "Arqueros a 20 de población",
+  "civilization": "Britons",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 5,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 5,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 5 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 8,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 5,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 9,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 13,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 16,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 5,
+     "gold": 2,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 7 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to first (2) and second (5) @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send 2 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @resource/Aoe2de_gold.webp@ (build @mining_camp/Mining_camp_aoe2de.webp@).",
+     "Send 2 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to build @barracks/Barracks_aoe2DE.webp@ and @other/House_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 22,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 5,
+     "gold": 5,
+     "stone": 0
+    },
+    "notes": [
+     "Build 1 @archery_range/Archery_range_aoe2DE.webp@ (with 2 @resource/MaleVillDE.webp@) and make @archery_range/Archer_aoe2DE.webp@. Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@.",
+     "Build @defensive_structures/Palisade_wall_aoe2de.webp@ & @other/House_aoe2DE.webp@ with 2 building @resource/MaleVillDE.webp@ (different places).",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@.",
+     "Send 1 @resource/MaleVillDE.webp@ from @animal/Sheep_aoe2DE.webp@ to @resource/Aoe2de_wood.webp@ (straggler), then seed @mill/FarmDE.webp@.",
+     "Build a @blacksmith/Blacksmith_aoe2de.webp@ with 1 of the walling @resource/MaleVillDE.webp@. Research @blacksmith/FletchingDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 35,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 16,
+     "gold": 9,
+     "stone": 0
+    },
+    "notes": [
+     "Seed @mill/FarmDE.webp@ with new and walling @resource/MaleVillDE.webp@.",
+     "When @resource/BerryBushDE.webp@ are depleted, send the 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@.",
+     "Move with 1-2 @barracks/Spearman_aoe2DE.webp@ and 3-4 @archery_range/Archer_aoe2DE.webp@ WITH @blacksmith/FletchingDE.webp@ !!!",
+     "Continue massing @archery_range/Archer_aoe2DE.webp@ from 1 @archery_range/Archery_range_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 35,
+    "age": 3,
+    "resources": {
+     "wood": 10,
+     "food": 16,
+     "gold": 9,
+     "stone": 0
+    },
+    "notes": [
+     "Build the second @archery_range/Archery_range_aoe2DE.webp@. Click up to @age/CastleAgeIconDE.webp@ (@resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ otherwise).",
+     "Research @mill/HorseCollarDE.webp@, @mining_camp/GoldMiningDE.webp@, @blacksmith/PaddedArcherArmorDE.webp@. Continue massing @archery_range/Archer_aoe2DE.webp@.",
+     "In 1v1, add 1 @stable/Stable_aoe2DE.webp@ (for @stable/Knight_aoe2DE.webp@ against @archery_range/Skirmisher_aoe2DE.webp@)."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Research @archery_range/ArbalestDE.webp@, @blacksmith/BodkinArrowDE.webp@ and @lumber_camp/BowSawDE.webp@.",
+     "Drop 2 @town_center/Towncenter_aoe2DE.webp@ (@resource/Aoe2de_wood.webp@ and @resource/Aoe2de_gold.webp@). Build @university/University_AoE2_DE.webp@, research @university/BallisticsDE.webp@.",
+     "Force fights and pick off @resource/MaleVillDE.webp@ with @archery_range/Crossbowman_aoe2DE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:burgundians_scouts_cavaliers",
+  "name": "Scouts into cavaliers",
+  "name_es": "Exploradores y caballeros mejorados en Castillos",
+  "civilization": "Burgundians",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 9,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 13,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and send 3 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@. Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ goes to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ builds a @other/House_aoe2DE.webp@ and starts the @defensive_structures/Palisade_wall_aoe2de.webp@."
+    ]
+   },
+   {
+    "villager_count": 18,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 4 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to build second @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Research @mill/HorseCollarDE.webp@. Build @barracks/Barracks_aoe2DE.webp@ and @other/House_aoe2DE.webp@ (with @resource/MaleVillDE.webp@ from @defensive_structures/Palisade_wall_aoe2de.webp@)."
+    ]
+   },
+   {
+    "villager_count": 29,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 18,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @stable/Stable_aoe2DE.webp@ (with 1 @resource/MaleVillDE.webp@ from @defensive_structures/Palisade_wall_aoe2de.webp@ and 1 from @town_center/Towncenter_aoe2DE.webp@).",
+     "Continue @defensive_structures/Palisade_wall_aoe2de.webp@ and @other/House_aoe2DE.webp@ with these @resource/MaleVillDE.webp@. Research @lumber_camp/BowSawDE.webp@.",
+     "Seed @mill/FarmDE.webp@ (up to 14), send to @resource/Aoe2de_wood.webp@ (straggler) if needed.",
+     "Produce @stable/Scoutcavalry_aoe2DE.webp@ to defend/attack."
+    ]
+   },
+   {
+    "villager_count": 34,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 18,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Send the next 5 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@.",
+     "Add the 2 @resource/MaleVillDE.webp@ from @defensive_structures/Palisade_wall_aoe2de.webp@ (once done) to @resource/Aoe2de_gold.webp@.",
+     "Research @town_center/WheelbarrowDE.webp@. Build a @blacksmith/Blacksmith_aoe2de.webp@.",
+     "When depleted, send @resource/MaleVillDE.webp@ from @resource/BerryBushDE.webp@ to @mill/FarmDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 34,
+    "age": 3,
+    "resources": {
+     "wood": 9,
+     "food": 18,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Click up to @age/CastleAgeIconDE.webp@. Research @mill/HeavyPlowDE.webp@, @blacksmith/ScaleBardingArmorDE.webp@ and @blacksmith/Forging_aoe2de.webp@.",
+     "Build a second @stable/Stable_aoe2DE.webp@. Research @mining_camp/GoldMiningDE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": 0
+    },
+    "notes": [
+     "Research @stable/Cavalier-research.webp@ and @blacksmith/ChainBardingDE.webp@ (no upgrade from @age/ImperialAgeIconDE.webp@).",
+     "Produce @stable/Cavalier_aoe2DE.webp@ from both @stable/Stable_aoe2DE.webp@.",
+     "Go all in with @monastery/Monk_aoe2DE.webp@ & @siege_workshop/Siege_workshop_aoe2DE.webp@ OR drop 2 @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:chinese_scouts_into_archers",
+  "name": "Scouts into archers",
+  "name_es": "Exploradores y después arqueros",
+  "civilization": "Chinese",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 7,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "All 6 @resource/MaleVillDE.webp@ go to @animal/Sheep_aoe2DE.webp@. Next @resource/MaleVillDE.webp@ builds 1 @other/House_aoe2DE.webp@ (then @animal/Sheep_aoe2DE.webp@).",
+     "Research @town_center/LoomDE.webp@, force drop @resource/Aoe2de_food.webp@ when @animal/Sheep_aoe2DE.webp@ has 40 @resource/Aoe2de_food.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@. Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@.",
+     "Use 1 @resource/MaleVillDE.webp@ from @animal/Sheep_aoe2DE.webp@ to lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 13,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@. Luring 1-2 @animal/Deer_aoe2DE.webp@ can help."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ builds @other/House_aoe2DE.webp@, then goes to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 16,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 16,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 5 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to build second @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send 2 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to build @other/House_aoe2DE.webp@ and @barracks/Barracks_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 30,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 18,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @stable/Stable_aoe2DE.webp@ (2 @resource/MaleVillDE.webp@) and start producing @stable/Scoutcavalry_aoe2DE.webp@.",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mill/HorseCollarDE.webp@.",
+     "Next @resource/MaleVillDE.webp@ go to @resource/Aoe2de_wood.webp@ (straggler) and then make @mill/FarmDE.webp@.",
+     "Start the @defensive_structures/Palisade_wall_aoe2de.webp@ (also with @other/House_aoe2DE.webp@) using 1-3 @resource/MaleVillDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 38,
+    "age": 2,
+    "resources": {
+     "wood": 11,
+     "food": 16,
+     "gold": 9,
+     "stone": 0
+    },
+    "notes": [
+     "Send 8 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@ (build @mining_camp/Mining_camp_aoe2de.webp@).",
+     "Build 2 @archery_range/Archery_range_aoe2DE.webp@ and start producing @archery_range/Archer_aoe2DE.webp@.",
+     "Build a @blacksmith/Blacksmith_aoe2de.webp@ and research @blacksmith/FletchingDE.webp@ (skip if passive).",
+     "After @resource/BerryBushDE.webp@, send @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@ (1), @mill/FarmDE.webp@ (2) & @resource/Aoe2de_wood.webp@ (1)."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": 0
+    },
+    "notes": [
+     "Click up to @age/CastleAgeIconDE.webp@ when you can. Extra @resource/MaleVillDE.webp@ go to @resource/Aoe2de_wood.webp@.",
+     "Research @mining_camp/GoldMiningDE.webp@, @blacksmith/FletchingDE.webp@ (if not done) and @blacksmith/PaddedArcherArmorDE.webp@.",
+     "Continue massing @archery_range/Archer_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": 0
+    },
+    "notes": [
+     "Upgrade to @archery_range/ArbalestDE.webp@, research @blacksmith/BodkinArrowDE.webp@ and @lumber_camp/BowSawDE.webp@.",
+     "Produce 2-5 @stable/Knight_aoe2DE.webp@/@stable/Camelrider_aoe2DE.webp@ (to adapt). Research @blacksmith/ScaleBardingArmorDE.webp@ (if needed).",
+     "Put pressure with @archery_range/Crossbowman_aoe2DE.webp@, @stable/Knight_aoe2DE.webp@, @stable/Camelrider_aoe2DE.webp@. Drop 2 @town_center/Towncenter_aoe2DE.webp@ (on @resource/Aoe2de_wood.webp@ & @resource/Aoe2de_gold.webp@)."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:cumans_double_tc_kipchaks",
+  "name": "Double TC in Feudal, Kipchaks",
+  "name_es": "Doble centro urbano en Feudal, kipchaks",
+  "civilization": "Cumans",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 9,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ go to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 13,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@ (@animal/Boar_aoe2DE.webp@, then @animal/Sheep_aoe2DE.webp@)."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 16,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 3 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 2,
+    "resources": {
+     "wood": 5,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 2 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @lumber_camp/Lumber_camp_aoe2de.webp@. Build a @other/House_aoe2DE.webp@.",
+     "Go to @resource/Aoe2de_wood.webp@ (straggler) when running out of @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 2,
+    "resources": {
+     "wood": -1,
+     "food": 16,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 6 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@#1 to build @town_center/Towncenter_aoe2DE.webp@#2 (on @resource/Aoe2de_wood.webp@, near @resource/Aoe2de_gold.webp@/@resource/Aoe2de_stone.webp@).",
+     "Drop @mill/FarmDE.webp@ with @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@#1 (when enough @resource/Aoe2de_wood.webp@).",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mill/HorseCollarDE.webp@. Send @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@#2 to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": 16,
+     "gold": 8,
+     "stone": 6
+    },
+    "notes": [
+     "Around 16 @mill/FarmDE.webp@, send next @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@ (8) and @resource/Aoe2de_stone.webp@ (4).",
+     "Build @barracks/Barracks_aoe2DE.webp@, @stable/Stable_aoe2DE.webp@ (or @market/Market_aoe2DE.webp@) and @blacksmith/Blacksmith_aoe2de.webp@.",
+     "Research @town_center/WheelbarrowDE.webp@ and click up to @age/CastleAgeIconDE.webp@.",
+     "Research @blacksmith/FletchingDE.webp@ and @stable/BloodlinesDE.webp@. Send 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_stone.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Drop a defensive @castle/Castle_aoe2DE.webp@, start making @unique_unit/Kipchakicon.webp@.",
+     "Get upgrades for @unique_unit/Kipchakicon.webp@ (@blacksmith/BodkinArrowDE.webp@, @blacksmith/PaddedArcherArmorDE.webp@...).",
+     "Research @lumber_camp/BowSawDE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:dravidians_drush_fc_archers",
+  "name": "Drush, fast Castle, archers",
+  "name_es": "Drush, Castillos rápida, arqueros",
+  "civilization": "Dravidians",
+  "author": "Hera",
+  "source": "https://www.youtube.com/watch?v=CeIGIkLRcEs",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@, then a @barracks/Barracks_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@. Make 3 @barracks/MilitiaDE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@ with the @resource/MaleVillDE.webp@ from @barracks/Barracks_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 16,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ mines 10 @resource/Aoe2de_gold.webp@ without building @mining_camp/Mining_camp_aoe2de.webp@.",
+     "Once done, send this @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@.",
+     "Next @resource/MaleVillDE.webp@ go to @resource/Aoe2de_food.webp@ (@town_center/Towncenter_aoe2DE.webp@ or up to 4 @resource/BerryBushDE.webp@).",
+     "Build a @other/House_aoe2DE.webp@. Send the 3 @barracks/MilitiaDE.webp@ together."
+    ]
+   },
+   {
+    "villager_count": 22,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 16,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Start the @defensive_structures/Palisade_wall_aoe2de.webp@ (including @other/House_aoe2DE.webp@) with the next 2 @resource/MaleVillDE.webp@.",
+     "Harass with the @barracks/MilitiaDE.webp@ and @stable/Scoutcavalry_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 25,
+    "age": 1,
+    "resources": {
+     "wood": 7,
+     "food": 16,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send next 2 @resource/MaleVillDE.webp@ and 1 from @town_center/Towncenter_aoe2DE.webp@ to @resource/Aoe2de_wood.webp@ (only 1 @lumber_camp/Lumber_camp_aoe2de.webp@).",
+     "Seed @mill/FarmDE.webp@ when @animal/Sheep_aoe2DE.webp@ run out, go to @resource/Aoe2de_wood.webp@ (straggler) while waiting."
+    ]
+   },
+   {
+    "villager_count": 27,
+    "age": 1,
+    "resources": {
+     "wood": 7,
+     "food": 14,
+     "gold": 4,
+     "stone": 0
+    },
+    "notes": [
+     "Send next 2 @resource/MaleVillDE.webp@ and 2 from @town_center/Towncenter_aoe2DE.webp@ to @resource/Aoe2de_gold.webp@ (build @mining_camp/Mining_camp_aoe2de.webp@)."
+    ]
+   },
+   {
+    "villager_count": 27,
+    "age": 1,
+    "resources": {
+     "wood": 7,
+     "food": 14,
+     "gold": 4,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Continue seeding @mill/FarmDE.webp@ (up to 14), you get 200 @resource/Aoe2de_wood.webp@ in @age/FeudalAgeIconDE.webp@.",
+     "The @resource/MaleVillDE.webp@ from @defensive_structures/Palisade_wall_aoe2de.webp@ go to @resource/Aoe2de_wood.webp@ (straggler).",
+     "Continue harassing with @barracks/MilitiaDE.webp@ and @stable/Scoutcavalry_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 31,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 14,
+     "gold": 8,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @archery_range/Archery_range_aoe2DE.webp@ with the 2 @resource/MaleVillDE.webp@ from @defensive_structures/Palisade_wall_aoe2de.webp@. Make @archery_range/Archer_aoe2DE.webp@.",
+     "Build @blacksmith/Blacksmith_aoe2de.webp@ with 1 @resource/MaleVillDE.webp@ from @resource/Aoe2de_gold.webp@.",
+     "Send next @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@ (up to 8), next to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Click up to @age/CastleAgeIconDE.webp@. Continue massing @archery_range/Archer_aoe2DE.webp@.",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @blacksmith/FletchingDE.webp@ (skip @mill/HorseCollarDE.webp@)."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Research @archery_range/ArbalestDE.webp@, @blacksmith/BodkinArrowDE.webp@, @lumber_camp/BowSawDE.webp@, then @mill/HorseCollarDE.webp@.",
+     "Drop @town_center/Towncenter_aoe2DE.webp@ when possible, at least 12 @resource/MaleVillDE.webp@ on @mill/FarmDE.webp@.",
+     "Continue massing @archery_range/Crossbowman_aoe2DE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:franks_19_pop_scouts",
+  "name": "19-pop scouts",
+  "name_es": "Exploradores a 19 de población",
+  "civilization": "Franks",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 8,
+    "age": 1,
+    "resources": {
+     "wood": 2,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 9,
+    "age": 1,
+    "resources": {
+     "wood": 2,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 2,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ goes to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 13,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ goes to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 3 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 18,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 18,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 5 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to build second @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Build a @other/House_aoe2DE.webp@ and a @barracks/Barracks_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 2,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": 5,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @stable/Stable_aoe2DE.webp@ and produce @stable/Scoutcavalry_aoe2DE.webp@.",
+     "Start the @defensive_structures/Palisade_wall_aoe2de.webp@ with @resource/MaleVillDE.webp@ from @resource/Aoe2de_wood.webp@.",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ (free @mill/HorseCollarDE.webp@). Drop @mill/FarmDE.webp@ when you can.",
+     "Send 5 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@ (around min 14)."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": 6,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @blacksmith/Blacksmith_aoe2de.webp@ and research @town_center/WheelbarrowDE.webp@.",
+     "Send @resource/MaleVillDE.webp@ from @resource/BerryBushDE.webp@ to @mill/FarmDE.webp@ when depleted.",
+     "Click up to @age/CastleAgeIconDE.webp@. Research @blacksmith/Forging_aoe2de.webp@, @blacksmith/ScaleBardingArmorDE.webp@ and @mining_camp/GoldMiningDE.webp@.",
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@. Build a second @stable/Stable_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Produce @stable/Knight_aoe2DE.webp@ from 2 @stable/Stable_aoe2DE.webp@.",
+     "Drop 2 @town_center/Towncenter_aoe2DE.webp@ on @resource/Aoe2de_wood.webp@ & @resource/Aoe2de_gold.webp@. Research @lumber_camp/BowSawDE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:gurjaras_no_sheep_archers",
+  "name": "Archers without sheep",
+  "name_es": "Arqueros sin ovejas",
+  "civilization": "Gurjaras",
+  "author": "Hera",
+  "source": "https://www.youtube.com/watch?v=C_N8fClapKs",
+  "build_order": [
+   {
+    "villager_count": 8,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@. Use the @animal/Sheep_aoe2DE.webp@ to find the large @resource/BerryBushDE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ on the large @resource/BerryBushDE.webp@ with 1 @resource/MaleVillDE.webp@ from @other/House_aoe2DE.webp@.",
+     "Bring all @animal/Sheep_aoe2DE.webp@ in the @mill/Mill_aoe2de.webp@, after finding them.",
+     "All @resource/MaleVillDE.webp@ gather from @resource/BerryBushDE.webp@: next to @mill/Mill_aoe2de.webp@ (2) and under @town_center/Towncenter_aoe2DE.webp@ (6)."
+    ]
+   },
+   {
+    "villager_count": 9,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 2,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@ (straggler).",
+     "Build a @other/House_aoe2DE.webp@ with one of the @resource/MaleVillDE.webp@ on @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 2,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 2,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 extra @resource/MaleVillDE.webp@ to @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 18,
+    "age": 1,
+    "resources": {
+     "wood": 6,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @lumber_camp/Lumber_camp_aoe2de.webp@ and send 6 @resource/MaleVillDE.webp@ (new & straggler) to it."
+    ]
+   },
+   {
+    "villager_count": 18,
+    "age": 2,
+    "resources": {
+     "wood": 13,
+     "food": 2,
+     "gold": 2,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "All @resource/MaleVillDE.webp@ from @animal/Boar_aoe2DE.webp@ go to @resource/Aoe2de_wood.webp@ (straggler) once idle.",
+     "Send 6 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to build a second @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Build @barracks/Barracks_aoe2DE.webp@ at 60% up, then @other/House_aoe2DE.webp@ (same @resource/MaleVillDE.webp@).",
+     "Send 2 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @resource/Aoe2de_gold.webp@ (after starting @barracks/Barracks_aoe2DE.webp@)."
+    ]
+   },
+   {
+    "villager_count": 22,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 5,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @archery_range/Archery_range_aoe2DE.webp@ with 2 @resource/MaleVillDE.webp@ (second might come a bit later).",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@, start producing @archery_range/Archer_aoe2DE.webp@.",
+     "Send the next @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@.",
+     "Keep 5 @resource/MaleVillDE.webp@ on each @lumber_camp/Lumber_camp_aoe2de.webp@, the others go to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": -1,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Start seeding @mill/FarmDE.webp@. Produce @archery_range/Archer_aoe2DE.webp@ from the 2 @archery_range/Archery_range_aoe2DE.webp@.",
+     "Use 1 @resource/MaleVillDE.webp@ to build @other/House_aoe2DE.webp@, @blacksmith/Blacksmith_aoe2de.webp@ and @defensive_structures/Palisade_wall_aoe2de.webp@.",
+     "Send the @archery_range/Archer_aoe2DE.webp@ with the @stable/Aoe2de_camel_scout.webp@. Research @blacksmith/FletchingDE.webp@ when possible."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:huns_scouts_into_archers",
+  "name": "Scouts into archers",
+  "name_es": "Exploradores y después arqueros",
+  "civilization": "Huns",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@ (no @other/House_aoe2DE.webp@ for @civilization/CivIcon-Huns.webp@)."
+    ]
+   },
+   {
+    "villager_count": 9,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ goes to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@ with the next 3 @resource/MaleVillDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 1,
+    "resources": {
+     "wood": 6,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a second @lumber_camp/Lumber_camp_aoe2de.webp@. Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 3 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to second @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Build @barracks/Barracks_aoe2DE.webp@ at 60% up."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @stable/Stable_aoe2DE.webp@ with 2 @resource/MaleVillDE.webp@ and start making @stable/Scoutcavalry_aoe2DE.webp@.",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mill/HorseCollarDE.webp@.",
+     "Next @resource/MaleVillDE.webp@ goes to @resource/Aoe2de_wood.webp@ (5 on each @lumber_camp/Lumber_camp_aoe2de.webp@)."
+    ]
+   },
+   {
+    "villager_count": 29,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 19,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Drop @mill/FarmDE.webp@ when you have enough @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 36,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 19,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Start taking @resource/Aoe2de_gold.webp@. Build 2 @archery_range/Archery_range_aoe2DE.webp@. Produce @archery_range/Archer_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 39,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 19,
+     "gold": 10,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/WheelbarrowDE.webp@. Build a @blacksmith/Blacksmith_aoe2de.webp@ and research @blacksmith/FletchingDE.webp@.",
+     "Send 3 extra @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Click up to @age/CastleAgeIconDE.webp@. Research @blacksmith/PaddedArcherArmorDE.webp@ and @mining_camp/GoldMiningDE.webp@.",
+     "Keep massing @archery_range/Archer_aoe2DE.webp@. Build a third @archery_range/Archery_range_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Upgrade to @archery_range/Crossbowman_aoe2DE.webp@. Research @blacksmith/BodkinArrowDE.webp@ and @lumber_camp/BowSawDE.webp@.",
+     "Build a @university/University_AoE2_DE.webp@ and research @university/BallisticsDE.webp@ (stop training army).",
+     "Once @university/BallisticsDE.webp@ is done, produce @archery_range/Crossbowman_aoe2DE.webp@ and @archery_range/Cavalryarcher_aoe2DE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:japanese_20_pop_man_at_arms",
+  "name": "20-pop men-at-arms",
+  "name_es": "Hombres de armas a 20 de población",
+  "civilization": "Japanese",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 9,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 13,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@.",
+     "Push 1 @animal/Deer_aoe2DE.webp@ with @stable/Scoutcavalry_aoe2DE.webp@ (optional)."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send next @resource/MaleVillDE.webp@ to build a @other/House_aoe2DE.webp@, then a @barracks/Barracks_aoe2DE.webp@.",
+     "After that, build @other/House_aoe2DE.webp@ & @defensive_structures/Palisade_wall_aoe2de.webp@ with this @resource/MaleVillDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 13,
+     "gold": 2,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @mining_camp/Mining_camp_aoe2de.webp@. Send the next 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 7,
+     "gold": 2,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 6 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @resource/Aoe2de_wood.webp@ (4 on second @lumber_camp/Lumber_camp_aoe2de.webp@).",
+     "Make 3 @barracks/MilitiaDE.webp@ and send them forward."
+    ]
+   },
+   {
+    "villager_count": 22,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 7,
+     "gold": 5,
+     "stone": 0
+    },
+    "notes": [
+     "Research @barracks/ManAtArmsUpgDE.webp@, then @lumber_camp/DoubleBitAxe_aoe2DE.webp@.",
+     "Seed @mill/FarmDE.webp@ with @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@.",
+     "Build the first @archery_range/Archery_range_aoe2DE.webp@ and @other/House_aoe2DE.webp@ with the building @resource/MaleVillDE.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 37,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 18,
+     "gold": 9,
+     "stone": 0
+    },
+    "notes": [
+     "Produce @archery_range/Archer_aoe2DE.webp@ from 1 @archery_range/Archery_range_aoe2DE.webp@ (move after @blacksmith/FletchingDE.webp@ and full @defensive_structures/Palisade_wall_aoe2de.webp@).",
+     "After 6 @mill/FarmDE.webp@, build a @blacksmith/Blacksmith_aoe2de.webp@, and research @blacksmith/FletchingDE.webp@.",
+     "After 14 @mill/FarmDE.webp@, send 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 37,
+    "age": 2,
+    "resources": {
+     "wood": 11,
+     "food": 16,
+     "gold": 9,
+     "stone": 0
+    },
+    "notes": [
+     "After @resource/BerryBushDE.webp@, send 2 @resource/MaleVillDE.webp@ to @mill/FarmDE.webp@ and 2 to @resource/Aoe2de_wood.webp@.",
+     "Build a second @archery_range/Archery_range_aoe2DE.webp@ and mass more @archery_range/Archer_aoe2DE.webp@.",
+     "Click up to @age/CastleAgeIconDE.webp@. Research @mill/HorseCollarDE.webp@, @mining_camp/GoldMiningDE.webp@ and @blacksmith/PaddedArcherArmorDE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Research @lumber_camp/BowSawDE.webp@, @archery_range/ArbalestDE.webp@ and @blacksmith/BodkinArrowDE.webp@.",
+     "Attack (or defend) with @archery_range/Crossbowman_aoe2DE.webp@ after upgrades.",
+     "Drop 2 @town_center/Towncenter_aoe2DE.webp@ when you can (@resource/Aoe2de_wood.webp@, then @resource/Aoe2de_gold.webp@)."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:magyars_20_pop_scouts_cav_archers",
+  "name": "20-pop scouts into cavalry archers",
+  "name_es": "Exploradores a 20 de población y después arqueros a caballo",
+  "civilization": "Magyars",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 9,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 13,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 18,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 15,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next 3 @resource/MaleVillDE.webp@ go to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 15,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 2,
+    "resources": {
+     "wood": 9,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 5 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @resource/Aoe2de_wood.webp@, 4 of them on new @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Build a @other/House_aoe2DE.webp@ and a @barracks/Barracks_aoe2DE.webp@ with 2 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 28,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 18,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @stable/Stable_aoe2DE.webp@ with 2 @resource/MaleVillDE.webp@. Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mill/HorseCollarDE.webp@.",
+     "Send 1 of the builders to second @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Build @mill/FarmDE.webp@ (new @resource/MaleVillDE.webp@ & from @town_center/Towncenter_aoe2DE.webp@), use @resource/Aoe2de_wood.webp@ (straggler) if needed.",
+     "Second builder builds @other/House_aoe2DE.webp@ and @defensive_structures/Palisade_wall_aoe2de.webp@.",
+     "Produce @stable/Scoutcavalry_aoe2DE.webp@ for attack/defense, up to full @defensive_structures/Palisade_wall_aoe2de.webp@ (use 2 @resource/MaleVillDE.webp@ if needed)."
+    ]
+   },
+   {
+    "villager_count": 33,
+    "age": 2,
+    "resources": {
+     "wood": 10,
+     "food": 16,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "After 14 @mill/FarmDE.webp@, send next 5 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@.",
+     "Build a @blacksmith/Blacksmith_aoe2de.webp@ with the walling @resource/MaleVillDE.webp@. Research @town_center/WheelbarrowDE.webp@.",
+     "When depleted, @resource/MaleVillDE.webp@ from @resource/BerryBushDE.webp@ go to @mill/FarmDE.webp@ (2) and @resource/Aoe2de_gold.webp@ (2).",
+     "Build a first @archery_range/Archery_range_aoe2DE.webp@ (hidden inside @defensive_structures/Palisade_wall_aoe2de.webp@)."
+    ]
+   },
+   {
+    "villager_count": 34,
+    "age": 3,
+    "resources": {
+     "wood": 10,
+     "food": 16,
+     "gold": 8,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@. Click up to @age/CastleAgeIconDE.webp@.",
+     "Build a second @archery_range/Archery_range_aoe2DE.webp@. Research @mining_camp/GoldMiningDE.webp@, @stable/BloodlinesDE.webp@ and @blacksmith/FletchingDE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Produce @archery_range/Cavalryarcher_aoe2DE.webp@ from both @archery_range/Archery_range_aoe2DE.webp@. Research @blacksmith/BodkinArrowDE.webp@, @lumber_camp/BowSawDE.webp@ and @stable/HusbandryDE.webp@.",
+     "Drop 2 @town_center/Towncenter_aoe2DE.webp@ on @resource/Aoe2de_wood.webp@ & @resource/Aoe2de_gold.webp@ (when you can afford).",
+     "Continue booming while massing @archery_range/Cavalryarcher_aoe2DE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:man_at_arms_into_eagles",
+  "name": "Men-at-arms into eagles",
+  "name_es": "Hombres de armas y después guerreros águila",
+  "civilization": [
+   "Aztecs",
+   "Incas",
+   "Mayans"
+  ],
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@.",
+     "Push 1 @animal/Deer_aoe2DE.webp@ with @stable/Scoutcavalry_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 18,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@, then a @barracks/Barracks_aoe2DE.webp@, then another @other/House_aoe2DE.webp@.",
+     "Once done, start the @defensive_structures/Palisade_wall_aoe2de.webp@ with this @resource/MaleVillDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 1,
+    "resources": {
+     "wood": 5,
+     "food": 13,
+     "gold": 2,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @mining_camp/Mining_camp_aoe2de.webp@.",
+     "Send the next 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 2,
+    "resources": {
+     "wood": 7,
+     "food": 10,
+     "gold": 3,
+     "stone": 0
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Send 3 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @resource/Aoe2de_wood.webp@ (2, same @lumber_camp/Lumber_camp_aoe2de.webp@) and to @resource/Aoe2de_gold.webp@ (1).",
+     "Make 3 @barracks/MilitiaDE.webp@ and send them forward."
+    ]
+   },
+   {
+    "villager_count": 24,
+    "age": 2,
+    "resources": {
+     "wood": 7,
+     "food": 10,
+     "gold": 6,
+     "stone": 0
+    },
+    "notes": [
+     "Research @barracks/ManAtArmsUpgDE.webp@, then @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mill/HorseCollarDE.webp@.",
+     "Build the second @barracks/Barracks_aoe2DE.webp@ with the walling @resource/MaleVillDE.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 28,
+    "age": 2,
+    "resources": {
+     "wood": 7,
+     "food": 14,
+     "gold": 6,
+     "stone": 0
+    },
+    "notes": [
+     "Seed @mill/FarmDE.webp@ with @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@, until you have 10 of them."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Build a @blacksmith/Blacksmith_aoe2de.webp@, and research @blacksmith/Forging_aoe2de.webp@ and @blacksmith/ScaleMailArmorDE.webp@.",
+     "Next @resource/MaleVillDE.webp@ go to @resource/Aoe2de_gold.webp@ (no new @mill/FarmDE.webp@).",
+     "When @resource/BerryBushDE.webp@ run out, send those @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@ and @resource/Aoe2de_gold.webp@.",
+     "Build a @market/Market_aoe2DE.webp@, keep making @barracks/Eaglescout_aoe2DE.webp@ (buy @resource/Aoe2de_food.webp@ with extra @resource/Aoe2de_gold.webp@ or @resource/Aoe2de_stone.webp@).",
+     "Click up to @age/CastleAgeIconDE.webp@. Build third @barracks/Barracks_aoe2DE.webp@ and keep massing @barracks/Eaglescout_aoe2DE.webp@.",
+     "Build a second @mining_camp/Mining_camp_aoe2de.webp@ and research @mining_camp/GoldMiningDE.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": -1,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Research @barracks/EagleWarriorUpgDE.webp@, @blacksmith/IronCastingDE.webp@, @blacksmith/ChainMailArmorDE.webp@, @lumber_camp/BowSawDE.webp@ and @barracks/SquiresDE.webp@.",
+     "Keep massing @barracks/Eaglewarrior_aoe2DE.webp@ and add more @barracks/Barracks_aoe2DE.webp@. Build a new @mining_camp/Mining_camp_aoe2de.webp@.",
+     "Add @monastery/Monk_aoe2DE.webp@ and/or @siege_workshop/Siege_workshop_aoe2DE.webp@ to continue the push."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:poles_man_at_arms_towers",
+  "name": "Men-at-arms and towers",
+  "name_es": "Hombres de armas y torres",
+  "civilization": "Poles",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 9,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 9,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@, then a @mill/Aoe2-icon--folwark.webp@ near @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 13,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 13,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 3 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 18,
+    "age": 1,
+    "resources": {
+     "wood": 3,
+     "food": 15,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 19,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 15,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 15,
+     "gold": 0,
+     "stone": 2
+    },
+    "notes": [
+     "Send next 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_stone.webp@ (build @mining_camp/Mining_camp_aoe2de.webp@)."
+    ]
+   },
+   {
+    "villager_count": 21,
+    "age": 2,
+    "resources": {
+     "wood": 4,
+     "food": 9,
+     "gold": 0,
+     "stone": 4
+    },
+    "notes": [
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@.",
+     "Directly build @other/House_aoe2DE.webp@ and @barracks/Barracks_aoe2DE.webp@ (front) with 4 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@.",
+     "Send these 4 @resource/MaleVillDE.webp@ forward and queue up to 4 @barracks/MilitiaDE.webp@.",
+     "Send 2 @resource/MaleVillDE.webp@ from @town_center/Towncenter_aoe2DE.webp@ to @resource/Aoe2de_stone.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 2,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Research @barracks/ManAtArmsUpgDE.webp@. Skip @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mill/HorseCollarDE.webp@ for now.",
+     "Build a @defensive_structures/Tower_aoe2de.webp@ near a key resource being collected.",
+     "Force fights with @barracks/Manatarms_aoe2DE.webp@, @stable/Scoutcavalry_aoe2DE.webp@ and @resource/MaleVillDE.webp@.",
+     "Build @mill/FarmDE.webp@ around @mill/Aoe2-icon--folwark.webp@ once @animal/Sheep_aoe2DE.webp@ are depleted.",
+     "Attack opponent @resource/MaleVillDE.webp@ or buildings with your @barracks/Manatarms_aoe2DE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:saracens_drush_fc_with_market",
+  "name": "Drush, fast Castle with market",
+  "name_es": "Drush, Castillos rápida con mercado",
+  "civilization": "Saracens",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Add 1 @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 17,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ builds a @other/House_aoe2DE.webp@, then a @barracks/Barracks_aoe2DE.webp@, then another @other/House_aoe2DE.webp@.",
+     "Once done, this @resource/MaleVillDE.webp@ goes to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 18,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 1,
+     "stone": 0
+    },
+    "notes": [
+     "Next @resource/MaleVillDE.webp@ mines 10 @resource/Aoe2de_gold.webp@ without building @mining_camp/Mining_camp_aoe2de.webp@.",
+     "Once done, send this @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 22,
+    "age": 1,
+    "resources": {
+     "wood": 8,
+     "food": 14,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Make 3 @barracks/MilitiaDE.webp@ and send them forward with the @stable/Scoutcavalry_aoe2DE.webp@.",
+     "Add 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@ (build second @lumber_camp/Lumber_camp_aoe2de.webp@ with new @resource/MaleVillDE.webp@)."
+    ]
+   },
+   {
+    "villager_count": 24,
+    "age": 1,
+    "resources": {
+     "wood": 8,
+     "food": 16,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Next 2 @resource/MaleVillDE.webp@ go to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@ (6 @resource/MaleVillDE.webp@ on @animal/Sheep_aoe2DE.webp@, others on @mill/FarmDE.webp@)."
+    ]
+   },
+   {
+    "villager_count": 27,
+    "age": 2,
+    "resources": {
+     "wood": 8,
+     "food": 16,
+     "gold": 3,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @mining_camp/Mining_camp_aoe2de.webp@. Add 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@.",
+     "Research @town_center/LoomDE.webp@, then click up to @age/FeudalAgeIconDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 29,
+    "age": 2,
+    "resources": {
+     "wood": 8,
+     "food": 16,
+     "gold": 5,
+     "stone": 0
+    },
+    "notes": [
+     "Build 1 @archery_range/Archery_range_aoe2DE.webp@ and 1 @market/Market_aoe2DE.webp@ (2 @resource/MaleVillDE.webp@ on each).",
+     "Send 2 new @resource/MaleVillDE.webp@ (+ @resource/MaleVillDE.webp@ from depleted @resource/BerryBushDE.webp@) to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 29,
+    "age": 3,
+    "resources": {
+     "wood": 8,
+     "food": 16,
+     "gold": 5,
+     "stone": 0
+    },
+    "notes": [
+     "Sell @resource/Aoe2de_stone.webp@ and click up to @age/CastleAgeIconDE.webp@.",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@. Produce @archery_range/Archer_aoe2DE.webp@ and build second @archery_range/Archery_range_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 34,
+    "age": 3,
+    "resources": {
+     "wood": 10,
+     "food": 16,
+     "gold": 8,
+     "stone": 0
+    },
+    "notes": [
+     "Research @archery_range/ArbalestDE.webp@ and @blacksmith/BodkinArrowDE.webp@.",
+     "Add 2 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@ and 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 3,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Build a @university/University_AoE2_DE.webp@ and research @university/BallisticsDE.webp@.",
+     "Abuse the @market/Market_aoe2DE.webp@. Research @lumber_camp/BowSawDE.webp@."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "starter:turks_fast_imperial_arena",
+  "name": "Fast Imperial (Arena)",
+  "name_es": "Imperial rápida (Arena)",
+  "civilization": "Turks",
+  "author": "Hera",
+  "source": "https://discord.com/invite/RdnZdZRkCq (Hera Discord)",
+  "build_order": [
+   {
+    "villager_count": 6,
+    "age": 1,
+    "resources": {
+     "wood": 0,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build 2 @other/House_aoe2DE.webp@.",
+     "Send the first 6 @resource/MaleVillDE.webp@ to @animal/Sheep_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 10,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 6,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build the first @lumber_camp/Lumber_camp_aoe2de.webp@.",
+     "Send the next 4 @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@."
+    ]
+   },
+   {
+    "villager_count": 11,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 7,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the first @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 12,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 8,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Build a @mill/Mill_aoe2de.webp@ and gather @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 14,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 10,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 more @resource/MaleVillDE.webp@ on @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 15,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 11,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Lure the second @animal/Boar_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 16,
+    "age": 1,
+    "resources": {
+     "wood": 4,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Build a @other/House_aoe2DE.webp@.",
+     "Send 1 extra @resource/MaleVillDE.webp@ to @resource/BerryBushDE.webp@."
+    ]
+   },
+   {
+    "villager_count": 20,
+    "age": 1,
+    "resources": {
+     "wood": 8,
+     "food": 12,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "The next 4 @resource/MaleVillDE.webp@ go to @resource/Aoe2de_wood.webp@ (only 1 @lumber_camp/Lumber_camp_aoe2de.webp@)."
+    ]
+   },
+   {
+    "villager_count": 23,
+    "age": 1,
+    "resources": {
+     "wood": 8,
+     "food": 15,
+     "gold": 0,
+     "stone": 0
+    },
+    "notes": [
+     "Send 3 @resource/MaleVillDE.webp@ to @resource/Aoe2de_food.webp@ under @town_center/Towncenter_aoe2DE.webp@."
+    ]
+   },
+   {
+    "villager_count": 28,
+    "age": 1,
+    "resources": {
+     "wood": 8,
+     "food": 15,
+     "gold": 5,
+     "stone": 0
+    },
+    "notes": [
+     "Make @mill/FarmDE.webp@ with @resource/MaleVillDE.webp@ running out of @animal/Sheep_aoe2DE.webp@/@animal/Deer_aoe2DE.webp@.",
+     "Build a @mining_camp/Mining_camp_aoe2de.webp@. Send 5 @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 28,
+    "age": 2,
+    "resources": {
+     "wood": 11,
+     "food": 12,
+     "gold": 5,
+     "stone": 0
+    },
+    "notes": [
+     "Click up to @age/FeudalAgeIconDE.webp@ (no @town_center/LoomDE.webp@).",
+     "Send 3 @resource/MaleVillDE.webp@ under @town_center/Towncenter_aoe2DE.webp@ to @resource/Aoe2de_wood.webp@ (straggler) when out of @resource/Aoe2de_food.webp@."
+    ]
+   },
+   {
+    "villager_count": 30,
+    "age": 2,
+    "resources": {
+     "wood": 11,
+     "food": 12,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Use 3 @resource/MaleVillDE.webp@ from @resource/Aoe2de_wood.webp@ to build @blacksmith/Blacksmith_aoe2de.webp@ (1) and @market/Market_aoe2DE.webp@ (2).",
+     "Send 2 new @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@."
+    ]
+   },
+   {
+    "villager_count": 30,
+    "age": 3,
+    "resources": {
+     "wood": 8,
+     "food": 15,
+     "gold": 7,
+     "stone": 0
+    },
+    "notes": [
+     "Click up to @age/CastleAgeIconDE.webp@.",
+     "Research @lumber_camp/DoubleBitAxe_aoe2DE.webp@ and @mining_camp/GoldMiningDE.webp@ (optionally @mill/HorseCollarDE.webp@).",
+     "Make @mill/FarmDE.webp@ with the building @resource/MaleVillDE.webp@. Sell 200 @resource/Aoe2de_stone.webp@."
+    ]
+   },
+   {
+    "villager_count": 32,
+    "age": 3,
+    "resources": {
+     "wood": 8,
+     "food": 15,
+     "gold": 9,
+     "stone": 0
+    },
+    "notes": [
+     "Send 2 new @resource/MaleVillDE.webp@ to @resource/Aoe2de_gold.webp@.",
+     "Build @siege_workshop/Siege_workshop_aoe2DE.webp@ and @monastery/MonasteryAoe2DE.webp@ with 3 @resource/MaleVillDE.webp@ from @resource/Aoe2de_wood.webp@ (back to @resource/Aoe2de_wood.webp@ after)."
+    ]
+   },
+   {
+    "villager_count": 32,
+    "age": 4,
+    "resources": {
+     "wood": 8,
+     "food": 11,
+     "gold": 13,
+     "stone": 0
+    },
+    "notes": [
+     "Click up to @age/ImperialAgeIconDE.webp@.",
+     "Once @resource/BerryBushDE.webp@ are depleted, send the @resource/MaleVillDE.webp@ to second @resource/Aoe2de_gold.webp@.",
+     "Build @barracks/Barracks_aoe2DE.webp@ and 2 @archery_range/Archery_range_aoe2DE.webp@ (buy @resource/Aoe2de_wood.webp@ if needed)."
+    ]
+   },
+   {
+    "villager_count": -1,
+    "age": 4,
+    "resources": {
+     "wood": -1,
+     "food": -1,
+     "gold": -1,
+     "stone": -1
+    },
+    "notes": [
+     "Produce @archery_range/Hand_cannoneer_aoe2DE.webp@ and @siege_workshop/Bombard_cannon_aoe2DE.webp@.",
+     "Keep adding @resource/MaleVillDE.webp@ to @resource/Aoe2de_wood.webp@, @resource/Aoe2de_food.webp@, @resource/Aoe2de_gold.webp@, @resource/Aoe2de_stone.webp@."
+    ]
+   }
+  ]
+ }
+]
