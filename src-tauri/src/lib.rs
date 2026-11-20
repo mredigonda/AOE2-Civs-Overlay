@@ -1,3 +1,5 @@
+mod hud;
+
 use std::collections::HashMap;
 use std::sync::atomic::{AtomicBool, Ordering};
 use std::sync::Mutex;
@@ -73,6 +75,19 @@ fn toggle_overlay(app: &AppHandle) {
         }
         let _ = window.emit("overlay-shown", ());
     }
+}
+
+/// Reads the game's resource bar off the screen (see hud.rs). `image`: also return
+/// what the reader looked at, with its boxes drawn.
+#[tauri::command]
+async fn hud_read(image: bool) -> serde_json::Value {
+    tauri::async_runtime::spawn_blocking(move || hud::read_screen(image)).await.unwrap_or_default()
+}
+
+/// Sends the screen and the reading to the Mac that installed the mod.
+#[tauri::command]
+async fn hud_send_snapshot() -> Result<String, String> {
+    tauri::async_runtime::spawn_blocking(hud::send_snapshot).await.map_err(|e| e.to_string())?
 }
 
 #[tauri::command]
@@ -202,7 +217,7 @@ pub fn run() {
             }
             Ok(())
         })
-        .invoke_handler(tauri::generate_handler![hide_overlay, fit_window, set_playing, set_build_order_keys])
+        .invoke_handler(tauri::generate_handler![hide_overlay, fit_window, set_playing, set_build_order_keys, hud_read, hud_send_snapshot])
         .run(tauri::generate_context!())
         .expect("error while running the overlay");
 }

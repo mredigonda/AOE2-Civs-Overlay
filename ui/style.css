@@ -772,3 +772,72 @@ button:focus {
     color: var(--gold);
     font-variant-numeric: tabular-nums;
 }
+
+/* Reading the game's screen: what it read, and when */
+.hud {
+    margin-top: 6px;
+    padding: 6px 10px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.hud[hidden] {
+    display: none;
+}
+
+.hud-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 12px;
+    font-variant-numeric: tabular-nums;
+}
+
+.hud-cell i {
+    font-style: normal;
+    color: var(--muted);
+    margin-right: 3px;
+}
+
+.hud-cell b {
+    font-size: 15px;
+}
+
+.hud-cell small {
+    margin-left: 3px;
+    color: var(--gold);
+}
+
+.hud-clock {
+    margin-left: auto;
+    font: bold 14px ui-monospace, Menlo, Consolas, monospace;
+}
+
+.hud-info {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.hud-error {
+    color: #ff9c8a;
+}
+
+.hud-image {
+    display: block;
+    max-width: 100%;
+    margin-top: 6px;
+    border: 1px solid var(--line);
+}
+
+.bo-have {
+    margin-left: 4px;
+    font-size: 12px;
+    color: #9be29b;
+}
+
+.bo-have.behind {
+    color: #ff9c8a;
+}

@@ -194,3 +194,7 @@ src-tauri/gen/schemas
 game-mod/dist/
 game-mod/reports/
 __pycache__/
+experiments/hud-numbers/frames/
+experiments/hud-numbers/out-ocr/
+experiments/hud-numbers/glyphs/
+game-mod/dist-overlay/

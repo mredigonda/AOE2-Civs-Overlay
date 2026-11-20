@@ -23,12 +23,17 @@
                     <select id="language"></select>
                 </label>
                 <label><input type="checkbox" data-setting="showRival" /> <span id="show-rival-label"></span></label>
+                <div class="settings-title" id="reader-title"></div>
+                <label><input type="checkbox" data-setting="hudReader" /> <span id="reader-label"></span></label>
+                <label><input type="checkbox" data-setting="hudDebug" /> <span id="reader-debug-label"></span></label>
                 <div class="settings-title" id="sections-title"></div>
                 <div id="section-toggles"></div>
                 <div class="settings-title" id="tree-groups-title"></div>
                 <div class="toggles" id="tree-group-toggles"></div>
                 <div class="source" id="source"></div>
             </section>
+
+            <section class="hud" id="hud" hidden></section>
 
             <main class="columns" id="columns"></main>
             <main class="bo" id="bo" hidden></main>

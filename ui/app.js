@@ -107,6 +107,16 @@
             keyNone: "none",
             keyTaken: "can't be used: another app has it",
             boNow: "You should have {n} villagers now",
+            readerTitle: "Reading the game (test)",
+            readerOn: "Read the game's screen (needs the AoE2 Overlay Mod)",
+            readerDebug: "Show what it reads",
+            readerWaiting: "Reading the screen…",
+            readerAgo: "read {s} s ago",
+            readerTimes: "capture {c} ms, read {r} ms",
+            readerSend: "Send to the Mac",
+            readerSent: "Sent to {to}",
+            readerYou: "you have {n}",
+            readerClock: "Following the game's clock",
             age1: "Dark Age",
             age2: "Feudal Age",
             age3: "Castle Age",
@@ -197,6 +207,16 @@
             keyNone: "ninguna",
             keyTaken: "no se puede usar: la tiene otra app",
             boNow: "Ahora deberías tener {n} aldeanos",
+            readerTitle: "Leer el juego (prueba)",
+            readerOn: "Leer la pantalla del juego (necesita el AoE2 Overlay Mod)",
+            readerDebug: "Mostrar lo que lee",
+            readerWaiting: "Leyendo la pantalla…",
+            readerAgo: "leído hace {s} s",
+            readerTimes: "captura {c} ms, lectura {r} ms",
+            readerSend: "Mandar a la Mac",
+            readerSent: "Mandado a {to}",
+            readerYou: "tenés {n}",
+            readerClock: "Siguiendo el reloj del juego",
             age1: "Edad Oscura",
             age2: "Edad Feudal",
             age3: "Edad de los Castillos",
@@ -230,6 +250,8 @@
     const defaults = {
         language: "en-fandom",
         showRival: true,
+        hudReader: false, // read the game's resource bar off the screen (src-tauri/src/hud.rs)
+        hudDebug: false, // and show the part of the screen it reads
         sections: Object.fromEntries(SECTIONS.map((s) => [s, s !== "wonder"])),
         treeGroups: { army: true, economy: false, defense: false, navy: false },
         you: null,
@@ -514,6 +536,9 @@
         $("vs").textContent = t("vs");
         $("language-label").textContent = t("language");
         $("show-rival-label").textContent = t("showRival");
+        $("reader-title").textContent = t("readerTitle");
+        $("reader-label").textContent = t("readerOn");
+        $("reader-debug-label").textContent = t("readerDebug");
         $("sections-title").textContent = t("sections");
         $("source").textContent = `${t("source")}: ${data.source}`;
         for (const span of document.querySelectorAll("[data-section-label]"))
@@ -570,9 +595,14 @@
         }
         const panel = $("settings");
         panel.querySelector("[data-setting=showRival]").checked = settings.showRival;
+        panel.querySelector("[data-setting=hudReader]").checked = settings.hudReader;
+        panel.querySelector("[data-setting=hudDebug]").checked = settings.hudDebug;
         panel.addEventListener("change", (e) => {
             const box = e.target;
-            if (box.dataset.setting) settings[box.dataset.setting] = box.checked;
+            if (box.dataset.setting) {
+                settings[box.dataset.setting] = box.checked;
+                if (box.dataset.setting.startsWith("hud")) hudSync();
+            }
             else if (box.dataset.section) settings.sections[box.dataset.section] = box.checked;
             else if (box.dataset.group) settings.treeGroups[box.dataset.group] = box.checked;
             else return;
@@ -672,6 +702,7 @@
         renderBO();
     }
     function resetTimer() {
+        timer.fromGame = false;
         if (timer.running) clearInterval(timer.tick);
         timer.running = false;
         timer.base = 0;
@@ -689,6 +720,12 @@
             countdown(bo, settings.boStep);
             const now = $("bo-now");
             if (now) now.textContent = String(BO.villagersAt(bo, clock()));
+            const have = $("bo-have");
+            const n = hudVillagers();
+            if (have && n !== null) {
+                have.textContent = fmt("readerYou", { n });
+                have.classList.toggle("behind", n < BO.villagersAt(bo, clock()) - 1);
+            }
         }
     }
 
@@ -910,6 +947,12 @@
         const n = BO.villagersAt(bo, clock());
         wrap.title = fmt("boNow", { n });
         wrap.append(boImg(VILLAGER_ICON, "bo-icon", t("boVillagers")), Object.assign(el("b", "", String(n)), { id: "bo-now" }));
+        const have = hudVillagers();
+        if (have !== null) {
+            const you = el("span", "bo-have" + (have < n - 1 ? " behind" : ""), fmt("readerYou", { n: have }));
+            you.id = "bo-have";
+            wrap.append(you);
+        }
         return wrap;
     }
 
@@ -1101,6 +1144,113 @@
         e.preventDefault();
     });
 
+    // ---- reading the game's screen (with the AoE2 Overlay Mod on) ----
+    // Rust captures the screen and reads the resource bar (src-tauri/src/hud.rs);
+    // here: ask twice a second, show what it read and when, and let the build
+    // order's timer follow the game's own clock.
+    const hud = { last: null, at: 0, busy: false, poll: null, sent: "" };
+
+    function hudSync() {
+        if (settings.hudReader && !hud.poll) {
+            hud.poll = setInterval(hudPoll, 500);
+            hudPoll();
+        } else if (!settings.hudReader && hud.poll) {
+            clearInterval(hud.poll);
+            hud.poll = null;
+            hud.last = null;
+        }
+        renderHud();
+    }
+
+    async function hudPoll() {
+        if (hud.busy || !tauri) return;
+        hud.busy = true;
+        try {
+            const r = await invoke("hud_read", { image: !!settings.hudDebug });
+            if (r) {
+                hud.last = r;
+                hud.at = Date.now();
+                followGameClock(r);
+            }
+        } finally {
+            hud.busy = false;
+        }
+        renderHud();
+    }
+
+    function hudVillagers() {
+        const v = hud.last?.ok && hud.last.values?.PopulationWorkers;
+        return v && /^\d+$/.test(v) ? Number(v) : null;
+    }
+
+    // The game's clock, read off the screen, drives the build order's timer: it
+    // moves with the game (its speed, its pauses) with nothing to start by hand.
+    function followGameClock(r) {
+        const m = r.ok && /^(\d\d):(\d\d):(\d\d)$/.exec(r.values?.Clock || "");
+        if (!m || settings.mode !== "bo" || !currentBO()) return;
+        const sec = Number(m[1]) * 3600 + Number(m[2]) * 60 + Number(m[3]);
+        timer.base = sec;
+        timer.startedAt = Date.now();
+        timer.fromGame = true;
+        if (!timer.running) {
+            timer.running = true;
+            timer.tick = setInterval(onTick, 250);
+            renderBO();
+        }
+    }
+
+    function renderHud() {
+        const box = $("hud");
+        box.hidden = !settings.hudReader;
+        if (box.hidden) return fit();
+        const r = hud.last;
+        box.replaceChildren();
+        if (!r) {
+            box.append(el("div", "hud-info", t("readerWaiting")));
+            return fit();
+        }
+        if (!r.ok) {
+            box.append(el("div", "hud-error", r.error || "?"));
+        } else {
+            const v = r.values || {};
+            const row = el("div", "hud-row");
+            for (const [letter, res] of [["W", "Wood"], ["F", "Food"], ["G", "Gold"], ["S", "Stone"]]) {
+                const cell = el("span", "hud-cell");
+                cell.append(el("i", "", letter), el("b", "", v[res + "Storage"] || "–"), el("small", "", v[res + "Workers"] || "–"));
+                row.append(cell);
+            }
+            const pop = el("span", "hud-cell");
+            pop.append(el("i", "", "V"), el("b", "", v.PopulationWorkers || "–"), el("small", "", v.PopulationCount || "–"));
+            row.append(pop);
+            if (v.Clock) row.append(el("span", "hud-clock", v.Clock));
+            box.append(row);
+        }
+        const info = el("div", "hud-info");
+        const ago = ((Date.now() - hud.at) / 1000).toFixed(1);
+        const bits = [fmt("readerAgo", { s: ago })];
+        if (r.captureMs !== undefined) bits.push(fmt("readerTimes", { c: Math.round(r.captureMs), r: (r.readMs ?? 0).toFixed(1) }));
+        if (r.screen) bits.push(r.screen);
+        if (timer.fromGame && settings.mode === "bo") bits.push(t("readerClock"));
+        info.textContent = bits.join(" · ") + " ";
+        const send = el("button", "link-btn", hud.sent || t("readerSend"));
+        send.addEventListener("click", async () => {
+            try {
+                hud.sent = fmt("readerSent", { to: await invoke("hud_send_snapshot") });
+            } catch (e) {
+                hud.sent = String(e);
+            }
+            renderHud();
+        });
+        info.append(send);
+        box.append(info);
+        if (settings.hudDebug && r.image) {
+            const img = el("img", "hud-image");
+            img.src = "data:image/png;base64," + r.image;
+            box.append(img);
+        }
+        fit();
+    }
+
     // ---- the build order's global keys ----
     const IS_MAC = /Mac/.test(navigator.platform);
     let keysFailed = [];
@@ -1224,6 +1374,7 @@
 
         buildSettings();
         applyKeys();
+        hudSync();
         $("mode-btn").addEventListener("click", () => {
             settings.mode = settings.mode === "bo" ? "civs" : "bo";
             saveSettings();
