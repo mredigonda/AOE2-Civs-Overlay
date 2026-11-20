@@ -918,8 +918,9 @@
         const on = settings.mode === "bo";
         root.hidden = !on;
         $("columns").hidden = on;
-        $("pick-rival").hidden = on || !settings.showRival;
-        $("vs").hidden = on || !settings.showRival;
+        // Both civs stay in the bar in either mode: the build depends on the matchup
+        $("pick-rival").hidden = !settings.showRival;
+        $("vs").hidden = !settings.showRival;
         $("root").classList.toggle("two", !on && settings.showRival);
         $("mode-btn").textContent = on ? "🏛" : "📜";
         $("mode-btn").title = on ? t("civsMode") : t("boMode");
