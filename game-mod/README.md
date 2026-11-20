@@ -32,20 +32,30 @@ With the game closed. It reads the game from the Porting Kit (Wineskin) install 
 (keeping the previous one as `mod-status.json.bak`), so its files win over other mods'.
 Without `--install` it only builds.
 
-## On Windows
+## On Windows (from the Mac, over the home network)
 
-Developed and tested on the Mac first; the same script runs on the Windows PC (not
-tried there yet). It finds the Steam game (`steamapps\common\AoE2DE`, in any Steam
-library) and the profile's mods in `%USERPROFILE%\Games\Age of Empires 2 DE\<id>\mods`,
-and draws the letters with Windows' Arial Bold. It needs Python 3 with Pillow and numpy:
-
-```bat
-py -m pip install pillow numpy
-py -I game-mod\build.py --install
+```bash
+python3 -I game-mod/serve.py
 ```
 
-The Microsoft Store version keeps the game in a protected folder, so `--game` would have
-to point to a copy of its `widgetui` folder.
+serves a page at `http://<this Mac's IP>:8765` (the script prints it). On the Windows
+PC, open it, download `install-aoe2-overlay-mod.bat` and double-click it with the game
+closed. The installer (`windows/install-aoe2-overlay-mod.bat`, PowerShell inside a
+`.bat` so a double-click runs it):
+
+1. finds the profile's mods folder (`%USERPROFILE%\Games\Age of Empires 2 DE\<id>\mods`)
+   and, through Steam, the game;
+2. sends the Mac the list of mods and the resource bar layout in use there (the
+   highest enabled mod's `resourcepanel.json`, or the game's) with the screen size;
+3. gets back the mod built for that layout, installs it in `mods\local` and turns it
+   on first in `mod-status.json` (keeping `mod-status.json.bak`);
+4. tells the Mac how it went.
+
+The Mac keeps each run's report and log in `game-mod/reports/` (not in git). The
+textures come from the Mac's copy of the game, the same files as on Windows.
+
+`build.py` also runs on Windows by itself (it finds the Steam game, the mods and Arial
+Bold there), with Python 3, Pillow and numpy: `py -I game-mod\build.py --install`.
 
 ## How it works
 

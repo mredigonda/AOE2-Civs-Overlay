@@ -237,20 +237,10 @@ def restyle_labels(widget, scale):
         restyle_labels(child, scale)
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--game", help="the AoE2DE folder")
-    ap.add_argument("--mods", help="the profile's mods folder (has mod-status.json)")
-    ap.add_argument("--install", action="store_true", help="copy into <mods>/local")
-    args = ap.parse_args()
-
-    if args.game:
-        game, mods = args.game, args.mods
-    else:
-        users, game = find_game()
-        mods = args.mods or find_mods(users)
-    ui = os.path.join(game, "widgetui")
-    out = os.path.join(HERE, "dist", MOD_TITLE)
+def build(ui, panel_layout, out):
+    """Builds the mod into `out` from the game's widgetui folder `ui`.
+    panel_layout: the resource panel layout (parsed JSON) to restyle, the one the
+    player's game uses now."""
     shutil.rmtree(out, ignore_errors=True)
     panels_out = os.path.join(out, "widgetui/textures/ingame/panels")
     cultures = sorted(
@@ -277,15 +267,11 @@ def main():
                 f = os.path.join(ui, "textures/ingame/icons", name)
                 if os.path.exists(f):
                     letter_icon(Image.open(f).size, cfg["letters"][res], cfg["letter_color"]).save(os.path.join(icons_out, name))
-        # The layout you have now (a UI mod's, if one is on), restyled
-        base = enabled_base(mods, "widgetui/resourcepanel.json") or os.path.join(ui, "resourcepanel.json")
-        panel = json.load(open(base, encoding="utf-8-sig"))
-        styled = copy.deepcopy(panel)
+        styled = copy.deepcopy(panel_layout)
         for w in styled["Collection"]["Widgets"]:
             restyle_labels(w, cfg["font_scale"])
         with open(os.path.join(out, "widgetui/resourcepanel.json"), "w", encoding="utf-8") as fh:
             json.dump(styled, fh, indent=2)
-        print("resource bar layout from:", base.split("/mods/")[-1] if "/mods/" in base else "the game")
 
     info = {
         "Author": "Maximiliano Redigonda",
@@ -298,6 +284,26 @@ def main():
     # Thumbnail: the WEST minimap with the rings
     if CONFIG["rings"]["enabled"]:
         Image.open(os.path.join(panels_out, "WEST", "map-panel.png")).convert("RGB").save(os.path.join(out, "thumbnail.jpg"))
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--game", help="the AoE2DE folder")
+    ap.add_argument("--mods", help="the profile's mods folder (has mod-status.json)")
+    ap.add_argument("--install", action="store_true", help="copy into <mods>/local")
+    args = ap.parse_args()
+
+    if args.game:
+        game, mods = args.game, args.mods
+    else:
+        users, game = find_game()
+        mods = args.mods or find_mods(users)
+    ui = os.path.join(game, "widgetui")
+    out = os.path.join(HERE, "dist", MOD_TITLE)
+    # The layout you have now (a UI mod's, if one is on), restyled
+    base = enabled_base(mods, "widgetui/resourcepanel.json") or os.path.join(ui, "resourcepanel.json")
+    build(ui, json.load(open(base, encoding="utf-8-sig")), out)
+    print("resource bar layout from:", base.split("/mods/")[-1] if "/mods/" in base else "the game")
     print("built:", os.path.relpath(out))
 
     if args.install:
