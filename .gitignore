@@ -193,3 +193,4 @@ src-tauri/gen/schemas
 # Built game mod (made from the game files)
 game-mod/dist/
 game-mod/reports/
+__pycache__/
