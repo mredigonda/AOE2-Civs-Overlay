@@ -28,6 +28,8 @@ import build  # noqa: E402
 
 PORT = 8765
 BAT = os.path.join(HERE, "windows", "install-aoe2-overlay-mod.bat")
+# The overlay's Windows test build (a GitHub Actions "Test build (Windows)" artifact)
+OVERLAY_DIR = os.path.join(HERE, "dist-overlay")
 REPORTS = os.path.join(HERE, "reports")
 
 
@@ -61,10 +63,16 @@ li {{ margin: 6px 0; }} .muted {{ color: #a59f8f; font-size: 14px; }}
 <li>It finds your mods, builds the mod on the Mac for your setup, installs it and turns it on first in your mod list. Read what it says, then press a key to close it.</li>
 <li>Start the game and play a 1v1 Arabia.</li>
 </ol>
+{overlay}
 <p class="muted">To undo: in the game, Mods → Installed, turn off "AoE2 Overlay Mod". The installer also keeps your previous mod list as <code>mod-status.json.bak</code> next to <code>mod-status.json</code>.</p>
 <p class="muted">Served from this Mac at {server}. Installs so far: {count}.</p>
 </body></html>
 """
+
+
+def overlay_exe():
+    found = sorted(f for f in os.listdir(OVERLAY_DIR) if f.endswith(".exe")) if os.path.isdir(OVERLAY_DIR) else []
+    return os.path.join(OVERLAY_DIR, found[-1]) if found else None
 
 
 def report_dir(tag):
@@ -113,12 +121,24 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path in ("/", "/index.html"):
             count = len(os.listdir(REPORTS)) if os.path.isdir(REPORTS) else 0
-            page = PAGE.format(server=html.escape(self.server_url()), count=count)
+            exe = overlay_exe()
+            overlay = (
+                f'<h2>The overlay (test build)</h2><p><a class="btn" href="/overlay/{html.escape(os.path.basename(exe))}">Download the overlay</a></p>'
+                "<p>Install it (Windows warns because it isn't signed: <b>More info</b> → <b>Run anyway</b>), then in its ⚙ turn on "
+                "<b>Read the game's screen</b>. It shows what it reads and when; <b>Send to the Mac</b> sends the screen and the reading here.</p>"
+                if exe
+                else ""
+            )
+            page = PAGE.format(server=html.escape(self.server_url()), count=count, overlay=overlay)
             return self.send(200, page.encode(), "text/html; charset=utf-8")
         if self.path == "/install-aoe2-overlay-mod.bat":
             text = open(BAT, encoding="utf-8").read().replace("__SERVER__", self.server_url())
             body = text.replace("\r\n", "\n").replace("\n", "\r\n").encode("ascii", "replace")
             return self.send(200, body, "application/octet-stream", {"Content-Disposition": 'attachment; filename="install-aoe2-overlay-mod.bat"'})
+        exe = overlay_exe()
+        if exe and self.path == "/overlay/" + os.path.basename(exe):
+            body = open(exe, "rb").read()
+            return self.send(200, body, "application/octet-stream", {"Content-Disposition": f'attachment; filename="{os.path.basename(exe)}"'})
         self.send(404, b"not found", "text/plain")
 
     def do_POST(self):
@@ -141,6 +161,16 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send(500, f"Build failed on the Mac: {e}".encode(), "text/plain")
             print(f"built the mod for {report.get('computer')} ({report.get('layoutFrom')}) -> {os.path.relpath(d, HERE)}")
             return self.send(200, body, "application/zip")
+        if self.path == "/capture":
+            # The overlay's "Send to the Mac": the whole screen and what it read
+            d = os.path.join(REPORTS, "captures", datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
+            os.makedirs(d, exist_ok=True)
+            import base64
+
+            open(os.path.join(d, "screen.png"), "wb").write(base64.b64decode(data.get("png", "")))
+            json.dump(data.get("reading"), open(os.path.join(d, "reading.json"), "w"), indent=2)
+            print("capture from the overlay ->", os.path.relpath(d, HERE))
+            return self.send(200, b"ok", "text/plain")
         if self.path == "/log":
             runs = sorted(os.listdir(REPORTS)) if os.path.isdir(REPORTS) else []
             d = os.path.join(REPORTS, runs[-1]) if runs else report_dir("pc")

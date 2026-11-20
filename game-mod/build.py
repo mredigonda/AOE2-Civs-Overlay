@@ -260,7 +260,7 @@ def timer_with_black_box(panel):
         "Widget": {
             "Type": "Base",
             "Name": "OverlayModTimerBackground",
-            "ViewPort": {"xorigin": -10, "yorigin": 0, "width": 640, "height": 52, "alignment": "TopLeft"},
+            "ViewPort": {"xorigin": -10, "yorigin": 0, "width": 640, "height": 60, "alignment": "TopLeft"},
             "StateMaterials": {"StateNormal": {"Material": "FlatColorWithAlpha", "Color": {"r": 0, "g": 0, "b": 0, "a": 1}}},
             "ChildWidgets": [],
         }
@@ -273,7 +273,8 @@ def timer_with_black_box(panel):
         label = next((k for k in kids if k.get("Widget", {}).get("Name") == "WorldTimerLabel"), None)
         if label:
             b = copy.deepcopy(box)
-            b["Widget"]["ViewPort"]["yorigin"] = label["Widget"]["ViewPort"].get("yorigin", 0) - 4
+            # Some room above and below the text, for the overlay to find the box
+            b["Widget"]["ViewPort"]["yorigin"] = label["Widget"]["ViewPort"].get("yorigin", 0) - 8
             kids.insert(kids.index(label), b)  # drawn first, so behind the text
     return panel
 

@@ -98,6 +98,8 @@ try {
     if (Test-Path $dest) { Remove-Item -Recurse -Force $dest }
     New-Item -ItemType Directory -Force -Path $dest | Out-Null
     Expand-Archive -Path $zip -DestinationPath $dest -Force
+    # Where the overlay sends what it reads, to check it (its "Send to the Mac" button)
+    [IO.File]::WriteAllText((Join-Path $dest 'overlay-dev-server.txt'), $Server)
     Say "Installed: $dest"
 
     # On, and first in the list so its files win over other mods'
