@@ -112,6 +112,33 @@ try {
     $status.Mods = @($ours) + $others
     [IO.File]::WriteAllText($statusFile, ($status | ConvertTo-Json -Depth 6), (New-Object System.Text.UTF8Encoding($false)))
     Say 'Turned on, first in your mod list (the previous list is saved as mod-status.json.bak).'
+
+    # The overlay too, if the Mac has a build of it: one .exe, put where its
+    # installer would put it (so it replaces an installed one), with a Start menu
+    # shortcut, and started
+    $download = Join-Path $env:TEMP 'aoe2-civs-overlay.exe'
+    $haveOverlay = $true
+    try {
+        Invoke-WebRequest -UseBasicParsing -Uri "$Server/overlay/latest.exe" -OutFile $download
+    } catch {
+        $haveOverlay = $false
+        Say 'No overlay build on the Mac right now: only the mod was installed.'
+    }
+    if ($haveOverlay) {
+        Get-Process -Name 'aoe2-civs-overlay' -ErrorAction SilentlyContinue | Stop-Process -Force
+        Start-Sleep -Milliseconds 500
+        $dir = Join-Path $env:LOCALAPPDATA 'AoE2 Civs Overlay'
+        New-Item -ItemType Directory -Force -Path $dir | Out-Null
+        $exe = Join-Path $dir 'aoe2-civs-overlay.exe'
+        Copy-Item $download $exe -Force
+        $lnk = Join-Path ([Environment]::GetFolderPath('Programs')) 'AoE2 Civs Overlay.lnk'
+        $shell = New-Object -ComObject WScript.Shell
+        $shortcut = $shell.CreateShortcut($lnk)
+        $shortcut.TargetPath = $exe
+        $shortcut.Save()
+        Start-Process -FilePath $exe
+        Say "Overlay installed and started ($exe). Show or hide it with Ctrl+Alt+``."
+    }
     Say 'Done. Start the game and play a 1v1 Arabia.'
     Send-Log $true
 } catch {

@@ -70,9 +70,13 @@ li {{ margin: 6px 0; }} .muted {{ color: #a59f8f; font-size: 14px; }}
 """
 
 
+# The overlay for Windows, built on this Mac (game-mod/build-windows-overlay.sh): one
+# self-contained .exe (the page is built into it; Windows 11 has the WebView it uses)
+CROSS_BUILD = os.path.join(HERE, "..", "src-tauri", "target", "x86_64-pc-windows-msvc", "release", "aoe2-civs-overlay.exe")
+
+
 def overlay_exe():
-    found = sorted(f for f in os.listdir(OVERLAY_DIR) if f.endswith(".exe")) if os.path.isdir(OVERLAY_DIR) else []
-    return os.path.join(OVERLAY_DIR, found[-1]) if found else None
+    return CROSS_BUILD if os.path.exists(CROSS_BUILD) else None
 
 
 def report_dir(tag):
@@ -124,7 +128,9 @@ class Handler(BaseHTTPRequestHandler):
             exe = overlay_exe()
             overlay = (
                 f'<h2>The overlay (test build)</h2><p><a class="btn" href="/overlay/{html.escape(os.path.basename(exe))}">Download the overlay</a></p>'
-                "<p>Install it (Windows warns because it isn't signed: <b>More info</b> → <b>Run anyway</b>), then in its ⚙ turn on "
+                f'<p class="muted">Built {datetime.datetime.fromtimestamp(os.path.getmtime(exe)).strftime("%Y-%m-%d %H:%M")}. '
+                "The installer above installs or updates it too (and starts it), so you don't need this button.</p>"
+                "<p>In its ⚙ turn on "
                 "<b>Read the game's screen</b>. It shows what it reads and when; <b>Send to the Mac</b> sends the screen and the reading here.</p>"
                 if exe
                 else ""
@@ -136,7 +142,7 @@ class Handler(BaseHTTPRequestHandler):
             body = text.replace("\r\n", "\n").replace("\n", "\r\n").encode("ascii", "replace")
             return self.send(200, body, "application/octet-stream", {"Content-Disposition": 'attachment; filename="install-aoe2-overlay-mod.bat"'})
         exe = overlay_exe()
-        if exe and self.path == "/overlay/" + os.path.basename(exe):
+        if exe and self.path in ("/overlay/latest.exe", "/overlay/" + os.path.basename(exe)):
             body = open(exe, "rb").read()
             return self.send(200, body, "application/octet-stream", {"Content-Disposition": f'attachment; filename="{os.path.basename(exe)}"'})
         self.send(404, b"not found", "text/plain")

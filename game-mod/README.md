@@ -53,6 +53,20 @@ closed. The installer (`windows/install-aoe2-overlay-mod.bat`, PowerShell inside
    on first in `mod-status.json` (keeping `mod-status.json.bak`);
 4. tells the Mac how it went.
 
+5. if the Mac has a Windows build of the overlay, downloads it, puts it in
+   `%LOCALAPPDATA%\AoE2 Civs Overlay` (where its installer would, so it replaces an
+   installed one) with a Start menu shortcut, and starts it.
+
+The overlay for Windows is built on this Mac, cross-compiled, in about a minute:
+
+```bash
+game-mod/build-windows-overlay.sh
+```
+
+(one-time setup in the script). It's one self-contained `.exe`; the server serves the
+newest one. Its "Send to the Mac" button posts the screen and what it read to the
+server, saved in `game-mod/reports/captures/`.
+
 The Mac keeps each run's report and log in `game-mod/reports/` (not in git). The
 textures come from the Mac's copy of the game, the same files as on Windows.
 
