@@ -7,6 +7,7 @@
         "dev": "tauri dev",
         "build": "tauri build",
         "tauri": "tauri",
+        "test": "node --test test/",
         "civs:refresh": "node src/manual-workflows/fetch-civs-from-fandom.js && node src/manual-workflows/parse-civs-from-pasted.js && node src/manual-workflows/fetch-civs-from-game.js && node src/manual-workflows/fetch-civs-from-fandom-es.js"
     },
     "author": "Maximiliano Redigonda",

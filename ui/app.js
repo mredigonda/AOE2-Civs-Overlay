@@ -70,6 +70,39 @@
             Gold: "gold",
             Stone: "stone",
             baseStats: "Base values, before civ bonuses and upgrades",
+            civsMode: "Civilizations",
+            boMode: "Build order",
+            boNone: "No build orders yet. Add one with +.",
+            boAdd: "Add build orders",
+            boRemove: "Remove this build order",
+            boRemoveSure: "Click again to remove it",
+            boPasteHint:
+                "Paste one or more build orders in RTS Overlay's format (JSON). On buildorderguide.com, open a build and use “Copy to clipboard for RTS Overlay”. You can also just paste it anywhere on the overlay.",
+            boImport: "Add",
+            boAdded: "Added",
+            boForCiv: "For {civ}",
+            boAnyCiv: "Any civ",
+            boOtherCivs: "Other civs",
+            boMismatch: "This build is for {civs}",
+            boSwitch: "Pick {civ}",
+            boBy: "by",
+            boEstimated: "times estimated",
+            boStep: "Step {n} of {total}",
+            boNext: "Next",
+            boDoneBy: "done by",
+            boVillagers: "villagers",
+            boBuilder: "builders",
+            boTimerStart: "Start the timer (game time)",
+            boTimerPause: "Pause the timer",
+            boTimerReset: "Back to the start",
+            boPrevious: "Previous step",
+            boNextStep: "Next step",
+            boKeys: "In game: {mod}] next step · {mod}[ back · {mod}\\ timer",
+            age1: "Dark Age",
+            age2: "Feudal Age",
+            age3: "Castle Age",
+            age4: "Imperial Age",
+            boAgeUp: "Click up to the {age}",
         },
         es: {
             you: "Tu civ",
@@ -110,6 +143,39 @@
             Gold: "oro",
             Stone: "piedra",
             baseStats: "Valores base, sin bonos de la civ ni mejoras",
+            civsMode: "Civilizaciones",
+            boMode: "Build order",
+            boNone: "Todavía no hay build orders. Agregá uno con +.",
+            boAdd: "Agregar build orders",
+            boRemove: "Quitar este build order",
+            boRemoveSure: "Hacé clic de nuevo para quitarlo",
+            boPasteHint:
+                "Pegá uno o más build orders en el formato de RTS Overlay (JSON). En buildorderguide.com, abrí uno y usá “Copy to clipboard for RTS Overlay”. También podés pegarlo en cualquier parte del overlay.",
+            boImport: "Agregar",
+            boAdded: "Agregados",
+            boForCiv: "Para {civ}",
+            boAnyCiv: "Cualquier civ",
+            boOtherCivs: "Otras civs",
+            boMismatch: "Este build es para {civs}",
+            boSwitch: "Elegir {civ}",
+            boBy: "de",
+            boEstimated: "tiempos estimados",
+            boStep: "Paso {n} de {total}",
+            boNext: "Después",
+            boDoneBy: "listo a los",
+            boVillagers: "aldeanos",
+            boBuilder: "constructores",
+            boTimerStart: "Arrancar el reloj (tiempo de juego)",
+            boTimerPause: "Pausar el reloj",
+            boTimerReset: "Volver al principio",
+            boPrevious: "Paso anterior",
+            boNextStep: "Paso siguiente",
+            boKeys: "En el juego: {mod}] paso siguiente · {mod}[ atrás · {mod}\\ reloj",
+            age1: "Edad Oscura",
+            age2: "Edad Feudal",
+            age3: "Edad de los Castillos",
+            age4: "Edad Imperial",
+            boAgeUp: "Pasá a la {age}",
         },
     };
 
@@ -134,6 +200,9 @@
         treeGroups: { army: true, economy: false, defense: false, navy: false },
         you: null,
         rival: null,
+        mode: "civs", // or "bo": following a build order
+        bo: null, // the build order's id
+        boStep: 0,
     };
 
     function loadSettings() {
@@ -356,13 +425,10 @@
     const byCode = (code) => data.civs.find((c) => c.code === code) || null;
 
     function render() {
-        $("pick-rival").hidden = !settings.showRival;
-        $("vs").hidden = !settings.showRival;
         const columns = [card(byCode(settings.you), "you")];
         if (settings.showRival) columns.push(card(byCode(settings.rival), "rival"));
         $("columns").replaceChildren(...columns);
-        $("root").classList.toggle("two", settings.showRival);
-        fit();
+        renderBO(); // also shows or hides each mode's parts, and fits the window
     }
 
     // The window is exactly as big as what it shows (the open dropdown included),
@@ -474,6 +540,403 @@
         });
     }
 
+    // ---- build orders ----
+    // Saved apart from the settings: they can be big, and a broken one must not
+    // cost the settings. Each one is BuildOrder.parse's output plus an id.
+    const BO_KEY = "aoe2-civs-overlay:build-orders";
+    const BO = window.BuildOrder;
+    const MOD = /Mac/.test(navigator.platform) ? "⌘⌥" : "Ctrl+Alt+";
+    const fmt = (key, vars) => t(key).replace(/\{(\w+)\}/g, (_, k) => vars[k]);
+    const AGE_ICON = {
+        1: "age/DarkAgeIconDE_alpha.webp",
+        2: "age/FeudalAgeIconDE_alpha.webp",
+        3: "age/CastleAgeIconDE_alpha.webp",
+        4: "age/ImperialAgeIconDE_alpha.webp",
+    };
+    const RES_ICON = {
+        food: "resource/Aoe2de_food.webp",
+        wood: "resource/Aoe2de_wood.webp",
+        gold: "resource/Aoe2de_gold.webp",
+        stone: "resource/Aoe2de_stone.webp",
+        builder: "resource/Aoe2de_hammer.webp",
+    };
+    const VILLAGER_ICON = "resource/MaleVillDE_alpha.webp";
+
+    function loadBuildOrders() {
+        try {
+            const list = JSON.parse(localStorage.getItem(BO_KEY) || "[]");
+            return Array.isArray(list) ? list.filter((b) => b && b.id && Array.isArray(b.build_order)) : [];
+        } catch {
+            return [];
+        }
+    }
+    let buildOrders = loadBuildOrders();
+    function saveBuildOrders() {
+        try {
+            localStorage.setItem(BO_KEY, JSON.stringify(buildOrders));
+        } catch {
+            // Full or unavailable: they stay for this session.
+        }
+    }
+
+    const currentBO = () => buildOrders.find((b) => b.id === settings.bo) || null;
+
+    // The timer runs in game seconds: real time × the game's Normal speed.
+    const timer = { running: false, startedAt: 0, base: 0, tick: null };
+    const clock = () => timer.base + (timer.running ? ((Date.now() - timer.startedAt) / 1000) * BO.GAME_SPEED : 0);
+    function setClock(sec) {
+        timer.base = Math.max(0, sec);
+        timer.startedAt = Date.now();
+    }
+    function toggleTimer() {
+        const bo = currentBO();
+        if (!bo) return;
+        if (timer.running) {
+            timer.base = clock();
+            timer.running = false;
+            clearInterval(timer.tick);
+        } else {
+            // From where the shown step starts, so starting late still lines up
+            if (timer.base === 0 && settings.boStep > 0) timer.base = bo.build_order[settings.boStep - 1].timeSec;
+            timer.running = true;
+            timer.startedAt = Date.now();
+            timer.tick = setInterval(onTick, 250);
+        }
+        renderBO();
+    }
+    function resetTimer() {
+        if (timer.running) clearInterval(timer.tick);
+        timer.running = false;
+        timer.base = 0;
+        setStep(0);
+    }
+    function onTick() {
+        const bo = currentBO();
+        if (!bo) return;
+        // Forward only: a step you moved to by hand stays until its time comes
+        const step = BO.stepAt(bo, clock());
+        if (step > settings.boStep) setStep(step);
+        else {
+            const c = $("bo-clock");
+            if (c) c.textContent = BO.secToTime(clock());
+        }
+    }
+
+    function setStep(i) {
+        const bo = currentBO();
+        if (!bo) return;
+        settings.boStep = Math.max(0, Math.min(bo.build_order.length - 1, i));
+        saveSettings();
+        renderBO();
+    }
+
+    // ]/[ : with the timer running they move the clock to that step's start
+    // (to catch up or wait), so the timer keeps following from there.
+    function moveStep(by) {
+        const bo = currentBO();
+        if (!bo) return;
+        const i = Math.max(0, Math.min(bo.build_order.length - 1, settings.boStep + by));
+        if (timer.running) setClock(i > 0 ? bo.build_order[i - 1].timeSec : 0);
+        else if (timer.base) timer.base = i > 0 ? bo.build_order[i - 1].timeSec : 0;
+        setStep(i);
+    }
+
+    function selectBO(id) {
+        settings.bo = id;
+        settings.boStep = 0;
+        resetTimer();
+        const bo = currentBO();
+        // Nothing picked yet and the build is for one civ: that's your civ
+        const codes = bo ? BO.civCodes(bo, data.civs) : [];
+        if (!settings.you && codes.length === 1) pickCiv(codes[0]);
+        saveSettings();
+        renderBO();
+    }
+
+    function pickCiv(code) {
+        settings.you = code;
+        pickers.you.set(byCode(code));
+        saveSettings();
+        render();
+    }
+
+    function addBuildOrders(text) {
+        const { orders, errors } = BO.parse(text);
+        const stamp = Date.now();
+        orders.forEach((o, i) => {
+            o.id = `${stamp}-${i}`;
+            // Pasting the same build again replaces it instead of piling up copies
+            const same = buildOrders.findIndex((b) => b.name === o.name && b.author === o.author);
+            if (same >= 0) {
+                o.id = buildOrders[same].id;
+                buildOrders[same] = o;
+            } else buildOrders.push(o);
+        });
+        if (orders.length) {
+            saveBuildOrders();
+            selectBO(orders[0].id);
+        }
+        return { added: orders.length, errors };
+    }
+
+    function removeBO() {
+        buildOrders = buildOrders.filter((b) => b.id !== settings.bo);
+        saveBuildOrders();
+        selectBO(buildOrders[0]?.id || null);
+    }
+
+    const boImg = (path, className, label) => {
+        const img = el("img", className);
+        img.src = `img/bo/${path}`;
+        img.alt = img.title = label || BO.iconLabel(path);
+        // An icon this version doesn't have: its name instead
+        img.addEventListener("error", () => img.replaceWith(el("span", "bo-missing", img.alt)), { once: true });
+        return img;
+    };
+
+    function civLabel(code) {
+        return byCode(code)?.name || code;
+    }
+
+    // The <select>: builds for your civ first, then for any civ, then the rest
+    function boSelect() {
+        const select = el("select", "bo-select");
+        const groups = { mine: [], any: [], other: [] };
+        for (const b of buildOrders) {
+            const codes = BO.civCodes(b, data.civs);
+            const key = !codes.length ? "any" : codes.includes(settings.you) ? "mine" : "other";
+            groups[key].push([b, codes]);
+        }
+        const add = (label, items) => {
+            if (!items.length) return;
+            const group = el("optgroup");
+            group.label = label;
+            for (const [b, codes] of items) {
+                const civs = codes.length ? ` · ${codes.map(civLabel).join(", ")}` : "";
+                group.append(Object.assign(el("option", "", b.name + civs), { value: b.id }));
+            }
+            select.append(group);
+        };
+        if (settings.you) add(fmt("boForCiv", { civ: civLabel(settings.you) }), groups.mine);
+        else groups.other.unshift(...groups.mine);
+        add(t("boAnyCiv"), groups.any);
+        add(t("boOtherCivs"), groups.other);
+        select.value = settings.bo || "";
+        select.addEventListener("change", () => selectBO(select.value));
+        return select;
+    }
+
+    function resourceRow(bo, i, compact) {
+        const step = bo.build_order[i];
+        const change = BO.delta(bo, i);
+        const row = el("div", "bo-res" + (compact ? " compact" : ""));
+        const prevAge = i > 0 ? bo.build_order[i - 1].age : step.age;
+        if (AGE_ICON[step.age]) {
+            const age = el("span", "bo-age" + (step.age > prevAge ? " up" : ""));
+            age.append(boImg(AGE_ICON[step.age], "bo-icon", t("age" + step.age)));
+            row.append(age);
+        }
+        const vills = el("span", "bo-cell vills");
+        const count = step.villager_count >= 0 ? step.villager_count : BO.RESOURCES.reduce((n, k) => n + Math.max(0, step.resources[k]), 0);
+        vills.append(boImg(VILLAGER_ICON, "bo-icon", t("boVillagers")), el("b", "", String(count)));
+        row.append(vills);
+        for (const k of [...BO.RESOURCES, "builder"]) {
+            const v = step.resources[k];
+            if (v === undefined || (k === "builder" && v <= 0)) continue;
+            const cell = el("span", "bo-cell" + (change[k] > 0 ? " more" : change[k] < 0 ? " less" : v <= 0 ? " zero" : ""));
+            cell.append(boImg(RES_ICON[k], "bo-icon", k === "builder" ? t("boBuilder") : t(k[0].toUpperCase() + k.slice(1))));
+            cell.append(el("b", "", v < 0 ? "–" : String(v)));
+            if (change[k]) cell.append(el("small", "", (change[k] > 0 ? "+" : "") + change[k]));
+            row.append(cell);
+        }
+        return row;
+    }
+
+    function notes(step) {
+        const ul = el("ul", "bo-notes");
+        for (const note of step.notes) {
+            const li = el("li");
+            for (const part of BO.noteParts(note))
+                li.append(part.icon ? boImg(part.icon, "bo-icon inline") : document.createTextNode(part.text));
+            ul.append(li);
+        }
+        return ul;
+    }
+
+    function stepTime(bo, i) {
+        return (bo.estimated ? "~" : "") + BO.secToTime(bo.build_order[i].timeSec);
+    }
+
+    function renderBO() {
+        const root = $("bo");
+        const on = settings.mode === "bo";
+        root.hidden = !on;
+        $("columns").hidden = on;
+        $("pick-rival").hidden = on || !settings.showRival;
+        $("vs").hidden = on || !settings.showRival;
+        $("root").classList.toggle("two", !on && settings.showRival);
+        $("mode-btn").textContent = on ? "🏛" : "📜";
+        $("mode-btn").title = on ? t("civsMode") : t("boMode");
+        if (!on) return fit();
+
+        const bo = currentBO();
+        const panel = el("div", "card bo-card");
+
+        const bar = el("div", "bo-bar");
+        if (buildOrders.length) bar.append(boSelect());
+        else bar.append(el("span", "empty", t("boNone")));
+        const addBtn = el("button", "icon-btn", "+");
+        addBtn.title = t("boAdd");
+        addBtn.addEventListener("click", () => {
+            importOpen = !importOpen;
+            renderBO();
+        });
+        bar.append(addBtn);
+        if (bo) {
+            const del = el("button", "icon-btn", "🗑");
+            del.title = t("boRemove");
+            del.addEventListener("click", () => {
+                if (del.dataset.sure) return removeBO();
+                del.dataset.sure = "1";
+                del.title = t("boRemoveSure");
+                del.textContent = "🗑?";
+                setTimeout(() => {
+                    delete del.dataset.sure;
+                    del.textContent = "🗑";
+                    del.title = t("boRemove");
+                }, 3000);
+            });
+            bar.append(del);
+        }
+        panel.append(bar);
+
+        if (importOpen || !buildOrders.length) panel.append(importBox());
+
+        if (bo) {
+            const meta = el("div", "bo-meta");
+            const bits = [];
+            if (bo.author) bits.push(`${t("boBy")} ${bo.author}`);
+            if (bo.estimated) bits.push(t("boEstimated"));
+            meta.textContent = bits.join(" · ");
+            panel.append(meta);
+
+            const codes = BO.civCodes(bo, data.civs);
+            if (codes.length && settings.you && !codes.includes(settings.you)) {
+                const warn = el("div", "bo-warn", fmt("boMismatch", { civs: codes.map(civLabel).join(", ") }) + " ");
+                if (codes.length === 1) {
+                    const sw = el("button", "link-btn", fmt("boSwitch", { civ: civLabel(codes[0]) }));
+                    sw.addEventListener("click", () => {
+                        pickCiv(codes[0]);
+                        renderBO();
+                    });
+                    warn.append(sw);
+                }
+                panel.append(warn);
+            }
+
+            const i = Math.min(settings.boStep, bo.build_order.length - 1);
+            const step = bo.build_order[i];
+            const cur = el("section", "bo-step");
+            const head = el("div", "bo-step-head");
+            head.append(el("span", "", fmt("boStep", { n: i + 1, total: bo.build_order.length })));
+            head.append(el("span", "bo-due", `${t("boDoneBy")} ${stepTime(bo, i)}`));
+            cur.append(head, resourceRow(bo, i, false));
+            const prevAge = i > 0 ? bo.build_order[i - 1].age : step.age;
+            if (step.age > prevAge && AGE_ICON[step.age])
+                cur.append(el("div", "bo-ageup", fmt("boAgeUp", { age: t("age" + step.age) })));
+            cur.append(notes(step));
+            panel.append(cur);
+
+            if (i + 1 < bo.build_order.length) {
+                const next = el("section", "bo-step next");
+                const nhead = el("div", "bo-step-head");
+                nhead.append(el("span", "", t("boNext")), el("span", "bo-due", stepTime(bo, i + 1)));
+                next.append(nhead, resourceRow(bo, i + 1, true), notes(bo.build_order[i + 1]));
+                panel.append(next);
+            }
+
+            const controls = el("div", "bo-controls");
+            const btn = (text, titleKey, onClick, disabled) => {
+                const b = el("button", "icon-btn", text);
+                b.title = t(titleKey);
+                b.disabled = !!disabled;
+                b.addEventListener("click", onClick);
+                return b;
+            };
+            controls.append(
+                btn("◀", "boPrevious", () => moveStep(-1), i === 0),
+                btn("▶", "boNextStep", () => moveStep(1), i === bo.build_order.length - 1),
+                el("span", "bo-spacer"),
+                btn(timer.running ? "⏸" : "⏱", timer.running ? "boTimerPause" : "boTimerStart", toggleTimer),
+                Object.assign(el("span", "bo-clock" + (timer.running ? " running" : ""), BO.secToTime(clock())), { id: "bo-clock" }),
+                btn("↺", "boTimerReset", resetTimer)
+            );
+            panel.append(controls);
+            panel.append(el("div", "bo-keys", fmt("boKeys", { mod: MOD })));
+        }
+        root.replaceChildren(panel);
+        fit();
+    }
+
+    let importOpen = false;
+    let importDraft = "";
+    function importBox() {
+        const box = el("div", "bo-import");
+        box.append(el("p", "note", t("boPasteHint")));
+        const area = el("textarea");
+        area.rows = 4;
+        area.spellcheck = false;
+        area.value = importDraft;
+        area.addEventListener("input", () => (importDraft = area.value));
+        const status = el("div", "bo-status");
+        const go = el("button", "text-btn", t("boImport"));
+        go.addEventListener("click", () => {
+            const { added, errors } = addBuildOrders(area.value);
+            if (added && !errors.length) {
+                importDraft = "";
+                importOpen = false;
+                return renderBO();
+            }
+            status.textContent = [added ? `${t("boAdded")}: ${added}` : "", ...errors].filter(Boolean).join(" · ");
+            status.className = "bo-status" + (errors.length ? " error" : "");
+            fit();
+        });
+        box.append(area, go, status);
+        setTimeout(() => area.focus(), 0);
+        return box;
+    }
+
+    // Paste a build order anywhere (outside a text field) to add it
+    document.addEventListener("paste", (e) => {
+        if (e.target.closest?.("input, textarea")) return;
+        const text = e.clipboardData?.getData("text") || "";
+        if (!text.includes("build_order")) return;
+        e.preventDefault();
+        settings.mode = "bo";
+        const { errors } = addBuildOrders(text);
+        if (errors.length) {
+            importOpen = true;
+            importDraft = text;
+        }
+        renderBO();
+    });
+
+    // With the overlay focused: → / ← steps, space the timer
+    document.addEventListener("keydown", (e) => {
+        if (settings.mode !== "bo" || e.target.closest?.("input, textarea, select")) return;
+        if (e.key === "ArrowRight") moveStep(1);
+        else if (e.key === "ArrowLeft") moveStep(-1);
+        else if (e.key === " ") toggleTimer();
+        else return;
+        e.preventDefault();
+    });
+
+    function onBuildOrderKey(action) {
+        if (action === "next") moveStep(1);
+        else if (action === "previous") moveStep(-1);
+        else if (action === "timer") toggleTimer();
+    }
+
     async function main() {
         data = await loadLanguage(settings.language);
         tree = await loadLanguage("tree");
@@ -493,6 +956,11 @@
         }
 
         buildSettings();
+        $("mode-btn").addEventListener("click", () => {
+            settings.mode = settings.mode === "bo" ? "civs" : "bo";
+            saveSettings();
+            render();
+        });
         applyLanguage();
 
         // Esc (with no dropdown open) hides the overlay, like the shortcut does.
@@ -500,13 +968,15 @@
             if (e.key === "Escape") invoke("hide_overlay");
         });
 
-        if (tauri)
+        if (tauri) {
             tauri.event.listen("overlay-shown", () => {
                 pickers.you.close();
                 pickers.rival.close();
-                pickers.you.focus();
+                if (settings.mode !== "bo") pickers.you.focus();
             });
-        pickers.you.focus();
+            tauri.event.listen("build-order", (e) => onBuildOrderKey(e.payload));
+        }
+        if (settings.mode !== "bo") pickers.you.focus();
     }
 
     main();

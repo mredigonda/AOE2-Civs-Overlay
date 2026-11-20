@@ -46,6 +46,30 @@ GitHub Actions from this repository, with a build attestation
 -   **Language** (in ⚙): English or Spanish from the Fandom wikis (the most detail), or
     the game's own text in any of its 17 languages, with the official names.
 
+## Follow a build order
+
+**📜** in the bar switches to build orders (**🏛** goes back to the civs).
+
+-   **Add one**: on [buildorderguide.com](https://buildorderguide.com), open a build and
+    click **Copy to clipboard for RTS Overlay**, then paste it anywhere on the overlay
+    (or in the box under **+**). Any build order in
+    [RTS Overlay](https://github.com/CraftySalamander/RTS_Overlay)'s AoE2 format works,
+    one or a list of them. Pasting the same build again replaces it.
+-   **Each step** shows the villager count and where they work, with the change from the
+    previous step in green (**+3** wood: that's where the new villagers go), the age-up
+    when there is one, the notes with the game's icons, the time it should be done by,
+    and the next step underneath.
+-   **In game**, without leaving it: **`Ctrl+Alt+]`** next step, **`Ctrl+Alt+[`**
+    previous, **`Ctrl+Alt+\`** starts or pauses the timer (**`Cmd+Alt`** on macOS). With
+    the overlay focused, → ← and Space do the same.
+-   **The timer** runs in game time (the game's Normal speed is 1.608× real time, RTS
+    Overlay's measure) and moves to each step when its time comes. Builds without times
+    get them estimated from villager production, age-ups and Town Center techs (marked
+    "~"). If you're ahead or behind, ] and [ move the timer to that step.
+-   **Civ-aware**: the list puts the builds for your civ first, picking a build for one
+    civ picks that civ if you hadn't, and a build for another civ says so, with a button
+    to switch.
+
 On Windows, run the game in "Full Desktop" (Options → Graphics → Display Mode) so the
 overlay can stay on top of it.
 
@@ -70,7 +94,10 @@ The download page is `site/`, published to GitHub Pages by
 `.github/workflows/pages.yml`.
 
 -   `ui/`: the page (plain HTML/CSS/JS, no build step) and the civ data (`ui/data/`).
--   `src-tauri/`: the Rust side: the window, the global shortcut, resizing the window
+-   `ui/build-order.js`: reading, timing and civ-matching build orders (no DOM, tested
+    by `npm test`). `ui/img/bo/` are RTS Overlay's AoE2 icons, at the paths build orders
+    name them; `src/manual-workflows/fetch-bo-icons.js` downloads them again.
+-   `src-tauri/`: the Rust side: the window, the global shortcuts, resizing the window
     to its content.
 
 ## Civilization data
@@ -91,7 +118,11 @@ See [src/manual-workflows/README.md](src/manual-workflows/README.md).
 any copy or modified version you distribute must keep this license and the credit, and
 publish its source.
 
-The game icons in `ui/img/tree/` and the civilization texts taken from the game are Age of
+The build order format, its timing estimate and the icons in `ui/img/bo/` come from
+[RTS Overlay](https://github.com/CraftySalamander/RTS_Overlay) (GPL-3.0) by
+CraftySalamander.
+
+The game icons in `ui/img/tree/` and `ui/img/bo/` and the civilization texts taken from the game are Age of
 Empires II content, © Microsoft Corporation, used under Microsoft's
 [Game Content Usage Rules](https://www.xbox.com/en-US/developers/rules); they are not
 covered by the GPL. AoE2 Civs Overlay is not endorsed by or affiliated with Microsoft.
