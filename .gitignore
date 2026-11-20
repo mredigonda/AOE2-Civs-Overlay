@@ -189,3 +189,6 @@ test-screenshot.png
 # Tauri
 src-tauri/target
 src-tauri/gen/schemas
+
+# Built game mod (made from the game files)
+game-mod/dist/
